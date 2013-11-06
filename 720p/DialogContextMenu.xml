@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<window><!---id="106"--->
+    <defaultcontrol always="true">1000</defaultcontrol>
+    <zorder>6</zorder>
+    <coordinates>
+        <system>1</system>
+        <origin x="440" y="120"></origin>
+    </coordinates>
+<animation type="WindowClose" reversible="false">
+	<effect type="fade" start="100" end="0" time="350" delay="0" />
+	<effect type="slide" start="0,0" end="0,700" time="550" delay="0" tween="sine" easing="out" />
+</animation>
+<animation type="WindowOpen" reversible="false">
+	<effect type="fade" start="0" end="100" time="350" delay="0" />
+	<effect type="slide" start="0,500" end="0,0" time="550" delay="0" tween="back" easing="out" />
+</animation>
+
+  
+<controls>
+	
+	
+	<control type="image" id="999">
+		<description>background image</description>
+		<posx>-21</posx>
+		<posy>0</posy>
+		<width>420</width>
+		<height>1080</height>
+		<texture>context/contextmid.png</texture>
+		<aspectratio>stretch</aspectratio>
+		<colordiffuse>ff262626</colordiffuse>
+	</control>	
+	<control type="grouplist" id="996">
+		<width>420</width>
+		<height max="1080">auto</height>
+				
+		<control type="button" id="2009">
+			<description>Custom button</description>
+			<posx>11</posx>
+			<posy>0</posy>
+			<font>context</font>
+			<textcolor>darklist</textcolor>
+			<focusedcolor>white</focusedcolor>
+			<disabledcolor>black</disabledcolor>
+			<texturefocus>white.png</texturefocus>
+			<texturenofocus>-</texturenofocus>
+			<width>378</width>
+			<height>40</height>
+			<aligny>top</aligny>
+			<label>31054</label>
+			<colordiffuse>skin.string(MainColorString)</colordiffuse>
+			<visible>System.HasAddon(plugin.video.youtube) + [Container.Content(albums) | Container.Content(songs)]</visible>
+			<onclick>ActivateWindow(videos,plugin://plugin.video.youtube/?path=/root/search&amp;feed=search&amp;search=$INFO[ListItem.Artist] $INFO[ListItem.Label],return)</onclick>
+		</control>
+		
+		<control type="button" id="2018">
+			<description>Custom button</description>
+			<posx>11</posx>
+			<posy>0</posy>
+			<font>context</font>
+			<textcolor>darklist</textcolor>
+			<focusedcolor>white</focusedcolor>
+			<disabledcolor>black</disabledcolor>
+			<texturefocus>white.png</texturefocus>
+			<texturenofocus>-</texturenofocus>
+			<width>378</width>
+			<height>40</height>
+			<aligny>top</aligny>
+			<label>31054</label>
+			<colordiffuse>skin.string(MainColorString)</colordiffuse>
+			<visible>System.HasAddon(plugin.video.youtube) + Container.Content(movies)</visible>
+			<onclick>ActivateWindow(videos,plugin://plugin.video.youtube/?path=/root/search&amp;feed=search&amp;search=$INFO[ListItem.Title] Trailer,return)</onclick>
+		</control>
+		
+		<control type="button" id="2019">
+			<description>Custom button</description>
+			<posx>11</posx>
+			<posy>0</posy>
+			<font>context</font>
+			<textcolor>darklist</textcolor>
+			<focusedcolor>white</focusedcolor>
+			<disabledcolor>black</disabledcolor>
+			<texturefocus>white.png</texturefocus>
+			<texturenofocus>-</texturenofocus>
+			<width>378</width>
+			<height>40</height>
+			<aligny>top</aligny>
+			<colordiffuse>skin.string(MainColorString)</colordiffuse>
+			<label>$VAR[BookmarkName]</label>
+			<visible>Container.Content(episodes)</visible>
+			<onclick>Skin.SetString($VAR[BookmarkName],$INFO[ListItem.DBID])</onclick>
+			<include>BookmarkCycle</include>
+		</control>
+	</control>
+	<control type="image" id="997">
+		<description>top image</description>
+		<posx>-21</posx>
+		<posy>-30</posy>
+		<width>420</width>
+		<height>30</height>
+		<texture>context/contextbgtb.png</texture>
+		<aspectratio>stretch</aspectratio>
+		<colordiffuse>ff262626</colordiffuse>
+	</control>
+	<control type="image" id="998">
+		<description>bottom image</description>
+		<posx>-21</posx>
+		<posy>-50</posy>
+		<width>420</width>
+		<height>30</height>
+		<texture flipy="true">context/contextbgtb.png</texture>
+		<aspectratio>stretch</aspectratio>
+		<colordiffuse>ff262626</colordiffuse>
+	</control>
+	<control type="button" id="1000">
+		<description>Buttons</description>
+		<posx>11</posx>
+		<posy>0</posy>
+		<font>context</font>
+		<aligny>top</aligny>
+		<colordiffuse>skin.string(MainColorString)</colordiffuse>
+		<textcolor>darklist</textcolor>
+		<focusedcolor>white</focusedcolor>
+		<disabledcolor>black</disabledcolor>
+		<texturefocus>white.png</texturefocus>
+		<texturenofocus></texturenofocus>
+		<width>378</width>
+		<height>40</height>
+		<colordiffuse>ff262626</colordiffuse>
+	</control>
+
+
+</controls>
+
+</window>

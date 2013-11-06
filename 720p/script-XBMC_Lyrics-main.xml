@@ -1,0 +1,199 @@
+<window>
+	
+	<allowoverlay>no</allowoverlay>
+	
+	<coordinates>
+		<system>1</system>
+		<posx>0</posx>
+		<posy>0</posy>
+	</coordinates>
+	
+	<animation type="WindowOpen">
+		<effect type="fade" start="0" end="100" time="400" delay="400"/>
+		<effect type="slide" start="0,-800" end="0,0" time="800" delay="400" tween="cubic" easing="out" />
+	</animation>
+	
+	<animation type="WindowClose">
+		<effect type="fade" start="100" end="0" time="400" />
+		<effect type="slide" start="0,0" end="0,-800" time="800" tween="cubic" easing="out" />
+	</animation>
+	
+	<controls>
+	
+		<control type="group">
+		
+			<posx>620</posx>
+			<posy>60</posy>
+			<width>500</width>
+			<height>720</height>
+	
+		
+			<control type="label" id="200">
+				<visible>false</visible>
+				<animation effect="fade" start="10" end="0" time="10" condition="true">Conditional</animation>
+			</control>
+			
+			<!-- ** Required ** Do not change <id> or <type> -->
+			<control type="textbox" id="100">
+				
+				<description>textarea</description>
+				<posx>47</posx>
+				<posy>32</posy>
+				<width>360</width>
+				<height>440</height>
+				<onup>101</onup>
+				<ondown>101</ondown>
+				<onleft>101</onleft>
+				<onright>101</onright>
+				<pagecontrol>101</pagecontrol>
+				<font>font13</font>
+				<textcolor>62FFFFFF</textcolor>
+				
+			</control>
+			
+			<control type="spincontrol" id="101">
+				
+				
+				<visible>Control.IsVisible(100)</visible>
+				<animation effect="fade" start="10" end="0" time="10" condition="true">Conditional</animation>
+			</control>
+  		
+			<!-- ** Required ** Do not change <id> or <type> -->
+			<control type="list" id="110">
+				
+				<pagecontrol>111</pagecontrol>
+				<posx>32</posx>
+				<posy>32</posy>
+				<width>536</width>
+				<height>400</height>
+				<viewtype label="535">list</viewtype>
+				<scrolltime>200</scrolltime>
+				
+				<itemlayout height="40">
+					
+					<control type="label">
+						<posx>15</posx>
+						<posy>0</posy>
+						<width>536</width>
+						<height>32</height>
+						<info>ListItem.Label</info>
+						<font>font13</font>
+						<align>left</align>
+						<aligny>center</aligny>
+						<textcolor>62FFFFFF</textcolor>
+						<scroll>false</scroll>
+					</control>
+					
+				</itemlayout>
+				
+				<focusedlayout height="40">
+					
+					<control type="image">
+					
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>536</width>
+						<height>36</height>
+						<texture>setting.png</texture>
+						<aspectratio>stretch</aspectratio>
+						<colordiffuse>62C2C2C2</colordiffuse>
+					</control>
+				
+					<control type="label">
+					
+						<posx>15</posx>
+						<posy>0</posy>
+						<width>536</width>
+						<height>32</height>
+						<info>ListItem.Label</info>
+						<font>font16</font>
+						<align>left</align>
+						<aligny>center</aligny>
+						<textcolor>blue</textcolor>
+						
+					</control>
+					
+				</focusedlayout>
+				
+			</control>
+			
+			<control type="spincontrol" id="111">
+				
+				
+				<visible>Control.IsVisible(110)</visible>
+				<animation effect="fade" start="10" end="0" time="10" condition="true">Conditional</animation>
+			</control>
+  		
+			<!-- ** Required ** Do not change <id> or <type> -->
+			<control type="list" id="120">
+
+				<pagecontrol>121</pagecontrol>
+				<posx>32</posx>
+				<posy>32</posy>
+				<width>536</width>
+				<height>400</height>
+				<viewtype label="535">list</viewtype>
+				<scrolltime>200</scrolltime>
+				
+				<itemlayout height="40">
+					
+					<control type="label">
+						<posx>15</posx>
+						<posy>0</posy>
+						<width>536</width>
+						<height>32</height>
+						<info>ListItem.Label</info>
+						<font>font13</font>
+						<align>left</align>
+						<aligny>center</aligny>
+						<textcolor>62FFFFFF</textcolor>
+						<scroll>false</scroll>
+					</control>
+					
+				</itemlayout>
+				
+				<focusedlayout height="40">
+				
+					<control type="image">
+					
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>536</width>
+						<height>36</height>
+						<texture>setting.png</texture>
+						<aspectratio>stretch</aspectratio>
+						<colordiffuse>62C2C2C2</colordiffuse>
+					</control>
+					
+					<control type="label">
+					
+						<posx>15</posx>
+						<posy>0</posy>
+						<width>536</width>
+						<height>32</height>
+						<info>ListItem.Label</info>
+						<font>font16</font>
+						<align>left</align>
+						<aligny>center</aligny>
+						<textcolor>blue</textcolor>
+						
+					</control>
+					
+				</focusedlayout>
+				
+			</control>
+			
+			<control type="spincontrol" id="121">
+				
+				<animation effect="fade" start="10" end="0" time="10" condition="true">Conditional</animation>
+				<visible>Control.IsVisible(120)</visible>
+				
+			</control>
+			
+		</control>
+		
+	</controls>
+	
+</window>
+
+		

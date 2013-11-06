@@ -1,0 +1,126 @@
+<window>
+	<defaultcontrol>2</defaultcontrol>
+	<controls>
+		<control type="group" id="13">
+			<posx>130r</posx>
+			<posy>10</posy>
+			<visible>!Skin.HasSetting(Show_SlideShow_Paused)</visible>
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>120</width>
+				<height>35</height>
+				<texture>black.png</texture>
+				<bordertexture border="3">border.png</bordertexture>
+				<bordersize>5</bordersize>
+			</control>
+			<control type="label">
+				<description>paused label</description>
+				<posx>10</posx>
+				<posy>0</posy>
+				<width>100</width>
+				<height>35</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<font>font10</font>
+				<textcolor>white</textcolor>
+				<label>31172</label>
+			</control>
+		</control>
+		<!-- media infos -->
+		<control type="group">
+			<posx>20</posx>
+			<posy>180r</posy>
+			<visible>Player.ShowInfo + Player.HasMedia</visible>
+			<include>VisibleFadeEffect</include>
+				
+				
+			<control type="image">
+				<description>gradient</description>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>500</width>
+				<height>165</height>
+				<colordiffuse>DDFFFFFF</colordiffuse>
+				<texture border="20">shadow.png</texture>
+			</control>
+			<control type="image">
+				<description>Cover image</description>
+				<posx>20</posx>
+				<posy>17</posy>
+				<width>130</width>
+				<height>130</height>
+				<texture>$INFO[MusicPlayer.Cover]</texture>
+			</control>
+			<control type="label">
+				<description>Artist label</description>
+				<posx>160</posx>
+				<posy>20</posy>
+				<height>30</height>
+				<width>325</width>
+				<label>$INFO[MusicPlayer.Artist]</label>
+				<align>left</align>
+				<aligny>center</aligny>
+				<font>font12_title</font>
+				<textcolor>grey2</textcolor>
+				<shadowcolor>black</shadowcolor>
+			</control>
+			<control type="fadelabel">
+				<description>Title label</description>
+				<posx>160</posx>
+				<posy>43</posy>
+				<height>30</height>
+				<width>325</width>
+				<label>$INFO[MusicPlayer.Title]</label>
+				<align>left</align>
+				<aligny>center</aligny>
+				<font>font13_title</font>
+				<textcolor>white</textcolor>
+				<shadowcolor>black</shadowcolor>
+				<scrollout>false</scrollout>
+				<pauseatend>2000</pauseatend>
+			</control>
+			<control type="label">
+				<description>Album Label</description>
+				<posx>160</posx>
+				<posy>70</posy>
+				<height>30</height>
+				<width>325</width>
+				<label>$INFO[MusicPlayer.Album]$INFO[musicplayer.discnumber, - $LOCALIZE[427]:]</label>
+				<align>left</align>
+				<aligny>center</aligny>
+				<font>font12</font>
+				<textcolor>white</textcolor>
+				<shadowcolor>black</shadowcolor>
+			</control>
+			<control type="label">
+				<description>Time Label</description>
+				<posx>160</posx>
+				<posy>95</posy>
+				<height>30</height>
+				<width>325</width>
+				<label>$INFO[MusicPlayer.Time]$INFO[MusicPlayer.Duration, / ]</label>
+				<align>left</align>
+				<aligny>center</aligny>
+				<font>font12</font>
+				<textcolor>white</textcolor>
+				<shadowcolor>black</shadowcolor>
+			</control>
+			<control type="label">
+				<description>Next Label</description>
+				<posx>485</posx>
+				<posy>120</posy>
+				<height>30</height>
+				<width>325</width>
+				<label>[COLOR=blue]$LOCALIZE[209] :[/COLOR] $INFO[MusicPlayer.offset(1).Title]</label>
+				<align>right</align>
+				<aligny>center</aligny>
+				<font>font12</font>
+				<textcolor>grey</textcolor>
+				<shadowcolor>black</shadowcolor>
+			</control>
+		
+		
+		</control>
+	</controls>
+</window>

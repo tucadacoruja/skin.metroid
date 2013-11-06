@@ -1,0 +1,157 @@
+<window id="12">
+<defaultcontrol always="true">3</defaultcontrol>
+
+<allowoverlay>yes</allowoverlay>
+
+<controls>
+
+<include>SettingsFanart</include>
+<include>Background</include>
+
+	
+	<control type="button" id="50">
+		<posx>10</posx>
+		<posy>10</posy>
+		<width>1</width>
+		<height>1</height>
+		<texture>black.png</texture>
+		<onfocus>SetFocus(3)</onfocus>
+	</control>
+	<control type="image">
+		<posx>0</posx>
+		<posy>72</posy>
+		<width>250</width>
+		<height>648</height>
+		<aspectratio>stretch</aspectratio>
+		<texture>MetroidMenu.png</texture>
+		
+	</control>
+	<control type="image">
+		<posx>235</posx>
+		<posy>72</posy>
+		<width>15</width>
+		<height>650</height>
+		<aspectratio>stretch</aspectratio>
+		<texture>shadowv.png</texture>
+	
+	</control>
+	
+	<control type="group">
+		<posy>-2</posy>
+		<include>EmptyMenu</include>
+	</control>
+	
+	<control type="textbox" id="6">
+		<posx>388</posx>
+		<posy>610</posy>
+		<width>760</width>
+		<height>75</height>
+		<align>justify</align>
+		<label>-</label>
+		<font>about</font>
+		<textcolor>ampm</textcolor>
+		
+	</control>
+			
+	<control type="grouplist" id="3">
+		<description>Button Area</description>
+		<posx>5</posx>
+		<posy>72</posy>
+		<width>300</width>
+		<height>570</height>
+		<itemgap>0</itemgap>
+		<onleft>66</onleft>
+		<onright>5</onright>
+		<onup>300</onup>
+		<ondown>3</ondown>
+		<orientation>vertical</orientation>
+	</control>
+	
+
+	<control type="group">
+	<posy>-10</posy>
+		<animation type="Conditional" condition="Window.IsVisible(126) | Window.IsVisible(2000)">
+			<effect type="fade" start="100" end="0" time="200" />
+		</animation>
+		<animation type="WindowClose" reversible="false">
+			<effect type="fade" start="100" end="0" time="200" delay="0" />
+		</animation> 
+
+		<control type="grouplist" id="5">
+			<description>Control Area</description>
+			<posx>368</posx>
+			<posy>137</posy>
+			<width>810</width>
+			<height>440</height>
+			<itemgap>.5</itemgap>
+			<onleft>3</onleft>
+			<onright>3</onright>
+			<onup>5</onup>
+			<ondown>5</ondown>
+			<orientation>vertical</orientation>
+		</control>
+		
+		<control type="button" id="7">
+			<description>Default Button</description>
+			<align>left</align>
+			<textoffsetx>20</textoffsetx>
+			<height>43.5</height>
+			<width>810</width>
+			<font>DefaultButton</font>
+			<textcolor>ampm</textcolor>
+			<focusedcolor>white</focusedcolor>
+			<disabledcolor>12ffffff</disabledcolor>
+			<texturefocus>setting.png</texturefocus>
+			<texturenofocus>-</texturenofocus>
+		</control>
+		
+		<control type="radiobutton" id="8">
+			<description>Default Radio Button</description>
+			<height>43.5</height>
+			<width>810</width>
+			<textcolor>ampm</textcolor>
+			<focusedcolor>white</focusedcolor>
+			<disabledcolor>12ffffff</disabledcolor>
+			<texturefocus>setting.png</texturefocus>
+			<texturenofocus>-</texturenofocus>
+			<textoffsetx>20</textoffsetx>
+			<radioposx>743</radioposx>
+			<align>left</align>
+		</control>
+		
+		<control type="spincontrolex" id="9">
+			<description>Default Spin Control</description>
+			<height>43.5</height>
+			<width>810</width>
+			<font>DefaultButton</font>
+			<textcolor>ampm</textcolor>
+			<textoffsetx>20</textoffsetx>
+			<focusedcolor>white</focusedcolor>
+			<disabledcolor>12ffffff</disabledcolor>
+			<texturefocus>setting.png</texturefocus>
+			<texturenofocus>-</texturenofocus>
+			<align>left</align>
+		</control>
+		
+		<control type="button" id="10">
+			
+			<description>Default Category Button</description>
+			<height>50</height>
+			<width>239</width>
+			<align>left</align>
+			<textoffsetx>20</textoffsetx>
+			<font>homemenu3</font>
+			
+			<focusedcolor>white</focusedcolor>
+			<texturefocus>category.png</texturefocus>
+			<texturenofocus>-</texturenofocus>
+			
+		</control>
+	</control>
+
+
+<include>BottomInfoBar</include>
+<include>vignette</include>
+</controls>
+
+</window>

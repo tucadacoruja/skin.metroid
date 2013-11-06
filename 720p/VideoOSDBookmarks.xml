@@ -1,0 +1,163 @@
+<window id="125">
+		<defaultcontrol always="true">1</defaultcontrol>
+		<controls>
+
+    <control type="group">
+            <posx>330</posx>
+            <posy>70</posy>
+
+        <control type="image">
+            <posx>10</posx>
+            <posy>85</posy>
+            <width>600</width>
+            <height>340</height>
+			<aspectratio>stretch</aspectratio>
+			<texture background="true">bluebackground.png</texture>
+			<bordertexture border="1">whiteborder.png</bordertexture>
+			<bordersize>4</bordersize>
+            <colordiffuse>CC555555</colordiffuse>
+			
+
+        </control>
+        <control type="image">
+            <posx>10</posx>
+            <posy>85</posy>
+            <width>600</width>
+            <height>35</height>
+			<aspectratio>stretch</aspectratio>
+			<texture>white.png</texture>
+            <colordiffuse>36FFFFFF</colordiffuse>
+        </control>
+			<control type="image">
+				<posx>25</posx>
+				<posy>232</posy>
+				<width>34</width>
+				<height>34</height>
+				<aspectratio>stretch</aspectratio>
+				<texture>Home/extras/leftarrow.png</texture>
+				<colordiffuse>f8ffffff</colordiffuse>				
+			</control>
+			<control type="image">
+				<posx>550</posx>
+				<posy>232</posy>
+				<width>34</width>
+				<height>34</height>
+				<aspectratio>stretch</aspectratio>
+				<texture flipx="true">Home/extras/leftarrow.png</texture>
+				<colordiffuse>f8ffffff</colordiffuse>				
+			</control>			
+		  <control type="label" id="2">
+			  <description>Bookmarks Label</description>
+			  <posx>10</posx>
+			  <posy>87</posy>
+			  
+			  <font>OSDTiming</font>
+			  <label>[B][UPPERCASE]$LOCALIZE[31176][/UPPERCASE][/B]</label>
+			  <textcolor>ffd0d0d0</textcolor>
+			  <width>600</width>
+			  <align>center</align>
+		  </control>
+				<control type="grouplist" id="1">
+					<posx>110</posx>
+					<posy>378</posy>
+					<height>52</height>
+					<width>450</width>
+					<itemgap>90</itemgap>
+					<orientation>horizontal</orientation>
+					<onup>11</onup>
+					<ondown>11</ondown>
+					<onleft>1</onleft>
+					<onright>1</onright>
+					
+				<control type="button" id="2">
+						<description>Create</description>
+						<height>35</height>
+						<width>157</width>
+						<label>31177</label>
+						<font>OSDTiming</font>
+						<textcolor>afc0c0c0</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus>button2fo.png</texturefocus>
+						<texturenofocus>-</texturenofocus>
+						<aligny>top</aligny>
+				</control>
+				<control type="button" id="3">
+						<description>Clear</description>
+						<height>35</height>
+						<width>157</width>
+						<label>31178</label>
+						<font>OSDTiming</font>
+						<textcolor>afc0c0c0</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus>button2fo.png</texturefocus>
+						<texturenofocus>-</texturenofocus>
+						<aligny>top</aligny>
+				</control>
+			</control>
+			
+		<control type="panel" id="11">
+			<posx>65</posx>
+			<posy>130</posy>
+			<width>485</width>
+			<height>280</height>
+			<onleft>11</onleft>
+			<onright>11</onright>
+			<onup>11</onup>
+			<ondown>1</ondown>
+			<scrolltime>250</scrolltime>
+			<orientation>horizontal</orientation>
+			<itemlayout height="80" width="160">
+				<control type="image">
+					<posx>5</posx>
+					<posy>5</posy>
+					<width>150</width>
+					<height>70</height>
+					<texture diffuse="osd/fullscreen/bookmarks-diffuse.png">$INFO[listitem.icon]</texture>
+					<aspectratio align="center" scalediffuse="false">scale</aspectratio>
+				</control>
+			</itemlayout>
+			<focusedlayout height="80" width="160">
+				<control type="image">
+					<posx>2</posx>
+					<posy>2</posy>
+					<width>156</width>
+					<height>76</height>
+					<texture border="12">white.png</texture>
+					<aspectratio>stretch</aspectratio>
+					<colordiffuse>B7ffffff</colordiffuse>
+										
+				</control>
+				<control type="image">
+					<posx>5</posx>
+					<posy>5</posy>
+					<width>150</width>
+					<height>70</height>
+					<texture diffuse="osd/fullscreen/bookmarks-diffuse.png">$INFO[listitem.icon]</texture>
+					<aspectratio align="center" scalediffuse="false">scale</aspectratio>
+				</control>
+				<control type="image">
+					<posx>5</posx>
+					<posy>45</posy>
+					<width>150</width>
+					<height>30</height>
+					<texture>black.png</texture>
+					<aspectratio>stretch</aspectratio>
+					<colordiffuse>99ffffff</colordiffuse>
+				</control>
+				<control type="label">
+					<posx>78</posx>
+					<posy>45</posy>
+					<width>150</width>
+					<height>30</height>
+					<info>ListItem.Label</info>
+					<font>recent</font>
+					<align>center</align>
+					<textcolor>white</textcolor>
+					<selectedcolor>white</selectedcolor>
+				</control>
+			</focusedlayout>
+		</control>
+		</control>
+
+	</controls>
+</window>

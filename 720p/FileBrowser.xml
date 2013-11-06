@@ -1,0 +1,257 @@
+<window id="126">
+<defaultcontrol always="true">450</defaultcontrol>
+<allowoverlay>yes</allowoverlay>
+  
+	<coordinates>
+		<system>1</system>
+		<posx>120</posx>
+		<posy>0</posy>
+	</coordinates>
+	
+
+	<animation type="WindowOpen" reversible="false">
+		<effect type="fade" start="0" end="100" time="350" delay="0" />
+		<effect type="zoom" start="130" end="100" time="450" center="auto" delay="0" tween="back" easing="out" />
+	</animation>
+	<animation type="WindowClose" reversible="false">
+		<effect type="fade" start="100" end="0" time="250" delay="0" />
+		<effect type="zoom" start="100" end="130" time="300" center="auto" delay="0" />
+	</animation>
+	
+		
+	<controls>
+	
+<control type="group">	
+	<animation type="Conditional" condition="Window.IsVisible(128)">
+		<effect type="fade" start="100" end="0" time="400" />
+		<effect type="zoom" start="100" end="80" center="auto" time="300" />
+	</animation>
+	
+	<control type="image">
+		<posx>180</posx>
+		<posy>111</posy>			
+		<width>942</width>
+		<height>482</height>
+		<aspectratio>stretch</aspectratio>
+		<texture>dialog/setcontentbg2.png</texture>
+		<colordiffuse>FF707070</colordiffuse>
+	</control>
+  	<control type="label" id="411">
+		<description>Heading</description>
+		<posx>222</posx>
+		<posy>140</posy>
+		<width>679</width>
+		<height>37</height>
+		<font>homemenu3</font>
+		<align>center</align>
+		<aligny>center</aligny>
+		<textcolor>FF959595</textcolor>
+		<label>$LOCALIZE[1023]</label>
+	</control>
+	
+	<control type="image">
+		<posx>212</posx>
+		<posy>186</posy>
+		<width>689</width>
+		<height>1</height>
+		<aspectratio>stretch</aspectratio>
+		<texture>black.png</texture>
+		<colordiffuse>36FFFFFF</colordiffuse>
+	</control>
+	<control type="label" id="412">
+		<description>Path</description>
+		<posx>222</posx>
+		<posy>520</posy>
+		<width>530</width>
+		<height>37</height>
+		<font>recent</font>
+		<align>left</align>
+		<aligny>center</aligny>
+		<textcolor>FF959595</textcolor>
+		<haspath>true</haspath>
+	</control>
+	<control type="image">
+		<posx>911</posx>
+		<posy>382</posy>			
+		<width>171</width>
+		<height>171</height>
+		<aspectratio>stretch</aspectratio>
+		<texture border="8">dialog/previewbg.png</texture>
+		<colordiffuse>EBFFFFFF</colordiffuse>
+	</control>
+	<control type="image">
+		<description>Large Icon Image</description>
+		<posx>922</posx>
+		<posy>393</posy>
+		<width>150</width>
+		<height>150</height>
+		<info>ListItem.Icon</info>
+		<align>center</align>
+		<aligny>center</aligny>
+		<aspectratio align="center" aligny="center">keep</aspectratio>
+	</control>
+</control>
+
+		
+		<control type="list" id="450">
+			<posx>211</posx>
+			<posy>172</posy>
+			<width>689</width>
+			<height>345</height>
+			<onup>450</onup>
+			<onleft>-</onleft>
+			<onright>9000</onright>
+			<ondown>450</ondown>
+			<scrolltime>0</scrolltime>
+			<animation type="Conditional" condition="Window.IsVisible(128)">
+				<effect type="fade" start="100" end="0" time="400" />
+				<effect type="zoom" start="100" end="80" center="auto" time="300" />
+			</animation>
+			<itemlayout height="37">
+			
+				<control type="image">
+					<posx>0</posx>
+					<posy>46</posy>
+					<width>689</width>
+					<height>1</height>
+					<aspectratio>stretch</aspectratio>
+					<texture>black.png</texture>
+					<colordiffuse>36FFFFFF</colordiffuse>
+				</control>
+				<control type="image">
+					<posx>3</posx>
+					<posy>12</posy>
+					<width>32</width>
+					<height>32</height>
+					<texture>$INFO[ListItem.Icon]</texture>
+					
+				</control>
+				<control type="label">
+					<posx>45</posx>
+					<posy>7</posy>
+					<width>530</width>
+					<height>37</height>
+					<font>recent</font>
+					<align>left</align>
+					<aligny>center</aligny>
+					<info>ListItem.Label</info>
+					<textcolor>FF959595</textcolor>
+					<focusedcolor>FF555555</focusedcolor>
+					<selectedcolor>FF555555</selectedcolor>
+				</control>
+			</itemlayout>
+			
+			<focusedlayout height="37">
+				<control type="image">
+					<posx>0</posx>
+					<posy>10</posy>
+					<width>689</width>
+					<height>37</height>
+					<texture>BlueBackground.png</texture>
+					<aspectratio>stretch</aspectratio>
+					<!--colordiffuse>skin.string(MainColorString)</colordiffuse-->
+					<animation effect="fade" start="0" end="60" time="0" condition="!Control.HasFocus(450)">Conditional</animation>
+				</control>
+				<control type="image">
+					<posx>3</posx>
+					<posy>12</posy>
+					<width>32</width>
+					<height>32</height>
+					<texture>$INFO[ListItem.Icon]</texture>
+					
+				</control>
+				<control type="label">
+					<posx>45</posx>
+					<posy>7</posy>
+					<width>530</width>
+					<height>37</height>
+					<font>recent</font>
+					<align>left</align>
+					<aligny>center</aligny>
+					<info>ListItem.Label</info>
+					<textcolor>FFEBEBEB</textcolor>
+				</control>
+			</focusedlayout>
+		</control>
+
+
+ 		<control type="group" id="9000">
+			<posx>900</posx>
+			<posy>170</posy>
+			<animation type="Conditional" condition="Window.IsVisible(128)">
+				<effect type="fade" start="100" end="0" time="400" />
+				<effect type="zoom" start="100" end="80" center="auto" time="300" />
+			</animation>
+			<control type="button" id="413">
+				<description>Browse Button</description>
+				<label>$LOCALIZE[186]</label>
+				<width>191</width>
+				<height>37</height>				
+				<onup>415</onup>
+				<onleft>450</onleft>
+				<onright>450</onright>
+				<ondown>414</ondown>
+				<align>center</align>
+				<aligny>top</aligny>
+				<textoffsetx>5</textoffsetx>
+				<textoffsety>3</textoffsety>
+				<texturefocus>BlueBackground.png</texturefocus>
+     			<texturenofocus border="5">-</texturenofocus>
+				<colordiffuse>DCFFFFFF</colordiffuse>
+				<font>homemenu3</font>
+				<textcolor>FF959595</textcolor>
+				<focusedcolor>ffffffff</focusedcolor>
+				<disabledcolor>F99c9c9c</disabledcolor>
+				<animation effect="fade" start="0" end="60" time="0" condition="true">Conditional</animation>
+			</control>
+			<control type="button" id="414">
+				<description>Add Path Button</description>
+				<posy>55</posy>
+				<label>$LOCALIZE[222]</label>
+				<onup>413</onup>
+				<onleft>450</onleft>
+				<onright>450</onright>
+				<ondown>415</ondown>
+				<width>191</width>
+				<height>37</height>	
+				<align>center</align>
+				<aligny>top</aligny>
+				<textoffsetx>5</textoffsetx>
+				<textoffsety>3</textoffsety>
+				<texturefocus>BlueBackground.png</texturefocus>
+     			<texturenofocus>-</texturenofocus>
+				<colordiffuse>DCFFFFFF</colordiffuse>
+				<font>homemenu3</font>
+				<textcolor>FF959595</textcolor>
+				<focusedcolor>ffffffff</focusedcolor>
+				<disabledcolor>F99c9c9c</disabledcolor>
+				<animation effect="fade" start="0" end="60" time="0" condition="true">Conditional</animation>
+			</control>
+			<control type="button" id="415">
+				<description>Remove Path Button</description>
+				<posy>110</posy>
+				<label>$LOCALIZE[119]</label>
+				<width>191</width>
+				<height>37</height>		
+				<onup>414</onup>
+				<onleft>450</onleft>
+				<onright>450</onright>
+				<ondown>413</ondown>
+				<align>center</align>
+				<aligny>top</aligny>
+				<textoffsetx>5</textoffsetx>
+				<textoffsety>3</textoffsety>
+				<texturefocus>BlueBackground.png</texturefocus>
+     			<texturenofocus>-</texturenofocus>
+				<colordiffuse>DCFFFFFF</colordiffuse>
+				<font>homemenu3</font>
+				<textcolor>FF959595</textcolor>
+				<focusedcolor>ffffffff</focusedcolor>
+				<disabledcolor>F99c9c9c</disabledcolor>
+				<animation effect="fade" start="0" end="60" time="0" condition="true">Conditional</animation>
+			</control>
+		</control>
+  
+</controls>
+  
+</window>

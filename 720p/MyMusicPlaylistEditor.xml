@@ -1,0 +1,442 @@
+<window id="503">
+	<defaultcontrol allways="true">6</defaultcontrol>
+	<backgroundcolor>0</backgroundcolor>
+	<allowoverlay>no</allowoverlay>
+ 	<views>50</views>  
+	<controls>
+	
+<include>VideoWindow</include>
+
+<control type="image">
+	<posx>0</posx>
+	<posy>0</posy>
+	<width>1280</width>
+	<height>720</height>
+	<aspectratio>stretch</aspectratio>
+	<texture background="true" fallback="special://skin/extras/backgrounds/fallback.jpg">$INFO[Skin.String(MusicFallbackImage)]</texture>
+	<animation effect="fade" start="0" end="100" time="100">VisibleChange</animation>
+	<visible>!Player.HasVideo + IsEmpty(ListItem.Art(fanart)) + !Control.IsVisible(28233)</visible>
+</control>
+<control type="multiimage" id="28233">
+	<posx>0</posx>
+	<posy>0</posy>
+	<width>1280</width>
+	<height>720</height>
+	<aspectratio>stretch</aspectratio>
+	<imagepath background="true" fallback="special://skin/extras/backgrounds/fallback.jpg" >$INFO[Skin.String(Wallpaper_Folder_Path)]</imagepath>
+	<timeperimage>10100</timeperimage>
+	<fadetime>1000</fadetime>
+	<randomize>true</randomize>
+	<animation effect="fade" start="0" end="100" time="100">VisibleChange</animation>
+	<visible>!Player.HasVideo + IsEmpty(ListItem.Art(fanart)) + !IsEmpty(Skin.String(Wallpaper_Folder_Path)) + IsEmpty(Skin.String(MusicFallbackImage))</visible>
+</control>
+<control type="image">
+	<posx>0</posx>
+	<posy>0</posy>
+	<width>1280</width>
+	<height>720</height>
+	<aspectratio>stretch</aspectratio>
+	<texture background="true">$INFO[ListItem.Art(fanart)]</texture>
+	<animation effect="fade" start="0" end="100" time="100">VisibleChange</animation>
+	<visible>!Player.HasVideo</visible>
+</control>
+<control type="image">
+	<posx>0</posx>
+	<posy>71</posy>
+	<width>1280</width>
+	<height>578</height>
+	<aspectratio>stretch</aspectratio>
+	<texture background="true" flipx="true">backup.png</texture>
+	<animation effect="fade" start="0" end="60" time="0" reversible="false" condition="true">Conditional</animation>
+</control>
+<control type="image">
+	<posx>515</posx>
+	<posy>72</posy>
+	<width>250</width>
+	<height>576</height>
+	<aspectratio>stretch</aspectratio>
+	<texture>black.png</texture>
+</control>
+<include>Background</include>
+<control type="image">
+	<posx>515</posx>
+	<posy>72</posy>
+	<width>250</width>
+	<height>576</height>
+	<aspectratio>stretch</aspectratio>
+	<texture>black.png</texture>
+	<animation effect="fade" start="0" end="10" time="0" reversible="false" condition="true">Conditional</animation>
+</control>
+<control type="textbox">
+	<posx>520</posx>
+	<posy>375</posy>
+	<width>240</width>
+	<height>90</height>	
+	<align>center</align>
+	<textcolor>FF959595</textcolor>31134
+	<font>homemenu3</font>
+	<label>[UPPERCASE]$LOCALIZE[31057][/UPPERCASE][CR]$LOCALIZE[31134][CR]$LOCALIZE[31135]</label>
+	<aligny>top</aligny>
+	<autoscroll>false</autoscroll>
+</control>
+
+
+		<control type="group">
+			<posy>30</posy>
+			
+
+			<control type="grouplist" id="9000">
+				<posx>520</posx>
+				<posy>492</posy>
+				<control type="button" id="6">
+					<description>Open Button</description>
+					<label>31136</label>
+					<onleft>50</onleft>
+					<onright>100</onright>
+					<onup>8</onup>
+					<ondown>7</ondown>
+					
+					<width>240</width>
+					<height>37</height>		
+					<align>center</align>
+					<aligny>top</aligny>
+					<textoffsetx>5</textoffsetx>
+					<textoffsety>1</textoffsety>
+					<textcolor>ff7D7D7D</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<font>homemenu3</font>
+					<focusedcolor>white</focusedcolor>
+					<texturefocus>White35p.png</texturefocus>
+					<texturenofocus>list/MainListline.png</texturenofocus>
+				</control>
+				<control type="button" id="7">
+					<description>Save Button</description>
+					<label>31101</label>
+					<onleft>50</onleft>
+					<onright>100</onright>
+					<onup>6</onup>
+					<ondown>8</ondown>
+					<width>240</width>
+					<height>37</height>		
+					<align>center</align>
+					<aligny>top</aligny>
+					<textoffsetx>5</textoffsetx>
+					<textoffsety>1</textoffsety>
+					<textcolor>ff7D7D7D</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<font>homemenu3</font>
+					<focusedcolor>white</focusedcolor>
+					<texturefocus>White35p.png</texturefocus>
+					<texturenofocus>list/MainListline.png</texturenofocus>
+				</control>
+				<control type="button" id="8">
+					<description>Clear button</description>
+					<label>31102</label>
+					<onleft>50</onleft>
+					<onright>100</onright>
+					<onup>7</onup>
+					<ondown>66</ondown>
+					
+					<width>240</width>
+					<height>37</height>		
+					<align>center</align>
+					<aligny>top</aligny>
+					<textoffsetx>5</textoffsetx>
+					<textoffsety>1</textoffsety>
+					<textcolor>ff7D7D7D</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<font>homemenu3</font>
+					<focusedcolor>white</focusedcolor>
+					<texturefocus>White35p.png</texturefocus>
+					<texturenofocus>list/MainListline.png</texturenofocus>
+				</control>
+			</control>
+			
+			<control type="group">
+				<visible>!Control.HasFocus(100)</visible>
+				<control type="image">
+					<posx>520</posx>
+					<posy>90</posy>
+					<width>240</width>
+					<height>190</height>
+					<aspectratio>keep</aspectratio>
+					<texture>$INFO[Container(50).ListItem.Icon]</texture>
+				</control>
+			
+			</control>
+			<control type="group">
+				<visible>Control.HasFocus(100)</visible>
+				<control type="image">
+					<posx>520</posx>
+					<posy>90</posy>
+					<width>240</width>
+					<height>190</height>
+					<aspectratio>keep</aspectratio>
+					<texture>$INFO[Container(100).ListItem.Icon]</texture>
+				</control>
+				
+			</control>
+			
+		</control>
+		<control type="group">
+			<animation effect="slide" start="-480,0" end="0,0" time="500" tween="quadratic" easing="out">WindowOpen</animation>
+			<animation effect="slide" end="-480,0" start="0,0" time="500" tween="quadratic" easing="out">WindowClose</animation>
+			<control type="label">
+				<posx>0</posx>
+				<posy>30</posy>
+				<width>515</width>
+				<height>35</height>
+				<font>EditorBig</font>
+				<textcolor>ff707070</textcolor>
+				<align>center</align>
+				<label>[UPPERCASE]$LOCALIZE[31136][/UPPERCASE]</label>
+				
+				<animation effect="fade" start="0" end="40" time="500" delay="600">WindowOpen</animation>
+				<animation effect="fade" start="40" end="0" time="300" delay="0">WindowClose</animation>
+			</control>
+
+			<control type="scrollbar" id="30">
+				<posx>505</posx>
+				<posy>100</posy>
+				<width>20</width>
+				<height>540</height>
+				
+				<textureslidernib>sliderbg.png</textureslidernib>
+				<textureslidernibfocus>ball.png</textureslidernibfocus>
+				<onleft>50</onleft>
+				<onright>9000</onright>
+				<showonepage>false</showonepage>
+				<orientation>vertical</orientation>
+			</control>
+			
+			<control type="list" id="50">
+				<posx>0</posx>
+				<posy>112</posy>
+				<width>515</width>
+				<height>500</height>
+				<onleft>30</onleft>
+				<onright>30</onright>
+				<onup>50</onup>
+				<ondown>50</ondown>
+				<viewtype label="">list</viewtype>
+				<pagecontrol>30</pagecontrol>
+				<scrolltime>200</scrolltime>
+				<itemlayout height="39" width="400">
+					<control type="image">
+					  <posx>0</posx>
+					  <posy>38</posy>
+					  <width>515</width>
+					  <height>1</height>
+					  <texture>white.png</texture>
+					  <aspectratio>stretch</aspectratio>
+					  <colordiffuse>11ffffff</colordiffuse>
+					</control>
+					<control type="label">
+						<posx>10</posx>
+						<posy>0</posy>
+						<width>380</width>
+						<height>39</height>
+						<font>ListSmall</font>
+						<textcolor>ffc0c0c0</textcolor>
+						<selectedcolor>ff7acafe</selectedcolor>
+						<align>left</align>
+						<aligny>center</aligny>
+						<scroll>false</scroll>
+						
+						<info>ListItem.Label</info>
+					</control>
+					<control type="label">
+						<posx>480</posx>
+						<posy>0</posy>
+						<width>360</width>
+						<height>39</height>
+						<font>about</font>
+						<textcolor>ffc0c0c0</textcolor>
+						<selectedcolor>ff7acafe</selectedcolor>
+						<align>right</align>
+						<aligny>center</aligny>
+						<info>ListItem.Label2</info>
+					</control>
+				</itemlayout>
+				<focusedlayout height="39" width="400">
+					<control type="image">
+					  <posx>0</posx>
+					  <posy>38</posy>
+					  <width>515</width>
+					  <height>1</height>
+					  <texture>black.png</texture>
+					  <colordiffuse>62ffffff</colordiffuse>
+					  <aspectratio>stretch</aspectratio>
+					
+					</control>
+					<control type="image">
+						<posx>0</posx>
+						<posy>1</posy>
+						<width>515</width>
+						<height>37</height>
+						<texture>black.png</texture>
+						<aspectratio>stretch</aspectratio>
+						<colordiffuse>46ffffff</colordiffuse>
+						<visible>Control.HasFocus(50)</visible>
+					</control>
+					<control type="label">
+						<posx>10</posx>
+						<posy>0</posy>
+						<width>380</width>
+						<height>39</height>
+						<font>ListSmall</font>
+						<textcolor>white</textcolor>
+						<selectedcolor>ff7acafe</selectedcolor>
+						<align>left</align>
+						<aligny>center</aligny>
+						<info>ListItem.Label</info>
+					</control>
+					<control type="label">
+						<posx>480</posx>
+						<posy>0</posy>
+						<width>360</width>
+						<height>39</height>
+						<font>about</font>
+						<textcolor>white</textcolor>
+						<selectedcolor>ff7acafe</selectedcolor>
+						<align>right</align>
+						<aligny>center</aligny>
+						<info>ListItem.Label2</info>
+					</control>
+				</focusedlayout>
+			</control>
+		</control>
+		<control type="group">
+			<animation effect="slide" start="480,0" end="0,0" time="500" tween="quadratic" easing="out">WindowOpen</animation>
+			<animation effect="slide" end="480,0" start="0,0" time="500" tween="quadratic" easing="out">WindowClose</animation>
+			<posx>765</posx>
+			
+			<control type="label">
+				<posx>0</posx>
+				<posy>30</posy>
+				<width>515</width>
+				<height>35</height>
+				<font>EditorBig</font>
+				<textcolor>ff707070</textcolor>
+				<scroll>false</scroll>
+				<align>center</align>
+				<aligny>center</aligny>
+				<label>[UPPERCASE]$LOCALIZE[31130][/UPPERCASE]</label>
+				<animation effect="fade" start="0" end="40" time="500" delay="800">WindowOpen</animation>
+				<animation effect="fade" start="40" end="0" time="300" delay="0">WindowClose</animation>
+			</control>
+
+			<control type="scrollbar" id="31">
+				<posx>505</posx>
+				<posy>100</posy>
+				<width>20</width>
+				<height>550</height>
+				<textureslidernib>sliderbg.png</textureslidernib>
+				<textureslidernibfocus>ball.png</textureslidernibfocus>
+				<onleft>100</onleft>
+				<showonepage>false</showonepage>
+				<orientation>vertical</orientation>
+			</control>
+			
+			<control type="list" id="100">
+				<posx>5</posx>
+				<posy>109</posy>
+				<width>515</width>
+				<height>500</height>
+				<onleft>9000</onleft>
+				<onright>31</onright>
+				<onup>100</onup>
+				<ondown>100</ondown>
+				<viewtype label="">list</viewtype>
+				<pagecontrol>31</pagecontrol>
+				<scrolltime>200</scrolltime>
+				<itemlayout height="39" width="400">
+					<control type="image">
+					  <posx>0</posx>
+					  <posy>38</posy>
+					  <width>515</width>
+					  <height>1</height>
+					  <texture>white.png</texture>
+					  <aspectratio>stretch</aspectratio>
+					  <colordiffuse>11ffffff</colordiffuse>
+					</control>
+					<control type="label">
+						<posx>10</posx>
+						<posy>0</posy>
+						<width>380</width>
+						<height>39</height>
+						<font>ListSmall</font>
+						<textcolor>ffc0c0c0</textcolor>
+						<selectedcolor>ff7acafe</selectedcolor>
+						<align>left</align>
+						<aligny>center</aligny>
+						<scroll>false</scroll>
+						<info>ListItem.Label</info>
+					</control>
+					<control type="label">
+						<posx>480</posx>
+						<posy>0</posy>
+						<width>360</width>
+						<height>39</height>
+						<font>about</font>
+						<textcolor>ffc0c0c0</textcolor>
+						<selectedcolor>ff7acafe</selectedcolor>
+						<align>right</align>
+						<aligny>center</aligny>
+						<info>ListItem.Label2</info>
+					</control>
+				</itemlayout>
+				<focusedlayout height="39" width="400">
+					<control type="image">
+					  <posx>0</posx>
+					  <posy>38</posy>
+					  <width>515</width>
+					  <height>1</height>
+					  <texture>black.png</texture>
+					  <colordiffuse>62ffffff</colordiffuse>
+					  <aspectratio>stretch</aspectratio>
+					
+					</control>
+					<control type="image">
+						<posx>0</posx>
+						<posy>1</posy>
+						<width>515</width>
+						<height>37</height>
+						<texture>black.png</texture>
+						<aspectratio>stretch</aspectratio>
+						<colordiffuse>46ffffff</colordiffuse>
+						<visible>Control.HasFocus(100)</visible>
+					</control>
+					<control type="label">
+						<posx>10</posx>
+						<posy>0</posy>
+						<width>380</width>
+						<height>39</height>
+						<font>ListSmall</font>
+						<textcolor>white</textcolor>
+						<selectedcolor>ff7acafe</selectedcolor>
+						<align>left</align>
+						<aligny>center</aligny>
+						<info>ListItem.Label</info>
+					</control>
+					<control type="label">
+						<posx>480</posx>
+						<posy>0</posy>
+						<width>360</width>
+						<height>39</height>
+						<font>about</font>
+						<textcolor>white</textcolor>
+						<selectedcolor>ff7acafe</selectedcolor>
+						<align>right</align>
+						<aligny>center</aligny>
+						<info>ListItem.Label2</info>
+					</control>
+				</focusedlayout>
+			</control>
+		</control>
+
+
+<include>vignette</include>
+
+	</controls>
+</window>

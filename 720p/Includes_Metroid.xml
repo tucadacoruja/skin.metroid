@@ -1,0 +1,265 @@
+<includes>
+
+	<include name="MetroidMoviePanel"> 
+		<control type="group">
+			
+			<visible>Library.HasContent(movies)</visible>
+			<include>Favourites</include>
+			
+			<control type="label">
+				<posx>415</posx>
+				<posy>120</posy>
+				<width>200</width>
+				<height>200</height>
+				<font>font13</font>
+				<textcolor>FFFFFFFF</textcolor>
+				<aligny>center</aligny>
+				<align>right</align>
+				<scroll>false</scroll>
+				<label>31131</label>
+				<animation effect="rotate" end="90" center="auto" time="0" reversible="false" condition="true">Conditional</animation>
+			</control>
+			
+			<control type="wraplist" id="7997">
+				<posx>370</posx>
+				<posy>70</posy>
+				<width>1000</width>
+				<height>300</height>
+				<scrolltime>200</scrolltime>
+				<orientation>horizontal</orientation>
+				<aligny>top</aligny>
+				<onup>300</onup>
+				<ondown>7998</ondown>
+				<onleft>300</onleft>
+				<onright>66</onright>
+								
+				<preloaditems>2</preloaditems>
+				<itemlayout width="190" height="270">
+
+					<control type="image">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>190</width>
+						<height>265</height>
+						<texture>poster/postershadow.png</texture>
+						<aspectratio>stretch</aspectratio>
+						<colordiffuse>46ffffff</colordiffuse>
+					</control>
+					<control type="image">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>175</width>
+						<height>250</height>
+						<texture background="true" fallback="DefaultAlbumCover.png" diffuse="grid/posterdiffuse.png">$INFO[ListItem.Art(thumb)]</texture>
+						<aspectratio scalediffuse="false">stretch</aspectratio>
+						<colordiffuse>D7ffffff</colordiffuse>
+					</control>
+					
+				</itemlayout>
+				<focusedlayout width="415" height="270">
+
+				
+					<control type="image">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>430</width>
+						<height>265</height>
+						<texture>poster/postershadow.png</texture>
+						<aspectratio>stretch</aspectratio>
+						<colordiffuse>46ffffff</colordiffuse>
+					</control>
+					<control type="image">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>400</width>
+						<height>250</height>
+						<texture background="true" fallback="DefaultAlbumCover.png" diffuse="grid/posterdiffuse.png">$INFO[ListItem.Property(Fanart)]</texture>
+						<aspectratio scalediffuse="false">scale</aspectratio>
+					</control>
+					<control type="image">
+						<posx>0</posx>
+						<posy>210</posy>
+						<width>400</width>
+						<height>40</height>
+						<texture>black.png</texture>
+						<aspectratio>stretch</aspectratio>
+						<colordiffuse>95ffffff</colordiffuse>
+					</control>
+					<control type="label">
+						<posx>380</posx>
+						<posy>205</posy>
+						<width>370</width>
+						<height>50</height>
+						<font>font13</font>
+						<textcolor>FFFFFFFF</textcolor>
+						<aligny>center</aligny>
+						<align>right</align>
+						<scroll>false</scroll>
+						<label>$INFO[ListItem.Label]</label>
+						
+					</control>
+					<control type="image">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>10</width>
+						<height>100</height>
+						<texture>BlueBackground.png</texture>
+						<aspectratio>stretch</aspectratio>
+						
+						<visible>Control.HasFocus(7997)</visible>
+					</control>
+					
+				</focusedlayout>
+				<include>HomeContentRecentMovies</include>	
+			</control>	
+		</control>
+	</include>	
+		
+
+		
+	<include name="MetroidTVShowPanel"> 
+		<control type="group">
+			<include>WidgetsAnimation</include>
+			<visible>Library.HasContent(tvshows)</visible>
+			<include>Favourites</include>
+			
+			<control type="label">
+				<posx>415</posx>
+				<posy>420</posy>
+				<width>200</width>
+				<height>200</height>
+				<font>font13</font>
+				<textcolor>FFFFFFFF</textcolor>
+				<aligny>center</aligny>
+				<align>right</align>
+				<scroll>false</scroll>
+				<label>31132</label>
+				<animation effect="rotate" end="90" center="auto" time="0" reversible="false" condition="true">Conditional</animation>
+			</control>
+			<control type="image" id="862">
+				<description>recent tv show thumb</description>
+				<posx>370</posx>
+				<posy>370</posy>
+				<width>408</width>
+				<height>272</height>
+				<texture>poster/postershadow.png</texture>
+				<aspectratio>stretch</aspectratio>
+				<colordiffuse>46ffffff</colordiffuse>
+				<visible>Control.IsVisible(7998)</visible>
+				
+				
+			</control>
+			<control type="image" id="862">
+				<description>recent tv show thumb</description>
+				<posx>370</posx>
+				<posy>370</posy>
+				<width>380</width>
+				<height>255</height>
+				<texture fallback="DefaultAlbumCover.png">$INFO[Container(7998).ListItem.Art(thumb)]</texture>
+				<aspectratio aligny="top" scalediffuse="false">scale</aspectratio>
+				<visible>Control.IsVisible(7998)</visible>
+				
+				
+			</control>
+			<control type="image">
+				<posx>370</posx>
+				<posy>585</posy>
+				<width>380</width>
+				<height>40</height>
+				<texture>black.png</texture>
+				<aspectratio>stretch</aspectratio>
+				<colordiffuse>95ffffff</colordiffuse>
+			</control>
+			<control type="label">
+				<posx>730</posx>
+				<posy>580</posy>
+				<width>320</width>
+				<height>50</height>
+				<font>font13</font>
+				<textcolor>FFFFFFFF</textcolor>
+				<aligny>center</aligny>
+				<align>right</align>
+				<scroll>false</scroll>
+				<label>$INFO[Container(7998).ListItem.Label] $INFO[Container(7998).ListItem.Property(episodenumber)]</label>
+			</control>
+			
+					
+			<control type="panel" id="7998">
+				<viewtype label="MetroidEpisodes">icon</viewtype>
+				<posx>790</posx>
+				<posy>370</posy>
+				<width>6000</width>
+				<height>300</height>
+				<scrolltime>200</scrolltime>
+				<orientation>Horizontal</orientation>
+				<onup>7997</onup>
+				<ondown>301</ondown>
+				
+				<onright>66</onright>
+				
+				<preloaditems>6</preloaditems>
+				
+				<itemlayout width="185" height="135">
+					
+					<control type="image">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>188</width>
+						<height>130</height>
+						<texture>poster/postershadow.png</texture>
+						<aspectratio>stretch</aspectratio>
+						<colordiffuse>46ffffff</colordiffuse>
+						
+					</control>
+					<control type="image">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>170</width>
+						<height>120</height>
+						
+						<texture background="true" fallback="DefaultAlbumCover.png" >$INFO[ListItem.Art(thumb)]</texture>
+						<aspectratio scalediffuse="false">scale</aspectratio>
+						
+					</control>
+					
+				</itemlayout>
+				<focusedlayout width="190" height="180">
+
+					<control type="image">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>188</width>
+						<height>130</height>
+						<texture>poster/postershadow.png</texture>
+						<aspectratio>stretch</aspectratio>
+						<colordiffuse>46ffffff</colordiffuse>
+						
+					</control>
+					<control type="image">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>170</width>
+						<height>120</height>
+						<texture background="true" fallback="DefaultAlbumCover.png" >$INFO[ListItem.Art(thumb)]</texture>
+						<aspectratio scalediffuse="false">scale</aspectratio>
+					</control>
+					<control type="image">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>5</width>
+						<height>50</height>
+						<texture>BlueBackground.png</texture>
+						<aspectratio>stretch</aspectratio>
+						
+						<visible>Control.HasFocus(7998)</visible>
+					</control>
+					
+				</focusedlayout>
+				<include>HomeContentRecentTVShows</include>	
+			</control>	
+		</control>	
+	</include>
+
+
+
+</includes>

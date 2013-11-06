@@ -1,0 +1,389 @@
+<window id="146">
+	<defaultcontrol always="true">9000</defaultcontrol>
+	
+	<coordinates>
+	  <system>1</system>
+	  <posx>0</posx>
+	  <posy>0</posy>
+	</coordinates>
+
+<controls>
+	<control type="button" id="50">
+		<posx>1</posx>
+		<posy>1</posy>
+		<width>1</width>
+		<height>1</height>
+		<description>nav help</description>
+		<label>-</label>
+		<onfocus>SetFocus(9000)</onfocus>
+	</control>
+	<control type="group">
+		<posy>10</posy>
+		<posx>200</posx>
+        <animation effect="slide" start="1100,0" end="0,0" time="450" delay="0" reversible="false">WindowOpen</animation>
+        <animation effect="slide" start="0,0" end="1100,0" time="450" delay="0" reversible="false">WindowClose</animation>
+		<include>Changes</include>
+		<control type="group">
+			<visible>!Window.isVisible(AddonSettings) + !Window.IsActive(TextViewer)</visible>
+			<control type="group">
+					<posx>-5</posx>
+					<posy>10</posy>
+					
+					
+				<!--control type="image">
+					<posx>120</posx>
+					<posy>85</posy>
+					<width>890</width>
+					<height>510</height>
+					<aspectratio>stretch</aspectratio>
+					<texture>black.png</texture>
+					<animation effect="fade" start="100" end="20" condition="true">Conditional</animation>
+				</control-->
+				<control type="image">
+					<posx>120</posx>
+					<posy>95</posy>
+					<width>1000</width>
+					<height>40</height>
+					<aspectratio>stretch</aspectratio>
+					<texture>white.png</texture>
+					<animation effect="fade" start="100" end="20" condition="true">Conditional</animation>
+				</control>
+				<!--control type="image">
+					<posx>120</posx>
+					<posy>400</posy>
+					<width>890</width>
+					<height>150</height>
+					<aspectratio>stretch</aspectratio>
+					<texture>white.png</texture>
+					<animation effect="fade" start="100" end="20" condition="true">Conditional</animation>
+				</control>
+				<control type="image">
+					<posx>120</posx>
+					<posy>593</posy>
+					<width>890</width>
+					<height>1</height>
+					<aspectratio>stretch</aspectratio>
+					<texture>white.png</texture>
+					<animation effect="fade" start="100" end="20" condition="true">Conditional</animation>
+				</control-->
+				<control type="image">
+					<posx>136</posx>
+					<posy>160</posy>
+					<width>220</width>
+					<height>220</height>
+					<aspectratio>stretch</aspectratio>
+					<texture background="true" diffuse="poster/posterdiffuse.png">$INFO[ListItem.Icon]</texture>
+					<animation effect="fade" end="40" time="0"  condition="true">conditional</animation>		
+				</control>
+				
+			</control>
+			
+			<control type="label" id="20">
+				<description>Addon Title value</description>
+				<posx>150</posx>
+				<posy>110</posy>
+				<width>870</width>
+				<font>infobar</font>
+				<label>[UPPERCASE]$INFO[ListItem.Property(Addon.Name)][/UPPERCASE]</label>
+				<textcolor>itemdetail</textcolor>
+				<scroll>true</scroll>
+			</control>
+			
+			
+		<control type="image">
+			<posx>550</posx>
+			<posy>420</posy>
+			<width>3</width>
+			<height>137</height>
+			<aspectratio>stretch</aspectratio>
+			<texture>white.png</texture>
+			<animation effect="fade" start="100" end="20" condition="true">Conditional</animation>
+		</control>
+				
+
+			<control type="grouplist">
+				<posx>590</posx>
+				<posy>415</posy>
+				<width>500</width>
+				<height>500</height>	
+				<align>left</align>
+				<orientation>vertical</orientation>
+				<!--animation effect="fade" start="100" end="0" time="300"  condition="Control.IsVisible(50)">conditional</animation-->				
+
+				<control type="label">
+				<description>author</description>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width min="29" max="600">auto</width>
+				<height>30</height>	
+				<font>plot</font>
+				<align>left</align>
+				<aligny>center</aligny>
+				<textcolor>infoplot</textcolor>
+				<label>[LOWERCASE]$LOCALIZE[31027][/LOWERCASE] </label>
+				<animation type="WindowClose" reversible="false">
+					<effect type="fade" start="100" end="0" time="350" delay="0" />
+				</animation>
+				<animation type="WindowOpen" reversible="false">
+					<effect type="fade" start="0" end="100" time="350" delay="1000" />
+				</animation>
+				</control>
+			
+				<control type="label">
+				<description>Creator</description>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width min="29" max="600">auto</width>
+				<height>30</height>	
+				<font>plot</font>
+				<align>left</align>
+				<aligny>center</aligny>
+				<textcolor>infoplot</textcolor>
+				<label>[UPPERCASE]$INFO[ListItem.Property(Addon.Creator)][/UPPERCASE]     </label>
+				<animation type="WindowClose" reversible="false">
+					<effect type="fade" start="100" end="0" time="350" delay="0" />
+				</animation>
+				<animation type="WindowOpen" reversible="false">
+					<effect type="fade" start="0" end="100" time="350" delay="1000" />
+				</animation>
+				</control>
+				
+				<control type="label">
+				<description>version</description>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width min="29" max="600">auto</width>
+				<height>30</height>	
+				<font>plot</font>
+				<align>left</align>
+				<aligny>center</aligny>
+				<textcolor>infoplot</textcolor>
+				<label>[LOWERCASE]$LOCALIZE[31028][/LOWERCASE] </label>
+				<animation type="WindowClose" reversible="false">
+					<effect type="fade" start="100" end="0" time="350" delay="0" />
+				</animation>
+				<animation type="WindowOpen" reversible="false">
+					<effect type="fade" start="0" end="100" time="350" delay="1000" />
+				</animation>
+				</control>
+
+				<control type="label">
+				<description>version number</description>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width min="29" max="600">auto</width>
+				<height>30</height>	
+				<font>plot</font>
+				<align>left</align>
+				<aligny>center</aligny>
+				<textcolor>infoplot</textcolor>
+				<label>[UPPERCASE]$INFO[ListItem.Property(Addon.Version)][/UPPERCASE]     </label>
+				<animation type="WindowClose" reversible="false">
+					<effect type="fade" start="100" end="0" time="350" delay="0" />
+				</animation>
+				<animation type="WindowOpen" reversible="false">
+					<effect type="fade" start="0" end="100" time="350" delay="1000" />
+				</animation>
+				</control>
+			</control>			
+					
+			<control type="group">
+				<posx>0</posx>
+				<posy>0</posy>
+
+				<control type="group">
+		
+					<control type="textbox" id="400">
+						<description>Description</description>
+						<posx>130</posx>
+						<posy>420</posy>
+						<width>400</width>
+						<height>137</height>
+						<font>plot</font>
+						<align>justify</align>
+						<textcolor>infoplot</textcolor>
+						<label>$INFO[ListItem.Property(Addon.Description)]</label>
+						<pagecontrol>60</pagecontrol>
+						<autoscroll delay="15000" time="2500" repeat="10000"></autoscroll>
+					</control>					
+
+					<control type="textbox">
+						<description>Disclaimer</description>
+						<posx>130</posx>
+						<posy>620</posy>
+						<width>970</width>
+						<height>30</height>
+						<font>plot</font>
+						<align>-</align>
+						<textcolor>infoplot</textcolor>
+						<label>$INFO[ListItem.Property(Addon.Disclaimer)]</label>
+						<visible>IsEmpty(ListItem.Property(Addon.broken))</visible>
+						<autoscroll time="2000" delay="3000" repeat="5000">true</autoscroll>
+					</control>
+				</control>
+		
+				
+			</control>
+		
+			<!--Buttons-->
+  
+			<control type="grouplist" id="9000">
+				<posx>355</posx>
+				<posy>175</posy>
+				<width>474</width>
+				<height>222</height>
+				<itemgap>3</itemgap>
+				<onup>9000</onup>
+				<ondown>9000</ondown>
+				<onright>66</onright>
+				<onleft>300</onleft>
+				<orientation>vertical</orientation>
+				
+				<control type="button" id ="6">
+					<description>enable addon</description>
+					<label>[LOWERCASE]$LOCALIZE[31029][/LOWERCASE]</label>
+					<width>400</width>
+					<height>34</height>
+					<align>left</align>
+					<aligny>top</aligny>
+					<textoffsetx>41</textoffsetx>
+					<textoffsety>4</textoffsety>
+					<texturefocus>setting.png</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<textcolor>itemdetail3</textcolor>
+					<focusedcolor>itemdetailb</focusedcolor>
+					<disabledcolor>22ffffff</disabledcolor>
+					
+					<font>plot</font>
+				</control>
+			  
+				<control type="button" id ="7">
+					<description>disable Addon</description>
+					<label>[LOWERCASE]$LOALIZE[31030][/LOWERCASE]</label>
+					<width>400</width>
+					<height>34</height>
+					<align>left</align>
+					<aligny>top</aligny>
+					<textoffsetx>41</textoffsetx>
+					<textoffsety>4</textoffsety>
+					<texturefocus>setting.png</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<textcolor>itemdetail3</textcolor>
+					<focusedcolor>itemdetailb</focusedcolor>
+					<disabledcolor>22ffffff</disabledcolor>
+					
+					<font>plot</font>
+				</control>	  	  
+			  
+				<control type="button" id ="9">
+					<description>Config</description>
+					<label>31031</label>
+					<width>400</width>
+					<height>34</height>
+					<align>left</align>
+					<aligny>top</aligny>
+					<textoffsetx>41</textoffsetx>
+					<textoffsety>4</textoffsety>
+					<texturefocus>setting.png</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<textcolor>itemdetail3</textcolor>
+					<focusedcolor>itemdetailb</focusedcolor>
+					<disabledcolor>55ffffff</disabledcolor>
+					
+					<font>plot</font>
+				</control>
+				  
+				<control type="button" id="8">
+					<description>update</description>
+					<label>31032</label>
+					<width>400</width>
+					<height>34</height>
+					<align>left</align>
+					<aligny>top</aligny>
+					<textoffsetx>41</textoffsetx>
+					<textoffsety>4</textoffsety>
+					<texturefocus>setting.png</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<textcolor>itemdetail3</textcolor>
+					<focusedcolor>itemdetailb</focusedcolor>
+					<disabledcolor>55ffffff</disabledcolor>
+					
+					<font>plot</font>
+				</control>
+				
+				<control type="button" id="10">
+					<description>changelog</description>
+					<label>31033</label>
+					<width>400</width>
+					<height>34</height>
+					<align>left</align>
+					<aligny>top</aligny>
+					<textoffsetx>41</textoffsetx>
+					<textoffsety>4</textoffsety>
+					<texturefocus>setting.png</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<textcolor>itemdetail3</textcolor>
+					<focusedcolor>itemdetailb</focusedcolor>
+					<disabledcolor>55ffffff</disabledcolor>
+					
+					<font>plot</font>
+				</control>
+				
+				<control type="button" id="11">
+					<description>rollback</description>
+					<label>31034</label>
+					<width>400</width>
+					<height>34</height>
+					<align>left</align>
+					<aligny>top</aligny>
+					<textoffsetx>41</textoffsetx>
+					<textoffsety>4</textoffsety>
+					<texturefocus>setting.png</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<textcolor>itemdetail3</textcolor>
+					<focusedcolor>itemdetailb</focusedcolor>
+					<disabledcolor>55ffffff</disabledcolor>
+					
+					<font>plot</font>
+				</control>
+			</control>
+  
+			
+			
+				<!--END BUTTONS-->
+
+				<control type="group">
+					<posx>0</posx>
+					<posy>6</posy>
+					
+					<control type="label">
+						<description>header label</description>
+						<posx>130</posx>
+						<posy>650</posy>
+						<width>970</width>
+						<height>30</height>
+						<font>plot</font>
+						<label>$INFO[ListItem.Property(Addon.Broken)]</label>
+						<align>left</align>
+						<aligny>center</aligny>
+						<textcolor>infoplot</textcolor>
+						<shadowcolor>black</shadowcolor>
+					</control>
+					<!--control type="textbox">
+						<description>Reason label</description>
+						<posx>100</posx>
+						<posy>35</posy>
+						<width>800</width>
+						<height>58</height>
+						<font>plot</font>
+						<label>$INFO[ListItem.Property(Addon.broken)]</label>
+						<align>left</align>
+						<textcolor>infoplot</textcolor>
+						<shadowcolor>black</shadowcolor>
+					</control-->
+				</control>
+		</control>
+	</control>
+
+</controls>
+</window>

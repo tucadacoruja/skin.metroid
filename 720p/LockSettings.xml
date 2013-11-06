@@ -1,0 +1,121 @@
+<window id="131">
+<defaultcontrol always="true">5</defaultcontrol>
+<allowoverlay>yes</allowoverlay>
+  
+<coordinates>
+  <system>1</system>
+  <posx>500</posx>
+  <posy>30</posy>
+</coordinates>
+  
+<controls>
+    
+<control type="image">
+	<description>background image</description>
+	<posx>0</posx>
+	<posy>45</posy>
+	<width>530</width>
+	<height>442</height>
+	<aspectratio>stretch</aspectratio>
+	<texture border="12">whitepanel.png</texture>
+	<colordiffuse>ff262626</colordiffuse>
+</control>	
+  
+	<!--control type="label" id="2">
+		<description>Settings</description>
+		<posx>10</posx>
+		<posy>40</posy>
+		<width>500</width>
+		<align>left</align>
+		<textcolor>list</textcolor>
+	</control>
+	<control type="label" id="3">
+		<description>No Settings</description>
+		<posx>0</posx>
+		<posy>40</posy>
+		<width>500</width>
+		<align>left</align>
+		<textcolor>list</textcolor>
+		<label>$LOCALIZE[12016]</label>
+	</control-->
+  
+  <control type="grouplist" id="5">
+    <description>Control Area</description>
+    <posx>10</posx>
+    <posy>72</posy>
+    <width>500</width>
+    <height>350</height>
+    <itemgap>2</itemgap>
+    <orientation>vertical</orientation>
+    <pagecontrol>60</pagecontrol>
+    <onleft>28</onleft>
+    <onright>28</onright>
+    <onup>28</onup>
+    <ondown>28</ondown>
+  </control>
+  
+<control type="button" id="7">
+	<description>button</description>
+	<align>left</align>
+</control>
+<control type="radiobutton" id="8">
+	<description>radio_button</description>
+</control>
+<control type="spincontrolex" id="9">
+	<description>spin_controlex</description>
+	<posx>70</posx>
+</control>
+<control type="sliderex" id="10">
+	<description>slider</description>
+</control>
+
+  <control type="button" id="28">
+    <description>Ok</description>
+    <posx>80</posx>
+    <posy>410</posy>
+    <label>$LOCALIZE[186]</label>
+    <align>center</align>
+	<aligny>top</aligny>
+	<textoffsetx>5</textoffsetx>
+	<textoffsety>3</textoffsety>
+	<texturefocus border="12">whitepanel2.png</texturefocus>
+	<texturenofocus>-</texturenofocus>
+	<colordiffuse>ff959595</colordiffuse>
+	<font>homemenu3</font>
+	<textcolor>white</textcolor>
+	<focusedcolor>ffD7D7D7</focusedcolor>
+	<disabledcolor>F99c9c9c</disabledcolor>
+	<width>160</width>
+	<height>42</height>	
+    <onleft>5</onleft>
+    <onright>29</onright>
+    <onup>5</onup>
+    <ondown>5</ondown>
+  </control>
+  <control type="button" id="29">
+    <description>Cancel</description>
+    <posx>240</posx>
+    <posy>410</posy>
+    <label>$LOCALIZE[222]</label>
+    <align>center</align>
+	<aligny>top</aligny>
+	<textoffsetx>5</textoffsetx>
+	<textoffsety>3</textoffsety>
+	<texturefocus border="12">whitepanel2.png</texturefocus>
+	<texturenofocus>-</texturenofocus>
+	<colordiffuse>ff959595</colordiffuse>
+	<font>homemenu3</font>
+	<textcolor>white</textcolor>
+	<focusedcolor>ffD7D7D7</focusedcolor>
+	<disabledcolor>F99c9c9c</disabledcolor>
+	<width>160</width>
+	<height>42</height>	
+    <onleft>28</onleft>
+    <onright>5</onright>
+    <onup>5</onup>
+    <ondown>5</ondown>
+  </control>
+  
+</controls>
+  
+</window>

@@ -1,0 +1,147 @@
+﻿<window id="100">
+<defaultcontrol always="true">10</defaultcontrol>
+<allowoverlay>yes</allowoverlay>
+  
+<coordinates>
+  <system>1</system>
+  <posx>0</posx>
+  <posy>0</posy>
+</coordinates>
+  
+<controls>
+	<control type="group">
+		<posy>50</posy>
+		<animation type="WindowClose" reversible="false">
+			<effect type="fade" start="100" end="0" time="350" delay="0" />
+			<effect type="slide" start="0,0" end="0,700" time="550" delay="0" tween="sine" easing="out" />
+		</animation>
+		<animation type="WindowOpen" reversible="false">
+			<effect type="fade" start="0" end="100" time="350" delay="0" />
+			<effect type="slide" start="0,500" end="0,0" time="450" delay="0" tween="back" easing="out" />
+		</animation>    
+
+			<control type="image">
+				<description>background image</description>
+				<posx>310</posx>
+				<posy>125</posy>
+				<width>660</width>
+				<height>310</height>
+				<texture border="12">whitepanel2.png</texture>
+				<aspectratio>stretch</aspectratio>
+				<colordiffuse>26ffffff</colordiffuse>
+			</control>
+			<control type="image">
+				<description>background image</description>
+				<posx>315</posx>
+				<posy>130</posy>
+				<width>650</width>
+				<height>300</height>
+				<texture border="12">whitepanel2.png</texture>
+				<aspectratio>stretch</aspectratio>
+				<colordiffuse>ff262626</colordiffuse>
+			</control>
+			<control type="image">
+				<description>background image</description>
+				<posx>365</posx>
+				<posy>155</posy>
+				<width>550</width>
+				<height>40</height>
+				<texture diffuse="posterdiffuse.png">black.png</texture>
+				<aspectratio>stretch</aspectratio>
+				<colordiffuse>55ffffff</colordiffuse>
+			</control>
+			
+	<control type="label" id="1">
+		<description>Heading</description>
+		<posx>0</posx>
+		<posy>156</posy>
+		<label>$LOCALIZE[13406]</label>
+		<font>heading</font>
+		<textcolor>ff959595</textcolor>
+		<align>center</align>
+    	<width>1280</width>
+	</control>
+  
+	<control type="label" id="2">
+		<description>Line 1</description>
+		<posx>0</posx>
+		<posy>210</posy>
+		<label>-</label>
+		<font>heading</font>
+		<textcolor>ffD7D7D7</textcolor>
+		<align>center</align>
+    	<width>1280</width>
+	</control>
+	
+	<control type="label" id="3">
+		<description>Line 2</description>
+		<posx>0</posx>
+		<posy>250</posy>
+		<label>-</label>
+		<font>heading</font>
+		<textcolor>ffD7D7D7</textcolor>
+		<align>center</align>
+    	<width>1280</width>
+	</control>
+	
+	<control type="label" id="4">
+		<description>Line 3</description>
+		<posx>0</posx>
+		<posy>290</posy>
+		<label>-</label>
+		<font>heading</font>
+		<textcolor>ffD7D7D7</textcolor>
+		<align>center</align>
+    	<width>1280</width>
+	</control>
+  
+	<control type="button" id="10">
+		<description>yes</description>
+		<posx>420</posx>		
+		<posy>370</posy>
+		<label>$LOCALIZE[106]</label>
+		<onup>10</onup>
+		<onleft>11</onleft>
+		<onright>11</onright>
+		<ondown>10</ondown>
+		<align>center</align>
+		<aligny>top</aligny>
+		<textoffsetx>5</textoffsetx>
+		<textoffsety>3</textoffsety>
+		<texturefocus border="12">whitepanel2.png</texturefocus>
+		<texturenofocus>-</texturenofocus>
+		<colordiffuse>ff959595</colordiffuse>
+		<font>homemenu3</font>
+		<textcolor>white</textcolor>
+		<focusedcolor>ffD7D7D7</focusedcolor>
+		<disabledcolor>F99c9c9c</disabledcolor>
+		<width>160</width>
+		<height>42</height>	
+	</control>
+	<control type="button" id="11">
+		<description>no</description>
+		<posx>660</posx>		
+		<posy>370</posy>
+		<label>$LOCALIZE[107]</label>
+		<onup>11</onup>
+		<onleft>10</onleft>
+		<onright>10</onright>
+		<ondown>11</ondown>
+		<align>center</align>
+		<aligny>top</aligny>
+		<textoffsetx>5</textoffsetx>
+		<textoffsety>3</textoffsety>
+		<texturefocus border="12">whitepanel2.png</texturefocus>
+		<texturenofocus>-</texturenofocus>
+		<colordiffuse>ff959595</colordiffuse>
+		<font>homemenu3</font>
+		<textcolor>white</textcolor>
+		<focusedcolor>ffD7D7D7</focusedcolor>
+		<disabledcolor>F99c9c9c</disabledcolor>
+		<width>160</width>
+		<height>42</height>	
+	</control>
+</control>  
+</controls>
+  
+</window>

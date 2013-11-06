@@ -1,0 +1,36 @@
+<colors>
+	<color name="Black">FF000000</color>
+	<color name="White">FFFDFDFC</color>
+	<color name="grey2">FFACACAC</color>
+	<color name="Red">FFFF0000</color>
+	<color name="Orange">FFB88A00</color>
+	<color name="HomeMenuGrey">FF969696</color>
+	<color name="RSStext">FF848484</color>
+	<color name="RSStext2">FFA4A4A4</color>
+	<color name="RSStitle">FF686868</color>
+	<color name="time">FF686868</color>	
+	<color name="ampm">FFACACAC</color>
+	<color name="musicfull">ffe9e8e9</color>
+	<color name="taskbar">FFE0E0E0</color>
+	<color name="movietitle">FF505050</color>
+	<color name="movietitle2">FF606060</color>
+	<color name="movietitleb">E0F0F0F0</color>
+	<color name="movietitleb2">FFa0a0a0</color>
+	<color name="bigtitle">0CFFFFFF</color>
+	<color name="itemdetail">E0E0E0E0</color>
+	<color name="itemdetailb">E0303030</color>
+	<color name="itemdetailc">EA404040</color>
+	<color name="itemdetail2">E0C0C0C0</color>
+	<color name="itemdetail2b">B4C2C2C2</color>
+	<color name="itemdetail3">BFAFAFAF</color>
+	<color name="infoplot">D0D0D0D0</color>
+	<color name="list">FFC2C2C2</color>
+	<color name="darklist">D7707070</color>
+	<color name="lightblue">FF7EA7D8</color>
+	<color name="blue">ff438CCA</color>
+	<color name="darkblue">AC6082a7</color>
+	<color name="keyboard">FFDEF5FA</color>
+	
+	
+	
+</colors>

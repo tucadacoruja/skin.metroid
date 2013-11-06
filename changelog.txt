@@ -1,0 +1,17 @@
+[B]0.0.5[/B]
+- Remaining strings.
+- Bugs.
+
+[B]0.0.4[/B]
+- Info dialogs.
+- Strings in dialogs.
+
+[B]0.0.3[/B]
+- Music Osd.
+- Parent folder items.
+
+[B]0.0.2[/B]
+- Bugs.
+
+[B]0.0.1[/B]
+- Start pre-Alpha versions.

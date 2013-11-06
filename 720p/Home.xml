@@ -1,0 +1,60 @@
+<window id="0">
+<defaultcontrol always="true">300</defaultcontrol>
+
+<onload condition="Window.Previous(startup) + Skin.HasSetting(DlLogosStartup)">RunScript(script.artwork.downloader,mode=custom,mediatype=tvshow,clearlogo)</onload>
+<onload condition="Window.Previous(startup) + Skin.HasSetting(DlLogosStartup)">RunScript(script.artwork.downloader,mode=custom,mediatype=movie,clearlogo)</onload>
+<onload>Skin.SetString(MainColorString,blue)</onload>
+<onload condition="System.HasAddon(script.grab.fanart)">RunScript(script.grab.fanart,mode=random,mediatype=movies,refresh=10)</onload>
+
+
+<!----Set bookmark strings to a non number and set cycle to start with bookmark 1 of 3---->
+<onload condition="IsEmpty(skin.string(cycle)">skin.setstring(cycle,9002)</onload>
+<onload condition="IsEmpty(skin.string(Bookmark 1 of 3)">skin.setstring(Bookmark 1 of 3,empty)</onload>
+<onload condition="IsEmpty(skin.string(Bookmark 2 of 3)">skin.setstring(Bookmark 2 of 3,empty)</onload>
+<onload condition="IsEmpty(skin.string(Bookmark 3 of 3)">skin.setstring(Bookmark 3 of 3,empty)</onload>
+<!------->
+
+<allowoverlay>yes</allowoverlay>
+	<coordinates>
+		<system>1</system>
+		<posx>0</posx>
+		<posy>0</posy>
+	</coordinates>
+
+<controls>
+
+<control type="button" id="50">
+	<posx>0</posx>
+	<posy>0</posy>
+	<width>1</width>
+	<height>1</height>
+	<description>hack</description>
+	<label>-</label>
+	<onfocus>SetFocus(7997)</onfocus>
+	
+</control>
+
+<include>VideoWindow</include>
+<include>HomeFanart</include>
+<include>Background</include>
+<include>MainMenu</include>
+
+
+<control type="group">
+<posy>57</posy>
+<posx>-32</posx>
+<include>WidgetsAnimation</include>
+<include>MetroidMoviePanel</include>
+<include>MetroidTVShowPanel</include>
+<visible>SubString(Window(Home).Property(RecentEpisode.8.Art(thumb)),jpg) | SubString(Window(Home).Property(RecentMovie.6.Art(poster)),jpg)</visible>
+</control>
+
+<include>BottomInfoBar</include>
+<include>Holiday</include>
+<include>vignette</include>
+<include>Keyboard</include>
+
+
+</controls>
+
+</window>

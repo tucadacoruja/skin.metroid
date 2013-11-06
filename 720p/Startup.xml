@@ -1,0 +1,10 @@
+<window>
+	<defaultcontrol always="true">300</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<backgroundcolor>0</backgroundcolor>
+	
+	<onload>ReplaceWindow(Home)</onload>
+	<controls>
+ 	</controls>
+	
+</window>

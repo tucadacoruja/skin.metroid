@@ -1,0 +1,233 @@
+<window id="130">
+<defaultcontrol always="true">5</defaultcontrol>
+<allowoverlay>yes</allowoverlay>
+
+<coordinates>
+  <system>1</system>
+  <posx>0</posx>
+  <posy>0</posy>
+</coordinates>
+
+<controls>
+
+
+  
+	<control type="group"> 
+	  <posx>296</posx>
+	  <posy>75</posy>
+	  <animation effect="fade" start="10" end="100" time="150">WindowOpen</animation>	  
+		<control type="image">
+			<description>background image</description>
+			<posx>8</posx>
+			<posy>-6</posy>
+			<width>684</width>
+			<height>582</height>
+			<aspectratio>stretch</aspectratio>
+			<texture border="12">whitepanel.png</texture>
+			<colordiffuse>ff262626</colordiffuse>
+		</control>	
+			
+	
+		<control type="image">
+			<posx>20</posx>
+			<posy>18</posy>
+			<width>660</width>
+			<height>37</height>
+			<aspectratio>stretch</aspectratio>
+			<texture>list/listline.png</texture>
+			<colordiffuse>FFFFFFFF</colordiffuse>
+		</control>
+		
+		
+		<control type="label">
+			<description>header label</description>
+			<posx>20</posx>
+			<posy>14</posy>
+			<width>660</width>
+			<height>30</height>
+			<font>heading</font>
+			<label>$INFO[Window.Property(heading)]</label>
+			<align>center</align>
+			<aligny>center</aligny>
+			<textcolor>white</textcolor>
+		</control>
+		<control type="image" id="2">
+			<description>profile image</description>
+			<posx>30</posx>
+			<posy>70</posy>
+			<width>150</width>
+			<height>150</height>
+			<align>left</align>
+			<aspectratio>stretch</aspectratio>
+			<texture>unknown-user.png</texture>
+			<colordiffuse>FFFFFFFF</colordiffuse>
+		</control>
+		<control type="label">
+			<description>profile name label</description>
+			<posx>200</posx>
+			<posy>70</posy>
+			<width>460</width>
+			<align>left</align>
+			<font>DefaultButton</font>
+			<textcolor>white</textcolor>
+			<label>$LOCALIZE[20093]</label>
+		</control>
+		<control type="label" id="1000">
+			<description>profile name Value</description>
+			<posx>200</posx>
+			<posy>95</posy>
+			<width>460</width>
+			<align>left</align>
+			<font>DefaultButton</font>
+			<textcolor>ff7D7D7D</textcolor>
+		</control>
+		<control type="label">
+			<description>profile directory label</description>
+			<posx>200</posx>
+			<posy>155</posy>
+			<width>460</width>
+			<align>left</align>
+			<font>recent</font>
+			<textcolor>white</textcolor>
+			<label>$LOCALIZE[20070]</label>
+		</control>
+		<control type="label" id="1001">
+			<description>profile directory Value</description>
+			<posx>200</posx>
+			<posy>180</posy>
+			<width>460</width>
+			<align>left</align>
+			<font>recent</font>
+			<textcolor>ff7D7D7D</textcolor>
+		</control>
+		<control type="image">
+			<posx>20</posx>
+			<posy>203</posy>
+			<width>660</width>
+			<height>37</height>
+			<aspectratio>stretch</aspectratio>
+			<texture>list/listline.png</texture>
+			<colordiffuse>FFFFFFFF</colordiffuse>
+		</control>
+		<control type="grouplist" id="5">
+			<description>control area</description>
+			<posx>20</posx>
+			<posy>240</posy>
+			<width>660</width>
+			<height>240</height>
+			<itemgap>-1</itemgap>
+			<pagecontrol>60</pagecontrol>
+			<onleft>28</onleft>
+			<onright>60</onright>
+			<onup>28</onup>
+			<ondown>28</ondown>
+		</control>
+		<control type="image">
+			<posx>20</posx>
+			<posy>470</posy>
+			<width>660</width>
+			<height>37</height>
+			<aspectratio>stretch</aspectratio>
+			<texture>list/listline.png</texture>
+			<colordiffuse>FFFFFFFF</colordiffuse>
+		</control>
+		<control type="button" id="7">
+			<description>Default Button</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<height>40</height>
+			<font>DefaultButton</font>
+			<align>left</align>
+			<textoffsetx>20</textoffsetx>
+			<textcolor>white</textcolor>
+			<focusedcolor>list</focusedcolor>
+			<texturefocus>White35p.png</texturefocus>
+			<texturenofocus>-</texturenofocus>
+		</control>
+		<control type="radiobutton" id="8">
+			<description>Default RadioButton</description>
+			<height>43.5</height>
+			<width>810</width>
+			<textcolor>white</textcolor>
+			<focusedcolor>list</focusedcolor>
+			<disabledcolor>12ffffff</disabledcolor>
+			<texturefocus>White35p.png</texturefocus>
+			<texturenofocus>-</texturenofocus>
+			<textoffsetx>20</textoffsetx>
+			<radioposx>743</radioposx>
+			<align>left</align>
+		</control>
+		<control type="spincontrolex" id="9">
+			<description>Default SpinControlex</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<height>40</height>
+			<font>DefaultButton</font>
+			<textoffsetx>20</textoffsetx>
+			<textcolor>white</textcolor>
+			<focusedcolor>list</focusedcolor>
+			<texturefocus>White35p.png</texturefocus>
+			<texturenofocus>-</texturenofocus>
+			<aligny>center</aligny>
+			<reverse>yes</reverse>
+		</control>
+		<control type="image" id="11">
+			<description>separator image</description>
+			<height>2</height>
+			<texture>separator2.png</texture>
+		</control>
+		
+		<control type="button" id="28">
+			<description>Ok Button</description>
+			<posx>145</posx>
+			<posy>515</posy>
+		
+			<onleft>29</onleft>
+			<onright>29</onright>
+			<onup>5</onup>
+			<ondown>5</ondown>
+			<description>OK Button</description>
+			<label>$LOCALIZE[186]</label>
+			<width>160</width>
+			<height>47</height>		
+			<align>center</align>
+			<aligny>top</aligny>
+			<textoffsetx>5</textoffsetx>
+			<textoffsety>6</textoffsety>
+			<texturefocus border="12">whitepanel2.png</texturefocus>
+			<texturenofocus>-</texturenofocus>
+			<colordiffuse>ff959595</colordiffuse>
+			<font>homemenu3</font>
+			<textcolor>white</textcolor>
+			<focusedcolor>ffD7D7D7</focusedcolor>
+			<disabledcolor>F99c9c9c</disabledcolor>
+		</control>
+		<control type="button" id="29">
+			<description>Close Button</description>
+			<posx>355</posx>
+			<posy>515</posy>
+		
+			<onleft>28</onleft>
+			<onright>28</onright>
+			<onup>5</onup>
+			<ondown>5</ondown>
+			
+			<label>$LOCALIZE[222]</label>
+			<width>160</width>
+			<height>47</height>		
+			<align>center</align>
+			<aligny>top</aligny>
+			<textoffsetx>5</textoffsetx>
+			<textoffsety>6</textoffsety>
+			<texturefocus border="12">whitepanel2.png</texturefocus>
+			<texturenofocus>-</texturenofocus>
+			<colordiffuse>ff959595</colordiffuse>
+			<font>homemenu3</font>
+			<textcolor>white</textcolor>
+			<focusedcolor>ffD7D7D7</focusedcolor>
+			<disabledcolor>F99c9c9c</disabledcolor>
+		</control>
+	</control>
+</controls>
+
+</window>

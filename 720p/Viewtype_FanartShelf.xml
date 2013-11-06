@@ -1,0 +1,179 @@
+<includes>
+	<include name="FanartShelf">
+
+	<control type="group">
+		<include>InfoOpenClose</include>
+		<include>ViewWindowOC</include>
+		<include>ContextFade</include>	
+		<include>Keyboard</include>
+		<include>Favourites</include>
+		
+		<control type="label">
+			<posx>300</posx>
+			<posy>290</posy>
+			<width>900</width>
+			<height>59</height>
+			<label>[UPPERCASE]$INFO[ListItem.Title][/UPPERCASE]</label>
+			<scroll>false</scroll>
+			<textcolor>E1d2e0fe</textcolor>
+			<shadowcolor>ff464646</shadowcolor>
+			<font>NowPlaying1</font>
+			<align>center</align>
+			<visible>Control.IsVisible(781)</visible>
+			<animation effect="fade" start="100" end="0" time="150" condition="substring(Control.GetLabel(1963),.png)">Conditional</animation>
+			<animation effect="fade" start="0" end="100" time="150" condition="!substring(Control.GetLabel(1963),.png)">Conditional</animation>
+		 </control>
+		
+		 
+		<control type="image" id="1963">
+			<posx>535</posx>
+			<posy>130</posy>
+			<width>427</width>
+			<height>256</height>
+			<aspectratio>keep</aspectratio>
+			<texture>$INFO[ListItem.Art(clearlogo)]</texture>
+			<animation effect="fade" start="0" end="80" time="100" delay="0" condition="true">Conditional</animation>
+			<visible>Control.IsVisible(781)</visible>
+		</control>
+		
+		<control type="grouplist">
+			<description>Media Codec Flagging Images</description>
+			<posx>255</posx>
+			<posy>93</posy>
+			<width>1030</width>
+			<height>50</height>
+			<align>center</align>
+			<itemgap>0</itemgap>
+			<orientation>horizontal</orientation>
+			<include>Media_flags_big</include>
+			<visible>Control.IsVisible(781) | Control.IsVisible(777)</visible>
+			<animation effect="fade" start="0" end="80" time="600">WindowOpen</animation>
+			<animation effect="fade" start="80" end="0" time="600" tween="sine">WindowClose</animation>
+			
+		</control>
+		
+		<control type="group">
+			
+			
+			<posx>0</posx>
+			<posy>15</posy>
+			<control type="wraplist" id="781">
+				<visible>Container.Content(Movies) | Container.Content(TVShows)</visible>
+				<visible>!Window.IsVisible(favourites)</visible>
+				<hitrect x="0" y="-10" w="1280" h="190" />
+				<posx>255</posx>
+				<posy>400</posy>
+				<width>1420</width>
+				<height>300</height>
+				<onleft>781</onleft>
+				<onright>781</onright>
+				<onup>300</onup>
+				<ondown>63</ondown>
+				<viewtype label="Fanart">wrap</viewtype>
+				<pagecontrol>63</pagecontrol>
+				<scrolltime>200</scrolltime>
+				<focusposition>3</focusposition>
+				<movement>3</movement>
+				<orientation>horizontal</orientation>
+				<preloaditems>4</preloaditems>
+				
+				<itemlayout height="200" width="135">
+					
+					<control type="image">
+						<posx>2</posx>
+						<posy>100</posy>
+						<width>123</width>
+						<height>180</height>
+						<aspectratio>stretch</aspectratio>
+						<bordertexture border="6">ThumbBorder.png</bordertexture>
+						<bordersize>6</bordersize>
+						<fadetime>200</fadetime>
+						<texture background="true" fallback="DefaultAlbumCover.png">$INFO[ListItem.Art(poster)]</texture>
+						<animation effect="fade" start="0" end="80" time="0" condition="true">Conditional</animation>
+					</control>
+					<control type="image">
+						<posx>10</posx>
+						<posy>120</posy>
+						<width>100</width>
+						<height>120</height>
+						<aspectratio>stretch</aspectratio>
+						<texture background="true" diffuse="poster/posterdiffusesmall.png" >$VAR[Fallback_Icon]</texture>
+						<animation effect="fade" start="0" end="80" time="0" condition="true">Conditional</animation>
+						
+						<colordiffuse>EBFFFFFF</colordiffuse>
+					</control>
+					<control type="image">
+						<posx>102</posx>
+						<posy>257</posy>
+						<width>20</width>
+						<height>20</height>
+						<aspectratio>keep</aspectratio>
+						<texture>$INFO[ListItem.Overlay]</texture>
+						<visible>Skin.HasSetting(WatchedOverlays)</visible>
+						<animation effect="fade" start="0" end="50" time="0" condition="true">Conditional</animation>
+					</control>					
+				</itemlayout>
+				
+							
+				<focusedlayout height="310" width="200">
+					<control type="image">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>190</width>
+						<height>280</height>
+						<aspectratio>stretch</aspectratio>
+						<bordertexture border="8">ThumbBorder.png</bordertexture>
+						<bordersize>8</bordersize>
+						<fadetime>200</fadetime>
+						<texture background="true" fallback="DefaultAlbumCover.png">$INFO[ListItem.Art(poster)]</texture>
+					</control>
+					<control type="image">
+						<posx>20</posx>
+						<posy>30</posy>
+						<width>150</width>
+						<height>190</height>
+						<aspectratio>stretch</aspectratio>
+						<texture background="true" diffuse="poster/posterdiffusesmall.png" >$VAR[Fallback_Icon]</texture>
+						<animation effect="fade" start="0" end="80" time="0" condition="true">Conditional</animation>
+						
+						<colordiffuse>EBFFFFFF</colordiffuse>
+					</control>
+					
+					<control type="image">
+						<posx>153</posx>
+						<posy>237</posy>
+						<width>35</width>
+						<height>45</height>
+						<aspectratio>keep</aspectratio>
+						<texture>$INFO[ListItem.Overlay]</texture>
+						<visible>Skin.HasSetting(WatchedOverlays)</visible>
+					</control>
+				</focusedlayout>
+				
+				
+			
+			</control>
+	
+			
+			<control type="scrollbar" id="63">
+				<texturesliderbackground>buttons/scrollbgH.png</texturesliderbackground>
+				<texturesliderbar>-</texturesliderbar>
+				<texturesliderbarfocus>-</texturesliderbarfocus>
+				<textureslidernib>-</textureslidernib>
+				<textureslidernibfocus>buttons/scrollnibH.png</textureslidernibfocus>
+				<orientation>horizontal</orientation>
+				<showonepage>true</showonepage>
+				<posx>310</posx>
+				<posy>20r</posy>
+				<width>900</width>
+				<height>10</height>
+				<onup>781</onup>
+				<visible>Control.IsVisible(781)</visible>
+				<animation effect="fade" start="100" end="30" time="200" reversable="false" condition="!Control.HasFocus(63)">Conditional</animation>
+			</control>
+			
+		</control>
+	</control>
+</include>
+	
+</includes>

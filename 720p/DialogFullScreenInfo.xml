@@ -1,0 +1,121 @@
+<window type="dialog" id="142">
+    <defaultcontrol always="true">9000</defaultcontrol>
+<controls>
+
+<control type="group">
+	<control type="group">
+		<posx>885</posx>
+		<posy>0</posy>
+		<width>400</width>
+		<height>720</height>
+		
+		<animation type="WindowOpen">
+			<effect type="slide" start="600,0" end="0,0" time="500" delay="400" tween="quadratic" easing="out" />
+		</animation>
+		<animation type="WindowClose">
+			<effect type="slide" start="0,0" end="600,0" time="500"  />
+		</animation>
+		
+		<control type="image">
+			<posx>10</posx>
+			<posy>0</posy>
+			<width>500</width>
+			<height>720</height>
+			<texture background="true">DefaultAlbumCover.png</texture>
+			<colordiffuse>CC555555</colordiffuse>
+			<aspectratio>stretch</aspectratio>
+		</control>
+		
+		<control type="grouplist">
+			<posx>40</posx>
+			<posy>40</posy>
+			<width>320</width>
+			<height>680</height>
+			<orientation>vertical</orientation>
+			<usecontrolcoords>true</usecontrolcoords>
+			<itemgap>10</itemgap>
+			
+			<control type="textbox">
+				<width>320</width>
+				<height>106</height>
+				<textcolor>FFD7D7D7</textcolor>
+				<font>FullscreenInfo</font>
+				<label>[UPPERCASE]$INFO[VideoPlayer.Title][/UPPERCASE]</label>
+				<aligny>top</aligny>
+				<autoscroll>false</autoscroll>
+			</control>
+			
+			<control type="label">
+				<posy>20</posy>
+				<width max="320">auto</width>
+				<height>40</height>
+				<textcolor>FFD7D7D7</textcolor>
+				<font>FullscreenInfo3</font>
+				<label>[UPPERCASE]$VAR[FullscreenLabel][/UPPERCASE]</label>
+				<scroll>false</scroll>
+			</control>
+			
+			<control type="image">
+				<posx>78</posx>
+				<posy>-2</posy>
+				<width>170</width>
+				<height>45</height>
+				<texture background="true">$INFO[Player.StarRating]</texture>
+				<aspectratio>keep</aspectratio>
+			</control>
+			
+			<control type="textbox">
+				<posy>0</posy>
+				<width>320</width>
+				<height>330</height>
+				<font>plot</font>
+				<wrapmultiline>true</wrapmultiline>
+				<label>$INFO[VideoPlayer.Plot]</label>
+				<textcolor>FFD7D7D7</textcolor>
+				<autoscroll>false</autoscroll>
+				<align>justify</align>
+			</control>
+			<control type="label">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>250</width>
+				<height>40</height>
+				<font>FullscreenInfo2</font>
+				<wrapmultiline>true</wrapmultiline>
+				<label> </label><!---empty spacer---->
+				<textcolor>FFD7D7D7</textcolor>
+				<autoscroll>false</autoscroll>
+				<align>left</align>
+			</control>
+			<control type="label">
+				<posx>0</posx>
+				<posy>-17</posy>
+				<width>250</width>
+				<height>50</height>
+				<font>FullscreenInfo2</font>
+				<wrapmultiline>true</wrapmultiline>
+				<label>[UPPERCASE]$INFO[VideoPlayer.Duration,, min][/UPPERCASE]</label>
+				<textcolor>FFD7D7D7</textcolor>
+				<autoscroll>false</autoscroll>
+				<align>left</align>
+			</control>
+			<control type="label">
+				<posx>0</posx>
+				<posy>-43</posy>
+				<width>250</width>
+				<height>50</height>
+				<font>FullscreenInfo3</font>
+				<wrapmultiline>true</wrapmultiline>
+				<label>[UPPERCASE]$INFO[VideoPlayer.Studio][/UPPERCASE]</label>
+				<textcolor>FFD7D7D7</textcolor>
+				<autoscroll>false</autoscroll>
+				<align>left</align>
+			</control>
+			
+		</control>
+	</control>
+</control>
+
+
+</controls>
+</window>

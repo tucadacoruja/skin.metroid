@@ -1,0 +1,533 @@
+<window id="2901">
+	<defaultcontrol always="true">9000</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+	
+	<controls>
+
+		<control type="group">
+			<posx>0</posx>
+			<posy>640</posy>
+			<visible>![Window.IsActive(142) | Window.IsActive(10140) | Window.IsActive(osdvideosettings) | Window.IsActive(osdaudiosettings)]</visible>
+		
+			<decscription>bottom bar</decscription>
+			<animation type="Visible">
+				<effect type="fade" time="200" start="0" end="100" />
+				<effect type="slide" time="200" start="0,98" end="0,0" easing="out" tween="cubic" />
+			</animation>
+			<animation type="Hidden">
+				<effect type="fade" time="200" start="100" end="0" />
+				<effect type="slide" time="200" start="0,0" end="0,98" easing="in" tween="cubic" />
+			</animation>
+			<animation type="WindowOpen">
+				<effect type="fade" time="200" start="0" end="100" />
+				<effect type="slide" time="200" start="0,98" end="0,0" easing="out" tween="cubic" />
+			</animation>
+			<animation type="WindowClose">
+				<effect type="fade" time="200" start="100" end="0" />
+				<effect type="slide" time="200" start="0,0" end="0,98" easing="in" tween="cubic" />
+			</animation>
+			<control type="image">
+				<posx>0</posx>
+				<posy>-100</posy>
+				<width>1280</width>
+				<height>200</height>
+				<texture>shadow.png</texture>
+				<aspectratio>stretch</aspectratio>
+			</control>
+
+			<control type="progress" id="20">
+				<posx>348</posx>
+				<posy>48</posy>
+				<width>633</width>
+				<height>4</height>
+				<texturebg>osd/seek/progresscache_back.png</texturebg>
+				<lefttexture>-</lefttexture>
+				<midtexture>osd/buttons/osdbg.png</midtexture>
+				<righttexture>-</righttexture>
+				<info>Player.Progress</info>
+				<colordiffuse>skin.string(MainColorString)</colordiffuse>
+				<!--animation effect="fade" start="0" end="60" time="0" condition="true">Conditional</animation-->
+
+			</control>
+			<control type="progress" id="21">
+				<posx>348</posx>
+				<posy>50</posy>
+				<width>633</width>
+				<height>4</height>
+				<texturebg>osd/seek/progresscache_back.png</texturebg>
+				<lefttexture>-</lefttexture>
+				<midtexture>white.png</midtexture>
+				<righttexture>-</righttexture>
+				<info>Player.ProgressCache</info>
+				<animation effect="fade" start="0" end="20" time="0" condition="true">Conditional</animation>
+			</control>
+			<control type="slider" id="87">
+				<description>Seek Slider</description>
+				<posx>345</posx>
+				<posy>37</posy>
+				<width>640</width>
+				<height>50</height>
+				<onup>1</onup>
+				<ondown>1</ondown>
+				<action>seek</action>
+				<texturesliderbar>empty.png</texturesliderbar>
+				<textureslidernib>empty.png</textureslidernib>
+				<textureslidernibfocus>empty.png</textureslidernibfocus>
+				<animation effect="fade" start="0" end="50" time="0" reversible="false" condition="true">Conditional</animation>
+			</control>
+			<control type="slider" id="88">
+				<description>Seek Slider</description>
+				<posx>345</posx>
+				<posy>41</posy>
+				<width>640</width>
+				<height>4</height>
+				<onup>9000</onup>
+				
+				<action>seek</action>
+				<texturesliderbar>osd/seek/EmptyBar.png</texturesliderbar>
+				<textureslidernib>osd/seek/OsdSearchNib.png</textureslidernib>
+				<textureslidernibfocus>osd/seek/OsdSearchNib.png</textureslidernibfocus>
+				<!--animation effect="fade" start="0" end="50" time="0" reversible="false" condition="true">Conditional</animation-->
+			</control>
+			
+			<control type="label">
+				<posx>230</posx>
+				<posy>30</posy>
+				<width>300</width>
+				<height>42</height>
+				<font>OSDTiming</font>
+				<textcolor>blue</textcolor>
+				<label>[B]$INFO[Player.Time][/B]</label>
+				<align>left</align>
+				
+			</control>
+			<control type="label">
+				<posx>1090</posx>
+				<posy>30</posy>
+				<width>300</width>
+				<height>42</height>
+				<font>OSDTiming</font>
+				<textcolor>blue</textcolor>
+				<label>[B]$INFO[Player.Duration][/B]</label>
+				<align>right</align>
+				
+			</control>
+			
+			
+			<control type="label" id="5334">
+				<posx>50</posx>
+				<posy>30</posy>
+				<height>42</height>
+				<width min="5" max="250">auto</width>
+				<label>[B]$LOCALIZE[31175] $INFO[Player.SeekOffset][/B]</label>
+				<textcolor>blue</textcolor>
+				<font>OSDTiming</font>
+				<align>left</align>
+				<visible>Player.Seeking | Player.DisplayAfterSeek</visible>
+				<visible>!Player.Forwarding + !Player.Rewinding</visible>
+			</control>
+			
+			<!-- TIMINGS -->
+			<control type="group">
+				<!-- REWIND -->
+				<control type="group">
+                    <posx>1050</posx>
+					<posy>30</posy>
+					
+					<control type="label">
+						<posx>0</posx>
+						<posy>0</posy>
+						<height>42</height>
+						<width>300</width>
+						<label>[B][UPPERCASE]REW 2x[/UPPERCASE][/B]</label>
+						<textcolor>blue</textcolor>
+						<font>OSDTiming</font>
+						<align>center</align>
+						<visible>Player.Rewinding2x</visible>
+					</control>
+				
+					<control type="label">
+						<posx>0</posx>
+						<posy>0</posy>
+						<height>42</height>
+						<width>300</width>
+						<label>[B][UPPERCASE]REW 4x[/UPPERCASE][/B]</label>
+						<textcolor>blue</textcolor>
+						<font>OSDTiming</font>
+						<align>center</align>
+						<visible>Player.Rewinding4x</visible>
+					</control>
+				
+					<control type="label">
+						<posx>0</posx>
+						<posy>0</posy>
+						<height>42</height>
+						<width>300</width>
+						<label>[B][UPPERCASE]REW 8x[/UPPERCASE][/B]</label>
+						<textcolor>blue</textcolor>
+						<font>OSDTiming</font>
+						<align>center</align>
+						<visible>Player.Rewinding8x</visible>
+					</control>
+				
+					<control type="label">
+						<posx>0</posx>
+						<posy>0</posy>
+						<height>42</height>
+						<width>300</width>
+						<label>[B][UPPERCASE]REW 16x[/UPPERCASE][/B]</label>
+						<textcolor>blue</textcolor>
+						<font>OSDTiming</font>
+						<align>center</align>
+						<visible>Player.Rewinding16x</visible>
+					</control>
+				
+					<control type="label">
+						<posx>0</posx>
+						<posy>0</posy>
+						<height>42</height>
+						<width>300</width>
+						<label>[B][UPPERCASE]REW 32x[/UPPERCASE][/B]</label>
+						<textcolor>blue</textcolor>
+						<font>OSDTiming</font>
+						<align>center</align>
+						<visible>Player.Rewinding32x</visible>
+					</control>
+				</control>
+
+				<!-- FORWARD -->
+				<control type="group">
+					<posx>1050</posx>
+					<posy>30</posy>
+					<control type="label">
+						<posx>0</posx>
+						<posy>0</posy>
+						<height>42</height>
+						<width>300</width>
+						<label>[B][UPPERCASE]FF 2x[/UPPERCASE][/B]</label>
+						<textcolor>blue</textcolor>
+						<font>OSDTiming</font>
+						<align>center</align>
+						<visible>Player.Forwarding2x</visible>
+					</control>
+				
+					<control type="label">
+						<posx>0</posx>
+						<posy>0</posy>
+						<height>42</height>
+						<width>300</width>
+						<label>[B][UPPERCASE]FF 4x[/UPPERCASE][/B]</label>
+						<textcolor>blue</textcolor>
+						<font>OSDTiming</font>
+						<align>center</align>
+						<visible>Player.Forwarding4x</visible>
+					</control>
+				
+					<control type="label">
+						<posx>0</posx>
+						<posy>0</posy>
+						<height>42</height>
+						<width>300</width>
+						<label>[B][UPPERCASE]FF 8x[/UPPERCASE][/B]</label>
+						<textcolor>blue</textcolor>
+						<font>OSDTiming</font>
+						<align>center</align>
+						<visible>Player.Forwarding8x</visible>
+					</control>
+				
+					<control type="label">
+						<posx>0</posx>
+						<posy>0</posy>
+						<height>42</height>
+						<width>300</width>
+						<label>[B][UPPERCASE]FF 16x[/UPPERCASE][/B]</label>
+						<textcolor>blue</textcolor>
+						<font>OSDTiming</font>
+						<align>center</align>
+						<visible>Player.Forwarding16x</visible>
+					</control>
+				
+					<control type="label">
+						<posx>0</posx>
+						<posy>0</posy>
+						<height>42</height>
+						<width>300</width>
+						<label>[B][UPPERCASE]FF 32x[/UPPERCASE][/B]</label>
+						<textcolor>blue</textcolor>
+						<font>OSDTiming</font>
+						<align>center</align>
+						<visible>Player.Forwarding32x</visible>
+					</control>
+				</control>
+			</control>
+		</control>
+
+	
+		<control type="grouplist">
+			
+			<posx>0</posx>
+			<posy>10</posy>
+			<width>1280</width>
+			<height>200</height>
+			<align>center</align>
+			<orientation>horizontal</orientation>
+			<itemgap>5</itemgap>
+			<onright>50</onright>
+			<focusposition>2</focusposition>
+			
+			<visible>![Window.IsActive(142) | Window.IsActive(145) | Window.IsActive(10140)]</visible>
+			
+			
+			<control type="image">
+				<height>65</height>
+				<width>65</width>
+				<texture>osd/buttons/osdbg.png</texture>
+				<aspectratio>stretch</aspectratio>
+				<animation effect="fade" start="100" end="60" time="100" condition="Control.HasFocus(1)">Conditional</animation>
+			</control>
+			<control type="image">
+				<height>65</height>
+				<width>65</width>
+				<texture>osd/buttons/osdbg.png</texture>
+				<aspectratio>stretch</aspectratio>
+				<animation effect="fade" start="100" end="60" time="100" condition="Control.HasFocus(2)">Conditional</animation>
+			</control>
+			<control type="image">
+				<height>65</height>
+				<width>65</width>
+				<texture>osd/buttons/osdbg.png</texture>
+				<aspectratio>stretch</aspectratio>
+				<animation effect="fade" start="100" end="60" time="100" condition="Control.HasFocus(3)">Conditional</animation>
+			</control>
+			<control type="image">
+				<height>65</height>
+				<width>65</width>
+				<texture>osd/buttons/osdbg.png</texture>
+				<aspectratio>stretch</aspectratio>
+				<animation effect="fade" start="100" end="60" time="100" condition="Control.HasFocus(4)">Conditional</animation>
+			</control>
+			<control type="image">
+				<height>65</height>
+				<width>65</width>
+				<texture>osd/buttons/osdbg.png</texture>
+				<aspectratio>stretch</aspectratio>
+				<animation effect="fade" start="100" end="60" time="100" condition="Control.HasFocus(5)">Conditional</animation>
+			</control>
+			<control type="image">
+				<height>65</height>
+				<width>65</width>
+				<texture>osd/buttons/osdbg.png</texture>
+				<aspectratio>stretch</aspectratio>
+				<animation effect="fade" start="100" end="60" time="100" condition="Control.HasFocus(6)">Conditional</animation>
+			</control>
+			<control type="image">
+				<height>65</height>
+				<width>65</width>
+				<texture>osd/buttons/osdbg.png</texture>
+				<aspectratio>stretch</aspectratio>
+				<animation effect="fade" start="100" end="60" time="100" condition="Control.HasFocus(7)">Conditional</animation>
+			</control>
+			<control type="image">
+				<height>65</height>
+				<width>65</width>
+				<texture>osd/buttons/osdbg.png</texture>
+				<aspectratio>stretch</aspectratio>
+				<animation effect="fade" start="100" end="60" time="100" condition="Control.HasFocus(8)">Conditional</animation>
+			</control>
+			<control type="image">
+				<height>65</height>
+				<width>65</width>
+				<texture>osd/buttons/osdbg.png</texture>
+				<aspectratio>stretch</aspectratio>
+				<animation effect="fade" start="100" end="60" time="100" condition="Control.HasFocus(9)">Conditional</animation>
+			</control>
+			<control type="image">
+				<height>65</height>
+				<width>65</width>
+				<texture>osd/buttons/osdbg.png</texture>
+				<aspectratio>stretch</aspectratio>
+				<animation effect="fade" start="100" end="60" time="100" condition="Control.HasFocus(10)">Conditional</animation>
+			</control>
+			<control type="image">
+				<height>65</height>
+				<width>65</width>
+				<texture>osd/buttons/osdbg.png</texture>
+				<aspectratio>stretch</aspectratio>
+				<animation effect="fade" start="100" end="60" time="100" condition="Control.HasFocus(11)">Conditional</animation>
+			</control>
+			
+		</control>
+		
+		
+		<control type="grouplist" id="9000">
+			
+			<posx>0</posx>
+			<posy>10</posy>
+			<width>1280</width>
+			<height>200</height>
+			<align>center</align>
+			<orientation>horizontal</orientation>
+			<itemgap>5</itemgap>
+			<ondown>88</ondown>
+			<focusposition>2</focusposition>
+			
+			<visible>![Window.IsActive(142) | Window.IsActive(145) | Window.IsActive(10140)]</visible>
+			
+			
+			<control type="button" id="1">
+				<height>65</height>
+				<width>65</width>
+				<aspectratio>keep</aspectratio>
+				<texturefocus flipx="true">osd/buttons/ff.png</texturefocus>
+				<texturenofocus flipx="true">osd/buttons/ff.png</texturenofocus>
+				
+				<onclick>xbmc.playercontrol(rewind)</onclick>
+				<animation effect="zoom" start="100" end="120" center="auto" time="100">Focus</animation>
+				<animation effect="zoom" start="120" end="100" center="auto" time="100">UnFocus</animation>
+			</control>
+			
+			<control type="togglebutton" id="2">
+				<description>Play</description>
+				<height>65</height>
+				<width>65</width>
+				<texturefocus>osd/buttons/play.png</texturefocus>
+				<texturenofocus>osd/buttons/play.png</texturenofocus>
+				<usealttexture>Player.Playing</usealttexture>
+				<alttexturefocus>osd/buttons/pause.png</alttexturefocus>
+				<alttexturenofocus>osd/buttons/pause.png</alttexturenofocus>
+				<onclick>playercontrol(play)</onclick>
+				<animation effect="zoom" start="100" end="120" center="auto" time="100">Focus</animation>
+				<animation effect="zoom" start="120" end="100" center="auto" time="100">UnFocus</animation>
+			</control>
+			
+			<control type="button" id="3">
+				<description>Rewind</description>
+				<height>65</height>
+				<width>65</width>
+				<aspectratio>keep</aspectratio>
+				<texturefocus>osd/buttons/ff.png</texturefocus>
+				<texturenofocus>osd/buttons/ff.png</texturenofocus>
+				
+				<onclick>xbmc.playercontrol(forward)</onclick>
+				
+				<animation effect="zoom" start="100" end="120" center="auto" time="100">Focus</animation>
+				<animation effect="zoom" start="120" end="100" center="auto" time="100">UnFocus</animation>
+			</control>
+	
+			<control type="button" id="4">
+				<description>skip</description>
+				<height>65</height>
+				<width>65</width>
+				<aspectratio>keep</aspectratio>
+				<texturefocus flipx="true">osd/buttons/skip.png</texturefocus>
+				<texturenofocus flipx="true">osd/buttons/skip.png</texturenofocus>
+				
+				<onclick>xbmc.playercontrol(previous)</onclick>
+				<animation effect="zoom" start="100" end="120" center="auto" time="100">Focus</animation>
+				<animation effect="zoom" start="120" end="100" center="auto" time="100">UnFocus</animation>
+			</control>
+			
+			<control type="button" id="5">
+				<description>Stop</description>
+				<height>65</height>
+				<width>65</width>
+				<aspectratio>keep</aspectratio>
+				<texturefocus>osd/buttons/stop.png</texturefocus>
+				<texturenofocus>osd/buttons/stop.png</texturenofocus>
+				
+				<onclick>xbmc.playercontrol(stop)</onclick>
+				<animation effect="zoom" start="100" end="120" center="auto" time="100">Focus</animation>
+				<animation effect="zoom" start="120" end="100" center="auto" time="100">UnFocus</animation>
+			</control>
+			
+			<control type="button" id="6">
+				<description>skip</description>
+				<height>65</height>
+				<width>65</width>
+				<aspectratio>keep</aspectratio>
+				<texturefocus>osd/buttons/skip.png</texturefocus>
+				<texturenofocus>osd/buttons/skip.png</texturenofocus>
+				
+				<onclick>xbmc.playercontrol(next)</onclick>
+				<animation effect="zoom" start="100" end="120" center="auto" time="100">Focus</animation>
+				<animation effect="zoom" start="120" end="100" center="auto" time="100">UnFocus</animation>
+			</control>
+		
+			<control type="button" id="7">
+				<description>Info</description>
+				<height>65</height>
+				<width>65</width>
+				<aspectratio>keep</aspectratio>
+				<texturefocus flipx="true">osd/buttons/info.png</texturefocus>
+				<texturenofocus flipx="true">osd/buttons/info.png</texturenofocus>
+				
+				<onclick>xbmc.activatewindow(fullscreeninfo)</onclick>
+				<animation effect="zoom" start="100" end="120" center="auto" time="100">Focus</animation>
+				<animation effect="zoom" start="120" end="100" center="auto" time="100">UnFocus</animation>
+			</control>
+			
+			<control type="togglebutton" id="8">
+				<description>get subtitles</description>
+				<height>65</height>
+				<width>65</width>
+				<aspectratio>keep</aspectratio>
+				<texturefocus>osd/buttons/getsub.png</texturefocus>
+				<texturenofocus>osd/buttons/getsub.png</texturenofocus>
+				
+				<onclick>Dialog.Close(VideoOSD,true)</onclick>
+				<onclick>XBMC.RunScript($INFO[Skin.String(addon.subtitles.path)])</onclick>
+				<altclick>Skin.SetAddon(addon.subtitles.path,xbmc.python.subtitles)</altclick>
+				<altclick>Dialog.Close(VideoOSD,true)</altclick>
+				<altclick>XBMC.RunScript($INFO[Skin.String(addon.subtitles.path)])</altclick>
+				<usealttexture>IsEmpty(Skin.String(addon.subtitles.path))</usealttexture>
+				<alttexturefocus>osd/buttons/getsub.png</alttexturefocus>
+				<alttexturenofocus>osd/buttons/getsub.png</alttexturenofocus>
+				<animation effect="zoom" start="100" end="120" center="auto" time="100">Focus</animation>
+				<animation effect="zoom" start="120" end="100" center="auto" time="100">UnFocus</animation>
+			</control>
+			
+			<control type="button" id="9">
+				<description>Audio Settings</description>
+				<height>65</height>
+				<width>65</width>
+				<aspectratio>keep</aspectratio>
+				<texturefocus>osd/buttons/audio.png</texturefocus>
+				<texturenofocus>osd/buttons/audio.png</texturenofocus>
+				
+				<onclick>xbmc.activatewindow(124)</onclick>
+				<animation effect="zoom" start="100" end="120" center="auto" time="100">Focus</animation>
+				<animation effect="zoom" start="120" end="100" center="auto" time="100">UnFocus</animation>
+			</control>
+			<control type="button" id="10">
+				<description>Video Settings</description>
+				<height>65</height>
+				<width>65</width>
+				<aspectratio>keep</aspectratio>
+				<texturefocus>osd/buttons/video.png</texturefocus>
+				<texturenofocus>osd/buttons/video.png</texturenofocus>
+				
+				<onclick>xbmc.activatewindow(osdvideosettings)</onclick>
+				<animation effect="zoom" start="100" end="120" center="auto" time="100">Focus</animation>
+				<animation effect="zoom" start="120" end="100" center="auto" time="100">UnFocus</animation>
+			</control>
+			
+			<control type="button" id="11">
+				<description>bookmark</description>
+				<height>65</height>
+				<width>65</width>
+				<aspectratio>keep</aspectratio>
+				<texturefocus>osd/buttons/bookmark.png</texturefocus>
+				<texturenofocus>osd/buttons/bookmark.png</texturenofocus>
+				
+				<onclick>xbmc.activatewindow(videobookmarks)</onclick>
+				<animation effect="zoom" start="100" end="120" center="auto" time="100">Focus</animation>
+				<animation effect="zoom" start="120" end="100" center="auto" time="100">UnFocus</animation>
+			</control>
+			
+		</control>
+		
+	
+		
+	
+	</controls>
+</window>

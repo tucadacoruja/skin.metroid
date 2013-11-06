@@ -1,0 +1,41 @@
+<window id="500">
+<defaultcontrol always="true">50</defaultcontrol>
+<backgroundcolor>0</backgroundcolor>
+<allowoverlay>yes</allowoverlay>
+<onload>ActivateWindow(playercontrols)</onload>
+<onunload>Dialog.Close(playercontrols)</onunload>
+
+<views>602,579,50</views>
+<controls>
+
+<include>VideoWindow</include>
+<include>MusicFanart</include>
+<include>Background</include>
+
+<include>MainMenu</include>
+
+<include>List</include>
+				
+<include>ScrollOffsetLabel</include>
+
+<control type="image">
+	<posx>10</posx>
+	<posy>10</posy>
+	<width>55</width>
+	<height>55</height>
+	<texture>osd/buttons/GrayBackground.png</texture>
+</control>
+<control type="image">
+	<posx>10</posx>
+	<posy>10</posy>
+	<width>55</width>
+	<height>55</height>
+	<texture>osd/buttons/playlist.png</texture>
+</control>
+
+<include>BottomInfoBar</include>
+<include>vignette</include>
+
+</controls>
+  
+</window>

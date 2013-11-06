@@ -1,0 +1,284 @@
+<includes>
+
+<!-- EPISODES VIEW -->
+	
+	<include name="Episodes">
+			
+	<control type="group">
+		<include>InfoOpenClose</include>
+		<include>ViewWindowOC</include>
+		<include>ContextFade</include>
+		<include>Keyboard</include>
+		
+		<control type="grouplist">
+			<description>Media Codec Flags</description>
+			<posx>582</posx>
+			<posy>318</posy>
+			<width>600</width>
+			<height>50</height>
+			<align>left</align>
+			<itemgap>10</itemgap>
+			<orientation>horizontal</orientation>
+			<include>Media_flags</include>
+			<visible>Control.IsVisible(504)</visible>
+			<animation effect="fade" start="0" end="60" time="600">WindowOpen</animation>
+			<animation effect="fade" start="60" end="0" time="600" tween="sine">WindowClose</animation>
+			<animation effect="fade" start="0" end="60" time="600" tween="sine" easing="inout" reversable="true">VisibleCHange</animation>
+		</control>
+		
+		<control type="wraplist" id="504">
+			<viewtype label="Episodes">list</viewtype>
+			<posx>290</posx>
+			<posy>112</posy>
+			<width>1633</width>
+			<height>525</height>
+			<scrolltime>200</scrolltime>
+			<orientation>vertical</orientation>
+			<movement>4</movement>
+			<focusposition>1</focusposition>
+			<onup>504</onup>
+			<ondown>504</ondown>
+			<onleft>300</onleft>
+			<onright>65</onright>
+			<pagecontrol>65</pagecontrol>
+			
+			<visible>Container.Content(episodes)</visible>
+			<visible>!Window.IsVisible(favourites)</visible>
+			<itemlayout width="1633" height="70">
+				<control type="label">
+					<posx>100</posx>
+					<posy>0</posy>
+					<width>90</width>
+					<height>60</height>
+					<align>right</align>
+					<aligny>center</aligny>
+					<label>[B]$INFO[ListItem.Episode][/B]</label>
+					<font>EpisodeTitle</font>
+					<textcolor>ampm</textcolor>
+					<selectedcolor>ff7acafe</selectedcolor>
+				</control>
+				<control type="label">
+					<posx>125</posx>
+					<posy>-11</posy>
+					<width>333</width>
+					<height>60</height>
+					<align>left</align>
+					<label>$INFO[ListItem.Label]</label>
+					<font>movietitle1</font>
+					<scroll>false</scroll>
+					<textcolor>taskbar</textcolor>
+					<selectedcolor>taskbar</selectedcolor>
+					<visible>IsEmpty(ListItem.Title)</visible>
+				</control>
+				<control type="label">
+					<posx>125</posx>
+					<posy>-9</posy>
+					<width>633</width>
+					<height>60</height>
+					<align>left</align>
+					<label>[UPPERCASE]$INFO[ListItem.Title][/UPPERCASE]</label>
+					<font>movietitle1</font>
+					<textcolor>taskbar</textcolor>
+					<selectedcolor>taskbar</selectedcolor>
+					<visible>!IsEmpty(ListItem.Title)</visible>
+				</control>
+				<control type="label">
+					<posx>125</posx>
+					<posy>15</posy>
+					<width>633</width>
+					<height>60</height>
+					<align>left</align>
+					<label>$LOCALIZE[31181] $INFO[ListItem.Date]</label>
+					<font>InfoSmall</font>
+					<textcolor>movietitleb2</textcolor>
+					<selectedcolor>movietitleb2</selectedcolor>
+				</control>				
+			</itemlayout>
+			
+			<focusedlayout width="1133" height="189">
+				
+				<control type="image">
+					<posx>30</posx>
+					<posy>22</posy>
+					<width>271</width>
+					<height>150</height>
+					<texture background="true" diffuse="episodes/episodediffuse.png">poster/postershadow.png</texture>
+					<aspectratio scalediffuse="false">stretch</aspectratio>
+					<animation effect="fade" start="0" end="50" time="0" condition="true">Conditional</animation>
+					<animation type="Focus" reversible="false">
+						<effect type="zoom" center="127,70" start="50" end="100" time="200" tween="cubic" easing="out" />
+					</animation>
+					<visible>!substring(Listitem.Label,..,left)</visible>
+				</control>
+				<control type="image">
+					<posx>20</posx>
+					<posy>9</posy>
+					<width>261</width>
+					<height>150</height>
+					<texture background="true" diffuse="episodes/episodediffuse.png">white.png</texture>
+					<aspectratio scalediffuse="false">stretch</aspectratio>
+					
+					<animation effect="fade" start="0" end="50" time="0" condition="true">Conditional</animation>
+					<animation type="Focus" reversible="false">
+						<effect type="zoom" center="127,70" start="50" end="100" time="200" tween="cubic" easing="out" />
+						
+					</animation>
+					<visible>![Control.HasFocus(504) | substring(Listitem.Label,..,left)]</visible>
+				</control>
+				<control type="image">
+					<posx>20</posx>
+					<posy>9</posy>
+					<width>261</width>
+					<height>150</height>
+					<texture background="true" diffuse="episodes/episodediffuse.png">white.png</texture>
+					<aspectratio scalediffuse="false">stretch</aspectratio>
+					<colordiffuse>skin.string(MainColorString)</colordiffuse>
+					<animation effect="fade" start="0" end="50" time="0"condition="true">Conditional</animation>
+					<animation type="Focus" reversible="false">
+						<effect type="zoom" center="127,70" start="50" end="100" time="200" tween="cubic" easing="out" />
+						
+					</animation>
+					<visible>Control.HasFocus(504) + !substring(Listitem.Label,..,left)</visible>
+				</control>
+				<control type="image">
+					<posx>24</posx>
+					<posy>15</posy>
+					<width>253</width>
+					<height>139</height>
+					<colordiffuse>EBFFFFFF</colordiffuse>
+					<texture background="true" diffuse="episodes/episodediffuse.png">$INFO[ListItem.Icon]</texture>
+					<aspectratio scalediffuse="false">keep</aspectratio>
+					<animation type="Focus" reversible="false">
+						<effect type="zoom" center="127,70" start="50" end="100" time="200" tween="cubic" easing="out" />
+					</animation>
+					<visible>IsEmpty(ListItem.Title)</visible>
+				</control>
+				<control type="image">
+					<posx>24</posx>
+					<posy>15</posy>
+					<width>253</width>
+					<height>139</height>
+					
+					<texture background="true" diffuse="episodes/episodediffuse.png" fallback="DefaultAlbumCover.png">$INFO[ListItem.Art(thumb)]</texture>
+					<aspectratio scalediffuse="false">scale</aspectratio>
+					<animation type="Focus" reversible="false">
+						<effect type="zoom" center="127,70" start="50" end="100" time="200" tween="cubic" easing="out" />
+					</animation>
+					<visible>!IsEmpty(ListItem.Title)</visible>
+				</control>
+				<control type="image">
+					<posx>30</posx>
+					<posy>15</posy>
+					<width>30</width>
+					<height>40</height>
+					
+					<texture>bookmark.png</texture>
+					<visible>Stringcompare(Skin.String(Bookmark 1 of 3),ListItem.DBID) | Stringcompare(Skin.String(Bookmark 2 of 3),ListItem.DBID) | Stringcompare(Skin.String(Bookmark 3 of 3),ListItem.DBID)</visible>
+					<animation type="Focus" reversible="false">
+						<effect type="zoom" center="127,70" start="50" end="100" time="200" tween="cubic" easing="out" />
+					</animation>
+					<visible>!IsEmpty(ListItem.Title)</visible>
+				</control>
+		
+				<control type="label">
+					<posx>305</posx>
+					<posy>17</posy>
+					<width>43</width>
+					<label>[B][UPPERCASE]$INFO[ListItem.Episode][/UPPERCASE][/B]</label>
+					<font>EpisodeTitle</font>
+					<textcolor>ampm</textcolor>
+					<selectedcolor>ff7acafe</selectedcolor>
+					<scroll>false</scroll>
+					<animation type="Focus" reversible="false">
+						<effect type="fade" start="0" end="100" time="300" />
+					</animation>
+					<visible>!IsEmpty(ListItem.Title)</visible>					
+				</control>	
+				<control type="label">
+					<posx>310</posx>
+					<posy>17</posy>
+					<width min="29" max="620">auto</width>
+					<height>34</height>
+					<label>[UPPERCASE]$INFO[ListItem.Label][/UPPERCASE]</label>
+					<font>EpisodeTitle</font>
+					<textcolor>taskbar</textcolor>
+					<selectedcolor>taskbar</selectedcolor>
+					<scroll>false</scroll>
+					<animation type="Focus" reversible="false">
+						<effect type="fade" start="0" end="100" time="300" />
+					</animation>
+					<visible>IsEmpty(ListItem.Title)</visible>					
+				</control>			
+				<control type="label">
+					<posx>350</posx>
+					<posy>17</posy>
+					<width min="29" max="620">auto</width>
+					<height>34</height>
+					<label>[UPPERCASE]$INFO[ListItem.Title][/UPPERCASE]</label>
+					<font>EpisodeTitle</font>
+					<textcolor>taskbar</textcolor>
+					<selectedcolor>taskbar</selectedcolor>
+					<scroll>false</scroll>
+					<animation type="Focus" reversible="false">
+						<effect type="fade" start="0" end="100" time="300" />
+					</animation>
+					<visible>!IsEmpty(ListItem.Title)</visible>					
+				</control>
+				<control type="image">
+					<posx>240</posx>
+					<posy>115</posy>
+					<width>40</width>
+					<height>45</height>
+					<aspectratio>keep</aspectratio>
+					
+					<animation type="Focus" reversible="false">
+						<effect type="fade" start="0" end="100" time="300" />
+					</animation>
+					<texture>$INFO[ListItem.Overlay]</texture>
+					<visible>Skin.HasSetting(WatchedOverlays)</visible>
+				</control>
+				
+			
+			<control type="textbox">
+				<posx>305</posx>
+				<posy>54</posy>
+				<width>620</width>
+				<height>74</height>
+				<align>justify</align>
+				<info>ListItem.Plot</info>
+				<font>about</font>
+				<textcolor>white</textcolor>
+				<animation type="Focus" reversible="false">
+					<effect type="fade" start="0" end="80" time="400" />
+				</animation>
+			</control>
+			
+			
+			</focusedlayout>
+		</control>
+
+		<!-- Scroll Bar -->
+
+		
+		
+		<control type="scrollbar" id="65">
+			<posx>1270</posx>
+			<posy>130</posy>
+			<width>20</width>
+			<height>450</height>
+			<visible allowhiddenfocus="true">[Control.IsVisible(504) | Control.IsVisible(505)] + Control.HasFocus(65)</visible>
+			<texturesliderbackground>sliderbg.png</texturesliderbackground>
+			<textureslidernibfocus>ball.png</textureslidernibfocus>
+			<onleft>504</onleft>
+			<onright>-</onright>
+			<showonepage>false</showonepage>
+			<orientation>vertical</orientation>
+			<animation effect="fade" start="0" end="100" time="400" condition="Control.HasFocus(65)">Conditional</animation>
+		</control>
+	</control>
+
+
+</include>
+	
+	
+</includes>

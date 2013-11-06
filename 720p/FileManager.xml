@@ -1,0 +1,368 @@
+<window id="3">
+<defaultcontrol always="true">20</defaultcontrol>
+<allowoverlay>yes</allowoverlay>
+  
+<controls>
+
+<include>VideoWindow</include>
+<control type="image">
+	<posx>0</posx>
+	<posy>0</posy>
+	<width>1280</width>
+	<height>720</height>
+	<aspectratio>stretch</aspectratio>
+	<texture background="true" fallback="special://skin/extras/backgrounds/fallback.jpg">$INFO[Skin.String(VideoFallbackImage)]</texture>
+	<animation effect="fade" start="0" end="100" time="100">VisibleChange</animation>
+	<visible>!Player.HasVideo + IsEmpty(ListItem.Art(fanart)) + !Control.IsVisible(28233)</visible>
+</control>
+<control type="multiimage" id="28233">
+	<posx>0</posx>
+	<posy>0</posy>
+	<width>1280</width>
+	<height>720</height>
+	<aspectratio>stretch</aspectratio>
+	<imagepath background="true" fallback="special://skin/extras/backgrounds/fallback.jpg" >$INFO[Skin.String(Wallpaper_Folder_Path)]</imagepath>
+	<timeperimage>10100</timeperimage>
+	<fadetime>1000</fadetime>
+	<randomize>true</randomize>
+	<animation effect="fade" start="0" end="100" time="100">VisibleChange</animation>
+	<visible>!Player.HasVideo + IsEmpty(ListItem.Art(fanart)) + !IsEmpty(Skin.String(Wallpaper_Folder_Path)) + IsEmpty(Skin.String(MusicFallbackImage))</visible>
+</control>
+<control type="image">
+	<posx>0</posx>
+	<posy>0</posy>
+	<width>1280</width>
+	<height>720</height>
+	<aspectratio>stretch</aspectratio>
+	<texture background="true">$INFO[ListItem.Art(fanart)]</texture>
+	<animation effect="fade" start="0" end="100" time="100">VisibleChange</animation>
+	<visible>!Player.HasVideo</visible>
+</control>
+<control type="image">
+	<posx>0</posx>
+	<posy>71</posy>
+	<width>1280</width>
+	<height>578</height>
+	<aspectratio>stretch</aspectratio>
+	<texture background="true" flipx="true">backup.png</texture>
+	<animation effect="fade" start="0" end="60" time="0" reversible="false" condition="true">Conditional</animation>
+</control>
+<control type="image">
+	<posx>515</posx>
+	<posy>72</posy>
+	<width>250</width>
+	<height>576</height>
+	<aspectratio>stretch</aspectratio>
+	<texture>black.png</texture>
+</control>
+<include>Background</include>
+<control type="image">
+	<posx>515</posx>
+	<posy>72</posy>
+	<width>250</width>
+	<height>576</height>
+	<aspectratio>stretch</aspectratio>
+	<texture>black.png</texture>
+	<animation effect="fade" start="0" end="10" time="0" reversible="false" condition="true">Conditional</animation>
+</control>
+<control type="textbox">
+	<posx>520</posx>
+	<posy>420</posy>
+	<width>240</width>
+	<height>90</height>	
+	<align>center</align>
+	<textcolor>FF959595</textcolor>
+	<font>homemenu3</font>
+	<label>[UPPERCASE]$LOCALIZE[31057][/UPPERCASE][CR]$LOCALIZE[31058][CR]$LOCALIZE[31059]</label>
+	<aligny>top</aligny>
+	<autoscroll>false</autoscroll>
+</control>
+
+
+  
+<!-- Left -->
+<control type="label" id="101">
+	<description>Header Label</description>
+	<posx>15</posx>
+	<posy>20</posy>
+	<width>515</width>
+	<height>45</height>
+	<align>left</align>
+	<label>-</label>
+	<font>griddetails</font>
+	<textcolor>FF262626</textcolor>
+	<animation effect="fade" start="0" end="40" time="500" delay="600">WindowOpen</animation>
+	<animation effect="fade" start="40" end="0" time="300" delay="0">WindowClose</animation>
+</control>
+
+  <control type="group">
+    <posx>0</posx>
+    <posy>74</posy>
+    	
+    <control type="list" id="20">
+      <description>Left File List</description>
+      <posx>0</posx>
+      <posy>0</posy>
+      <width>515</width>
+      <height>570</height>
+      <onleft>21</onleft>
+      <onright>21</onright>
+      <onup>20</onup>
+      <ondown>20</ondown>
+	  <scrolltime>0</scrolltime>
+      <itemlayout height="44" width="515">
+		<control type="image">
+		  <posx>0</posx>
+		  <posy>43</posy>
+		  <width>515</width>
+		  <height>1</height>
+		  <texture>white.png</texture>
+		  <aspectratio>stretch</aspectratio>
+		  <colordiffuse>11ffffff</colordiffuse>
+		</control>
+        <control type="image">
+          <posx>8</posx>
+          <posy>5</posy>
+          <width>32</width>
+          <height>32</height>
+          <info>ListItem.Icon</info>
+          <aspectratio aligny="left">keep</aspectratio>
+        </control>
+        <control type="label">
+          <posx>50</posx>
+		  <posy>-1</posy>
+          <width>280</width>
+          <height>44</height>
+          <align>left</align>
+	 	  <font>ListSmall</font>
+          <textcolor>White</textcolor>
+          <info>ListItem.Label</info>
+          <scroll>false</scroll>
+        </control>
+        <control type="label">
+          <posx>488</posx>
+		  <posy>-1</posy>
+          <width>280</width>
+          <height>44</height>
+          <align>right</align>
+	 	  <font>recent</font>
+          <textcolor>White</textcolor>
+          <info>ListItem.Label2</info>
+          <scroll>false</scroll>
+        </control>
+      </itemlayout>
+      <focusedlayout height="44" width="515">
+        <control type="image">
+          <width>515</width>
+          <height>44</height>
+          <texture>black.png</texture>
+		  <colordiffuse>62ffffff</colordiffuse>
+          <aspectratio>stretch</aspectratio>
+          <visible>Control.HasFocus(20)</visible>
+        </control>
+        <control type="image">
+          <posx>8</posx>
+          <posy>5</posy>
+          <width>32</width>
+          <height>32</height>
+          <info>ListItem.Icon</info>
+          <aspectratio aligny="left">keep</aspectratio>
+        </control>
+        <control type="label">
+          <posx>50</posx>
+		  <posy>-1</posy>
+          <width>280</width>
+          <height>44</height>
+          <align>left</align>
+	 	  <font>ListSmall</font>
+          <textcolor>White</textcolor>
+          <info>ListItem.Label</info>
+          <scroll>false</scroll>
+        </control>
+        <control type="label">
+          <posx>488</posx>
+		  <posy>-1</posy>
+          <width>280</width>
+          <height>44</height>
+          <align>right</align>
+	 	  <font>recent</font>
+          <textcolor>White</textcolor>
+          <info>ListItem.Label2</info>
+          <scroll>false</scroll>
+        </control>
+      </focusedlayout>
+    </control>
+  </control>
+
+	<control type="group">
+		<posx>580</posx>
+		<posy>820</posy>
+		<control type="label" id="12">
+			<description>Footer Label</description>
+			<posx>15</posx>
+			<width>320</width>
+			<height>45</height>
+			<align>right</align>
+			<label>-</label>
+			<textcolor>White</textcolor>
+			<visible>false</visible>
+		</control>
+	</control>
+	
+<!-- Right -->
+
+<control type="label" id="102">
+	<description>Header Label</description>
+	<posx>770</posx>
+	<posy>20</posy>
+	<width>510</width>
+	<height>45</height>
+	<align>left</align>
+	<label>-</label>
+	<font>griddetails</font>
+	<textcolor>FF262626</textcolor>
+	<animation effect="fade" start="0" end="40" time="500" delay="600">WindowOpen</animation>
+	<animation effect="fade" start="40" end="0" time="300" delay="0">WindowClose</animation>
+</control>
+	
+
+  <control type="group">
+    <posx>765</posx>
+    <posy>74</posy>
+    
+	
+    <control type="list" id="21">
+      <description>Left File List</description>
+      <posx>0</posx>
+      <posy>0</posy>
+      <width>515</width>
+      <height>570</height>
+      <onleft>20</onleft>
+      <onright>20</onright>
+      <onup>21</onup>
+      <ondown>21</ondown>
+	  <scrolltime>0</scrolltime>
+      <itemlayout height="44" width="320">
+		<control type="image">
+		  <posx>0</posx>
+		  <posy>43</posy>
+		  <width>515</width>
+		  <height>1</height>
+		  <texture>white.png</texture>
+		  <aspectratio>stretch</aspectratio>
+		  <colordiffuse>11ffffff</colordiffuse>
+		</control>
+        <control type="image">
+          <posx>8</posx>
+          <posy>5</posy>
+          <width>32</width>
+          <height>32</height>
+          <info>ListItem.Icon</info>
+          <aspectratio aligny="left">keep</aspectratio>
+        </control>
+        <control type="label">
+          <posx>50</posx>
+		  <posy>-1</posy>
+          <width>280</width>
+          <height>44</height>
+          <align>left</align>
+	 	  <font>ListSmall</font>
+          <textcolor>White</textcolor>
+          <info>ListItem.Label</info>
+          <scroll>false</scroll>
+        </control>
+        <control type="label">
+          <posx>488</posx>
+		  <posy>-1</posy>
+          <width>280</width>
+          <height>44</height>
+          <align>right</align>
+	 	  <font>recent</font>
+          <textcolor>White</textcolor>
+          <info>ListItem.Label2</info>
+          <scroll>false</scroll>
+        </control>
+      </itemlayout>
+      <focusedlayout height="44" width="320">
+        <control type="image">
+          <width>499</width>
+          <height>44</height>
+          <texture>black.png</texture>
+		  <colordiffuse>62ffffff</colordiffuse>
+          <aspectratio>stretch</aspectratio>
+          <visible>Control.HasFocus(21)</visible>
+        </control>
+        <control type="image">
+          <posx>8</posx>
+          <posy>5</posy>
+          <width>32</width>
+          <height>32</height>
+          <info>ListItem.Icon</info>
+          <aspectratio aligny="left">keep</aspectratio>
+        </control>
+        <control type="label">
+          <posx>50</posx>
+		  <posy>-1</posy>
+          <width>280</width>
+          <height>44</height>
+          <align>left</align>
+	 	  <font>ListSmall</font>
+          <textcolor>White</textcolor>
+          <info>ListItem.Label</info>
+          <scroll>false</scroll>
+        </control>
+        <control type="label">
+          <posx>488</posx>
+		  <posy>-1</posy>
+          <width>280</width>
+          <height>44</height>
+          <align>right</align>
+	 	  <font>recent</font>
+          <textcolor>White</textcolor>
+          <info>ListItem.Label2</info>
+          <scroll>false</scroll>
+        </control>
+      </focusedlayout>
+    </control>
+  </control>
+
+    
+	<control type="group">
+		<posx>1180</posx>
+		<posy>820</posy>
+		<control type="label" id="13">
+			<description>Footer Label</description>
+			<posx>15</posx>
+			<width>320</width>
+			<height>45</height>
+			<align>right</align>
+			<label>-</label>
+			<textcolor>White</textcolor>
+			<visible>false</visible>
+		</control>
+	</control>
+	
+<control type="image">
+	<posx>520</posx>
+	<posy>130</posy>
+	<width>240</width>
+	<height>190</height>
+	<aspectratio>keep</aspectratio>
+	<texture>$INFO[Container(20).ListItem.Icon]</texture>
+	<visible>!Control.HasFocus(21)</visible>
+</control>
+<control type="image">
+	<posx>520</posx>
+	<posy>130</posy>
+	<width>240</width>
+	<height>190</height>
+	<aspectratio>keep</aspectratio>
+	<texture>$INFO[Container(21).ListItem.Icon]</texture>
+	<visible>Control.HasFocus(21)</visible>
+</control>
+
+<!--include>BottomInfoBar</include-->
+<include>vignette</include>
+</controls>
+
+</window>

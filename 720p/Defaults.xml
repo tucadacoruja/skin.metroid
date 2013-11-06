@@ -1,0 +1,176 @@
+<includes>
+  
+  <default type="label">
+    <posx>0</posx>
+    <posy>0</posy>
+    <label>-</label>
+    <height>30</height>
+    <align>left</align>
+    <aligny>center</aligny>
+    <font>list</font>
+    <textcolor>FF7D7D7D</textcolor>
+    <focusedcolor>FFE1E1E1</focusedcolor>
+    <selectedcolor>ff7acafe</selectedcolor>
+    <disabledcolor>FF790000</disabledcolor>
+    <scroll>true</scroll>
+  </default>
+
+  <default type="image">
+    <posx>0</posx>
+    <posy>0</posy>
+    <width>-</width>
+    <height>-</height>
+    <align>center</align>
+    <aligny>center</aligny>
+    <texture>-</texture>
+    <aspectratio>keep</aspectratio>
+  </default>
+
+  <default type="button">
+    <posx>0</posx>
+    <posy>0</posy>
+    <width>150</width>
+    <height>48</height>
+    <align>center</align>
+    <aligny>center</aligny>
+    <font>DefaultButton</font>
+    <label>-</label>
+    <textcolor>FF7D7D7D</textcolor>
+    <focusedcolor>FFE1E1E1</focusedcolor>
+    <disabledcolor>FF790000</disabledcolor>
+    <texturefocus>White35p.png</texturefocus>
+    <texturenofocus>-</texturenofocus>
+    <pulseonselect>false</pulseonselect>
+	<textoffsetx>20</textoffsetx>
+  </default>
+
+  <default type="togglebutton">
+    <posx>0</posx>
+    <posy>0</posy>
+    <width>150</width>
+    <height>48</height>
+    <label>-</label>
+    <font>DefaultButton</font>
+    <textcolor>Black</textcolor>
+    <focusedcolor>White</focusedcolor>
+    <disabledcolor>FF790000</disabledcolor>
+    <texturenofocus>-</texturenofocus>
+    <texturefocus>White35p.png</texturefocus>
+    <alttexturenofocus>-</alttexturenofocus>
+    <alttexturefocus>White35p.png</alttexturefocus>
+    <align>left</align>
+    <aligny>center</aligny>
+    <pulseonselect>false</pulseonselect>
+  </default>
+
+  <default type="radiobutton">
+    <posx>0</posx>
+    <posy>0</posy>
+    <width>660</width>
+    <height>37</height>
+    <align>left</align>
+    <aligny>center</aligny>
+    <font>DefaultButton</font>
+    <label>-</label>
+    <textcolor>FF7D7D7D</textcolor>
+    <focusedcolor>FFE1E1E1</focusedcolor>
+    <disabledcolor>FF790000</disabledcolor>
+    <texturenofocus>-</texturenofocus>
+    <texturefocus>White35p.png</texturefocus>
+    <textureradiofocus>buttons/radiofo.png</textureradiofocus>
+    <textureradionofocus>buttons/radionf.png</textureradionofocus>
+    <textoffsetx>20</textoffsetx>
+    <pulseonselect>false</pulseonselect>
+	<radioposy>-</radioposy>
+	<radioheight>29</radioheight>
+	<radiowidth>48</radiowidth>
+  </default>
+
+  <default type="spincontrolex">
+    <posx>0</posx>
+    <posy>0</posy>
+    <width>150</width>
+    <height>48</height>
+    <label>-</label>
+    <font>DefaultButton</font>
+    <texturenofocus>-</texturenofocus>
+    <texturefocus>White35p.png</texturefocus>
+    <textureup>buttons/spinupnf.png</textureup>
+    <texturedown>buttons/spindownnf.png</texturedown>
+    <textureupfocus>buttons/spinupfo.png</textureupfocus>
+    <texturedownfocus>buttons/spindownfo.png</texturedownfocus>
+    <textcolor>FF7D7D7D</textcolor>
+    <focusedcolor>FFE1E1E1</focusedcolor>
+    <disabledcolor>FF790000</disabledcolor>
+    <textoffsetx>5</textoffsetx>
+    <align>left</align>
+    <aligny>center</aligny>
+    <reverse>yes</reverse>
+    <pulseonselect>false</pulseonselect>
+	<spinwidth>24</spinwidth>
+	<spinheight>29</spinheight>
+  </default>
+  
+  <default type="spincontrol">
+    <posx>0</posx>
+    <posy>0</posy>
+    <height>15</height>
+    <width>15</width>
+    <textureup>ArrowUpNF.png</textureup>
+    <texturedown>ArrowDownNF.png</texturedown>
+    <textureupfocus>ArrowUpFo.png</textureupfocus>
+    <texturedownfocus>ArrowDownFo.png</texturedownfocus>
+    <font>Small</font>
+    <textcolor>FF7D7D7D</textcolor>
+    <focusedcolor>FFE1E1E1</focusedcolor>
+    <disabledcolor>FF790000</disabledcolor>
+    <textoffsetx>5</textoffsetx>
+    <align>left</align>
+    <aligny>center</aligny>
+    <reverse>yes</reverse>
+    <pulseonselect>false</pulseonselect>
+  </default>
+
+  <default type="sliderex">
+    <posx>0</posx>
+    <posy>0</posy>
+    <height>17</height>
+    <width>167</width>
+    <texturefocus>White35p.png</texturefocus>
+    <texturenofocus>-</texturenofocus>
+    <sliderwidth>167</sliderwidth>
+    <sliderheight>17</sliderheight>
+    <texturesliderbar>OSDSliderBack.png</texturesliderbar>
+    <textureslidernib>OSDSliderNibNF.png</textureslidernib>
+    <textureslidernibfocus>OSDSliderNibFO.png</textureslidernibfocus>
+    <font>list</font>
+    <textcolor>FF7D7D7D</textcolor>
+    <focusedcolor>FFE1E1E1</focusedcolor>
+    <disabledcolor>FF790000</disabledcolor>
+    <textoffsetx>5</textoffsetx>
+    <textoffsety>0</textoffsety>
+  </default>
+  
+  <default type="progress">
+    <posx>0</posx>
+    <posy>0</posy>
+    <width>280</width>
+    <height>15</height>
+    <info>-</info>
+    <texturebg>osd/seek/progress_back.png</texturebg>
+	<lefttexture>osd/seek/progresscache_left.png</lefttexture>
+	<midtexture>osd/seek/progresscache_mid.png</midtexture>
+	<righttexture>osd/seek/progresscache_right.png</righttexture>
+  </default>
+
+  <default type="slider">
+    <posx>0</posx>
+    <posy>0</posy>
+    <width>280</width>
+    <height>15</height>
+    <texturesliderbar>blank.png</texturesliderbar>
+	<textureslidernib>blank.png</textureslidernib>
+	<textureslidernibfocus>blank.png</textureslidernibfocus>
+  </default>
+
+</includes>

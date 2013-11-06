@@ -1,0 +1,86 @@
+<window id="139">
+<defaultcontrol always="true">5</defaultcontrol>
+<allowoverlay>yes</allowoverlay>
+  
+<coordinates>
+  <system>1</system>
+  <posx>0</posx>
+  <posy>0</posy>
+</coordinates>
+  
+<controls>
+<control type="group">
+	<animation type="WindowOpen" reversible="false">
+		<effect type="fade" start="0" end="100" time="950" delay="0" />
+		<effect type="zoom" start="1" end="100" time="370" center="900,360" delay="0" />
+		<effect type="slide" start="1780,0" end="0,0" time="300" delay="0" reversible="false" />
+	</animation>
+	<animation type="WindowClose" reversible="false">
+		<effect type="fade" start="100" end="0" time="100" delay="0" />
+	</animation>
+ 
+  <control type="list" id="5">
+	  <posx>270</posx>
+	  <posy>90</posy>
+	  <width>1000</width>
+	  <height>530</height>
+	  <onleft>450</onleft>
+	  <onright>450</onright>
+	  <onup>450</onup>
+	  <ondown>450</ondown>
+	  
+	  <itemlayout height="38">
+		  
+		  <control type="label">
+			  <posx>10</posx>
+			  <width>320</width>
+			  <height>38</height>
+			  <info>ListItem.Label</info>
+			  <font>homemenu3</font>
+			  <textcolor>ACFFFFFF</textcolor>
+			  <scroll>false</scroll>
+		  </control>
+		  <control type="label">
+			  <posx>970</posx>
+			  <width>520</width>
+			  <height>38</height>
+			  <align>right</align>
+			  <font>homemenu3</font>
+			  <scroll>false</scroll>
+			  <textcolor>ACFFFFFF</textcolor>
+			  <info>ListItem.Label2</info>
+		  </control>
+	  </itemlayout>
+	  
+	  <focusedlayout height="38">
+		  <control type="image">
+			  <width>980</width>
+			  <height>38</height>
+			  <texture>white.png</texture>
+			  <aspectratio>stretch</aspectratio>
+			  <colordiffuse>26FFFFFF</colordiffuse>
+		  </control>
+		  <control type="label">
+			  <posx>5</posx>
+			  <width>465</width>
+			  <height>38</height>
+			  <font>homemenu3</font>
+        	  <textcolor>White</textcolor>
+			  <info>ListItem.Label</info>
+		  </control>
+		  <control type="label">
+			  <posx>970</posx>
+			  <width>520</width>
+			  <height>38</height>
+			  <align>right</align>
+			  <font>homemenu3</font>
+			  <textcolor>White</textcolor>
+			  <info>ListItem.Label2</info>
+		  </control>
+	  </focusedlayout>
+
+  </control>
+</control>
+</controls>
+  
+</window>

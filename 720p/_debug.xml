@@ -1,0 +1,1045 @@
+<includes>
+<include name="id-debug">
+
+<control type="grouplist">
+	<posx>40</posx>
+	<posy>80</posy>
+	<width>1200</width>
+	<itemgap>15</itemgap>
+	<orientation>horizontal</orientation>
+
+<!-- ----- -->	
+
+<!-- Window.IsVisible(0) -->
+<control type="label">
+	<posx>0</posx>
+	<posy>0</posy>
+	<number>0</number>
+	<align>left</align>
+	<width min="0" max="50">auto</width>
+	<height>25</height>
+	<textcolor>white</textcolor>
+	<font>duration</font>
+	<visible>Window.IsVisible(0)</visible>
+</control>
+<!-- Window.IsVisible(1) -->
+<control type="label">
+	<posx>0</posx>
+	<posy>0</posy>
+	<number>1</number>
+	<align>left</align>
+	<width min="0" max="50">auto</width>
+	<height>25</height>
+	<textcolor>white</textcolor>
+	<font>duration</font>
+	<visible>Window.IsVisible(1)</visible>
+</control>
+<!-- Window.IsVisible(2) -->
+<control type="label">
+	<posx>0</posx>
+	<posy>0</posy>
+	<number>2</number>
+	<align>left</align>
+	<width min="0" max="50">auto</width>
+	<height>25</height>
+	<textcolor>white</textcolor>
+	<font>duration</font>
+	<visible>Window.IsVisible(2)</visible>
+</control>
+<!-- Window.IsVisible(3) -->
+<control type="label">
+	<posx>0</posx>
+	<posy>0</posy>
+	<number>3</number>
+	<align>left</align>
+	<width min="0" max="50">auto</width>
+	<height>25</height>
+	<textcolor>white</textcolor>
+	<font>duration</font>
+	<visible>Window.IsVisible(3)</visible>
+</control>
+<!-- Window.IsVisible(4) -->
+<control type="label">
+	<posx>0</posx>
+	<posy>0</posy>
+	<number>4</number>
+	<align>left</align>
+	<width min="0" max="50">auto</width>
+	<height>25</height>
+	<textcolor>white</textcolor>
+	<font>duration</font>
+	<visible>Window.IsVisible(4)</visible>
+</control>
+<!-- Window.IsVisible(5) -->
+<control type="label">
+	<posx>0</posx>
+	<posy>0</posy>
+	<number>5</number>
+	<align>left</align>
+	<width min="0" max="50">auto</width>
+	<height>25</height>
+	<textcolor>white</textcolor>
+	<font>duration</font>
+	<visible>Window.IsVisible(5)</visible>
+</control>
+<!-- Window.IsVisible(6) -->
+<control type="label">
+	<posx>0</posx>
+	<posy>0</posy>
+	<number>6</number>
+	<align>left</align>
+	<width min="0" max="50">auto</width>
+	<height>25</height>
+	<textcolor>white</textcolor>
+	<font>duration</font>
+	<visible>Window.IsVisible(6)</visible>
+</control>
+<!-- Window.IsVisible(7) -->
+<control type="label">
+	<posx>0</posx>
+	<posy>0</posy>
+	<number>7</number>
+	<align>left</align>
+	<width min="0" max="50">auto</width>
+	<height>25</height>
+	<textcolor>white</textcolor>
+	<font>duration</font>
+	<visible>Window.IsVisible(7)</visible>
+</control>
+<!-- Window.IsVisible(11) -->
+<control type="label">
+	<posx>0</posx>
+	<posy>0</posy>
+	<number>11</number>
+	<align>left</align>
+	<width min="0" max="50">auto</width>
+	<height>25</height>
+	<textcolor>white</textcolor>
+	<font>duration</font>
+	<visible>Window.IsVisible(11)</visible>
+</control>
+<!-- Window.IsVisible(12) -->
+<control type="label">
+	<posx>0</posx>
+	<posy>0</posy>
+	<number>12</number>
+	<align>left</align>
+	<width min="0" max="50">auto</width>
+	<height>25</height>
+	<textcolor>white</textcolor>
+	<font>duration</font>
+	<visible>Window.IsVisible(12)</visible>
+</control>
+<!-- Window.IsVisible(13) -->
+<control type="label">
+	<posx>0</posx>
+	<posy>0</posy>
+	<number>13</number>
+	<align>left</align>
+	<width min="0" max="50">auto</width>
+	<height>25</height>
+	<textcolor>white</textcolor>
+	<font>duration</font>
+	<visible>Window.IsVisible(13)</visible>
+</control>
+<!-- Window.IsVisible(14) -->
+<control type="label">
+	<posx>0</posx>
+	<posy>0</posy>
+	<number>14</number>
+	<align>left</align>
+	<width min="0" max="50">auto</width>
+	<height>25</height>
+	<textcolor>white</textcolor>
+	<font>duration</font>
+	<visible>Window.IsVisible(14)</visible>
+</control>
+<!-- Window.IsVisible(15) -->
+<control type="label">
+	<posx>0</posx>
+	<posy>0</posy>
+	<number>15</number>
+	<align>left</align>
+	<width min="0" max="50">auto</width>
+	<height>25</height>
+	<textcolor>white</textcolor>
+	<font>duration</font>
+	<visible>Window.IsVisible(15)</visible>
+</control>
+<!-- Window.IsVisible(16) -->
+<control type="label">
+	<posx>0</posx>
+	<posy>0</posy>
+	<number>16</number>
+	<align>left</align>
+	<width min="0" max="50">auto</width>
+	<height>25</height>
+	<textcolor>white</textcolor>
+	<font>duration</font>
+	<visible>Window.IsVisible(16)</visible>
+</control>
+<!-- Window.IsVisible(17) -->
+<control type="label">
+	<posx>0</posx>
+	<posy>0</posy>
+	<number>17</number>
+	<align>left</align>
+	<width min="0" max="50">auto</width>
+	<height>25</height>
+	<textcolor>white</textcolor>
+	<font>duration</font>
+	<visible>Window.IsVisible(17)</visible>
+</control>
+<!-- Window.IsVisible(18) -->
+<control type="label">
+	<posx>0</posx>
+	<posy>0</posy>
+	<number>18</number>
+	<align>left</align>
+	<width min="0" max="50">auto</width>
+	<height>25</height>
+	<textcolor>white</textcolor>
+	<font>duration</font>
+	<visible>Window.IsVisible(18)</visible>
+</control>
+<!-- Window.IsVisible(19) -->
+<control type="label">
+	<posx>0</posx>
+	<posy>0</posy>
+	<number>19</number>
+	<align>left</align>
+	<width min="0" max="50">auto</width>
+	<height>25</height>
+	<textcolor>white</textcolor>
+	<font>duration</font>
+	<visible>Window.IsVisible(19)</visible>
+</control>
+<!-- Window.IsVisible(20) -->
+<control type="label">
+	<posx>0</posx>
+	<posy>0</posy>
+	<number>20</number>
+	<align>left</align>
+	<width min="0" max="50">auto</width>
+	<height>25</height>
+	<textcolor>white</textcolor>
+	<font>duration</font>
+	<visible>Window.IsVisible(20)</visible>
+</control>
+<!-- Window.IsVisible(24) -->
+<control type="label">
+	<posx>0</posx>
+	<posy>0</posy>
+	<number>24</number>
+	<align>left</align>
+	<width min="0" max="50">auto</width>
+	<height>25</height>
+	<textcolor>white</textcolor>
+	<font>duration</font>
+	<visible>Window.IsVisible(24)</visible>
+</control>
+<!-- Window.IsVisible(25) -->
+<control type="label">
+	<posx>0</posx>
+	<posy>0</posy>
+	<number>25</number>
+	<align>left</align>
+	<width min="0" max="50">auto</width>
+	<height>25</height>
+	<textcolor>white</textcolor>
+	<font>duration</font>
+	<visible>Window.IsVisible(25)</visible>
+</control>
+<!-- Window.IsVisible(28) -->
+<control type="label">
+	<posx>0</posx>
+	<posy>0</posy>
+	<number>28</number>
+	<align>left</align>
+	<width min="0" max="50">auto</width>
+	<height>25</height>
+	<textcolor>white</textcolor>
+	<font>duration</font>
+	<visible>Window.IsVisible(28)</visible>
+</control>
+<!-- Window.IsVisible(29) -->
+<control type="label">
+	<posx>0</posx>
+	<posy>0</posy>
+	<number>29</number>
+	<align>left</align>
+	<width min="0" max="50">auto</width>
+	<height>25</height>
+	<textcolor>white</textcolor>
+	<font>duration</font>
+	<visible>Window.IsVisible(29)</visible>
+</control>
+<!-- Window.IsVisible(34) -->
+<control type="label">
+	<posx>0</posx>
+	<posy>0</posy>
+	<number>34</number>
+	<align>left</align>
+	<width min="0" max="50">auto</width>
+	<height>25</height>
+	<textcolor>white</textcolor>
+	<font>duration</font>
+	<visible>Window.IsVisible(34)</visible>
+</control>
+<!-- Window.IsVisible(40) -->
+<control type="label">
+	<posx>0</posx>
+	<posy>0</posy>
+	<number>40</number>
+	<align>left</align>
+	<width min="0" max="50">auto</width>
+	<height>25</height>
+	<textcolor>white</textcolor>
+	<font>duration</font>
+	<visible>Window.IsVisible(40)</visible>
+</control>
+<!-- Window.IsVisible(100) -->
+<control type="label">
+	<posx>0</posx>
+	<posy>0</posy>
+	<number>100</number>
+	<align>left</align>
+	<width min="0" max="50">auto</width>
+	<height>25</height>
+	<textcolor>white</textcolor>
+	<font>duration</font>
+	<visible>Window.IsVisible(100)</visible>
+</control>
+<!-- Window.IsVisible(101) -->
+<control type="label">
+	<posx>0</posx>
+	<posy>0</posy>
+	<number>101</number>
+	<align>left</align>
+	<width min="0" max="50">auto</width>
+	<height>25</height>
+	<textcolor>white</textcolor>
+	<font>duration</font>
+	<visible>Window.IsVisible(101)</visible>
+</control>
+<!-- Window.IsVisible(103) -->
+<control type="label">
+	<posx>0</posx>
+	<posy>0</posy>
+	<number>103</number>
+	<align>left</align>
+	<width min="0" max="50">auto</width>
+	<height>25</height>
+	<textcolor>white</textcolor>
+	<font>duration</font>
+	<visible>Window.IsVisible(103)</visible>
+</control>
+<!-- Window.IsVisible(104) -->
+<control type="label">
+	<posx>0</posx>
+	<posy>0</posy>
+	<number>104</number>
+	<align>left</align>
+	<width min="0" max="50">auto</width>
+	<height>25</height>
+	<textcolor>white</textcolor>
+	<font>duration</font>
+	<visible>Window.IsVisible(104)</visible>
+</control>
+<!-- Window.IsVisible(106) -->
+<control type="label">
+	<posx>0</posx>
+	<posy>0</posy>
+	<number>106</number>
+	<align>left</align>
+	<width min="0" max="50">auto</width>
+	<height>25</height>
+	<textcolor>white</textcolor>
+	<font>duration</font>
+	<visible>Window.IsVisible(106)</visible>
+</control>
+<!-- Window.IsVisible(107) -->
+<control type="label">
+	<posx>0</posx>
+	<posy>0</posy>
+	<number>107</number>
+	<align>left</align>
+	<width min="0" max="50">auto</width>
+	<height>25</height>
+	<textcolor>white</textcolor>
+	<font>duration</font>
+	<visible>Window.IsVisible(107)</visible>
+</control>
+<!-- Window.IsVisible(109) -->
+<control type="label">
+	<posx>0</posx>
+	<posy>0</posy>
+	<number>109</number>
+	<align>left</align>
+	<width min="0" max="50">auto</width>
+	<height>25</height>
+	<textcolor>white</textcolor>
+	<font>duration</font>
+	<visible>Window.IsVisible(109)</visible>
+</control>
+<!-- Window.IsVisible(111) -->
+<control type="label">
+	<posx>0</posx>
+	<posy>0</posy>
+	<number>111</number>
+	<align>left</align>
+	<width min="0" max="50">auto</width>
+	<height>25</height>
+	<textcolor>white</textcolor>
+	<font>duration</font>
+	<visible>Window.IsVisible(111)</visible>
+</control>
+<!-- Window.IsVisible(112) -->
+<control type="label">
+	<posx>0</posx>
+	<posy>0</posy>
+	<number>112</number>
+	<align>left</align>
+	<width min="0" max="50">auto</width>
+	<height>25</height>
+	<textcolor>white</textcolor>
+	<font>duration</font>
+	<visible>Window.IsVisible(112)</visible>
+</control>
+<!-- Window.IsVisible(113) -->
+<control type="label">
+	<posx>0</posx>
+	<posy>0</posy>
+	<number>113</number>
+	<align>left</align>
+	<width min="0" max="50">auto</width>
+	<height>25</height>
+	<textcolor>white</textcolor>
+	<font>duration</font>
+	<visible>Window.IsVisible(113)</visible>
+</control>
+<!-- Window.IsVisible(114) -->
+<control type="label">
+	<posx>0</posx>
+	<posy>0</posy>
+	<number>114</number>
+	<align>left</align>
+	<width min="0" max="50">auto</width>
+	<height>25</height>
+	<textcolor>white</textcolor>
+	<font>duration</font>
+	<visible>Window.IsVisible(114)</visible>
+</control>
+<!-- Window.IsVisible(115) -->
+<control type="label">
+	<posx>0</posx>
+	<posy>0</posy>
+	<number>115</number>
+	<align>left</align>
+	<width min="0" max="50">auto</width>
+	<height>25</height>
+	<textcolor>white</textcolor>
+	<font>duration</font>
+	<visible>Window.IsVisible(115)</visible>
+</control>
+<!-- Window.IsVisible(120) -->
+<control type="label">
+	<posx>0</posx>
+	<posy>0</posy>
+	<number>120</number>
+	<align>left</align>
+	<width min="0" max="50">auto</width>
+	<height>25</height>
+	<textcolor>white</textcolor>
+	<font>duration</font>
+	<visible>Window.IsVisible(120)</visible>
+</control>
+<!-- Window.IsVisible(122) -->
+<control type="label">
+	<posx>0</posx>
+	<posy>0</posy>
+	<number>122</number>
+	<align>left</align>
+	<width min="0" max="50">auto</width>
+	<height>25</height>
+	<textcolor>white</textcolor>
+	<font>duration</font>
+	<visible>Window.IsVisible(122)</visible>
+</control>
+<!-- Window.IsVisible(123) -->
+<control type="label">
+	<posx>0</posx>
+	<posy>0</posy>
+	<number>123</number>
+	<align>left</align>
+	<width min="0" max="50">auto</width>
+	<height>25</height>
+	<textcolor>white</textcolor>
+	<font>duration</font>
+	<visible>Window.IsVisible(123)</visible>
+</control>
+<!-- Window.IsVisible(124) -->
+<control type="label">
+	<posx>0</posx>
+	<posy>0</posy>
+	<number>124</number>
+	<align>left</align>
+	<width min="0" max="50">auto</width>
+	<height>25</height>
+	<textcolor>white</textcolor>
+	<font>duration</font>
+	<visible>Window.IsVisible(124)</visible>
+</control>
+<!-- Window.IsVisible(125) -->
+<control type="label">
+	<posx>0</posx>
+	<posy>0</posy>
+	<number>125</number>
+	<align>left</align>
+	<width min="0" max="50">auto</width>
+	<height>25</height>
+	<textcolor>white</textcolor>
+	<font>duration</font>
+	<visible>Window.IsVisible(125)</visible>
+</control>
+<!-- Window.IsVisible(126) -->
+<control type="label">
+	<posx>0</posx>
+	<posy>0</posy>
+	<number>126</number>
+	<align>left</align>
+	<width min="0" max="50">auto</width>
+	<height>25</height>
+	<textcolor>white</textcolor>
+	<font>duration</font>
+	<visible>Window.IsVisible(126)</visible>
+</control>
+<!-- Window.IsVisible(128) -->
+<control type="label">
+	<posx>0</posx>
+	<posy>0</posy>
+	<number>128</number>
+	<align>left</align>
+	<width min="0" max="50">auto</width>
+	<height>25</height>
+	<textcolor>white</textcolor>
+	<font>duration</font>
+	<visible>Window.IsVisible(128)</visible>
+</control>
+<!-- Window.IsVisible(129) -->
+<control type="label">
+	<posx>0</posx>
+	<posy>0</posy>
+	<number>129</number>
+	<align>left</align>
+	<width min="0" max="50">auto</width>
+	<height>25</height>
+	<textcolor>white</textcolor>
+	<font>duration</font>
+	<visible>Window.IsVisible(129)</visible>
+</control>
+<!-- Window.IsVisible(130) -->
+<control type="label">
+	<posx>0</posx>
+	<posy>0</posy>
+	<number>130</number>
+	<align>left</align>
+	<width min="0" max="50">auto</width>
+	<height>25</height>
+	<textcolor>white</textcolor>
+	<font>duration</font>
+	<visible>Window.IsVisible(130)</visible>
+</control>
+<!-- Window.IsVisible(131) -->
+<control type="label">
+	<posx>0</posx>
+	<posy>0</posy>
+	<number>131</number>
+	<align>left</align>
+	<width min="0" max="50">auto</width>
+	<height>25</height>
+	<textcolor>white</textcolor>
+	<font>duration</font>
+	<visible>Window.IsVisible(131)</visible>
+</control>
+<!-- Window.IsVisible(132) -->
+<control type="label">
+	<posx>0</posx>
+	<posy>0</posy>
+	<number>132</number>
+	<align>left</align>
+	<width min="0" max="50">auto</width>
+	<height>25</height>
+	<textcolor>white</textcolor>
+	<font>duration</font>
+	<visible>Window.IsVisible(132)</visible>
+</control>
+<!-- Window.IsVisible(133) -->
+<control type="label">
+	<posx>0</posx>
+	<posy>0</posy>
+	<number>133</number>
+	<align>left</align>
+	<width min="0" max="50">auto</width>
+	<height>25</height>
+	<textcolor>white</textcolor>
+	<font>duration</font>
+	<visible>Window.IsVisible(133)</visible>
+</control>
+<!-- Window.IsVisible(134) -->
+<control type="label">
+	<posx>0</posx>
+	<posy>0</posy>
+	<number>134</number>
+	<align>left</align>
+	<width min="0" max="50">auto</width>
+	<height>25</height>
+	<textcolor>white</textcolor>
+	<font>duration</font>
+	<visible>Window.IsVisible(134)</visible>
+</control>
+<!-- Window.IsVisible(135) -->
+<control type="label">
+	<posx>0</posx>
+	<posy>0</posy>
+	<number>135</number>
+	<align>left</align>
+	<width min="0" max="50">auto</width>
+	<height>25</height>
+	<textcolor>white</textcolor>
+	<font>duration</font>
+	<visible>Window.IsVisible(135)</visible>
+</control>
+<!-- Window.IsVisible(136) -->
+<control type="label">
+	<posx>0</posx>
+	<posy>0</posy>
+	<number>136</number>
+	<align>left</align>
+	<width min="0" max="50">auto</width>
+	<height>25</height>
+	<textcolor>white</textcolor>
+	<font>duration</font>
+	<visible>Window.IsVisible(136)</visible>
+</control>
+<!-- Window.IsVisible(137) -->
+<control type="label">
+	<posx>0</posx>
+	<posy>0</posy>
+	<number>137</number>
+	<align>left</align>
+	<width min="0" max="50">auto</width>
+	<height>25</height>
+	<textcolor>white</textcolor>
+	<font>duration</font>
+	<visible>Window.IsVisible(137)</visible>
+</control>
+<!-- Window.IsVisible(138) -->
+<control type="label">
+	<posx>0</posx>
+	<posy>0</posy>
+	<number>138</number>
+	<align>left</align>
+	<width min="0" max="50">auto</width>
+	<height>25</height>
+	<textcolor>white</textcolor>
+	<font>duration</font>
+	<visible>Window.IsVisible(138)</visible>
+</control>
+<!-- Window.IsVisible(139) -->
+<control type="label">
+	<posx>0</posx>
+	<posy>0</posy>
+	<number>139</number>
+	<align>left</align>
+	<width min="0" max="50">auto</width>
+	<height>25</height>
+	<textcolor>white</textcolor>
+	<font>duration</font>
+	<visible>Window.IsVisible(139)</visible>
+</control>
+<!-- Window.IsVisible(140) -->
+<control type="label">
+	<posx>0</posx>
+	<posy>0</posy>
+	<number>140</number>
+	<align>left</align>
+	<width min="0" max="50">auto</width>
+	<height>25</height>
+	<textcolor>white</textcolor>
+	<font>duration</font>
+	<visible>Window.IsVisible(140)</visible>
+</control>
+<!-- Window.IsVisible(141) -->
+<control type="label">
+	<posx>0</posx>
+	<posy>0</posy>
+	<number>141</number>
+	<align>left</align>
+	<width min="0" max="50">auto</width>
+	<height>25</height>
+	<textcolor>white</textcolor>
+	<font>duration</font>
+	<visible>Window.IsVisible(141)</visible>
+</control>
+<!-- Window.IsVisible(142) -->
+<control type="label">
+	<posx>0</posx>
+	<posy>0</posy>
+	<number>142</number>
+	<align>left</align>
+	<width min="0" max="50">auto</width>
+	<height>25</height>
+	<textcolor>white</textcolor>
+	<font>duration</font>
+	<visible>Window.IsVisible(142)</visible>
+</control>
+<!-- Window.IsVisible(143) -->
+<control type="label">
+	<posx>0</posx>
+	<posy>0</posy>
+	<number>143</number>
+	<align>left</align>
+	<width min="0" max="50">auto</width>
+	<height>25</height>
+	<textcolor>white</textcolor>
+	<font>duration</font>
+	<visible>Window.IsVisible(143)</visible>
+</control>
+<!-- Window.IsVisible(144) -->
+<control type="label">
+	<posx>0</posx>
+	<posy>0</posy>
+	<number>144</number>
+	<align>left</align>
+	<width min="0" max="50">auto</width>
+	<height>25</height>
+	<textcolor>white</textcolor>
+	<font>duration</font>
+	<visible>Window.IsVisible(144)</visible>
+</control>
+<!-- Window.IsVisible(145) -->
+<control type="label">
+	<posx>0</posx>
+	<posy>0</posy>
+	<number>145</number>
+	<align>left</align>
+	<width min="0" max="50">auto</width>
+	<height>25</height>
+	<textcolor>white</textcolor>
+	<font>duration</font>
+	<visible>Window.IsVisible(145)</visible>
+</control>
+<!-- Window.IsVisible(146) -->
+<control type="label">
+	<posx>0</posx>
+	<posy>0</posy>
+	<number>146</number>
+	<align>left</align>
+	<width min="0" max="50">auto</width>
+	<height>25</height>
+	<textcolor>white</textcolor>
+	<font>duration</font>
+	<visible>Window.IsVisible(146)</visible>
+</control>
+<!-- Window.IsVisible(147) -->
+<control type="label">
+	<posx>0</posx>
+	<posy>0</posy>
+	<number>147</number>
+	<align>left</align>
+	<width min="0" max="50">auto</width>
+	<height>25</height>
+	<textcolor>white</textcolor>
+	<font>duration</font>
+	<visible>Window.IsVisible(147)</visible>
+</control>
+<!-- Window.IsVisible(500) -->
+<control type="label">
+	<posx>0</posx>
+	<posy>0</posy>
+	<number>500</number>
+	<align>left</align>
+	<width min="0" max="50">auto</width>
+	<height>25</height>
+	<textcolor>white</textcolor>
+	<font>duration</font>
+	<visible>Window.IsVisible(500)</visible>
+</control>
+<!-- Window.IsVisible(501) -->
+<control type="label">
+	<posx>0</posx>
+	<posy>0</posy>
+	<number>501</number>
+	<align>left</align>
+	<width min="0" max="50">auto</width>
+	<height>25</height>
+	<textcolor>white</textcolor>
+	<font>duration</font>
+	<visible>Window.IsVisible(501)</visible>
+</control>
+<!-- Window.IsVisible(502) -->
+<control type="label">
+	<posx>0</posx>
+	<posy>0</posy>
+	<number>502</number>
+	<align>left</align>
+	<width min="0" max="50">auto</width>
+	<height>25</height>
+	<textcolor>white</textcolor>
+	<font>duration</font>
+	<visible>Window.IsVisible(502)</visible>
+</control>
+<!-- Window.IsVisible(503) -->
+<control type="label">
+	<posx>0</posx>
+	<posy>0</posy>
+	<number>503</number>
+	<align>left</align>
+	<width min="0" max="50">auto</width>
+	<height>25</height>
+	<textcolor>white</textcolor>
+	<font>duration</font>
+	<visible>Window.IsVisible(503)</visible>
+</control>
+<!-- Window.IsVisible(1000) -->
+<control type="label">
+	<posx>0</posx>
+	<posy>0</posy>
+	<number>1000</number>
+	<align>left</align>
+	<width min="0" max="50">auto</width>
+	<height>25</height>
+	<textcolor>white</textcolor>
+	<font>duration</font>
+	<visible>Window.IsVisible(1000)</visible>
+</control>
+<!-- Window.IsVisible(2000) -->
+<control type="label">
+	<posx>0</posx>
+	<posy>0</posy>
+	<number>2000</number>
+	<align>left</align>
+	<width min="0" max="50">auto</width>
+	<height>25</height>
+	<textcolor>white</textcolor>
+	<font>duration</font>
+	<visible>Window.IsVisible(2000)</visible>
+</control>
+<!-- Window.IsVisible(2001) -->
+<control type="label">
+	<posx>0</posx>
+	<posy>0</posy>
+	<number>2001</number>
+	<align>left</align>
+	<width min="0" max="50">auto</width>
+	<height>25</height>
+	<textcolor>white</textcolor>
+	<font>duration</font>
+	<visible>Window.IsVisible(2001)</visible>
+</control>
+<!-- Window.IsVisible(2002) -->
+<control type="label">
+	<posx>0</posx>
+	<posy>0</posy>
+	<number>2002</number>
+	<align>left</align>
+	<width min="0" max="50">auto</width>
+	<height>25</height>
+	<textcolor>white</textcolor>
+	<font>duration</font>
+	<visible>Window.IsVisible(2002)</visible>
+</control>
+<!-- Window.IsVisible(2003) -->
+<control type="label">
+	<posx>0</posx>
+	<posy>0</posy>
+	<number>2003</number>
+	<align>left</align>
+	<width min="0" max="50">auto</width>
+	<height>25</height>
+	<textcolor>white</textcolor>
+	<font>duration</font>
+	<visible>Window.IsVisible(2003)</visible>
+</control>
+<!-- Window.IsVisible(2005) -->
+<control type="label">
+	<posx>0</posx>
+	<posy>0</posy>
+	<number>2005</number>
+	<align>left</align>
+	<width min="0" max="50">auto</width>
+	<height>25</height>
+	<textcolor>white</textcolor>
+	<font>duration</font>
+	<visible>Window.IsVisible(2005)</visible>
+</control>
+<!-- Window.IsVisible(2006) -->
+<control type="label">
+	<posx>0</posx>
+	<posy>0</posy>
+	<number>2006</number>
+	<align>left</align>
+	<width min="0" max="50">auto</width>
+	<height>25</height>
+	<textcolor>white</textcolor>
+	<font>duration</font>
+	<visible>Window.IsVisible(2006)</visible>
+</control>
+<!-- Window.IsVisible(2007) -->
+<control type="label">
+	<posx>0</posx>
+	<posy>0</posy>
+	<number>2007</number>
+	<align>left</align>
+	<width min="0" max="50">auto</width>
+	<height>25</height>
+	<textcolor>white</textcolor>
+	<font>duration</font>
+	<visible>Window.IsVisible(2007)</visible>
+</control>
+<!-- Window.IsVisible(2008) -->
+<control type="label">
+	<posx>0</posx>
+	<posy>0</posy>
+	<number>2008</number>
+	<align>left</align>
+	<width min="0" max="50">auto</width>
+	<height>25</height>
+	<textcolor>white</textcolor>
+	<font>duration</font>
+	<visible>Window.IsVisible(2008)</visible>
+</control>
+<!-- Window.IsVisible(2009) -->
+<control type="label">
+	<posx>0</posx>
+	<posy>0</posy>
+	<number>2009</number>
+	<align>left</align>
+	<width min="0" max="50">auto</width>
+	<height>25</height>
+	<textcolor>white</textcolor>
+	<font>duration</font>
+	<visible>Window.IsVisible(2009)</visible>
+</control>
+<!-- Window.IsVisible(2600) -->
+<control type="label">
+	<posx>0</posx>
+	<posy>0</posy>
+	<number>2600</number>
+	<align>left</align>
+	<width min="0" max="50">auto</width>
+	<height>25</height>
+	<textcolor>white</textcolor>
+	<font>duration</font>
+	<visible>Window.IsVisible(2600)</visible>
+</control>
+<!-- Window.IsVisible(2900) -->
+<control type="label">
+	<posx>0</posx>
+	<posy>0</posy>
+	<number>2900</number>
+	<align>left</align>
+	<width min="0" max="50">auto</width>
+	<height>25</height>
+	<textcolor>white</textcolor>
+	<font>duration</font>
+	<visible>Window.IsVisible(2900)</visible>
+</control>
+<!-- Window.IsVisible(2901) -->
+<control type="label">
+	<posx>0</posx>
+	<posy>0</posy>
+	<number>2901</number>
+	<align>left</align>
+	<width min="0" max="50">auto</width>
+	<height>25</height>
+	<textcolor>white</textcolor>
+	<font>duration</font>
+	<visible>Window.IsVisible(2901)</visible>
+</control>
+<!-- Window.IsVisible(2902) -->
+<control type="label">
+	<posx>0</posx>
+	<posy>0</posy>
+	<number>2902</number>
+	<align>left</align>
+	<width min="0" max="50">auto</width>
+	<height>25</height>
+	<textcolor>white</textcolor>
+	<font>duration</font>
+	<visible>Window.IsVisible(2902)</visible>
+</control>
+<!-- Window.IsVisible(2999) -->
+<control type="label">
+	<posx>0</posx>
+	<posy>0</posy>
+	<number>2999</number>
+	<align>left</align>
+	<width min="0" max="50">auto</width>
+	<height>25</height>
+	<textcolor>white</textcolor>
+	<font>duration</font>
+	<visible>Window.IsVisible(2999)</visible>
+</control>
+	
+
+<!-- ----- -->	
+	<control type="label">
+		<posx>0</posx>
+		<posy>0</posy>
+		<label>$INFO[Container.FolderPath]</label>
+		<align>left</align>
+		<width min="0" max="400">auto</width>
+		<height>25</height>
+		<textcolor>white</textcolor>
+		<font>duration</font>
+	</control>
+	<control type="label">
+		<posx>0</posx>
+		<posy>0</posy>
+		<label>Container.Content(Movies)</label>
+		<align>left</align>
+		<width min="0" max="400">auto</width>
+		<height>25</height>
+		<textcolor>white</textcolor>
+		<font>duration</font>
+		<visible>Container.Content(Movies)</visible>
+	</control>
+	<control type="label">
+		<posx>0</posx>
+		<posy>0</posy>
+		<label>Container.Content(Episodes)</label>
+		<align>left</align>
+		<width min="0" max="400">auto</width>
+		<height>25</height>
+		<textcolor>white</textcolor>
+		<font>duration</font>
+		<visible>Container.Content(Episodes)</visible>
+	</control>
+	<control type="label">
+		<posx>0</posx>
+		<posy>0</posy>
+		<label>Container.Content(Files)</label>
+		<align>left</align>
+		<width min="0" max="400">auto</width>
+		<height>25</height>
+		<textcolor>white</textcolor>
+		<font>duration</font>
+		<visible>Container.Content(Files)</visible>
+	</control>
+	<control type="label">
+		<posx>0</posx>
+		<posy>0</posy>
+		<label>ListItem.IsFolder</label>
+		<align>left</align>
+		<width min="0" max="400">auto</width>
+		<height>25</height>
+		<textcolor>white</textcolor>
+		<font>duration</font>
+		<visible>ListItem.IsFolder</visible>
+	</control>
+	
+</control>
+</include>	
+</includes>

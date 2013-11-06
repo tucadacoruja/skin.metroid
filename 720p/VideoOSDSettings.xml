@@ -1,0 +1,150 @@
+<window id="123">
+<defaultcontrol always="true">5</defaultcontrol>
+<allowoverlay>yes</allowoverlay>
+  
+<coordinates>
+  <system>1</system>
+  <posx>320</posx>
+  <posy></posy>
+ 
+</coordinates>
+  
+<controls>
+<control type="button" id="60">
+	<posx>640</posx>
+	<posy>360</posy>
+	<width>1</width>
+	<height>1</height>
+	<texturefocus>blank.png</texturefocus>
+	<texturenofocus>blank.png</texturenofocus>
+	<onfocus>Close</onfocus>
+</control>
+
+			
+<control type="group">
+	<posx>0</posx>
+	<posy>0</posy>
+	<visible>!Window.IsActive(145)</visible>
+	<animation type="WindowOpen">
+		<effect type="fade" start="0" end="100" time="400" delay="400"/>
+		<effect type="slide" start="1280,0" end="0,0" time="800" delay="400" tween="quadratic" easing="out" />
+	</animation>
+	<animation type="WindowClose">
+		<effect type="fade" start="100" end="0" time="400" />
+		<effect type="slide" start="0,0" end="1280,0" time="800" tween="quadratic" easing="inout" />
+	</animation>
+	<animation type="Visible">
+		<effect type="fade" start="0" end="100" time="400" delay="400"/>
+		<effect type="slide" start="1280,0" end="0,0" time="800" delay="400" tween="quadratic" easing="out" />
+	</animation>
+	<animation type="Hidden">
+		<effect type="fade" start="100" end="0" time="400" />
+		<effect type="slide" start="0,0" end="1280,0" time="800" tween="quadratic" easing="inout" />
+	</animation>
+	<control type="image">
+		
+		<posx>0</posx>
+		<posy>100</posy>
+		<width>650</width>
+		<height>450</height>
+		<texture background="true">bluebackground.png</texture>
+		<colordiffuse>CC555555</colordiffuse>
+		<aspectratio>stretch</aspectratio>
+	</control>
+	
+	<control type="label" id="2">
+		<description>Settings title</description>
+		<posx>-510</posx>
+		<posy>0</posy>
+		<align>left</align>
+		<font>ScreenTitle</font>
+		<textcolor>FF7D7D7D</textcolor>
+		<width>600</width>
+		<align>center</align>
+		<visible>false</visible>
+	</control>
+	
+	<control type="grouplist" id="5">
+		
+		<description>Control Area</description>
+		<posx>10</posx>
+		<posy>120</posy>
+		<width>580</width>
+		<height>420</height>
+		<itemgap>3</itemgap>
+		<orientation>vertical</orientation>
+		<pagecontrol>60</pagecontrol>
+		<onleft>60</onleft>
+		<onright>-</onright>
+		<onup>-</onup>
+		<ondown>-</ondown>
+		<pagecontrol>603</pagecontrol>
+	</control>
+	<control type="scrollbar" id="603">
+		<posx>620</posx>
+		<posy>120</posy>
+		<width>5</width>
+		<height>400</height>
+		<visible>true</visible>
+		<texturesliderbackground>white2.png</texturesliderbackground>
+		<textureslidernibfocus>white3v.png</textureslidernibfocus>
+		<onleft>5</onleft>
+		<onright>5</onright>
+		<showonepage>false</showonepage>
+		<orientation>vertical</orientation>
+		
+	</control>
+	
+	<control type="button" id="7">
+		<height>35</height>
+		<align>left</align>
+		<font>DefaultButton</font>
+		<textcolor>FF9F9F9F</textcolor>
+		<focusedcolor>FFFFFFFF</focusedcolor>
+		<disabledcolor>33FFFFFF</disabledcolor>
+		<textoffsetx>10</textoffsetx>
+		<texturefocus border="1">button2fo.png</texturefocus>
+		<texturenofocus border="1">-</texturenofocus>
+	</control>
+	
+	<control type="radiobutton" id="8">
+		<height>35</height>
+		<align>left</align>
+		<font>DefaultButton</font>
+		<textcolor>FF9F9F9F</textcolor>
+		<focusedcolor>FFFFFFFF</focusedcolor>
+		<disabledcolor>33FFFFFF</disabledcolor>
+		<textoffsetx>10</textoffsetx>
+		<texturefocus border="1">button2fo.png</texturefocus>
+		<texturenofocus border="1">-</texturenofocus>
+	</control>
+	
+	<control type="spincontrolex" id="9">
+		<height>35</height>
+		<align>left</align>
+		<font>DefaultButton</font>
+		<textcolor>FF9F9F9F</textcolor>
+		<focusedcolor>FFFFFFFF</focusedcolor>
+		<disabledcolor>33FFFFFF</disabledcolor>
+		<textoffsetx>10</textoffsetx>
+		<texturefocus border="1">button2fo.png</texturefocus>
+		<texturenofocus border="1">-</texturenofocus>
+	</control>
+	
+	<control type="sliderex" id="10">
+		<height>35</height>
+		<align>left</align>
+		<font>DefaultButton</font>
+		<textcolor>FF9F9F9F</textcolor>
+		<focusedcolor>FFFFFFFF</focusedcolor>
+		<disabledcolor>33FFFFFF</disabledcolor>
+		<textoffsetx>10</textoffsetx>
+		<textoffsety>3</textoffsety>
+		<texturefocus border="1">button2fo.png</texturefocus>
+		<texturenofocus border="1">-</texturenofocus>
+	</control>
+	
+</control> 
+</controls>
+
+</window>

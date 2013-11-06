@@ -1,0 +1,488 @@
+<window id="2001">
+<defaultcontrol always="true">1</defaultcontrol>
+<allowoverlay>yes</allowoverlay>
+  
+<coordinates>
+  <system>1</system>
+  <posx>330</posx>
+  <posy>120</posy>
+</coordinates>
+  
+<controls>
+<control type="group">
+
+	<animation effect="slide" start="1480,0" end="0,0" time="450" delay="0" reversible="false">WindowOpen</animation>
+	<animation effect="slide" start="0,0" end="1480,0" time="450" delay="0" reversible="false">WindowClose</animation>
+	<animation type="Conditional" condition="Window.IsVisible(126)">
+		<effect type="fade" start="100" end="0" time="400" />
+	</animation>
+	
+	<control type="grouplist">
+			
+		<posx>0</posx>
+		<posy>0</posy>
+		<width>1220</width>
+		<height>600</height>
+		<scrolltime tween="cubic" easing="out">600</scrolltime>
+		<pagecontrol>9010</pagecontrol>
+		<!--itemgap>60</itemgap-->
+		<orientation>horizontal</orientation>
+	
+		<control type="grouplist" id="1">
+
+			<width>70</width>
+			<height>480</height>
+			<scrolltime tween="cubic" easing="out">600</scrolltime>
+			<pagecontrol>9010</pagecontrol>
+			<itemgap>10</itemgap>
+			<orientation>vertical</orientation>
+			
+			<!--spacer-->
+			<control type="group">
+				
+				<width>70</width>
+				<height>50</height>
+			</control>
+			
+			<!--Refresh Button-->
+			<control type="group">
+				
+				<width>70</width>
+				<height>60</height>
+				
+				<control type="image">
+				
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>60</width>
+					<height>60</height>
+					<aspectratio>scale</aspectratio>
+					<texture>osd/buttons/osdbg.png</texture>
+					<aspectratio>stretch</aspectratio>
+					<animation effect="fade" start="100" end="60" time="100" condition="Control.HasFocus(6)">Conditional</animation>
+					<visible></visible>
+					
+				</control>
+				<control type="button" id="6">
+					
+					<width>60</width>
+					<height>60</height>
+					<texturefocus>osd/buttons/repeat.png</texturefocus>
+					<texturenofocus>osd/buttons/repeat.png</texturenofocus>
+					<alttexturefocus>-</alttexturefocus>
+					<alttexturenofocus>-</alttexturenofocus>
+					<colordiffuse>FFEBEBEB</colordiffuse>
+					<disabledcolor>-</disabledcolor>
+					<textcolor>00FFFFFF</textcolor>
+					<visible allowhiddenfocus="true">true</visible>
+					<onup>97</onup>
+					<ondown>10</ondown>
+				
+					<animation effect="zoom" start="100" end="120" center="auto" time="100">Focus</animation>
+					<animation effect="zoom" start="120" end="100" center="auto" time="100">UnFocus</animation>
+					
+				</control>
+												
+			</control>
+
+			<!--Art Button-->
+			<control type="group">
+			
+				<width>70</width>
+				<height>60</height>
+				
+				<visible></visible>
+				
+				<control type="image">
+				
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>60</width>
+					<height>60</height>
+					<aspectratio>scale</aspectratio>
+					<texture>osd/buttons/osdbg.png</texture>
+					<aspectratio>stretch</aspectratio>
+					<animation effect="fade" start="100" end="60" time="100" condition="Control.HasFocus(10)">Conditional</animation>
+				</control>
+				<control type="button" id="10">
+					
+					<width>60</width>
+					<height>60</height>
+					<texturefocus>osd/buttons/artist.png</texturefocus>
+					<texturenofocus>osd/buttons/artist.png</texturenofocus>
+					<alttexturefocus>-</alttexturefocus>
+					<alttexturenofocus>-</alttexturenofocus>
+					<colordiffuse>FFEBEBEB</colordiffuse>
+					<disabledcolor>-</disabledcolor>
+					<textcolor>00FFFFFF</textcolor>
+					<visible allowhiddenfocus="true">true</visible>
+					<onup>6</onup>
+					<ondown>12</ondown>
+								
+					<animation effect="zoom" start="100" end="120" center="auto" time="100">Focus</animation>
+					<animation effect="zoom" start="120" end="100" center="auto" time="100">UnFocus</animation>
+					
+				</control>
+				
+				
+			</control>
+			
+			<!--Fanart Button-->
+			<control type="group">
+			
+				<width>70</width>
+				<height>60</height>
+				
+				<visible></visible>
+				
+				<control type="image">
+				
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>60</width>
+					<height>60</height>
+					<aspectratio>scale</aspectratio>
+					<texture>osd/buttons/osdbg.png</texture>
+					<aspectratio>stretch</aspectratio>
+					<animation effect="fade" start="100" end="60" time="100" condition="Control.HasFocus(12)">Conditional</animation>
+				</control>
+				<control type="button" id="12">
+					
+					<width>60</width>
+					<height>60</height>
+					<texturefocus>osd/buttons/art.png</texturefocus>
+					<texturenofocus>osd/buttons/art.png</texturenofocus>
+					<alttexturefocus>-</alttexturefocus>
+					<alttexturenofocus>-</alttexturenofocus>
+					<colordiffuse>FFEBEBEB</colordiffuse>
+					<disabledcolor>-</disabledcolor>
+					<textcolor>00FFFFFF</textcolor>
+					<visible allowhiddenfocus="true">true</visible>
+					<onup>10</onup>
+					<ondown>97</ondown>
+								
+					<animation effect="zoom" start="100" end="120" center="auto" time="100">Focus</animation>
+					<animation effect="zoom" start="120" end="100" center="auto" time="100">UnFocus</animation>
+					
+				</control>
+				
+				
+			</control>
+			
+			<!--Toggle Button-->
+			<control type="group">
+			
+				<width>70</width>
+				<height>60</height>
+				
+				<visible></visible>
+				
+				<control type="image">
+				
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>60</width>
+					<height>60</height>
+					<aspectratio>scale</aspectratio>
+					<texture>osd/buttons/osdbg.png</texture>
+					<aspectratio>stretch</aspectratio>
+					<animation effect="fade" start="100" end="60" time="100" condition="Control.HasFocus(97)">Conditional</animation>
+				</control>
+				<control type="button" id="97">
+					
+					<width>60</width>
+					<height>60</height>
+					<texturefocus>osd/buttons/toggle.png</texturefocus>
+					<texturenofocus>osd/buttons/toggle.png</texturenofocus>
+					<alttexturefocus>-</alttexturefocus>
+					<alttexturenofocus>-</alttexturenofocus>
+					<colordiffuse>FFEBEBEB</colordiffuse>
+					<disabledcolor>-</disabledcolor>
+					<textcolor>-</textcolor>
+					<visible allowhiddenfocus="true">true</visible>
+					<onclick>SendClick(2001,5)</onclick>
+					<onup>12</onup>
+					<ondown>6</ondown>
+					<label>-</label>			
+					<animation effect="zoom" start="100" end="120" center="auto" time="100">Focus</animation>
+					<animation effect="zoom" start="120" end="100" center="auto" time="100">UnFocus</animation>
+					
+				</control>
+				
+				
+			</control>
+	
+			
+		</control>	
+		<!--Information Section-->
+		<control type="group">
+		
+			<width>400</width>
+			<height>560</height>
+			
+			<control type="group">
+			
+				<posx>0</posx>
+				<posy>60</posy>
+				<width>380</width>
+				<height>500</height>
+				
+				
+				
+	
+				<control type="image">
+						
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>380</width>
+					<height>500</height>
+					<texture background="true">white.png</texture>
+					<colordiffuse>FFEBEBEB</colordiffuse>
+					
+				</control>
+				
+				<!----thumbnail--->
+				<control type="image" id="3">
+						
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>380</width>
+					<height>215</height>
+					
+					<aspectratio align="center" aligny="top">scale</aspectratio>
+					
+				</control>
+				
+				<control type="button" id="9001">
+				
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>380</width>
+					<height>215</height>
+					<texturefocus>empty.png</texturefocus>
+					<texturenofocus>empty.png</texturenofocus>
+					<colordiffuse>FF959595</colordiffuse>
+					<pulseonselect>true</pulseonselect>
+					<!--onclick>SendClick(2003,8)</onclick-->
+					<onleft>8</onleft>
+					<onright>50</onright>
+					
+					<animation type="WindowOpen">
+						<effect type="fade" start="0" end="100" time="400" delay="2000" />
+					</animation>
+					
+					<visible allowhiddenfocus="true">Container.Content(movies) | Container.Content(episodes)</visible>
+					
+					
+				</control>
+				
+				<control type="grouplist">
+					
+					<posx>20</posx>
+					<posy>220</posy>
+					<width>360</width>
+					<height>100</height>
+					<itemgap>0</itemgap>
+			
+					<onup>9000</onup>
+					<ondown>9000</ondown>
+					<onright>8</onright>
+					<onleft>9000</onleft>
+					<orientation>vertical</orientation>
+					
+					<control type="label">
+					
+						<width>340</width>
+						<height>40</height>
+						<label>$VAR[Info_Album_Title]</label>
+						<font>font16</font>
+						<textcolor>FF959595</textcolor>
+						<aligny>top</aligny>
+					
+					</control>
+					<control type="image">
+						
+						<width>128</width>
+						<height>32</height>
+						<texture background="true">$INFO[ListItem.StarRating]</texture>
+						<aspectratio>keep</aspectratio>
+						
+					</control>
+					
+					
+					
+				</control>
+				
+				<control type="grouplist">
+				
+					<posx>20</posx>
+					<posy>110</posy>
+					<width>340</width>
+					<height>300</height>
+					<itemgap>0</itemgap>
+					<orientation>vertical</orientation>
+					<align>bottom</align>
+					<usecontrolcoords>true</usecontrolcoords>
+
+					
+					<control type="label">
+					
+						<width>360</width>
+						<height>24</height>
+						<font>font12</font>
+						<textcolor>FF959595</textcolor>
+						<label>$INFO[ListItem.Genre]</label>
+						<visible>!IsEmpty(ListItem.Genre)</visible>
+					
+					</control>
+					
+					<control type="label">
+					
+						<width>360</width>
+						<height>24</height>
+						<font>font12</font>
+						<textcolor>FF959595</textcolor>
+						<label>$INFO[ListItem.Duration,, minutes]</label>
+						<visible>!IsEmpty(ListItem.Duration)</visible>
+					
+					</control>
+						
+			
+					<control type="label">
+					
+						<width>360</width>
+						<height>24</height>
+						<font>font12</font>
+						<textcolor>FF959595</textcolor>
+						<label>$INFO[ListItem.Year] $INFO[ListItem.Studio]</label>
+						
+					</control>
+					
+				</control>
+			
+			</control>
+		
+		</control>
+		
+		<!--Overview Section-->
+		<control type="group">
+		
+			<width>360</width>
+			<height>560</height>
+		
+			
+			
+			<control type="textbox" id="4">
+					
+				<posx>0</posx>
+				<posy>50</posy>
+				<font>font13</font>
+				<textcolor>FF959595</textcolor>
+				<shadowcolor>00FFFFFF</shadowcolor>
+				<aligny>top</aligny>
+				<wrapmultiline>true</wrapmultiline>
+				<autoscroll>false</autoscroll>
+				<pagecontrol>71</pagecontrol>
+				<width>340</width>
+				<height>450</height>
+
+			</control>
+			
+					
+			<control type="list" id="50">
+							
+				<posx>0</posx>
+				<posy>60</posy>
+				<width>450</width>
+				<height>450</height>
+				<onleft>9001</onleft>
+				<onright>9004</onright>
+				<onup>50</onup>
+				<ondown>50</ondown>
+				<pagecontrol>81</pagecontrol>
+				<viewtype label="535">list</viewtype>
+				<scrolltime tween="cubic" easing="out">600</scrolltime>
+				<preloaditems>2</preloaditems>
+								
+				<itemlayout width="540" height="32">
+
+					<control type="group">
+					
+						<control type="textbox">
+						
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>70</width>
+							<height>30</height>
+							<label>$INFO[ListItem.Duration]</label>
+							<font>font13</font>
+							<textcolor>FF959595</textcolor>
+							<aligny>top</aligny>
+							
+						</control>	
+						<control type="textbox">
+						
+							<posx>62</posx>
+							<posy>0</posy>
+							<width>300</width>
+							<height>36</height>
+							<label>$INFO[ListItem.Label]</label>
+							<font>font13</font>
+							<textcolor>FF959595</textcolor>
+							<aligny>top</aligny>
+							
+						</control>
+									
+					</control>
+					
+				</itemlayout>
+
+				<focusedlayout width="540" height="32">
+				
+					<control type="textbox">
+						
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>70</width>
+							<height>30</height>
+							<label>$INFO[ListItem.Duration]</label>
+							<font>font13</font>
+							<textcolor>FF959595</textcolor>
+							<aligny>top</aligny>
+							
+						</control>	
+						<control type="textbox">
+						
+							<posx>62</posx>
+							<posy>0</posy>
+							<width>300</width>
+							<height>36</height>
+							<label>$INFO[ListItem.Label]</label>
+							<font>font13</font>
+							<textcolor>FF959595</textcolor>
+							<aligny>top</aligny>
+							
+						</control>
+					
+				</focusedlayout>
+
+			</control>
+			
+		</control>
+	</control>		
+
+</control>
+
+<control type="button" id="5">
+	<posx>-100</posx>
+	<posy>-100</posy>
+	<width>1</width>
+	<height>1</height>
+	<visible allowhiddenfocus="true">true</visible>
+	<label>-</label>			
+	<animation effect="fade" start="10" end="0" time="0">WindowOpen</animation>
+</control>
+
+</controls>
+  
+</window>

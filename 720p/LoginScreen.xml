@@ -1,0 +1,112 @@
+<window id="29">
+<defaultcontrol always="true">52</defaultcontrol>
+<allowoverlay>yes</allowoverlay>
+  
+<controls>
+  	 <control type="image">
+		<posx>0</posx>
+		<posy>0</posy>
+		<width>1280</width>
+		<height>720</height>
+		<aspectratio>stretch</aspectratio>
+		<texture>MetroidBG.png</texture>
+		<!--colordiffuse>70FFFFFF</colordiffuse-->
+	</control>
+	
+	
+ <control type="group"> 	
+	<animation type="WindowClose" reversible="false">
+		<effect type="fade" start="100" end="30" time="550" delay="0" />
+	</animation>
+	<control type="image">
+		<description>logo</description>
+		<posx>450</posx>
+		<posy>35</posy>
+		<width>380</width>
+		<height>400</height>
+		<aspectratio>keep</aspectratio>
+		<texture>settings/LogoBig.png</texture>
+		<!--colordiffuse>ddffffff</colordiffuse-->
+		<!--animation effect="zoom" end="50" center="auto" time="0" condition="true">Conditional</animation-->
+		<animation effect="rotatey" end="360" center="640,360" time="60000" loop="true" condition="true">Conditional</animation>
+	</control>
+	<control type="label">
+		<posx>0</posx>
+		<posy>50r</posy>
+		<width>1280</width>
+		<height>35</height>
+		<font>LoginSmall</font>
+		<textcolor>ff757575</textcolor>
+		<scroll>true</scroll>
+		<align>center</align>
+		<aligny>center</aligny>
+		<label>[UPPERCASE]$LOCALIZE[31133][/UPPERCASE]</label>
+	</control>
+</control>	
+	
+ <control type="group"> 
+		<animation type="WindowOpen" reversible="false">
+			<effect type="fade" start="0" end="100" time="550" delay="0" />
+			<effect type="zoom" start="155" end="100" time="350" center="640,500" delay="0" />
+		</animation>
+		<animation type="WindowClose" reversible="false">
+			<effect type="fade" start="100" end="0" time="350" delay="0" />
+			<effect type="zoom" start="100" end="155" time="300" center="640,500" delay="0" />
+		</animation>
+			
+			 
+			<control type="list" id="52">
+				<description>Login Wraplist</description>
+				<posx>450</posx>
+				<posy>465</posy>
+				<width>380</width>
+				<height>147</height>
+				<onup>52</onup>
+				<ondown>52</ondown>
+				<onleft>52</onleft>
+				<onright>52</onright>
+				<viewtype label="loginlist">list</viewtype>
+				<focusposition>1</focusposition>
+				<scrolltime>200</scrolltime>
+				
+				
+				<itemlayout height="45" width="380">
+					<control type="label">
+						<posx>190</posx>
+						<posy>0</posy>
+						<width>380</width>
+						<height>45</height>
+						<font>LoginList</font>
+						<textcolor>ff757575</textcolor>
+						<label>$INFO[ListItem.Label]</label>
+						<align>center</align>
+					</control>
+				</itemlayout>
+				<focusedlayout height="45" width="380">
+					<control type="image">
+						<posy>42</posy>
+						<width>380</width>
+						<height>3</height>
+						<aspectratio>stretch</aspectratio>
+						<texture>blue3.png</texture>
+						<animation effect="fade" start="0" end="30" time="0" condition="true">Conditional</animation>
+					</control>	
+					<control type="label">
+						<posx>190</posx>
+						<width>380</width>
+						<height>45</height>
+						<font>LoginList</font>
+						<textcolor>White</textcolor>
+						<label>$INFO[ListItem.Label]</label>
+						<align>center</align>
+					</control>
+				</focusedlayout>
+			</control>
+	
+	
+	
+</control> 
+
+</controls>
+  
+</window>

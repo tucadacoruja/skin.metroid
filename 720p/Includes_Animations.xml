@@ -1,0 +1,71 @@
+<includes>
+
+	<include name="WidgetsAnimation">
+		<animation type="Visible" reversible="false">
+			<effect type="fade" start="0" end="100" time="950" delay="0" />
+			<effect type="zoom" start="1" end="100" time="370" center="900,360" delay="0" />
+			<effect type="slide" start="1780,0" end="0,0" time="300" delay="0" reversible="false" />
+		</animation>
+		<animation type="Hidden" reversible="false">
+			<effect type="fade" start="100" end="0" time="100" delay="0" />
+		</animation>
+	</include>		
+	
+	<include name="VisibleFadeEffect">
+		<animation effect="fade" time="300">Visible</animation>
+		<animation effect="fade" time="300">Hidden</animation>
+	</include>
+
+	<include name="Changes">
+		<animation effect="fade" start="100" end="3" time="300" reversible="false" condition="Window.IsVisible(2004)">Conditional</animation>
+		<animation effect="fade" start="3" end="100" time="200" delay="0" reversible="false" condition="!Window.IsVisible(2004)">Conditional</animation>
+	</include>	
+	
+	<include name="InfoOpenClose">
+		<animation effect="slide" start="0,0" end="1600,0" time="450" delay="0" reversible="false" condition="Window.IsVisible(movieinformation) | Window.IsVisible(146)">Conditional</animation>
+		<animation effect="slide" start="1600,0" end="0,0" time="450" delay="0" reversible="false" condition="!Window.IsVisible(movieinformation) + !Window.IsVisible(146)">Conditional</animation>
+	</include>
+	
+	<include name="MusicInfoOpenClose">
+		<animation effect="slide" start="0,0" end="1480,0" time="450" delay="0" reversible="false" condition="Window.IsVisible(2001) | Window.IsVisible(addoninformation)">Conditional</animation>
+		<animation effect="slide" start="1480,0" end="0,0" time="450" delay="0" reversible="false" condition="![Window.IsVisible(2001) | Window.IsVisible(addoninformation)]">Conditional</animation>
+	</include>	
+	
+	<include name="ViewWindowOC">
+		<animation type="WindowOpen" reversible="false">
+			<effect type="fade" start="0" end="100" time="550" delay="0" />
+			<effect type="zoom" start="155" end="100" time="350" center="640,360" delay="0" />
+		</animation>
+		<animation type="WindowClose" reversible="false">
+			<effect type="fade" start="100" end="0" time="350" delay="0" />
+			<effect type="zoom" start="100" end="155" time="300" center="640,360" delay="0" />
+		</animation>
+	</include>
+
+	<include name="ContextFade">
+		<animation effect="fade" start="100" end="45" time="300" reversible="false" condition="Window.IsVisible(mediafilter)">Conditional</animation>
+		<animation effect="fade" start="100" end="45" time="300" reversible="false" condition="Control.HasFocus(400) | Window.IsVisible(106) | Window.IsVisible(100) | Window.IsVisible(111)">Conditional</animation>
+		<animation effect="fade" start="45" end="100" time="200" delay="0" reversible="false" condition="!Control.HasFocus(400) + !Window.IsVisible(106) + !Window.IsVisible(100) | !Window.IsVisible(111)">Conditional</animation>
+		<animation effect="zoom" start="100" end="90" time="250" center="auto" tween="circle" easing="out" condition="Control.HasFocus(400) | Window.IsVisible(106) | Window.IsVisible(100) | Window.IsVisible(111)">Conditional</animation>
+	</include>
+
+	<include name="Keyboard">
+		<animation effect="fade" start="100" end="60" time="300" reversible="false" condition="Window.IsVisible(103)">Conditional</animation>
+		<animation effect="fade" start="60" end="100" time="200" delay="0" reversible="false" condition="!Window.IsVisible(103)">Conditional</animation>
+	</include>
+
+	<include name="Favourites">
+		<animation type="Conditional" condition="Window.IsVisible(favourites) | Window.IsVisible(contentsettings) | Window.IsVisible(filebrowser)">
+			<effect type="fade" start="100" end="0" time="400" />
+			<effect type="zoom" start="100" end="80" center="auto" time="300" />
+		</animation>
+	</include>
+	
+	<include name="AddSource">
+		<animation type="Conditional" condition="Window.IsVisible(selectdialog) | Window.IsVisible(2002) | Window.IsVisible(129) | Window.IsVisible(132) | Window.IsVisible(10140) ">
+			<effect type="fade" start="100" end="0" time="400" />
+			<effect type="zoom" start="100" end="80" center="auto" time="300" />
+		</animation>
+	</include>
+	
+</includes>

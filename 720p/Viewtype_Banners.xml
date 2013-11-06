@@ -1,0 +1,262 @@
+<includes>
+
+<!-- EPISODES VIEW -->
+	
+<include name="Banners">
+	<control type="group">
+		<posy>-2</posy>
+		<include>InfoOpenClose</include>
+		<include>ViewWindowOC</include>
+		<include>ContextFade</include>
+		<include>Keyboard</include>
+		<include>Favourites</include>
+		
+		<control type="group">
+		<visible>!substring(Listitem.Label,..,left)</visible>
+		<visible>Control.IsVisible(709)</visible>
+		<include>WidgetsAnimation</include>
+				
+			<control type="image">
+				<posx>1000</posx>
+				<posy>120</posy>
+				<width>300</width>
+				<height>530</height>
+				<texture>White35p.png</texture>
+				<bordertexture border="1">MenuBorder.png</bordertexture>
+				<bordersize>5</bordersize>
+				<align>bottom</align>
+				<aspectratio>stretch</aspectratio>
+				<colordiffuse>66FFFFFF</colordiffuse>
+			</control>
+			<control type="textbox">
+				<posx>1030</posx>
+				<posy>155</posy>
+				<width>230</width>
+				<height>355</height>
+				<align>justify</align>
+				<info>ListItem.Plot</info>
+				<font>plot</font>
+				<textcolor>FFD7D7D7</textcolor>
+				<autoscroll delay="35000" time="4000" repeat="10000" />
+			</control>
+			<control type="image">
+				<description>Rating Info</description>
+				<posx>1030</posx>
+				<posy>520</posy>
+				<width>230</width>
+				<height>40</height>
+				<info>ListItem.StarRating</info>
+				<fadetime>250</fadetime>
+				<visible>!IsEmpty(ListItem.foldername) + !substring(Container.Listitem.Label,..,left)</visible>
+			</control>
+			<control type="label">
+				<posx>17r</posx>
+				<posy>567</posy>
+				<width>633</width>
+				<height>60</height>
+				<align>right</align>
+				<label>$INFO[ListItem.Property(TotalEpisodes)] $LOCALIZE[31179]</label>
+				<font>homemenu3</font>
+				<textcolor>ACEBEBEB</textcolor>
+				<selectedcolor>taskbar</selectedcolor>
+			</control>
+			<control type="label">
+				<posx>17r</posx>
+				<posy>590</posy>
+				<width>633</width>
+				<height>60</height>
+				<align>right</align>
+				<label>$INFO[ListItem.Property(UnWatchedEpisodes)] $LOCALIZE[31180]</label>
+				<font>plot</font>
+				<textcolor>ACEBEBEB</textcolor>
+				<selectedcolor>taskbar</selectedcolor>
+			</control>
+		</control>
+				
+				
+		<control type="fixedlist" id="709">
+			<viewtype label="Banners">list</viewtype>
+			<posx>344</posx>
+			<posy>112</posy>
+			<width>950</width>
+			<height>538</height>
+			<scrolltime>275</scrolltime>
+			<orientation>vertical</orientation>
+			<movement>4</movement>
+			<focusposition>1</focusposition>
+			<onup>709</onup>
+			<ondown>709</ondown>
+			<onleft>710</onleft>
+			<onright>-</onright>
+			<pagecontrol>710</pagecontrol>
+			<preloaditems>2</preloaditems>
+			<visible>Window.IsActive(25)</visible>
+			<visible>Container.Content(TVShows)</visible>
+			
+			<itemlayout width="585" height="190">
+			
+				<control type="image">
+					<posx>5</posx>
+					<posy>10</posy>
+					<width>590</width>
+					<height>165</height>
+					<texture border="22">poster/postershadow.png</texture>
+					<align>bottom</align>
+					<aspectratio>stretch</aspectratio>
+					<colordiffuse>70ffffff</colordiffuse>
+					
+				</control>
+				<control type="image">
+					<posx>0</posx>
+					<posy>10</posy>
+					<width>577</width>
+					<height>149</height>
+					<texture border="12">whitepanel2.png</texture>
+					<colordiffuse>ff262626</colordiffuse>
+					<aspectratio>stretch</aspectratio>
+				</control>
+				<control type="image">
+					<posx>20</posx>
+					<posy>15</posy>
+					<width>120</width>
+					<height>100</height>
+					<aspectratio>stretch</aspectratio>
+					<texture background="true" diffuse="poster/posterdiffusesmall.png">$VAR[Fallback_Icon]</texture>
+					<animation effect="fade" start="0" end="80" time="0" condition="true">Conditional</animation>
+					
+					<colordiffuse>EBFFFFFF</colordiffuse>
+				</control>
+				
+				<control type="image">
+					<posx>4</posx>
+					<posy>13</posy>
+					<width>570</width>
+					<height>105</height>
+					<visible>!IsEmpty(ListItem.Art(banner))</visible>
+					<texture background="true" diffuse="banner/bannerdiff.png" fallback="DefaultAlbumCover.png">$INFO[ListItem.Art(banner)]</texture>
+					<aspectratio>stretch</aspectratio>
+				</control>
+	
+				<control type="label">
+					<posx>10</posx>
+					<posy>107</posy>
+					<width>633</width>
+					<height>60</height>
+					<align>left</align>
+					<label>$INFO[ListItem.Title]</label>
+					<font>homemenu3</font>
+					
+					<textcolor>e0808080</textcolor>
+					<selectedcolor>taskbar</selectedcolor>
+				</control>				
+			</itemlayout>
+			
+			<focusedlayout width="585" height="190">
+				
+				
+							
+				
+				<control type="image">
+					<posx>5</posx>
+					<posy>3</posy>
+					<width>590</width>
+					<height>165</height>
+					<texture border="22">poster/postershadow.png</texture>
+					<align>bottom</align>
+					<aspectratio>stretch</aspectratio>
+					<colordiffuse>70ffffff</colordiffuse>
+					
+				</control>
+				<control type="image">
+					<posx>3</posx>
+					<posy>1</posy>
+					<width>572</width>
+					<height>145</height>
+					<texture border="12">whitepanel2.png</texture>
+					<aspectratio>stretch</aspectratio>
+					<colordiffuse>skin.string(MainColorString)</colordiffuse>
+					<animation effect="fade" end="30" time="0" condition="true">Conditional</animation>
+						<animation type="Focus" reversible="false">
+							<effect type="zoom" end="103,113" time="200" center="auto"/>
+						</animation>
+				</control>			
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>578</width>
+					<height>149</height>
+					<texture border="12">whitepanel2.png</texture>
+					<aspectratio>stretch</aspectratio>
+					<colordiffuse>ff262626</colordiffuse>
+						<animation type="Focus" reversible="false">
+							<effect type="fade" start="10" end="100" time="300" />
+							<effect type="zoom" start="93" end="100" time="200" center="auto"/>
+						</animation>
+				</control>
+				<control type="image">
+					<posx>20</posx>
+					<posy>5</posy>
+					<width>120</width>
+					<height>100</height>
+					<aspectratio>stretch</aspectratio>
+					<texture background="true" diffuse="poster/posterdiffusesmall.png">$VAR[Fallback_Icon]</texture>
+					<animation effect="fade" start="0" end="80" time="0" condition="true">Conditional</animation>
+					
+					<colordiffuse>EBFFFFFF</colordiffuse>
+				</control>
+				<control type="image">
+					<posx>4</posx>
+					<posy>3</posy>
+					<width>570</width>
+					<height>105</height>
+					<visible>!IsEmpty(ListItem.Art(banner))</visible>
+					<texture background="true" diffuse="banner/bannerdiff.png" fallback="DefaultAlbumCover.png">$INFO[ListItem.Art(banner)]</texture>
+					<aspectratio>stretch</aspectratio>
+						<animation type="Focus" reversible="false">
+							<effect type="zoom" start="93" end="100" time="200" center="auto"/>
+						</animation>
+				</control>
+	
+				<control type="label">
+					<posx>10</posx>
+					<posy>97</posy>
+					<width>633</width>
+					<height>60</height>
+					<align>left</align>
+					<label>$INFO[ListItem.Title]</label>
+					<font>homemenu3</font>
+					<textcolor>e0808080</textcolor>
+					<selectedcolor>taskbar</selectedcolor>
+				</control>	
+	
+			</focusedlayout>
+		</control>
+
+		<!-- Scroll Bar -->
+
+		<control type="scrollbar" id="710">
+			
+			<texturesliderbackground>buttons/scrollbgV.png</texturesliderbackground>
+			<texturesliderbar>-</texturesliderbar>
+			<texturesliderbarfocus>-</texturesliderbarfocus>
+			<textureslidernib>buttons/scrollnibV.png</textureslidernib>
+			<textureslidernibfocus>buttons/scrollnibV.png</textureslidernibfocus>
+			<orientation>Vertical</orientation>
+			<showonepage>true</showonepage>
+			<posx>280</posx>
+			<posy>120</posy>
+			<width>10</width>
+			<height>550</height>
+			<onleft>300</onleft>
+			<onright>709</onright>
+			<visible>Control.IsVisible(709)</visible>
+			<animation effect="fade" start="100" end="50" time="200" reversable="false" condition="!Control.HasFocus(710)">Conditional</animation>
+		</control>
+
+</control>
+	
+
+
+	</include>
+	
+</includes>

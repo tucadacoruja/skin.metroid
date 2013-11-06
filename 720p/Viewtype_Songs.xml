@@ -1,0 +1,281 @@
+<includes>
+	
+	<include name="Polaroid">
+	<control type="group">
+		<visible>!Window.IsVisible(pictureinfo)</visible>
+		<posx>-43</posx>
+		<posy>15</posy>
+
+		<include>InfoOpenClose</include>
+		<include>MusicInfoOpenClose</include>
+		<include>ViewWindowOC</include>
+		<include>ContextFade</include>	
+		<include>Keyboard</include>
+		<include>Favourites</include>
+		
+		<control type="list" id="602">
+			<viewtype label="Polaroid">list</viewtype>
+			<posx>670</posx>
+			<posy>75</posy>
+			<width>700</width>
+			<height>613</height><!---438-->
+			<scrolltime>200</scrolltime>
+			<orientation>vertical</orientation>
+			<onup>602</onup>
+			<ondown>602</ondown>
+			
+			<onleft>63</onleft>
+			<onright>-</onright>
+			<pagecontrol>63</pagecontrol>
+			<visible>Container.Content(songs) | Window.IsVisible(pictures)</visible>
+			<visible>!Window.IsVisible(favourites)</visible>
+			<itemlayout width="633" height="45">
+					<control type="label">
+						<posy>0</posy>
+						<posx>580</posx>
+						<width>652</width>
+						<height>40</height>
+						<textcolor>9bffffff</textcolor>
+						<selectedcolor>lightblue</selectedcolor>
+						<font>MusicFO</font>
+						<align>right</align>
+						<label>..</label>
+						<scroll>false</scroll>
+						<visible>IsEmpty(ListItem.Title) + Container.Content(songs)</visible>
+					</control>
+				
+					<control type="label">
+					
+						  <posy>0</posy>
+						  <posx>600</posx>
+						  <width>652</width>
+						  <height>40</height>
+						  <textcolor>9bffffff</textcolor>
+						  <selectedcolor>lightblue</selectedcolor>
+						  <font>MusicNF</font>
+						  <align>left</align>
+						  <label>$VAR[Padded_string]</label>
+						  
+					</control>
+					
+					
+					<control type="label">
+						<posx>580</posx>
+						<posy>-2</posy>
+						<width>433</width>
+						<height>40</height>
+						<align>right</align>
+						<label>$INFO[ListItem.Title]</label>
+						<scroll>false</scroll>
+						<font>MusicNF2</font>
+						<textcolor>B7ffffff</textcolor>
+						<selectedcolor>lightblue</selectedcolor>
+						<visible>Container.Content(songs)</visible>
+					</control>
+					<control type="label">
+						<posx>580</posx>
+						<posy>-2</posy>
+						<width>433</width>
+						<height>40</height>
+						<align>right</align>
+						<label>$INFO[ListItem.Label]</label>
+						<scroll>false</scroll>
+						<font>MusicNF</font>
+						<textcolor>B7ffffff</textcolor>
+						<selectedcolor>lightblue</selectedcolor>
+						<visible>Window.IsVisible(pictures)</visible>
+					</control>
+						
+			</itemlayout>
+			
+			<focusedlayout width="633" height="64">
+			
+					<control type="image">
+						<posx>169</posx>
+						<posy>-5</posy>
+						<width>480</width>
+						<height>65</height>
+						<aspectratio scalediffuse="false">stretch</aspectratio>
+						<texture flipx="true" >setting.png</texture>
+						
+						<visible>Control.HasFocus(602)</visible>
+					</control>	
+					<control type="label">
+						<posy>3</posy>
+						<posx>580</posx>
+						<width>552</width>
+						<height>40</height>
+						<textcolor>9bffffff</textcolor>
+						<selectedcolor>lightblue</selectedcolor>
+						<font>MusicFO</font>
+						<align>right</align>
+						<label>..</label>
+						<scroll>false</scroll>
+						<visible>IsEmpty(ListItem.Title) + Container.Content(songs)</visible>
+					</control>		
+					<control type="label">
+					
+						  <posy>4</posy>
+						  <posx>600</posx>
+						  <width>652</width>
+						  <height>40</height>
+						  <textcolor>ffffffff</textcolor>
+						  <selectedcolor>lightblue</selectedcolor>
+						  <font>MusicFO</font>
+						  <align>left</align>
+						  <label>$VAR[Padded_string]</label>
+						  
+					</control>
+					
+					
+					
+					<control type="label">
+						<posx>580</posx>
+						<posy>-8</posy>
+						<width>433</width>
+						<height>40</height>
+						<align>right</align>
+						<label>$INFO[ListItem.Title]</label>
+						<font>MusicFO</font>
+						<textcolor>ffffffff</textcolor>
+						<selectedcolor>lightblue</selectedcolor>
+						<visible>Container.Content(songs)</visible>
+					</control>
+					<control type="label">
+						<posx>580</posx>
+						<posy>-8</posy>
+						<width>433</width>
+						<height>40</height>
+						<align>right</align>
+						<label>$INFO[ListItem.Label]</label>
+						<font>MusicFO</font>
+						<textcolor>ffffffff</textcolor>
+						<selectedcolor>lightblue</selectedcolor>
+						<visible>Window.IsVisible(pictures)</visible>
+					</control>
+					<control type="label">
+						<posx>580</posx>
+						<posy>20</posy>
+						<width>633</width>
+						<height>40</height>
+						<align>right</align>
+						<label>$INFO[ListItem.Artist]</label>
+						<font>MusicSFO</font>
+						<textcolor>ffffffff</textcolor>
+						<selectedcolor>lightblue</selectedcolor>
+					</control>
+					<control type="label">
+						<posx>580</posx>
+						<posy>20</posy>
+						<width>633</width>
+						<height>40</height>
+						<align>right</align>
+						<label>$INFO[ListItem.PictureCamModel]</label>
+						<font>MusicSFO</font>
+						<textcolor>ffffffff</textcolor>
+						<selectedcolor>lightblue</selectedcolor>
+					</control>
+		
+			</focusedlayout>
+		</control>
+		
+		
+		<control type="group">
+		<posx>245</posx>
+		<animation effect="zoom" end="92" center="auto" time="0" condition="true">Conditional</animation>
+				<control type="group">
+				<posy>-45</posy>
+				<posx>5</posx>
+					<visible>StringCompare(Container.Viewmode,Polaroid) + Control.IsVisible(602)</visible>
+					<animation effect="rotate" end="10" center="auto" time="0" condition="true">Conditional</animation>
+					<control type="image">
+						<posx>122</posx>
+						<posy>93</posy>
+						<width>446</width>
+						<height>519</height>
+						<aspectratio>stretch</aspectratio>
+						<colordiffuse>55FFFFFF</colordiffuse>
+						<texture background="true">poster/postershadow.png</texture>
+						
+					</control>
+					<control type="image">
+						<posx>98</posx>
+						<posy>93</posy>
+						<width>446</width>
+						<height>497</height>
+						<aspectratio scalediffuse="false">stretch</aspectratio>
+						<texture border="12" diffuse="banner/bannerdiff.png">whitepanel2.png</texture>
+						<colordiffuse>FFACACAC</colordiffuse>
+					</control>
+					<control type="image">
+						<posx>110</posx>
+						<posy>109</posy>
+						<width>422</width>
+						<height>410</height>
+						<aspectratio scalediffuse="false">scale</aspectratio>
+						<texture fallback="noalbum.png">$INFO[ListItem(-1).Art(thumb)]</texture>
+					</control>
+					
+				</control>
+				<control type="group">
+					<visible>StringCompare(Container.Viewmode,Polaroid) + Control.IsVisible(602)</visible>
+					<control type="image">
+						<posx>128</posx>
+						<posy>96</posy>
+						<width>446</width>
+						<height>524</height>
+						<aspectratio>stretch</aspectratio>
+						<colordiffuse>55FFFFFF</colordiffuse>
+						<texture background="true">poster/postershadow.png</texture>
+						
+					</control>
+					<control type="image">
+						<posx>98</posx>
+						<posy>93</posy>
+						<width>446</width>
+						<height>504</height>
+						<aspectratio scalediffuse="false">stretch</aspectratio>
+						<texture border="12" diffuse="banner/bannerdiff.png">whitepanel2.png</texture>
+						
+						<colordiffuse>FFEBEBEB</colordiffuse>
+					</control>
+					<control type="image">
+						<posx>110</posx>
+						<posy>109</posy>
+						<width>422</width>
+						<height>410</height>
+						<aspectratio scalediffuse="false">scale</aspectratio>
+						<texture diffuse="poster/albumdiffuse.png" fallback="DefaultAlbumCover.png">$INFO[ListItem.Art(thumb)]</texture>
+					</control>
+					
+				</control>
+		</control>	
+
+	
+		<!-- Scroll Bar -->
+
+		<control type="scrollbar" id="63">
+
+			<texturesliderbackground>buttons/scrollbgV.png</texturesliderbackground>
+			<texturesliderbar>-</texturesliderbar>
+			<texturesliderbarfocus>-</texturesliderbarfocus>
+			<textureslidernib>-</textureslidernib>
+			<textureslidernibfocus>buttons/scrollnibV.png</textureslidernibfocus>
+			<orientation>Vertical</orientation>
+			<showonepage>true</showonepage>
+			<posx>320</posx>
+			<posy>80</posy>
+			<width>10</width>
+			<height>600</height>
+			<onleft>300</onleft>
+			<onright>602</onright>
+			<visible>Control.IsVisible(602)</visible>
+			<animation effect="fade" start="100" end="10" time="200" reversable="false" condition="!Control.HasFocus(63)">Conditional</animation>
+		</control>
+		
+	</control>
+	
+
+	</include>
+	
+</includes>

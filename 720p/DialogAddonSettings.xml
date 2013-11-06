@@ -1,0 +1,236 @@
+<window id="140">
+	<defaultcontrol always="true">2</defaultcontrol>
+	<coordinates>
+		<system>1</system>
+		<posx>110</posx>
+		<posy>0</posy>
+	</coordinates>
+	
+		<animation type="WindowOpen" reversible="false">
+			<effect type="fade" start="0" end="100" time="350" delay="0" />
+			<effect type="zoom" start="130" end="100" time="450" center="auto" delay="0" tween="back" easing="out" />
+		</animation>
+		<animation type="WindowClose" reversible="false">
+			<effect type="fade" start="100" end="0" time="250" delay="0" />
+			<effect type="zoom" start="100" end="130" time="300" center="auto" delay="0" />
+		</animation>
+		
+	<controls>
+		<control type="image">
+			<posx>180</posx>
+			<posy>90</posy>			
+			<width>942</width>
+			<height>482</height>
+			<aspectratio>stretch</aspectratio>
+			<texture>dialog/setcontentbg2.png</texture>
+			<colordiffuse>FF707070</colordiffuse>
+		</control>
+		<control type="label" id="20">
+			<description>header label</description>
+			<posx>222</posx>
+			<posy>115</posy>
+			<width>679</width>
+			<height>37</height>
+			<font>homemenu3</font>
+			<align>center</align>
+			<aligny>center</aligny>
+			<textcolor>FF959595</textcolor>
+		</control>
+	
+		<control type="label" id="7">
+			<height>37</height>
+			<font>recent</font>
+			<textcolor>ff444444</textcolor>
+			<focusedcolor>ffefefef</focusedcolor>
+			<label>-</label>
+			<align>center</align>
+			<aligny>center</aligny>
+			<textoffsetx>0</textoffsetx>
+		</control>
+			
+		<control type="grouplist" id="9"><!---category group---->
+			<description>Button area</description>
+			<posx>210</posx>
+			<posy>575</posy>
+			<width>870</width>
+			<height>390</height>
+			<align>center</align>
+			<itemgap>0</itemgap>
+			<pagecontrol>-</pagecontrol>
+			<onup>2</onup>
+			<ondown>2</ondown>
+			<onleft>9</onleft>
+			<onright>9</onright>
+			<orientation>horizontal</orientation>
+			<visible>!Window.IsVisible(visualisation)</visible>
+		</control>
+
+		<control type="button" id="13"><!---category--->
+			<width>210</width>
+			<scroll>false</scroll>
+			<height>45</height>
+			<textoffsety>5</textoffsety>
+			<include>GenericWhiteButton</include>
+			<texturenofocus>FF959595</texturenofocus>
+		</control>
+		
+		<control type="grouplist" id="2">
+			<description>control area</description>
+			<posx>211</posx>
+			<posy>173</posy>
+			<width>690</width>
+			<height>335</height>
+			<itemgap>0</itemgap>
+			<pagecontrol>30</pagecontrol>
+			<scrolltime>0</scrolltime>
+			<onup>2</onup>
+			<ondown>9</ondown>
+			<onleft>9</onleft>
+			<onright>9001</onright>
+		</control>
+		
+		<control type="scrollbar" id="30">
+			<visible>false</visible>
+		</control>
+		
+		<control type="group" id="9001">
+			<posx>900</posx>
+			<posy>150</posy>
+			<control type="button" id="12">
+				<description>Defaults Button</description>
+				<label>409</label>
+				<onup>11</onup>
+				<onleft>2</onleft>
+				<onright>9</onright>
+				<ondown>10</ondown>
+				<width>191</width>
+				<height>37</height>	
+				<align>center</align>
+				<aligny>top</aligny>
+				<textoffsetx>5</textoffsetx>
+				<textoffsety>3</textoffsety>
+				<texturefocus>BlueBackground.png</texturefocus>
+     			<texturenofocus border="5">-</texturenofocus>
+				<colordiffuse>DCFFFFFF</colordiffuse>
+				<font>homemenu3</font>
+				<textcolor>FF959595</textcolor>
+				<focusedcolor>ffffffff</focusedcolor>
+				<disabledcolor>F99c9c9c</disabledcolor>
+				<animation effect="fade" start="0" end="60" time="0" condition="true">Conditional</animation>
+			</control>
+			<control type="button" id="10">
+				<description>OK Button</description>
+				<posy>55</posy>
+				<label>186</label>
+				<width>191</width>
+				<height>37</height>		
+				<onup>12</onup>
+				<onleft>2</onleft>
+				<onright>9</onright>
+				<ondown>11</ondown>
+				<align>center</align>
+				<aligny>top</aligny>
+				<textoffsetx>5</textoffsetx>
+				<textoffsety>3</textoffsety>
+				<texturefocus>BlueBackground.png</texturefocus>
+     			<texturenofocus>-</texturenofocus>
+				<colordiffuse>DCFFFFFF</colordiffuse>
+				<font>homemenu3</font>
+				<textcolor>FF959595</textcolor>
+				<focusedcolor>ffffffff</focusedcolor>
+				<disabledcolor>F99c9c9c</disabledcolor>
+				<animation effect="fade" start="0" end="60" time="0" condition="true">Conditional</animation>
+			</control>
+			<control type="button" id="11">
+				<description>Cancel Button</description>
+				<posy>110</posy>
+				<label>222</label>
+				<width>191</width>
+				<height>37</height>		
+				<onup>10</onup>
+				<onleft>2</onleft>
+				<onright>9</onright>
+				<ondown>12</ondown>
+				<align>center</align>
+				<aligny>top</aligny>
+				<textoffsetx>5</textoffsetx>
+				<textoffsety>3</textoffsety>
+				<texturefocus>BlueBackground.png</texturefocus>
+     			<texturenofocus>-</texturenofocus>
+				<colordiffuse>DCFFFFFF</colordiffuse>
+				<font>homemenu3</font>
+				<textcolor>FF959595</textcolor>
+				<focusedcolor>ffffffff</focusedcolor>
+				<disabledcolor>F99c9c9c</disabledcolor>
+				<animation effect="fade" start="0" end="60" time="0" condition="true">Conditional</animation>
+			</control>
+		</control>
+		
+		<control type="button" id="3">
+			<description>Default Button</description>
+			<height>37</height>
+			<font>recent</font>
+			<align>left</align>
+			<textcolor>FF959595</textcolor>
+			 
+			<focusedcolor>ffefefef</focusedcolor>
+			<texturefocus border="0,2,0,2">BlueBackground.png</texturefocus>
+			<texturenofocus border="0,2,0,2"></texturenofocus>
+			<textoffsetx>10</textoffsetx>
+		</control>
+		
+		<control type="radiobutton" id="4">
+			<description>Default RadioButton</description>
+			<height>37</height>
+			<font>recent</font>
+			<textcolor>FF959595</textcolor>
+			<focusedcolor>ffefefef</focusedcolor>
+			 
+			<texturefocus border="0,2,0,2">BlueBackground.png</texturefocus>
+			<texturenofocus border="0,2,0,2"></texturenofocus>
+			<textoffsetx>10</textoffsetx>
+			<radioheight>23</radioheight>
+			<radiowidth>23</radiowidth>
+			<textoffsetx>10</textoffsetx>
+		</control>
+		
+		<control type="spincontrolex" id="5">
+			<description>Default spincontrolex</description>
+			<posx></posx>
+			<height>37</height>
+			<width>250</width>
+			<font>recent</font>
+			<textcolor>FF959595</textcolor>
+			<focusedcolor>ffefefef</focusedcolor>
+			 
+			<texturefocus border="0,2,0,2">BlueBackground.png</texturefocus>
+			<texturenofocus border="0,2,0,2"></texturenofocus>
+			<textoffsetx>5</textoffsetx>
+			<align>left</align>
+			<aligny>center</aligny>
+			<reverse>yes</reverse>
+			<textoffsetx>10</textoffsetx>
+		</control>
+				
+		<control type="sliderex" id="8">
+			<description>Default Slider</description>
+			<height>37</height>
+			<font>recent</font>
+			<textcolor>FF959595</textcolor>
+			<focusedcolor>ffefefef</focusedcolor>
+			 
+			<texturefocus border="0,2,0,2">BlueBackground.png</texturefocus>
+			<texturenofocus border="0,2,0,2"></texturenofocus>
+			<textoffsetx>10</textoffsetx>
+			<aligny>center</aligny>
+		</control>
+		
+		<control type="image" id="6">
+			<description>Default Seperator</description>
+			<height>1</height>
+			<aspectratio>stretch</aspectratio>
+			<texture>black.png</texture>
+			<colordiffuse>36FFFFFF</colordiffuse>
+		</control>
+	</controls>
+</window>

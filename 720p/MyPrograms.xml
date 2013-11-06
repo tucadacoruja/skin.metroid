@@ -1,0 +1,22 @@
+<window id="1">
+<defaultcontrol always="true">50</defaultcontrol>
+<backgroundcolor>0</backgroundcolor>
+<allowoverlay>yes</allowoverlay>
+<views>50,579,523</views>
+
+<controls>
+
+<include>VideoWindow</include>
+<include>ProgramFanart</include>
+<include>Background</include>
+<include>MainMenu</include>
+
+
+<include>List</include>
+<include>Landscape</include>
+
+
+<include>BottomInfoBar</include>
+<include>vignette</include>
+</controls>
+</window>

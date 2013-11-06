@@ -1,0 +1,71 @@
+<window id="6">
+<defaultcontrol always="true">50</defaultcontrol>
+<backgroundcolor>0</backgroundcolor>
+<allowoverlay>yes</allowoverlay>
+<onload></onload>
+<!--onload condition="!Library.HasContent(Video, Music, Movies, TVShows)">Notification(to the library, Please add your files)</onload-->
+
+<views>603,602,579,525,504,781,501,709,50</views>
+<controls>
+
+
+
+<!---for filter sendclick 19--->
+<control type="button" id="19">
+	<posx>0</posx>
+	<posy>0</posy>
+	<width>1</width>
+	<height>1</height>
+	<description>Filter</description>
+	<label>-</label>
+</control>
+<!---for filter sendclick 17--->
+<control type="button" id="17">
+	<posx>0</posx>
+	<posy>0</posy>
+	<width>1</width>
+	<height>1</height>
+	<description>flat</description>
+	<label>-</label>
+</control>
+<!---for filter sendclick 14--->
+<control type="radiobutton" id="14">
+	<posx>0</posx>
+	<posy>0</posy>
+	<width>1</width>
+	<height>1</height>
+	<description>unwatched</description>
+	<label>-</label>
+</control>
+<!---for filter sendclick 7--->
+<control type="radiobutton" id="7">
+	<posx>0</posx>
+	<posy>0</posy>
+	<width>1</width>
+	<height>1</height>
+	<description>stacking</description>
+	<label>-</label>
+</control>
+
+<include>VideoWindow</include>	
+<include>VideoFanart</include>
+<include>Background</include>
+
+<include>MainMenu</include>
+
+
+<include>List</include><!---50-->
+<include>Banners</include><!---709-->
+<include>PosterWrapView</include><!---501-->
+<include>FanartShelf</include><!---781-->
+<include>Episodes</include><!---504-->
+<include>Landscape</include><!---603--> 
+
+
+<include>BottomInfoBar</include>
+<include>ScrollOffsetLabel</include>
+<include>vignette</include>
+
+</controls>
+
+</window>

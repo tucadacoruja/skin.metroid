@@ -1,0 +1,89 @@
+<window id="2008">
+<defaultcontrol always="true">450</defaultcontrol>
+<allowoverlay>yes</allowoverlay>
+  
+<coordinates>
+  <system>1</system>
+  <posx>370</posx>
+  <posy>80</posy>
+</coordinates>
+
+<controls>
+    
+<control type="image">
+	<description>background image</description>
+	<posx>0</posx>
+	<posy>20</posy>
+	<width>540</width>
+	<height>420</height>
+	<texture border="12">whitepanel2.png</texture>
+	<aspectratio>stretch</aspectratio>
+	<colordiffuse>ff262626</colordiffuse>
+</control>
+
+
+  <control type="list" id="450">
+	  <posx>20</posx>
+	  <posy>40</posy>
+	  <width>520</width>
+	  <height>382</height>
+	  <onleft>450</onleft>
+	  <onright>450</onright>
+	  <onup>450</onup>
+	  <ondown>450</ondown>
+
+	  <itemlayout height="32">
+
+			<control type="image">
+				<posx>5</posx>
+				<posy>5</posy>
+				<width>26</width>
+				<height>26</height>
+				<texture fallback="DefaultCD.png">$INFO[ListItem.Icon]</texture>
+				<aspectratio>keep</aspectratio>
+				<animation effect="fade" end="60" time="0" condition="true">Conditional</animation>
+			</control>
+			<control type="label">
+				<posx>40</posx>
+				<width>465</width>
+				<height>30</height>
+				<label fallback="target practice">$INFO[ListItem.Label]</label>
+				<scroll>false</scroll>
+				<font>font13</font>
+				<textcolor>white</textcolor>
+				<animation effect="fade" end="60" time="0" condition="true">Conditional</animation>
+			</control>
+		  
+	  </itemlayout>
+	  <focusedlayout height="32">
+			<control type="image">
+				<posy>2</posy>
+				<width>500</width>
+				<height>30</height>
+				<texture border="5">button-nofocus.png</texture>
+				<aspectratio>stretch</aspectratio>
+			</control>
+			<control type="image">
+				<posx>5</posx>
+				<posy>5</posy>
+				<width>26</width>
+				<height>26</height>
+				<info>ListItem.Icon</info>
+				<texture fallback="DefaultCD.png">$INFO[ListItem.Icon]</texture>
+				<aspectratio>keep</aspectratio>
+			</control>
+			<control type="label">
+				<posx>40</posx>
+				<width>465</width>
+				<height>30</height>
+				<textcolor>white</textcolor>
+				<font>font13</font>
+				<label fallback="target practice">$INFO[ListItem.Label]</label>
+			</control>
+	  </focusedlayout>
+		
+  </control>
+
+</controls>
+
+</window>
