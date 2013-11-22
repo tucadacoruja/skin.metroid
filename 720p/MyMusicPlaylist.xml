@@ -1,12 +1,92 @@
+
 <window id="500">
 <defaultcontrol always="true">50</defaultcontrol>
 <backgroundcolor>0</backgroundcolor>
 <allowoverlay>yes</allowoverlay>
-<onload>ActivateWindow(playercontrols)</onload>
+<onload condition="Player.HasMedia">ActivateWindow(playercontrols)</onload>
 <onunload>Dialog.Close(playercontrols)</onunload>
 
 <views>602,579,50</views>
 <controls>
+
+<control type="button" id="2">
+	<posx>-10</posx>
+	<posy>-10</posy>
+	<width>1</width>
+	<height>1</height>
+	<animation effect="fade" start="1" end="0" time="0" condition="true">Conditional</animation>
+</control>
+<control type="button" id="3">
+	<posx>-10</posx>
+	<posy>-10</posy>
+	<width>1</width>
+	<height>1</height>
+	<animation effect="fade" start="1" end="0" time="0" condition="true">Conditional</animation>
+</control>
+<control type="togglebutton" id="4">
+	<posx>-10</posx>
+	<posy>-10</posy>
+	<width>1</width>
+	<height>1</height>
+	<animation effect="fade" start="1" end="0" time="0" condition="true">Conditional</animation>
+</control>
+<control type="label" id="12">
+	<posx>-10</posx>
+	<posy>-10</posy>
+	<width>1</width>
+	<height>1</height>
+	<animation effect="fade" start="1" end="0" time="0" condition="true">Conditional</animation>
+</control>
+<control type="radiobutton" id="20">
+	<posx>-10</posx>
+	<posy>-10</posy>
+	<width>1</width>
+	<height>1</height>
+	<animation effect="fade" start="1" end="0" time="0" condition="true">Conditional</animation>
+</control>
+<control type="button" id="21">
+	<posx>-10</posx>
+	<posy>-10</posy>
+	<width>1</width>
+	<height>1</height>
+	<animation effect="fade" start="1" end="0" time="0" condition="true">Conditional</animation>
+</control>
+<control type="button" id="22">
+	<posx>-10</posx>
+	<posy>-10</posy>
+	<width>1</width>
+	<height>1</height>
+	<animation effect="fade" start="1" end="0" time="0" condition="true">Conditional</animation>
+</control>
+<control type="button" id="23">
+	<posx>-10</posx>
+	<posy>-10</posy>
+	<width>1</width>
+	<height>1</height>
+	<animation effect="fade" start="1" end="0" time="0" condition="true">Conditional</animation>
+</control>
+<control type="button" id="24">
+	<posx>-10</posx>
+	<posy>-10</posy>
+	<width>1</width>
+	<height>1</height>
+	<animation effect="fade" start="1" end="0" time="0" condition="true">Conditional</animation>
+</control>
+<control type="button" id="25">
+	<posx>-10</posx>
+	<posy>-10</posy>
+	<width>1</width>
+	<height>1</height>
+	<animation effect="fade" start="1" end="0" time="0" condition="true">Conditional</animation>
+</control>
+<control type="button" id="26">
+	<posx>-10</posx>
+	<posy>-10</posy>
+	<width>1</width>
+	<height>1</height>
+	<animation effect="fade" start="1" end="0" time="0" condition="true">Conditional</animation>
+</control>
+
 
 <include>VideoWindow</include>
 <include>MusicFanart</include>
@@ -15,6 +95,7 @@
 <include>MainMenu</include>
 
 <include>List</include>
+<include>Landscape</include>
 				
 <include>ScrollOffsetLabel</include>
 
@@ -34,7 +115,7 @@
 </control>
 
 <include>BottomInfoBar</include>
-<include>vignette</include>
+ 
 
 </controls>
   

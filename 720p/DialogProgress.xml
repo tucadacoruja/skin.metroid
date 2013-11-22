@@ -1,5 +1,6 @@
-﻿<window id="101">
-<!--defaultcontrol always="true">10</defaultcontrol-->
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<window id="101">
+<defaultcontrol always="true">10</defaultcontrol>
 <allowoverlay>yes</allowoverlay>
   
 <coordinates>
@@ -10,11 +11,47 @@
 
 <controls>
 
+<control type="label" id="2">
+	<posx>-10</posx>
+	<posy>-10</posy>
+	<width>1</width>
+	<height>1</height>
+	<animation effect="fade" start="1" end="0" time="0" condition="true">Conditional</animation>
+</control>
+<control type="label" id="3">
+	<posx>-10</posx>
+	<posy>-10</posy>
+	<width>1</width>
+	<height>1</height>
+	<animation effect="fade" start="1" end="0" time="0" condition="true">Conditional</animation>
+</control>
+<control type="label" id="4">
+	<posx>-10</posx>
+	<posy>-10</posy>
+	<width>1</width>
+	<height>1</height>
+	<animation effect="fade" start="1" end="0" time="0" condition="true">Conditional</animation>
+</control>
+<control type="button" id="10">
+	<posx>-10</posx>
+	<posy>-10</posy>
+	<width>1</width>
+	<height>1</height>
+	<animation effect="fade" start="1" end="0" time="0" condition="true">Conditional</animation>
+</control>
+
 <control type="group">
 <visible>!Window.IsVisible(infodialog)</visible>
 <animation effect="fade" start="100" end="0" time="150">Hidden</animation>
 <animation effect="fade" start="0" end="100" time="150">Visible</animation>
 
+<animation type="WindowOpen" reversible="false">
+  <effect type="fade" start="0" end="100" time="350" delay="800" />
+</animation>
+<animation type="WindowClose" reversible="false">
+  <effect type="fade" start="100" end="0" time="350" delay="0" />
+</animation>
+		
 	<control type="image">
 		<posx>68r</posx>
 		<posy>10</posy>
@@ -22,12 +59,7 @@
 		<width>55</width>
 		<texture>osd/buttons/GrayBackground.png</texture>
 		<aspectratio>stretch</aspectratio>
-		<animation type="WindowOpen" reversible="false">
-		  <effect type="fade" start="0" end="100" time="350" delay="800" />
-		</animation>
-		<animation type="WindowClose" reversible="false">
-		  <effect type="fade" start="100" end="0" time="350" delay="0" />
-		</animation>
+		
 	</control>
 	<control type="image">
 		<posx>68r</posx>
@@ -35,49 +67,48 @@
 		<width>55</width>
 		<height>55</height>
 		<texture>osd/buttons/kai.png</texture>
-		<animation type="WindowOpen" reversible="false">
-			<effect type="fade" start="0" end="100" time="350" delay="800" />
-		</animation>
-		<animation type="WindowClose" reversible="false">
-			<effect type="fade" start="100" end="0" time="350" delay="0" />
-		</animation>
+		
 	</control>
   
 	<control type="progress" id="20">
 		<description>Progress Bar</description>
-		<posx>340r</posx>
-		<posy>15</posy>
-		<width>240</width>
-		<height>4</height>
+		<posx>0</posx>
+		<posy>68</posy>
+		<width>1285</width>
+		<height>1</height>
+		<texturebg>DialogProgressBack.png</texturebg>
+		<lefttexture>-</lefttexture>
+		<midtexture>osd/buttons/osdbg.png</midtexture>
+		<righttexture>-</righttexture>
 		<info>System.Progressbar</info>
-		<texturebg>osd/mprogbg2.png</texturebg>
-		<lefttexture>osd/mprogleft.png</lefttexture>
-		<midtexture>osd/mprogcenter.png</midtexture>
-		<righttexture>osd/mprogright.png</righttexture>
-		<overlaytexture>-</overlaytexture>
-		<animation type="WindowOpen" reversible="false">
-			<effect type="fade" start="0" end="100" time="350" delay="100" />
-		</animation>
-		<animation type="WindowClose" reversible="false">
-			<effect type="fade" start="100" end="0" time="350" delay="0" />
-		</animation>
+		<visible>![Window.IsVisible(fullscreenvideo) | Window.IsVisible(visualisation)]</visible>
 	</control>
 	
 	<control type="label" id="1">
+		<posx>90r</posx>
+		<posy>0</posy>
+		<width>500</width>
+		<height>42</height>
+		<label>-</label>
+		<font>Clock</font>
+		<textcolor>FF959595</textcolor>
+		<align>right</align>
+		<haspath>yes</haspath>
+		<scroll>false</scroll>
+	</control>
+	
+	<control type="textbox" id="9">
 		<description>line 2</description>
 		<posx>90r</posx>
 		<posy>26</posy>
 		<width>500</width>
 		<height>42</height>
-		<font>Clock</font>
-		<textcolor>FF959595</textcolor>
+		<font>WeatherSmall</font>
+		<textcolor>FF707070</textcolor>
 		<align>right</align>
-		<animation type="WindowOpen" reversible="false">
-			<effect type="fade" start="0" end="100" time="350" delay="800" />
-		</animation>
-		<animation type="WindowClose" reversible="false">
-			<effect type="fade" start="100" end="0" time="350" delay="0" />
-		</animation>
+		<label>-</label>
+		<scroll>false</scroll>
+		
 	</control>
 	
  </control> 

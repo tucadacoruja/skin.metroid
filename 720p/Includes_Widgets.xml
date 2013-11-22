@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <includes>
 
 	<include name="HomeContentRecentMovies">
@@ -102,6 +103,108 @@
 	</include>
 	
 	
+	<include name="HomeContentRandomMovies">
+		<content>
+			<item>
+				<label>$INFO[Window(Home).Property(RandomMovie.1.Title)]</label>
+				<property name="Plot">$INFO[Window(Home).Property(RandomMovie.1.Plot)]</property>
+				<onclick>$INFO[Window(Home).Property(RandomMovie.1.Play)]</onclick>
+				<thumb>$INFO[Window(Home).Property(RandomMovie.1.Art(poster))]</thumb>
+				<property name="Rating">$INFO[Window(Home).Property(RandomMovie.1.Rating)]</property>
+				<property name="Year">$INFO[Window(Home).Property(RandomMovie.1.Year)]</property>
+				<property name="RunningTime">$INFO[Window(Home).Property(RandomMovie.1.Runtime)]</property>
+				<property name="RootPath">$INFO[Window(Home).Property(RandomMovie.1.Path)]</property>
+				<property name="Tagline">$INFO[Window(Home).Property(RandomMovie.1.Tagline)]</property>
+				<property name="Fanart">$INFO[Window(Home).Property(RandomMovie.1.Art(fanart))]</property>
+				<property name="Trailer">$INFO[Window(Home).Property(RandomMovie.1.Trailer)]</property>
+				<property name="Path">$INFO[Window(Home).Property(RandomMovie.1.File)]</property>
+				<property name="Played">$INFO[Window(Home).Property(RandomMovie.1.Played)]</property>
+				<property name="Logo">$INFO[Window(Home).Property(RandomMovie.1.Art(clearlogo))]</property>
+			</item>
+			<item>
+				<label>$INFO[Window(Home).Property(RandomMovie.2.Title)]</label>
+				<property name="Plot">$INFO[Window(Home).Property(RandomMovie.2.Plot)]</property>
+				<onclick>$INFO[Window(Home).Property(RandomMovie.2.Play)]</onclick>
+				<thumb>$INFO[Window(Home).Property(RandomMovie.2.Art(poster))]</thumb>
+				<property name="Rating">$INFO[Window(Home).Property(RandomMovie.2.Rating)]</property>
+				<property name="Year">$INFO[Window(Home).Property(RandomMovie.2.Year)]</property>
+				<property name="RunningTime">$INFO[Window(Home).Property(RandomMovie.2.Runtime)]</property>
+				<property name="RootPath">$INFO[Window(Home).Property(RandomMovie.2.Path)]</property>
+				<property name="Tagline">$INFO[Window(Home).Property(RandomMovie.2.Tagline)]</property>
+				<property name="Fanart">$INFO[Window(Home).Property(RandomMovie.2.Art(fanart))]</property>
+				<property name="Trailer">$INFO[Window(Home).Property(RandomMovie.2.Trailer)]</property>
+				<property name="Path">$INFO[Window(Home).Property(RandomMovie.2.File)]</property>
+				<property name="Played">$INFO[Window(Home).Property(RandomMovie.2.Played)]</property>
+				<property name="Logo">$INFO[Window(Home).Property(RandomMovie.2.Art(clearlogo))]</property>
+			</item>
+			<item>
+				<label>$INFO[Window(Home).Property(RandomMovie.3.Title)]</label>
+				<property name="Plot">$INFO[Window(Home).Property(RandomMovie.3.Plot)]</property>
+				<onclick>$INFO[Window(Home).Property(RandomMovie.3.Play)]</onclick>
+				<thumb>$INFO[Window(Home).Property(RandomMovie.3.Art(poster))]</thumb>
+				<property name="Rating">$INFO[Window(Home).Property(RandomMovie.3.Rating)]</property>
+				<property name="Year">$INFO[Window(Home).Property(RandomMovie.3.Year)]</property>
+				<property name="RunningTime">$INFO[Window(Home).Property(RandomMovie.3.Runtime)]</property>
+				<property name="RootPath">$INFO[Window(Home).Property(RandomMovie.3.Path)]</property>
+				<property name="Tagline">$INFO[Window(Home).Property(RandomMovie.3.Tagline)]</property>
+				<property name="Fanart">$INFO[Window(Home).Property(RandomMovie.3.Art(fanart))]</property>
+				<property name="Trailer">$INFO[Window(Home).Property(RandomMovie.3.Trailer)]</property>
+				<property name="Path">$INFO[Window(Home).Property(RandomMovie.3.File)]</property>
+				<property name="Played">$INFO[Window(Home).Property(RandomMovie.3.Played)]</property>
+				<property name="Logo">$INFO[Window(Home).Property(RandomMovie.3.Art(clearlogo))]</property>
+			</item>
+			<item>
+				<label>$INFO[Window(Home).Property(RandomMovie.4.Title)]</label>
+				<property name="Plot">$INFO[Window(Home).Property(RandomMovie.4.Plot)]</property>
+				<onclick>$INFO[Window(Home).Property(RandomMovie.4.Play)]</onclick>
+				<thumb>$INFO[Window(Home).Property(RandomMovie.4.Art(poster))]</thumb>
+				<property name="Rating">$INFO[Window(Home).Property(RandomMovie.4.Rating)]</property>
+				<property name="Year">$INFO[Window(Home).Property(RandomMovie.4.Year)]</property>
+				<property name="RunningTime">$INFO[Window(Home).Property(RandomMovie.4.Runtime)]</property>
+				<property name="RootPath">$INFO[Window(Home).Property(RandomMovie.4.Path)]</property>
+				<property name="Tagline">$INFO[Window(Home).Property(RandomMovie.4.Tagline)]</property>
+				<property name="Fanart">$INFO[Window(Home).Property(RandomMovie.4.Art(fanart))]</property>
+				<property name="Trailer">$INFO[Window(Home).Property(RandomMovie.4.Trailer)]</property>
+				<property name="Path">$INFO[Window(Home).Property(RandomMovie.4.File)]</property>
+				<property name="Played">$INFO[Window(Home).Property(RandomMovie.4.Played)]</property>
+				<property name="Logo">$INFO[Window(Home).Property(RandomMovie.4.Art(clearlogo))]</property>
+			</item>
+			<item>
+				<label>$INFO[Window(Home).Property(RandomMovie.5.Title)]</label>
+				<property name="Plot">$INFO[Window(Home).Property(RandomMovie.5.Plot)]</property>
+				<onclick>$INFO[Window(Home).Property(RandomMovie.5.Play)]</onclick>
+				<thumb>$INFO[Window(Home).Property(RandomMovie.5.Art(poster))]</thumb>
+				<property name="Rating">$INFO[Window(Home).Property(RandomMovie.5.Rating)]</property>
+				<property name="Year">$INFO[Window(Home).Property(RandomMovie.5.Year)]</property>
+				<property name="RunningTime">$INFO[Window(Home).Property(RandomMovie.5.Runtime)]</property>
+				<property name="RootPath">$INFO[Window(Home).Property(RandomMovie.5.Path)]</property>
+				<property name="Tagline">$INFO[Window(Home).Property(RandomMovie.5.Tagline)]</property>
+				<property name="Fanart">$INFO[Window(Home).Property(RandomMovie.5.Art(fanart))]</property>
+				<property name="Trailer">$INFO[Window(Home).Property(RandomMovie.5.Trailer)]</property>
+				<property name="Path">$INFO[Window(Home).Property(RandomMovie.5.File)]</property>
+				<property name="Played">$INFO[Window(Home).Property(RandomMovie.5.Played)]</property>
+				<property name="Logo">$INFO[Window(Home).Property(RandomMovie.5.Art(clearlogo))]</property>
+			</item>
+			<item>
+				<label>$INFO[Window(Home).Property(RandomMovie.6.Title)]</label>
+				<property name="Plot">$INFO[Window(Home).Property(RandomMovie.6.Plot)]</property>
+				<onclick>$INFO[Window(Home).Property(RandomMovie.6.Play)]</onclick>
+				<thumb>$INFO[Window(Home).Property(RandomMovie.6.Art(poster))]</thumb>
+				<property name="Rating">$INFO[Window(Home).Property(RandomMovie.6.Rating)]</property>
+				<property name="Year">$INFO[Window(Home).Property(RandomMovie.6.Year)]</property>
+				<property name="RunningTime">$INFO[Window(Home).Property(RandomMovie.6.Runtime)]</property>
+				<property name="RootPath">$INFO[Window(Home).Property(RandomMovie.6.Path)]</property>
+				<property name="Tagline">$INFO[Window(Home).Property(RandomMovie.6.Tagline)]</property>
+				<property name="Fanart">$INFO[Window(Home).Property(RandomMovie.6.Art(fanart))]</property>
+				<property name="Trailer">$INFO[Window(Home).Property(RandomMovie.6.Trailer)]</property>
+				<property name="Path">$INFO[Window(Home).Property(RandomMovie.6.File)]</property>
+				<property name="Played">$INFO[Window(Home).Property(RandomMovie.6.Played)]</property>
+				<property name="Logo">$INFO[Window(Home).Property(RandomMovie.6.Art(clearlogo))]</property>
+			</item>
+		</content>
+	</include>
+	
+	
 	<include name="HomeContentRecentTVShows">				
 		<content>
 			<item>
@@ -146,7 +249,7 @@
 			<item>
 				<label>$INFO[Window(Home).Property(RecentEpisode.4.Title)]</label>
 				<label2>$INFO[Window(Home).Property(RecentEpisode.4.TVshowTitle)]</label2>
-				<onclick>$INFO[Window(Home).Property(RecentEpisode.2.Play)]</onclick>
+				<onclick>$INFO[Window(Home).Property(RecentEpisode.4.Play)]</onclick>
 				<thumb>$INFO[Window(Home).Property(RecentEpisode.4.Art(thumb))]</thumb>
 				<property name="Plot">$INFO[Window(Home).Property(RecentEpisode.4.Plot)]</property>
 				<property name="Rating">$INFO[Window(Home).Property(RecentEpisode.4.Rating)]</property>
@@ -427,6 +530,52 @@
 			</item>
 		</content>
 	</include>
-
-
+	
+	<include name="HomeContentRandomAlbum">	
+		<content>
+			<item>
+				<label>$INFO[Window(Home).Property(RandomAlbum.1.Title)]</label>
+				<label2>$INFO[Window(Home).Property(RandomAlbum.1.Artist)]</label2>
+				<onclick>$INFO[Window(Home).Property(RandomAlbum.1.Play)]</onclick>
+				<thumb>$INFO[Window(Home).Property(RandomAlbum.1.Art(thumb))]</thumb>
+				<property name="Fanart">$INFO[Window(Home).Property(RandomAlbum.1.Art(fanart))]</property>
+			</item>
+			<item>
+				<label>$INFO[Window(Home).Property(RandomAlbum.2.Title)]</label>
+				<label2>$INFO[Window(Home).Property(RandomAlbum.2.Artist)]</label2>
+				<onclick>$INFO[Window(Home).Property(RandomAlbum.2.Play)]</onclick>
+				<thumb>$INFO[Window(Home).Property(RandomAlbum.2.Art(thumb))]</thumb>
+				<property name="Fanart">$INFO[Window(Home).Property(RandomAlbum.2.Art(fanart))]</property>
+			</item>
+			<item>
+				<label>$INFO[Window(Home).Property(RandomAlbum.3.Title)]</label>
+				<label2>$INFO[Window(Home).Property(RandomAlbum.3.Artist)]</label2>
+				<onclick>$INFO[Window(Home).Property(RandomAlbum.3.Play)]</onclick>
+				<thumb>$INFO[Window(Home).Property(RandomAlbum.3.Art(thumb))]</thumb>
+				<property name="Fanart">$INFO[Window(Home).Property(RandomAlbum.3.Art(fanart))]</property>
+			</item>
+			<item>
+				<label>$INFO[Window(Home).Property(RandomAlbum.4.Title)]</label>
+				<label2>$INFO[Window(Home).Property(RandomAlbum.4.Artist)]</label2>
+				<onclick>$INFO[Window(Home).Property(RandomAlbum.4.Play)]</onclick>
+				<thumb>$INFO[Window(Home).Property(RandomAlbum.4.Art(thumb))]</thumb>
+				<property name="Fanart">$INFO[Window(Home).Property(RandomAlbum.4.Art(fanart))]</property>
+			</item>
+			<item>
+				<label>$INFO[Window(Home).Property(RandomAlbum.5.Title)]</label>
+				<label2>$INFO[Window(Home).Property(RandomAlbum.5.Artist)]</label2>
+				<onclick>$INFO[Window(Home).Property(RandomAlbum.5.Play)]</onclick>
+				<thumb>$INFO[Window(Home).Property(RandomAlbum.5.Art(thumb))]</thumb>
+				<property name="Fanart">$INFO[Window(Home).Property(RandomAlbum.5.Art(fanart))]</property>
+			</item>
+			<item>
+				<label>$INFO[Window(Home).Property(RandomAlbum.6.Title)]</label>
+				<label2>$INFO[Window(Home).Property(RandomAlbum.6.Artist)]</label2>
+				<onclick>$INFO[Window(Home).Property(RandomAlbum.6.Play)]</onclick>
+				<thumb>$INFO[Window(Home).Property(RandomAlbum.6.Art(thumb))]</thumb>
+				<property name="Fanart">$INFO[Window(Home).Property(RandomAlbum.5.Art(fanart))]</property>
+			</item>
+		</content>
+	</include>
+	
 </includes>

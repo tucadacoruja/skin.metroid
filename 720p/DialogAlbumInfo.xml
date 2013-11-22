@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <window id="2001">
 <defaultcontrol always="true">1</defaultcontrol>
 <allowoverlay>yes</allowoverlay>
@@ -9,6 +10,14 @@
 </coordinates>
   
 <controls>
+
+<control type="button" id="11">
+	<posx>-10</posx>
+	<posy>-10</posy>
+	<width>1</width>
+	<height>1</height>
+</control>
+
 <control type="group">
 
 	<animation effect="slide" start="1480,0" end="0,0" time="450" delay="0" reversible="false">WindowOpen</animation>
@@ -241,7 +250,7 @@
 					
 				</control>
 				
-				<!----thumbnail--->
+				<!--thumbnail-->
 				<control type="image" id="3">
 						
 					<posx>0</posx>

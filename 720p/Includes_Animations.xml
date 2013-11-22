@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <includes>
 
 	<include name="WidgetsAnimation">
@@ -43,15 +44,15 @@
 	</include>
 
 	<include name="ContextFade">
-		<animation effect="fade" start="100" end="45" time="300" reversible="false" condition="Window.IsVisible(mediafilter)">Conditional</animation>
-		<animation effect="fade" start="100" end="45" time="300" reversible="false" condition="Control.HasFocus(400) | Window.IsVisible(106) | Window.IsVisible(100) | Window.IsVisible(111)">Conditional</animation>
-		<animation effect="fade" start="45" end="100" time="200" delay="0" reversible="false" condition="!Control.HasFocus(400) + !Window.IsVisible(106) + !Window.IsVisible(100) | !Window.IsVisible(111)">Conditional</animation>
-		<animation effect="zoom" start="100" end="90" time="250" center="auto" tween="circle" easing="out" condition="Control.HasFocus(400) | Window.IsVisible(106) | Window.IsVisible(100) | Window.IsVisible(111)">Conditional</animation>
+		<animation effect="fade" start="100" end="0" time="300" reversible="false" condition="Window.IsVisible(filestackingdialog) | Window.IsVisible(addonsettings)">Conditional</animation>
+		<animation effect="fade" start="100" end="7" time="300" reversible="false" condition="Window.IsVisible(mediafilter)">Conditional</animation>
+		<animation effect="fade" start="100" end="45" time="300" reversible="false" condition="Control.HasFocus(400) | Window.IsVisible(contextmenu) | Window.IsVisible(yesnodialog) | Window.IsVisible(shutdownmenu)">Conditional</animation>
+		<animation effect="fade" start="45" end="100" time="200" delay="0" reversible="false" condition="!Control.HasFocus(400) + !Window.IsVisible(contextmenu) + !Window.IsVisible(yesnodialog) | !Window.IsVisible(shutdownmenu)">Conditional</animation>
+		<!--animation effect="zoom" start="100" end="90" time="250" center="auto" tween="circle" easing="out" condition="Control.HasFocus(400) | Window.IsVisible(contextmenu) | Window.IsVisible(yesnodialog) | Window.IsVisible(111)">Conditional</animation-->
 	</include>
 
 	<include name="Keyboard">
-		<animation effect="fade" start="100" end="60" time="300" reversible="false" condition="Window.IsVisible(103)">Conditional</animation>
-		<animation effect="fade" start="60" end="100" time="200" delay="0" reversible="false" condition="!Window.IsVisible(103)">Conditional</animation>
+		<animation effect="fade" start="100" end="0" time="300" condition="Window.IsVisible(numericinput) | Window.IsVisible(virtualkeyboard)">Conditional</animation>
 	</include>
 
 	<include name="Favourites">
@@ -65,6 +66,17 @@
 		<animation type="Conditional" condition="Window.IsVisible(selectdialog) | Window.IsVisible(2002) | Window.IsVisible(129) | Window.IsVisible(132) | Window.IsVisible(10140) ">
 			<effect type="fade" start="100" end="0" time="400" />
 			<effect type="zoom" start="100" end="80" center="auto" time="300" />
+		</animation>
+	</include>
+	
+	<include name="ContextSlide">
+		<animation type="WindowClose" reversible="false">
+			<effect type="fade" start="100" end="0" time="350" delay="0" />
+			<effect type="slide" start="0,0" end="0,700" time="550" delay="0" tween="sine" easing="out" />
+		</animation>
+		<animation type="WindowOpen" reversible="false">
+			<effect type="fade" start="0" end="100" time="350" delay="0" />
+			<effect type="slide" start="0,500" end="0,0" time="550" delay="0" tween="back" easing="out" />
 		</animation>
 	</include>
 	

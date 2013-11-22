@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <includes>
 		
 		<!-- ============== -->
@@ -42,13 +43,13 @@
 		<include>EmptyMenu</include>
 	
 		<control type="list" id="301">
-				<posx>5</posx>
+				<posx>2</posx>
 				<posy>71</posy>
 				<width>250</width>
 				<height>648</height>
-				<onleft>300</onleft>
+				<onleft condition="!Skin.HasSetting(GlobalSearch)">999</onleft>
 				<onright>50</onright>
-				<onup>301</onup>
+				<onup>-</onup>
 				<ondown>301</ondown>
 				<pagecontrol>-</pagecontrol>
 				<scrolltime tween="cubic" easing="inout">325</scrolltime>
@@ -61,12 +62,12 @@
 						<posy>-1</posy>
 						<width>200</width>
 						<height>50</height>
-						<font>font13</font>
+						<font>MainMenu21</font>
 						<textcolor>FFD7D7D7</textcolor>
 						<aligny>center</aligny>
 						<align>left</align>
 						<scroll>false</scroll>
-						<label>[B]$INFO[ListItem.Label][/B]</label>
+						<label>$INFO[ListItem.Label]</label>
 						<visible>IsEmpty(ListItem.Property(SubMenuItem))</visible>
 						
 					</control>
@@ -75,7 +76,7 @@
 						<posy>-1</posy>
 						<width>240</width>
 						<height>50</height>
-						<font>font13</font>
+						<font>SubMenu20</font>
 						<textcolor>FFD7D7D7</textcolor>
 						<aligny>center</aligny>
 						<align>left</align>
@@ -97,7 +98,7 @@
 						<description>list line image</description>
 						<posx>0</posx>
 						<posy>2</posy>
-						<width>240</width>
+						<width>247</width>
 						<height>50</height>
 						<aspectratio>stretch</aspectratio>
 						<texture>black.png</texture>
@@ -112,9 +113,21 @@
 						<height>50</height>
 						<aspectratio>stretch</aspectratio>
 						<texture>white.png</texture>
+						<animation effect="fade" start="0" end="40" time="0" condition="true">Conditional</animation>
+						<visible>!Control.HasFocus(301)</visible>
+						
+					</control>
+					<control type="image">
+						<description>focussed image</description>
+						<posx>0</posx>
+						<posy>2</posy>
+						<width>10</width>
+						<height>50</height>
+						<aspectratio>stretch</aspectratio>
+						<texture>white.png</texture>
 						<colordiffuse>skin.string(MainColorString)</colordiffuse>
 						<animation effect="fade" start="0" end="75" time="0" condition="true">Conditional</animation>
-						<!--visible>Control.HasFocus(301)</visible-->
+						<visible>Control.HasFocus(301)</visible>
 						
 					</control>
 					<control type="label">
@@ -122,11 +135,11 @@
 						<posy>-1</posy>
 						<width>200</width>
 						<height>50</height>
-						<font>font13</font>
+						<font>MainMenu21</font>
 						<textcolor>FFD7D7D7</textcolor>
 						<aligny>center</aligny>
 						<align>left</align>
-						<label>[B]$INFO[ListItem.Label][/B]</label>
+						<label>$INFO[ListItem.Label]</label>
 						<visible>IsEmpty(ListItem.Property(SubMenuItem))</visible>
 						<visible>!Control.HasFocus(301)</visible>
 						
@@ -136,11 +149,11 @@
 						<posy>-1</posy>
 						<width>200</width>
 						<height>50</height>
-						<font>font13</font>
+						<font>MainMenu21</font>
 						<textcolor>FFEBEBEB</textcolor>
 						<aligny>center</aligny>
 						<align>left</align>
-						<label>[B]$INFO[ListItem.Label][/B]</label>
+						<label>$INFO[ListItem.Label]</label>
 						<visible>IsEmpty(ListItem.Property(SubMenuItem))</visible>
 						<visible>Control.HasFocus(301)</visible>
 						
@@ -150,7 +163,7 @@
 						<posy>-1</posy>
 						<width>240</width>
 						<height>50</height>
-						<font>font13</font>
+						<font>SubMenu20</font>
 						<textcolor>FFE1E1E1</textcolor>
 						<aligny>center</aligny>
 						<align>left</align>
@@ -186,12 +199,7 @@
 							
 						</item>
 						
-						<item id="98">
-							<description>Party Mode</description>
-							<label>$LOCALIZE[589]</label>
-							<onclick>SendClick(502,16)</onclick>
-							<visible>Window.IsActive(musiclibrary)</visible>
-						</item>
+						
 			
 						<item id="99">
 							<description>Update Library</description>
@@ -211,9 +219,17 @@
 						</item>
 						
 						<item id="98">
-							<description>Random Music</description>
-							<label>31077</label>
-							<onclick>XBMC.PlayerControl(Partymode(special://skin/extras/library/music/Party_Mode.xsp))</onclick>
+							<description>party Mode</description>
+							<label>$LOCALIZE[589]</label>
+							<onclick>SendClick(16)</onclick>
+							<visible>Window.IsActive(musiclibrary)</visible>
+						</item>
+						<item id="96">
+							<description>Party Mode</description>
+							<label>$LOCALIZE[589]</label>
+							<onclick>ActivateWindow(musiclibrary)</onclick>
+							<onclick>SendClick(16)</onclick>
+							<!--onclick>XBMC.PlayerControl(Partymode(special://skin/extras/library/music/Party_Mode.xsp))</onclick-->
 							<visible>Window.IsActive(home)</visible>
 							<visible>!Skin.HasSetting(HideGlobalMusic)</visible>
 						</item>
@@ -470,8 +486,8 @@
 				<property name="DropdownMenu1">not_empty</property>
 			</item>
 			<item id="6">
-				<label>$LOCALIZE[31098]</label>
-				<onclick>SendClick(28)</onclick>
+				<label>$LOCALIZE[31189]</label>
+				<onclick>SendClick(23)</onclick>
 				<visible>!IsEmpty(skin.string(SubMenu1))</visible>
 				<property name="SubMenuItem">not_empty</property>
 				<property name="DropdownMenu1">not_empty</property>
@@ -535,8 +551,8 @@
 				<property name="DropdownMenu1">not_empty</property>
 			</item>
 			<item id="6">
-				<label>$LOCALIZE[31098]</label>
-				<onclick>SendClick(28)</onclick>
+				<label>$LOCALIZE[31189]</label>
+				<onclick>SendClick(23)</onclick>
 				<visible>!IsEmpty(skin.string(SubMenu1))</visible>
 				<property name="SubMenuItem">not_empty</property>
 				<property name="DropdownMenu1">not_empty</property>
@@ -610,6 +626,44 @@
 				<property name="SubMenuItem">not_empty</property>
 				<property name="DropdownMenu1">not_empty</property>
 			</item>
+			
+			<item id="6">
+				<label>31203</label>
+				<onclick>SendClick(6)</onclick>
+				<onclick>ReloadSkin()</onclick>
+				<visible>SubString(Control.GetLabel(6),*)</visible>
+				<visible>!IsEmpty(skin.string(SubMenu1))</visible>
+				<property name="SubMenuItem">not_empty</property>
+				<property name="DropdownMenu1">not_empty</property>
+			</item>
+			<item id="6">
+				<label>31204</label>
+				<onclick>SendClick(6)</onclick>
+				<onclick>ReloadSkin()</onclick>
+				<visible>!SubString(Control.GetLabel(6),*)</visible>
+				<visible>!IsEmpty(skin.string(SubMenu1))</visible>
+				<property name="SubMenuItem">not_empty</property>
+				<property name="DropdownMenu1">not_empty</property>
+			</item>
+			
+			<item id="7">
+				<label>31205</label>
+				<onclick>SendClick(7)</onclick>
+				
+				<visible>SubString(Control.GetLabel(7),*)</visible>
+				<visible>!IsEmpty(skin.string(SubMenu1))</visible>
+				<property name="SubMenuItem">not_empty</property>
+				<property name="DropdownMenu1">not_empty</property>
+			</item>
+			<item id="7">
+				<label>31206</label>
+				<onclick>SendClick(7)</onclick>
+				
+				<visible>!SubString(Control.GetLabel(7),*)</visible>
+				<visible>!IsEmpty(skin.string(SubMenu1))</visible>
+				<property name="SubMenuItem">not_empty</property>
+				<property name="DropdownMenu1">not_empty</property>
+			</item>
 
 			
 	</include>
@@ -645,7 +699,7 @@
 				<description>Slideshow</description>
 				<label>$LOCALIZE[108]</label>
 				<onclick>SendClick(6)</onclick>
-				<visible>!ListItem.IsFolder</visible>
+				<!--visible>ListItem.IsFolder</visible-->
 				<visible>!IsEmpty(skin.string(SubMenu1))</visible>
 				<property name="SubMenuItem">not_empty</property>
 				<property name="DropdownMenu1">not_empty</property>
@@ -654,7 +708,7 @@
 				<description>Recursive Slideshow</description>
 				<label>$LOCALIZE[31106] $LOCALIZE[108]</label>
 				<onclick>SendClick(7)</onclick>
-				<visible>ListItem.IsFolder</visible>
+				<!--visible>ListItem.IsFolder</visible-->
 				<visible>!IsEmpty(skin.string(SubMenu1))</visible>
 				<property name="SubMenuItem">not_empty</property>
 				<property name="DropdownMenu1">not_empty</property>
@@ -737,7 +791,7 @@
 			</item>
 			<item id="16">
 				<description>Filter</description>
-				<!--label>$LOCALIZE[587]</label-->
+				
 				<label>31111</label>
 				<onclick>SendClick(19)</onclick>
 				<visible>!Container.CanFilterAdvanced</visible>
@@ -747,7 +801,7 @@
 			</item>
 			<item id="16">
 				<description>A.Filter</description>
-				<!--label>$LOCALIZE[587]</label-->
+				
 				<label>Adv. $LOCALIZE[31111]</label>
 				<selected>Container.Filtered</selected>
 				<onclick>Filter</onclick>
@@ -757,7 +811,7 @@
 				<property name="DropdownMenu1">not_empty</property>
 			</item>
 			
-			<item id="17">
+			<!--item id="17">
 				<description>Flatten</description>
 				<label>$LOCALIZE[20411] $LOCALIZE[31109]</label>
 				<onclick>SendClick(17)</onclick>
@@ -766,6 +820,7 @@
 				<visible>!IsEmpty(skin.string(SubMenu1))</visible>
 				<property name="SubMenuItem">not_empty</property>
 				<property name="DropdownMenu1">not_empty</property>
+				<visible>SubString(System.BuildVersion,12,left)</visible>
 			</item>
 			<item id="17">
 				<description>Flatten</description>
@@ -776,6 +831,42 @@
 				<visible>!IsEmpty(skin.string(SubMenu1))</visible>
 				<property name="SubMenuItem">not_empty</property>
 				<property name="DropdownMenu1">not_empty</property>
+				<visible>SubString(System.BuildVersion,12,left)</visible>
+			</item-->
+			
+			<item id="18">
+				<description>Play DVD</description>
+				<label>$LOCALIZE[31193]</label>
+				<onclick>SendClick(6)</onclick>
+				
+				<visible>System.HasMediadvd</visible>
+				<visible>!IsEmpty(skin.string(SubMenu1))</visible>
+				<property name="SubMenuItem">not_empty</property>
+				<property name="DropdownMenu1">not_empty</property>
+				
+			</item>
+			
+			<!--should show in context menu?-->
+			<!--item id="19">
+				<description>Unlock Shares</description>
+				<label>$LOCALIZE[31194]</label>
+				<onclick>SendClick(11)</onclick>
+				
+				<visible>!IsEmpty(skin.string(SubMenu1))</visible>
+				<property name="SubMenuItem">not_empty</property>
+				<property name="DropdownMenu1">not_empty</property>
+				
+			</item-->
+			<item id="20">
+				<description>Music video party</description>
+				<label>$LOCALIZE[589]</label>
+				<onclick>SendClick(16)</onclick>
+				
+				<visible>Container.Content(musicvideos)</visible>
+				<visible>!IsEmpty(skin.string(SubMenu1))</visible>
+				<property name="SubMenuItem">not_empty</property>
+				<property name="DropdownMenu1">not_empty</property>
+				
 			</item>
 			
 	</include>
@@ -807,7 +898,7 @@
 				<property name="DropdownMenu1">not_empty</property>
 			</item>
 					
-			<item id="9">
+			<!--item id="9">
 				<description>Stack</description>
 				<label>$LOCALIZE[14000]</label>
 				<onclick>SendClick(7)</onclick>
@@ -815,6 +906,7 @@
 				<visible>!IsEmpty(skin.string(SubMenu1))</visible>
 				<property name="SubMenuItem">not_empty</property>
 				<property name="DropdownMenu1">not_empty</property>
+				<visible>SubString(System.BuildVersion,12,left)</visible>
 			</item>
 			<item id="9">
 				<description>Stack</description>
@@ -824,7 +916,8 @@
 				<visible>!IsEmpty(skin.string(SubMenu1))</visible>
 				<property name="SubMenuItem">not_empty</property>
 				<property name="DropdownMenu1">not_empty</property>
-			</item>
+				<visible>SubString(System.BuildVersion,12,left)</visible>
+			</item-->
 		
 	</include>
 
@@ -854,10 +947,12 @@
 				<property name="SubMenuItem">not_empty</property>
 				<property name="DropdownMenu1">not_empty</property>
 			</item>
-						
+			
+			
 			<item id="8">
 				<description>Search</description>
 				<label>$LOCALIZE[137]</label>
+				
 				<onclick>SendClick(8)</onclick>
 				<visible>!IsEmpty(skin.string(SubMenu1))</visible>
 				<property name="SubMenuItem">not_empty</property>
@@ -866,7 +961,7 @@
 			
 			<item id="9">
 				<description>Filter</description>
-				<!--label>$LOCALIZE[587]</label-->
+				
 				<label>31111</label>
 				<onclick>SendClick(19)</onclick>
 				<visible>!Container.CanFilterAdvanced</visible>
@@ -874,12 +969,23 @@
 				<property name="SubMenuItem">not_empty</property>
 				<property name="DropdownMenu1">not_empty</property>
 			</item>
-			<item id="9">
+			<item id="10">
 				<description>A.Filter</description>
-				<!--label>$LOCALIZE[587]</label-->
+				
 				<label>Adv. $LOCALIZE[31111]</label>
-				<selected>Container.Filtered</selected>
+				<!--selected>Container.Filtered</selected-->
 				<onclick>Filter</onclick>
+				<visible>Container.CanFilterAdvanced</visible>
+				<visible>!IsEmpty(skin.string(SubMenu1))</visible>
+				<property name="SubMenuItem">not_empty</property>
+				<property name="DropdownMenu1">not_empty</property>
+			</item>
+			<item id="11">
+				<description>Look up</description>
+				
+				<label>31188</label>
+				
+				<onclick>SendClick(17)</onclick>
 				<visible>Container.CanFilterAdvanced</visible>
 				<visible>!IsEmpty(skin.string(SubMenu1))</visible>
 				<property name="SubMenuItem">not_empty</property>
@@ -910,6 +1016,30 @@
 			<item id="2">
 				<label>$LOCALIZE[31096]</label>
 				<onclick>SendClick(4)</onclick>
+				<visible>container.sortdirection(descending)</visible>
+				<visible>!IsEmpty(skin.string(SubMenu1))</visible>
+				<property name="SubMenuItem">not_empty</property>
+				<property name="DropdownMenu1">not_empty</property>
+			</item>
+			<item id="3">
+				<label>$LOCALIZE[31190]</label>
+				<onclick>SendClick(9)</onclick>
+				<visible>container.sortdirection(descending)</visible>
+				<visible>!IsEmpty(skin.string(SubMenu1))</visible>
+				<property name="SubMenuItem">not_empty</property>
+				<property name="DropdownMenu1">not_empty</property>
+			</item>
+			<item id="4">
+				<label>$LOCALIZE[31191]</label>
+				<onclick>SendClick(10)</onclick>
+				<visible>container.sortdirection(descending)</visible>
+				<visible>!IsEmpty(skin.string(SubMenu1))</visible>
+				<property name="SubMenuItem">not_empty</property>
+				<property name="DropdownMenu1">not_empty</property>
+			</item>
+			<item id="5">
+				<label>$LOCALIZE[31192]</label>
+				<onclick>SendClick(11)</onclick>
 				<visible>container.sortdirection(descending)</visible>
 				<visible>!IsEmpty(skin.string(SubMenu1))</visible>
 				<property name="SubMenuItem">not_empty</property>
@@ -1029,7 +1159,7 @@
 			<icon>settings/about.png</icon>
 			<property name="focused">settings/aboutFO.png</property>
 			<onclick>activatewindow(9505)</onclick>
-			<visible>!IsEmpty(skin.string(SubMenu2))</visible>
+			<visible>!IsEmpty(skin.string(SubMenu2)) + !Skin.HasSetting(ShowSkinHelp)</visible>
 			<property name="SubMenuItem">not_empty</property>
 			<property name="DropdownMenu2">not_empty</property>
 		</item>

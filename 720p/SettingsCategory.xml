@@ -1,9 +1,32 @@
-<window id="12">
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
 <defaultcontrol always="true">3</defaultcontrol>
 
 <allowoverlay>yes</allowoverlay>
 
 <controls>
+
+<control type="label" id="2">
+	<posx>-10</posx>
+	<posy>-10</posy>
+	<width>1</width>
+	<height>1</height>
+	<animation effect="fade" start="1" end="0" time="0" condition="true">Conditional</animation>
+</control>
+<control type="image" id="11">
+	<posx>-10</posx>
+	<posy>-10</posy>
+	<width>1</width>
+	<height>1</height>
+	<animation effect="fade" start="1" end="0" time="0" condition="true">Conditional</animation>
+</control>
+<control type="edit" id="12">
+	<posx>-10</posx>
+	<posy>-10</posy>
+	<width>1</width>
+	<height>1</height>
+	<animation effect="fade" start="1" end="0" time="0" condition="true">Conditional</animation>
+</control>
 
 <include>SettingsFanart</include>
 <include>Background</include>
@@ -48,9 +71,9 @@
 		<height>75</height>
 		<align>justify</align>
 		<label>-</label>
-		<font>about</font>
-		<textcolor>ampm</textcolor>
-		
+		<font>SubMenu20</font>
+		<textcolor>blue</textcolor>
+		<animation effect="fade" start="100" end="80" time="0" condition="true">Conditional</animation>
 	</control>
 			
 	<control type="grouplist" id="3">
@@ -60,10 +83,10 @@
 		<width>300</width>
 		<height>570</height>
 		<itemgap>0</itemgap>
-		<onleft>66</onleft>
+		<onleft>999</onleft>
 		<onright>5</onright>
-		<onup>300</onup>
-		<ondown>3</ondown>
+		<onup>-</onup>
+		<ondown>20</ondown>
 		<orientation>vertical</orientation>
 	</control>
 	
@@ -89,6 +112,7 @@
 			<onup>5</onup>
 			<ondown>5</ondown>
 			<orientation>vertical</orientation>
+			<animation effect="fade" start="100" end="70" time="0" condition="true">Conditional</animation>
 		</control>
 		
 		<control type="button" id="7">
@@ -139,19 +163,38 @@
 			<height>50</height>
 			<width>239</width>
 			<align>left</align>
-			<textoffsetx>20</textoffsetx>
-			<font>homemenu3</font>
+			<textoffsetx>23</textoffsetx>
+			<font>MainMenu21</font>
 			
 			<focusedcolor>white</focusedcolor>
 			<texturefocus>category.png</texturefocus>
 			<texturenofocus>-</texturenofocus>
 			
 		</control>
+		
+		<control type="button" id="20">
+		
+			<posy>631</posy>
+			<description>Default Category Button</description>
+			<height>50</height>
+			<width>245</width>
+			<align>left</align>
+			<aligny>center</aligny>
+			<textoffsetx>23</textoffsetx>
+			<font>MainMenu21</font>
+			<label>10037</label>
+			<focusedcolor>white</focusedcolor>
+			<texturefocus>category.png</texturefocus>
+			<texturenofocus>-</texturenofocus>
+			<onclick>SettingsLevelChange</onclick>
+			<onup>3</onup>
+		</control>
+
 	</control>
 
 
 <include>BottomInfoBar</include>
-<include>vignette</include>
+ 
 </controls>
 
 </window>

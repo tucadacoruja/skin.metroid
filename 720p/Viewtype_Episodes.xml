@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <includes>
 
 <!-- EPISODES VIEW -->
@@ -12,8 +13,8 @@
 		
 		<control type="grouplist">
 			<description>Media Codec Flags</description>
-			<posx>582</posx>
-			<posy>318</posy>
+			<posx>612</posx>
+			<posy>338</posy>
 			<width>600</width>
 			<height>50</height>
 			<align>left</align>
@@ -28,8 +29,8 @@
 		
 		<control type="wraplist" id="504">
 			<viewtype label="Episodes">list</viewtype>
-			<posx>290</posx>
-			<posy>112</posy>
+			<posx>320</posx>
+			<posy>132</posy>
 			<width>1633</width>
 			<height>525</height>
 			<scrolltime>200</scrolltime>
@@ -92,6 +93,7 @@
 					<font>InfoSmall</font>
 					<textcolor>movietitleb2</textcolor>
 					<selectedcolor>movietitleb2</selectedcolor>
+					<visible>!Stringcompare(ListItem.Label,..)</visible>
 				</control>				
 			</itemlayout>
 			
@@ -257,24 +259,27 @@
 			</focusedlayout>
 		</control>
 
-		<!-- Scroll Bar -->
+		
+		
+	</control>
+	
+	<control type="scrollbar" id="65">
 
-		
-		
-		<control type="scrollbar" id="65">
-			<posx>1270</posx>
-			<posy>130</posy>
-			<width>20</width>
-			<height>450</height>
-			<visible allowhiddenfocus="true">[Control.IsVisible(504) | Control.IsVisible(505)] + Control.HasFocus(65)</visible>
-			<texturesliderbackground>sliderbg.png</texturesliderbackground>
-			<textureslidernibfocus>ball.png</textureslidernibfocus>
-			<onleft>504</onleft>
-			<onright>-</onright>
-			<showonepage>false</showonepage>
-			<orientation>vertical</orientation>
-			<animation effect="fade" start="0" end="100" time="400" condition="Control.HasFocus(65)">Conditional</animation>
-		</control>
+		<texturesliderbackground>buttons/scrollbgV.png</texturesliderbackground>
+		<texturesliderbar>-</texturesliderbar>
+		<texturesliderbarfocus>-</texturesliderbarfocus>
+		<textureslidernib>buttons/scrollnibV.png</textureslidernib>
+		<textureslidernibfocus>buttons/scrollnibV.png</textureslidernibfocus>
+		<orientation>Vertical</orientation>
+		<showonepage>true</showonepage>
+		<posx>290</posx>
+		<posy>100</posy>
+		<width>10</width>
+		<height>580</height>
+		<onleft>300</onleft>
+		<onright>50</onright>
+		<visible>Control.IsVisible(504)</visible>
+		<animation effect="fade" start="100" end="50" time="200" reversable="false" condition="!Control.HasFocus(60)">Conditional</animation>
 	</control>
 
 

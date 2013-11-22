@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <window id="0">
 <defaultcontrol always="true">300</defaultcontrol>
 
@@ -30,29 +31,100 @@
 	<height>1</height>
 	<description>hack</description>
 	<label>-</label>
-	<onfocus>SetFocus(7997)</onfocus>
+	<onfocus>SetFocus(4000)</onfocus>
 	
 </control>
 
 <include>VideoWindow</include>
-<include>HomeFanart</include>
-<include>Background</include>
+<!--include>HomeFanart</include-->
+<control type="image">
+	<posx>0</posx>
+	<posy>0</posy>
+	<width>1280</width>
+	<height>720</height>
+	<aspectratio>stretch</aspectratio>
+	<texture background="true" fallback="MetroidBG.png">$INFO[Skin.String(GlobalBackground)]</texture>
+	<animation effect="fade" start="80" end="95" time="200" reversible="true" condition="!Player.HasVideo">Conditional</animation>
+	<animation effect="fade" start="95" end="80" time="200" reversible="true" condition="Player.HasVideo">Conditional</animation>
+</control>
+
 <include>MainMenu</include>
 
 
-<control type="group">
-<posy>57</posy>
-<posx>-32</posx>
+<control type="grouplist" id="4000">
+<posy>100</posy>
+<posx>186</posx>
+<width>1130</width>
+<height>607</height>
+<orientation>vertical</orientation>
+<usecontrolcoords>false</usecontrolcoords>
+<itemgap>0</itemgap>
+<include>Favourites</include>
 <include>WidgetsAnimation</include>
 <include>MetroidMoviePanel</include>
 <include>MetroidTVShowPanel</include>
-<visible>SubString(Window(Home).Property(RecentEpisode.8.Art(thumb)),jpg) | SubString(Window(Home).Property(RecentMovie.6.Art(poster)),jpg)</visible>
+<include>RandomMoviePanel</include>
+<include>RandomAlbumPanel</include>
+<pagecontrol>63</pagecontrol>
+<visible>SubString(Window(Home).Property(RandomAlbum.6.Art(thumb)),jpg) | SubString(Window(Home).Property(RandomMovie.6.Art(poster)),jpg) | SubString(Window(Home).Property(RecentEpisode.8.Art(thumb)),jpg) | SubString(Window(Home).Property(RecentMovie.6.Art(poster)),jpg)</visible>
+<visible>substring(Window(Home).Property(SkinWidgets_RecentItems),true) | substring(Window(Home).Property(SkinWidgets_RandomItems),true)</visible>
+<animation effect="fade" start="100" end="0" time="150" condition="Window.IsVisible(numericinput) | Window.IsVisible(virtualkeyboard)">Conditional</animation>	  
+
 </control>
 
+<control type="scrollbar" id="63">
+	<texturesliderbackground>buttons/scrollbgV.png</texturesliderbackground>
+	<texturesliderbar>-</texturesliderbar>
+	<texturesliderbarfocus>-</texturesliderbarfocus>
+	<textureslidernib>buttons/scrollnibV.png</textureslidernib>
+	<textureslidernibfocus>buttons/scrollnibV.png</textureslidernibfocus>
+	<orientation>Vertical</orientation>
+	<showonepage>true</showonepage>
+	<posx>325</posx>
+	<posy>120</posy>
+	<width>10</width>
+	<height>560</height>
+	<onleft>300</onleft>
+	<onup>300</onup>
+	<onright>4000</onright>
+	<include>Favourites</include>
+	<animation effect="fade" start="100" end="40" time="200" reversable="false" condition="!Control.HasFocus(63)">Conditional</animation>
+	<animation effect="fade" start="100" end="0" time="150" condition="Window.IsVisible(numericinput) | Window.IsVisible(virtualkeyboard)">Conditional</animation>	  
+	<visible>Control.IsVisible(4000)</visible>
+</control>
+
+
+<control type="image">
+	<posx>0</posx>
+	<posy>0</posy>
+	<width>1280</width>
+	<height>72</height>
+	<aspectratio>stretch</aspectratio>
+	<texture background="true" >white.png</texture>
+</control>
+<control type="image">
+	<posx>0</posx>
+	<posy>0</posy>
+	<width>1280</width>
+	<height>72</height>
+	<aspectratio>stretch</aspectratio>
+	<texture>shadow.png</texture>
+	<animation effect="fade" start="0" end="30" time="0" reversible="false" condition="true">Conditional</animation>
+</control>
+<control type="image">
+	<posx>0</posx>
+	<posy>67</posy>
+	<width>1285</width>
+	<height>5</height>
+	<aspectratio>stretch</aspectratio>
+	<texture flipy="true">BackMenu.png</texture>
+</control>
 <include>BottomInfoBar</include>
+
+
 <include>Holiday</include>
-<include>vignette</include>
-<include>Keyboard</include>
+ 
+
 
 
 </controls>

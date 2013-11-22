@@ -5,15 +5,29 @@
 	<allowoverlay>yes</allowoverlay>
 
 	<controls>
+	<control type="label" id="3">
+		<posx>-10</posx>
+		<posy>-10</posy>
+		<width>1</width>
+		<height>1</height>
+		<animation effect="fade" start="1" end="0" time="0" condition="true">Conditional</animation>
+	</control>
+		<control type="label" id="4">
+		<posx>-10</posx>
+		<posy>-10</posy>
+		<width>1</width>
+		<height>1</height>
+		<animation effect="fade" start="1" end="0" time="0" condition="true">Conditional</animation>
+	</control>
 
 		<control type="group">
-			<posx>650</posx>
-			<posy>0</posy>
+			<posx>635</posx>
+			<posy>110</posy>
 
 			<control type="list" id="2">
 				<description>Preset List</description>
 				<posx>0</posx>
-				<posy>80</posy>
+				<posy>0</posy>
 				<width>500</width>
 				<height>468</height>
 				<onleft>-</onleft>

@@ -1,25 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <window id="131">
 <defaultcontrol always="true">5</defaultcontrol>
 <allowoverlay>yes</allowoverlay>
   
 <coordinates>
   <system>1</system>
-  <posx>500</posx>
-  <posy>30</posy>
+  <posx>20</posx>
+  <posy>240</posy>
 </coordinates>
   
 <controls>
-    
-<control type="image">
-	<description>background image</description>
-	<posx>0</posx>
-	<posy>45</posy>
-	<width>530</width>
-	<height>442</height>
-	<aspectratio>stretch</aspectratio>
-	<texture border="12">whitepanel.png</texture>
-	<colordiffuse>ff262626</colordiffuse>
-</control>	
+
+<control type="group">
+<animation effect="fade" start="100" end="30" time="150" condition="Window.IsVisible(numericinput) | Window.IsVisible(contextmenu) | Window.IsVisible(virtualkeyboard)">Conditional</animation>	  
+
+	<control type="image">
+		<description>background image</description>
+		<posx>-15</posx>
+		<posy>33</posy>
+		<width>550</width>
+		<height>456</height>
+		<aspectratio>stretch</aspectratio>
+		<texture border="12">dialog/contentbg.png</texture>
+		<colordiffuse>ffD7D7D7</colordiffuse>
+	</control>	
   
 	<!--control type="label" id="2">
 		<description>Settings</description>
@@ -56,65 +60,50 @@
   
 <control type="button" id="7">
 	<description>button</description>
+	<texturefocus>setting.png</texturefocus>
 	<align>left</align>
 </control>
 <control type="radiobutton" id="8">
 	<description>radio_button</description>
+	<texturefocus>setting.png</texturefocus>
 </control>
 <control type="spincontrolex" id="9">
 	<description>spin_controlex</description>
+	<texturefocus>setting.png</texturefocus>
 	<posx>70</posx>
 </control>
 <control type="sliderex" id="10">
 	<description>slider</description>
+	<texturefocus>setting.png</texturefocus>
 </control>
 
   <control type="button" id="28">
     <description>Ok</description>
-    <posx>80</posx>
+    <posx>90</posx>
     <posy>410</posy>
     <label>$LOCALIZE[186]</label>
-    <align>center</align>
-	<aligny>top</aligny>
-	<textoffsetx>5</textoffsetx>
-	<textoffsety>3</textoffsety>
-	<texturefocus border="12">whitepanel2.png</texturefocus>
-	<texturenofocus>-</texturenofocus>
-	<colordiffuse>ff959595</colordiffuse>
-	<font>homemenu3</font>
-	<textcolor>white</textcolor>
-	<focusedcolor>ffD7D7D7</focusedcolor>
-	<disabledcolor>F99c9c9c</disabledcolor>
-	<width>160</width>
-	<height>42</height>	
+	<colordiffuse>-</colordiffuse>
     <onleft>5</onleft>
     <onright>29</onright>
     <onup>5</onup>
     <ondown>5</ondown>
+	
+	<include>ConfirmButton</include>
   </control>
   <control type="button" id="29">
     <description>Cancel</description>
-    <posx>240</posx>
+    <posx>250</posx>
     <posy>410</posy>
     <label>$LOCALIZE[222]</label>
-    <align>center</align>
-	<aligny>top</aligny>
-	<textoffsetx>5</textoffsetx>
-	<textoffsety>3</textoffsety>
-	<texturefocus border="12">whitepanel2.png</texturefocus>
-	<texturenofocus>-</texturenofocus>
-	<colordiffuse>ff959595</colordiffuse>
-	<font>homemenu3</font>
-	<textcolor>white</textcolor>
-	<focusedcolor>ffD7D7D7</focusedcolor>
-	<disabledcolor>F99c9c9c</disabledcolor>
-	<width>160</width>
-	<height>42</height>	
     <onleft>28</onleft>
     <onright>5</onright>
     <onup>5</onup>
     <ondown>5</ondown>
+	
+	<include>ConfirmButton</include>
   </control>
+
+</control>
   
 </controls>
   

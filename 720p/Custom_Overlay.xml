@@ -910,7 +910,7 @@
 			<posy>15</posy>
 			<width>780</width>
 			<height>21</height>
-			<textcolor>FF0000FF</textcolor>
+			<textcolor>blue</textcolor>
 			<shadowcolor>FF000000</shadowcolor>
 			<font>font13</font>
 			<align>right</align>

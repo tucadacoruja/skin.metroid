@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<defaultcontrol>2</defaultcontrol>
 	<controls>
@@ -9,23 +10,11 @@
 				<posx>0</posx>
 				<posy>0</posy>
 				<width>120</width>
-				<height>35</height>
-				<texture>black.png</texture>
-				<bordertexture border="3">border.png</bordertexture>
-				<bordersize>5</bordersize>
+				<height>55</height>
+				<texture>osd/buttons/pause.png</texture>
+				
 			</control>
-			<control type="label">
-				<description>paused label</description>
-				<posx>10</posx>
-				<posy>0</posy>
-				<width>100</width>
-				<height>35</height>
-				<align>center</align>
-				<aligny>center</aligny>
-				<font>font10</font>
-				<textcolor>white</textcolor>
-				<label>31172</label>
-			</control>
+		
 		</control>
 		<!-- media infos -->
 		<control type="group">
@@ -37,12 +26,13 @@
 				
 			<control type="image">
 				<description>gradient</description>
-				<posx>0</posx>
-				<posy>0</posy>
-				<width>500</width>
-				<height>165</height>
+				<posx>150</posx>
+				<posy>17</posy>
+				<width>230</width>
+				<height>130</height>
 				<colordiffuse>DDFFFFFF</colordiffuse>
-				<texture border="20">shadow.png</texture>
+				<aspectratio>stretch</aspectratio>
+				<texture flipx="true">shadowv.png</texture>
 			</control>
 			<control type="image">
 				<description>Cover image</description>
@@ -106,20 +96,7 @@
 				<textcolor>white</textcolor>
 				<shadowcolor>black</shadowcolor>
 			</control>
-			<control type="label">
-				<description>Next Label</description>
-				<posx>485</posx>
-				<posy>120</posy>
-				<height>30</height>
-				<width>325</width>
-				<label>[COLOR=blue]$LOCALIZE[209] :[/COLOR] $INFO[MusicPlayer.offset(1).Title]</label>
-				<align>right</align>
-				<aligny>center</aligny>
-				<font>font12</font>
-				<textcolor>grey</textcolor>
-				<shadowcolor>black</shadowcolor>
-			</control>
-		
+				
 		
 		</control>
 	</controls>

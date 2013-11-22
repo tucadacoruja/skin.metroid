@@ -1,41 +1,85 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<window><!---id="106"--->
+<window>
     <defaultcontrol always="true">1000</defaultcontrol>
     <zorder>6</zorder>
     <coordinates>
         <system>1</system>
-        <origin x="440" y="120"></origin>
+        <origin x="0" y="0"></origin>
     </coordinates>
-<animation type="WindowClose" reversible="false">
-	<effect type="fade" start="100" end="0" time="350" delay="0" />
-	<effect type="slide" start="0,0" end="0,700" time="550" delay="0" tween="sine" easing="out" />
-</animation>
-<animation type="WindowOpen" reversible="false">
-	<effect type="fade" start="0" end="100" time="350" delay="0" />
-	<effect type="slide" start="0,500" end="0,0" time="550" delay="0" tween="back" easing="out" />
-</animation>
-
   
 <controls>
 	
-	
+	<control type="image">
+		<description>vignette</description>
+		<posx>0</posx>
+		<posy>0</posy>
+		<width>1280</width>
+		<height>720</height>
+		<texture>black.png</texture>
+		<aspectratio>stretch</aspectratio>
+		<animation effect="fade" start="0" end="80" time="900" >WindowOpen</animation>
+		<animation effect="fade" start="80" end="0" time="900" >WindowClose</animation>
+		
+	</control>
+
+
+		
+	<control type="image" id="997">
+		<description>top image</description>
+
+		<posx>440</posx>
+		<posy>82</posy>
+		<width>378</width>
+		<height>48</height>
+		<texture>MetroidMenu.png</texture>
+		<aspectratio>stretch</aspectratio>
+		<include>ContextSlide</include>
+	</control>
 	<control type="image" id="999">
 		<description>background image</description>
-		<posx>-21</posx>
-		<posy>0</posy>
-		<width>420</width>
-		<height>1080</height>
-		<texture>context/contextmid.png</texture>
+		<posx>440</posx>
+		<posy>130</posy>
+		<width>380</width>
+		<height>1090</height>
+		<texture>MetroidMenu.png</texture>
 		<aspectratio>stretch</aspectratio>
-		<colordiffuse>ff262626</colordiffuse>
-	</control>	
+		<include>ContextSlide</include>
+	</control>
+	<control type="image">
+		<description>line</description>
+		<posx>440</posx>
+		<posy>126</posy>
+		<width>378</width>
+		<height>4</height>
+		<texture flipy="true">white.png</texture>
+		<aspectratio>stretch</aspectratio>
+		<colordiffuse>blue</colordiffuse>
+		<include>ContextSlide</include>
+	</control>
+	<control type="label">
+
+		<posx>800</posx>
+		<posy>78</posy>
+		<width>378</width>
+		<height>44</height>
+		<align>right</align>
+		<aligny>center</aligny>
+		<label>31195</label>
+		<textcolor>blue</textcolor>
+		<font>context</font>
+		<include>ContextSlide</include>
+	</control>
+	
 	<control type="grouplist" id="996">
 		<width>420</width>
+		<posx>440</posx>
+		<posy>130</posy>
 		<height max="1080">auto</height>
+		<include>ContextSlide</include>
 				
 		<control type="button" id="2009">
 			<description>Custom button</description>
-			<posx>11</posx>
+			<posx>15</posx>
 			<posy>0</posy>
 			<font>context</font>
 			<textcolor>darklist</textcolor>
@@ -46,6 +90,7 @@
 			<width>378</width>
 			<height>40</height>
 			<aligny>top</aligny>
+			<align>left</align>
 			<label>31054</label>
 			<colordiffuse>skin.string(MainColorString)</colordiffuse>
 			<visible>System.HasAddon(plugin.video.youtube) + [Container.Content(albums) | Container.Content(songs)]</visible>
@@ -54,7 +99,7 @@
 		
 		<control type="button" id="2018">
 			<description>Custom button</description>
-			<posx>11</posx>
+			<posx>15</posx>
 			<posy>0</posy>
 			<font>context</font>
 			<textcolor>darklist</textcolor>
@@ -65,6 +110,7 @@
 			<width>378</width>
 			<height>40</height>
 			<aligny>top</aligny>
+			<align>left</align>
 			<label>31054</label>
 			<colordiffuse>skin.string(MainColorString)</colordiffuse>
 			<visible>System.HasAddon(plugin.video.youtube) + Container.Content(movies)</visible>
@@ -73,7 +119,7 @@
 		
 		<control type="button" id="2019">
 			<description>Custom button</description>
-			<posx>11</posx>
+			<posx>15</posx>
 			<posy>0</posy>
 			<font>context</font>
 			<textcolor>darklist</textcolor>
@@ -84,6 +130,7 @@
 			<width>378</width>
 			<height>40</height>
 			<aligny>top</aligny>
+			<align>left</align>
 			<colordiffuse>skin.string(MainColorString)</colordiffuse>
 			<label>$VAR[BookmarkName]</label>
 			<visible>Container.Content(episodes)</visible>
@@ -91,32 +138,15 @@
 			<include>BookmarkCycle</include>
 		</control>
 	</control>
-	<control type="image" id="997">
-		<description>top image</description>
-		<posx>-21</posx>
-		<posy>-30</posy>
-		<width>420</width>
-		<height>30</height>
-		<texture>context/contextbgtb.png</texture>
-		<aspectratio>stretch</aspectratio>
-		<colordiffuse>ff262626</colordiffuse>
-	</control>
-	<control type="image" id="998">
-		<description>bottom image</description>
-		<posx>-21</posx>
-		<posy>-50</posy>
-		<width>420</width>
-		<height>30</height>
-		<texture flipy="true">context/contextbgtb.png</texture>
-		<aspectratio>stretch</aspectratio>
-		<colordiffuse>ff262626</colordiffuse>
-	</control>
+	
+	
 	<control type="button" id="1000">
 		<description>Buttons</description>
-		<posx>11</posx>
+		<posx>15</posx>
 		<posy>0</posy>
 		<font>context</font>
 		<aligny>top</aligny>
+		<align>left</align>
 		<colordiffuse>skin.string(MainColorString)</colordiffuse>
 		<textcolor>darklist</textcolor>
 		<focusedcolor>white</focusedcolor>

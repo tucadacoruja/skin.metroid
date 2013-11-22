@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <window>
 <defaultcontrol>9000</defaultcontrol>
 
@@ -14,7 +15,7 @@
 		<onfocus>SetFocus(9000)</onfocus>
 	</control>
 	
-
+		<include>VideoWindow</include>
 		<include>SettingsFanart</include>
 		<include>Background</include>
 	
@@ -45,6 +46,19 @@
 		</control>
 	
 	
+	
+		<!--control type="image">
+			<posx>330</posx>
+			<posy>85</posy>
+			<width>870</width>
+			<height>550</height>
+			<aspectratio>stretch</aspectratio>
+			<texture border="12">dialog/contentbg.png</texture>
+			<visible>!Control.IsVisible(28235)</visible>
+			<colordiffuse>FF959595</colordiffuse>
+
+		</control-->
+	
 		<control type="group">
 		<posy>-15</posy>
 			
@@ -71,12 +85,12 @@
 						<posy>-1</posy>
 						<width>200</width>
 						<height>50</height>
-						<font>font13</font>
+						<font>MainMenu21</font>
 						<textcolor>FFD7D7D7</textcolor>
 						<aligny>center</aligny>
 						<align>left</align>
 						<scroll>false</scroll>
-						<label>[B]$INFO[ListItem.Label][/B]</label>
+						<label>$INFO[ListItem.Label]</label>
 												
 					</control>
 					
@@ -100,12 +114,12 @@
 						<posy>-1</posy>
 						<width>240</width>
 						<height>50</height>
-						<font>font13</font>
+						<font>MainMenu21</font>
 						<textcolor>FFD7D7D7</textcolor>
 						<aligny>center</aligny>
 						<align>left</align>
 						<scroll>false</scroll>
-						<label>[B]$INFO[ListItem.Label][/B]</label>
+						<label>$INFO[ListItem.Label]</label>
 											
 					</control>
 					<control type="image">
@@ -117,8 +131,8 @@
 						<aspectratio>stretch</aspectratio>
 						<texture>white.png</texture>
 						<colordiffuse>skin.string(MainColorString)</colordiffuse>
-						<animation effect="fade" start="0" end="30" time="0" condition="true">Conditional</animation>
-						
+						<animation effect="fade" start="0" end="75" time="0" condition="true">Conditional</animation>
+						<visible>Control.HasFocus(9000)</visible>
 					</control>
 					
 				
@@ -152,11 +166,11 @@
 				
 				<animation type="Conditional" condition="Window.IsVisible(126) | Window.IsVisible(selectdialog)">
 					<effect type="fade" start="100" end="0" time="400" />
-				</animation><!--report select dialog not registering in skinsettings.xml-->
+				</animation>
 				
 				<visible>!Window.IsVisible(selectdialog)</visible>
 				<visible>!Window.IsVisible(favourites)</visible>
-				<visible>!Window.IsVisible(filebrowsers)</visible>
+				<visible>!Window.IsVisible(filebrowser)</visible>
 				<visible>!Window.IsActive(DialogSelect.xml)</visible>
 				
 				<animation type="WindowClose" reversible="false">
@@ -176,6 +190,7 @@
 					<onright>9000</onright>
 					<onup>9001</onup>
 					<ondown>9001</ondown>
+					<animation effect="fade" start="100" end="70" time="0" condition="true">Conditional</animation>
 					<control type="radiobutton" id="100">
 						<include>SettingsButton</include>
 						<description>Sources in main menu</description>
@@ -293,7 +308,7 @@
 					<onright>9000</onright>
 					<onup>9004</onup>
 					<ondown>9004</ondown>
-					
+					<animation effect="fade" start="100" end="70" time="0" condition="true">Conditional</animation>
 					 <!-- EXTRA ITEMS FAVOURITES 1-10 -->
 					
 					<control type="radiobutton" id="199">
@@ -442,6 +457,7 @@
 					<onright>9000</onright>
 					<onup>9004</onup>
 					<ondown>9004</ondown>
+					<animation effect="fade" start="100" end="70" time="0" condition="true">Conditional</animation>
 					<control type="button" id="108">
 						<include>SettingsButton</include>
 						<label> - $LOCALIZE[31160]</label>
@@ -511,7 +527,7 @@
 					<onright>9000</onright>
 					<onup>9006</onup>
 					<ondown>9007</ondown>
-					
+					<animation effect="fade" start="100" end="70" time="0" condition="true">Conditional</animation>
 					
 					<control type="radiobutton" id="101">
 						<include>SettingsButton</include>
@@ -544,16 +560,31 @@
 						<selected>Skin.HasSetting(DlLogosStartup)</selected>
 					</control>
 					
-					<control type="button" id="108">
+					<control type="radiobutton" id="108">
 						<include>SettingsButton</include>
-						<description>Subtitle Addon</description>
-						<label> - $LOCALIZE[31171]</label>
-						<label2>$INFO[Skin.String(addon.subtitles.path)]</label2>
-						<onclick>Skin.SetAddon(addon.subtitles.path,xbmc.python.subtitles)</onclick>
-						
+						<description>Show Globalsearch</description>
+						<label>$LOCALIZE[31185]</label>
+						<onclick>Skin.ToggleSetting(GlobalSearch)</onclick>
+						<selected>!Skin.HasSetting(GlobalSearch)</selected>
 					</control>
 					
+					<control type="radiobutton" id="109">
+						<include>SettingsButton</include>
+						<description>Music Visualisation in library</description>
+						<label>$LOCALIZE[31196]</label>
+						<onclick>Skin.ToggleSetting(VisLibrary)</onclick>
+						<selected>!Skin.HasSetting(VisLibrary)</selected>
+					</control>
 					
+					<control type="radiobutton" id="110">
+						<include>SettingsButton</include>
+						<description>Show skin help</description>
+						<label>$LOCALIZE[31200]</label>
+						
+						<onclick>Skin.ToggleSetting(ShowSkinHelp)</onclick>
+						<selected>!Skin.HasSetting(ShowSkinHelp)</selected>
+					</control>
+								
 				</control>
 				
 				<!---disabled color changer not sure if i want to keep it-->
@@ -649,6 +680,6 @@
 
 <include>BottomInfoBar</include>
 <include>Holiday</include>
-<include>vignette</include>	
+ 	
 	</controls>
 </window>

@@ -1,7 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <window id="125">
 		<defaultcontrol always="true">1</defaultcontrol>
 		<controls>
-
+	
+	<control type="button" id="4">
+		<posx>-10</posx>
+		<posy>-10</posy>
+		<width>1</width>
+		<height>1</height>
+		<animation effect="fade" start="1" end="0" time="0" condition="true">Conditional</animation>
+	</control>
+	
     <control type="group">
             <posx>330</posx>
             <posy>70</posy>
@@ -93,6 +102,7 @@
 						<texturenofocus>-</texturenofocus>
 						<aligny>top</aligny>
 				</control>
+				
 			</control>
 			
 		<control type="panel" id="11">

@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<defaultcontrol>5</defaultcontrol>
 	<coordinates>
@@ -27,7 +28,7 @@
 			<aspectratio>stretch</aspectratio>
 			<colordiffuse>55ffffff</colordiffuse>
 		</control>
-		<control type="label">
+		<control type="label"><!--id="1"-->
 			<description>header label</description>
 			<posx>40</posx>
 			<posy>20</posy>
@@ -40,23 +41,7 @@
 			<textcolor>ff959595</textcolor>
 			<shadowcolor>black</shadowcolor>
 		</control>
-		<!--control type="button">
-			<description>Close Window button</description>
-			<posx>610</posx>
-			<posy>15</posy>
-			<width>64</width>
-			<height>32</height>
-			<label>-</label>
-			<font>-</font>
-			<onclick>PreviousMenu</onclick>
-			<texturefocus>DialogCloseButton-focus.png</texturefocus>
-			<texturenofocus>DialogCloseButton.png</texturenofocus>
-			<onleft>5</onleft>
-			<onright>5</onright>
-			<onup>5</onup>
-			<ondown>5</ondown>
-			<visible>system.getbool(input.enablemouse)</visible>
-		</control-->
+		
 		<control type="label" id="3">
 			<description>No Settings Label</description>
 			<posx>20</posx>
@@ -87,7 +72,7 @@
 			<height>410</height>
 			<colordiffuse>skin.string(MainColorString)</colordiffuse>
 			<texturesliderbackground>sliderbg.png</texturesliderbackground>
-			<textureslidernibfocus>ball.png</textureslidernibfocus>
+			<textureslidernibfocus>bluebar.png</textureslidernibfocus>
 			<onleft>5</onleft>
 			<onright>5</onright>
 			<ondown>60</ondown>
@@ -146,7 +131,7 @@
 				<onright>28</onright>
 				<onup>5</onup>
 				<ondown>5</ondown>
-				<include>GenericWhiteButton</include>
+				<include>ConfirmButton</include>
 			</control>
 			<control type="button" id="28">
 				<description>OK Button</description>
@@ -159,7 +144,7 @@
 				<onright>50</onright>
 				<onup>5</onup>
 				<ondown>5</ondown>
-				<include>GenericWhiteButton</include>
+				<include>ConfirmButton</include>
 			</control>
 			<control type="button" id="50">
 				<description>Defaults Button</description>
@@ -172,7 +157,7 @@
 				<onright>29</onright>
 				<onup>5</onup>
 				<ondown>5</ondown>
-				<include>GenericWhiteButton</include>
+				<include>ConfirmButton</include>
 			</control>
 		</control>
 	</controls>

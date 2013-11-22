@@ -1,6 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <includes>
 <include name="List">
 	<control type="group">
+	<visible>![Window.IsVisible(pictureinfo) | Window.IsVisible(smartplaylisteditor)]</visible>
 	<visible>Control.IsVisible(50)</visible>
 	<include>InfoOpenClose</include>
 	<include>MusicInfoOpenClose</include>	
@@ -17,7 +19,7 @@
 			<control type="group">
 			<include>WidgetsAnimation</include>
 				<visible>!Stringcompare(ListItem.Label,..)</visible>
-				<visible>[Container.Content(Movies) | Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes) | Container.Content(Sets) | Window.IsVisible(VideoPlaylist)] + ![substring(Container.FolderPath,plugin,left) + Container.Content(Episodes)]</visible>
+				<visible>[Container.Content(Movies) | Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes) | Container.Content(Sets)] + ![substring(Container.FolderPath,plugin,left) + Container.Content(Episodes)]</visible>
 			
 				<control type="image">
 					<posx>630</posx>
@@ -26,7 +28,7 @@
 					<height>290</height>
 					<aspectratio scalediffuse="false">stretch</aspectratio>
 					<texture border="12" diffuse="banner/bannerdiff.png">whitepanel2.png</texture>
-					<!--colordiffuse>ff262626</colordiffuse-->
+					<colordiffuse>FFF3F3F3</colordiffuse>
 				</control>
 				<control type="image">
 					<posx>636</posx>
@@ -57,7 +59,7 @@
 			<control type="group">
 			<include>WidgetsAnimation</include>
 	      <visible>IsEmpty(ListItem.Property(Addon.Name))</visible>
-	      <visible>![Container.Content(Movies) | Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes) | Container.Content(Sets) | Window.IsVisible(VideoPlaylist)] | [substring(Container.FolderPath,plugin,left) + Container.Content(Episodes)]</visible>
+	      <visible>![Container.Content(Movies) | Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes) | Container.Content(Sets)] | [substring(Container.FolderPath,plugin,left) + Container.Content(Episodes)]</visible>
 				<control type="image">
 					<posx>631</posx>
 					<posy>167</posy>
@@ -65,8 +67,7 @@
 					<height>232</height>
 					<aspectratio align="right" aligny="center" scalediffuse="false">stretch</aspectratio>
 					<texture border="12" diffuse="banner/bannerdiff.png">whitepanel2.png</texture>
-					<!--colordiffuse>ff262626</colordiffuse-->
-					
+					<colordiffuse>FFF3F3F3</colordiffuse>
 				</control>
 				
 				<control type="image">
@@ -88,7 +89,7 @@
 		<control type="group">
 		<posx>350</posx>
 		<posy>236</posy>
-		<visible>Container.Content(Episodes)</visible>
+		<visible>Container.Content(Episodes) + ![SubString(Container.FolderPath,plugin,left) | SubString(Container.FolderPath,addons,left)]</visible>
 		<visible>!IsEmpty(ListItem.Title)</visible>
 		<include>WidgetsAnimation</include>
 			<control type="image">
@@ -98,6 +99,7 @@
 				<height>125</height>
 				<aspectratio align="right" aligny="center" scalediffuse="false">stretch</aspectratio>
 				<texture border="12" diffuse="banner/bannerdiff.png">whitepanel2.png</texture>
+				<colordiffuse>FFF3F3F3</colordiffuse>
 			</control>
 			<control type="image">
 				<posx>643</posx>
@@ -133,6 +135,7 @@
 					<height>232</height>
 					<aspectratio align="right" aligny="center" scalediffuse="false">stretch</aspectratio>
 					<texture border="12" diffuse="banner/bannerdiff.png">whitepanel2.png</texture>
+					<colordiffuse>FFF3F3F3</colordiffuse>
 				</control>
 				
 				<control type="image">
@@ -188,7 +191,7 @@
 		
 		<!-- ==== Main List ==== -->
 		<control type="group">
-			<include>ListViewAnimationsLeft</include>
+			
 			<control type="list" id="50">
 				<posx>330</posx>
 				<posy>100</posy>
@@ -200,7 +203,7 @@
 				<ondown>50</ondown>
 				<viewtype label="List">list</viewtype>
 				<pagecontrol>60</pagecontrol>
-			  <scrolltime tween="cubic" easing="out">300</scrolltime>
+			    <scrolltime tween="cubic" easing="out">300</scrolltime>
 				<itemlayout height="44" width="710">
 					<control type="label">
 						<posx>14</posx>
@@ -225,7 +228,7 @@
 						<shadowcolor>77000000</shadowcolor>
 						<align>left</align>
 						<aligny>center</aligny>
-						<label>·  ·  ·</label>
+						<label>.  .  .</label>
 						<visible>IsEmpty(ListItem.Year) + !Stringcompare(ListItem.Label,..)</visible>
 					</control>
 					<control type="label">
@@ -300,7 +303,7 @@
 						<align>right</align>
 						<aligny>center</aligny>
 						<scroll>false</scroll>
-						<label fallback="·  ·  ·">$INFO[ListItem.Label2]</label>
+						<label fallback=".  .  .">$INFO[ListItem.Label2]</label>
 						<visible>![Container.Content(Movies) | Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes) | Window.IsVisible(VideoPlaylist) | Substring(ListItem.Path,videodb://1/7/)]</visible>
 						<visible>!Stringcompare(ListItem.Label,..)</visible>
 					</control>
@@ -340,7 +343,7 @@
 							<shadowcolor>77000000</shadowcolor>
 							<align>left</align>
 							<aligny>center</aligny>
-							<label>·  ·  ·</label>
+							<label>.  .  .</label>
 							<visible>IsEmpty(ListItem.Year) + !Stringcompare(ListItem.Label,..)</visible>
 						</control>
 						<control type="label">
@@ -412,7 +415,7 @@
 							<shadowcolor>77000000</shadowcolor>
 							<align>right</align>
 							<aligny>center</aligny>
-							<label fallback="·  ·  ·">$INFO[ListItem.Label2]</label>
+							<label fallback=".  .  .">$INFO[ListItem.Label2]</label>
 							<visible>![Container.Content(Movies) | Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes) | Window.IsVisible(VideoPlaylist) | Substring(ListItem.Path,videodb://1/7/)]</visible>
 							<visible>!Stringcompare(ListItem.Label,..)</visible>
 						</control>

@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <window id="130">
 <defaultcontrol always="true">5</defaultcontrol>
 <allowoverlay>yes</allowoverlay>
@@ -15,27 +16,28 @@
 	<control type="group"> 
 	  <posx>296</posx>
 	  <posy>75</posy>
+	  <animation effect="fade" start="100" end="0" time="150" condition="Window.IsVisible(locksettings) | Window.IsVisible(filebrowser) | Window.IsVisible(virtualkeyboard)">Conditional</animation>	  
 	  <animation effect="fade" start="10" end="100" time="150">WindowOpen</animation>	  
 		<control type="image">
 			<description>background image</description>
-			<posx>8</posx>
-			<posy>-6</posy>
-			<width>684</width>
-			<height>582</height>
+			<posx>-16</posx>
+			<posy>-20</posy>
+			<width>722</width>
+			<height>615</height>
 			<aspectratio>stretch</aspectratio>
-			<texture border="12">whitepanel.png</texture>
-			<colordiffuse>ff262626</colordiffuse>
+			<texture border="12">dialog/contentbg.png</texture>
+			<colordiffuse>FF959595</colordiffuse>
 		</control>	
 			
 	
 		<control type="image">
-			<posx>20</posx>
-			<posy>18</posy>
+			<posx>17</posx>
+			<posy>55</posy>
 			<width>660</width>
-			<height>37</height>
+			<height>1</height>
 			<aspectratio>stretch</aspectratio>
-			<texture>list/listline.png</texture>
-			<colordiffuse>FFFFFFFF</colordiffuse>
+			<texture>white.png</texture>
+			<colordiffuse>26FFFFFF</colordiffuse>
 		</control>
 		
 		
@@ -79,7 +81,8 @@
 			<width>460</width>
 			<align>left</align>
 			<font>DefaultButton</font>
-			<textcolor>ff7D7D7D</textcolor>
+			<textcolor>blue</textcolor>
+			<colordiffuse>95FFFFFF</colordiffuse>
 		</control>
 		<control type="label">
 			<description>profile directory label</description>
@@ -98,21 +101,40 @@
 			<width>460</width>
 			<align>left</align>
 			<font>recent</font>
-			<textcolor>ff7D7D7D</textcolor>
+			<textcolor>blue</textcolor>
+			<colordiffuse>95FFFFFF</colordiffuse>
 		</control>
 		<control type="image">
-			<posx>20</posx>
-			<posy>203</posy>
-			<width>660</width>
-			<height>37</height>
+			<posx>9</posx>
+			<posy>240</posy>
+			<width>671</width>
+			<height>270</height>
 			<aspectratio>stretch</aspectratio>
-			<texture>list/listline.png</texture>
-			<colordiffuse>FFFFFFFF</colordiffuse>
+			<texture>white.png</texture>
+			<colordiffuse>11FFFFFF</colordiffuse>
+		</control>
+		<control type="image">
+			<posx>9</posx>
+			<posy>240</posy>
+			<width>671</width>
+			<height>1</height>
+			<aspectratio>stretch</aspectratio>
+			<texture>white.png</texture>
+			<colordiffuse>26FFFFFF</colordiffuse>
+		</control>
+		<control type="image">
+			<posx>9</posx>
+			<posy>510</posy>
+			<width>671</width>
+			<height>1</height>
+			<aspectratio>stretch</aspectratio>
+			<texture>white.png</texture>
+			<colordiffuse>26FFFFFF</colordiffuse>
 		</control>
 		<control type="grouplist" id="5">
 			<description>control area</description>
 			<posx>20</posx>
-			<posy>240</posy>
+			<posy>245</posy>
 			<width>660</width>
 			<height>240</height>
 			<itemgap>-1</itemgap>
@@ -122,15 +144,7 @@
 			<onup>28</onup>
 			<ondown>28</ondown>
 		</control>
-		<control type="image">
-			<posx>20</posx>
-			<posy>470</posy>
-			<width>660</width>
-			<height>37</height>
-			<aspectratio>stretch</aspectratio>
-			<texture>list/listline.png</texture>
-			<colordiffuse>FFFFFFFF</colordiffuse>
-		</control>
+
 		<control type="button" id="7">
 			<description>Default Button</description>
 			<posx>0</posx>
@@ -139,19 +153,19 @@
 			<font>DefaultButton</font>
 			<align>left</align>
 			<textoffsetx>20</textoffsetx>
-			<textcolor>white</textcolor>
-			<focusedcolor>list</focusedcolor>
-			<texturefocus>White35p.png</texturefocus>
+			<textcolor>list</textcolor>
+			<focusedcolor>white</focusedcolor>
+			<texturefocus>setting.png</texturefocus>
 			<texturenofocus>-</texturenofocus>
 		</control>
 		<control type="radiobutton" id="8">
 			<description>Default RadioButton</description>
 			<height>43.5</height>
 			<width>810</width>
-			<textcolor>white</textcolor>
-			<focusedcolor>list</focusedcolor>
+			<textcolor>list</textcolor>
+			<focusedcolor>white</focusedcolor>
 			<disabledcolor>12ffffff</disabledcolor>
-			<texturefocus>White35p.png</texturefocus>
+			<texturefocus>setting.png</texturefocus>
 			<texturenofocus>-</texturenofocus>
 			<textoffsetx>20</textoffsetx>
 			<radioposx>743</radioposx>
@@ -164,9 +178,9 @@
 			<height>40</height>
 			<font>DefaultButton</font>
 			<textoffsetx>20</textoffsetx>
-			<textcolor>white</textcolor>
-			<focusedcolor>list</focusedcolor>
-			<texturefocus>White35p.png</texturefocus>
+			<textcolor>list</textcolor>
+			<focusedcolor>white</focusedcolor>
+			<texturefocus>setting.png</texturefocus>
 			<texturenofocus>-</texturenofocus>
 			<aligny>center</aligny>
 			<reverse>yes</reverse>
@@ -181,51 +195,25 @@
 			<description>Ok Button</description>
 			<posx>145</posx>
 			<posy>515</posy>
-		
+			<label>$LOCALIZE[186]</label>
 			<onleft>29</onleft>
 			<onright>29</onright>
 			<onup>5</onup>
 			<ondown>5</ondown>
-			<description>OK Button</description>
-			<label>$LOCALIZE[186]</label>
-			<width>160</width>
-			<height>47</height>		
-			<align>center</align>
-			<aligny>top</aligny>
-			<textoffsetx>5</textoffsetx>
-			<textoffsety>6</textoffsety>
-			<texturefocus border="12">whitepanel2.png</texturefocus>
-			<texturenofocus>-</texturenofocus>
-			<colordiffuse>ff959595</colordiffuse>
-			<font>homemenu3</font>
-			<textcolor>white</textcolor>
-			<focusedcolor>ffD7D7D7</focusedcolor>
-			<disabledcolor>F99c9c9c</disabledcolor>
+					
+			<include>ConfirmButton</include>
 		</control>
 		<control type="button" id="29">
 			<description>Close Button</description>
 			<posx>355</posx>
 			<posy>515</posy>
-		
+			<label>$LOCALIZE[222]</label>
 			<onleft>28</onleft>
 			<onright>28</onright>
 			<onup>5</onup>
 			<ondown>5</ondown>
-			
-			<label>$LOCALIZE[222]</label>
-			<width>160</width>
-			<height>47</height>		
-			<align>center</align>
-			<aligny>top</aligny>
-			<textoffsetx>5</textoffsetx>
-			<textoffsety>6</textoffsety>
-			<texturefocus border="12">whitepanel2.png</texturefocus>
-			<texturenofocus>-</texturenofocus>
-			<colordiffuse>ff959595</colordiffuse>
-			<font>homemenu3</font>
-			<textcolor>white</textcolor>
-			<focusedcolor>ffD7D7D7</focusedcolor>
-			<disabledcolor>F99c9c9c</disabledcolor>
+						
+			<include>ConfirmButton</include>
 		</control>
 	</control>
 </controls>

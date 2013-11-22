@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <window id="3">
 <defaultcontrol always="true">20</defaultcontrol>
 <allowoverlay>yes</allowoverlay>
@@ -38,15 +39,7 @@
 	<animation effect="fade" start="0" end="100" time="100">VisibleChange</animation>
 	<visible>!Player.HasVideo</visible>
 </control>
-<control type="image">
-	<posx>0</posx>
-	<posy>71</posy>
-	<width>1280</width>
-	<height>578</height>
-	<aspectratio>stretch</aspectratio>
-	<texture background="true" flipx="true">backup.png</texture>
-	<animation effect="fade" start="0" end="60" time="0" reversible="false" condition="true">Conditional</animation>
-</control>
+
 <control type="image">
 	<posx>515</posx>
 	<posy>72</posy>
@@ -54,6 +47,7 @@
 	<height>576</height>
 	<aspectratio>stretch</aspectratio>
 	<texture>black.png</texture>
+	<animation effect="fade" start="100" end="0" time="200" condition="Window.IsVisible(mediasource)">Conditional</animation>
 </control>
 <include>Background</include>
 <control type="image">
@@ -63,7 +57,8 @@
 	<height>576</height>
 	<aspectratio>stretch</aspectratio>
 	<texture>black.png</texture>
-	<animation effect="fade" start="0" end="10" time="0" reversible="false" condition="true">Conditional</animation>
+	<colordiffuse>26ffffff</colordiffuse>
+	<animation effect="fade" start="100" end="0" time="200" condition="Window.IsVisible(mediasource)">Conditional</animation>
 </control>
 <control type="textbox">
 	<posx>520</posx>
@@ -76,6 +71,8 @@
 	<label>[UPPERCASE]$LOCALIZE[31057][/UPPERCASE][CR]$LOCALIZE[31058][CR]$LOCALIZE[31059]</label>
 	<aligny>top</aligny>
 	<autoscroll>false</autoscroll>
+	<visible>Skin.HasSetting(ShowSkinHelp)</visible>
+	<animation effect="fade" start="100" end="0" time="200" condition="Window.IsVisible(mediasource)">Conditional</animation>
 </control>
 
 
@@ -96,6 +93,7 @@
 </control>
 
   <control type="group">
+  <animation effect="fade" start="100" end="0" time="200" condition="Window.IsVisible(mediasource)">Conditional</animation>
     <posx>0</posx>
     <posy>74</posy>
     	
@@ -227,12 +225,13 @@
 	
 
   <control type="group">
+  <animation effect="fade" start="100" end="0" time="200" condition="Window.IsVisible(mediasource)">Conditional</animation>
     <posx>765</posx>
     <posy>74</posy>
     
 	
     <control type="list" id="21">
-      <description>Left File List</description>
+      <description>right File List</description>
       <posx>0</posx>
       <posy>0</posy>
       <width>515</width>
@@ -350,6 +349,7 @@
 	<aspectratio>keep</aspectratio>
 	<texture>$INFO[Container(20).ListItem.Icon]</texture>
 	<visible>!Control.HasFocus(21)</visible>
+	<animation effect="fade" start="100" end="0" time="200" condition="Window.IsVisible(mediasource)">Conditional</animation>
 </control>
 <control type="image">
 	<posx>520</posx>
@@ -359,10 +359,11 @@
 	<aspectratio>keep</aspectratio>
 	<texture>$INFO[Container(21).ListItem.Icon]</texture>
 	<visible>Control.HasFocus(21)</visible>
+	<animation effect="fade" start="100" end="0" time="200" condition="Window.IsVisible(mediasource)">Conditional</animation>
 </control>
 
 <!--include>BottomInfoBar</include-->
-<include>vignette</include>
+ 
 </controls>
 
 </window>

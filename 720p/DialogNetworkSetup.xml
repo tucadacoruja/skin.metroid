@@ -1,4 +1,5 @@
-﻿<window id="128">
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<window id="128">
 <defaultcontrol always="true">10</defaultcontrol>
 <allowoverlay>yes</allowoverlay>
 
@@ -43,23 +44,15 @@
 
 <control type="group">
 	<posy>0</posy>
-	<control type="image">
-		<posx>211</posx>
-		<posy>182</posy>
-		<width>689</width>
-		<height>1</height>
-		<aspectratio>stretch</aspectratio>
-		<texture>black.png</texture>
-		<colordiffuse>36FFFFFF</colordiffuse>
-	</control>
+
 	<control type="image">
 		<posx>211</posx>
 		<posy>219</posy>
 		<width>689</width>
 		<height>1</height>
 		<aspectratio>stretch</aspectratio>
-		<texture>black.png</texture>
-		<colordiffuse>36FFFFFF</colordiffuse>
+		<texture>white.png</texture>
+		<colordiffuse>26FFFFFF</colordiffuse>
 	</control>
 	<control type="image">
 		<posx>211</posx>
@@ -67,8 +60,8 @@
 		<width>689</width>
 		<height>1</height>
 		<aspectratio>stretch</aspectratio>
-		<texture>black.png</texture>
-		<colordiffuse>36FFFFFF</colordiffuse>
+		<texture>white.png</texture>
+		<colordiffuse>26FFFFFF</colordiffuse>
 	</control>
 	<control type="image">
 		<posx>211</posx>
@@ -76,8 +69,8 @@
 		<width>689</width>
 		<height>1</height>
 		<aspectratio>stretch</aspectratio>
-		<texture>black.png</texture>
-		<colordiffuse>36FFFFFF</colordiffuse>
+		<texture>white.png</texture>
+		<colordiffuse>26FFFFFF</colordiffuse>
 	</control>
 	<control type="image">
 		<posx>211</posx>
@@ -85,8 +78,8 @@
 		<width>689</width>
 		<height>1</height>
 		<aspectratio>stretch</aspectratio>
-		<texture>black.png</texture>
-		<colordiffuse>36FFFFFF</colordiffuse>
+		<texture>white.png</texture>
+		<colordiffuse>26FFFFFF</colordiffuse>
 	</control>
 	<control type="image">
 		<posx>211</posx>
@@ -94,8 +87,8 @@
 		<width>689</width>
 		<height>1</height>
 		<aspectratio>stretch</aspectratio>
-		<texture>black.png</texture>
-		<colordiffuse>36FFFFFF</colordiffuse>
+		<texture>white.png</texture>
+		<colordiffuse>26FFFFFF</colordiffuse>
 	</control>
 	<control type="image">
 		<posx>211</posx>
@@ -103,8 +96,8 @@
 		<width>689</width>
 		<height>1</height>
 		<aspectratio>stretch</aspectratio>
-		<texture>black.png</texture>
-		<colordiffuse>36FFFFFF</colordiffuse>
+		<texture>white.png</texture>
+		<colordiffuse>26FFFFFF</colordiffuse>
 	</control>  
 				
 				
@@ -123,12 +116,12 @@
 		 
 		<font>recent</font>
 		<aligny>center</aligny>
-		<texturefocus border="0,2,0,2">BlueBackground.png</texturefocus>
-		<texturenofocus border="3">-</texturenofocus>
-		<reverse>no</reverse>
-		<textoffsetx>20</textoffsetx>
-		<textcolor>FF303030</textcolor>
-		<focusedcolor>FFEBEBEB</focusedcolor>
+		<texturefocus>setting.png</texturefocus>
+		<texturenofocus>-</texturenofocus>
+		
+		<textoffsetx>10</textoffsetx>
+		<focusedcolor>ffefefef</focusedcolor>
+		<texturefocus>setting.png</texturefocus>
 		<pulseonselect>false</pulseonselect>
 	</control>
 	
@@ -149,8 +142,8 @@
 		<align>left</align>
 		<textcolor>FF959595</textcolor>
 		<focusedcolor>ffefefef</focusedcolor>
-		<texturefocus border="0,2,0,2">BlueBackground.png</texturefocus>
-		<texturenofocus border="0,2,0,2"></texturenofocus>
+		<texturefocus>setting.png</texturefocus>
+		<texturenofocus>-</texturenofocus>
 		<textoffsetx>10</textoffsetx>
 	</control>
 	
@@ -162,9 +155,8 @@
 		<height>37</height>
 		<font>recent</font>
 		<label>$LOCALIZE[1024]</label>
-		<texturefocus>BlueBackground.png</texturefocus>
-		 
-    	<texturenofocus></texturenofocus>
+		<texturefocus>White35p.png</texturefocus>
+		<texturenofocus>-</texturenofocus>
 		<onup>10</onup>
 		<onleft>11</onleft>
 		<onright>9001</onright>
@@ -181,8 +173,8 @@
 		<align>left</align>
 		<textcolor>FF959595</textcolor>
 		<focusedcolor>ffefefef</focusedcolor>
-		<texturefocus border="0,2,0,2">BlueBackground.png</texturefocus>
-		<texturenofocus border="0,2,0,2"></texturenofocus>
+		<texturefocus>setting.png</texturefocus>
+		<texturenofocus>-</texturenofocus>
 		 
 		<textoffsetx>10</textoffsetx>
 		<label></label>
@@ -202,8 +194,8 @@
 		<align>left</align>
 		<textcolor>FF959595</textcolor>
 		<focusedcolor>ffefefef</focusedcolor>
-		<texturefocus border="0,2,0,2">BlueBackground.png</texturefocus>
-		<texturenofocus border="0,2,0,2"></texturenofocus>
+		<texturefocus>setting.png</texturefocus>
+		<texturenofocus>-</texturenofocus>
 		 
 		<textoffsetx>10</textoffsetx>
 		<label>$LOCALIZE[1013]</label>
@@ -223,8 +215,8 @@
 		<align>left</align>
 		<textcolor>FF959595</textcolor>
 		<focusedcolor>ffefefef</focusedcolor>
-		<texturefocus border="0,2,0,2">BlueBackground.png</texturefocus>
-		<texturenofocus border="0,2,0,2"></texturenofocus>
+		<texturefocus>setting.png</texturefocus>
+		<texturenofocus>-</texturenofocus>
 		 
 		<textoffsetx>10</textoffsetx>
 		<label>$LOCALIZE[1014]</label>
@@ -244,8 +236,8 @@
 		<align>left</align>
 		<textcolor>FF959595</textcolor>
 		<focusedcolor>ffefefef</focusedcolor>
-		<texturefocus border="0,2,0,2">BlueBackground.png</texturefocus>
-		<texturenofocus border="0,2,0,2"></texturenofocus>
+		<texturefocus>setting.png</texturefocus>
+		<texturenofocus>-</texturenofocus>
 		 
 		<textoffsetx>10</textoffsetx>
 		<label>15052</label>
@@ -256,7 +248,7 @@
 	</control>
  </control> 
 		<control type="group" id="9001">
-			<posx>900</posx>
+			<posx>906</posx>
 			<posy>180</posy>
 			<control type="button" id="18">
 				<description>Ok Button</description>
@@ -266,19 +258,7 @@
 				<onright>-</onright>
 				<ondown>19</ondown>
 				<width>191</width>
-				<height>37</height>	
-				<align>center</align>
-				<aligny>top</aligny>
-				<textoffsetx>5</textoffsetx>
-				<textoffsety>3</textoffsety>
-				<texturefocus>BlueBackground.png</texturefocus>
-     			<texturenofocus border="5">-</texturenofocus>
-				<colordiffuse>DCFFFFFF</colordiffuse>
-				<font>homemenu3</font>
-				<textcolor>FF959595</textcolor>
-				<focusedcolor>ffffffff</focusedcolor>
-				<disabledcolor>F99c9c9c</disabledcolor>
-				<animation effect="fade" start="0" end="60" time="0" condition="true">Conditional</animation>
+				<include>RightHandDialog</include>
 			</control>
 			<control type="button" id="19">
 				<description>Cancel Button</description>
@@ -289,19 +269,7 @@
 				<onright>-</onright>
 				<ondown>11</ondown>
 				<width>191</width>
-				<height>37</height>	
-				<align>center</align>
-				<aligny>top</aligny>
-				<textoffsetx>5</textoffsetx>
-				<textoffsety>3</textoffsety>
-				<texturefocus>BlueBackground.png</texturefocus>
-     			<texturenofocus border="5">-</texturenofocus>
-				<colordiffuse>DCFFFFFF</colordiffuse>
-				<font>homemenu3</font>
-				<textcolor>FF959595</textcolor>
-				<focusedcolor>ffffffff</focusedcolor>
-				<disabledcolor>F99c9c9c</disabledcolor>
-				<animation effect="fade" start="0" end="60" time="0" condition="true">Conditional</animation>
+				<include>RightHandDialog</include>
 			</control>
 		</control>
   

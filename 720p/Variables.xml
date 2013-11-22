@@ -1,5 +1,22 @@
-﻿<includes>
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<includes>
 
+
+	<variable name="HomeFanart">
+		<value condition="Control.HasFocus(7997)">$INFO[Container(7997).ListItem.Property(Fanart)]</value>
+		<value condition="Control.HasFocus(7998)">$INFO[Container(7998).ListItem.Property(Fanart)]</value>
+		<value condition="Control.HasFocus(7999)">$INFO[Container(7999).ListItem.Property(Fanart)]</value>
+		<value condition="Control.HasFocus(8000)">$INFO[Container(8000).ListItem.Property(Fanart)]</value>
+		
+	</variable>
+	
+	<variable name="MovieSetLogo">
+		<value  condition="ListItem.IsFolder + ![substring(Listitem.Label,..,left) | Container.Content(tvshows)]">DefaultMusicCompilations.png</value>
+		<value  condition="!substring(Control.GetLabel(1963),.png + !substring(Listitem.Label,..,left)">DefaultMovies.png</value>
+		<value>-</value>
+	</variable>
+
+	
 	<variable name="Now_Playing_Popup_Text">
 		<value condition="VideoPlayer.Content(movies)">$INFO[VideoPlayer.Title]</value>
 		<value condition="VideoPlayer.Content(episodes)">$INFO[VideoPlayer.Episode,Episode ,]</value>
@@ -22,6 +39,7 @@
 	
 	<variable name="Info_Image">
 		<value condition="Container.Content(episodes)">$INFO[ListItem.Art(thumb)]</value>
+		<value condition="SubString(Container.FolderPath,plugin,left) + IsEmpty(ListItem.Art(fanart))">$INFO[ListItem.Icon]</value>
 		<value>$INFO[ListItem.Art(fanart)]</value>
 	</variable>
 	
@@ -45,7 +63,7 @@
 
 	<variable name="FullscreenLabel">
 		<value condition="VideoPlayer.Content(movies)">$INFO[VideoPlayer.Genre]</value>
-		<value condition="VideoPlayer.Content(episodes)">$INFO[VideoPlayer.Season,Season , ]$INFO[VideoPlayer.Episode,Episode ,] $INFO[VideoPlayer.TVShowTitle,',']</value>
+		<value condition="VideoPlayer.Content(episodes)">$LOCALIZE[31201] $INFO[VideoPlayer.Season]$LOCALIZE[31202]$INFO[VideoPlayer.Episode] $INFO[VideoPlayer.TVShowTitle,',']</value>
 	</variable>
 	
 	<variable name="BannerThumb">
@@ -53,6 +71,13 @@
 		<value condition="IsEmpty(ListItem.Art(banner))">$INFO[ListItem.Icon]</value>
 	</variable>
 
+	<variable name="InfoPoster">
+		<value condition="!IsEmpty(ListItem.Art(poster))">$INFO[ListItem.Art(poster)]</value>
+		<value condition="Container.Content(Episodes)">$INFO[ListItem.Art(tvshow.poster)]</value>
+		<value condition="Container.Content(Seasons) + !IsEmpty(ListItem.Art(season.poster))">$INFO[ListItem.Art(season.poster)]</value>
+		<value condition="Container.Content(Seasons) + IsEmpty(ListItem.Art(season.poster))">$INFO[ListItem.Art(tvshow.poster)]</value>
+		
+	</variable>
 	
 	<variable name="PosterThumbs">
 		<value condition="!IsEmpty(ListItem.Art(poster))">$INFO[ListItem.Art(poster)]</value>
@@ -102,7 +127,7 @@
 		<value condition="Container.Content(seasons) + IsEmpty(ListItem.Art(season.fanart))">settings/LogoSmall.png</value>
 		<value condition="Container.Content(episodes) + IsEmpty(ListItem.Art(thumb))">settings/LogoSmall.png</value>
 		
-		<value condition="substring(listitem.filenameandpath,addons://sources/) | substring(listitem.filenameandpath,plugin://) | substring(listitem.filenameandpath,sources://video/)">$INFO[ListItem.Thumb]</value>
+		<value condition="substring(listitem.filenameandpath,addons://sources/) | substring(listitem.filenameandpath,plugin://) | substring(listitem.filenameandpath,sources://video/)">$INFO[ListItem.Icon]</value>
 		<value condition="!substring(listitem.filenameandpath,musicdb://) + IsEmpty(ListItem.Art(thumb))">settings/LogoSmall.png</value>
 	</variable>
 	

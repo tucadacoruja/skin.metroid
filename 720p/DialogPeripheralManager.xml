@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<defaultcontrol always="true">20</defaultcontrol>
 	<coordinates>
@@ -7,6 +8,15 @@
 	</coordinates>
 	<include>dialogeffect</include>
 	<controls>
+	
+	<control type="button" id="11">
+		<posx>-10</posx>
+		<posy>-10</posy>
+		<width>1</width>
+		<height>1</height>
+		<animation effect="fade" start="1" end="0" time="0" condition="true">Conditional</animation>
+	</control>
+	
 		<control type="group">
 			<visible>!Window.IsVisible(PeripheralSettings)</visible>
 			<include>VisibleFadeEffect</include>
@@ -155,7 +165,7 @@
 				<height>510</height>
 				<colordiffuse>skin.string(MainColorString)</colordiffuse>
 				<texturesliderbackground>sliderbg.png</texturesliderbackground>
-				<textureslidernibfocus>ball.png</textureslidernibfocus>
+				<textureslidernibfocus>bluebar.png</textureslidernibfocus>
 				<onleft>20</onleft>
 				<onright>10</onright>
 				<ondown>61</ondown>
@@ -183,7 +193,7 @@
 				<width>200</width>
 				<height>40</height>
 				<label>186</label>
-				<include>GenericWhiteButton</include>
+				<include>ConfirmButton</include>
 				<onleft>61</onleft>
 				<onright>20</onright>
 				<onup>20</onup>

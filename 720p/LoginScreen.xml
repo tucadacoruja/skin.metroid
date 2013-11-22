@@ -1,9 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <window id="29">
 <defaultcontrol always="true">52</defaultcontrol>
 <allowoverlay>yes</allowoverlay>
   
 <controls>
-  	 <control type="image">
+
+	<control type="label" id="2">
+		<posx>-10</posx>
+		<posy>-10</posy>
+		<width>1</width>
+		<height>1</height>
+		<animation effect="fade" start="1" end="0" time="0" condition="true">Conditional</animation>
+	</control>
+	<control type="label" id="3">
+		<posx>-10</posx>
+		<posy>-10</posy>
+		<width>1</width>
+		<height>1</height>
+		<animation effect="fade" start="1" end="0" time="0" condition="true">Conditional</animation>
+	</control>
+	
+	
+  	<control type="image">
 		<posx>0</posx>
 		<posy>0</posy>
 		<width>1280</width>
@@ -12,8 +30,7 @@
 		<texture>MetroidBG.png</texture>
 		<!--colordiffuse>70FFFFFF</colordiffuse-->
 	</control>
-	
-	
+		
  <control type="group"> 	
 	<animation type="WindowClose" reversible="false">
 		<effect type="fade" start="100" end="30" time="550" delay="0" />

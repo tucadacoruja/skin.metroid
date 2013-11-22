@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <window id="2003">
 	
 	<defaultcontrol always="true">1</defaultcontrol>
@@ -10,6 +11,43 @@
 	
 	
 <controls>
+
+<control type="image" id="3">
+	<posx>-10</posx>
+	<posy>-10</posy>
+	<width>1</width>
+	<height>1</height>
+	<animation effect="fade" start="1" end="0" time="0" condition="true">Conditional</animation>
+</control>
+<control type="textbox" id="4">
+	<posx>-10</posx>
+	<posy>-10</posy>
+	<width>1</width>
+	<height>1</height>
+	<animation effect="fade" start="1" end="0" time="0" condition="true">Conditional</animation>
+</control>
+<control type="button" id="5">
+	<posx>-10</posx>
+	<posy>-10</posy>
+	<width>1</width>
+	<height>1</height>
+	<animation effect="fade" start="1" end="0" time="0" condition="true">Conditional</animation>
+</control>
+<control type="button" id="11">
+	<posx>-10</posx>
+	<posy>-10</posy>
+	<width>1</width>
+	<height>1</height>
+	<animation effect="fade" start="1" end="0" time="0" condition="true">Conditional</animation>
+</control>
+<control type="button" id="13">
+	<posx>-10</posx>
+	<posy>-10</posy>
+	<width>1</width>
+	<height>1</height>
+	<animation effect="fade" start="1" end="0" time="0" condition="true">Conditional</animation>
+</control>
+
 <control type="group">
 		
 	<animation effect="slide" start="1600,0" end="0,0" time="450" delay="0" reversible="false">WindowOpen</animation>
@@ -24,7 +62,7 @@
 		<control type="group">
 		
 			<posx>300</posx>
-			<posy>120</posy>
+			<posy>95</posy>
 			<width>1280</width>
 			<height>560</height>
 		
@@ -43,7 +81,7 @@
 				
 				<!--Poster Section-->
 				<control type="group">
-					
+					<visible>[Container.Content(episodes) | Container.Content(movies)] + !SubString(Container.FolderPath,plugin,left)</visible>
 					
 					<width>360</width>
 					<height>600</height>
@@ -59,9 +97,7 @@
 							<width>298</width>
 							<height>440</height>
 							<aspectratio>stretch</aspectratio>
-							<texture>$INFO[Listitem.Art(poster)]</texture>
-							<visible>Container.Content(episodes) | Container.Content(movies) | Container.Content(musicvideos)</visible>
-							
+							<texture>$VAR[InfoPoster]</texture>
 							
 						</control>
 				</control>
@@ -98,8 +134,7 @@
 							<texture>osd/buttons/osdbg.png</texture>
 							<aspectratio>stretch</aspectratio>
 							<animation effect="fade" start="100" end="60" time="100" condition="Control.HasFocus(8)">Conditional</animation>
-							<visible>Container.Content(episodes) | Container.Content(movies) | Container.Content(musicvideos)</visible>
-							
+													
 						</control>
 						<control type="button" id="8">
 							
@@ -115,7 +150,7 @@
 							<visible allowhiddenfocus="true">true</visible>
 							<onup>10</onup>
 							<ondown>9</ondown>
-							<onright>9001</onright>
+							<onright>50</onright>
 							<animation effect="zoom" start="100" end="120" center="auto" time="100">Focus</animation>
 							<animation effect="zoom" start="120" end="100" center="auto" time="100">UnFocus</animation>
 							
@@ -156,7 +191,7 @@
 							<visible allowhiddenfocus="true">true</visible>
 							<onup>8</onup>
 							<ondown>97</ondown>
-							<onright>9001</onright>
+							<onright>50</onright>
 							
 							<enable>ListItem.IsResumable</enable>
 							<animation effect="zoom" start="100" end="120" center="auto" time="100">Focus</animation>
@@ -200,7 +235,7 @@
 							<visible allowhiddenfocus="true">true</visible>
 							<onup>9</onup>
 							<ondown>6</ondown>
-							<onright>9001</onright>
+							<onright>50</onright>
 							<onclick>PlayMedia($INFO[ListItem.Trailer],1)</onclick>
 							<enable>!IsEmpty(ListItem.Trailer)</enable>
 							<animation effect="zoom" start="100" end="120" center="auto" time="100">Focus</animation>
@@ -243,7 +278,7 @@
 							<visible allowhiddenfocus="true">true</visible>
 							<onup>97</onup>
 							<ondown>10</ondown>
-							<onright>9001</onright>
+							<onright>50</onright>
 							
 							<animation effect="zoom" start="100" end="120" center="auto" time="100">Focus</animation>
 							<animation effect="zoom" start="120" end="100" center="auto" time="100">UnFocus</animation>
@@ -284,7 +319,7 @@
 							<visible allowhiddenfocus="true">true</visible>
 							<onup>6</onup>
 							<ondown>8</ondown>
-							<onright>9001</onright>
+							<onright>50</onright>
 							
 							<animation effect="zoom" start="100" end="120" center="auto" time="100">Focus</animation>
 							<animation effect="zoom" start="120" end="100" center="auto" time="100">UnFocus</animation>
@@ -478,7 +513,7 @@
 				<!--Overview Section-->
 				<control type="group">
 				
-					<width>360</width>
+					<width>390</width>
 					<height>560</height>
 				
 					
@@ -580,7 +615,7 @@
 									<width>160</width>
 									<height>28</height>
 									<label>[UPPERCASE]$INFO[ListItem.Label][/UPPERCASE]</label>
-									<font>Menu-Featured-Small</font>
+									<font>InfoNames</font>
 									<textcolor>FFACACAC</textcolor>
 									<aligny>top</aligny>
 									<wrapmultiline>true</wrapmultiline>
@@ -644,8 +679,8 @@
 									<width>160</width>
 									<height>26</height>
 									<label>[UPPERCASE]$INFO[ListItem.Label][/UPPERCASE]</label>
-									<font>Menu-Featured-Small</font>
-									<textcolor>FFACACAC</textcolor>
+									<font>InfoNames</font>
+									<textcolor>blue</textcolor>
 									<aligny>top</aligny>
 									<wrapmultiline>true</wrapmultiline>
 									<shadowcolor>00FFFFFF</shadowcolor>

@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <includes>
   
   <default type="label">
@@ -11,7 +12,7 @@
     <textcolor>FF7D7D7D</textcolor>
     <focusedcolor>FFE1E1E1</focusedcolor>
     <selectedcolor>ff7acafe</selectedcolor>
-    <disabledcolor>FF790000</disabledcolor>
+    <disabledcolor>FF464646</disabledcolor>
     <scroll>true</scroll>
   </default>
 
@@ -37,7 +38,7 @@
     <label>-</label>
     <textcolor>FF7D7D7D</textcolor>
     <focusedcolor>FFE1E1E1</focusedcolor>
-    <disabledcolor>FF790000</disabledcolor>
+    <disabledcolor>FF464646</disabledcolor>
     <texturefocus>White35p.png</texturefocus>
     <texturenofocus>-</texturenofocus>
     <pulseonselect>false</pulseonselect>
@@ -53,7 +54,7 @@
     <font>DefaultButton</font>
     <textcolor>Black</textcolor>
     <focusedcolor>White</focusedcolor>
-    <disabledcolor>FF790000</disabledcolor>
+    <disabledcolor>FF464646</disabledcolor>
     <texturenofocus>-</texturenofocus>
     <texturefocus>White35p.png</texturefocus>
     <alttexturenofocus>-</alttexturenofocus>
@@ -74,7 +75,7 @@
     <label>-</label>
     <textcolor>FF7D7D7D</textcolor>
     <focusedcolor>FFE1E1E1</focusedcolor>
-    <disabledcolor>FF790000</disabledcolor>
+    <disabledcolor>FF464646</disabledcolor>
     <texturenofocus>-</texturenofocus>
     <texturefocus>White35p.png</texturefocus>
     <textureradiofocus>buttons/radiofo.png</textureradiofocus>
@@ -101,7 +102,7 @@
     <texturedownfocus>buttons/spindownfo.png</texturedownfocus>
     <textcolor>FF7D7D7D</textcolor>
     <focusedcolor>FFE1E1E1</focusedcolor>
-    <disabledcolor>FF790000</disabledcolor>
+    <disabledcolor>FF464646</disabledcolor>
     <textoffsetx>5</textoffsetx>
     <align>left</align>
     <aligny>center</aligny>
@@ -123,7 +124,7 @@
     <font>Small</font>
     <textcolor>FF7D7D7D</textcolor>
     <focusedcolor>FFE1E1E1</focusedcolor>
-    <disabledcolor>FF790000</disabledcolor>
+    <disabledcolor>FF464646</disabledcolor>
     <textoffsetx>5</textoffsetx>
     <align>left</align>
     <aligny>center</aligny>
@@ -146,7 +147,7 @@
     <font>list</font>
     <textcolor>FF7D7D7D</textcolor>
     <focusedcolor>FFE1E1E1</focusedcolor>
-    <disabledcolor>FF790000</disabledcolor>
+    <disabledcolor>FF464646</disabledcolor>
     <textoffsetx>5</textoffsetx>
     <textoffsety>0</textoffsety>
   </default>

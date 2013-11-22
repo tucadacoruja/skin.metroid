@@ -1,10 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <window id="2600">
-<defaultcontrol always="true">300</defaultcontrol>
+<defaultcontrol always="true">333</defaultcontrol>
 <backgroundcolor>0</backgroundcolor>
 <allowoverlay>yes</allowoverlay>
   
 <controls>
-	
+
+<control type="button" id="333">
+	<posx>-10</posx>
+	<posy>-10</posy>
+	<width>1</width>
+	<height>1</height>
+	<onfocus>SendClick(2600,2)</onfocus>
+	<onfocus>SetFocus(300)</onfocus>
+	<animation effect="fade" start="1" end="0" time="0" condition="true">Conditional</animation>
+</control>
+<control type="button" id="2">
+	<posx>-10</posx>
+	<posy>-10</posy>
+	<width>1</width>
+	<height>1</height>
+	<animation effect="fade" start="1" end="0" time="0" condition="true">Conditional</animation>
+</control>
 <control type="spincontrol" id="3">
 	<description>weather location select</description>
 	<posx>0</posx>
@@ -12,7 +29,8 @@
 	<width>10</width>
 	<height>10</height>
 </control>
-	
+
+
 <include>VideoWindow</include>
 <include>ProgramFanart</include>
 <include>Background</include>
@@ -525,7 +543,7 @@
 </control>
 	
 <include>BottomInfoBar</include>
-<include>vignette</include>
+ 
 
 </controls>
   

@@ -1,16 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <window id="6">
 <defaultcontrol always="true">50</defaultcontrol>
 <backgroundcolor>0</backgroundcolor>
 <allowoverlay>yes</allowoverlay>
 <onload></onload>
-<!--onload condition="!Library.HasContent(Video, Music, Movies, TVShows)">Notification(to the library, Please add your files)</onload-->
+
 
 <views>603,602,579,525,504,781,501,709,50</views>
 <controls>
 
 
+<control type="button" id="2">
+	<posx>-10</posx>
+	<posy>-10</posy>
+	<width>1</width>
+	<height>1</height>
+	<animation effect="fade" start="1" end="0" time="0" condition="true">Conditional</animation>
+</control>
+<control type="button" id="3">
+	<posx>-10</posx>
+	<posy>-10</posy>
+	<width>1</width>
+	<height>1</height>
+	<animation effect="fade" start="1" end="0" time="0" condition="true">Conditional</animation>
+</control>
+<control type="togglebutton" id="4">
+	<posx>-10</posx>
+	<posy>-10</posy>
+	<width>1</width>
+	<height>1</height>
+	<animation effect="fade" start="1" end="0" time="0" condition="true">Conditional</animation>
+</control>
+<control type="button" id="5">
+	<posx>-10</posx>
+	<posy>-10</posy>
+	<width>1</width>
+	<height>1</height>
+	<animation effect="fade" start="1" end="0" time="0" condition="true">Conditional</animation>
+</control>
+<control type="button" id="6">
+	<posx>-10</posx>
+	<posy>-10</posy>
+	<width>1</width>
+	<height>1</height>
+	<animation effect="fade" start="1" end="0" time="0" condition="true">Conditional</animation>
+</control>
+<control type="button" id="8">
+	<posx>-10</posx>
+	<posy>-10</posy>
+	<width>1</width>
+	<height>1</height>
+	<animation effect="fade" start="1" end="0" time="0" condition="true">Conditional</animation>
+</control>
+<control type="button" id="10">
+	<posx>-10</posx>
+	<posy>-10</posy>
+	<width>1</width>
+	<height>1</height>
+	<animation effect="fade" start="1" end="0" time="0" condition="true">Conditional</animation>
+</control>
+<control type="label" id="12">
+	<posx>-10</posx>
+	<posy>-10</posy>
+	<width>1</width>
+	<height>1</height>
+	<animation effect="fade" start="1" end="0" time="0" condition="true">Conditional</animation>
+</control>
+<control type="button" id="15">
+	<posx>-10</posx>
+	<posy>-10</posy>
+	<width>1</width>
+	<height>1</height>
+	<animation effect="fade" start="1" end="0" time="0" condition="true">Conditional</animation>
+</control>
+<control type="button" id="16">
+	<posx>-10</posx>
+	<posy>-10</posy>
+	<width>1</width>
+	<height>1</height>
+	<animation effect="fade" start="1" end="0" time="0" condition="true">Conditional</animation>
+</control>
+<control type="label" id="18">
+	<posx>-10</posx>
+	<posy>-10</posy>
+	<width>1</width>
+	<height>1</height>
+	<animation effect="fade" start="1" end="0" time="0" condition="true">Conditional</animation>
+</control>
 
-<!---for filter sendclick 19--->
+
 <control type="button" id="19">
 	<posx>0</posx>
 	<posy>0</posy>
@@ -19,16 +97,8 @@
 	<description>Filter</description>
 	<label>-</label>
 </control>
-<!---for filter sendclick 17--->
-<control type="button" id="17">
-	<posx>0</posx>
-	<posy>0</posy>
-	<width>1</width>
-	<height>1</height>
-	<description>flat</description>
-	<label>-</label>
-</control>
-<!---for filter sendclick 14--->
+
+
 <control type="radiobutton" id="14">
 	<posx>0</posx>
 	<posy>0</posy>
@@ -37,15 +107,7 @@
 	<description>unwatched</description>
 	<label>-</label>
 </control>
-<!---for filter sendclick 7--->
-<control type="radiobutton" id="7">
-	<posx>0</posx>
-	<posy>0</posy>
-	<width>1</width>
-	<height>1</height>
-	<description>stacking</description>
-	<label>-</label>
-</control>
+
 
 <include>VideoWindow</include>	
 <include>VideoFanart</include>
@@ -64,7 +126,7 @@
 
 <include>BottomInfoBar</include>
 <include>ScrollOffsetLabel</include>
-<include>vignette</include>
+ 
 
 </controls>
 

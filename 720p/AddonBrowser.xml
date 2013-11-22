@@ -1,18 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <window id="40">
 <defaultcontrol always="true">50</defaultcontrol>
-<backgroundcolor>0xff31597A</backgroundcolor>
+<backgroundcolor>0</backgroundcolor>
 <allowoverlay>yes</allowoverlay>
 <views>50,51,52,515,517,579</views>
   
 <controls>
 
-<control type="radiobutton" id="5">
-	<description>Enable auto-updates</description>
-	<posx>10</posx>
-	<posy>10</posy>
+<control type="button" id="2">
+	<posx>-10</posx>
+	<posy>-10</posy>
 	<width>1</width>
 	<height>1</height>
-	<label>-</label>
+</control>
+<control type="button" id="3">
+	<posx>-10</posx>
+	<posy>-10</posy>
+	<width>1</width>
+	<height>1</height>
+</control>
+<control type="togglebutton" id="4">
+	<posx>-10</posx>
+	<posy>-10</posy>
+	<width>1</width>
+	<height>1</height>
+</control>
+<control type="radiobutton" id="5">
+	<description>Enable auto-updates</description>
+	<posx>-10</posx>
+	<posy>-10</posy>
+	<width>1</width>
+	<height>1</height>
+</control>
+<control type="radiobutton" id="6">
+	<posx>-10</posx>
+	<posy>-10</posy>
+	<width>1</width>
+	<height>1</height>
+</control>
+<control type="radiobutton" id="7">
+	<posx>-10</posx>
+	<posy>-10</posy>
+	<width>1</width>
+	<height>1</height>
 </control>
 	
 <include>VideoWindow</include>
@@ -25,11 +55,10 @@
 
 <include>List</include>  
   
-<include>ProgramsItems</include>
 
 <include>BottomInfoBar</include>
-<include>vignette</include>
-<include>Keyboard</include> 
+ 
+
 </controls>
 
 </window>

@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<defaultcontrol always="true">1</defaultcontrol>
 	<coordinates>
@@ -8,6 +9,14 @@
 
 	
 <controls>
+	
+	<control type="button" id="12">
+		<posx>-10</posx>
+		<posy>-10</posy>
+		<width>1</width>
+		<height>1</height>
+		<animation effect="fade" start="1" end="0" time="0" condition="true">Conditional</animation>
+	</control>
 
 	<control type="image">
 		<posx>10</posx>
@@ -19,7 +28,23 @@
 		<animation effect="slide" start="0,-100" end="0,0" time="200" easing="out" tween="cubic" reversable="false" >WindowOpen</animation>
 		<animation effect="slide" start="0,0" end="0,-100" time="200" easing="out" tween="cubic" reversable="false" >WindowClose</animation>
 	</control>
-
+	<control type="button" id="13">
+		<description>art</description>
+		<posx>10</posx>
+		<posy>10</posy>
+		<height>55</height>
+		<width>55</width>
+		<aspectratio>keep</aspectratio>
+		<texturefocus>osd/buttons/art.png</texturefocus>
+		<texturenofocus>osd/buttons/art.png</texturenofocus>
+		<onright>1</onright>
+		<ondown>Dialog.Close(songinformation)</ondown>
+		<visible allowhiddenfocus="true">Control.HasFocus(13)</visible>
+		
+		<animation effect="zoom" start="100" end="120" center="auto" time="100">Focus</animation>
+		<animation effect="zoom" start="120" end="100" center="auto" time="100">UnFocus</animation>
+	</control>
+			
 	<control type="image">
 		<description>Rating value</description>
 		<posx>75</posx>
@@ -36,7 +61,7 @@
 		<posy>25</posy>
 		<height>45</height>
 		<width>200</width>
-		<label>$INFO[ListItem.Title]</label>
+		<label>$INFO[ListItem.Album]</label>
 		<font>movietitle6</font>
 		<textcolor>ff959595</textcolor>
 		<align>left</align>
@@ -100,6 +125,7 @@
 			<itemgap>5</itemgap>
 			<focusposition>3</focusposition>
 			<ondown>Dialog.Close(songinformation)</ondown>
+			<onleft>13</onleft>
 			
 			
 			<animation effect="slide" start="0,-100" end="0,0" time="200" easing="out" tween="cubic" reversable="false" >WindowOpen</animation>

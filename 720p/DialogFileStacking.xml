@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <window id="2008">
 <defaultcontrol always="true">450</defaultcontrol>
 <allowoverlay>yes</allowoverlay>
@@ -5,20 +6,21 @@
 <coordinates>
   <system>1</system>
   <posx>370</posx>
-  <posy>80</posy>
+  <posy>100</posy>
 </coordinates>
 
 <controls>
     
 <control type="image">
 	<description>background image</description>
-	<posx>0</posx>
-	<posy>20</posy>
-	<width>540</width>
-	<height>420</height>
-	<texture border="12">whitepanel2.png</texture>
+	<posx>-15</posx>
+	<posy>8</posy>
+	<width>570</width>
+	<height>450</height>
+	
 	<aspectratio>stretch</aspectratio>
-	<colordiffuse>ff262626</colordiffuse>
+	<texture border="12">dialog/contentbg.png</texture>
+	<colordiffuse>ffD7D7D7</colordiffuse>
 </control>
 
 
@@ -33,13 +35,19 @@
 	  <ondown>450</ondown>
 
 	  <itemlayout height="32">
-
+			<control type="image">
+				<posy>2</posy>
+				<width>500</width>
+				<height>32</height>
+				<texture>list/listline.png</texture>
+				<aspectratio>stretch</aspectratio>
+			</control>
 			<control type="image">
 				<posx>5</posx>
-				<posy>5</posy>
+				<posy>3</posy>
 				<width>26</width>
 				<height>26</height>
-				<texture fallback="DefaultCD.png">$INFO[ListItem.Icon]</texture>
+				<texture fallback="DefaultAudio.png">$INFO[ListItem.Icon]</texture>
 				<aspectratio>keep</aspectratio>
 				<animation effect="fade" end="60" time="0" condition="true">Conditional</animation>
 			</control>
@@ -47,11 +55,9 @@
 				<posx>40</posx>
 				<width>465</width>
 				<height>30</height>
-				<label fallback="target practice">$INFO[ListItem.Label]</label>
-				<scroll>false</scroll>
+				<textcolor>list</textcolor>
 				<font>font13</font>
-				<textcolor>white</textcolor>
-				<animation effect="fade" end="60" time="0" condition="true">Conditional</animation>
+				<label>$INFO[ListItem.Label]</label>
 			</control>
 		  
 	  </itemlayout>
@@ -59,13 +65,13 @@
 			<control type="image">
 				<posy>2</posy>
 				<width>500</width>
-				<height>30</height>
-				<texture border="5">button-nofocus.png</texture>
+				<height>32</height>
+				<texture>setting.png</texture>
 				<aspectratio>stretch</aspectratio>
 			</control>
 			<control type="image">
 				<posx>5</posx>
-				<posy>5</posy>
+				<posy>3</posy>
 				<width>26</width>
 				<height>26</height>
 				<info>ListItem.Icon</info>
@@ -78,10 +84,97 @@
 				<height>30</height>
 				<textcolor>white</textcolor>
 				<font>font13</font>
-				<label fallback="target practice">$INFO[ListItem.Label]</label>
+				<label>$INFO[ListItem.Label]</label>
 			</control>
 	  </focusedlayout>
-		
+		<content>
+			<item id="126">
+							<label>31073</label>
+							<onclick>ActivateWindow(playercontrols)</onclick>
+				
+					
+						</item>
+						<item id="128">
+							<description>Now Playing...</description>
+							<label>31074</label>
+							<onclick condition="Player.HasVideo">ActivateWindow(videoplaylist)</onclick>
+							<onclick  condition="Player.HasAudio">ActivateWindow(musicplaylist)</onclick>
+						
+							
+						</item>
+						
+						
+			
+						<item id="99">
+							<description>Update Library</description>
+							<label>31075</label>
+							<onclick>UpdateLibrary(video)</onclick>
+				
+						</item>
+						
+						<item id="100">
+							<description>Download Logos</description>
+							<label>31076</label>
+							<onclick>RunScript(script.artwork.downloader,mode=custom,mediatype=tvshow,clearlogo)</onclick>
+							<onclick>RunScript(script.artwork.downloader,mode=custom,mediatype=movie,clearlogo)</onclick>
+							<visible>Window.IsActive(Home)</visible>
+				
+						</item>
+						
+						<item id="98">
+							<description>party Mode</description>
+							<label>$LOCALIZE[589]</label>
+							<onclick>SendClick(16)</onclick>
+				
+						</item>
+						<item id="96">
+							<description>Party Mode</description>
+							<label>$LOCALIZE[589]</label>
+							<onclick>ActivateWindow(musiclibrary)</onclick>
+							<onclick>SendClick(16)</onclick>
+							<!--onclick>XBMC.PlayerControl(Partymode(special://skin/extras/library/music/Party_Mode.xsp))</onclick-->
+			
+						</item>
+											
+						<item id="103">
+							<description>Music</description>
+							<label>31078</label>
+				
+				
+							<onclick>xbmc.activatewindow(musiclibrary,songs)</onclick>
+				
+						</item>
+											
+						<item id="101">
+							<label>31079</label>
+											  
+			
+							<onclick condition="IsEmpty(skin.string(SubMenu4))">Skin.Setstring(SubMenu4,open)</onclick>
+							<onclick condition="!IsEmpty(skin.string(SubMenu4))">Skin.Reset(SubMenu4)</onclick>
+							<onclick condition="IsEmpty(skin.string(SubMenu4))">Skin.Setstring(SubMenu4,open)</onclick>
+							<property name="DropdownMenu4">not_empty</property>
+						</item>
+						<include>MovieSortItems</include>
+					  
+						<item id="102">
+							<description>TV Shows</description>
+							<label>31080</label>
+							<label2></label2>
+					
+					
+							<onclick condition="IsEmpty(skin.string(SubMenu5))">Skin.Setstring(SubMenu5,open)</onclick>
+							<onclick condition="!IsEmpty(skin.string(SubMenu5))">Skin.Setstring(SubMenu5,)</onclick>
+							<property name="DropdownMenu5">not_empty</property>
+						</item>
+						<include>TvshowSortItems</include>
+					  						
+						<item id="104">
+							<description>favourites</description>
+							<label>31081</label>
+							<onclick>ActivateWindow(Favourites)</onclick>
+				
+						</item>
+		</content>
   </control>
 
 </controls>

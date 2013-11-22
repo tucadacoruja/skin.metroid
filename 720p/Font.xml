@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <fonts>
 <fontset id="veda" unicode="true">
 
@@ -110,7 +111,20 @@
 <!-----End Confluence Fonts----->
 
 
-<!-----Veda Fonts----->
+<!-----Metroid Fonts----->
+	
+	<font>
+		<name>MainMenu21</name>
+		<filename>SegoeWP-Semibold.ttf</filename>
+		<size>22</size>
+		
+	</font>
+	<font>
+		<name>SubMenu20</name>
+		<filename>SegoeWP.ttf</filename>
+		<size>20</size>
+		
+	</font>
 	
 	<font>
 		<name>LoginSmall</name>
@@ -168,7 +182,7 @@
 	<font>
 		<name>BigMusicFont</name>
 		<filename>SegoeWP.ttf</filename>
-		<size>70</size>
+		<size>40</size>
 		
 	</font>
 	<font>
@@ -186,7 +200,7 @@
 	<font>
 		<name>recent</name> <!---carefull, used in popup menus--->
 		<filename>SegoeWP-Semibold.ttf</filename>
-		<size>17</size>
+		<size>18</size>
 	</font>
 	<font>
 		<name>PlotOnly</name> <!---Use only with plot icm fontsets!--->
@@ -206,6 +220,11 @@
 	</font>
 	<font>
 		<name>MusicNF</name>
+		<filename>SegoeWP.ttf</filename>
+		<size>28</size>
+	</font>
+	<font>
+		<name>Segoe28</name>
 		<filename>SegoeWP.ttf</filename>
 		<size>28</size>
 	</font>
@@ -237,6 +256,11 @@
 	</font>
 	<font>
 		<name>WeatherSmall</name>
+		<filename>SegoeWP.ttf</filename>
+		<size>22</size>
+	</font>
+	<font>
+		<name>InfoNames</name>
 		<filename>SegoeWP.ttf</filename>
 		<size>22</size>
 	</font>
@@ -311,6 +335,12 @@
 		<filename>SegoeWP-Bold.ttf</filename>
 		<size>18</size>
 		<style>bold</style>
+	</font>
+	<font>
+		<name>MusicVis2</name>
+		<filename>SegoeWP-Bold.ttf</filename>
+		<size>18</size>
+		
 	</font>
 	<font>
 		<name>NowMusicFocus</name>
@@ -416,6 +446,12 @@
 		<style>bold</style>
 	</font>
 	<font>
+		<name>Postertitlebig</name>
+		<filename>SegoeWP-Semibold.ttf</filename>
+		<size>44</size>
+		
+	</font>
+	<font>
 		<name>heading</name>
 		<filename>SegoeWP-Semibold.ttf</filename>
 		<size>22</size>
@@ -426,6 +462,12 @@
 		<filename>SegoeWP-Semibold.ttf</filename>
 		<size>22</size>
 		<style>bold</style>
+	</font>
+	<font>
+		<name>SubHeading1</name>
+		<filename>SegoeWP-Semibold.ttf</filename>
+		<size>22</size>
+		
 	</font>
 	<font>
 		<name>homemenu3</name>
@@ -517,13 +559,6 @@
 		<size>50</size>
 	</font>
 
-  <!-- Required for system -->
-  <font>
-    <name>font13</name>
-    <filename>Arial.ttf</filename>
-    <size>14</size>
-  </font>
-  
   
 </fontset>
 

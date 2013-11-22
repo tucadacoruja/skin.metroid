@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <includes>
 
 
@@ -5,7 +6,7 @@
         <control type="group">
 			
 			<posx>60</posx>
-			<posy>0</posy>
+			<posy>10</posy>
 			
 			<include>InfoOpenClose</include>
 			<include>MusicInfoOpenClose</include>
@@ -14,6 +15,7 @@
 			<include>Keyboard</include>
 			<include>Favourites</include>
 			<visible>Control.IsVisible(603)</visible>
+			<visible>![Window.IsVisible(pictureinfo) | Window.IsVisible(smartplaylisteditor)]</visible>
 			
 			<control type="panel" id="603">
 					
@@ -148,7 +150,7 @@
 							<height>24</height>
 							<texture>$INFO[ListItem.Overlay]</texture>
 							<aspectratio>stretch</aspectratio>
-							<!--colordiffuse>skin.string(MainColorString)</colordiffuse-->
+							<colordiffuse>FFABABAB</colordiffuse>
 							
 						</control>
 						

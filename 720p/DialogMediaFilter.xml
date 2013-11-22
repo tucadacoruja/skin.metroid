@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <window id="152">
 	<defaultcontrol always="true">5</defaultcontrol>
 	<coordinates>
@@ -32,7 +33,7 @@
 			<colordiffuse>FF707070</colordiffuse>
 		</control>
 
-		<control type="label" id="2">
+		<control type="label" id="1">
 			<description>Heading</description>
 			<posx>222</posx>
 			<posy>137</posy>
@@ -80,8 +81,8 @@
 			<font>DefaultButton</font>
 			<textcolor>ffACACAC</textcolor>
 			<focusedcolor>ffefefef</focusedcolor>
-			<texturefocus border="0,2,0,2">BlueBackground.png</texturefocus>
-			<texturenofocus border="0,2,0,2">list/listline.png</texturenofocus>
+			<texturefocus>setting.png</texturefocus>
+			<texturenofocus>list/listline.png</texturenofocus>
 			<textoffsetx>10</textoffsetx>
 			<onright>9001</onright>
 			<colordiffuse>DCFFFFFF</colordiffuse>
@@ -94,8 +95,8 @@
 			<font>DefaultButton</font>
 			<textcolor>ffACACAC</textcolor>
 			<focusedcolor>ffefefef</focusedcolor>
-			<texturefocus border="0,2,0,2">BlueBackground.png</texturefocus>
-			<texturenofocus border="0,2,0,2">list/listline.png</texturenofocus>
+			<texturefocus>setting.png</texturefocus>
+			<texturenofocus>list/listline.png</texturenofocus>
 			<textoffsetx>20</textoffsetx>
 			<align>left</align>
 			<aligny>center</aligny>
@@ -110,8 +111,8 @@
 			<font>DefaultButton</font>
 			<textcolor>ffACACAC</textcolor>
 			<focusedcolor>ffefefef</focusedcolor>
-			<texturefocus>BlueBackground.png</texturefocus>
-     		<texturenofocus>-</texturenofocus>
+			<texturefocus>setting.png</texturefocus>
+			<texturenofocus>list/listline.png</texturenofocus>
 			<textoffsetx>20</textoffsetx>
 			<textoffsety>3</textoffsety>
 			<onright>9001</onright>
@@ -127,8 +128,8 @@
 			<font>DefaultButton</font>
 			<textcolor>ffACACAC</textcolor>
 			<focusedcolor>white</focusedcolor>
-			<texturefocus>BlueBackground.png</texturefocus>
-     		<texturenofocus>-</texturenofocus>
+			<texturefocus>setting.png</texturefocus>
+			<texturenofocus>list/listline.png</texturenofocus>
 			<onright>9001</onright>
 			<colordiffuse>DCFFFFFF</colordiffuse>
 		</control>
@@ -138,7 +139,7 @@
 		</control>
 		
 		<control type="group" id="9001">
-			<posx>904</posx>
+			<posx>906</posx>
 			<posy>170</posy>
 			<control type="button" id="28">
 				<description>Ok Button</description>
@@ -148,19 +149,7 @@
 				<onright>66</onright>
 				<ondown>27</ondown>
 				<width>191</width>
-				<height>37</height>	
-				<align>center</align>
-				<aligny>top</aligny>
-				<textoffsetx>5</textoffsetx>
-				<textoffsety>3</textoffsety>
-				<texturefocus>BlueBackground.png</texturefocus>
-     			<texturenofocus border="5">-</texturenofocus>
-				<colordiffuse>DCFFFFFF</colordiffuse>
-				<font>homemenu3</font>
-				<textcolor>FFACACAC</textcolor>
-				<focusedcolor>ffffffff</focusedcolor>
-				<disabledcolor>F99c9c9c</disabledcolor>
-				<animation effect="fade" start="0" end="60" time="0" condition="true">Conditional</animation>
+				<include>RightHandDialog</include>
 			</control>
 			<control type="button" id="27">
 				<description>Defaults</description>
@@ -171,19 +160,7 @@
 				<onright>66</onright>
 				<ondown>26</ondown>
 				<width>191</width>
-				<height>37</height>	
-				<align>center</align>
-				<aligny>top</aligny>
-				<textoffsetx>5</textoffsetx>
-				<textoffsety>3</textoffsety>
-				<texturefocus>BlueBackground.png</texturefocus>
-     			<texturenofocus border="5">-</texturenofocus>
-				<colordiffuse>DCFFFFFF</colordiffuse>
-				<font>homemenu3</font>
-				<textcolor>FFACACAC</textcolor>
-				<focusedcolor>ffffffff</focusedcolor>
-				<disabledcolor>F99c9c9c</disabledcolor>
-				<animation effect="fade" start="0" end="60" time="0" condition="true">Conditional</animation>
+				<include>RightHandDialog</include>
 			</control>
 			
 			<control type="button" id="26">
@@ -195,19 +172,7 @@
 				<onright>28</onright>
 				<ondown>9001</ondown>
 				<width>191</width>
-				<height>37</height>	
-				<align>center</align>
-				<aligny>top</aligny>
-				<textoffsetx>5</textoffsetx>
-				<textoffsety>3</textoffsety>
-				<texturefocus>BlueBackground.png</texturefocus>
-     			<texturenofocus border="5">-</texturenofocus>
-				<colordiffuse>DCFFFFFF</colordiffuse>
-				<font>homemenu3</font>
-				<textcolor>FFACACAC</textcolor>
-				<focusedcolor>ffffffff</focusedcolor>
-				<disabledcolor>F99c9c9c</disabledcolor>
-				<animation effect="fade" start="0" end="60" time="0" condition="true">Conditional</animation>
+				<include>RightHandDialog</include>
 			</control>
 		</control>
 		

@@ -1,3 +1,12 @@
+[B]0.0.7[/B]
+- Addon info.
+- Music Visuals (adapt to lyrics).
+-Bugs
+
+[B]0.0.6[/B]
+- Homescreen grouplist.
+- Mandatory controls.
+
 [B]0.0.5[/B]
 - Remaining strings.
 - Bugs.

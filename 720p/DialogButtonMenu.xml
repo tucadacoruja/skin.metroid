@@ -1,153 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <window id="111">
 <defaultcontrol always="true">11</defaultcontrol>
 <coordinates>
   <system>1</system>
-  <origin x="440" y="-40"></origin>
+  <origin x="0" y="0"></origin>
 </coordinates>
   
 <controls>
+
+<control type="image">
+	<description>vignette</description>
+	<posx>0</posx>
+	<posy>0</posy>
+	<width>1280</width>
+	<height>720</height>
+	<texture>black.png</texture>
+	<aspectratio>stretch</aspectratio>
+	<animation effect="fade" start="0" end="80" time="900" >WindowOpen</animation>
+	<animation effect="fade" start="80" end="0" time="900" >WindowClose</animation>
+</control>
+		
+<control type="label" id="3100">
+	<posx>-10</posx>
+	<posy>-10</posy>
+	<width>1</width>
+	<height>1</height>
+	<animation effect="fade" start="1" end="0" time="0" condition="true">Conditional</animation>
+</control>
+
 	<control type="group">
-		<animation type="WindowClose" reversible="false">
-			<effect type="fade" start="100" end="0" time="350" delay="0" />
-			<effect type="slide" start="0,0" end="0,700" time="550" delay="0" tween="sine" easing="out" />
-		</animation>
-		<animation type="WindowOpen" reversible="false">
-			<effect type="fade" start="0" end="100" time="350" delay="0" />
-			<effect type="slide" start="0,500" end="0,0" time="450" delay="0" tween="back" easing="out" />
-		</animation>
+		<include>ContextSlide</include>
+					
         <control type="group">
-			<posx>-22</posx>
-			<posy>270</posy>
+			<posx>420</posx>
+			<posy>230</posy>
             <visible>true</visible>
-				<control type="image" id="1">
-						<description>background image</description>
-						<posx>0</posx>
-						<posy>-30</posy>
-						<width>420</width>
-						<height>30</height>
-						<texture>context/contextbgtb.png</texture>
-						<aspectratio></aspectratio>
-						<colordiffuse>ff262626</colordiffuse>
-				</control>
-				<control type="image" id="2">
-						<description>background image</description>
-						<posx>0</posx>
-						<posy>0</posy>
-						<width>420</width>
-						<height repeaty="true" border="5">195</height>
-						<texture>context/contextmid.png</texture>
-						<aspectratio>stretch</aspectratio>
-						<colordiffuse>ff262626</colordiffuse>
-				</control>
-				<control type="image" id="3">
-						<description>background image</description>
-						<posx>0</posx>
-						<posy>195</posy>
-						<width>420</width>
-						<height>30</height>
-						<texture flipy="true">context/contextbgtb.png</texture>
-						<aspectratio>stretch</aspectratio>
-						<colordiffuse>ff262626</colordiffuse>
-				</control>
+			<control type="image" id="1">
+				<description>background image</description>
+				<posx>22</posx>
+				<posy>-48</posy>
+				<width>376</width>
+				<height>48</height>
+				<texture>MetroidMenu.png</texture>
+				<aspectratio>stretch</aspectratio>
+				<!--colordiffuse>ff262626</colordiffuse-->
+			</control>
+			<control type="label">
+				<posx>380</posx>
+				<posy>-52</posy>
+				<width>378</width>
+				<height>44</height>
+				<align>right</align>
+				<aligny>center</aligny>
+				<label>Power</label>
+				<textcolor>blue</textcolor>
+				<font>context</font>
+			</control>
+			<control type="image">
+				<description>line</description>
+				<posx>22</posx>
+				<posy>-8</posy>
+				<width>376</width>
+				<height>4</height>
+				<texture>white.png</texture>
+				<aspectratio>stretch</aspectratio>
+				<colordiffuse>blue</colordiffuse>
+			</control>
+			<control type="image" id="2">
+				<description>background image</description>
+				<posx>22</posx>
+				<posy>0</posy>
+				<width>376</width>
+				<height>195</height>
+				<texture>MetroidMenu.png</texture>
+				<aspectratio>stretch</aspectratio>
+				<!--colordiffuse>ff262626</colordiffuse-->
+			</control>
+			<control type="image" id="3">
+				<description>background image</description>
+				<posx>22</posx>
+				<posy>195</posy>
+				<width>376</width>
+				<height>10</height>
+				<texture>MetroidMenu.png</texture>
+				<aspectratio>stretch</aspectratio>
+				<!--colordiffuse>ff262626</colordiffuse-->
+			</control>
 		</control>
 
   
 
 
-			<control type="grouplist">
-				
-				<posx>0</posx>
-				<posy>11</posy>
-				<width>400</width>
-				<itemgap>0</itemgap>
-				<align>center</align>
-				<onup>300</onup>
-				<orientation>Vertical</orientation>
-				
-				<control type="button" id="11">
-					<font>context</font>
-					<textcolor>darklist</textcolor>
-					<focusedcolor>white</focusedcolor>
-					<disabledcolor>black</disabledcolor>
-					<texturefocus>white.png</texturefocus>
-					<texturenofocus>-</texturenofocus>
-					<width>376</width>
-					<height>40</height>
-					<onclick>XBMC.Quit()</onclick>
-					<aligny>top</aligny>
-					<colordiffuse>skin.string(MainColorString)</colordiffuse>
-					<label>$LOCALIZE[13012]</label>
-					
-				</control>
+		<control type="grouplist">
 			
-				<control type="button" id="15">
-					<description>Shutdown button</description>
-					<font>context</font>
-					<textcolor>darklist</textcolor>
-					<focusedcolor>white</focusedcolor>
-					<disabledcolor>black</disabledcolor>
-					<texturefocus>white.png</texturefocus>
-					<texturenofocus>-</texturenofocus>
-					<width>376</width>
-					<height>40</height>
-					<onclick>XBMC.Shutdown()</onclick>
-					<aligny>top</aligny>
-					<colordiffuse>skin.string(MainColorString)</colordiffuse>
-					<label>13005</label>
-					
-					
-				</control>
+			<posx>441</posx>
+			<posy>-37</posy>
+			<width>401</width>
+			<itemgap>0</itemgap>
+			<align>center</align>
+			<onup>300</onup>
+			<orientation>Vertical</orientation>
+			
+			<control type="button" id="11">
+				<font>context</font>
+				<textcolor>darklist</textcolor>
+				<focusedcolor>white</focusedcolor>
+				<disabledcolor>black</disabledcolor>
+				<texturefocus>white.png</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<width>376</width>
+				<height>40</height>
+				<onclick>XBMC.Quit()</onclick>
+				<align>left</align>
+				<aligny>top</aligny>
+				<colordiffuse>skin.string(MainColorString)</colordiffuse>
+				<label>$LOCALIZE[13012]</label>
 				
-				<control type="button" id="12">
-					<description>Suspend xbmc</description>
-					<font>context</font>
-					<textcolor>darklist</textcolor>
-					<focusedcolor>white</focusedcolor>
-					<disabledcolor>black</disabledcolor>
-					<texturefocus>white.png</texturefocus>
-					<texturenofocus>-</texturenofocus>
-					<width>376</width>
-					<height>40</height>
-					<onclick>XBMC.Suspend()</onclick>
-					<aligny>top</aligny>
-					<colordiffuse>skin.string(MainColorString)</colordiffuse>
-					<label>$LOCALIZE[13011]</label>
-					
-				</control>
-				<control type="button" id="14">
-					<description>Reboot button</description>
-					<font>context</font>
-					<textcolor>darklist</textcolor>
-					<focusedcolor>white</focusedcolor>
-					<disabledcolor>black</disabledcolor>
-					<texturefocus>white.png</texturefocus>
-					<texturenofocus>-</texturenofocus>
-					<width>376</width>
-					<height>40</height>
-					<onclick>XBMC.Reset()</onclick>
-					<aligny>top</aligny>
-					<colordiffuse>skin.string(MainColorString)</colordiffuse>
-					<label>13013</label>
-					
-				</control>
-				<control type="button" id="16">
-					<description>Log out</description>
-					<font>context</font>
-					<textcolor>darklist</textcolor>
-					<focusedcolor>white</focusedcolor>
-					<disabledcolor>black</disabledcolor>
-					<texturefocus>white.png</texturefocus>
-					<texturenofocus>-</texturenofocus>
-					<width>376</width>
-					<height>40</height>
-					<onclick>System.LogOff</onclick>
-					<aligny>top</aligny>
-					<colordiffuse>skin.string(MainColorString)</colordiffuse>
-					<label>31052</label>
-					
-				</control>
+			</control>
+		
+			<control type="button" id="15">
+				<description>Shutdown button</description>
+				<font>context</font>
+				<textcolor>darklist</textcolor>
+				<focusedcolor>white</focusedcolor>
+				<disabledcolor>black</disabledcolor>
+				<texturefocus>white.png</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<width>376</width>
+				<height>40</height>
+				<onclick>XBMC.Shutdown()</onclick>
+				<align>left</align>
+				<aligny>top</aligny>
+				<colordiffuse>skin.string(MainColorString)</colordiffuse>
+				<label>13005</label>
 				
-			</control> 
+				
+			</control>
+			
+			<control type="button" id="12">
+				<description>Suspend xbmc</description>
+				<font>context</font>
+				<textcolor>darklist</textcolor>
+				<focusedcolor>white</focusedcolor>
+				<disabledcolor>black</disabledcolor>
+				<texturefocus>white.png</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<width>376</width>
+				<height>40</height>
+				<onclick>XBMC.Suspend()</onclick>
+				<align>left</align>
+				<aligny>top</aligny>
+				<colordiffuse>skin.string(MainColorString)</colordiffuse>
+				<label>$LOCALIZE[13011]</label>
+				
+			</control>
+			<control type="button" id="14">
+				<description>Reboot button</description>
+				<font>context</font>
+				<textcolor>darklist</textcolor>
+				<focusedcolor>white</focusedcolor>
+				<disabledcolor>black</disabledcolor>
+				<texturefocus>white.png</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<width>376</width>
+				<height>40</height>
+				<onclick>XBMC.Reset()</onclick>
+				<align>left</align>
+				<aligny>top</aligny>
+				<colordiffuse>skin.string(MainColorString)</colordiffuse>
+				<label>13013</label>
+				
+			</control>
+			<control type="button" id="16">
+				<description>Log out</description>
+				<font>context</font>
+				<textcolor>darklist</textcolor>
+				<focusedcolor>white</focusedcolor>
+				<disabledcolor>black</disabledcolor>
+				<texturefocus>white.png</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<width>376</width>
+				<height>40</height>
+				<onclick>System.LogOff</onclick>
+				<align>left</align>
+				<aligny>top</aligny>
+				<colordiffuse>skin.string(MainColorString)</colordiffuse>
+				<label>31052</label>
+				
+			</control>
+			
+		</control> 
 	</control> 
 </controls>
 

@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <window type="window" id="9505">
 
 <defaultcontrol>9000</defaultcontrol>
@@ -76,12 +77,12 @@
 						<posy>-1</posy>
 						<width>240</width>
 						<height>50</height>
-						<font>font13</font>
+						<font>MainMenu21</font>
 						<textcolor>FFD7D7D7</textcolor>
 						<aligny>center</aligny>
 						<align>left</align>
 						<scroll>false</scroll>
-						<label>[B]$INFO[ListItem.Label][/B]</label>
+						<label>$INFO[ListItem.Label]</label>
 											
 					</control>
 										
@@ -105,12 +106,12 @@
 						<posy>-1</posy>
 						<width>240</width>
 						<height>50</height>
-						<font>font13</font>
+						<font>MainMenu21</font>
 						<textcolor>FFD7D7D7</textcolor>
 						<aligny>center</aligny>
 						<align>left</align>
 						<scroll>false</scroll>
-						<label>[B]$INFO[ListItem.Label][/B]</label>
+						<label>$INFO[ListItem.Label]</label>
 											
 					</control>
 					<control type="image">
@@ -122,8 +123,8 @@
 						<aspectratio>stretch</aspectratio>
 						<texture>white.png</texture>
 						<colordiffuse>skin.string(MainColorString)</colordiffuse>
-						<animation effect="fade" start="0" end="30" time="0" condition="true">Conditional</animation>
-						
+						<animation effect="fade" start="0" end="75" time="0" condition="true">Conditional</animation>
+						<visible>Control.HasFocus(9000)</visible>
 					</control>
 										
 				
@@ -196,7 +197,7 @@
 						<aligny>top</aligny>
 						<wrapmultiline>true</wrapmultiline>
 						<scrollspeed>50</scrollspeed>
-						
+						<animation effect="fade" start="100" end="70" time="0" condition="true">Conditional</animation>
 						<label>31003</label>
 					</control>
 					
@@ -225,7 +226,7 @@
 						<aligny>top</aligny>
 						<wrapmultiline>true</wrapmultiline>
 						<scrollspeed>50</scrollspeed>
-						
+						<animation effect="fade" start="100" end="70" time="0" condition="true">Conditional</animation>
 						<label>31004</label>
 					</control>
 					<control type="button" id="100">
@@ -236,7 +237,7 @@
 						<textcolor>FFD7D7D7</textcolor>
 						<focusedcolor>white</focusedcolor>
 						<disabledcolor>12ffffff</disabledcolor>
-						<texturefocus>White35p.png</texturefocus>
+						<texturefocus>setting.png</texturefocus>
 						<texturenofocus>-</texturenofocus>
 						<textoffsetx>20</textoffsetx>
 						<onleft>9000</onleft>
@@ -270,7 +271,7 @@
 						<aligny>top</aligny>
 						<wrapmultiline>true</wrapmultiline>
 						<scrollspeed>50</scrollspeed>
-						
+						<animation effect="fade" start="100" end="70" time="0" condition="true">Conditional</animation>
 						<label>31005</label>
 					</control>
 					
@@ -299,7 +300,7 @@
 						<aligny>top</aligny>
 						<wrapmultiline>true</wrapmultiline>
 						<scrollspeed>50</scrollspeed>
-						
+						<animation effect="fade" start="100" end="70" time="0" condition="true">Conditional</animation>
 						<label>31006</label>
 					</control>
 					
@@ -328,7 +329,7 @@
 						<aligny>top</aligny>
 						<wrapmultiline>true</wrapmultiline>
 						<scrollspeed>50</scrollspeed>
-						
+						<animation effect="fade" start="100" end="70" time="0" condition="true">Conditional</animation>
 						<label>31007</label>
 					</control>
 					<control type="button" id="100">
@@ -339,7 +340,7 @@
 						<textcolor>FFD7D7D7</textcolor>
 						<focusedcolor>white</focusedcolor>
 						<disabledcolor>12ffffff</disabledcolor>
-						<texturefocus>White35p.png</texturefocus>
+						<texturefocus>setting.png</texturefocus>
 						<texturenofocus>-</texturenofocus>
 						<textoffsetx>20</textoffsetx>
 						<onleft>9000</onleft>
@@ -357,7 +358,7 @@
 						<textcolor>FFD7D7D7</textcolor>
 						<focusedcolor>white</focusedcolor>
 						<disabledcolor>12ffffff</disabledcolor>
-						<texturefocus>White35p.png</texturefocus>
+						<texturefocus>setting.png</texturefocus>
 						<texturenofocus>-</texturenofocus>
 						<textoffsetx>20</textoffsetx>
 						<onleft>9000</onleft>
@@ -392,7 +393,7 @@
 						<aligny>top</aligny>
 						<wrapmultiline>true</wrapmultiline>
 						<scrollspeed>50</scrollspeed>
-						
+						<animation effect="fade" start="100" end="70" time="0" condition="true">Conditional</animation>
 						<label>31008</label>
 					</control>
 					
@@ -405,7 +406,7 @@
 						<textcolor>FFD7D7D7</textcolor>
 						<focusedcolor>white</focusedcolor>
 						<disabledcolor>12ffffff</disabledcolor>
-						<texturefocus>White35p.png</texturefocus>
+						<texturefocus>setting.png</texturefocus>
 						<texturenofocus>-</texturenofocus>
 						<textoffsetx>20</textoffsetx>
 						<onleft>9000</onleft>
@@ -440,7 +441,7 @@
 						<aligny>top</aligny>
 						<wrapmultiline>true</wrapmultiline>
 						<scrollspeed>50</scrollspeed>
-						
+						<animation effect="fade" start="100" end="70" time="0" condition="true">Conditional</animation>
 						<label>31009</label>
 					</control>
 					
@@ -452,7 +453,7 @@
 						<textcolor>FFD7D7D7</textcolor>
 						<focusedcolor>white</focusedcolor>
 						<disabledcolor>12ffffff</disabledcolor>
-						<texturefocus>White35p.png</texturefocus>
+						<texturefocus>setting.png</texturefocus>
 						<texturenofocus>-</texturenofocus>
 						<textoffsetx>20</textoffsetx>
 						<onleft>9000</onleft>
@@ -471,7 +472,7 @@
 						<textcolor>FFD7D7D7</textcolor>
 						<focusedcolor>white</focusedcolor>
 						<disabledcolor>12ffffff</disabledcolor>
-						<texturefocus>White35p.png</texturefocus>
+						<texturefocus>setting.png</texturefocus>
 						<texturenofocus>-</texturenofocus>
 						<textoffsetx>20</textoffsetx>
 						<onleft>9000</onleft>
@@ -490,7 +491,7 @@
 
 		
 	<include>BottomInfoBar</include>
-	<include>vignette</include>
+	 
 	<include>Keyboard</include> 
 	</controls>
 </window>

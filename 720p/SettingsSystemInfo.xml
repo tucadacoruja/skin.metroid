@@ -1,8 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <window id="7">
 <defaultcontrol always="true">9000</defaultcontrol>
 <allowoverlay>yes</allowoverlay>
   
 <controls>
+
+<control type="label" id="40">
+	<posx>-10</posx>
+	<posy>-10</posy>
+	<width>1</width>
+	<height>1</height>
+	<animation effect="fade" start="1" end="0" time="0" condition="true">Conditional</animation>
+</control>
+
+
 <include>VideoWindow</include>
 
 <include>SettingsFanart</include>
@@ -67,10 +78,10 @@
 				<label>$LOCALIZE[128]</label>
 				<description>Default Button</description>
 				<align>left</align>
-				<textoffsetx>20</textoffsetx>
+				<textoffsetx>23</textoffsetx>
 				<height>50</height>
 				<width>240</width>
-				<font>DefaultButton</font>
+				<font>MainMenu21</font>
 				<textcolor>ampm</textcolor>
 				<focusedcolor>white</focusedcolor>
 				<disabledcolor>12ffffff</disabledcolor>
@@ -81,10 +92,10 @@
 				<description>Storage</description>
 				<label>$LOCALIZE[13277]</label>
 				<align>left</align>
-				<textoffsetx>20</textoffsetx>
+				<textoffsetx>23</textoffsetx>
 				<height>50</height>
 				<width>240</width>
-				<font>DefaultButton</font>
+				<font>MainMenu21</font>
 				<textcolor>ampm</textcolor>
 				<focusedcolor>white</focusedcolor>
 				<disabledcolor>12ffffff</disabledcolor>
@@ -95,10 +106,10 @@
 				<description>Network</description>
 				<label>$LOCALIZE[13279]</label>
 				<align>left</align>
-				<textoffsetx>20</textoffsetx>
+				<textoffsetx>23</textoffsetx>
 				<height>50</height>
 				<width>240</width>
-				<font>DefaultButton</font>
+				<font>MainMenu21</font>
 				<textcolor>ampm</textcolor>
 				<focusedcolor>white</focusedcolor>
 				<disabledcolor>12ffffff</disabledcolor>
@@ -109,10 +120,10 @@
 				<description>Video</description>
 				<label>$LOCALIZE[13280]</label>
 				<align>left</align>
-				<textoffsetx>20</textoffsetx>
+				<textoffsetx>23</textoffsetx>
 				<height>50</height>
 				<width>240</width>
-				<font>DefaultButton</font>
+				<font>MainMenu21</font>
 				<textcolor>ampm</textcolor>
 				<focusedcolor>white</focusedcolor>
 				<disabledcolor>12ffffff</disabledcolor>
@@ -123,10 +134,10 @@
 				<description>Hardware</description>
 				<label>$LOCALIZE[13281]</label>
 				<align>left</align>
-				<textoffsetx>20</textoffsetx>
+				<textoffsetx>23</textoffsetx>
 				<height>50</height>
 				<width>240</width>
-				<font>DefaultButton</font>
+				<font>MainMenu21</font>
 				<textcolor>ampm</textcolor>
 				<focusedcolor>white</focusedcolor>
 				<disabledcolor>12ffffff</disabledcolor>
@@ -137,10 +148,10 @@
         		<description>HDD</description>
         		<label>$LOCALIZE[13275]</label>
 				<align>left</align>
-				<textoffsetx>20</textoffsetx>
+				<textoffsetx>23</textoffsetx>
 				<height>50</height>
 				<width>240</width>
-				<font>DefaultButton</font>
+				<font>MainMenu21</font>
 				<textcolor>ampm</textcolor>
 				<focusedcolor>white</focusedcolor>
 				<disabledcolor>12ffffff</disabledcolor>
@@ -151,10 +162,10 @@
 				<description>DVD</description>
 				<label>$LOCALIZE[13276]</label>
 				<align>left</align>
-				<textoffsetx>20</textoffsetx>
+				<textoffsetx>23</textoffsetx>
 				<height>50</height>
 				<width>240</width>
-				<font>DefaultButton</font>
+				<font>MainMenu21</font>
 				<textcolor>ampm</textcolor>
 				<focusedcolor>white</focusedcolor>
 				<disabledcolor>12ffffff</disabledcolor>

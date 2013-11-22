@@ -1,9 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <window id="503">
 	<defaultcontrol allways="true">6</defaultcontrol>
 	<backgroundcolor>0</backgroundcolor>
 	<allowoverlay>no</allowoverlay>
  	<views>50</views>  
 	<controls>
+
+<control type="label" id="12">
+	<posx>-10</posx>
+	<posy>-10</posy>
+	<width>1</width>
+	<height>1</height>
+	<animation effect="fade" start="1" end="0" time="0" condition="true">Conditional</animation>
+</control>
+<control type="button" id="101">
+	<posx>-10</posx>
+	<posy>-10</posy>
+	<width>1</width>
+	<height>1</height>
+	<animation effect="fade" start="1" end="0" time="0" condition="true">Conditional</animation>
+</control>
 	
 <include>VideoWindow</include>
 
@@ -16,6 +32,8 @@
 	<texture background="true" fallback="special://skin/extras/backgrounds/fallback.jpg">$INFO[Skin.String(MusicFallbackImage)]</texture>
 	<animation effect="fade" start="0" end="100" time="100">VisibleChange</animation>
 	<visible>!Player.HasVideo + IsEmpty(ListItem.Art(fanart)) + !Control.IsVisible(28233)</visible>
+
+	<animation effect="fade" start="40" end="95" time="100000" delay="2000" reversable="true" pulse="true" condition="Player.HasAudio + !Skin.HasSetting(VisLibrary)">Conditional</animation>
 </control>
 <control type="multiimage" id="28233">
 	<posx>0</posx>
@@ -29,6 +47,7 @@
 	<randomize>true</randomize>
 	<animation effect="fade" start="0" end="100" time="100">VisibleChange</animation>
 	<visible>!Player.HasVideo + IsEmpty(ListItem.Art(fanart)) + !IsEmpty(Skin.String(Wallpaper_Folder_Path)) + IsEmpty(Skin.String(MusicFallbackImage))</visible>
+	<animation effect="fade" start="40" end="95" time="100000" delay="2000" reversable="true" pulse="true" condition="Player.HasAudio + !Skin.HasSetting(VisLibrary)">Conditional</animation>
 </control>
 <control type="image">
 	<posx>0</posx>
@@ -39,16 +58,9 @@
 	<texture background="true">$INFO[ListItem.Art(fanart)]</texture>
 	<animation effect="fade" start="0" end="100" time="100">VisibleChange</animation>
 	<visible>!Player.HasVideo</visible>
+	<animation effect="fade" start="40" end="95" time="100000" delay="2000" reversable="true" pulse="true" condition="Player.HasAudio + !Skin.HasSetting(VisLibrary)">Conditional</animation>
 </control>
-<control type="image">
-	<posx>0</posx>
-	<posy>71</posy>
-	<width>1280</width>
-	<height>578</height>
-	<aspectratio>stretch</aspectratio>
-	<texture background="true" flipx="true">backup.png</texture>
-	<animation effect="fade" start="0" end="60" time="0" reversible="false" condition="true">Conditional</animation>
-</control>
+
 <control type="image">
 	<posx>515</posx>
 	<posy>72</posy>
@@ -56,6 +68,7 @@
 	<height>576</height>
 	<aspectratio>stretch</aspectratio>
 	<texture>black.png</texture>
+	<animation effect="fade" start="100" end="0" time="200" condition="Window.IsVisible(filebrowser) | Window.IsVisible(virtualkeyboard)">Conditional</animation>
 </control>
 <include>Background</include>
 <control type="image">
@@ -65,7 +78,8 @@
 	<height>576</height>
 	<aspectratio>stretch</aspectratio>
 	<texture>black.png</texture>
-	<animation effect="fade" start="0" end="10" time="0" reversible="false" condition="true">Conditional</animation>
+	<colordiffuse>26ffffff</colordiffuse>
+	<animation effect="fade" start="100" end="0" time="200" condition="Window.IsVisible(filebrowser) | Window.IsVisible(virtualkeyboard)">Conditional</animation>
 </control>
 <control type="textbox">
 	<posx>520</posx>
@@ -78,16 +92,19 @@
 	<label>[UPPERCASE]$LOCALIZE[31057][/UPPERCASE][CR]$LOCALIZE[31134][CR]$LOCALIZE[31135]</label>
 	<aligny>top</aligny>
 	<autoscroll>false</autoscroll>
+	<visible>Skin.HasSetting(ShowSkinHelp)</visible>
+	<animation effect="fade" start="100" end="0" time="200" condition="Window.IsVisible(filebrowser) | Window.IsVisible(virtualkeyboard)">Conditional</animation>
 </control>
 
 
 		<control type="group">
 			<posy>30</posy>
-			
+			<animation effect="fade" start="100" end="0" time="200" condition="Window.IsVisible(filebrowser) | Window.IsVisible(virtualkeyboard)">Conditional</animation>
 
 			<control type="grouplist" id="9000">
 				<posx>520</posx>
 				<posy>492</posy>
+								
 				<control type="button" id="6">
 					<description>Open Button</description>
 					<label>31136</label>
@@ -178,6 +195,8 @@
 			</control>
 			
 		</control>
+		
+		
 		<control type="group">
 			<animation effect="slide" start="-480,0" end="0,0" time="500" tween="quadratic" easing="out">WindowOpen</animation>
 			<animation effect="slide" end="-480,0" start="0,0" time="500" tween="quadratic" easing="out">WindowClose</animation>
@@ -189,7 +208,7 @@
 				<font>EditorBig</font>
 				<textcolor>ff707070</textcolor>
 				<align>center</align>
-				<label>[UPPERCASE]$LOCALIZE[31136][/UPPERCASE]</label>
+				<label>[UPPERCASE]$LOCALIZE[31137][/UPPERCASE]</label>
 				
 				<animation effect="fade" start="0" end="40" time="500" delay="600">WindowOpen</animation>
 				<animation effect="fade" start="40" end="0" time="300" delay="0">WindowClose</animation>
@@ -202,7 +221,7 @@
 				<height>540</height>
 				
 				<textureslidernib>sliderbg.png</textureslidernib>
-				<textureslidernibfocus>ball.png</textureslidernibfocus>
+				<textureslidernibfocus>bluebar.png</textureslidernibfocus>
 				<onleft>50</onleft>
 				<onright>9000</onright>
 				<showonepage>false</showonepage>
@@ -221,6 +240,8 @@
 				<viewtype label="">list</viewtype>
 				<pagecontrol>30</pagecontrol>
 				<scrolltime>200</scrolltime>
+				<animation effect="fade" start="100" end="0" time="200" condition="Window.IsVisible(filebrowser) | Window.IsVisible(virtualkeyboard)">Conditional</animation>
+				
 				<itemlayout height="39" width="400">
 					<control type="image">
 					  <posx>0</posx>
@@ -306,6 +327,7 @@
 				</focusedlayout>
 			</control>
 		</control>
+		
 		<control type="group">
 			<animation effect="slide" start="480,0" end="0,0" time="500" tween="quadratic" easing="out">WindowOpen</animation>
 			<animation effect="slide" end="480,0" start="0,0" time="500" tween="quadratic" easing="out">WindowClose</animation>
@@ -332,7 +354,7 @@
 				<width>20</width>
 				<height>550</height>
 				<textureslidernib>sliderbg.png</textureslidernib>
-				<textureslidernibfocus>ball.png</textureslidernibfocus>
+				<textureslidernibfocus>bluebar.png</textureslidernibfocus>
 				<onleft>100</onleft>
 				<showonepage>false</showonepage>
 				<orientation>vertical</orientation>
@@ -350,6 +372,8 @@
 				<viewtype label="">list</viewtype>
 				<pagecontrol>31</pagecontrol>
 				<scrolltime>200</scrolltime>
+				<animation effect="fade" start="100" end="0" time="200" condition="Window.IsVisible(filebrowser) | Window.IsVisible(virtualkeyboard)">Conditional</animation>
+				
 				<itemlayout height="39" width="400">
 					<control type="image">
 					  <posx>0</posx>
@@ -436,7 +460,7 @@
 		</control>
 
 
-<include>vignette</include>
+ 
 
 	</controls>
 </window>

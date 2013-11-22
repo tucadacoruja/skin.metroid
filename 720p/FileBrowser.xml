@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <window id="126">
 <defaultcontrol always="true">450</defaultcontrol>
 <allowoverlay>yes</allowoverlay>
@@ -20,6 +21,22 @@
 	
 		
 	<controls>
+
+	
+	<control type="list" id="451">
+		<posx>-10</posx>
+		<posy>-10</posy>
+		<width>1</width>
+		<height>1</height>
+		<animation effect="fade" start="1" end="0" time="0" condition="true">Conditional</animation>
+	</control>
+	<control type="radiobutton" id="416">
+		<posx>-10</posx>
+		<posy>-10</posy>
+		<width>1</width>
+		<height>1</height>
+		<animation effect="fade" start="1" end="0" time="0" condition="true">Conditional</animation>
+	</control>
 	
 <control type="group">	
 	<animation type="Conditional" condition="Window.IsVisible(128)">
@@ -48,16 +65,7 @@
 		<textcolor>FF959595</textcolor>
 		<label>$LOCALIZE[1023]</label>
 	</control>
-	
-	<control type="image">
-		<posx>212</posx>
-		<posy>186</posy>
-		<width>689</width>
-		<height>1</height>
-		<aspectratio>stretch</aspectratio>
-		<texture>black.png</texture>
-		<colordiffuse>36FFFFFF</colordiffuse>
-	</control>
+
 	<control type="label" id="412">
 		<description>Path</description>
 		<posx>222</posx>
@@ -115,8 +123,8 @@
 					<width>689</width>
 					<height>1</height>
 					<aspectratio>stretch</aspectratio>
-					<texture>black.png</texture>
-					<colordiffuse>36FFFFFF</colordiffuse>
+					<texture>white.png</texture>
+					<colordiffuse>26FFFFFF</colordiffuse>
 				</control>
 				<control type="image">
 					<posx>3</posx>
@@ -147,10 +155,11 @@
 					<posy>10</posy>
 					<width>689</width>
 					<height>37</height>
-					<texture>BlueBackground.png</texture>
+					<texture>setting.png</texture>
 					<aspectratio>stretch</aspectratio>
-					<!--colordiffuse>skin.string(MainColorString)</colordiffuse-->
-					<animation effect="fade" start="0" end="60" time="0" condition="!Control.HasFocus(450)">Conditional</animation>
+					<visible>Control.HasFocus(450)</visible>
+					
+					<animation effect="fade" start="0" end="40" time="0" condition="true">Conditional</animation>
 				</control>
 				<control type="image">
 					<posx>3</posx>
@@ -176,7 +185,7 @@
 
 
  		<control type="group" id="9000">
-			<posx>900</posx>
+			<posx>906</posx>
 			<posy>170</posy>
 			<animation type="Conditional" condition="Window.IsVisible(128)">
 				<effect type="fade" start="100" end="0" time="400" />
@@ -186,23 +195,12 @@
 				<description>Browse Button</description>
 				<label>$LOCALIZE[186]</label>
 				<width>191</width>
-				<height>37</height>				
+							
 				<onup>415</onup>
 				<onleft>450</onleft>
 				<onright>450</onright>
 				<ondown>414</ondown>
-				<align>center</align>
-				<aligny>top</aligny>
-				<textoffsetx>5</textoffsetx>
-				<textoffsety>3</textoffsety>
-				<texturefocus>BlueBackground.png</texturefocus>
-     			<texturenofocus border="5">-</texturenofocus>
-				<colordiffuse>DCFFFFFF</colordiffuse>
-				<font>homemenu3</font>
-				<textcolor>FF959595</textcolor>
-				<focusedcolor>ffffffff</focusedcolor>
-				<disabledcolor>F99c9c9c</disabledcolor>
-				<animation effect="fade" start="0" end="60" time="0" condition="true">Conditional</animation>
+				<include>RightHandDialog</include>
 			</control>
 			<control type="button" id="414">
 				<description>Add Path Button</description>
@@ -213,42 +211,19 @@
 				<onright>450</onright>
 				<ondown>415</ondown>
 				<width>191</width>
-				<height>37</height>	
-				<align>center</align>
-				<aligny>top</aligny>
-				<textoffsetx>5</textoffsetx>
-				<textoffsety>3</textoffsety>
-				<texturefocus>BlueBackground.png</texturefocus>
-     			<texturenofocus>-</texturenofocus>
-				<colordiffuse>DCFFFFFF</colordiffuse>
-				<font>homemenu3</font>
-				<textcolor>FF959595</textcolor>
-				<focusedcolor>ffffffff</focusedcolor>
-				<disabledcolor>F99c9c9c</disabledcolor>
-				<animation effect="fade" start="0" end="60" time="0" condition="true">Conditional</animation>
+				<include>RightHandDialog</include>
 			</control>
 			<control type="button" id="415">
 				<description>Remove Path Button</description>
 				<posy>110</posy>
 				<label>$LOCALIZE[119]</label>
 				<width>191</width>
-				<height>37</height>		
+					
 				<onup>414</onup>
 				<onleft>450</onleft>
 				<onright>450</onright>
 				<ondown>413</ondown>
-				<align>center</align>
-				<aligny>top</aligny>
-				<textoffsetx>5</textoffsetx>
-				<textoffsety>3</textoffsety>
-				<texturefocus>BlueBackground.png</texturefocus>
-     			<texturenofocus>-</texturenofocus>
-				<colordiffuse>DCFFFFFF</colordiffuse>
-				<font>homemenu3</font>
-				<textcolor>FF959595</textcolor>
-				<focusedcolor>ffffffff</focusedcolor>
-				<disabledcolor>F99c9c9c</disabledcolor>
-				<animation effect="fade" start="0" end="60" time="0" condition="true">Conditional</animation>
+				<include>RightHandDialog</include>
 			</control>
 		</control>
   

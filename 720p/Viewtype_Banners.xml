@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <includes>
 
 <!-- EPISODES VIEW -->
@@ -42,7 +43,7 @@
 			<control type="image">
 				<description>Rating Info</description>
 				<posx>1030</posx>
-				<posy>520</posy>
+				<posy>525</posy>
 				<width>230</width>
 				<height>40</height>
 				<info>ListItem.StarRating</info>
@@ -50,22 +51,22 @@
 				<visible>!IsEmpty(ListItem.foldername) + !substring(Container.Listitem.Label,..,left)</visible>
 			</control>
 			<control type="label">
-				<posx>17r</posx>
+				<posx>1030</posx>
 				<posy>567</posy>
 				<width>633</width>
 				<height>60</height>
-				<align>right</align>
+				<align>left</align>
 				<label>$INFO[ListItem.Property(TotalEpisodes)] $LOCALIZE[31179]</label>
 				<font>homemenu3</font>
 				<textcolor>ACEBEBEB</textcolor>
 				<selectedcolor>taskbar</selectedcolor>
 			</control>
 			<control type="label">
-				<posx>17r</posx>
+				<posx>1030</posx>
 				<posy>590</posy>
 				<width>633</width>
 				<height>60</height>
-				<align>right</align>
+				<align>left</align>
 				<label>$INFO[ListItem.Property(UnWatchedEpisodes)] $LOCALIZE[31180]</label>
 				<font>plot</font>
 				<textcolor>ACEBEBEB</textcolor>
@@ -76,7 +77,7 @@
 				
 		<control type="fixedlist" id="709">
 			<viewtype label="Banners">list</viewtype>
-			<posx>344</posx>
+			<posx>357</posx>
 			<posy>112</posy>
 			<width>950</width>
 			<height>538</height>
@@ -169,12 +170,12 @@
 				</control>
 				<control type="image">
 					<posx>3</posx>
-					<posy>1</posy>
+					<posy>2</posy>
 					<width>572</width>
 					<height>145</height>
 					<texture border="12">whitepanel2.png</texture>
 					<aspectratio>stretch</aspectratio>
-					<colordiffuse>skin.string(MainColorString)</colordiffuse>
+					<colordiffuse>hellblue</colordiffuse>
 					<animation effect="fade" end="30" time="0" condition="true">Conditional</animation>
 						<animation type="Focus" reversible="false">
 							<effect type="zoom" end="103,113" time="200" center="auto"/>
@@ -243,10 +244,10 @@
 			<textureslidernibfocus>buttons/scrollnibV.png</textureslidernibfocus>
 			<orientation>Vertical</orientation>
 			<showonepage>true</showonepage>
-			<posx>280</posx>
+			<posx>290</posx>
 			<posy>120</posy>
 			<width>10</width>
-			<height>550</height>
+			<height>535</height>
 			<onleft>300</onleft>
 			<onright>709</onright>
 			<visible>Control.IsVisible(709)</visible>

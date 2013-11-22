@@ -1,15 +1,27 @@
-﻿<window id="115">
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<window id="115">
     <defaultcontrol always="true">901</defaultcontrol>
     <allowoverlay>yes</allowoverlay>
     <visible>Window.IsActive(2005)</visible>
     <controls>
 		
-		
+		<control type="slider" id="401">
+			<posx>-10</posx>
+			<posy>-10</posy>
+			<width>1</width>
+			<height>1</height>
+			<animation effect="fade" start="1" end="0" time="0" condition="true">Conditional</animation>
+		</control>
+		<control type="button" id="402">
+			<posx>-10</posx>
+			<posy>-10</posy>
+			<width>1</width>
+			<height>1</height>
+			<animation effect="fade" start="1" end="0" time="0" condition="true">Conditional</animation>
+		</control>
 		
 		<include>Now_Playing_Popup</include>
 
-		
-		
 		<control type="group">
 			<posx>0</posx>
 			<posy>640</posy>

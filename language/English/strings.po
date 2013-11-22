@@ -501,7 +501,7 @@ msgctxt "#31136"
 msgid "Open"
 msgstr ""
 
-msgctxt "#31136"
+msgctxt "#31137"
 msgid "MUSIC FILES"
 msgstr ""
 
@@ -689,3 +689,90 @@ msgctxt "#31184"
 msgid "Formed"
 msgstr ""
 
+msgctxt "#31185"
+msgid "Show Globalsearch"
+msgstr ""
+
+msgctxt "#31186"
+msgid "New Search"
+msgstr ""
+
+msgctxt "#31187"
+msgid "Options"
+msgstr ""
+
+msgctxt "#31188"
+msgid "Look up"
+msgstr ""
+
+msgctxt "#31189"
+msgid "play"
+msgstr ""
+
+msgctxt "#31190"
+msgid "scan"
+msgstr ""
+
+msgctxt "#31191"
+msgid "record"
+msgstr ""
+
+msgctxt "#31192"
+msgid "rip disk"
+msgstr ""
+
+msgctxt "#31193"
+msgid "play DVD"
+msgstr ""
+
+msgctxt "#31194"
+msgid "Unlock shares"
+msgstr ""
+
+msgctxt "#31195"
+msgid "Context"
+msgstr ""
+
+msgctxt "#31196"
+msgid "Music Visualisation in library"
+msgstr ""
+
+msgctxt "#31197"
+msgid "Auto login"
+msgstr ""
+
+msgctxt "#31198"
+msgid "Group by"
+msgstr ""
+
+msgctxt "#31199"
+msgid "Mixed"
+msgstr ""
+
+msgctxt "#31200"
+msgid "Show skin help and hints"
+msgstr ""
+
+msgctxt "#31201"
+msgid "Season"
+msgstr ""
+
+msgctxt "#31202"
+msgid "Episode"
+msgstr ""
+
+msgctxt "#31203"
+msgid "Notifications ON"
+msgstr ""
+
+msgctxt "#31204"
+msgid "Notifications OFF"
+msgstr ""
+
+msgctxt "#31205"
+msgid "Foreign is ON"
+msgstr ""
+
+msgctxt "#31206"
+msgid "Foreign is OFF"
+msgstr ""
