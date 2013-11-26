@@ -6,29 +6,34 @@
 	<controls>
 
 		<control type="group">
-			<posx>840</posx>
-			<posy>20</posy>
+			<posx></posx>
+			<posy>0</posy>
 
 			<control type="group">
 				<visible>!player.passthrough</visible>
 
 				<control type="image">
 					<description>Lite Volume Logo</description>
-					<posx>0</posx>
+					<posx>70</posx>
 					<posy>4</posy>
-					<width>40</width>
-					<height>35</height>
+					<width>60</width>
+					<height>60</height>
 					<aspectratio>keep</aspectratio>
-					<texture>nav/volumeicon.png</texture>
+					<texture>osd/audio.png</texture>
 				</control>
 
 				<control type="progress" id="1">
 					<description>progress control</description>
-					<posx>60</posx>
-					<posy>12</posy>
-					<width>330</width>
-					<height>18</height>
+					<posx>0</posx>
+					<posy>68</posy>
+					<width>1285</width>
+					<height>1</height>
+					<texturebg>DialogProgressBack.png</texturebg>
+					<lefttexture>-</lefttexture>
+					<midtexture>osd/osdbg.png</midtexture>
+					<righttexture>-</righttexture>
 					<info>Player.Volume</info>
+					<visible>![Window.IsVisible(fullscreenvideo) | Window.IsVisible(visualisation)]</visible>
 				</control>
 
 			</control>
@@ -38,21 +43,25 @@
 
 				<control type="image">
 					<description>Lite Volume Logo</description>
-					<posx>0</posx>
+					<posx>70</posx>
 					<posy>4</posy>
-					<width>40</width>
-					<height>35</height>
+					<width>60</width>
+					<height>60</height>
 					<aspectratio>keep</aspectratio>
 					<colordiffuse>Red</colordiffuse>
-					<texture>nav/volumeicon.png</texture>
+					<texture>osd/audio.png</texture>
 				</control>
 
 				<control type="label">
 					<description>Passthrough Label</description>
-					<posx>60</posx>
-					<posy>10</posy>
-					<width>330</width>
-					<height>20</height>
+					<posx>130</posx>
+					<posy>26</posy>
+					<width>260</width>
+					<height>42</height>
+					<font>WeatherSmall</font>
+					<align>left</align>
+					<aligny>center</aligny>
+					<textcolor>FF707070</textcolor>
 					<label>29802</label>
 				</control>
 

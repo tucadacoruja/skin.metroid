@@ -6,24 +6,14 @@
 		<posx>120</posx>
 		<posy>0</posy>
 	</coordinates>
-		<animation type="WindowOpen" reversible="false">
-			<effect type="fade" start="0" end="100" time="350" delay="0" />
-			<effect type="zoom" start="130" end="100" time="450" center="auto" delay="0" tween="back" easing="out" />
-		</animation>
-		<animation type="WindowClose" reversible="false">
-			<effect type="fade" start="100" end="0" time="250" delay="0" />
-			<effect type="zoom" start="100" end="130" time="300" center="auto" delay="0" />
-		</animation>
+		<include>DialogEffect</include>
 		
 	<controls>
 
 	<control type="group">
-	<animation type="Conditional" condition="Window.IsVisible(addonsettings) | Window.IsActive(140)">
-		<effect type="fade" start="100" end="10" time="400" />
-		<effect type="zoom" start="100" end="80" center="auto" time="300" />
-	</animation>
-		
-		
+	<visible>!Window.IsVisible(addonsettings)</visible>
+	<include>DialogEffect</include>
+
 		<control type="image">
 			<posx>180</posx>
 			<posy>111</posy>			
@@ -31,21 +21,42 @@
 			<height>482</height>
 			<aspectratio>stretch</aspectratio>
 			<texture>dialog/setcontentbg2.png</texture>
-			<colordiffuse>FF707070</colordiffuse>
+			<!--colordiffuse>FF707070</colordiffuse-->
 		</control>
-
+			<control type="label">
+			<posx>254</posx>
+			<posy>136</posy>
+			<width>556</width>
+			<height>40</height>
+			<font>homemenu3</font>
+			<align>center</align>
+			<aligny>center</aligny>
+			<textcolor>babyblue</textcolor>
+			<label>$LOCALIZE[31060]</label>
+		</control>
+		
 		<control type="image">
 			<posx>211</posx>
-			<posy>361</posy>
+			<posy>375</posy>
 			<width>689</width>
 			<height>1</height>
 			<aspectratio>stretch</aspectratio>
 			<texture>white.png</texture>
 			<colordiffuse>36FFFFFF</colordiffuse>
 		</control>
+		<control type="label">
+			<posx>229</posx>
+			<posy>375</posy>
+			<width>556</width>
+			<height>40</height>
+			<align>left</align>
+			<textcolor>ACFFFFFF</textcolor>
+			<font>heading</font>
+			<label>[B][UPPERCASE]$LOCALIZE[31187][/UPPERCASE][/B]</label>
+		</control>
 		<control type="image">
 			<posx>211</posx>
-			<posy>398</posy>
+			<posy>412S</posy>
 			<width>689</width>
 			<height>1</height>
 			<aspectratio>stretch</aspectratio>
@@ -54,27 +65,29 @@
 		</control>
 			
 		<control type="image">
-			<posx>911</posx>
+			<posx>927</posx>
 			<posy>382</posy>			
-			<width>171</width>
-			<height>171</height>
+			<width>161</width>
+			<height>161</height>
 			<aspectratio>stretch</aspectratio>
 			<texture border="8">dialog/previewbg.png</texture>
 			<colordiffuse>EBFFFFFF</colordiffuse>
 		</control>
 		<control type="image">
 			<description>Large Icon Image</description>
-			<posx>922</posx>
+			<posx>938</posx>
 			<posy>393</posy>
-			<width>150</width>
-			<height>150</height>
+			<width>140</width>
+			<height>140</height>
 			<info>ListItem.Icon</info>
 			<align>center</align>
 			<aligny>center</aligny>
 			<aspectratio align="center" aligny="center">keep</aspectratio>
 		</control>
+		
+		
 	<control type="group" id="9002">
-		<posy>36</posy>
+		<posy>37</posy>
 		<control type="spincontrolex" id="3">
 			<description>Content Picker</description>
 			<posx>211</posx>
@@ -88,8 +101,8 @@
 			<label>20344</label>
 			<texturefocus>setting.png</texturefocus>
 			<texturenofocus>list/listline.png</texturenofocus>
-			<textcolor>FF959595</textcolor>
-			<focusedcolor>ffefefef</focusedcolor>
+			<textcolor>ACFFFFFF</textcolor>
+			<focusedcolor>white</focusedcolor>
 			<font>recent</font>
 			<aligny>center</aligny>
 			
@@ -99,27 +112,7 @@
 			<focusedcolor>ffefefef</focusedcolor>
 			<pulseonselect>false</pulseonselect>
 		</control>
-		<control type="label">
-			<posx>234</posx>
-			<posy>100</posy>
-			<width>556</width>
-			<height>40</height>
-			<font>homemenu3</font>
-			<align>center</align>
-			<aligny>center</aligny>
-			<textcolor>FF959595</textcolor>
-			<label>$LOCALIZE[31060]</label>
-		</control>
-		<control type="label">
-			<posx>229</posx>
-			<posy>322</posy>
-			<width>556</width>
-			<height>40</height>
-			<align>left</align>
-			<textcolor>ff7D7D7D</textcolor>
-			<font>heading</font>
-			<label>[B][UPPERCASE]$LOCALIZE[31187][/UPPERCASE][/B]</label>
-		</control>
+	
 		
 		<control type="list" id="4">
 			<posx>211</posx>
@@ -143,6 +136,7 @@
 					<align>left</align>
 					<label>$LOCALIZE[31053]: $INFO[ListItem.Label]</label>
 					<textcolor>FF959595</textcolor>
+					<selectedcolor>babyblue</selectedcolor>
 				</control>
 			</itemlayout>
 			<focusedlayout height="40">
@@ -166,6 +160,7 @@
 					<align>left</align>
 					<label>$LOCALIZE[31053]: $INFO[ListItem.Label]</label>
 					<textcolor>ffffffff</textcolor>
+					<selectedcolor>babyblue</selectedcolor>
 				</control>
 			</focusedlayout>
 		</control>
@@ -173,7 +168,7 @@
 		<control type="grouplist" id="5">
 			<description>control area</description>
 			<posx>211</posx>
-			<posy>361</posy>
+			<posy>375</posy>
 			<width>690</width>
 			<height>220</height>
 			<itemgap>0</itemgap>
@@ -210,7 +205,7 @@
 	</control>	
 		
  		<control type="group" id="9001">
-			<posx>906</posx>
+			<posx>921</posx>
 			<posy>170</posy>
 			<control type="button" id="6">
 				<description>Settings Button</description>
@@ -219,7 +214,7 @@
 				<onleft>3</onleft>
 				<onright>3</onright>
 				<ondown>28</ondown>
-				<width>191</width>
+			
 				<include>RightHandDialog</include>
 			</control>
 			<control type="button" id="28">
@@ -230,7 +225,7 @@
 				<onleft>3</onleft>
 				<onright>3</onright>
 				<ondown>29</ondown>
-				<width>191</width>
+			
 				<include>RightHandDialog</include>
 			</control>
 			<control type="button" id="29">
@@ -241,7 +236,7 @@
 				<onleft>3</onleft>
 				<onright>3</onright>
 				<ondown>6</ondown>
-				<width>191</width>
+			
 				<include>RightHandDialog</include>
 			</control>
 		</control>

@@ -776,3 +776,20 @@ msgstr ""
 msgctxt "#31206"
 msgid "Foreign is OFF"
 msgstr ""
+
+msgctxt "#31207"
+msgid "Smart Playlist"
+msgstr ""
+
+msgctxt "#31208"
+msgid "Profile"
+msgstr ""
+
+msgctxt "#31209"
+msgid "Lock"
+msgstr ""
+
+msgctxt "#31210"
+msgid "Home button in main menu"
+msgstr ""
+

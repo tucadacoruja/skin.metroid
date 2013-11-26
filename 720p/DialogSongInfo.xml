@@ -35,8 +35,8 @@
 		<height>55</height>
 		<width>55</width>
 		<aspectratio>keep</aspectratio>
-		<texturefocus>osd/buttons/art.png</texturefocus>
-		<texturenofocus>osd/buttons/art.png</texturenofocus>
+		<texturefocus>osd/art.png</texturefocus>
+		<texturenofocus>osd/art.png</texturenofocus>
 		<onright>1</onright>
 		<ondown>Dialog.Close(songinformation)</ondown>
 		<visible allowhiddenfocus="true">Control.HasFocus(13)</visible>
@@ -87,28 +87,28 @@
 			<control type="image">
 				<height>55</height>
 				<width>55</width>
-				<texture>osd/buttons/GrayBackground.png</texture>
+				<texture>osd/GrayBackground.png</texture>
 				<aspectratio>stretch</aspectratio>
 				<animation effect="fade" start="100" end="40" time="100" condition="Control.HasFocus(14)">Conditional</animation>
 			</control>
 			<control type="image">
 				<height>55</height>
 				<width>55</width>
-				<texture>osd/buttons/GrayBackground.png</texture>
+				<texture>osd/GrayBackground.png</texture>
 				<aspectratio>stretch</aspectratio>
 				<animation effect="fade" start="100" end="40" time="100" condition="Control.HasFocus(15)">Conditional</animation>
 			</control>
 			<control type="image">
 				<height>55</height>
 				<width>55</width>
-				<texture>osd/buttons/GrayBackground.png</texture>
+				<texture>osd/GrayBackground.png</texture>
 				<aspectratio>stretch</aspectratio>
 				<animation effect="fade" start="100" end="40" time="100" condition="Control.HasFocus(10)">Conditional</animation>
 			</control>
 			<control type="image">
 				<height>55</height>
 				<width>55</width>
-				<texture>osd/buttons/GrayBackground.png</texture>
+				<texture>osd/GrayBackground.png</texture>
 				<aspectratio>stretch</aspectratio>
 				<animation effect="fade" start="100" end="40" time="100" condition="Control.HasFocus(11)">Conditional</animation>
 			</control>
@@ -136,8 +136,8 @@
 				<height>55</height>
 				<width>55</width>
 				<aspectratio>keep</aspectratio>
-				<texturefocus flipx="true">osd/buttons/increase.png</texturefocus>
-				<texturenofocus flipx="true">osd/buttons/increase.png</texturenofocus>
+				<texturefocus flipx="true">osd/increase.png</texturefocus>
+				<texturenofocus flipx="true">osd/increase.png</texturenofocus>
 				
 				<onclick>DecreaseRating</onclick>
 				<animation effect="zoom" start="100" end="120" center="auto" time="100">Focus</animation>
@@ -149,8 +149,8 @@
 				<height>55</height>
 				<width>55</width>
 				<aspectratio>keep</aspectratio>
-				<texturefocus>osd/buttons/increase.png</texturefocus>
-				<texturenofocus>osd/buttons/increase.png</texturenofocus>
+				<texturefocus>osd/increase.png</texturefocus>
+				<texturenofocus>osd/increase.png</texturenofocus>
 				
 				<onclick>IncreaseRating</onclick>
 				<animation effect="zoom" start="100" end="120" center="auto" time="100">Focus</animation>
@@ -162,8 +162,8 @@
 				<height>55</height>
 				<width>55</width>
 				<aspectratio>keep</aspectratio>
-				<texturefocus>osd/buttons/ok.png</texturefocus>
-				<texturenofocus>osd/buttons/ok.png</texturenofocus>
+				<texturefocus>osd/ok.png</texturefocus>
+				<texturenofocus>osd/ok.png</texturenofocus>
 				
 				<animation effect="zoom" start="100" end="120" center="auto" time="100">Focus</animation>
 				<animation effect="zoom" start="120" end="100" center="auto" time="100">UnFocus</animation>
@@ -174,8 +174,8 @@
 				<height>55</height>
 				<width>55</width>
 				<aspectratio>keep</aspectratio>
-				<texturefocus>osd/buttons/cancel.png</texturefocus>
-				<texturenofocus>osd/buttons/cancel.png</texturenofocus>
+				<texturefocus>osd/cancel.png</texturefocus>
+				<texturenofocus>osd/cancel.png</texturenofocus>
 							
 				<animation effect="zoom" start="100" end="120" center="auto" time="100">Focus</animation>
 				<animation effect="zoom" start="120" end="100" center="auto" time="100">UnFocus</animation>

@@ -3,43 +3,37 @@
 	<defaultcontrol>5</defaultcontrol>
 	<coordinates>
 		<system>1</system>
-		<posx>290</posx>
-		<posy>75</posy>
+		<posx>400</posx>
+		<posy>90</posy>
 	</coordinates>
-	<include>dialogeffect</include>
+	
 	<controls>
+	
+	<control type="group">
+		<include>dialogeffect</include>
+		
 		<control type="image">
 			<description>background image</description>
-			<posx>0</posx>
-			<posy>0</posy>
-			<width>700</width>
-			<height>570</height>
-			<texture border="12">whitepanel2.png</texture>
+			<posx>-12</posx>
+			<posy>-11</posy>
+			<width>724</width>
+			<height>600</height>
 			<aspectratio>stretch</aspectratio>
-			<colordiffuse>ff262626</colordiffuse>
+			<texture border="62">dialog/contentbg2.png</texture>
+			<!--colordiffuse>FF959595</colordiffuse-->
 		</control>
-		<control type="image">
-			<description>Dialog Header image</description>
-			<posx>40</posx>
-			<posy>16</posy>
-			<width>620</width>
-			<height>40</height>
-			<texture diffuse="posterdiffuse.png">black.png</texture>
-			<aspectratio>stretch</aspectratio>
-			<colordiffuse>55ffffff</colordiffuse>
-		</control>
+
 		<control type="label"><!--id="1"-->
 			<description>header label</description>
 			<posx>40</posx>
-			<posy>20</posy>
+			<posy>23</posy>
 			<width>620</width>
 			<height>30</height>
 			<font>heading</font>
 			<label>$LOCALIZE[5]</label>
 			<align>center</align>
 			<aligny>center</aligny>
-			<textcolor>ff959595</textcolor>
-			<shadowcolor>black</shadowcolor>
+			<textcolor>babyblue</textcolor>
 		</control>
 		
 		<control type="label" id="3">
@@ -77,14 +71,14 @@
 			<onright>5</onright>
 			<ondown>60</ondown>
 			<onup>60</onup>
-			<showonepage>false</showonepage>
+			<showonepage>true</showonepage>
 			<orientation>vertical</orientation>
 		</control>
 		<control type="button" id="7">
 			<description>Default Button</description>
 			<posx>0</posx>
 			<posy>0</posy>
-			<texturefocus border="5">button-nofocus.png</texturefocus>
+			<texturefocus>setting.png</texturefocus>
 			<textoffsetx>3</textoffsetx>
 			<align>left</align>
 		</control>
@@ -92,7 +86,7 @@
 			<description>Default RadioButton</description>
 			<posx>0</posx>
 			<posy>0</posy>
-			<texturefocus border="5">button-nofocus.png</texturefocus>
+			<texturefocus>setting.png</texturefocus>
 			<textoffsetx>3</textoffsetx>
 			<align>left</align>
 		</control>
@@ -100,14 +94,14 @@
 			<description>Default SpinControlex</description>
 			<posx>0</posx>
 			<posy>0</posy>
-			<texturefocus border="5">button-nofocus.png</texturefocus>
+			<texturefocus>setting.png</texturefocus>
 			<textoffsetx>3</textoffsetx>
 			<align>left</align>
 		</control>
 		<control type="sliderex" id="10">
 			<description>Default Slider</description>
 			<height>40</height>
-			<texturefocus border="5">button-nofocus.png</texturefocus>
+			<texturefocus>setting.png</texturefocus>
 			<textoffsetx>3</textoffsetx>
 			<align>left</align>
 		</control>
@@ -131,7 +125,7 @@
 				<onright>28</onright>
 				<onup>5</onup>
 				<ondown>5</ondown>
-				<include>ConfirmButton</include>
+				<include>BottomDialog</include>
 			</control>
 			<control type="button" id="28">
 				<description>OK Button</description>
@@ -144,7 +138,7 @@
 				<onright>50</onright>
 				<onup>5</onup>
 				<ondown>5</ondown>
-				<include>ConfirmButton</include>
+				<include>BottomDialog</include>
 			</control>
 			<control type="button" id="50">
 				<description>Defaults Button</description>
@@ -157,8 +151,10 @@
 				<onright>29</onright>
 				<onup>5</onup>
 				<ondown>5</ondown>
-				<include>ConfirmButton</include>
+				<include>BottomDialog</include>
 			</control>
 		</control>
+	</control>
+	
 	</controls>
 </window>

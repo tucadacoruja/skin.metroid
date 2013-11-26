@@ -6,49 +6,8 @@
 <controls>
 
 <include>VideoWindow</include>
-<control type="image">
-	<posx>0</posx>
-	<posy>0</posy>
-	<width>1280</width>
-	<height>720</height>
-	<aspectratio>stretch</aspectratio>
-	<texture background="true" fallback="special://skin/extras/backgrounds/fallback.jpg">$INFO[Skin.String(VideoFallbackImage)]</texture>
-	<animation effect="fade" start="0" end="100" time="100">VisibleChange</animation>
-	<visible>!Player.HasVideo + IsEmpty(ListItem.Art(fanart)) + !Control.IsVisible(28233)</visible>
-</control>
-<control type="multiimage" id="28233">
-	<posx>0</posx>
-	<posy>0</posy>
-	<width>1280</width>
-	<height>720</height>
-	<aspectratio>stretch</aspectratio>
-	<imagepath background="true" fallback="special://skin/extras/backgrounds/fallback.jpg" >$INFO[Skin.String(Wallpaper_Folder_Path)]</imagepath>
-	<timeperimage>10100</timeperimage>
-	<fadetime>1000</fadetime>
-	<randomize>true</randomize>
-	<animation effect="fade" start="0" end="100" time="100">VisibleChange</animation>
-	<visible>!Player.HasVideo + IsEmpty(ListItem.Art(fanart)) + !IsEmpty(Skin.String(Wallpaper_Folder_Path)) + IsEmpty(Skin.String(MusicFallbackImage))</visible>
-</control>
-<control type="image">
-	<posx>0</posx>
-	<posy>0</posy>
-	<width>1280</width>
-	<height>720</height>
-	<aspectratio>stretch</aspectratio>
-	<texture background="true">$INFO[ListItem.Art(fanart)]</texture>
-	<animation effect="fade" start="0" end="100" time="100">VisibleChange</animation>
-	<visible>!Player.HasVideo</visible>
-</control>
+<include>GeneralFanart</include>
 
-<control type="image">
-	<posx>515</posx>
-	<posy>72</posy>
-	<width>250</width>
-	<height>576</height>
-	<aspectratio>stretch</aspectratio>
-	<texture>black.png</texture>
-	<animation effect="fade" start="100" end="0" time="200" condition="Window.IsVisible(mediasource)">Conditional</animation>
-</control>
 <include>Background</include>
 <control type="image">
 	<posx>515</posx>
@@ -57,7 +16,7 @@
 	<height>576</height>
 	<aspectratio>stretch</aspectratio>
 	<texture>black.png</texture>
-	<colordiffuse>26ffffff</colordiffuse>
+	<colordiffuse>55ffffff</colordiffuse>
 	<animation effect="fade" start="100" end="0" time="200" condition="Window.IsVisible(mediasource)">Conditional</animation>
 </control>
 <control type="textbox">
@@ -66,12 +25,12 @@
 	<width>240</width>
 	<height>90</height>	
 	<align>center</align>
-	<textcolor>FF959595</textcolor>
+	<textcolor>95FFFFFF</textcolor>
 	<font>homemenu3</font>
 	<label>[UPPERCASE]$LOCALIZE[31057][/UPPERCASE][CR]$LOCALIZE[31058][CR]$LOCALIZE[31059]</label>
 	<aligny>top</aligny>
 	<autoscroll>false</autoscroll>
-	<visible>Skin.HasSetting(ShowSkinHelp)</visible>
+	<visible>!Skin.HasSetting(ShowSkinHelp)</visible>
 	<animation effect="fade" start="100" end="0" time="200" condition="Window.IsVisible(mediasource)">Conditional</animation>
 </control>
 
@@ -87,9 +46,9 @@
 	<align>left</align>
 	<label>-</label>
 	<font>griddetails</font>
-	<textcolor>FF262626</textcolor>
-	<animation effect="fade" start="0" end="40" time="500" delay="600">WindowOpen</animation>
-	<animation effect="fade" start="40" end="0" time="300" delay="0">WindowClose</animation>
+	<textcolor>white</textcolor>
+	<animation effect="fade" start="0" end="80" time="500" delay="600">WindowOpen</animation>
+	<animation effect="fade" start="80" end="0" time="300" delay="0">WindowClose</animation>
 </control>
 
   <control type="group">
@@ -133,7 +92,8 @@
           <height>44</height>
           <align>left</align>
 	 	  <font>ListSmall</font>
-          <textcolor>White</textcolor>
+          <textcolor>95FFFFFF</textcolor>
+		  <selectedcolor>white</selectedcolor>
           <info>ListItem.Label</info>
           <scroll>false</scroll>
         </control>
@@ -144,7 +104,8 @@
           <height>44</height>
           <align>right</align>
 	 	  <font>recent</font>
-          <textcolor>White</textcolor>
+          <textcolor>95FFFFFF</textcolor>
+		  <selectedcolor>white</selectedcolor>
           <info>ListItem.Label2</info>
           <scroll>false</scroll>
         </control>
@@ -173,7 +134,7 @@
           <height>44</height>
           <align>left</align>
 	 	  <font>ListSmall</font>
-          <textcolor>White</textcolor>
+          <textcolor>white</textcolor>
           <info>ListItem.Label</info>
           <scroll>false</scroll>
         </control>
@@ -184,7 +145,7 @@
           <height>44</height>
           <align>right</align>
 	 	  <font>recent</font>
-          <textcolor>White</textcolor>
+          <textcolor>white</textcolor>
           <info>ListItem.Label2</info>
           <scroll>false</scroll>
         </control>
@@ -218,9 +179,9 @@
 	<align>left</align>
 	<label>-</label>
 	<font>griddetails</font>
-	<textcolor>FF262626</textcolor>
-	<animation effect="fade" start="0" end="40" time="500" delay="600">WindowOpen</animation>
-	<animation effect="fade" start="40" end="0" time="300" delay="0">WindowClose</animation>
+	<textcolor>white</textcolor>
+	<animation effect="fade" start="0" end="80" time="500" delay="600">WindowOpen</animation>
+	<animation effect="fade" start="80" end="0" time="300" delay="0">WindowClose</animation>
 </control>
 	
 
@@ -266,7 +227,8 @@
           <height>44</height>
           <align>left</align>
 	 	  <font>ListSmall</font>
-          <textcolor>White</textcolor>
+          <textcolor>95FFFFFF</textcolor>
+		  <selectedcolor>white</selectedcolor>
           <info>ListItem.Label</info>
           <scroll>false</scroll>
         </control>
@@ -277,7 +239,8 @@
           <height>44</height>
           <align>right</align>
 	 	  <font>recent</font>
-          <textcolor>White</textcolor>
+          <textcolor>95FFFFFF</textcolor>
+		  <selectedcolor>white</selectedcolor>
           <info>ListItem.Label2</info>
           <scroll>false</scroll>
         </control>
@@ -306,7 +269,7 @@
           <height>44</height>
           <align>left</align>
 	 	  <font>ListSmall</font>
-          <textcolor>White</textcolor>
+          <textcolor>white</textcolor>
           <info>ListItem.Label</info>
           <scroll>false</scroll>
         </control>
@@ -317,7 +280,8 @@
           <height>44</height>
           <align>right</align>
 	 	  <font>recent</font>
-          <textcolor>White</textcolor>
+          <textcolor>white</textcolor>
+		
           <info>ListItem.Label2</info>
           <scroll>false</scroll>
         </control>

@@ -24,7 +24,7 @@
 	  <posx>270</posx>
 	  <posy>90</posy>
 	  <width>1000</width>
-	  <height>530</height>
+	  <height>610</height>
 	  <onleft>450</onleft>
 	  <onright>450</onright>
 	  <onup>450</onup>
@@ -37,16 +37,16 @@
 			  <width>320</width>
 			  <height>38</height>
 			  <info>ListItem.Label</info>
-			  <font>homemenu3</font>
+			  <font>InfoScroll</font>
 			  <textcolor>ACFFFFFF</textcolor>
 			  <scroll>false</scroll>
 		  </control>
 		  <control type="label">
-			  <posx>970</posx>
-			  <width>520</width>
+			  <posx>990</posx>
+			  <width>530</width>
 			  <height>38</height>
 			  <align>right</align>
-			  <font>homemenu3</font>
+			  <font>SubMenu20</font>
 			  <scroll>false</scroll>
 			  <textcolor>ACFFFFFF</textcolor>
 			  <info>ListItem.Label2</info>
@@ -57,24 +57,24 @@
 		  <control type="image">
 			  <width>980</width>
 			  <height>38</height>
-			  <texture>white.png</texture>
+			  <texture>setting.png</texture>
 			  <aspectratio>stretch</aspectratio>
-			  <colordiffuse>26FFFFFF</colordiffuse>
+			  <colordiffuse>ACFFFFFF</colordiffuse>
 		  </control>
 		  <control type="label">
 			  <posx>5</posx>
 			  <width>465</width>
 			  <height>38</height>
-			  <font>homemenu3</font>
+			  <font>InfoScroll</font>
         	  <textcolor>White</textcolor>
 			  <info>ListItem.Label</info>
 		  </control>
 		  <control type="label">
-			  <posx>970</posx>
-			  <width>520</width>
+			  <posx>990</posx>
+			  <width>530</width>
 			  <height>38</height>
 			  <align>right</align>
-			  <font>homemenu3</font>
+			  <font>SubMenu20</font>
 			  <textcolor>White</textcolor>
 			  <info>ListItem.Label2</info>
 		  </control>

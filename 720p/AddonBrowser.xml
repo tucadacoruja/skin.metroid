@@ -46,7 +46,7 @@
 </control>
 	
 <include>VideoWindow</include>
-<include>ProgramFanart</include>
+<include>GeneralFanart</include>
 <include>Background</include>	
 
 

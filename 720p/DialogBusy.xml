@@ -36,7 +36,7 @@
 			<height>1</height>
 			<texturebg>DialogProgressBack.png</texturebg>
 			<lefttexture>-</lefttexture>
-			<midtexture>osd/buttons/osdbg.png</midtexture>
+			<midtexture>osd/osdbg.png</midtexture>
 			<righttexture>-</righttexture>
 			<info>System.Progressbar</info>
 			

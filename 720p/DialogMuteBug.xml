@@ -5,16 +5,11 @@
   
 <coordinates>
   <system>1</system>
-  <posx>10</posx>
-  <posy>480</posy>
+  <posx>570</posx>
+  <posy>15</posy>
 </coordinates>
   
 <controls>
-
-  <control type="label">
-    <posx>45</posx>
-    <label>DialogMuteBug.xml</label>
-  </control>
   
 	<control type="image" id="901">
 		<description>Mute Image</description>

@@ -8,23 +8,14 @@
 		<posx>120</posx>
 		<posy>0</posy>
 	</coordinates>
-		<animation type="WindowOpen" reversible="false">
-			<effect type="fade" start="0" end="100" time="350" delay="0" />
-			<effect type="zoom" start="130" end="100" time="450" center="auto" delay="0" tween="back" easing="out" />
-		</animation>
-		<animation type="WindowClose" reversible="false">
-			<effect type="fade" start="100" end="0" time="250" delay="0" />
-			<effect type="zoom" start="100" end="130" time="300" center="auto" delay="0" />
-		</animation>
+		
 		
 		
 	<controls>
 	<control type="group">
-		<animation type="Conditional" condition="Window.IsVisible(filebrowser)">
-			<effect type="fade" start="100" end="0" time="400" />
-			<effect type="zoom" start="100" end="80" center="auto" time="300" />
-		</animation>
-				
+		<visible>!Window.IsVisible(filebrowser)</visible>
+		<include>DialogEffect</include>
+	
 		<control type="image">
 			<posx>180</posx>
 			<posy>111</posy>			
@@ -32,7 +23,7 @@
 			<height>482</height>
 			<aspectratio>stretch</aspectratio>
 			<texture>dialog/setcontentbg2.png</texture>
-			<colordiffuse>FF707070</colordiffuse>
+			<!--colordiffuse>FF707070</colordiffuse-->
 		</control>
 		<control type="image">
 			<posx>911</posx>
@@ -59,13 +50,13 @@
 		<control type="label" id="1">
 			<description>Heading</description>
 			<posx>222</posx>
-			<posy>140</posy>
+			<posy>138</posy>
 			<width>679</width>
 			<height>37</height>
 			<font>homemenu3</font>
 			<align>center</align>
 			<aligny>center</aligny>
-			<textcolor>FF959595</textcolor>
+			<textcolor>babyblue</textcolor>
 			<label>$LOCALIZE[31055]</label>
 		</control>
   	
@@ -110,7 +101,7 @@
 					<scroll>false</scroll>
 					<font>heading</font>
 					<aligny>center</aligny>
-					<textcolor>FF959595</textcolor>
+					<textcolor>ACFFFFFF</textcolor>
 				</control>
 				<control type="label">
 					<posx>90</posx>
@@ -122,7 +113,7 @@
 					<aligny>top</aligny>
 					<font>aired</font>
 					<aligny>center</aligny>
-					<textcolor>FF959595</textcolor>
+					<textcolor>ACFFFFFF</textcolor>
 				</control>
 				
 			</itemlayout>
@@ -157,7 +148,7 @@
 					<label>[B]$INFO[ListItem.Label][/B]</label>
 					<font>heading</font>
 					<aligny>center</aligny>
-					<textcolor>FFEBEBEB</textcolor>
+					<textcolor>white</textcolor>
 				</control>
 				<control type="label">
 					<posx>90</posx>
@@ -169,7 +160,7 @@
 					<aligny>top</aligny>
 					<font>aired</font>
 					<aligny>center</aligny>
-					<textcolor>FFEBEBEB</textcolor>
+					<textcolor>ACFFFFFF</textcolor>
 				</control>
 				
 			</focusedlayout>
@@ -179,10 +170,9 @@
  
 		<control type="button" id="9080">
 			<description>Close Window button</description>
-			<posx>906</posx>
+			<posx>921</posx>
 			<posy>170</posy>
-			<width>191</width>
-				
+						
 			<label>31056</label>
 			<onclick>PreviousMenu</onclick>
 			<onup>5</onup>
@@ -193,12 +183,12 @@
 			<include>RightHandDialog</include>
 		</control>
 		<control type="textbox">
-			<posx>910</posx>
+			<posx>922</posx>
 			<posy>430</posy>
 			<width>171</width>
 			<height>90</height>	
 			<align>center</align>
-			<textcolor>FF959595</textcolor>
+			<textcolor>babyblue</textcolor>
 			<font>homemenu3</font>
 			<label>[UPPERCASE]$LOCALIZE[31057][/UPPERCASE][CR]$LOCALIZE[31058][CR]$LOCALIZE[31059]</label>
 			<aligny>top</aligny>

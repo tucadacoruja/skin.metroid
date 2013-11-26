@@ -16,19 +16,19 @@
 	<posx>-15</posx>
 	<posy>8</posy>
 	<width>570</width>
-	<height>450</height>
+	<height>455</height>
 	
 	<aspectratio>stretch</aspectratio>
-	<texture border="12">dialog/contentbg.png</texture>
-	<colordiffuse>ffD7D7D7</colordiffuse>
+	<texture border="52">dialog/contentbg2.png</texture>
+	<!--colordiffuse>ffD7D7D7</colordiffuse-->
 </control>
 
 
   <control type="list" id="450">
 	  <posx>20</posx>
-	  <posy>40</posy>
+	  <posy>78</posy>
 	  <width>520</width>
-	  <height>382</height>
+	  <height>350</height>
 	  <onleft>450</onleft>
 	  <onright>450</onright>
 	  <onup>450</onup>
@@ -87,94 +87,7 @@
 				<label>$INFO[ListItem.Label]</label>
 			</control>
 	  </focusedlayout>
-		<content>
-			<item id="126">
-							<label>31073</label>
-							<onclick>ActivateWindow(playercontrols)</onclick>
-				
-					
-						</item>
-						<item id="128">
-							<description>Now Playing...</description>
-							<label>31074</label>
-							<onclick condition="Player.HasVideo">ActivateWindow(videoplaylist)</onclick>
-							<onclick  condition="Player.HasAudio">ActivateWindow(musicplaylist)</onclick>
-						
-							
-						</item>
-						
-						
-			
-						<item id="99">
-							<description>Update Library</description>
-							<label>31075</label>
-							<onclick>UpdateLibrary(video)</onclick>
-				
-						</item>
-						
-						<item id="100">
-							<description>Download Logos</description>
-							<label>31076</label>
-							<onclick>RunScript(script.artwork.downloader,mode=custom,mediatype=tvshow,clearlogo)</onclick>
-							<onclick>RunScript(script.artwork.downloader,mode=custom,mediatype=movie,clearlogo)</onclick>
-							<visible>Window.IsActive(Home)</visible>
-				
-						</item>
-						
-						<item id="98">
-							<description>party Mode</description>
-							<label>$LOCALIZE[589]</label>
-							<onclick>SendClick(16)</onclick>
-				
-						</item>
-						<item id="96">
-							<description>Party Mode</description>
-							<label>$LOCALIZE[589]</label>
-							<onclick>ActivateWindow(musiclibrary)</onclick>
-							<onclick>SendClick(16)</onclick>
-							<!--onclick>XBMC.PlayerControl(Partymode(special://skin/extras/library/music/Party_Mode.xsp))</onclick-->
-			
-						</item>
-											
-						<item id="103">
-							<description>Music</description>
-							<label>31078</label>
-				
-				
-							<onclick>xbmc.activatewindow(musiclibrary,songs)</onclick>
-				
-						</item>
-											
-						<item id="101">
-							<label>31079</label>
-											  
-			
-							<onclick condition="IsEmpty(skin.string(SubMenu4))">Skin.Setstring(SubMenu4,open)</onclick>
-							<onclick condition="!IsEmpty(skin.string(SubMenu4))">Skin.Reset(SubMenu4)</onclick>
-							<onclick condition="IsEmpty(skin.string(SubMenu4))">Skin.Setstring(SubMenu4,open)</onclick>
-							<property name="DropdownMenu4">not_empty</property>
-						</item>
-						<include>MovieSortItems</include>
-					  
-						<item id="102">
-							<description>TV Shows</description>
-							<label>31080</label>
-							<label2></label2>
-					
-					
-							<onclick condition="IsEmpty(skin.string(SubMenu5))">Skin.Setstring(SubMenu5,open)</onclick>
-							<onclick condition="!IsEmpty(skin.string(SubMenu5))">Skin.Setstring(SubMenu5,)</onclick>
-							<property name="DropdownMenu5">not_empty</property>
-						</item>
-						<include>TvshowSortItems</include>
-					  						
-						<item id="104">
-							<description>favourites</description>
-							<label>31081</label>
-							<onclick>ActivateWindow(Favourites)</onclick>
-				
-						</item>
-		</content>
+	
   </control>
 
 </controls>

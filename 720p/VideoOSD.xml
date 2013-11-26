@@ -43,7 +43,7 @@
 				<height>4</height>
 				<texturebg>osd/seek/progresscache_back.png</texturebg>
 				<lefttexture>-</lefttexture>
-				<midtexture>osd/buttons/osdbg.png</midtexture>
+				<midtexture>osd/osdbg.png</midtexture>
 				<righttexture>-</righttexture>
 				<info>Player.Progress</info>
 				<colordiffuse>skin.string(MainColorString)</colordiffuse>
@@ -282,49 +282,49 @@
 			<control type="image">
 				<height>60</height>
 				<width>60</width>
-				<texture>osd/buttons/osdbg.png</texture>
+				<texture>osd/osdbg.png</texture>
 				<aspectratio>stretch</aspectratio>
 				<animation effect="fade" start="100" end="60" time="100" condition="Control.HasFocus(1)">Conditional</animation>
 			</control>
 			<control type="image">
 				<height>60</height>
 				<width>60</width>
-				<texture>osd/buttons/osdbg.png</texture>
+				<texture>osd/osdbg.png</texture>
 				<aspectratio>stretch</aspectratio>
 				<animation effect="fade" start="100" end="60" time="100" condition="Control.HasFocus(2)">Conditional</animation>
 			</control>
 			<control type="image">
 				<height>60</height>
 				<width>60</width>
-				<texture>osd/buttons/osdbg.png</texture>
+				<texture>osd/osdbg.png</texture>
 				<aspectratio>stretch</aspectratio>
 				<animation effect="fade" start="100" end="60" time="100" condition="Control.HasFocus(3)">Conditional</animation>
 			</control>
 			<control type="image">
 				<height>60</height>
 				<width>60</width>
-				<texture>osd/buttons/osdbg.png</texture>
+				<texture>osd/osdbg.png</texture>
 				<aspectratio>stretch</aspectratio>
 				<animation effect="fade" start="100" end="60" time="100" condition="Control.HasFocus(4)">Conditional</animation>
 			</control>
 			<control type="image">
 				<height>60</height>
 				<width>60</width>
-				<texture>osd/buttons/osdbg.png</texture>
+				<texture>osd/osdbg.png</texture>
 				<aspectratio>stretch</aspectratio>
 				<animation effect="fade" start="100" end="60" time="100" condition="Control.HasFocus(5)">Conditional</animation>
 			</control>
 			<control type="image">
 				<height>60</height>
 				<width>60</width>
-				<texture>osd/buttons/osdbg.png</texture>
+				<texture>osd/osdbg.png</texture>
 				<aspectratio>stretch</aspectratio>
 				<animation effect="fade" start="100" end="60" time="100" condition="Control.HasFocus(6)">Conditional</animation>
 			</control>
 			<control type="image">
 				<height>60</height>
 				<width>60</width>
-				<texture>osd/buttons/osdbg.png</texture>
+				<texture>osd/osdbg.png</texture>
 				<aspectratio>stretch</aspectratio>
 				<animation effect="fade" start="100" end="60" time="100" condition="Control.HasFocus(7)">Conditional</animation>
 			</control>
@@ -332,28 +332,28 @@
 			<control type="image">
 				<height>60</height>
 				<width>60</width>
-				<texture>osd/buttons/osdbg.png</texture>
+				<texture>osd/osdbg.png</texture>
 				<aspectratio>stretch</aspectratio>
 				<animation effect="fade" start="100" end="60" time="100" condition="Control.HasFocus(9)">Conditional</animation>
 			</control>
 			<control type="image">
 				<height>60</height>
 				<width>60</width>
-				<texture>osd/buttons/osdbg.png</texture>
+				<texture>osd/osdbg.png</texture>
 				<aspectratio>stretch</aspectratio>
 				<animation effect="fade" start="100" end="60" time="100" condition="Control.HasFocus(10)">Conditional</animation>
 			</control>
 			<control type="image">
 				<height>60</height>
 				<width>60</width>
-				<texture>osd/buttons/osdbg.png</texture>
+				<texture>osd/osdbg.png</texture>
 				<aspectratio>stretch</aspectratio>
 				<animation effect="fade" start="100" end="60" time="100" condition="Control.HasFocus(11)">Conditional</animation>
 			</control>
 			<control type="image">
 				<height>60</height>
 				<width>60</width>
-				<texture>osd/buttons/osdbg.png</texture>
+				<texture>osd/osdbg.png</texture>
 				<aspectratio>stretch</aspectratio>
 				<animation effect="fade" start="100" end="60" time="100" condition="Control.HasFocus(12)">Conditional</animation>
 			</control>
@@ -380,8 +380,8 @@
 				<height>60</height>
 				<width>60</width>
 				<aspectratio>keep</aspectratio>
-				<texturefocus flipx="true">osd/buttons/ff.png</texturefocus>
-				<texturenofocus flipx="true">osd/buttons/ff.png</texturenofocus>
+				<texturefocus flipx="true">osd/ff.png</texturefocus>
+				<texturenofocus flipx="true">osd/ff.png</texturenofocus>
 				
 				<onclick>xbmc.playercontrol(rewind)</onclick>
 				<animation effect="zoom" start="100" end="120" center="auto" time="100">Focus</animation>
@@ -392,11 +392,11 @@
 				<description>Play</description>
 				<height>60</height>
 				<width>60</width>
-				<texturefocus>osd/buttons/play.png</texturefocus>
-				<texturenofocus>osd/buttons/play.png</texturenofocus>
+				<texturefocus>osd/play.png</texturefocus>
+				<texturenofocus>osd/play.png</texturenofocus>
 				<usealttexture>Player.Playing</usealttexture>
-				<alttexturefocus>osd/buttons/pause.png</alttexturefocus>
-				<alttexturenofocus>osd/buttons/pause.png</alttexturenofocus>
+				<alttexturefocus>osd/pause.png</alttexturefocus>
+				<alttexturenofocus>osd/pause.png</alttexturenofocus>
 				<onclick>playercontrol(play)</onclick>
 				<animation effect="zoom" start="100" end="120" center="auto" time="100">Focus</animation>
 				<animation effect="zoom" start="120" end="100" center="auto" time="100">UnFocus</animation>
@@ -407,8 +407,8 @@
 				<height>60</height>
 				<width>60</width>
 				<aspectratio>keep</aspectratio>
-				<texturefocus>osd/buttons/ff.png</texturefocus>
-				<texturenofocus>osd/buttons/ff.png</texturenofocus>
+				<texturefocus>osd/ff.png</texturefocus>
+				<texturenofocus>osd/ff.png</texturenofocus>
 				
 				<onclick>xbmc.playercontrol(forward)</onclick>
 				
@@ -421,8 +421,8 @@
 				<height>60</height>
 				<width>60</width>
 				<aspectratio>keep</aspectratio>
-				<texturefocus flipx="true">osd/buttons/skip.png</texturefocus>
-				<texturenofocus flipx="true">osd/buttons/skip.png</texturenofocus>
+				<texturefocus flipx="true">osd/skip.png</texturefocus>
+				<texturenofocus flipx="true">osd/skip.png</texturenofocus>
 				
 				<onclick>xbmc.playercontrol(previous)</onclick>
 				<animation effect="zoom" start="100" end="120" center="auto" time="100">Focus</animation>
@@ -434,8 +434,8 @@
 				<height>60</height>
 				<width>60</width>
 				<aspectratio>keep</aspectratio>
-				<texturefocus>osd/buttons/stop.png</texturefocus>
-				<texturenofocus>osd/buttons/stop.png</texturenofocus>
+				<texturefocus>osd/stop.png</texturefocus>
+				<texturenofocus>osd/stop.png</texturenofocus>
 				
 				<onclick>xbmc.playercontrol(stop)</onclick>
 				<animation effect="zoom" start="100" end="120" center="auto" time="100">Focus</animation>
@@ -447,8 +447,8 @@
 				<height>60</height>
 				<width>60</width>
 				<aspectratio>keep</aspectratio>
-				<texturefocus>osd/buttons/skip.png</texturefocus>
-				<texturenofocus>osd/buttons/skip.png</texturenofocus>
+				<texturefocus>osd/skip.png</texturefocus>
+				<texturenofocus>osd/skip.png</texturenofocus>
 				
 				<onclick>xbmc.playercontrol(next)</onclick>
 				<animation effect="zoom" start="100" end="120" center="auto" time="100">Focus</animation>
@@ -460,8 +460,8 @@
 				<height>60</height>
 				<width>60</width>
 				<aspectratio>keep</aspectratio>
-				<texturefocus flipx="true">osd/buttons/info.png</texturefocus>
-				<texturenofocus flipx="true">osd/buttons/info.png</texturenofocus>
+				<texturefocus flipx="true">osd/info.png</texturefocus>
+				<texturenofocus flipx="true">osd/info.png</texturenofocus>
 				
 				<onclick>xbmc.activatewindow(fullscreeninfo)</onclick>
 				<animation effect="zoom" start="100" end="120" center="auto" time="100">Focus</animation>
@@ -473,8 +473,8 @@
 				<height>60</height>
 				<width>60</width>
 				<aspectratio>keep</aspectratio>
-				<texturefocus>osd/buttons/getsub.png</texturefocus>
-				<texturenofocus>osd/buttons/getsub.png</texturenofocus>
+				<texturefocus>osd/getsub.png</texturefocus>
+				<texturenofocus>osd/getsub.png</texturenofocus>
 				
 				<onclick>Dialog.Close(VideoOSD,true)</onclick>
 				<onclick>ActivateWindow(SubtitleSearch)</onclick>
@@ -488,8 +488,8 @@
 				<height>60</height>
 				<width>60</width>
 				<aspectratio>keep</aspectratio>
-				<texturefocus>osd/buttons/audio.png</texturefocus>
-				<texturenofocus>osd/buttons/audio.png</texturenofocus>
+				<texturefocus>osd/audio.png</texturefocus>
+				<texturenofocus>osd/audio.png</texturenofocus>
 				
 				<onclick>xbmc.activatewindow(124)</onclick>
 				<animation effect="zoom" start="100" end="120" center="auto" time="100">Focus</animation>
@@ -500,8 +500,8 @@
 				<height>60</height>
 				<width>60</width>
 				<aspectratio>keep</aspectratio>
-				<texturefocus>osd/buttons/video.png</texturefocus>
-				<texturenofocus>osd/buttons/video.png</texturenofocus>
+				<texturefocus>osd/video.png</texturefocus>
+				<texturenofocus>osd/video.png</texturenofocus>
 				
 				<onclick>xbmc.activatewindow(osdvideosettings)</onclick>
 				<animation effect="zoom" start="100" end="120" center="auto" time="100">Focus</animation>
@@ -513,8 +513,8 @@
 				<height>60</height>
 				<width>60</width>
 				<aspectratio>keep</aspectratio>
-				<texturefocus>osd/buttons/bookmark.png</texturefocus>
-				<texturenofocus>osd/buttons/bookmark.png</texturenofocus>
+				<texturefocus>osd/bookmark.png</texturefocus>
+				<texturenofocus>osd/bookmark.png</texturenofocus>
 				
 				<onclick>xbmc.activatewindow(videobookmarks)</onclick>
 				<animation effect="zoom" start="100" end="120" center="auto" time="100">Focus</animation>

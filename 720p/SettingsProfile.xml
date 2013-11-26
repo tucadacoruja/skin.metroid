@@ -21,12 +21,14 @@
 </control>
 
 <include>VideoWindow</include>
-<include>SettingsFanart</include>
+<include>GeneralFanart</include>
 <include>Background</include>
 
 <control type="group">
-
-	<animation effect="fade" start="100" end="0" time="300" condition="Window.IsVisible(selectdialog) | Window.IsVisible(filebrowser) | Window.IsVisible(virtualkeyboard) | Window.IsVisible(130)">Conditional</animation>
+	<posy>20</posy>
+	<include>DialogEffect</include>
+	<visible>![Window.IsVisible(selectdialog) | Window.IsVisible(filebrowser) | Window.IsVisible(virtualkeyboard) | Window.IsVisible(profilesettings)]</visible>
+	
 	
 	<control type="button" id="50">
 		<posx>10</posx>
@@ -41,14 +43,25 @@
 	
 	<control type="image">
 		<posx>286</posx>
-		<posy>125</posy>
+		<posy>85</posy>
 		<width>725</width>
-		<height>428</height>
+		<height>528</height>
 		<aspectratio>stretch</aspectratio>
-		<texture border="12">dialog/contentbg.png</texture>
+		<texture border="62">dialog/contentbg2.png</texture>
 		<visible>!Control.IsVisible(28235)</visible>
-		<colordiffuse>FF959595</colordiffuse>
-
+		<!--colordiffuse>FF959595</colordiffuse-->
+	</control>
+	<control type="label">
+		<description>header label</description>
+		<posx>276</posx>
+		<posy>118</posy>
+		<width>725</width>
+		<height>30</height>
+		<font>heading</font>
+		<label>31208</label>
+		<align>center</align>
+		<aligny>center</aligny>
+		<textcolor>babyblue</textcolor>
 	</control>
 		
 		

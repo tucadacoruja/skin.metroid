@@ -17,7 +17,7 @@
 		<visible>Control.IsVisible(709)</visible>
 		<include>WidgetsAnimation</include>
 				
-			<control type="image">
+			<!--control type="image">
 				<posx>1000</posx>
 				<posy>120</posy>
 				<width>300</width>
@@ -28,12 +28,12 @@
 				<align>bottom</align>
 				<aspectratio>stretch</aspectratio>
 				<colordiffuse>66FFFFFF</colordiffuse>
-			</control>
+			</control-->
 			<control type="textbox">
-				<posx>1030</posx>
-				<posy>155</posy>
+				<posx>990</posx>
+				<posy>160</posy>
 				<width>230</width>
-				<height>355</height>
+				<height>320</height>
 				<align>justify</align>
 				<info>ListItem.Plot</info>
 				<font>plot</font>
@@ -42,8 +42,8 @@
 			</control>
 			<control type="image">
 				<description>Rating Info</description>
-				<posx>1030</posx>
-				<posy>525</posy>
+				<posx>990</posx>
+				<posy>510</posy>
 				<width>230</width>
 				<height>40</height>
 				<info>ListItem.StarRating</info>
@@ -51,23 +51,46 @@
 				<visible>!IsEmpty(ListItem.foldername) + !substring(Container.Listitem.Label,..,left)</visible>
 			</control>
 			<control type="label">
-				<posx>1030</posx>
-				<posy>567</posy>
+				<posx>990</posx>
+				<posy>555</posy>
 				<width>633</width>
 				<height>60</height>
 				<align>left</align>
-				<label>$INFO[ListItem.Property(TotalEpisodes)] $LOCALIZE[31179]</label>
+				<label>$LOCALIZE[31179]</label>
 				<font>homemenu3</font>
 				<textcolor>ACEBEBEB</textcolor>
 				<selectedcolor>taskbar</selectedcolor>
 			</control>
 			<control type="label">
-				<posx>1030</posx>
-				<posy>590</posy>
+				<posx>1210</posx>
+				<posy>555</posy>
+				<width>633</width>
+				<height>60</height>
+				<align>right</align>
+				<label>$INFO[ListItem.Property(TotalEpisodes)]</label>
+				<font>homemenu3</font>
+				<textcolor>ACEBEBEB</textcolor>
+				<selectedcolor>taskbar</selectedcolor>
+			</control>
+			
+			<control type="label">
+				<posx>990</posx>
+				<posy>580</posy>
 				<width>633</width>
 				<height>60</height>
 				<align>left</align>
-				<label>$INFO[ListItem.Property(UnWatchedEpisodes)] $LOCALIZE[31180]</label>
+				<label>$LOCALIZE[31180]</label>
+				<font>plot</font>
+				<textcolor>ACEBEBEB</textcolor>
+				<selectedcolor>taskbar</selectedcolor>
+			</control>
+			<control type="label">
+				<posx>1210</posx>
+				<posy>580</posy>
+				<width>633</width>
+				<height>60</height>
+				<align>right</align>
+				<label>$INFO[ListItem.Property(UnWatchedEpisodes)]</label>
 				<font>plot</font>
 				<textcolor>ACEBEBEB</textcolor>
 				<selectedcolor>taskbar</selectedcolor>
@@ -101,7 +124,7 @@
 					<posy>10</posy>
 					<width>590</width>
 					<height>165</height>
-					<texture border="22">poster/postershadow.png</texture>
+					<texture border="22">diffuse/postershadow.png</texture>
 					<align>bottom</align>
 					<aspectratio>stretch</aspectratio>
 					<colordiffuse>70ffffff</colordiffuse>
@@ -134,7 +157,7 @@
 					<width>570</width>
 					<height>105</height>
 					<visible>!IsEmpty(ListItem.Art(banner))</visible>
-					<texture background="true" diffuse="banner/bannerdiff.png" fallback="DefaultAlbumCover.png">$INFO[ListItem.Art(banner)]</texture>
+					<texture background="true" diffuse="diffuse/bannerdiff.png" fallback="DefaultAlbumCover.png">$INFO[ListItem.Art(banner)]</texture>
 					<aspectratio>stretch</aspectratio>
 				</control>
 	
@@ -162,7 +185,7 @@
 					<posy>3</posy>
 					<width>590</width>
 					<height>165</height>
-					<texture border="22">poster/postershadow.png</texture>
+					<texture border="22">diffuse/postershadow.png</texture>
 					<align>bottom</align>
 					<aspectratio>stretch</aspectratio>
 					<colordiffuse>70ffffff</colordiffuse>
@@ -211,7 +234,7 @@
 					<width>570</width>
 					<height>105</height>
 					<visible>!IsEmpty(ListItem.Art(banner))</visible>
-					<texture background="true" diffuse="banner/bannerdiff.png" fallback="DefaultAlbumCover.png">$INFO[ListItem.Art(banner)]</texture>
+					<texture background="true" diffuse="diffuse/bannerdiff.png" fallback="DefaultAlbumCover.png">$INFO[ListItem.Art(banner)]</texture>
 					<aspectratio>stretch</aspectratio>
 						<animation type="Focus" reversible="false">
 							<effect type="zoom" start="93" end="100" time="200" center="auto"/>

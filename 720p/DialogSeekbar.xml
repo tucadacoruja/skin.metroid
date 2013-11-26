@@ -60,7 +60,7 @@
 				<height>4</height>
 				<texturebg>osd/seek/progresscache_back.png</texturebg>
 				<lefttexture>-</lefttexture>
-				<midtexture>osd/buttons/osdbg.png</midtexture>
+				<midtexture>osd/osdbg.png</midtexture>
 				<righttexture>-</righttexture>
 				<info>Player.Progress</info>
 				<colordiffuse>skin.string(MainColorString)</colordiffuse>

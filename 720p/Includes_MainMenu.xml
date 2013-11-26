@@ -295,11 +295,11 @@
 						<include condition="Window.IsActive(musiclibrary)">MusicLibraryItems</include>
 						
 						<item id="114">
-							<description>View</description>
+							<description>viewtype</description>
 							<label>$INFO[Container.ViewMode] $LOCALIZE[31083]</label>
 							<onclick>Container.NextViewMode</onclick>
 							<visible>Window.IsActive(musiclibrary) | Window.IsActive(musicfiles) | Window.IsActive(videolibrary) | Window.IsActive(videofiles) | Window.IsActive(pictures) | Window.IsActive(programs) | Window.IsActive(40) | Window.IsActive(videoplaylist) | Window.IsActive(musicplaylist)</visible>
-							<visible>Skin.HasSetting(HideGlobalViews)</visible>
+							<visible>!Skin.HasSetting(HideGlobalViews)</visible>
 						</item>
 						
 						<item id="115">
@@ -352,6 +352,7 @@
 							<label>31089</label>
 							<visible>!Window.IsActive(Home)</visible>
 							<onclick>xbmc.activatewindow(home)</onclick>
+							<visible>!Skin.HasSetting(HideGlobalHome)</visible>
 						</item>
 											  
 						<item id="110">

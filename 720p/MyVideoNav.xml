@@ -110,7 +110,7 @@
 
 
 <include>VideoWindow</include>	
-<include>VideoFanart</include>
+<include>GeneralFanart</include>
 <include>Background</include>
 
 <include>MainMenu</include>

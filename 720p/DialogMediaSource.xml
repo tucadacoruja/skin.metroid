@@ -8,22 +8,12 @@
 		<posy>0</posy>
 	</coordinates>
 	
-	
-	<animation type="WindowOpen" reversible="false">
-		<effect type="fade" start="0" end="100" time="350" delay="0" />
-		<effect type="zoom" start="130" end="100" time="450" center="auto" delay="0" tween="back" easing="out" />
-	</animation>
-	<animation type="WindowClose" reversible="false">
-		<effect type="fade" start="100" end="0" time="250" delay="0" />
-		<effect type="zoom" start="100" end="130" time="300" center="auto" delay="0" />
-	</animation>
 
-	<controls>
+<controls>
 	<control type="group">
-		<animation type="Conditional" condition="Window.IsVisible(filebrowser) | Window.IsVisible(networksetup) | Window.IsVisible(virtualkeyboard)">
-			<effect type="fade" start="100" end="0" time="400" />
-			<effect type="zoom" start="100" end="80" center="auto" time="300" />
-		</animation>
+		<visible>![Window.IsVisible(filebrowser) | Window.IsVisible(networksetup) | Window.IsVisible(virtualkeyboard)]</visible>
+		<include>DialogEffect</include>
+		
 		<control type="image">
 			<posx>180</posx>
 			<posy>111</posy>			
@@ -31,18 +21,18 @@
 			<height>482</height>
 			<aspectratio>stretch</aspectratio>
 			<texture>dialog/setcontentbg2.png</texture>
-			<colordiffuse>FF707070</colordiffuse>
+			<!--colordiffuse>FF707070</colordiffuse-->
 		</control>
 
 		<control type="label"><!--id="2"-->
 			<posx>222</posx>
-			<posy>140</posy>
+			<posy>137</posy>
 			<width>679</width>
 			<height>37</height>
 			<font>homemenu3</font>
 			<align>center</align>
 			<aligny>center</aligny>
-			<textcolor>FF959595</textcolor>
+			<textcolor>babyblue</textcolor>
 			<label>31071</label>
 		</control>
 
@@ -75,9 +65,9 @@
 					<align>left</align>
 					<aligny>center</aligny>
 					<info>ListItem.Label</info>
-					<textcolor>list</textcolor>
-					<focusedcolor>list</focusedcolor>
-					<selectedcolor>list</selectedcolor>
+					<textcolor>ACFFFFFF</textcolor>
+					<focusedcolor>ACFFFFFF</focusedcolor>
+					<selectedcolor>babyblue</selectedcolor>
 				</control>
 			</itemlayout>
 			<focusedlayout height="37">
@@ -109,7 +99,7 @@
 
 		<control type="button" id="12">
 			<description>Name Button</description>
-			<posx>222</posx>
+			<posx>225</posx>
 			<posy>512</posy>
 			<height>38</height>
 			<width>665</width>		
@@ -118,9 +108,9 @@
 			<onright>9000</onright>
 			<ondown>10</ondown>
 			<textoffsety>-2</textoffsety>
-			<texturefocus>dialog/astextbox.png</texturefocus>
-     		<texturenofocus>dialog/astextbox.png</texturenofocus>
-			<colordiffuse>95FFFFFF</colordiffuse>
+			<texturefocus border="20">white.png</texturefocus>
+     		<texturenofocus border="20">white.png</texturenofocus>
+			<colordiffuse>11FFFFFF</colordiffuse>
 		</control>
 		<control type="label">
 			<description>Name label</description>
@@ -132,12 +122,12 @@
 			<aligny>center</aligny>
 			<font>recent</font>
 			<label>1022</label>
-			<textcolor>FF959595</textcolor>
+			<textcolor>ACFFFFFF</textcolor>
 		</control>
 
 	
 		<control type="group" id="9000">
-			<posx>906</posx>
+			<posx>921</posx>
 			<posy>170</posy>
 			<control type="button" id="11">
 				<description>Browse Button</description>
@@ -146,7 +136,7 @@
 				<onleft>10</onleft>
 				<onright>-</onright>
 				<ondown>13</ondown>
-				<width>191</width>
+				
 				<include>RightHandDialog</include>
 			</control>
 			<control type="button" id="13">
@@ -157,7 +147,7 @@
 				<onleft>10</onleft>
 				<onright>-</onright>
 				<ondown>14</ondown>
-				<width>191</width>
+				
 				<include>RightHandDialog</include>
 			</control>
 			<control type="button" id="14">
@@ -168,13 +158,13 @@
 				<onleft>10</onleft>
 				<onright>-</onright>
 				<ondown>20</ondown>
-				<width>191</width>
+				
 				<include>RightHandDialog</include>
 			</control>
 		</control>
 		
 		<control type="group" id="9001">
-			<posx>906</posx>
+			<posx>921</posx>
 			<posy>370</posy>
 			<control type="button" id="20">
 				<description>Set Content Button</description>
@@ -183,7 +173,7 @@
 				<onleft>10</onleft>
 				<onright>-</onright>
 				<ondown>18</ondown>
-				<width>191</width>
+				
 				<include>RightHandDialog</include>
 			</control>
 			<control type="button" id="18">
@@ -194,7 +184,7 @@
 				<onleft>10</onleft>
 				<onright>-</onright>
 				<ondown>19</ondown>
-				<width>191</width>
+				
 				<include>RightHandDialog</include>
 			</control>
 			<control type="button" id="19">
@@ -205,7 +195,7 @@
 				<onleft>10</onleft>
 				<onright>-</onright>
 				<ondown>11</ondown>
-				<width>191</width>
+				
 				<include>RightHandDialog</include>
 			</control>
 		</control>

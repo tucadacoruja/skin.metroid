@@ -32,12 +32,12 @@
 
 
 <include>VideoWindow</include>
-<include>ProgramFanart</include>
+<include>GeneralFanart</include>
 <include>Background</include>
 <include>MainMenu</include>
 	
 <control type="group">	
-	<posx>105</posx>
+	<posx>70</posx>
 	<posy>75</posy>
 		<include>Favourites</include>
 
@@ -58,7 +58,7 @@
 		<height>215</height>
 		<aspectratio>stretch</aspectratio>
 		<texture>white.png</texture>
-		<animation effect="fade" start="0" end="3" condition="true">Conditional</animation>
+		<animation effect="fade" start="4" end="14" pulse="true" time="5000" condition="true">Conditional</animation>
 	</control>
 	<control type="image">
 		<posx>645</posx>
@@ -67,7 +67,7 @@
 		<height>215</height>
 		<aspectratio>stretch</aspectratio>
 		<texture>white.png</texture>
-		<animation effect="fade" start="0" end="3" condition="true">Conditional</animation>
+		<animation effect="fade" start="4" end="14" pulse="true" time="5000" delay="5000" condition="true">Conditional</animation>
 	</control>
 	
 	<control type="image">
@@ -77,7 +77,7 @@
 		<height>215</height>
 		<aspectratio>stretch</aspectratio>
 		<texture>white.png</texture>
-		<animation effect="fade" start="0" end="3" condition="true">Conditional</animation>
+		<animation effect="fade" start="4" end="14" pulse="true" time="5000" delay="5000" condition="true">Conditional</animation>
 	</control>
 	<control type="image">
 		<posx>905</posx>
@@ -86,18 +86,28 @@
 		<height>215</height>
 		<aspectratio>stretch</aspectratio>
 		<texture>white.png</texture>
-		<animation effect="fade" start="0" end="3" condition="true">Conditional</animation>
+		<animation effect="fade" start="4" end="14" pulse="true" time="5000" condition="true">Conditional</animation>
 	</control>
 	
 	<control type="image">
-		<posx>200</posx>
+		<posx>240</posx>
+		<posy>320</posy>
+		<width>395</width>
+		<height>215</height>
+		<texture border="22">white.png</texture>
+		
+		<aspectratio>stretch</aspectratio>
+		<animation effect="fade" start="4" end="14" pulse="true" time="10000" condition="true">Conditional</animation>
+	</control>
+	<control type="image">
+		<posx>240</posx>
 		<posy>95</posy>
-		<width>435</width>
+		<width>395</width>
 		<height>440</height>
 		<texture border="22">white.png</texture>
 		<!--colordiffuse>ff262626</colordiffuse-->
 		<aspectratio>stretch</aspectratio>
-		<animation effect="fade" start="0" end="5" condition="true">Conditional</animation>
+		<animation effect="fade" start="7" end="16" pulse="true" time="10000" condition="true">Conditional</animation>
 	</control>
 	
 	
@@ -130,17 +140,15 @@
 		<height>30</height>
 		<onup>300</onup>
 		<onleft>300</onleft>
-		<ondown>66</ondown>
+		<onright>300</onright>
+		<ondown>300</ondown>
 		<font>weatherlarge</font>
 		<align>left</align>
 		<aligny>center</aligny>
 		<texturefocus>-</texturefocus>
 		<onclick>Control.Message(3,moveup)</onclick>
-		<label>$INFO[Window.Property(Current.Temperature)][COLOR=BBE0E0E0]$INFO[System.TemperatureUnits][/COLOR]</label>
-		<textcolor>ffffffff</textcolor>
-		<animation effect="zoom" start="90" end="100" center="auto" time="100" condition="Control.HasFocus(50)">Conditional</animation>
-		<animation effect="zoom" start="100" end="90" center="auto" time="100" delay="200" condition="!Control.HasFocus(50)">Conditional</animation>
-		
+		<label>-</label>
+
 		<visible>false</visible>
 	</control>	
 	
@@ -155,7 +163,7 @@
 		<align>left</align>
 		<aligny>center</aligny>
 		
-		<label>$INFO[Window.Property(Current.Temperature)][COLOR=BBE0E0E0]$INFO[System.TemperatureUnits][/COLOR]</label>
+		<label>[COLOR=EBFFFFFF]$INFO[Window.Property(Current.Temperature)][/COLOR][COLOR=BBE0E0E0]$INFO[System.TemperatureUnits][/COLOR]</label>
 		<textcolor>ffffffff</textcolor>
 		
 	</control>	

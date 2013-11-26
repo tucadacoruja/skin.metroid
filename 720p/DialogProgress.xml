@@ -57,7 +57,7 @@
 		<posy>10</posy>
 		<height>55</height>
 		<width>55</width>
-		<texture>osd/buttons/GrayBackground.png</texture>
+		<texture>osd/GrayBackground.png</texture>
 		<aspectratio>stretch</aspectratio>
 		
 	</control>
@@ -66,7 +66,7 @@
 		<posy>10</posy>
 		<width>55</width>
 		<height>55</height>
-		<texture>osd/buttons/kai.png</texture>
+		<texture>osd/kai.png</texture>
 		
 	</control>
   
@@ -78,7 +78,7 @@
 		<height>1</height>
 		<texturebg>DialogProgressBack.png</texturebg>
 		<lefttexture>-</lefttexture>
-		<midtexture>osd/buttons/osdbg.png</midtexture>
+		<midtexture>osd/osdbg.png</midtexture>
 		<righttexture>-</righttexture>
 		<info>System.Progressbar</info>
 		<visible>![Window.IsVisible(fullscreenvideo) | Window.IsVisible(visualisation)]</visible>

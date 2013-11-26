@@ -14,10 +14,21 @@
 
   
 	<control type="group"> 
-	  <posx>296</posx>
-	  <posy>75</posy>
+	  <posx>246</posx>
+	  <posy>95</posy>
 	  <animation effect="fade" start="100" end="0" time="150" condition="Window.IsVisible(locksettings) | Window.IsVisible(filebrowser) | Window.IsVisible(virtualkeyboard)">Conditional</animation>	  
 	  <animation effect="fade" start="10" end="100" time="150">WindowOpen</animation>	  
+		
+		<!--control type="image">
+			<description>background image</description>
+			<posx>15</posx>
+			<posy>20</posy>
+			<width>662</width>
+			<height>545</height>
+			<aspectratio>stretch</aspectratio>
+			<texture>white.png</texture>
+			<colordiffuse>36FFFFFF</colordiffuse>
+		</control-->	
 		<control type="image">
 			<description>background image</description>
 			<posx>-16</posx>
@@ -25,8 +36,8 @@
 			<width>722</width>
 			<height>615</height>
 			<aspectratio>stretch</aspectratio>
-			<texture border="12">dialog/contentbg.png</texture>
-			<colordiffuse>FF959595</colordiffuse>
+			<texture border="62">dialog/contentbg2.png</texture>
+			<!--colordiffuse>FF959595</colordiffuse-->
 		</control>	
 			
 	
@@ -51,7 +62,7 @@
 			<label>$INFO[Window.Property(heading)]</label>
 			<align>center</align>
 			<aligny>center</aligny>
-			<textcolor>white</textcolor>
+			<textcolor>babyblue</textcolor>
 		</control>
 		<control type="image" id="2">
 			<description>profile image</description>
@@ -81,7 +92,7 @@
 			<width>460</width>
 			<align>left</align>
 			<font>DefaultButton</font>
-			<textcolor>blue</textcolor>
+			<textcolor>white</textcolor>
 			<colordiffuse>95FFFFFF</colordiffuse>
 		</control>
 		<control type="label">
@@ -101,21 +112,21 @@
 			<width>460</width>
 			<align>left</align>
 			<font>recent</font>
-			<textcolor>blue</textcolor>
+			<textcolor>white</textcolor>
 			<colordiffuse>95FFFFFF</colordiffuse>
 		</control>
 		<control type="image">
 			<posx>9</posx>
-			<posy>240</posy>
+			<posy>243</posy>
 			<width>671</width>
-			<height>270</height>
+			<height>267</height>
 			<aspectratio>stretch</aspectratio>
 			<texture>white.png</texture>
 			<colordiffuse>11FFFFFF</colordiffuse>
 		</control>
 		<control type="image">
 			<posx>9</posx>
-			<posy>240</posy>
+			<posy>243</posy>
 			<width>671</width>
 			<height>1</height>
 			<aspectratio>stretch</aspectratio>
@@ -194,26 +205,26 @@
 		<control type="button" id="28">
 			<description>Ok Button</description>
 			<posx>145</posx>
-			<posy>515</posy>
+			<posy>517</posy>
 			<label>$LOCALIZE[186]</label>
 			<onleft>29</onleft>
 			<onright>29</onright>
 			<onup>5</onup>
 			<ondown>5</ondown>
-					
-			<include>ConfirmButton</include>
+			
+			<include>BottomDialog</include>
 		</control>
 		<control type="button" id="29">
 			<description>Close Button</description>
 			<posx>355</posx>
-			<posy>515</posy>
+			<posy>517</posy>
 			<label>$LOCALIZE[222]</label>
 			<onleft>28</onleft>
 			<onright>28</onright>
 			<onup>5</onup>
 			<ondown>5</ondown>
-						
-			<include>ConfirmButton</include>
+					
+			<include>BottomDialog</include>
 		</control>
 	</control>
 </controls>

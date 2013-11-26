@@ -9,17 +9,14 @@
 		<posy>0</posy>
 	</coordinates>
 	
-	<animation type="WindowOpen" reversible="false">
-		<effect type="fade" start="0" end="100" time="350" delay="0" />
-		<effect type="zoom" start="130" end="100" time="450" center="auto" delay="0" tween="back" easing="out" />
-	</animation>
-	<animation type="WindowClose" reversible="false">
-		<effect type="fade" start="100" end="0" time="250" delay="0" />
-		<effect type="zoom" start="100" end="130" time="300" center="auto" delay="0" />
-	</animation>  
+	
 	
 <controls>
-    
+
+<control type="group">
+	<include>DialogEffect</include>
+	
+			
 	<control type="image">
 		<posx>180</posx>
 		<posy>111</posy>			
@@ -27,7 +24,7 @@
 		<height>482</height>
 		<aspectratio>stretch</aspectratio>
 		<texture>dialog/setcontentbg2.png</texture>
-		<colordiffuse>FF707070</colordiffuse>
+		<!--colordiffuse>FF707070</colordiffuse-->
 	</control>
 	<control type="label" id="20">
 		<description>Heading</description>
@@ -38,12 +35,10 @@
 		<font>homemenu3</font>
 		<align>center</align>
 		<aligny>center</aligny>
-		<textcolor>FF959595</textcolor>
+		<textcolor>babyblue</textcolor>
 		<label>$LOCALIZE[1007]</label>
 	</control>
 
-<control type="group">
-	<posy>0</posy>
 
 	<control type="image">
 		<posx>211</posx>
@@ -118,9 +113,9 @@
 		<aligny>center</aligny>
 		<texturefocus>setting.png</texturefocus>
 		<texturenofocus>-</texturenofocus>
-		
 		<textoffsetx>10</textoffsetx>
-		<focusedcolor>ffefefef</focusedcolor>
+		<textcolor>ACFFFFFF</textcolor>
+		<focusedcolor>white</focusedcolor>
 		<texturefocus>setting.png</texturefocus>
 		<pulseonselect>false</pulseonselect>
 	</control>
@@ -140,8 +135,8 @@
 		
 		<font>recent</font>
 		<align>left</align>
-		<textcolor>FF959595</textcolor>
-		<focusedcolor>ffefefef</focusedcolor>
+		<textcolor>ACFFFFFF</textcolor>
+		<focusedcolor>white</focusedcolor>
 		<texturefocus>setting.png</texturefocus>
 		<texturenofocus>-</texturenofocus>
 		<textoffsetx>10</textoffsetx>
@@ -157,6 +152,8 @@
 		<label>$LOCALIZE[1024]</label>
 		<texturefocus>White35p.png</texturefocus>
 		<texturenofocus>-</texturenofocus>
+		<textcolor>ACFFFFFF</textcolor>
+		<focusedcolor>white</focusedcolor>
 		<onup>10</onup>
 		<onleft>11</onleft>
 		<onright>9001</onright>
@@ -171,8 +168,8 @@
 		<aligny>center</aligny>
 		<font>recent</font>
 		<align>left</align>
-		<textcolor>FF959595</textcolor>
-		<focusedcolor>ffefefef</focusedcolor>
+		<textcolor>ACFFFFFF</textcolor>
+		<focusedcolor>white</focusedcolor>
 		<texturefocus>setting.png</texturefocus>
 		<texturenofocus>-</texturenofocus>
 		 
@@ -192,8 +189,8 @@
 		<aligny>center</aligny>
 		<font>recent</font>
 		<align>left</align>
-		<textcolor>FF959595</textcolor>
-		<focusedcolor>ffefefef</focusedcolor>
+		<textcolor>ACFFFFFF</textcolor>
+		<focusedcolor>white</focusedcolor>
 		<texturefocus>setting.png</texturefocus>
 		<texturenofocus>-</texturenofocus>
 		 
@@ -213,8 +210,8 @@
 		<aligny>center</aligny>
 		<font>recent</font>
 		<align>left</align>
-		<textcolor>FF959595</textcolor>
-		<focusedcolor>ffefefef</focusedcolor>
+		<textcolor>ACFFFFFF</textcolor>
+		<focusedcolor>white</focusedcolor>
 		<texturefocus>setting.png</texturefocus>
 		<texturenofocus>-</texturenofocus>
 		 
@@ -234,8 +231,8 @@
 		<aligny>center</aligny>
 		<font>recent</font>
 		<align>left</align>
-		<textcolor>FF959595</textcolor>
-		<focusedcolor>ffefefef</focusedcolor>
+		<textcolor>ACFFFFFF</textcolor>
+		<focusedcolor>white</focusedcolor>
 		<texturefocus>setting.png</texturefocus>
 		<texturenofocus>-</texturenofocus>
 		 
@@ -246,9 +243,9 @@
 		<onright>9001</onright>
 		<ondown>10</ondown>
 	</control>
- </control> 
+
 		<control type="group" id="9001">
-			<posx>906</posx>
+			<posx>921</posx>
 			<posy>180</posy>
 			<control type="button" id="18">
 				<description>Ok Button</description>
@@ -257,7 +254,7 @@
 				<onleft>10</onleft>
 				<onright>-</onright>
 				<ondown>19</ondown>
-				<width>191</width>
+			
 				<include>RightHandDialog</include>
 			</control>
 			<control type="button" id="19">
@@ -268,11 +265,13 @@
 				<onleft>10</onleft>
 				<onright>-</onright>
 				<ondown>11</ondown>
-				<width>191</width>
+			
 				<include>RightHandDialog</include>
 			</control>
 		</control>
+		
+</control> 
   
-	</controls>
+</controls>
 
 </window>

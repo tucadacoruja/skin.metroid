@@ -2,6 +2,7 @@
 <window type="dialog">
 	<defaultcontrol>400</defaultcontrol>
 	<allowoverlay>no</allowoverlay>
+	<onload>Notification(sorry, Not available)</onload>
 	<controls>
 		<control type="list" id="100">
 			<visible>false</visible>

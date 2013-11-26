@@ -38,26 +38,27 @@
 	<control type="image">
 		<description>logo</description>
 		<posx>450</posx>
-		<posy>35</posy>
+		<posy>65</posy>
 		<width>380</width>
 		<height>400</height>
 		<aspectratio>keep</aspectratio>
-		<texture>settings/LogoBig.png</texture>
+		<texture>DefaultFallback.png</texture>
 		<!--colordiffuse>ddffffff</colordiffuse-->
 		<!--animation effect="zoom" end="50" center="auto" time="0" condition="true">Conditional</animation-->
 		<animation effect="rotatey" end="360" center="640,360" time="60000" loop="true" condition="true">Conditional</animation>
 	</control>
 	<control type="label">
 		<posx>0</posx>
-		<posy>50r</posy>
+		<posy>670</posy>
 		<width>1280</width>
 		<height>35</height>
 		<font>LoginSmall</font>
-		<textcolor>ff757575</textcolor>
+		<textcolor>95FFFFFF</textcolor>
 		<scroll>true</scroll>
 		<align>center</align>
 		<aligny>center</aligny>
 		<label>[UPPERCASE]$LOCALIZE[31133][/UPPERCASE]</label>
+		<animation effect="fade" start="100" end="0" time="200" condition="Window.IsVisible(numericinput) | Window.IsVisible(virtualkeyboard)">Conditional</animation>
 	</control>
 </control>	
 	
@@ -85,7 +86,7 @@
 				<viewtype label="loginlist">list</viewtype>
 				<focusposition>1</focusposition>
 				<scrolltime>200</scrolltime>
-				
+				<animation effect="fade" start="100" end="0" time="200" condition="Window.IsVisible(numericinput) | Window.IsVisible(virtualkeyboard)">Conditional</animation>
 				
 				<itemlayout height="45" width="380">
 					<control type="label">
@@ -94,7 +95,7 @@
 						<width>380</width>
 						<height>45</height>
 						<font>LoginList</font>
-						<textcolor>ff757575</textcolor>
+						<textcolor>95FFFFFF</textcolor>
 						<label>$INFO[ListItem.Label]</label>
 						<align>center</align>
 					</control>

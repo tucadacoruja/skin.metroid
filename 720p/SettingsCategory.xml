@@ -28,7 +28,8 @@
 	<animation effect="fade" start="1" end="0" time="0" condition="true">Conditional</animation>
 </control>
 
-<include>SettingsFanart</include>
+<include>VideoWindow</include>
+<include>GeneralFanart</include>
 <include>Background</include>
 
 	
@@ -56,7 +57,7 @@
 		<height>650</height>
 		<aspectratio>stretch</aspectratio>
 		<texture>shadowv.png</texture>
-	
+		<animation effect="fade" start="0" end="70" time="0" condition="true">Conditional</animation>
 	</control>
 	
 	<control type="group">
@@ -64,21 +65,11 @@
 		<include>EmptyMenu</include>
 	</control>
 	
-	<control type="textbox" id="6">
-		<posx>388</posx>
-		<posy>610</posy>
-		<width>760</width>
-		<height>75</height>
-		<align>justify</align>
-		<label>-</label>
-		<font>SubMenu20</font>
-		<textcolor>blue</textcolor>
-		<animation effect="fade" start="100" end="80" time="0" condition="true">Conditional</animation>
-	</control>
+	
 			
 	<control type="grouplist" id="3">
 		<description>Button Area</description>
-		<posx>5</posx>
+		<posx>2</posx>
 		<posy>72</posy>
 		<width>300</width>
 		<height>570</height>
@@ -92,14 +83,26 @@
 	
 
 	<control type="group">
-	<posy>-10</posy>
-		<animation type="Conditional" condition="Window.IsVisible(126) | Window.IsVisible(2000)">
+	<posy>0</posy>
+		<animation type="Conditional" condition="Window.IsVisible(126) | Window.IsVisible(2000) | Window.IsVisible(peripherals)">
 			<effect type="fade" start="100" end="0" time="200" />
 		</animation>
 		<animation type="WindowClose" reversible="false">
 			<effect type="fade" start="100" end="0" time="200" delay="0" />
 		</animation> 
-
+		
+		<control type="textbox" id="6">
+			<posx>388</posx>
+			<posy>620</posy>
+			<width>760</width>
+			<height>75</height>
+			<align>justify</align>
+			<label>-</label>
+			<font>SubMenu20</font>
+			<textcolor>blue</textcolor>
+			<animation effect="fade" start="100" end="80" time="0" condition="true">Conditional</animation>
+		</control>
+	
 		<control type="grouplist" id="5">
 			<description>Control Area</description>
 			<posx>368</posx>
@@ -161,7 +164,7 @@
 			
 			<description>Default Category Button</description>
 			<height>50</height>
-			<width>239</width>
+			<width>247</width>
 			<align>left</align>
 			<textoffsetx>23</textoffsetx>
 			<font>MainMenu21</font>
@@ -174,10 +177,11 @@
 		
 		<control type="button" id="20">
 		
-			<posy>631</posy>
+			<posx>1</posx>
+			<posy>621</posy>
 			<description>Default Category Button</description>
 			<height>50</height>
-			<width>245</width>
+			<width>247</width>
 			<align>left</align>
 			<aligny>center</aligny>
 			<textoffsetx>23</textoffsetx>

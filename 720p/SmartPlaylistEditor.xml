@@ -4,43 +4,30 @@
 	<allowoverlay>no</allowoverlay>
 	<coordinates>
 		<system>1</system>
-		<posx>120</posx>
-		<posy>47</posy>
+		<posx>360</posx>
+		<posy>55</posy>
 	</coordinates>
 	<controls>
 	
 	<control type="label" id="2">
-		<posx>-10</posx>
-		<posy>-10</posy>
-		<width>1</width>
-		<height>1</height>
-		<animation effect="fade" start="1" end="0" time="0" condition="true">Conditional</animation>
+		<description>Heading</description>
+		<posx>222</posx>
+		<posy>140</posy>
+		<width>679</width>
+		<height>37</height>
+		<font>homemenu3</font>
+		<align>center</align>
+		<aligny>center</aligny>
+		<textcolor>FFEBEBEB</textcolor>
 	</control>
 
 
 		<control type="group">
-			<posx>240</posx>
-			<animation type="WindowClose" reversible="false">
-				<effect type="fade" start="100" end="0" time="350" delay="0" />
-				<effect type="slide" start="0,0" end="0,700" time="550" delay="0" tween="sine" easing="out" />
-			</animation>
-			<animation type="WindowOpen" reversible="false">
-				<effect type="fade" start="0" end="100" time="350" delay="0" />
-				<effect type="slide" start="0,500" end="0,0" time="450" delay="0" tween="back" easing="out" />
-			</animation>
+		
+			<include>DialogEffect</include>
 			
 			<visible>!Window.IsVisible(smartplaylistrule) + !Window.IsVisible(virtualkeyboard)</visible>
-			<control type="image">
-				<description>background image</description>
-				<posx>-14</posx>
-				<posy>-4</posy>
-				<width>826</width>
-				<height>680</height>
-				<texture border="12">dialog/contentbg.png</texture>
-				<colordiffuse>FF959595</colordiffuse>
-				<aspectratio>stretch</aspectratio>
-				
-			</control>
+			
 				
 			<control type="image">
 				<description>name bg image</description>
@@ -84,7 +71,32 @@
 				<animation effect="fade" start="0" end="14" time="0" condition="true">Conditional</animation>
 			</control>
 			
-			<control type="label">
+			<control type="image">
+				<description>background image</description>
+				<posx>-14</posx>
+				<posy>-4</posy>
+				<width>826</width>
+				<height>680</height>
+				<texture border="62">dialog/contentbg2.png</texture>
+				<!--colordiffuse>FF959595</colordiffuse-->
+				<aspectratio>stretch</aspectratio>
+				
+			</control>
+			
+			<control type="label" id="2">
+				<description>Heading</description>
+				<posx>30</posx>
+				<posy>25</posy>
+				<width>740</width>
+				<height>37</height>
+				<font>homemenu3</font>
+				<align>center</align>
+				
+				<textcolor>babyblue</textcolor>
+				<label>31207</label>
+			</control>
+	
+			<!--control type="label">
 				<description>rules label</description>
 				<posx>30</posx>
 				<posy>33</posy>
@@ -94,7 +106,7 @@
 				<font>about</font>
 				<textcolor>list</textcolor>
 			</control>
-			<control type="label">
+			<!--control type="label">
 				<description>rules label</description>
 				<posx>30</posx>
 				<posy>375</posy>
@@ -103,11 +115,11 @@
 				<label>31174</label>
 				<font>about</font>
 				<textcolor>list</textcolor>
-			</control>
+			</control-->
 			<control type="spincontrolex" id="22">
 				<description>Set Playlist type</description>
 				<posx>20</posx>
-				<posy>70</posy>
+				<posy>74</posy>
 				<width>760</width>
 				<height>40</height>
 				<label>467</label>
@@ -143,15 +155,15 @@
 				<font>font13</font>
 				<textcolor>ACFFFFFF</textcolor>
 				<align>center</align>
-				<texturefocus border="20">keyboard/textbg.png</texturefocus>
-				<texturenofocus border="20">keyboard/textbg.png</texturenofocus>
+				<texturefocus colordiffuse="44FFFFFF" border="20">dialog/textbg.png</texturefocus>
+				<texturenofocus  colordiffuse="44FFFFFF" border="20">dialog/textbg.png</texturenofocus>
 				<label>-</label>
 				<onup>22</onup>
 				<onleft>12</onleft>
 				<onright>12</onright>
 				<ondown>10</ondown>
 				
-				<colordiffuse>95FFFFFF</colordiffuse>
+				<!--colordiffuse>95FFFFFF</colordiffuse-->
 			</control>
 			<control type="label">
 				<description>rules label</description>
@@ -221,7 +233,7 @@
 					<font>about</font>
 					<align>center</align>
 					<aligny>center</aligny>
-					<texturefocus>White35p.png</texturefocus>
+					<texturefocus colordiffuse="44FFFFFF">dialog/RightBtn.png</texturefocus>
 					<texturenofocus></texturenofocus>
 					<onup>17</onup>
 					<onleft>10</onleft>
@@ -238,7 +250,7 @@
 					<font>about</font>
 					<align>center</align>
 					<aligny>center</aligny>
-					<texturefocus>White35p.png</texturefocus>
+					<texturefocus colordiffuse="44FFFFFF">dialog/RightBtn.png</texturefocus>
 					<texturenofocus></texturenofocus>
 					<onup>13</onup>
 					<onleft>10</onleft>
@@ -255,7 +267,7 @@
 					<font>about</font>
 					<align>center</align>
 					<aligny>center</aligny>
-					<texturefocus>White35p.png</texturefocus>
+					<texturefocus colordiffuse="44FFFFFF">dialog/RightBtn.png</texturefocus>
 					<texturenofocus></texturenofocus>
 					<onup>14</onup>
 					<onleft>10</onleft>
@@ -329,7 +341,7 @@
 			</control>
 			
 			<control type="togglebutton" id="19">
-				<posx>600</posx>
+				<posx>595</posx>
 				<posy>495</posy>
 				<width>180</width>
 				<height>40</height>
@@ -338,10 +350,10 @@
 				<focusedcolor>white</focusedcolor>
 				<align>center</align>
 				<aligny>center</aligny>
-				<texturefocus border="5">ConfirmFO.png</texturefocus>
+				<texturefocus border="5" colordiffuse="44FFFFFF">dialog/RightBtn.png</texturefocus>
 				<texturenofocus>-</texturenofocus>
 				<alttexturenofocus>-</alttexturenofocus>
-				<alttexturefocus border="5">ConfirmFO.png</alttexturefocus>
+				<alttexturefocus border="5" colordiffuse="44FFFFFF">dialog/RightBtn.png</alttexturefocus>
 				<label>21431</label>
 				<altlabel>21430</altlabel>
 				<onright>18</onright>
@@ -393,26 +405,26 @@
 				<control type="button" id="20">
 					<description>Ok Button</description>
 					<posx>195</posx>
-					<posy>595</posy>
+					<posy>593</posy>
 					<label>$LOCALIZE[186]</label>
 					<onup>18</onup>
 					<onleft>21</onleft>
 					<onright>21</onright>
 					<ondown>22</ondown>
 					
-					<include>ConfirmButton</include>
+					<include>BottomDialog</include>
 				</control>
 				<control type="button" id="21">
 					<description>Cancel Button</description>
 					<posx>405</posx>
-					<posy>595</posy>
+					<posy>593</posy>
 					<label>$LOCALIZE[222]</label>
 					<onup>18</onup>
 					<onleft>20</onleft>
 					<onright>20</onright>
 					<ondown>22</ondown>
 					
-					<include>ConfirmButton</include>
+					<include>BottomDialog</include>
 				</control>
 			</control>
 		</control>

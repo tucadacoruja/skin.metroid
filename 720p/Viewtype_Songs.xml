@@ -196,7 +196,7 @@
 						<height>519</height>
 						<aspectratio>stretch</aspectratio>
 						<colordiffuse>55FFFFFF</colordiffuse>
-						<texture background="true">poster/postershadow.png</texture>
+						<texture background="true">diffuse/postershadow.png</texture>
 						
 					</control>
 					<control type="image">
@@ -205,7 +205,7 @@
 						<width>446</width>
 						<height>497</height>
 						<aspectratio scalediffuse="false">stretch</aspectratio>
-						<texture border="12" diffuse="banner/bannerdiff.png">whitepanel2.png</texture>
+						<texture border="12" diffuse="diffuse/bannerdiff.png">whitepanel2.png</texture>
 						<colordiffuse>FFACACAC</colordiffuse>
 					</control>
 					<control type="image">
@@ -227,7 +227,7 @@
 						<height>524</height>
 						<aspectratio>stretch</aspectratio>
 						<colordiffuse>55FFFFFF</colordiffuse>
-						<texture background="true">poster/postershadow.png</texture>
+						<texture background="true">diffuse/postershadow.png</texture>
 						
 					</control>
 					<control type="image">
@@ -236,7 +236,7 @@
 						<width>446</width>
 						<height>504</height>
 						<aspectratio scalediffuse="false">stretch</aspectratio>
-						<texture border="12" diffuse="banner/bannerdiff.png">whitepanel2.png</texture>
+						<texture border="12" diffuse="diffuse/bannerdiff.png">whitepanel2.png</texture>
 						
 						<colordiffuse>FFEBEBEB</colordiffuse>
 					</control>
@@ -246,7 +246,7 @@
 						<width>422</width>
 						<height>410</height>
 						<aspectratio scalediffuse="false">scale</aspectratio>
-						<texture diffuse="poster/albumdiffuse.png" fallback="DefaultAlbumCover.png">$INFO[ListItem.Art(thumb)]</texture>
+						<texture diffuse="diffuse/albumdiffuse.png" fallback="DefaultAlbumCover.png">$INFO[ListItem.Art(thumb)]</texture>
 					</control>
 					
 				</control>

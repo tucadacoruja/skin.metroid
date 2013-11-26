@@ -9,16 +9,12 @@
 		<posy>-20</posy>
 	</coordinates>
 	
-	<animation type="WindowOpen" reversible="false">
-		<effect type="fade" start="0" end="100" time="350" delay="0" />
-		<effect type="zoom" start="130" end="100" time="450" center="auto" delay="0" tween="back" easing="out" />
-	</animation>
-	<animation type="WindowClose" reversible="false">
-		<effect type="fade" start="100" end="0" time="250" delay="0" />
-		<effect type="zoom" start="100" end="130" time="300" center="auto" delay="0" />
-	</animation>
+	
 		
-	<controls>
+<controls>
+<control type="group">
+	<include>DialogEffect</include>
+	
 		<control type="image">
 			<posx>180</posx>
 			<posy>111</posy>			
@@ -26,13 +22,13 @@
 			<height>482</height>
 			<aspectratio>stretch</aspectratio>
 			<texture>dialog/setcontentbg2.png</texture>
-			<colordiffuse>FF707070</colordiffuse>
+			<!--colordiffuse>FF707070</colordiffuse-->
 		</control>
 		<control type="image">
-			<posx>911</posx>
-			<posy>382</posy>			
-			<width>171</width>
-			<height>171</height>
+			<posx>928</posx>
+			<posy>382</posy>		
+			<width>161</width>
+			<height>161</height>
 			<aspectratio>stretch</aspectratio>
 			<texture border="8">dialog/previewbg.png</texture>
 			<colordiffuse>EBFFFFFF</colordiffuse>
@@ -40,10 +36,10 @@
 		</control>
 		<control type="image">
 			<description>Large Icon Image</description>
-			<posx>922</posx>
+			<posx>939</posx>
 			<posy>393</posy>
-			<width>150</width>
-			<height>150</height>
+			<width>140</width>
+			<height>140</height>
 			<info>Container(6).ListItem.Icon</info>
 			<align>center</align>
 			<aligny>center</aligny>
@@ -60,7 +56,7 @@
 			<font>homemenu3</font>
 			<align>center</align>
 			<aligny>center</aligny>
-			<textcolor>FF959595</textcolor>
+			<textcolor>babyblue</textcolor>
 		</control>
   		<control type="list" id="3">
 			<posx>211</posx>
@@ -83,8 +79,8 @@
 					<align>left</align>
 					<info>ListItem.Label</info>
 					<scroll>false</scroll>
-					<textcolor>FF959595</textcolor>
-					<selectedcolor>blue</selectedcolor> 
+					<textcolor>ACFFFFFF</textcolor>
+					<selectedcolor>babyblue</selectedcolor> 
 				</control>
 			</itemlayout>
 			
@@ -160,7 +156,7 @@
 					<scroll>false</scroll>
 					<font>heading</font>
 					<aligny>center</aligny>
-					<textcolor>FF959595</textcolor>
+					<textcolor>ACFFFFFF</textcolor>
 				</control>
 				<control type="label">
 					<posx>90</posx>
@@ -172,7 +168,7 @@
 					<aligny>top</aligny>
 					<font>aired</font>
 					<aligny>center</aligny>
-					<textcolor>FF959595</textcolor>
+					<textcolor>ACFFFFFF</textcolor>
 				</control>
 				<control type="label">
 					<posx>90</posx>
@@ -185,7 +181,7 @@
 					<aligny>top</aligny>
 					<font>aired</font>
 					<aligny>center</aligny>
-					<textcolor>FF959595</textcolor>
+					<textcolor>ACFFFFFF</textcolor>
 				</control>
 			</itemlayout>
 	
@@ -236,7 +232,7 @@
 					<aligny>top</aligny>
 					<font>aired</font>
 					<aligny>center</aligny>
-					<textcolor>FFCFCFCF</textcolor>
+					<textcolor>ACFFFFFF</textcolor>
 				</control>
 				<control type="label">
 					<posx>90</posx>
@@ -248,7 +244,7 @@
 					<aligny>top</aligny>
 					<font>aired</font>
 					<aligny>center</aligny>
-					<textcolor>FFCFCFCF</textcolor>
+					<textcolor>ACFFFFFF</textcolor>
 				</control>
 			</focusedlayout>
 		</control>
@@ -266,11 +262,10 @@
   
 		<control type="button" id="5">
 			<description>Get More</description>
-			<posx>906</posx>
+			<posx>921</posx>
 			<posy>220</posy>
 			<label>$LOCALIZE[368]</label>
-			<width>191</width>
-					
+							
 			<onup>9080</onup>
 			<onleft condition="Control.IsVisible(3)">3</onleft>
 			<onleft condition="Control.IsVisible(6)">6</onleft>
@@ -280,10 +275,9 @@
 		</control>
 		<control type="button" id="9080">
 			<description>Close Window button</description>
-			<posx>906</posx>
+			<posx>921</posx>
 			<posy>170</posy>
-			<width>191</width>
-			
+					
 			<label>31056</label>
 			<onclick>PreviousMenu</onclick>
 			<onup>5</onup>
@@ -293,7 +287,8 @@
 			<ondown>5</ondown>
 			<include>RightHandDialog</include>
 		</control>
-		
+
+</control>		
 </controls>
     
 </window>

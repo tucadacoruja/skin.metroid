@@ -88,7 +88,7 @@
 </control>
 
 <include>VideoWindow</include>
-<include>VideoFanart</include>
+<include>GeneralFanart</include>
 <include>Background</include>
 
 <include>MainMenu</include>
@@ -103,14 +103,14 @@
 	<posy>10</posy>
 	<width>55</width>
 	<height>55</height>
-	<texture>osd/buttons/GrayBackground.png</texture>
+	<texture>osd/GrayBackground.png</texture>
 </control>
 <control type="image">
 	<posx>10</posx>
 	<posy>10</posy>
 	<width>55</width>
 	<height>55</height>
-	<texture>osd/buttons/playlist.png</texture>
+	<texture>osd/playlist.png</texture>
 </control>
 
 <include>BottomInfoBar</include>

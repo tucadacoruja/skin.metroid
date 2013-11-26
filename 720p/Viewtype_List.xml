@@ -27,7 +27,7 @@
 					<width>210</width>
 					<height>290</height>
 					<aspectratio scalediffuse="false">stretch</aspectratio>
-					<texture border="12" diffuse="banner/bannerdiff.png">whitepanel2.png</texture>
+					<texture border="12" diffuse="diffuse/bannerdiff.png">whitepanel2.png</texture>
 					<colordiffuse>FFF3F3F3</colordiffuse>
 				</control>
 				<control type="image">
@@ -66,7 +66,7 @@
 					<width>233</width>
 					<height>232</height>
 					<aspectratio align="right" aligny="center" scalediffuse="false">stretch</aspectratio>
-					<texture border="12" diffuse="banner/bannerdiff.png">whitepanel2.png</texture>
+					<texture border="12" diffuse="diffuse/bannerdiff.png">whitepanel2.png</texture>
 					<colordiffuse>FFF3F3F3</colordiffuse>
 				</control>
 				
@@ -98,7 +98,7 @@
 				<width>209</width>
 				<height>125</height>
 				<aspectratio align="right" aligny="center" scalediffuse="false">stretch</aspectratio>
-				<texture border="12" diffuse="banner/bannerdiff.png">whitepanel2.png</texture>
+				<texture border="12" diffuse="diffuse/bannerdiff.png">whitepanel2.png</texture>
 				<colordiffuse>FFF3F3F3</colordiffuse>
 			</control>
 			<control type="image">
@@ -134,7 +134,7 @@
 					<width>233</width>
 					<height>232</height>
 					<aspectratio align="right" aligny="center" scalediffuse="false">stretch</aspectratio>
-					<texture border="12" diffuse="banner/bannerdiff.png">whitepanel2.png</texture>
+					<texture border="12" diffuse="diffuse/bannerdiff.png">whitepanel2.png</texture>
 					<colordiffuse>FFF3F3F3</colordiffuse>
 				</control>
 				
@@ -168,12 +168,29 @@
 					</control>
 					<control type="label">
 						<height min="0" max="13">auto</height>
-						<width>2000</width>
+						<width>300</width>
 						<label fallback="195">$INFO[ListItem.Property(Addon.Creator)]</label>
 						<font>font13</font>
 					  <textcolor>white</textcolor>
 						<shadowcolor>77000000</shadowcolor>
 					  <scrollspeed>30</scrollspeed>
+					</control>
+					<control type="label">
+						<height>30</height>
+						<width>200</width>
+						<label>-</label>
+						<font>font13</font>
+					  <textcolor>white</textcolor>
+					
+					</control>
+					<control type="textbox">
+						<height>160</height>
+						<width>200</width>
+						<label fallback="195">$INFO[ListItem.Property(Addon.Description)]</label>
+						<font>font12</font>
+						<textcolor>white</textcolor>
+						<shadowcolor>77000000</shadowcolor>
+						<scrollspeed>30</scrollspeed>
 					</control>
 				</control>
 			

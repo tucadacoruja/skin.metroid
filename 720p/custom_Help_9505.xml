@@ -9,7 +9,7 @@
 	
 <include>VideoWindow</include>
 
-<include>SettingsFanart</include>
+<include>GeneralFanart</include>
 <include>Background</include>
  
 		<control type="button" id="50">
@@ -37,7 +37,7 @@
 			<height>650</height>
 			<aspectratio>stretch</aspectratio>
 			<texture>shadowv.png</texture>
-		
+			<animation effect="fade" start="0" end="70" time="0" condition="true">Conditional</animation>
 		</control>
 		
 		<control type="group">
@@ -47,19 +47,18 @@
 		
 
 		<control type="group">
-		<posy>-10</posy>
-			<animation type="Conditional" condition="Window.IsVisible(126) | Window.IsVisible(2000)">
-				<effect type="fade" start="100" end="0" time="400" />
-			</animation>
+					
 			<animation type="WindowClose" reversible="false">
 				<effect type="fade" start="100" end="0" time="350" delay="0" />
 			</animation> 
-	
+			<animation type="WindowOpen" reversible="false">
+				<effect type="fade" start="0" end="100" time="250" delay="0" />
+			</animation> 
 				
 			<control type="list" id="9000">
 				<description>Button Area</description>
-				<posx>5</posx>
-				<posy>82</posy>
+				<posx>2</posx>
+				<posy>72</posy>
 				<width>300</width>
 				<height>570</height>
 				<onleft>300</onleft>
@@ -70,12 +69,12 @@
 				<scrolltime tween="cubic" easing="inout">325</scrolltime>
 				<orientation>vertical</orientation>
 							
-				<itemlayout height="50" width="240">
+				<itemlayout height="50" width="247">
 					
 					<control type="label">
 						<posx>25</posx>
 						<posy>-1</posy>
-						<width>240</width>
+						<width>247</width>
 						<height>50</height>
 						<font>MainMenu21</font>
 						<textcolor>FFD7D7D7</textcolor>
@@ -88,13 +87,13 @@
 										
 				</itemlayout>
 				
-				<focusedlayout height="50" width="240">
+				<focusedlayout height="50" width="247">
 					
 					<control type="image">
 						<description>list line image</description>
 						<posx>0</posx>
 						<posy>2</posy>
-						<width>240</width>
+						<width>247</width>
 						<height>50</height>
 						<aspectratio>stretch</aspectratio>
 						<texture>black.png</texture>
@@ -171,9 +170,11 @@
 			</control>
 
 			<control type="group" id="9010">
-			
-				<!-- Main Items -->
-			
+				<posy>10</posy>
+				<animation type="Conditional" condition="Window.IsVisible(126) | Window.IsVisible(2000)">
+					<effect type="fade" start="100" end="0" time="400" />
+				</animation>
+				
 				<control type="group" id="9001">
 					<description>Control Area</description>
 					<visible>Container(9000).Hasfocus(1)</visible>
@@ -491,7 +492,6 @@
 
 		
 	<include>BottomInfoBar</include>
-	 
-	<include>Keyboard</include> 
+
 	</controls>
 </window>

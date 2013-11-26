@@ -137,7 +137,7 @@
 				<posy>27</posy>
 				<width>328</width>
 				<height>473</height>
-				<texture>poster/postershadow.png</texture>
+				<texture>diffuse/postershadow.png</texture>
 				<align>bottom</align>
 				<aspectratio>stretch</aspectratio>
 				<colordiffuse>70ffffff</colordiffuse>
@@ -164,7 +164,7 @@
 				<width>305</width>
 				<height>450</height>
 				<aspectratio>stretch</aspectratio>
-				<texture background="true" diffuse="poster/posterdiffuse.png" fallback="DefaultAlbumCover.png">$INFO[ListItem.Art(poster)]</texture>
+				<texture background="true" diffuse="diffuse/posterdiffuse.png" fallback="DefaultAlbumCover.png">$INFO[ListItem.Art(poster)]</texture>
 				<animation type="Focus">
 					<effect type="zoom" start="90" end="100" time="200" />
 				</animation>
@@ -175,7 +175,7 @@
 				<width>256</width>
 				<height>400</height>
 				<aspectratio>keep</aspectratio>
-				<texture background="true" diffuse="poster/posterdiffuse.png" >$VAR[Fallback_Icon]</texture>
+				<texture background="true" diffuse="diffuse/posterdiffuse.png" >$VAR[Fallback_Icon]</texture>
 				<colordiffuse>EBFFFFFF</colordiffuse>
 				<animation type="Focus">
 					<effect type="zoom" start="90" end="100" time="200" />

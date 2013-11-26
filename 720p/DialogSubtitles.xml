@@ -386,13 +386,11 @@
 		<height>42</height>
 		<width>140</width>
 		<label>31056</label>
-		<texturefocus>white35p.png</texturefocus>
-		<texturenofocus>white8p.png</texturenofocus>
+
 		<onleft>120</onleft>
-		<textcolor>FFC2C2C2</textcolor>
-		<focusedcolor>FFEBEBEB</focusedcolor>
+
 		<onclick>dialog.close(SubtitleSearch)</onclick>
-		
+		<include>BottomDialog</include>
 	</control>
 		
 </control>

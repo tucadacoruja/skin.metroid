@@ -14,7 +14,7 @@
 		<control type="grouplist">
 			<description>Media Codec Flags</description>
 			<posx>612</posx>
-			<posy>338</posy>
+			<posy>334</posy>
 			<width>600</width>
 			<height>50</height>
 			<align>left</align>
@@ -29,7 +29,7 @@
 		
 		<control type="wraplist" id="504">
 			<viewtype label="Episodes">list</viewtype>
-			<posx>320</posx>
+			<posx>325</posx>
 			<posy>132</posy>
 			<width>1633</width>
 			<height>525</height>
@@ -77,7 +77,7 @@
 					<width>633</width>
 					<height>60</height>
 					<align>left</align>
-					<label>[UPPERCASE]$INFO[ListItem.Title][/UPPERCASE]</label>
+					<label>$INFO[ListItem.Title]</label>
 					<font>movietitle1</font>
 					<textcolor>taskbar</textcolor>
 					<selectedcolor>taskbar</selectedcolor>
@@ -104,7 +104,7 @@
 					<posy>22</posy>
 					<width>271</width>
 					<height>150</height>
-					<texture background="true" diffuse="episodes/episodediffuse.png">poster/postershadow.png</texture>
+					<texture background="true" diffuse="diffuse/episodediffuse.png">diffuse/postershadow.png</texture>
 					<aspectratio scalediffuse="false">stretch</aspectratio>
 					<animation effect="fade" start="0" end="50" time="0" condition="true">Conditional</animation>
 					<animation type="Focus" reversible="false">
@@ -117,7 +117,7 @@
 					<posy>9</posy>
 					<width>261</width>
 					<height>150</height>
-					<texture background="true" diffuse="episodes/episodediffuse.png">white.png</texture>
+					<texture background="true" diffuse="diffuse/episodediffuse.png">white.png</texture>
 					<aspectratio scalediffuse="false">stretch</aspectratio>
 					
 					<animation effect="fade" start="0" end="50" time="0" condition="true">Conditional</animation>
@@ -132,7 +132,7 @@
 					<posy>9</posy>
 					<width>261</width>
 					<height>150</height>
-					<texture background="true" diffuse="episodes/episodediffuse.png">white.png</texture>
+					<texture background="true" diffuse="diffuse/episodediffuse.png">white.png</texture>
 					<aspectratio scalediffuse="false">stretch</aspectratio>
 					<colordiffuse>skin.string(MainColorString)</colordiffuse>
 					<animation effect="fade" start="0" end="50" time="0"condition="true">Conditional</animation>
@@ -148,7 +148,7 @@
 					<width>253</width>
 					<height>139</height>
 					<colordiffuse>EBFFFFFF</colordiffuse>
-					<texture background="true" diffuse="episodes/episodediffuse.png">$INFO[ListItem.Icon]</texture>
+					<texture background="true" diffuse="diffuse/episodediffuse.png">$INFO[ListItem.Icon]</texture>
 					<aspectratio scalediffuse="false">keep</aspectratio>
 					<animation type="Focus" reversible="false">
 						<effect type="zoom" center="127,70" start="50" end="100" time="200" tween="cubic" easing="out" />
@@ -161,7 +161,7 @@
 					<width>253</width>
 					<height>139</height>
 					
-					<texture background="true" diffuse="episodes/episodediffuse.png" fallback="DefaultAlbumCover.png">$INFO[ListItem.Art(thumb)]</texture>
+					<texture background="true" diffuse="diffuse/episodediffuse.png" fallback="DefaultAlbumCover.png">$INFO[ListItem.Art(thumb)]</texture>
 					<aspectratio scalediffuse="false">scale</aspectratio>
 					<animation type="Focus" reversible="false">
 						<effect type="zoom" center="127,70" start="50" end="100" time="200" tween="cubic" easing="out" />
@@ -186,7 +186,7 @@
 					<posx>305</posx>
 					<posy>17</posy>
 					<width>43</width>
-					<label>[B][UPPERCASE]$INFO[ListItem.Episode][/UPPERCASE][/B]</label>
+					<label>[B]$INFO[ListItem.Episode][/B]</label>
 					<font>EpisodeTitle</font>
 					<textcolor>ampm</textcolor>
 					<selectedcolor>ff7acafe</selectedcolor>
@@ -198,31 +198,31 @@
 				</control>	
 				<control type="label">
 					<posx>310</posx>
-					<posy>17</posy>
+					<posy>15</posy>
 					<width min="29" max="620">auto</width>
 					<height>34</height>
-					<label>[UPPERCASE]$INFO[ListItem.Label][/UPPERCASE]</label>
+					<label>$INFO[ListItem.Label]</label>
 					<font>EpisodeTitle</font>
 					<textcolor>taskbar</textcolor>
 					<selectedcolor>taskbar</selectedcolor>
 					<scroll>false</scroll>
 					<animation type="Focus" reversible="false">
-						<effect type="fade" start="0" end="100" time="300" />
+						<effect type="fade" start="0" end="90" time="300" />
 					</animation>
 					<visible>IsEmpty(ListItem.Title)</visible>					
 				</control>			
 				<control type="label">
 					<posx>350</posx>
-					<posy>17</posy>
+					<posy>15</posy>
 					<width min="29" max="620">auto</width>
 					<height>34</height>
-					<label>[UPPERCASE]$INFO[ListItem.Title][/UPPERCASE]</label>
+					<label>$INFO[ListItem.Title]</label>
 					<font>EpisodeTitle</font>
 					<textcolor>taskbar</textcolor>
 					<selectedcolor>taskbar</selectedcolor>
 					<scroll>false</scroll>
 					<animation type="Focus" reversible="false">
-						<effect type="fade" start="0" end="100" time="300" />
+						<effect type="fade" start="0" end="90" time="300" />
 					</animation>
 					<visible>!IsEmpty(ListItem.Title)</visible>					
 				</control>
@@ -237,12 +237,13 @@
 						<effect type="fade" start="0" end="100" time="300" />
 					</animation>
 					<texture>$INFO[ListItem.Overlay]</texture>
+					<colordiffuse>skin.string(MainColorString)</colordiffuse>
 					<visible>Skin.HasSetting(WatchedOverlays)</visible>
 				</control>
 				
 			
 			<control type="textbox">
-				<posx>305</posx>
+				<posx>307</posx>
 				<posy>54</posy>
 				<width>620</width>
 				<height>74</height>
@@ -251,7 +252,7 @@
 				<font>about</font>
 				<textcolor>white</textcolor>
 				<animation type="Focus" reversible="false">
-					<effect type="fade" start="0" end="80" time="400" />
+					<effect type="fade" start="0" end="70" time="400" />
 				</animation>
 			</control>
 			

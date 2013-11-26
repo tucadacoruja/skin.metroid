@@ -1,7 +1,17 @@
+[B]0.0.9[/B]
+- Changed dialog colors.
+- Dots on the i.
+
+[B]0.0.8[/B]
+- Icons.
+- Screenshots.
+- Dialogs
+- Global fanart
+
 [B]0.0.7[/B]
 - Addon info.
 - Music Visuals (adapt to lyrics).
--Bugs
+- Bugs
 
 [B]0.0.6[/B]
 - Homescreen grouplist.

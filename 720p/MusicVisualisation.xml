@@ -13,7 +13,6 @@
 			<height>720</height>
 		  
 		</control>
-	
 		<control type="image">
 			<posx>0</posx>
 			<posy>0</posy>
@@ -23,34 +22,36 @@
 			<texture fallback="MetroidBG.png">$INFO[Skin.String(GlassForeground)]</texture>
 			<colordiffuse>FFCCCCCF</colordiffuse>
 			<visible>!Skin.HasSetting(VisualisationFilter)</visible>
-			<animation effect="fade" start="85" end="95" time="90000" reversable="true" pulse="true" condition="true">Conditional</animation>
+			<animation effect="fade" start="80" end="90" time="90000" reversable="true" pulse="true" condition="true">Conditional</animation>
 		</control> 
-		
+		<control type="multiimage">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+			<aspectratio>stretch</aspectratio>
+			<imagepath background="true">$VAR[MultiSlide]</imagepath>
+			<timeperimage>10100</timeperimage>
+			<fadetime>1000</fadetime>
+			<randomize>true</randomize>
+			<animation effect="fade" start="0" end="100" time="100">VisibleChange</animation>
+			<animation effect="fade" start="0" end="20" time="100000" delay="2000" reversable="true" pulse="true" condition="true">Conditional</animation>
+			
+			<visible>IsEmpty(Player.Art(fanart))</visible>
+		</control>
 		<control type="image">
 			<posx>0</posx>
 			<posy>0</posy>
 			<width>1280</width>
 			<height>720</height>
 			<aspectratio>stretch</aspectratio>
-			<texture background="true">$INFO[MusicPlayer.Property(Fanart_Image)]</texture>
-			<!--visible>!IsEmpty(MusicPlayer.Property(Fanart_Image)) + !Skin.HasSetting(FullMusicFanart)</visible-->
-			<animation effect="fade" start="5" end="20" time="100000" delay="2000" reversable="true" pulse="true" condition="true">Conditional</animation>
-			
+			<texture background="true">$INFO[Player.Art(fanart)]</texture>
+			<animation effect="fade" start="0" end="100" time="100">VisibleChange</animation>
+		
+			<animation effect="fade" start="0" end="20" time="100000" delay="2000" reversable="true" pulse="true" condition="true">Conditional</animation>
 		</control>
-				
-		<!--control type="label">
-			<posx>80</posx>
-			<posy>495</posy>
-			<width>1170</width>
-			<height>200</height>
-			<align>left</align>
-			<label>[UPPERCASE]$INFO[MusicPlayer.Artist][/UPPERCASE]</label>
-			<visible>true</visible>
-			<scroll>false</scroll>
-			<font>BigMusicArtist</font>
-			<textcolor>movietitleb2</textcolor>
-			<animation effect="fade" start="0" end="6" time="0" reversable="false" condition="true">Conditional</animation>
-		</control-->
+		
+		
 
 		<control type="label">
 			<posx>70</posx>
@@ -76,7 +77,7 @@
 			<height>450</height>
 			<aspectratio>stretch</aspectratio>
 			<colordiffuse>36FFFFFF</colordiffuse>
-			<texture background="true">poster/postershadow.png</texture>
+			<texture background="true">diffuse/postershadow.png</texture>
 			<animation effect="rotatex" end="25" center="auto" time="0" condition="true">Conditional</animation>
 		</control-->
 		
@@ -92,7 +93,7 @@
 				<height>524</height>
 				<aspectratio>stretch</aspectratio>
 				<colordiffuse>55FFFFFF</colordiffuse>
-				<texture background="true">poster/postershadow.png</texture>
+				<texture background="true">diffuse/postershadow.png</texture>
 				
 			</control>
 			
@@ -115,7 +116,7 @@
 				<width>300</width>
 				<height>410</height>
 				<aspectratio scalediffuse="false">scale</aspectratio>
-				<texture diffuse="poster/albumdiffuse.png" fallback="DefaultAlbumCover.png">$INFO[MusicPlayer.offset(1).Cover]</texture>
+				<texture diffuse="diffuse/albumdiffuse.png" fallback="DefaultAlbumCover.png">$INFO[MusicPlayer.offset(1).Cover]</texture>
 				<colordiffuse>FFC2C2C2</colordiffuse>
 				<animation effect="fade" start="0" end="60" time="0" condition="true">Conditional</animation>
 			</control>
@@ -125,7 +126,7 @@
 				<width>422</width>
 				<height>410</height>
 				<aspectratio>keep</aspectratio>
-				<texture>settings/LogoBig.png</texture>
+				<texture>DefaultFallback.png</texture>
 				<visible>Substring(MusicPlayer.offset(1).Cover,.png) | IsEmpty(MusicPlayer.offset(1).Cover)</visible>
 				<animation effect="fade" start="0" end="5" time="0" condition="true">Conditional</animation>
 			</control>
@@ -147,7 +148,7 @@
 		</control-->
 		
 		<control type="group">
-			<posx>-36</posx>
+			<posx>-8</posx>
 			<posy>92</posy>
 			<animation effect="rotatey" end="-30" center="auto" time="0" condition="true">Conditional</animation>
 						
@@ -168,11 +169,20 @@
 				<width>120</width>
 				<height>125</height>
 				<aspectratio scalediffuse="false">scale</aspectratio>
-				<texture diffuse="poster/albumdiffuse.png" fallback="DefaultAlbumCover.png">$INFO[MusicPlayer.offset(2).Cover]</texture>
+				<texture diffuse="diffuse/albumdiffuse.png" fallback="DefaultAlbumCover.png">$INFO[MusicPlayer.offset(2).Cover]</texture>
 				<colordiffuse>FFC2C2C2</colordiffuse>
 				<animation effect="fade" start="0" end="80" time="0" condition="true">Conditional</animation>
 			</control>
-			
+			<control type="image">
+				<posx>0</posx>
+				<posy>118</posy>
+				<width>120</width>
+				<height>125</height>
+				<aspectratio>keep</aspectratio>
+				<texture>DefaultFallback.png</texture>
+				<visible>Substring(MusicPlayer.offset(2).Cover,.png) | IsEmpty(MusicPlayer.offset(2).Cover)</visible>
+				<!--animation effect="fade" start="0" end="100" time="0" condition="true">Conditional</animation-->
+			</control>
 			
 			<control type="image">
 				<description>white image</description>
@@ -191,15 +201,25 @@
 				<width>120</width>
 				<height>125</height>
 				<aspectratio scalediffuse="false">scale</aspectratio>
-				<texture diffuse="poster/albumdiffuse.png" fallback="DefaultAlbumCover.png">$INFO[MusicPlayer.offset(1).Cover]</texture>
+				<texture diffuse="diffuse/albumdiffuse.png" fallback="DefaultAlbumCover.png">$INFO[MusicPlayer.offset(1).Cover]</texture>
 				<colordiffuse>FFC2C2C2</colordiffuse>
 				<animation effect="fade" start="0" end="80" time="0" condition="true">Conditional</animation>
+			</control>
+			<control type="image">
+				<posx>0</posx>
+				<posy>260</posy>
+				<width>120</width>
+				<height>125</height>
+				<aspectratio>keep</aspectratio>
+				<texture>DefaultFallback.png</texture>
+				<visible>Substring(MusicPlayer.offset(1).Cover,.png) | IsEmpty(MusicPlayer.offset(1).Cover)</visible>
+				<!--animation effect="fade" start="0" end="100" time="0" condition="true">Conditional</animation-->
 			</control>
 		</control>
 
 		
 		<control type="group">
-			<posx>82</posx>
+			<posx>87</posx>
 			<posy>1</posy>
 			<!--visible>false</visible-->
 			<control type="image">
@@ -209,11 +229,11 @@
 				<height>500</height>
 				<aspectratio>stretch</aspectratio>
 				<colordiffuse>70FFFFFF</colordiffuse>
-				<texture background="true">poster/postershadow.png</texture>
+				<texture background="true">diffuse/postershadow.png</texture>
 				
 			</control>
 		
-			<control type="image">
+			<!--control type="image">
 				<description>background image</description>
 				<posx>89</posx>
 				<posy>81</posy>
@@ -223,15 +243,17 @@
 				<aspectratio>stretch</aspectratio>
 				<texture border="12">dialog/contentbg.png</texture>
 				<colordiffuse>FFC2C2C2</colordiffuse>
-			</control>
+			</control-->
 			
 			<control type="image">
-				<posx>113</posx>
-				<posy>112</posy>
-				<width>416</width>
-				<height>404</height>
+				<posx>108</posx>
+				<posy>108</posy>
+				<width>428</width>
+				<height>494</height>
 				<aspectratio>stretch</aspectratio>
-				<texture>BlueBackground.png</texture>
+				<texture border="5">BlueBackground.png</texture>
+				<bordertexture border="5">whiteborder.png</bordertexture>
+				<bordersize>5</bordersize>
 				<animation effect="fade" start="0" end="80" time="0" condition="true">Conditional</animation>
 			</control>
 			
@@ -241,7 +263,7 @@
 				<width>422</width>
 				<height>410</height>
 				<aspectratio scalediffuse="false">scale</aspectratio>
-				<texture diffuse="poster/albumdiffuse.png">$INFO[MusicPlayer.offset(0).Cover]</texture>
+				<texture diffuse="diffuse/albumdiffuse.png">$INFO[MusicPlayer.offset(0).Cover]</texture>
 			</control>
 			<control type="image">
 				<posx>110</posx>
@@ -249,9 +271,9 @@
 				<width>422</width>
 				<height>410</height>
 				<aspectratio>keep</aspectratio>
-				<texture>settings/LogoBig.png</texture>
+				<texture>DefaultFallback.png</texture>
 				<visible>Substring(MusicPlayer.Cover,.png)</visible>
-				<animation effect="fade" start="0" end="5" time="0" condition="true">Conditional</animation>
+				<!--animation effect="fade" start="0" end="5" time="0" condition="true">Conditional</animation-->
 			</control>
 			<control type="image">
 				<description>white image</description>
@@ -321,8 +343,8 @@
 		
 		
 		<control type="group">
-			<posx>-50</posx>
-			<posy>411</posy>
+			<posx>-60</posx>
+			<posy>493</posy>
 			<animation effect="zoom" end="65" center="auto" time="0" condition="true">Conditional</animation>
 			<control type="image">
 				<posx>48</posx>
@@ -342,7 +364,7 @@
 				<height>4</height>
 				<texturebg>osd/seek/progresscache_back.png</texturebg>
 				<lefttexture>-</lefttexture>
-				<midtexture>osd/buttons/osdbg.png</midtexture>
+				<midtexture>osd/osdbg.png</midtexture>
 				<righttexture>-</righttexture>
 				<info>Player.Progress</info>
 				<colordiffuse>skin.string(MainColorString)</colordiffuse>

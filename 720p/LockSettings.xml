@@ -12,36 +12,33 @@
 <controls>
 
 <control type="group">
-<animation effect="fade" start="100" end="30" time="150" condition="Window.IsVisible(numericinput) | Window.IsVisible(contextmenu) | Window.IsVisible(virtualkeyboard)">Conditional</animation>	  
 
+	<include>DialogEffect</include>
+	<visible>![Window.IsVisible(numericinput) | Window.IsVisible(contextmenu) | Window.IsVisible(virtualkeyboard)]</visible>
+	
 	<control type="image">
 		<description>background image</description>
 		<posx>-15</posx>
-		<posy>33</posy>
+		<posy>0</posy>
 		<width>550</width>
-		<height>456</height>
+		<height>486</height>
 		<aspectratio>stretch</aspectratio>
-		<texture border="12">dialog/contentbg.png</texture>
-		<colordiffuse>ffD7D7D7</colordiffuse>
+		<texture border="62">dialog/contentbg2.png</texture>
+		<!--colordiffuse>ffD7D7D7</colordiffuse-->
 	</control>	
   
-	<!--control type="label" id="2">
-		<description>Settings</description>
-		<posx>10</posx>
-		<posy>40</posy>
-		<width>500</width>
-		<align>left</align>
-		<textcolor>list</textcolor>
+	<control type="label">
+		<description>header label</description>
+		<posx>-25</posx>
+		<posy>33</posy>
+		<width>550</width>
+		<height>30</height>
+		<font>heading</font>
+		<label>31209</label>
+		<align>center</align>
+		<aligny>center</aligny>
+		<textcolor>babyblue</textcolor>
 	</control>
-	<control type="label" id="3">
-		<description>No Settings</description>
-		<posx>0</posx>
-		<posy>40</posy>
-		<width>500</width>
-		<align>left</align>
-		<textcolor>list</textcolor>
-		<label>$LOCALIZE[12016]</label>
-	</control-->
   
   <control type="grouplist" id="5">
     <description>Control Area</description>
@@ -70,7 +67,8 @@
 <control type="spincontrolex" id="9">
 	<description>spin_controlex</description>
 	<texturefocus>setting.png</texturefocus>
-	<posx>70</posx>
+	
+	<textoffsetx>20</textoffsetx>
 </control>
 <control type="sliderex" id="10">
 	<description>slider</description>
@@ -88,7 +86,7 @@
     <onup>5</onup>
     <ondown>5</ondown>
 	
-	<include>ConfirmButton</include>
+	<include>BottomDialog</include>
   </control>
   <control type="button" id="29">
     <description>Cancel</description>
@@ -100,7 +98,7 @@
     <onup>5</onup>
     <ondown>5</ondown>
 	
-	<include>ConfirmButton</include>
+	<include>BottomDialog</include>
   </control>
 
 </control>

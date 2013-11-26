@@ -16,7 +16,7 @@
 	</control>
 	
 		<include>VideoWindow</include>
-		<include>SettingsFanart</include>
+		<include>GeneralFanart</include>
 		<include>Background</include>
 	
 		
@@ -37,34 +37,21 @@
 			<height>650</height>
 			<aspectratio>stretch</aspectratio>
 			<texture>shadowv.png</texture>
-		
+			<animation effect="fade" start="0" end="70" time="0" condition="true">Conditional</animation>
 		</control>
 		
 		<control type="group">
 			<posy>0</posy>
 			<include>EmptyMenu</include>
 		</control>
-	
-	
-	
-		<!--control type="image">
-			<posx>330</posx>
-			<posy>85</posy>
-			<width>870</width>
-			<height>550</height>
-			<aspectratio>stretch</aspectratio>
-			<texture border="12">dialog/contentbg.png</texture>
-			<visible>!Control.IsVisible(28235)</visible>
-			<colordiffuse>FF959595</colordiffuse>
 
-		</control-->
 	
 		<control type="group">
 		<posy>-15</posy>
 			
 			<control type="list" id="9000">
 				<description>Button Area</description>
-				<posx>5</posx>
+				<posx>1</posx>
 				<posy>86</posy>
 				<width>300</width>
 				<height>570</height>
@@ -79,11 +66,11 @@
 				<scrolltime tween="cubic" easing="inout">325</scrolltime>
 				<orientation>vertical</orientation>
 							
-				<itemlayout height="50" width="240">
+				<itemlayout height="50" width="246">
 					<control type="label">
 						<posx>25</posx>
 						<posy>-1</posy>
-						<width>200</width>
+						<width>246</width>
 						<height>50</height>
 						<font>MainMenu21</font>
 						<textcolor>FFD7D7D7</textcolor>
@@ -96,13 +83,13 @@
 					
 				</itemlayout>
 				
-				<focusedlayout height="50" width="240">
+				<focusedlayout height="50" width="246">
 					
 					<control type="image">
 						<description>list line image</description>
 						<posx>0</posx>
 						<posy>2</posy>
-						<width>240</width>
+						<width>246</width>
 						<height>50</height>
 						<aspectratio>stretch</aspectratio>
 						<texture>black.png</texture>
@@ -121,6 +108,18 @@
 						<scroll>false</scroll>
 						<label>$INFO[ListItem.Label]</label>
 											
+					</control>
+					<control type="image">
+						<description>focussed image</description>
+						<posx>0</posx>
+						<posy>2</posy>
+						<width>10</width>
+						<height>50</height>
+						<aspectratio>stretch</aspectratio>
+						<texture>white.png</texture>
+						<animation effect="fade" start="0" end="40" time="0" condition="true">Conditional</animation>
+						<visible>!Control.HasFocus(9000)</visible>
+						
 					</control>
 					<control type="image">
 						<description>focussed image</description>
@@ -163,7 +162,7 @@
 			</control>
 
 			<control type="group" id="9010">
-				
+			<posy>20</posy>	
 				<animation type="Conditional" condition="Window.IsVisible(126) | Window.IsVisible(selectdialog)">
 					<effect type="fade" start="100" end="0" time="400" />
 				</animation>
@@ -263,26 +262,33 @@
 					</control>
 					<control type="radiobutton" id="110">
 						<include>SettingsButton</include>
-						<description>Viewtype button in main menu</description>
+						<description>viewtype button in main menu</description>
 						<label>31153</label>
 						<onclick>Skin.ToggleSetting(HideGlobalViews)</onclick>
-						<selected>Skin.HasSetting(HideGlobalViews)</selected>
+						<selected>!Skin.HasSetting(HideGlobalViews)</selected>
 					</control>
 					<control type="radiobutton" id="111">
+						<include>SettingsButton</include>
+						<description>Home button in main menu</description>
+						<label>31210</label>
+						<onclick>Skin.ToggleSetting(HideGlobalHome)</onclick>
+						<selected>!Skin.HasSetting(HideGlobalHome)</selected>
+					</control>
+					<control type="radiobutton" id="112">
 						<include>SettingsButton</include>
 						<description>Back button in main menu</description>
 						<label>31154</label>
 						<onclick>Skin.ToggleSetting(HideGlobalBack)</onclick>
 						<selected>Skin.HasSetting(HideGlobalBack)</selected>
 					</control>
-					<control type="radiobutton" id="112">
+					<control type="radiobutton" id="113">
 						<include>SettingsButton</include>
 						<description>Previous button in main menu</description>
 						<label>31155</label>
 						<onclick>Skin.ToggleSetting(HideGlobalPrevious)</onclick>
 						<selected>Skin.HasSetting(HideGlobalPrevious)</selected>
 					</control>
-					<control type="radiobutton" id="113">
+					<control type="radiobutton" id="114">
 						<include>SettingsButton</include>
 						<description>Sort options in main menu</description>
 						<label>31156</label>
@@ -474,7 +480,7 @@
 						
 					</control>
 					
-					<control type="button" id="111">
+					<!--control type="button" id="111">
 						<include>SettingsButton</include>
 						<label> - $LOCALIZE[31162]</label>
 						<label2>$INFO[Skin.String(VideoFallbackImage)]</label2>
@@ -511,6 +517,14 @@
 						<label2>$INFO[Skin.String(FullMusicFallback)]</label2>
 						<onclick>Skin.Reset(FullMusicFallback)</onclick>
 						<onclick>Skin.SetImage(FullMusicFallback)</onclick>
+					</control-->
+					<control type="radiobutton" id="117">
+						<include>SettingsButton</include>
+						<description>Background Slideshow</description>
+						<label>Background Slideshow</label>
+						
+						<onclick>Skin.ToggleSetting(BackgroundSlideshow)</onclick>
+						<selected>!Skin.HasSetting(BackgroundSlideshow)</selected>
 					</control>
 				</control>
 

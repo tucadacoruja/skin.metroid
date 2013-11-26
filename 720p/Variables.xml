@@ -15,7 +15,14 @@
 		<value  condition="!substring(Control.GetLabel(1963),.png + !substring(Listitem.Label,..,left)">DefaultMovies.png</value>
 		<value>-</value>
 	</variable>
-
+	
+	<variable name="MultiSlide">
+		<value  condition="!IsEmpty(Skin.String(Wallpaper_Folder_Path))">$INFO[Skin.String(Wallpaper_Folder_Path)]</value>
+		<value  condition="Player.HasAudio">$INFO[Window(Home).Property(script.grab.fanart.Music.FanArt)]</value>
+		<value  condition="!Player.HasAudio + Container.Content(movies)">$INFO[Window(Home).Property(script.grab.fanart.Movie.FanArt)]</value>
+		<value  condition="!Player.HasAudio + Container.Content(seasons) | Container.Content(tvshows) | Container.Content(episodes)">$INFO[Window(Home).Property(script.grab.fanart.TV.FanArt)]</value>
+		<value>-</value>
+	</variable>
 	
 	<variable name="Now_Playing_Popup_Text">
 		<value condition="VideoPlayer.Content(movies)">$INFO[VideoPlayer.Title]</value>
@@ -121,19 +128,19 @@
 	<variable name="Landscape_Fallback">
 		<value condition="substring(Listitem.Label,..,left)">$INFO[ListItem.Icon]</value>
 		
-		<value condition="Container.Content(movies) + IsEmpty(ListItem.Art(fanart))">settings/LogoSmall.png</value>
-		<value condition="Container.Content(artists) + IsEmpty(ListItem.Art(fanart))">settings/LogoSmall.png</value>
-		<value condition="Container.Content(tvshows) + IsEmpty(ListItem.Art(fanart))">settings/LogoSmall.png</value>
-		<value condition="Container.Content(seasons) + IsEmpty(ListItem.Art(season.fanart))">settings/LogoSmall.png</value>
-		<value condition="Container.Content(episodes) + IsEmpty(ListItem.Art(thumb))">settings/LogoSmall.png</value>
+		<value condition="Container.Content(movies) + IsEmpty(ListItem.Art(fanart))">DefaultFallback.png</value>
+		<value condition="Container.Content(artists) + IsEmpty(ListItem.Art(fanart))">DefaultFallback.png</value>
+		<value condition="Container.Content(tvshows) + IsEmpty(ListItem.Art(fanart))">DefaultFallback.png</value>
+		<value condition="Container.Content(seasons) + IsEmpty(ListItem.Art(season.fanart))">DefaultFallback.png</value>
+		<value condition="Container.Content(episodes) + IsEmpty(ListItem.Art(thumb))">DefaultFallback.png</value>
 		
 		<value condition="substring(listitem.filenameandpath,addons://sources/) | substring(listitem.filenameandpath,plugin://) | substring(listitem.filenameandpath,sources://video/)">$INFO[ListItem.Icon]</value>
-		<value condition="!substring(listitem.filenameandpath,musicdb://) + IsEmpty(ListItem.Art(thumb))">settings/LogoSmall.png</value>
+		<value condition="!substring(listitem.filenameandpath,musicdb://) + IsEmpty(ListItem.Art(thumb))">DefaultFallback.png</value>
 	</variable>
 	
 	<variable name="Fallback_Icon">
 		<value condition="substring(Listitem.Label,..,left)">$INFO[ListItem.Icon]</value>
-		<value condition="[IsEmpty(ListItem.Art(fanart)) + IsEmpty(ListItem.Art(poster)) + IsEmpty(ListItem.Art(banner))]">settings/LogoSmall.png</value>
+		<value condition="[IsEmpty(ListItem.Art(fanart)) + IsEmpty(ListItem.Art(poster)) + IsEmpty(ListItem.Art(banner))]">DefaultFallback.png</value>
 		
 	</variable>
 	

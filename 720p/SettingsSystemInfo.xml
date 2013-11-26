@@ -16,7 +16,7 @@
 
 <include>VideoWindow</include>
 
-<include>SettingsFanart</include>
+<include>GeneralFanart</include>
 <include>Background</include>
 
 	<control type="button" id="50">
@@ -47,7 +47,7 @@
 		<height>650</height>
 		<aspectratio>stretch</aspectratio>
 		<texture>shadowv.png</texture>
-	
+		<animation effect="fade" start="0" end="70" time="0" condition="true">Conditional</animation>
 	</control>
 	<control type="group">
 		<posy>21</posy>
@@ -64,7 +64,7 @@
 		</animation>   
 		
 		<control type="grouplist" id="9000">
-			<posx>5</posx>
+			<posx>2</posx>
 			<posy>44</posy>
 			<width>240</width>
 			<height>570</height>
@@ -80,7 +80,7 @@
 				<align>left</align>
 				<textoffsetx>23</textoffsetx>
 				<height>50</height>
-				<width>240</width>
+				<width>247</width>
 				<font>MainMenu21</font>
 				<textcolor>ampm</textcolor>
 				<focusedcolor>white</focusedcolor>
@@ -88,27 +88,29 @@
 				<texturefocus>category.png</texturefocus>
 				<texturenofocus>-</texturenofocus>
 			</control>
-			<control type="button" id="94">
+			
+			<!--causes crash-->
+			<!--control type="button" id="94">
 				<description>Storage</description>
 				<label>$LOCALIZE[13277]</label>
 				<align>left</align>
 				<textoffsetx>23</textoffsetx>
 				<height>50</height>
-				<width>240</width>
+				<width>247</width>
 				<font>MainMenu21</font>
 				<textcolor>ampm</textcolor>
 				<focusedcolor>white</focusedcolor>
 				<disabledcolor>12ffffff</disabledcolor>
 				<texturefocus>category.png</texturefocus>
 				<texturenofocus>-</texturenofocus>
-      		</control>
+      		</control-->
 			<control type="button" id="96">
 				<description>Network</description>
 				<label>$LOCALIZE[13279]</label>
 				<align>left</align>
 				<textoffsetx>23</textoffsetx>
 				<height>50</height>
-				<width>240</width>
+				<width>247</width>
 				<font>MainMenu21</font>
 				<textcolor>ampm</textcolor>
 				<focusedcolor>white</focusedcolor>
@@ -122,7 +124,7 @@
 				<align>left</align>
 				<textoffsetx>23</textoffsetx>
 				<height>50</height>
-				<width>240</width>
+				<width>247</width>
 				<font>MainMenu21</font>
 				<textcolor>ampm</textcolor>
 				<focusedcolor>white</focusedcolor>
@@ -136,7 +138,7 @@
 				<align>left</align>
 				<textoffsetx>23</textoffsetx>
 				<height>50</height>
-				<width>240</width>
+				<width>247</width>
 				<font>MainMenu21</font>
 				<textcolor>ampm</textcolor>
 				<focusedcolor>white</focusedcolor>
@@ -150,7 +152,7 @@
 				<align>left</align>
 				<textoffsetx>23</textoffsetx>
 				<height>50</height>
-				<width>240</width>
+				<width>247</width>
 				<font>MainMenu21</font>
 				<textcolor>ampm</textcolor>
 				<focusedcolor>white</focusedcolor>
@@ -158,31 +160,20 @@
 				<texturefocus>category.png</texturefocus>
 				<texturenofocus>-</texturenofocus>
 			</control>
-			<control type="button" id="100">
-				<description>DVD</description>
-				<label>$LOCALIZE[13276]</label>
-				<align>left</align>
-				<textoffsetx>23</textoffsetx>
-				<height>50</height>
-				<width>240</width>
-				<font>MainMenu21</font>
-				<textcolor>ampm</textcolor>
-				<focusedcolor>white</focusedcolor>
-				<disabledcolor>12ffffff</disabledcolor>
-				<texturefocus>category.png</texturefocus>
-				<texturenofocus>-</texturenofocus>
-			</control>
+			
 		</control>
 		
 	<control type="group">
-			<control type="grouplist">
-				<posx>366</posx>
-				<posy>90</posy>
-				<width>810</width>
-				<height>480</height>
-				<itemgap>0</itemgap>
-				<description>General</description>
-				<visible>!Control(9000).HasFocus(99) + !Control(9000).HasFocus(100)</visible>
+	<posy>10</posy>
+	
+		<control type="grouplist">
+			<posx>366</posx>
+			<posy>90</posy>
+			<width>810</width>
+			<height>480</height>
+			<itemgap>0</itemgap>
+			<description>General</description>
+		
 			<control type="label" id="2">
 				<description>2</description>
 				<posy>55</posy>
@@ -313,19 +304,7 @@
 				<focusedcolor>white</focusedcolor>
 				<disabledcolor>12ffffff</disabledcolor>
 			</control>
-			<control type="label" id="12">
-				<description>12</description>
-				<posy>55</posy>
-				<label>-</label>
-				<align>left</align>
-				<textoffsetx>20</textoffsetx>
-				<height>43.5</height>
-				<width>810</width>
-				<font>DefaultButton</font>
-				<textcolor>ampm</textcolor>
-				<focusedcolor>white</focusedcolor>
-				<disabledcolor>12ffffff</disabledcolor>
-			</control>
+		
 			<control type="label" id="52">
 				<description>XBMC BUILD Version</description>
 				<posy>55</posy>
@@ -339,222 +318,10 @@
 				<focusedcolor>white</focusedcolor>
 				<disabledcolor>12ffffff</disabledcolor>
 			</control>
-			<control type="label">
-				<description>CPU Text</description>
-				<posy>55</posy>
-				<label>$LOCALIZE[13271] $INFO[System.CPUUsage]</label>
-				<align>left</align>
-				<textoffsetx>20</textoffsetx>
-				<height>43.5</height>
-				<width>810</width>
-				<font>DefaultButton</font>
-				<textcolor>ampm</textcolor>
-				<focusedcolor>white</focusedcolor>
-				<disabledcolor>12ffffff</disabledcolor>
-			</control>
-			<control type="label">
-				<description>Memory Text</description>
-				<posy>55</posy>
-				<label>$LOCALIZE[31309] $INFO[system.memory(used.percent)]</label>
-				<align>left</align>
-				<textoffsetx>20</textoffsetx>
-				<height>43.5</height>
-				<width>810</width>
-				<font>DefaultButton</font>
-				<textcolor>ampm</textcolor>
-				<focusedcolor>white</focusedcolor>
-				<disabledcolor>12ffffff</disabledcolor>
-			</control>
+		
 		</control>
 		
-			<control type="grouplist">
-				<posx>366</posx>
-				<posy>90</posy>
-				<width>810</width>
-				<height>480</height>
-				<itemgap>0</itemgap>
-			<description>Harddisk Contents</description>
-			<visible>Control(9000).HasFocus(99)</visible>
-			<control type="label">
-				<description>2</description>
-				<posy>55</posy>
-				<label>$INFO[System.HddInfoModel]</label>
-				<align>left</align>
-				<textoffsetx>20</textoffsetx>
-				<height>43.5</height>
-				<width>810</width>
-				<font>DefaultButton</font>
-				<textcolor>ampm</textcolor>
-				<focusedcolor>white</focusedcolor>
-				<disabledcolor>12ffffff</disabledcolor>
-			</control>
-			<control type="label">
-				<description>3</description>
-				<posy>90</posy>
-				<label>$INFO[System.HddInfoserial]</label>
-				<align>left</align>
-				<textoffsetx>20</textoffsetx>
-				<height>43.5</height>
-				<width>810</width>
-				<font>DefaultButton</font>
-				<textcolor>ampm</textcolor>
-				<focusedcolor>white</focusedcolor>
-				<disabledcolor>12ffffff</disabledcolor>
-			</control>
-			<control type="label">
-				<description>4</description>
-				<posy>125</posy>
-				<label>$INFO[System.HddInfoFirmware]</label>
-				<align>left</align>
-				<textoffsetx>20</textoffsetx>
-				<height>43.5</height>
-				<width>810</width>
-				<font>DefaultButton</font>
-				<textcolor>ampm</textcolor>
-				<focusedcolor>white</focusedcolor>
-				<disabledcolor>12ffffff</disabledcolor>
-			</control>
-			<control type="label">
-				<description>5</description>
-				<posy>160</posy>
-				<label>$INFO[System.HddInfoPW]</label>
-				<align>left</align>
-				<textoffsetx>20</textoffsetx>
-				<height>43.5</height>
-				<width>810</width>
-				<font>DefaultButton</font>
-				<textcolor>ampm</textcolor>
-				<focusedcolor>white</focusedcolor>
-				<disabledcolor>12ffffff</disabledcolor>
-			</control>
-			<control type="label">
-				<description>6</description>
-				<posy>195</posy>
-				<label>$INFO[System.HddInfoLockState]</label>
-				<align>left</align>
-				<textoffsetx>20</textoffsetx>
-				<height>43.5</height>
-				<width>810</width>
-				<font>DefaultButton</font>
-				<textcolor>ampm</textcolor>
-				<focusedcolor>white</focusedcolor>
-				<disabledcolor>12ffffff</disabledcolor>
-			</control>
-			<control type="label">
-				<description>7</description>
-				<posy>230</posy>
-				<label>$INFO[System.HddLockKey]</label>
-				<align>left</align>
-				<textoffsetx>20</textoffsetx>
-				<height>43.5</height>
-				<width>810</width>
-				<font>DefaultButton</font>
-				<textcolor>ampm</textcolor>
-				<focusedcolor>white</focusedcolor>
-				<disabledcolor>12ffffff</disabledcolor>
-			</control>
-			<control type="label">
-				<description>8</description>
-				<posy>265</posy>
-				<label>$INFO[System.HddBootDate]</label>
-				<align>left</align>
-				<textoffsetx>20</textoffsetx>
-				<height>43.5</height>
-				<width>810</width>
-				<font>DefaultButton</font>
-				<textcolor>ampm</textcolor>
-				<focusedcolor>white</focusedcolor>
-				<disabledcolor>12ffffff</disabledcolor>
-			</control>
-			<control type="label">
-				<description>9</description>
-				<posy>300</posy>
-				<label>$INFO[System.HddCycleCount]</label>
-				<align>left</align>
-				<textoffsetx>20</textoffsetx>
-				<height>43.5</height>
-				<width>810</width>
-				<font>DefaultButton</font>
-				<textcolor>ampm</textcolor>
-				<focusedcolor>white</focusedcolor>
-				<disabledcolor>12ffffff</disabledcolor>
-			</control>
-			<control type="label">
-				<description>10</description>
-				<posy>335</posy>
-				<label>$INFO[System.HddTemperature]</label>
-				<align>left</align>
-				<textoffsetx>20</textoffsetx>
-				<height>43.5</height>
-				<width>810</width>
-				<font>DefaultButton</font>
-				<textcolor>ampm</textcolor>
-				<focusedcolor>white</focusedcolor>
-				<disabledcolor>12ffffff</disabledcolor>
-			</control>
-		</control>
-
-			<control type="grouplist">
-				<posx>366</posx>
-				<posy>90</posy>
-				<width>810</width>
-				<height>480</height>
-				<itemgap>0</itemgap>
-			<description>DVD Rom Contents</description>
-			<visible>Control(9000).HasFocus(100)</visible>
-			<control type="label">
-				<description>2</description>
-				<posy>55</posy>
-				<label>$INFO[System.DvdInfoModel]</label>
-				<align>left</align>
-				<textoffsetx>20</textoffsetx>
-				<height>43.5</height>
-				<width>810</width>
-				<font>DefaultButton</font>
-				<textcolor>ampm</textcolor>
-				<focusedcolor>white</focusedcolor>
-				<disabledcolor>12ffffff</disabledcolor>
-			</control>
-			<control type="label">
-				<description>3</description>
-				<posy>90</posy>
-				<label>$INFO[System.DvdInfoFirmware]</label>
-				<align>left</align>
-				<textoffsetx>20</textoffsetx>
-				<height>43.5</height>
-				<width>810</width>
-				<font>DefaultButton</font>
-				<textcolor>ampm</textcolor>
-				<focusedcolor>white</focusedcolor>
-				<disabledcolor>12ffffff</disabledcolor>
-			</control>
-			<control type="label">
-				<description>4</description>
-				<posy>125</posy>
-				<label>$INFO[System.DvdZone]</label>
-				<align>left</align>
-				<textoffsetx>20</textoffsetx>
-				<height>43.5</height>
-				<width>810</width>
-				<font>DefaultButton</font>
-				<textcolor>ampm</textcolor>
-				<focusedcolor>white</focusedcolor>
-				<disabledcolor>12ffffff</disabledcolor>
-			</control>
-			<control type="label">
-				<description>5</description>
-				<posy>160</posy>
-				<label>$INFO[System.DvdTrayState]</label>
-				<align>left</align>
-				<textoffsetx>20</textoffsetx>
-				<height>43.5</height>
-				<width>810</width>
-				<font>DefaultButton</font>
-				<textcolor>ampm</textcolor>
-				<focusedcolor>white</focusedcolor>
-				<disabledcolor>12ffffff</disabledcolor>
-			</control>
-		</control>
+	
 	</control>
 	</control>
 </control>

@@ -64,6 +64,7 @@
 	<texturenofocus></texturenofocus>
 	<font>homemenu3</font>
 	<textcolor>FFC2C2C2</textcolor>
+	
 	<focusedcolor>FFEBEBEB</focusedcolor>
 	<disabledcolor>FF626262</disabledcolor>
 	<width>160</width>
@@ -71,18 +72,36 @@
 </include>
 
 <include name="RightHandDialog">
+	<description>blue dialog Button</description>
+	<align>center</align>
+	<aligny>top</aligny>
+	<textoffsetx>5</textoffsetx>
+	<textoffsety>3</textoffsety>
+	<texturefocus colordiffuse="babyblue">dialog/RightBtn.png</texturefocus>
+	<texturenofocus>-</texturenofocus>	
+	<font>homemenu3</font>
+	<textcolor>babyblue</textcolor>
+		
+	<focusedcolor>babyblue</focusedcolor>
+	<disabledcolor>FF959595</disabledcolor>
+	<width>174</width>
+	<height>42</height>	
+</include>
+
+<include name="BottomDialog">
 	<description>White dialog Button</description>
 	<align>center</align>
 	<aligny>top</aligny>
 	<textoffsetx>5</textoffsetx>
 	<textoffsety>3</textoffsety>
-	<texturefocus flipx="true" colordiffuse="44FFFFFF">SelectDiff.png</texturefocus>
+	<texturefocus colordiffuse="44FFFFFF">dialog/RightBtn.png</texturefocus>
 	<texturenofocus>-</texturenofocus>	
 	<font>homemenu3</font>
-	<textcolor>FFC2C2C2</textcolor>
+	<textcolor>FFEBEBEB</textcolor>
+		
 	<focusedcolor>FFEBEBEB</focusedcolor>
-	<disabledcolor>FF626262</disabledcolor>
-	<width>160</width>
+	<disabledcolor>95FFEBEBEB</disabledcolor>
+	<width>176</width>
 	<height>42</height>	
 </include>
 
@@ -92,12 +111,13 @@
 	<aligny>top</aligny>
 	<textoffsetx>5</textoffsetx>
 	<textoffsety>3</textoffsety>
-	<texturefocus colordiffuse="62FFFFFF">AddCategoryFO.png</texturefocus>
+	<texturefocus colordiffuse="FF00d8ff">AddCategoryFO.png</texturefocus>
 	<texturenofocus>-</texturenofocus>	
 	<font>homemenu3</font>
 	<textcolor>FFC2C2C2</textcolor>
 	<focusedcolor>FFEBEBEB</focusedcolor>
 	<disabledcolor>FF626262</disabledcolor>
+	
 	<width>160</width>
 	<height>42</height>	
 </include>
@@ -211,7 +231,7 @@
 			<posy>8</posy>
 			<height>55</height>
 			<width>55</width>
-			<texture>osd/buttons/GrayBackground.png</texture>
+			<texture>osd/GrayBackground.png</texture>
 			<aspectratio>stretch</aspectratio>
 			<animation effect="fade" start="100" end="40" time="100" condition="Control.HasFocus(999)">Conditional</animation>
 			<aspectratio>stretch</aspectratio>
@@ -236,14 +256,16 @@
 			<height>55</height>
 			<width>55</width>
 			<aspectratio>keep</aspectratio>
-			<texturefocus>osd/buttons/search.png</texturefocus>
-			<texturenofocus>osd/buttons/search.png</texturenofocus>
+			<texturefocus>osd/search.png</texturefocus>
+			<texturenofocus>osd/search.png</texturenofocus>
 			<onleft condition="!Window.IsActive(script-globalsearch-main.xml)">300</onleft>
 			<onleft condition="Window.IsActive(script-globalsearch-main.xml)">9000</onleft>
 			<onright condition="!Window.IsActive(script-globalsearch-main.xml)">300</onright>
 			<onright condition="Window.IsActive(script-globalsearch-main.xml)">9000</onright>
 			<ondown condition="!Window.IsActive(script-globalsearch-main.xml)">300</ondown>
 			<ondown condition="Window.IsActive(script-globalsearch-main.xml)">9000</ondown>
+			<onup condition="!Window.IsActive(script-globalsearch-main.xml)">300</onup>
+			<onup condition="Window.IsActive(script-globalsearch-main.xml)">9000</onup>
 			<onclick condition="!Window.IsActive(script-globalsearch-main.xml)">RunScript(script.globalsearch)</onclick>
 			<onclick condition="Window.IsActive(script-globalsearch-main.xml)">SendClick(198)</onclick>
 			<animation effect="zoom" start="100" end="120" center="auto" time="100">Focus</animation>
@@ -255,32 +277,23 @@
 </include>
 	
 	
-	<include name="VideoFanart">
-
-		<control type="image">
+	
+	<include name="GeneralFanart">
+	
+		<control type="multiimage">
 			<posx>0</posx>
 			<posy>0</posy>
 			<width>1280</width>
 			<height>720</height>
 			<aspectratio>stretch</aspectratio>
-			<texture background="true"  >$INFO[Skin.String(VideoFallbackImage)]</texture>
-			<animation effect="fade" start="0" end="100" time="100">VisibleChange</animation>
-			<animation effect="fade" start="40" end="95" time="100000" delay="2000" reversable="true" pulse="true" condition="Player.HasAudio + !Skin.HasSetting(VisLibrary)">Conditional</animation>
-			<visible>!Player.HasVideo + IsEmpty(ListItem.Art(fanart)) + !Control.IsVisible(28233)</visible>
-		</control>
-		<control type="multiimage" id="28233">
-			<posx>0</posx>
-			<posy>0</posy>
-			<width>1280</width>
-			<height>720</height>
-			<aspectratio>stretch</aspectratio>
-			<imagepath background="true"  >$INFO[Skin.String(Wallpaper_Folder_Path)]</imagepath>
+			<imagepath background="true">$VAR[MultiSlide]</imagepath>
 			<timeperimage>10100</timeperimage>
 			<fadetime>1000</fadetime>
 			<randomize>true</randomize>
 			<animation effect="fade" start="0" end="100" time="100">VisibleChange</animation>
 			<animation effect="fade" start="40" end="95" time="100000" delay="2000" reversable="true" pulse="true" condition="Player.HasAudio + !Skin.HasSetting(VisLibrary)">Conditional</animation>
-			<visible>!Player.HasVideo + IsEmpty(ListItem.Art(fanart)) + !IsEmpty(Skin.String(Wallpaper_Folder_Path)) + IsEmpty(Skin.String(VideoFallbackImage))</visible>
+			
+			<visible>!Player.HasVideo + IsEmpty(ListItem.Art(fanart)) + !Skin.HasSetting(BackgroundSlideshow)</visible>
 		</control>
 		<control type="image">
 			<posx>0</posx>
@@ -296,155 +309,8 @@
 	
 	</include>
 	
-	<include name="ProgramFanart">
-	
-		<control type="image">
-			<posx>0</posx>
-			<posy>0</posy>
-			<width>1280</width>
-			<height>720</height>
-			<aspectratio>stretch</aspectratio>
-			<texture background="true" >$INFO[Skin.String(ProgramFallbackImage)]</texture>
-			<animation effect="fade" start="0" end="100" time="100">VisibleChange</animation>
-			<visible>!Player.HasVideo + IsEmpty(ListItem.Art(fanart)) + !Control.IsVisible(28233)</visible>
-			<animation effect="fade" start="40" end="95" time="100000" delay="2000" reversable="true" pulse="true" condition="Player.HasAudio + !Skin.HasSetting(VisLibrary)">Conditional</animation>
-		</control>
-		<control type="multiimage" id="28233">
-			<posx>0</posx>
-			<posy>0</posy>
-			<width>1280</width>
-			<height>720</height>
-			<aspectratio>stretch</aspectratio>
-			<imagepath background="true"  >$INFO[Skin.String(Wallpaper_Folder_Path)]</imagepath>
-			<timeperimage>10100</timeperimage>
-			<fadetime>1000</fadetime>
-			<randomize>true</randomize>
-			<animation effect="fade" start="0" end="100" time="100">VisibleChange</animation>
-			<animation effect="fade" start="40" end="95" time="100000" delay="2000" reversable="true" pulse="true" condition="Player.HasAudio + !Skin.HasSetting(VisLibrary)">Conditional</animation>
-			<visible>!Player.HasVideo + IsEmpty(ListItem.Art(fanart)) + !IsEmpty(Skin.String(Wallpaper_Folder_Path)) + IsEmpty(Skin.String(ProgramFallbackImage))</visible>
-		</control>
-		<control type="image">
-			<posx>0</posx>
-			<posy>0</posy>
-			<width>1280</width>
-			<height>720</height>
-			<aspectratio>stretch</aspectratio>
-			<texture background="true">$INFO[ListItem.Art(fanart)]</texture>
-			<animation effect="fade" start="40" end="95" time="100000" delay="2000" reversable="true" pulse="true" condition="Player.HasAudio + !Skin.HasSetting(VisLibrary)">Conditional</animation>
-			<animation effect="fade" start="0" end="100" time="100">VisibleChange</animation>
-			<visible>!Player.HasVideo</visible>
-		</control>
-
-	</include>
-	
-	
-	<include name="MusicFanart">
-	
-		<control type="image">
-			<posx>0</posx>
-			<posy>0</posy>
-			<width>1280</width>
-			<height>720</height>
-			<aspectratio>stretch</aspectratio>
-			<texture background="true" >$INFO[Skin.String(MusicFallbackImage)]</texture>
-			<animation effect="fade" start="0" end="100" time="100">VisibleChange</animation>
-			<visible>!Player.HasVideo + IsEmpty(ListItem.Art(fanart)) + !Control.IsVisible(28233)</visible>
-			<animation effect="fade" start="40" end="95" time="100000" delay="2000" reversable="true" pulse="true" condition="Player.HasAudio + !Skin.HasSetting(VisLibrary)">Conditional</animation>
-		</control>
-		<control type="multiimage" id="28233">
-			<posx>0</posx>
-			<posy>0</posy>
-			<width>1280</width>
-			<height>720</height>
-			<aspectratio>stretch</aspectratio>
-			<imagepath background="true"  >$INFO[Skin.String(Wallpaper_Folder_Path)]</imagepath>
-			<timeperimage>10100</timeperimage>
-			<fadetime>1000</fadetime>
-			<randomize>true</randomize>
-			<animation effect="fade" start="0" end="100" time="100">VisibleChange</animation>
-			<animation effect="fade" start="40" end="95" time="100000" delay="2000" reversable="true" pulse="true" condition="Player.HasAudio + !Skin.HasSetting(VisLibrary)">Conditional</animation>
-			<visible>!Player.HasVideo + IsEmpty(ListItem.Art(fanart)) + !IsEmpty(Skin.String(Wallpaper_Folder_Path)) + IsEmpty(Skin.String(MusicFallbackImage))</visible>
-		</control>
-		<control type="image">
-			<posx>0</posx>
-			<posy>0</posy>
-			<width>1280</width>
-			<height>720</height>
-			<aspectratio>stretch</aspectratio>
-			<texture background="true">$INFO[ListItem.Art(fanart)]</texture>
-			<animation effect="fade" start="40" end="95" time="100000" delay="2000" reversable="true" pulse="true" condition="Player.HasAudio + !Skin.HasSetting(VisLibrary)">Conditional</animation>
-			<animation effect="fade" start="0" end="100" time="100">VisibleChange</animation>
-			<visible>!Player.HasVideo</visible>
-		</control>
-	
-	</include>
-	
-	<include name="SettingsFanart">
-	
-		<control type="image">
-			<posx>0</posx>
-			<posy>0</posy>
-			<width>1280</width>
-			<height>720</height>
-			<aspectratio>stretch</aspectratio>
-			<texture background="true" >$INFO[Skin.String(SettingsFallbackImage)]</texture>
-			<animation effect="fade" start="0" end="100" time="100">VisibleChange</animation>
-			<animation effect="fade" start="40" end="95" time="100000" delay="2000" reversable="true" pulse="true" condition="Player.HasAudio + !Skin.HasSetting(VisLibrary)">Conditional</animation>
-			<visible>!Player.HasVideo + IsEmpty(ListItem.Art(fanart))</visible>
-		</control>
-		<control type="image">
-			<posx>0</posx>
-			<posy>0</posy>
-			<width>1280</width>
-			<height>720</height>
-			<aspectratio>stretch</aspectratio>
-			<texture background="true">$INFO[ListItem.Art(fanart)]</texture>
-			<animation effect="fade" start="40" end="95" time="100000" delay="2000" reversable="true" pulse="true" condition="Player.HasAudio + !Skin.HasSetting(VisLibrary)">Conditional</animation>
-			<animation effect="fade" start="0" end="100" time="100">VisibleChange</animation>
-			<visible>!Player.HasVideo</visible>
-		</control>
-	
-	</include>
 	<include name="HomeFanart">
-		
-		<control type="image">
-			<posx>0</posx>
-			<posy>0</posy>
-			<width>1280</width>
-			<height>720</height>
-			<aspectratio>stretch</aspectratio>
-			<texture background="true" >$INFO[Skin.String(HomeFallbackImage)]</texture>
-			
-			<visible>!Player.HasVideo + !Control.IsVisible(28234)  + !Control.IsVisible(24891) + !Control.IsVisible(24892)  + !Control.IsVisible(24893) + !Control.IsVisible(28233)</visible>
-			<animation effect="fade" start="0" end="100" time="100">VisibleChange</animation>
-			<animation effect="fade" start="40" end="95" time="100000" delay="2000" reversable="true" pulse="true" condition="Player.HasAudio + !Skin.HasSetting(VisLibrary)">Conditional</animation>
-		</control>
-		<control type="multiimage" id="28234">
-			<posx>0</posx>
-			<posy>0</posy>
-			<width>1280</width>
-			<height>720</height>
-			<aspectratio>stretch</aspectratio>
-			<imagepath background="true">$INFO[Window(Home).Property(script.grab.fanart.Video.FanArt)]</imagepath>
-			<fadetime>1000</fadetime>
-			<visible>!Player.HasVideo + System.HasAddon(script.grab.fanart) + !Control.IsVisible(28233) + !Control.IsVisible(24891) + !Control.IsVisible(24892) + !Control.IsVisible(24893)</visible>
-			<animation effect="fade" start="40" end="95" time="100000" delay="2000" reversable="true" pulse="true" condition="Player.HasAudio + !Skin.HasSetting(VisLibrary)">Conditional</animation>
-		</control> 
-		<control type="multiimage" id="28233">
-			<posx>0</posx>
-			<posy>0</posy>
-			<width>1280</width>
-			<height>720</height>
-			<aspectratio>stretch</aspectratio>
-			<imagepath background="true"  >$INFO[Skin.String(Wallpaper_Folder_Path)]</imagepath>
-			<timeperimage>10100</timeperimage>
-			<fadetime>1000</fadetime>
-			<randomize>true</randomize>
-			<animation effect="fade" start="40" end="95" time="100000" delay="2000" reversable="true" pulse="true" condition="Player.HasAudio + !Skin.HasSetting(VisLibrary)">Conditional</animation>
-			<animation effect="fade" start="0" end="100" time="100">VisibleChange</animation>
-			
-			<visible>!Player.HasVideo + !IsEmpty(Skin.String(Wallpaper_Folder_Path)) + IsEmpty(Skin.String(HomeFallbackImage)) + !Control.IsVisible(24891) + !Control.IsVisible(24892) + !Control.IsVisible(24893)</visible>
-		</control>
+
 		<control type="image" id="24891">
 			<posx>0</posx>
 			<posy>0</posy>
@@ -456,17 +322,6 @@
 			<visible>!Player.HasVideo</visible>
 			<animation effect="fade" start="0" end="100" time="100">VisibleChange</animation>
 		</control>
-		<!--control type="image" id="24892">
-			<posx>0</posx>
-			<posy>0</posy>
-			<width>1280</width>
-			<height>720</height>
-			<aspectratio>stretch</aspectratio>
-			<texture>$INFO[Container(7998).ListItem.Property(Fanart)] </texture>
-			<animation effect="fade" start="40" end="95" time="100000" delay="2000" reversable="true" pulse="true" condition="Player.HasAudio + !Skin.HasSetting(VisLibrary)">Conditional</animation>
-			<visible>!IsEmpty(Container(7998).ListItem.Property(Fanart)) + Control.IsVisible(7998) + !Player.HasVideo</visible>
-			<animation effect="fade" start="0" end="100" time="100">VisibleChange</animation>
-		</control-->
 			
 	</include>
 	
@@ -478,7 +333,7 @@
 			<height>720</height>
 		    <visible>Player.HasAudio + !Skin.HasSetting(VisLibrary)</visible>
 		</control>
-		<control type="videowindow" id="2">
+		<control type="videowindow">
 			<posx>0</posx>
 			<posy>0</posy>
 			<width>1280</width>
@@ -488,7 +343,7 @@
 	</include>
 	
 	<include name="Background">
-		
+					
 		<control type="image">
 			<posx>0</posx>
 			<posy>0</posy>
@@ -500,6 +355,8 @@
 			<animation effect="fade" start="90" end="75" time="200" reversible="true" condition="Player.HasVideo">Conditional</animation>
 			<animation effect="fade" start="84" end="90" time="90000" reversable="true" pulse="true" condition="Player.HasAudio + !Skin.HasSetting(VisLibrary)">Conditional</animation>
 		</control>
+	
+	
 	
 		<control type="image">
 			<posx>0</posx>
@@ -520,8 +377,6 @@
 			 
 			<animation effect="fade" start="0" end="30" time="0" reversible="false" condition="true">Conditional</animation>
 		</control>
-		
-		
 		<control type="image"><!----top line---->
 			<posx>0</posx>
 			<posy>67</posy>
@@ -546,7 +401,7 @@
 				<posy>0</posy>
 				<width>55</width>
 				<height>55</height>
-				<texture>osd/buttons/GrayBackground.png</texture>
+				<texture>osd/GrayBackground.png</texture>
 				<animation effect="slide" start="0,0" end="60,0" time="200" tween="quadratic" easing="out" condition="Window.Isvisible(musicplaylist) | Window.Isvisible(musicplaylist)">Conditional</animation>
 			</control>
 			<control type="label">

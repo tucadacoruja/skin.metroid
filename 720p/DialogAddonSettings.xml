@@ -7,24 +7,21 @@
 		<posy>0</posy>
 	</coordinates>
 	
-		<animation type="WindowOpen" reversible="false">
-			<effect type="fade" start="0" end="100" time="350" delay="0" />
-			<effect type="zoom" start="130" end="100" time="450" center="auto" delay="0" tween="back" easing="out" />
-		</animation>
-		<animation type="WindowClose" reversible="false">
-			<effect type="fade" start="100" end="0" time="250" delay="0" />
-			<effect type="zoom" start="100" end="130" time="300" center="auto" delay="0" />
-		</animation>
+		<include>DialogEffect</include>
+
+<controls>
+
+<control type="group">		
+		<include>DialogEffect</include>
 		
-	<controls>
 		<control type="image">
 			<posx>180</posx>
-			<posy>90</posy>			
+			<posy>88</posy>			
 			<width>942</width>
 			<height>482</height>
 			<aspectratio>stretch</aspectratio>
 			<texture>dialog/setcontentbg2.png</texture>
-			<colordiffuse>FF707070</colordiffuse>
+			<!--colordiffuse>FF707070</colordiffuse-->
 		</control>
 		<control type="label" id="20">
 			<description>header label</description>
@@ -35,7 +32,7 @@
 			<font>homemenu3</font>
 			<align>center</align>
 			<aligny>center</aligny>
-			<textcolor>FF959595</textcolor>
+			<textcolor>babyblue</textcolor>
 		</control>
 	
 		<control type="label" id="7">
@@ -53,9 +50,9 @@
 		<control type="grouplist" id="9"><!--category group--->
 			<description>Button area</description>
 			<posx>210</posx>
-			<posy>600</posy>
+			<posy>677</posy>
 			<width>870</width>
-			<height>390</height>
+			<height>50</height>
 			<align>center</align>
 			<itemgap>30</itemgap>
 			<pagecontrol>-</pagecontrol>
@@ -94,11 +91,12 @@
 		</control>
 		
 		<control type="scrollbar" id="30">
+			<posx>1300</posx>
 			<visible>false</visible>
 		</control>
 		
 		<control type="group" id="9001">
-			<posx>906</posx>
+			<posx>921</posx>
 			<posy>150</posy>
 			<control type="button" id="12">
 				<description>Defaults Button</description>
@@ -107,16 +105,14 @@
 				<onleft>2</onleft>
 				<onright>9</onright>
 				<ondown>10</ondown>
-				<width>191</width>
-							
+										
 				<include>RightHandDialog</include>
 			</control>
 			<control type="button" id="10">
 				<description>OK Button</description>
 				<posy>55</posy>
 				<label>186</label>
-				<width>191</width>
-						
+									
 				<onup>12</onup>
 				<onleft>2</onleft>
 				<onright>9</onright>
@@ -127,8 +123,7 @@
 				<description>Cancel Button</description>
 				<posy>110</posy>
 				<label>222</label>
-				<width>191</width>
-					
+								
 				<onup>10</onup>
 				<onleft>2</onleft>
 				<onright>9</onright>
@@ -143,9 +138,9 @@
 			<height>37</height>
 			<font>recent</font>
 			<align>left</align>
-			<textcolor>FF959595</textcolor>
+			<textcolor>ACFFFFFF</textcolor>
 			 
-			<focusedcolor>ffefefef</focusedcolor>
+			<focusedcolor>white</focusedcolor>
 			<texturefocus>setting.png</texturefocus>
 			<texturenofocus>list/listline.png</texturenofocus>
 			<textoffsetx>10</textoffsetx>
@@ -155,8 +150,8 @@
 			<description>Default RadioButton</description>
 			<height>37</height>
 			<font>recent</font>
-			<textcolor>FF959595</textcolor>
-			<focusedcolor>ffefefef</focusedcolor>
+			<textcolor>ACFFFFFF</textcolor>
+			<focusedcolor>white</focusedcolor>
 			 
 			<texturefocus>setting.png</texturefocus>
 			<texturenofocus>list/listline.png</texturenofocus>
@@ -172,12 +167,12 @@
 			<height>37</height>
 			<width>250</width>
 			<font>recent</font>
-			<textcolor>FF959595</textcolor>
-			<focusedcolor>ffefefef</focusedcolor>
+			<textcolor>ACFFFFFF</textcolor>
+			<focusedcolor>white</focusedcolor>
 			 
 			<texturefocus>setting.png</texturefocus>
 			<texturenofocus>list/listline.png</texturenofocus>
-			<textoffsetx>5</textoffsetx>
+			<textoffsetx>10</textoffsetx>
 			<align>left</align>
 			<aligny>center</aligny>
 			<reverse>yes</reverse>
@@ -188,8 +183,8 @@
 			<description>Default Slider</description>
 			<height>37</height>
 			<font>recent</font>
-			<textcolor>FF959595</textcolor>
-			<focusedcolor>ffefefef</focusedcolor>
+			<textcolor>ACFFFFFF</textcolor>
+			<focusedcolor>white</focusedcolor>
 			 
 			<texturefocus>setting.png</texturefocus>
 			<texturenofocus>list/listline.png</texturenofocus>
@@ -204,5 +199,7 @@
 			<texture>white.png</texture>
 			<colordiffuse>26FFFFFF</colordiffuse>
 		</control>
-	</controls>
+		
+</control>
+</controls>
 </window>

@@ -11,7 +11,7 @@
 				<posy>0</posy>
 				<width>120</width>
 				<height>55</height>
-				<texture>osd/buttons/pause.png</texture>
+				<texture>osd/pause.png</texture>
 				
 			</control>
 		

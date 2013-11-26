@@ -74,7 +74,7 @@
 
 
 <include>VideoWindow</include>
-<include>MusicFanart</include>
+<include>GeneralFanart</include>
 <include>Background</include>
 <include>MainMenu</include>
 
