@@ -35,7 +35,19 @@
 				<texture>shadow.png</texture>
 				<aspectratio>stretch</aspectratio>
 			</control>
-
+			
+			<control type="progress" id="21">
+				<posx>348</posx>
+				<posy>50</posy>
+				<width>633</width>
+				<height>5</height>
+				<texturebg>osd/seek/progresscache_back.png</texturebg>
+				<lefttexture>-</lefttexture>
+				<midtexture>white.png</midtexture>
+				<righttexture>-</righttexture>
+				<info>Player.ProgressCache</info>
+				<animation effect="fade" start="0" end="20" time="0" condition="true">Conditional</animation>
+			</control>
 			<control type="progress" id="20">
 				<posx>348</posx>
 				<posy>48</posy>
@@ -50,18 +62,7 @@
 				<!--animation effect="fade" start="0" end="60" time="0" condition="true">Conditional</animation-->
 
 			</control>
-			<control type="progress" id="21">
-				<posx>348</posx>
-				<posy>50</posy>
-				<width>633</width>
-				<height>4</height>
-				<texturebg>osd/seek/progresscache_back.png</texturebg>
-				<lefttexture>-</lefttexture>
-				<midtexture>white.png</midtexture>
-				<righttexture>-</righttexture>
-				<info>Player.ProgressCache</info>
-				<animation effect="fade" start="0" end="20" time="0" condition="true">Conditional</animation>
-			</control>
+			
 			<control type="slider" id="87">
 				<description>Seek Slider</description>
 				<posx>345</posx>
