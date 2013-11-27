@@ -86,11 +86,11 @@
 	<control type="label" id="401">
 		<description>line 2</description>
 		<posx>1190</posx>
-		<posy>26</posy>
+		<posy>27</posy>
 		<width>500</width>
 		<height>42</height>
 		<font>WeatherSmall</font>
-		<textcolor>FF959595</textcolor>
+		<textcolor>FF707070</textcolor>
 		<align>right</align>
 		<label>-</label>
 

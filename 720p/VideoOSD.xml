@@ -37,10 +37,10 @@
 			</control>
 			
 			<control type="progress" id="21">
-				<posx>348</posx>
-				<posy>50</posy>
+				<posx>323</posx>
+				<posy>49</posy>
 				<width>633</width>
-				<height>5</height>
+				<height>6</height>
 				<texturebg>osd/seek/progresscache_back.png</texturebg>
 				<lefttexture>-</lefttexture>
 				<midtexture>white.png</midtexture>
@@ -49,7 +49,7 @@
 				<animation effect="fade" start="0" end="20" time="0" condition="true">Conditional</animation>
 			</control>
 			<control type="progress" id="20">
-				<posx>348</posx>
+				<posx>323</posx>
 				<posy>48</posy>
 				<width>633</width>
 				<height>4</height>
@@ -65,9 +65,9 @@
 			
 			<control type="slider" id="87">
 				<description>Seek Slider</description>
-				<posx>345</posx>
+				<posx>318</posx>
 				<posy>37</posy>
-				<width>640</width>
+				<width>643</width>
 				<height>50</height>
 				<onup>1</onup>
 				<ondown>1</ondown>
@@ -79,9 +79,9 @@
 			</control>
 			<control type="slider" id="88">
 				<description>Seek Slider</description>
-				<posx>345</posx>
+				<posx>318</posx>
 				<posy>41</posy>
-				<width>640</width>
+				<width>643</width>
 				<height>4</height>
 				<onup>9000</onup>
 				
@@ -93,7 +93,7 @@
 			</control>
 			
 			<control type="label">
-				<posx>230</posx>
+				<posx>205</posx>
 				<posy>30</posy>
 				<width>300</width>
 				<height>42</height>
@@ -104,7 +104,7 @@
 				
 			</control>
 			<control type="label">
-				<posx>1090</posx>
+				<posx>1065</posx>
 				<posy>30</posy>
 				<width>300</width>
 				<height>42</height>
@@ -117,7 +117,7 @@
 			
 			
 			<control type="label" id="5334">
-				<posx>50</posx>
+				<posx>20</posx>
 				<posy>30</posy>
 				<height>42</height>
 				<width min="5" max="250">auto</width>

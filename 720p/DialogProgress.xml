@@ -11,13 +11,19 @@
 
 <controls>
 
-<control type="label" id="2">
-	<posx>-10</posx>
-	<posy>-10</posy>
-	<width>1</width>
-	<height>1</height>
-	<animation effect="fade" start="1" end="0" time="0" condition="true">Conditional</animation>
-</control>
+<control type="group">
+<visible>!Window.IsVisible(infodialog)</visible>
+<animation effect="fade" start="100" end="0" time="150">Hidden</animation>
+<animation effect="fade" start="0" end="100" time="150">Visible</animation>
+
+<animation type="WindowOpen" reversible="false">
+  <effect type="fade" start="0" end="100" time="350" delay="800" />
+</animation>
+<animation type="WindowClose" reversible="false">
+  <effect type="fade" start="100" end="0" time="350" delay="0" />
+</animation>
+
+
 <control type="label" id="3">
 	<posx>-10</posx>
 	<posy>-10</posy>
@@ -32,28 +38,17 @@
 	<height>1</height>
 	<animation effect="fade" start="1" end="0" time="0" condition="true">Conditional</animation>
 </control>
-<control type="button" id="10">
+<!--control type="textbox" id="9">
 	<posx>-10</posx>
 	<posy>-10</posy>
 	<width>1</width>
 	<height>1</height>
 	<animation effect="fade" start="1" end="0" time="0" condition="true">Conditional</animation>
-</control>
+</control-->
 
-<control type="group">
-<visible>!Window.IsVisible(infodialog)</visible>
-<animation effect="fade" start="100" end="0" time="150">Hidden</animation>
-<animation effect="fade" start="0" end="100" time="150">Visible</animation>
-
-<animation type="WindowOpen" reversible="false">
-  <effect type="fade" start="0" end="100" time="350" delay="800" />
-</animation>
-<animation type="WindowClose" reversible="false">
-  <effect type="fade" start="100" end="0" time="350" delay="0" />
-</animation>
 		
 	<control type="image">
-		<posx>68r</posx>
+		<posx>1212</posx>
 		<posy>10</posy>
 		<height>55</height>
 		<width>55</width>
@@ -61,12 +56,13 @@
 		<aspectratio>stretch</aspectratio>
 		
 	</control>
-	<control type="image">
-		<posx>68r</posx>
+	<control type="button" id="10">
+		<posx>1212</posx>
 		<posy>10</posy>
 		<width>55</width>
 		<height>55</height>
-		<texture>osd/kai.png</texture>
+		<texturefocus>osd/kai.png</texturefocus>
+		<texturenofocus>osd/kai.png</texturenofocus>
 		
 	</control>
   
@@ -85,7 +81,7 @@
 	</control>
 	
 	<control type="label" id="1">
-		<posx>90r</posx>
+		<posx>1190</posx>
 		<posy>0</posy>
 		<width>500</width>
 		<height>42</height>
@@ -97,19 +93,20 @@
 		<scroll>false</scroll>
 	</control>
 	
-	<control type="textbox" id="9">
+	<control type="label" id="2">
 		<description>line 2</description>
-		<posx>90r</posx>
+		<posx>1190</posx>
 		<posy>26</posy>
 		<width>500</width>
 		<height>42</height>
 		<font>WeatherSmall</font>
 		<textcolor>FF707070</textcolor>
 		<align>right</align>
-		<label>-</label>
+		<label>$INFO[Control.GetLabel(9)]</label>
 		<scroll>false</scroll>
 		
 	</control>
+
 	
  </control> 
   
