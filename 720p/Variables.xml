@@ -131,7 +131,7 @@
 		<value condition="Container.Content(movies) + IsEmpty(ListItem.Art(fanart))">DefaultFallback.png</value>
 		<value condition="Container.Content(artists) + IsEmpty(ListItem.Art(fanart))">DefaultFallback.png</value>
 		<value condition="Container.Content(tvshows) + IsEmpty(ListItem.Art(fanart))">DefaultFallback.png</value>
-		<value condition="Container.Content(seasons) + IsEmpty(ListItem.Art(season.fanart))">DefaultFallback.png</value>
+		<value condition="Container.Content(seasons) + IsEmpty(ListItem.Art(season.fanart)) + IsEmpty(ListItem.Art(fanart))">DefaultFallback.png</value>
 		<value condition="Container.Content(episodes) + IsEmpty(ListItem.Art(thumb))">DefaultFallback.png</value>
 		
 		<value condition="substring(listitem.filenameandpath,addons://sources/) | substring(listitem.filenameandpath,plugin://) | substring(listitem.filenameandpath,sources://video/)">$INFO[ListItem.Icon]</value>

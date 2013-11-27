@@ -36,7 +36,7 @@
 			
 			
 			<control type="wraplist" id="501">
-				<visible>Container.Content(Movies) | Container.Content(TVShows)</visible>
+				<visible>Container.Content(Movies) | Container.Content(TVShows) | Container.Content(seasons)</visible>
 				
 				<posx>270</posx>
 				<posy>115</posy>
