@@ -318,7 +318,7 @@
 							<textcolor>00FFFFFF</textcolor>
 							<visible allowhiddenfocus="true">true</visible>
 							<onup>6</onup>
-							<ondown>8</ondown>
+							<ondown>444</ondown>
 							<onright>50</onright>
 							
 							<animation effect="zoom" start="100" end="120" center="auto" time="100">Focus</animation>
@@ -328,6 +328,45 @@
 											
 					</control>
 					
+					<!--close Button-->
+					<control type="group">
+					
+						<width>70</width>
+						<height>60</height>
+						
+						<control type="image">
+						
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>60</width>
+							<height>60</height>
+							<aspectratio>scale</aspectratio>
+							<texture>osd/osdbg.png</texture>
+							<aspectratio>stretch</aspectratio>
+							<animation effect="fade" start="100" end="60" time="100" condition="Control.HasFocus(444)">Conditional</animation>
+						</control>
+						<control type="button" id="444">
+							
+							<width>60</width>
+							<height>60</height>
+							<texturefocus>osd/cancel.png</texturefocus>
+							<texturenofocus>osd/cancel.png</texturenofocus>
+							<alttexturefocus>-</alttexturefocus>
+							<alttexturenofocus>-</alttexturenofocus>
+							<colordiffuse>FFEBEBEB</colordiffuse>
+							<disabledcolor>-</disabledcolor>
+							<textcolor>00FFFFFF</textcolor>
+							<visible allowhiddenfocus="true">true</visible>
+							<onup>6</onup>
+							<ondown>8</ondown>
+							<onright>50</onright>
+							<onclick>back</onclick>
+							<animation effect="zoom" start="100" end="120" center="auto" time="100">Focus</animation>
+							<animation effect="zoom" start="120" end="100" center="auto" time="100">UnFocus</animation>
+							
+						</control>
+											
+					</control>
 				</control>	
 		
 				<!--Information Section-->

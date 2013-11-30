@@ -72,7 +72,7 @@
 			<onleft>66</onleft>
 			<onright>-</onright>
 			<onup>300</onup>
-			<ondown>9000</ondown>
+			<ondown>444</ondown>
 			
 			<control type="button" id="95">
 				<label>$LOCALIZE[128]</label>
@@ -323,6 +323,27 @@
 		
 	
 	</control>
+	
+		<control type="button" id="444">
+		
+			<posx>1</posx>
+			<posy>594</posy>
+			<description>Back Button</description>
+			<height>50</height>
+			<width>247</width>
+			<align>left</align>
+			<aligny>center</aligny>
+			<textoffsetx>23</textoffsetx>
+			<font>MainMenu21</font>
+			<label>31084</label>
+			<focusedcolor>white</focusedcolor>
+			<texturefocus>category.png</texturefocus>
+			<texturenofocus>-</texturenofocus>
+			<onclick>back</onclick>
+			<onup>9000</onup>
+			
+			<!--visible>Skin.HasSetting(HideGlobalBack)</visible-->
+		</control>
 	</control>
 </control>
 

@@ -34,6 +34,27 @@
 	<animation effect="fade" start="100" end="0" time="200" condition="Window.IsVisible(mediasource)">Conditional</animation>
 </control>
 
+<control type="button" id="444">
+	<description>back button</description>
+	<posx>520</posx>
+	<posy>604</posy>
+	<label>$LOCALIZE[31084]</label>
+	<onleft>20</onleft>
+	<onright>21</onright>
+	
+	<onclick>back</onclick>
+	<width>240</width>
+	<height>37</height>		
+	<align>center</align>
+	<aligny>top</aligny>
+	<textoffsetx>5</textoffsetx>
+	<textoffsety>1</textoffsety>
+	<textcolor>ACFFFFFF</textcolor>
+	<focusedcolor>babyblue</focusedcolor>
+	<font>homemenu3</font>
+	<texturefocus colordiffuse="babyblue">dialog/RightBtn.png</texturefocus>
+	<texturenofocus colordiffuse="44FFFFFF">dialog/RightBtn.png</texturenofocus>
+</control>
 
   
 <!-- Left -->
@@ -63,7 +84,7 @@
       <width>515</width>
       <height>570</height>
       <onleft>21</onleft>
-      <onright>21</onright>
+      <onright>444</onright>
       <onup>20</onup>
       <ondown>20</ondown>
 	  <scrolltime>0</scrolltime>
@@ -197,7 +218,7 @@
       <posy>0</posy>
       <width>515</width>
       <height>570</height>
-      <onleft>20</onleft>
+      <onleft>444</onleft>
       <onright>20</onright>
       <onup>21</onup>
       <ondown>21</ondown>

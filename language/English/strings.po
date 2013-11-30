@@ -250,7 +250,7 @@ msgid "Source(s) to be added:"
 msgstr ""
 
 msgctxt "#31072"
-msgid "Seeking"
+msgid "Seek"
 msgstr ""
 
 msgctxt "#31073"
@@ -647,10 +647,6 @@ msgstr ""
 
 msgctxt "#31174"
 msgid "Exceptions and Extras"
-msgstr ""
-
-msgctxt "#31175"
-msgid "Seeking"
 msgstr ""
 
 msgctxt "#31176"

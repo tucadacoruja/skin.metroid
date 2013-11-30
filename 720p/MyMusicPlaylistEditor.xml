@@ -38,7 +38,7 @@
 </control>
 <control type="textbox">
 	<posx>520</posx>
-	<posy>375</posy>
+	<posy>350</posy>
 	<width>240</width>
 	<height>90</height>	
 	<align>center</align>
@@ -58,7 +58,7 @@
 
 			<control type="grouplist" id="9000">
 				<posx>520</posx>
-				<posy>492</posy>
+				<posy>448</posy>
 								
 				<control type="button" id="6">
 					<description>Open Button</description>
@@ -106,8 +106,28 @@
 					<onleft>50</onleft>
 					<onright>100</onright>
 					<onup>7</onup>
-					<ondown>66</ondown>
+					<ondown>444</ondown>
 					
+					<width>240</width>
+					<height>37</height>		
+					<align>center</align>
+					<aligny>top</aligny>
+					<textoffsetx>5</textoffsetx>
+					<textoffsety>1</textoffsety>
+					<textcolor>ACFFFFFF</textcolor>
+					<focusedcolor>babyblue</focusedcolor>
+					<font>homemenu3</font>
+					<texturefocus colordiffuse="babyblue">dialog/RightBtn.png</texturefocus>
+					<texturenofocus colordiffuse="44FFFFFF">dialog/RightBtn.png</texturenofocus>
+				</control>
+				<control type="button" id="444">
+					<description>back button</description>
+					<label>$LOCALIZE[31084]</label>
+					<onleft>50</onleft>
+					<onright>100</onright>
+					<onup>8</onup>
+					<ondown>66</ondown>
+					<onclick>back</onclick>
 					<width>240</width>
 					<height>37</height>		
 					<align>center</align>

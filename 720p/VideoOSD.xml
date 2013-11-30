@@ -46,7 +46,7 @@
 				<midtexture>white.png</midtexture>
 				<righttexture>-</righttexture>
 				<info>Player.ProgressCache</info>
-				<animation effect="fade" start="0" end="20" time="0" condition="true">Conditional</animation>
+				<animation effect="fade" start="0" end="10" time="0" condition="true">Conditional</animation>
 			</control>
 			<control type="progress" id="20">
 				<posx>323</posx>
@@ -358,6 +358,13 @@
 				<aspectratio>stretch</aspectratio>
 				<animation effect="fade" start="100" end="60" time="100" condition="Control.HasFocus(12)">Conditional</animation>
 			</control>
+			<control type="image">
+				<height>60</height>
+				<width>60</width>
+				<texture>osd/osdbg.png</texture>
+				<aspectratio>stretch</aspectratio>
+				<animation effect="fade" start="100" end="60" time="100" condition="Control.HasFocus(13)">Conditional</animation>
+			</control>
 			
 		</control>
 		
@@ -522,6 +529,20 @@
 				<animation effect="zoom" start="120" end="100" center="auto" time="100">UnFocus</animation>
 			</control>
 			
+			<control type="button" id="13">
+				
+				<description>playlist</description>
+				<height>60</height>
+				<width>60</width>
+				<aspectratio>keep</aspectratio>
+				<texturefocus>osd/playlist.png</texturefocus>
+				<texturenofocus>osd/playlist.png</texturenofocus>
+				
+				<onclick>ActivateWindow(videoplaylist)</onclick>
+				<animation effect="zoom" start="100" end="120" center="auto" time="100">Focus</animation>
+				<animation effect="zoom" start="120" end="100" center="auto" time="100">UnFocus</animation>
+
+			</control>
 		</control>
 		
 	

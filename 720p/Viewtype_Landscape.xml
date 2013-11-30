@@ -297,7 +297,7 @@
 				<orientation>horizontal</orientation>
 				<showonepage>true</showonepage>
 				<posx>240</posx>
-				<posy>40r</posy>
+				<posy>690</posy>
 				<width>950</width>
 				<height>10</height>
 				<onup>603</onup>

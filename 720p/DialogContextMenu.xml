@@ -9,18 +9,20 @@
   
 <controls>
 	
-	<control type="image">
-		<description>vignette</description>
-		<posx>0</posx>
-		<posy>0</posy>
-		<width>1280</width>
-		<height>720</height>
-		<texture>black.png</texture>
-		<aspectratio>stretch</aspectratio>
-		<animation effect="fade" start="0" end="80" time="900" >WindowOpen</animation>
-		<animation effect="fade" start="80" end="0" time="900" >WindowClose</animation>
-		
-	</control>
+<control type="button">
+	<posx>0</posx>
+	<posy>0</posy>
+	<width>1280</width>
+	<height>720</height>
+	<description>Invisible back button</description>
+	<aspectratio>stretch</aspectratio>
+	<texturefocus>black.png</texturefocus>
+	<texturenofocus>black.png</texturenofocus>
+	
+	<onclick>back</onclick>
+	<animation effect="fade" start="0" end="80" time="900" >WindowOpen</animation>
+	<animation effect="fade" start="80" end="0" time="900" >WindowClose</animation>
+</control>
 
 
 		

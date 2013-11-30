@@ -16,14 +16,28 @@
 	<posx>-15</posx>
 	<posy>8</posy>
 	<width>570</width>
-	<height>455</height>
+	<height>505</height>
 	
 	<aspectratio>stretch</aspectratio>
 	<texture border="52">dialog/contentbg2.png</texture>
 	<!--colordiffuse>ffD7D7D7</colordiffuse-->
 </control>
 
+	<control type="button" id="444">
+		<description>close</description>
+		<posx>340</posx>
+	    <posy>435</posy>
+		<height>42</height>
+		<width>140</width>
+		<label>31056</label>
 
+		<onleft>450</onleft>
+		<onup>450</onup>
+	
+		<onclick>back</onclick>
+		<include>BottomDialog</include>
+	</control>
+	
   <control type="list" id="450">
 	  <posx>20</posx>
 	  <posy>78</posy>
@@ -32,7 +46,7 @@
 	  <onleft>450</onleft>
 	  <onright>450</onright>
 	  <onup>450</onup>
-	  <ondown>450</ondown>
+	  <ondown>444</ondown>
 
 	  <itemlayout height="32">
 			<control type="image">

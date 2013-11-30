@@ -4,6 +4,21 @@
 <controls>
 
 <control type="group">
+
+	<control type="button" id="9000">
+		<posx>0</posx>
+		<posy>0</posy>
+		<width>1280</width>
+		<height>720</height>
+		<description>fullscreen back button</description>
+		<aspectratio>stretch</aspectratio>
+		<texturefocus>empty.png</texturefocus>
+		<texturenofocus>empty.png</texturenofocus>
+		
+		<onclick>back</onclick>
+		<animation effect="fade" start="1" end="1" time="0" condition="true">Conditional</animation>
+	</control>
+	
 	<control type="group">
 		<posx>885</posx>
 		<posy>0</posy>

@@ -94,8 +94,8 @@
 	<aligny>top</aligny>
 	<textoffsetx>5</textoffsetx>
 	<textoffsety>3</textoffsety>
-	<texturefocus colordiffuse="44FFFFFF">dialog/RightBtn.png</texturefocus>
-	<texturenofocus>-</texturenofocus>	
+	<texturefocus colordiffuse="50FFFFFF">dialog/RightBtn.png</texturefocus>
+	<texturenofocus colordiffuse="20FFFFFF">dialog/RightBtn.png</texturenofocus>	
 	<font>homemenu3</font>
 	<textcolor>FFEBEBEB</textcolor>
 		

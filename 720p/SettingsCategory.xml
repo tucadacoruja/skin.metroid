@@ -77,7 +77,8 @@
 		<onleft>999</onleft>
 		<onright>5</onright>
 		<onup>-</onup>
-		<ondown>20</ondown>
+		<ondown condition="!Skin.HasSetting(HideGlobalBack)">20</ondown>
+		<ondown condition="Skin.HasSetting(HideGlobalBack)">444</ondown>
 		<orientation>vertical</orientation>
 	</control>
 	
@@ -175,11 +176,31 @@
 			
 		</control>
 		
+		<control type="button" id="444">
+		
+			<posx>1</posx>
+			<posy>571</posy>
+			<description>Back Button</description>
+			<height>50</height>
+			<width>247</width>
+			<align>left</align>
+			<aligny>center</aligny>
+			<textoffsetx>23</textoffsetx>
+			<font>MainMenu21</font>
+			<label>31084</label>
+			<focusedcolor>white</focusedcolor>
+			<texturefocus>category.png</texturefocus>
+			<texturenofocus>-</texturenofocus>
+			<onclick>back</onclick>
+			<onup>3</onup>
+			<ondown>20</ondown>
+			<visible>Skin.HasSetting(HideGlobalBack)</visible>
+		</control>
 		<control type="button" id="20">
 		
 			<posx>1</posx>
 			<posy>621</posy>
-			<description>Default Category Button</description>
+			<description>Settings Level Button</description>
 			<height>50</height>
 			<width>247</width>
 			<align>left</align>
@@ -191,7 +212,8 @@
 			<texturefocus>category.png</texturefocus>
 			<texturenofocus>-</texturenofocus>
 			<onclick>SettingsLevelChange</onclick>
-			<onup>3</onup>
+			<onup condition="!Skin.HasSetting(HideGlobalBack)">3</onup>
+			<onup condition="Skin.HasSetting(HideGlobalBack)">444</onup>
 		</control>
 
 	</control>

@@ -14,7 +14,7 @@
 
   
 	<control type="group"> 
-	  <posx>246</posx>
+	  <posx>400</posx>
 	  <posy>95</posy>
 	  <animation effect="fade" start="100" end="0" time="150" condition="Window.IsVisible(locksettings) | Window.IsVisible(filebrowser) | Window.IsVisible(virtualkeyboard)">Conditional</animation>	  
 	  <animation effect="fade" start="10" end="100" time="150">WindowOpen</animation>	  

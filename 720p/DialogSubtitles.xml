@@ -386,9 +386,7 @@
 		<height>42</height>
 		<width>140</width>
 		<label>31056</label>
-
 		<onleft>120</onleft>
-
 		<onclick>dialog.close(SubtitleSearch)</onclick>
 		<include>BottomDialog</include>
 	</control>

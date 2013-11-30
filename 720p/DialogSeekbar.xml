@@ -57,7 +57,7 @@
 				<midtexture>white.png</midtexture>
 				<righttexture>-</righttexture>
 				<info>Player.ProgressCache</info>
-				<animation effect="fade" start="0" end="20" time="0" condition="true">Conditional</animation>
+				<animation effect="fade" start="0" end="10" time="0" condition="true">Conditional</animation>
 			</control>
 			<control type="progress" id="20">
 				<posx>323</posx>
@@ -132,7 +132,7 @@
 				<posy>30</posy>
 				<height>42</height>
 				<width min="5" max="250">auto</width>
-				<label>[B]$LOCALIZE[31175] $INFO[Player.SeekOffset][/B]</label>
+				<label>[B]$LOCALIZE[31072] $INFO[Player.SeekOffset][/B]</label>
 				<textcolor>blue</textcolor>
 				<font>OSDTiming</font>
 				<align>left</align>

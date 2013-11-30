@@ -185,6 +185,7 @@
 				<ondown>20</ondown>
 			</control>
 			<control type="button" id="11">
+				<description>close button</description>
 				<posx>320</posx>
 				<posy>575</posy>
 				

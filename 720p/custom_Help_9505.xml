@@ -64,7 +64,7 @@
 				<onleft>300</onleft>
 				<onright>100</onright>
 				<onup>301</onup>
-				<ondown>301</ondown>
+				<ondown>444</ondown>
 				<pagecontrol>-</pagecontrol>
 				<scrolltime tween="cubic" easing="inout">325</scrolltime>
 				<orientation>vertical</orientation>
@@ -488,7 +488,29 @@
 					
 				</control>
 			</control>
+			
+			<control type="button" id="444">
+		
+				<posx>1</posx>
+				<posy>624</posy>
+				<description>Back Button</description>
+				<height>50</height>
+				<width>247</width>
+				<align>left</align>
+				<aligny>center</aligny>
+				<textoffsetx>23</textoffsetx>
+				<font>MainMenu21</font>
+				<label>31084</label>
+				<focusedcolor>white</focusedcolor>
+				<texturefocus>category.png</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<onclick>back</onclick>
+				<onup>9000</onup>
+				
+				<visible>Skin.HasSetting(HideGlobalBack)</visible>
+			</control>
 		</control>
+		
 
 		
 	<include>BottomInfoBar</include>
