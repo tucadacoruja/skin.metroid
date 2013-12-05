@@ -330,7 +330,7 @@
 					
 					<!--close Button-->
 					<control type="group">
-					
+						<visible>Skin.HasSetting(HideGlobalBack)</visible>
 						<width>70</width>
 						<height>60</height>
 						

@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window id="2005">
  <defaultcontrol>-</defaultcontrol>
-	<controls>
+
+<onunload>Dialog.Close(9506)</onunload>
+
+ 
+ <controls>
 
 		<!-- codec info -->
 	<control type="group">

@@ -1,3 +1,9 @@
+[B]0.1.0[/B]
+- Reworked Bookmarks.
+- Added custom widgets function.
+- Improved fanart view.
+- Improved homescreen widget container.
+
 [B]0.0.9[/B]
 - Changed dialog colors.
 - Dots on the i.

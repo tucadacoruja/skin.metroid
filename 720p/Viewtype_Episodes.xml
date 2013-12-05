@@ -43,7 +43,7 @@
 			<onright>65</onright>
 			<pagecontrol>65</pagecontrol>
 			
-			<visible>Container.Content(episodes)</visible>
+			<visible>Container.Content(episodes) + substring(Container.FolderPath,videodb://tvshows)</visible>
 			<visible>!Window.IsVisible(favourites)</visible>
 			<itemlayout width="1633" height="70">
 				<control type="label">
@@ -175,7 +175,8 @@
 					<height>40</height>
 					
 					<texture>bookmark.png</texture>
-					<visible>Stringcompare(Skin.String(Bookmark 1 of 3),ListItem.DBID) | Stringcompare(Skin.String(Bookmark 2 of 3),ListItem.DBID) | Stringcompare(Skin.String(Bookmark 3 of 3),ListItem.DBID)</visible>
+					
+					<visible>!substring(ListItem.Label,..,left) + [Stringcompare(Skin.String(BookmarkDBID1),ListItem.DBID) | Stringcompare(Skin.String(BookmarkDBID2),ListItem.DBID) | Stringcompare(Skin.String(BookmarkDBID3),ListItem.DBID)]</visible>
 					<animation type="Focus" reversible="false">
 						<effect type="zoom" center="127,70" start="50" end="100" time="200" tween="cubic" easing="out" />
 					</animation>

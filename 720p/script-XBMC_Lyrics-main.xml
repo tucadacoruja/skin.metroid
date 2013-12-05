@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<window>
+<window id="9504">
 	
 	<allowoverlay>yes</allowoverlay>
-	<onload condition="!Window.IsVisible(visualisation)">Dialog.Close()</onload>
+	
 	
 	<coordinates>
 		<system>1</system>

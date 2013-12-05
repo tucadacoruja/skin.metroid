@@ -17,18 +17,6 @@
 		<visible>Control.IsVisible(709)</visible>
 		<include>WidgetsAnimation</include>
 				
-			<!--control type="image">
-				<posx>1000</posx>
-				<posy>120</posy>
-				<width>300</width>
-				<height>530</height>
-				<texture>White35p.png</texture>
-				<bordertexture border="1">MenuBorder.png</bordertexture>
-				<bordersize>5</bordersize>
-				<align>bottom</align>
-				<aspectratio>stretch</aspectratio>
-				<colordiffuse>66FFFFFF</colordiffuse>
-			</control-->
 			<control type="textbox">
 				<posx>990</posx>
 				<posy>160</posy>

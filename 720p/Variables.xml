@@ -1,20 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <includes>
 
-
-	<variable name="HomeFanart">
-		<value condition="Control.HasFocus(7997)">$INFO[Container(7997).ListItem.Property(Fanart)]</value>
-		<value condition="Control.HasFocus(7998)">$INFO[Container(7998).ListItem.Property(Fanart)]</value>
-		<value condition="Control.HasFocus(7999)">$INFO[Container(7999).ListItem.Property(Fanart)]</value>
-		<value condition="Control.HasFocus(8000)">$INFO[Container(8000).ListItem.Property(Fanart)]</value>
-		
-	</variable>
-	
-	<variable name="MovieSetLogo">
-		<value  condition="ListItem.IsFolder + ![substring(Listitem.Label,..,left) | Container.Content(tvshows)]">DefaultMusicCompilations.png</value>
-		<value  condition="!substring(Control.GetLabel(1963),.png + !substring(Listitem.Label,..,left)">DefaultMovies.png</value>
-		<value>-</value>
-	</variable>
 	
 	<variable name="MultiSlide">
 		<value  condition="!IsEmpty(Skin.String(Wallpaper_Folder_Path))">$INFO[Skin.String(Wallpaper_Folder_Path)]</value>
@@ -164,12 +150,5 @@
 		<value>$INFO[ListItem.Label2]</value>
 	</variable>
 	
-	<variable name="BookmarkName">
-		<value condition="Stringcompare(skin.string(cycle),9003)">Bookmark 1 of 3</value>
-		<value condition="Stringcompare(skin.string(cycle),9002)">Bookmark 3 of 3</value>
-		<value condition="Stringcompare(skin.string(cycle),9001)">Bookmark 2 of 3</value>
-	</variable>
-	
-
 
 </includes>

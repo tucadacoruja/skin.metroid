@@ -535,7 +535,7 @@
 					<posx>368</posx>
 					<posy>133</posy>
 					<width>810</width>
-					<height>470</height>
+					<height>510</height>
 					<itemgap>.5</itemgap>
 					<onleft>9000</onleft>
 					<onright>9000</onright>
@@ -598,7 +598,53 @@
 						<onclick>Skin.ToggleSetting(ShowSkinHelp)</onclick>
 						<selected>!Skin.HasSetting(ShowSkinHelp)</selected>
 					</control>
-								
+					
+					<control type="button" id="111">
+						<include>SettingsButton</include>
+						<label2>$INFO[Skin.String(PluginWidgetName1)]</label2>
+						<label>- Reset plugin widget 1</label>
+						<onclick>Skin.Reset(PluginWidgetPath1)</onclick>
+						<onclick>Skin.Reset(PluginWidgetName1)</onclick>
+						<onclick>notification(and removed, Widget reset)</onclick>
+						
+					</control>
+					<control type="button" id="112">
+						<include>SettingsButton</include>
+						<label2>$INFO[Skin.String(PluginWidgetName2)]</label2>
+						<label>- Reset plugin widget 2</label>
+						<onclick>Skin.Reset(PluginWidgetPath2)</onclick>
+						<onclick>Skin.Reset(PluginWidgetName2)</onclick>
+						<onclick>notification(and removed, Widget reset)</onclick>
+						
+					</control>
+					
+					<control type="button" id="113">
+						<include>SettingsButton</include>
+						<label2>$INFO[Skin.String(BookmarkName1)]</label2>
+						<label>- Reset Bookmark 1</label>
+						<onclick>Skin.Reset(BookmarkDBID1)</onclick>
+						<onclick>Skin.Reset(BookmarkName1)</onclick>
+						<onclick>notification(removed, Bookmark)</onclick>
+						
+					</control>
+					<control type="button" id="114">
+						<include>SettingsButton</include>
+						<label2>$INFO[Skin.String(BookmarkName2)]</label2>
+						<label>- Reset Bookmark 2</label>
+						<onclick>Skin.Reset(BookmarkDBID2)</onclick>
+						<onclick>Skin.Reset(BookmarkName2)</onclick>
+						<onclick>notification(removed, Bookmark)</onclick>
+						
+					</control>
+					<control type="button" id="115">
+						<include>SettingsButton</include>
+						<label2>$INFO[Skin.String(BookmarkName3)]</label2>
+						<label>- Reset Bookmark 3</label>
+						<onclick>Skin.Reset(BookmarkDBID3)</onclick>
+						<onclick>Skin.Reset(BookmarkName3)</onclick>
+						<onclick>notification(removed, Bookmark)</onclick>
+						
+					</control>
 				</control>
 				
 				<!---disabled color changer not sure if i want to keep it-->

@@ -8,12 +8,6 @@
 <onload condition="System.HasAddon(script.grab.fanart)">RunScript(script.grab.fanart,mode=random, refresh=10)</onload>
 
 
-<!----Set bookmark strings to a non number and set cycle to start with bookmark 1 of 3---->
-<onload condition="IsEmpty(skin.string(cycle)">skin.setstring(cycle,9002)</onload>
-<onload condition="IsEmpty(skin.string(Bookmark 1 of 3)">skin.setstring(Bookmark 1 of 3,empty)</onload>
-<onload condition="IsEmpty(skin.string(Bookmark 2 of 3)">skin.setstring(Bookmark 2 of 3,empty)</onload>
-<onload condition="IsEmpty(skin.string(Bookmark 3 of 3)">skin.setstring(Bookmark 3 of 3,empty)</onload>
-<!------->
 
 <allowoverlay>yes</allowoverlay>
 	<coordinates>
@@ -36,7 +30,8 @@
 </control>
 
 <include>VideoWindow</include>
-<!--include>HomeFanart</include-->
+<include>GeneralFanart</include>
+
 <control type="image">
 	<posx>0</posx>
 	<posy>0</posy>
@@ -58,15 +53,23 @@
 <height>607</height>
 <orientation>vertical</orientation>
 <usecontrolcoords>false</usecontrolcoords>
+<onup>63</onup>
+
 <itemgap>0</itemgap>
 <include>Favourites</include>
 <include>WidgetsAnimation</include>
-<include>MetroidMoviePanel</include>
-<include>MetroidTVShowPanel</include>
+
+<include>RecentMoviePanel</include>
+<include>RecentTVShowPanel</include>
+
 <include>RandomMoviePanel</include>
 <include>RandomAlbumPanel</include>
+
+<include>PluginWidget1</include>
+<include>PluginWidget2</include>
+
 <pagecontrol>63</pagecontrol>
-<visible>SubString(Window(Home).Property(RandomAlbum.6.Art(thumb)),jpg) | SubString(Window(Home).Property(RandomMovie.6.Art(poster)),jpg) | SubString(Window(Home).Property(RecentEpisode.8.Art(thumb)),jpg) | SubString(Window(Home).Property(RecentMovie.6.Art(poster)),jpg)</visible>
+<!--visible>SubString(Window(Home).Property(RandomAlbum.6.Art(thumb)),jpg) | SubString(Window(Home).Property(RandomMovie.6.Art(poster)),jpg) | SubString(Window(Home).Property(RecentEpisode.8.Art(thumb)),jpg) | SubString(Window(Home).Property(RecentMovie.6.Art(poster)),jpg)</visible-->
 <visible>substring(Window(Home).Property(SkinWidgets_RecentItems),true) | substring(Window(Home).Property(SkinWidgets_RandomItems),true)</visible>
 <animation effect="fade" start="100" end="0" time="150" condition="Window.IsVisible(numericinput) | Window.IsVisible(virtualkeyboard)">Conditional</animation>	  
 

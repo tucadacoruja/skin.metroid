@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window type="dialog" id="9506">
+
+<defaultcontrol>9506</defaultcontrol>
+
+<allowoverlay>yes</allowoverlay>
+
+<controls>
+
+<control type="label">
+	<posx>50</posx>
+	<posy>10</posy>
+	<width>200</width>
+	<height>32</height>
+	<label>Working..</label>
+	<font>heading</font>
+	<aligny>center</aligny>
+	<textcolor>white</textcolor>
+	<visible>IsEmpty(Container(9506).Listitem.Label)</visible>
+</control>
+
+<control type="wraplist" id="9506">
+			<posx>50</posx>
+			<posy>5</posy>
+			<width>450</width>
+			<height>720</height>
+			<onup>9506</onup>
+			<onleft>9506</onleft>
+			<onright>9506</onright>
+			<ondown>9506</ondown>
+			<pagecontrol>-</pagecontrol>
+			<scrolltime>0</scrolltime>
+			<visible>Window.IsVisible(fullscreenvideo)</visible>
+			<focusposition>4</focusposition>
+			
+			<!--UNFOCUSED LAYOUT-->
+			<itemlayout width="400" height="95">
+			
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>350</width>
+					<height>84</height>
+					<aspectratio>stretch</aspectratio>
+					<texture>black.png</texture>
+					<colordiffuse>95FFFFFF</colordiffuse>
+				</control>
+			
+				<control type="image">
+					<posx>5</posx>
+					<posy>5</posy>
+					<width>74</width>
+					<height>74</height>
+					<aspectratio align="left">keep</aspectratio>
+					<texture fallback="DefaultFile.png">$INFO[ListItem.Icon]</texture>
+				</control>
+				<control type="label">
+					<posx>90</posx>
+					<posy>9</posy>
+					<width>250</width>
+					<height>32</height>
+					<label>[B]$INFO[ListItem.Label][/B]</label>
+					<scroll>false</scroll>
+					<font>heading</font>
+					<aligny>center</aligny>
+					<textcolor>ACFFFFFF</textcolor>
+				</control>
+				<control type="label">
+					<posx>90</posx>
+					<posy>45</posy>
+					<width>250</width>
+					<height>40</height>
+					<label>$INFO[ListItem.Path]</label>
+					<scroll>false</scroll>
+					<aligny>top</aligny>
+					<font>aired</font>
+					<aligny>center</aligny>
+					<textcolor>ACFFFFFF</textcolor>
+				</control>
+				
+			</itemlayout>
+
+			<focusedlayout width="400" height="150">
+				
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>450</width>
+					<height>140</height>
+					<aspectratio>stretch</aspectratio>
+					<texture>black.png</texture>
+					<colordiffuse>B7FFFFFF</colordiffuse>
+				</control>
+			
+				
+				<control type="image">
+					<posx>5</posx>
+					<posy>5</posy>
+					<width>74</width>
+					<height>74</height>
+					<aspectratio align="left">keep</aspectratio>
+					<texture fallback="DefaultFile.png">$INFO[ListItem.Icon]</texture>
+				</control>
+
+				<control type="label">
+					<posx>90</posx>
+					<posy>9</posy>
+					<width>300</width>
+					<height>32</height>
+					<label>[B]$INFO[ListItem.Label][/B]</label>
+					<font>heading</font>
+					<aligny>center</aligny>
+					<textcolor>white</textcolor>
+				</control>
+				<control type="label">
+					<posx>90</posx>
+					<posy>45</posy>
+					<width>300</width>
+					<height>32</height>
+					<label>$INFO[ListItem.Path]</label>
+					<scroll>false</scroll>
+					<aligny>top</aligny>
+					<font>aired</font>
+					<aligny>center</aligny>
+					<textcolor>ACFFFFFF</textcolor>
+				</control>
+				
+				<control type="image">
+					<posx>15</posx>
+					<posy>95</posy>
+					<width>420</width>
+					<height>5</height>
+					<aspectratio>stretch</aspectratio>
+					<texture>white.png</texture>
+					<animation effect="fade" start="0" end="10" time="0" condition="true">Conditional</animation>
+				</control>
+				<control type="image">
+					<posx>15</posx>
+					<posy>95</posy>
+					<width>300</width>
+					<height>5</height>
+					<aspectratio>stretch</aspectratio>
+					<texture>white.png</texture>
+					<colordiffuse>skin.string(MainColorString)</colordiffuse>
+				</control>
+				
+				
+				
+			</focusedlayout>
+				<content target="video">$INFO[Skin.String(PluginWidgetPath1)]</content>
+		</control>
+
+	</controls>
+</window>

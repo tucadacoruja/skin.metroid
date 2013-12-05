@@ -230,7 +230,7 @@
 							<onclick>ActivateWindow(musiclibrary)</onclick>
 							<onclick>SendClick(16)</onclick>
 							<!--onclick>XBMC.PlayerControl(Partymode(special://skin/extras/library/music/Party_Mode.xsp))</onclick-->
-							<visible>Window.IsActive(home)</visible>
+							<visible>Window.IsActive(home) + Library.HasContent(Music)</visible>
 							<visible>!Skin.HasSetting(HideGlobalMusic)</visible>
 						</item>
 											

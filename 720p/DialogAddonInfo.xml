@@ -363,7 +363,8 @@
 				<control type="group">
 					<width>180</width>
 					<height>45</height>
-				
+					<visible>Skin.HasSetting(HideGlobalBack)</visible>
+					
 					<control type="image">
 					
 						<width>180</width>

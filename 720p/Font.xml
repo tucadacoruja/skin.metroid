@@ -133,6 +133,12 @@
 		
 	</font>	
 	<font>
+		<name>ThinTitle</name>
+		<filename>SegoeWP.ttf</filename>
+		<size>36</size>
+		
+	</font>	
+	<font>
 		<name>LoginList</name>
 		<filename>SegoeWP-Semibold.ttf</filename>
 		<size>27</size>

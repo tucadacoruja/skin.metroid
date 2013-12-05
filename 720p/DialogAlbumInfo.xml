@@ -212,6 +212,47 @@
 					<onclick>SendClick(2001,5)</onclick>
 					<onclick>SetFocus(50)</onclick>
 					<onup>12</onup>
+					<ondown>444</ondown>
+					<label>-</label>			
+					<animation effect="zoom" start="100" end="120" center="auto" time="100">Focus</animation>
+					<animation effect="zoom" start="120" end="100" center="auto" time="100">UnFocus</animation>
+					
+				</control>
+			</control>
+			
+			<!--Close Button-->
+			<control type="group">
+				<visible>Skin.HasSetting(HideGlobalBack)</visible>
+				<width>70</width>
+				<height>60</height>
+				
+				<visible></visible>
+				
+				<control type="image">
+				
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>60</width>
+					<height>60</height>
+					<aspectratio>scale</aspectratio>
+					<texture>osd/osdbg.png</texture>
+					<aspectratio>stretch</aspectratio>
+					<animation effect="fade" start="100" end="60" time="100" condition="Control.HasFocus(97)">Conditional</animation>
+				</control>
+				<control type="button" id="444">
+					
+					<width>60</width>
+					<height>60</height>
+					<texturefocus>osd/cancel.png</texturefocus>
+					<texturenofocus>osd/cancel.png</texturenofocus>
+					<alttexturefocus>-</alttexturefocus>
+					<alttexturenofocus>-</alttexturenofocus>
+					<colordiffuse>FFEBEBEB</colordiffuse>
+					<disabledcolor>-</disabledcolor>
+					<textcolor>-</textcolor>
+					<visible allowhiddenfocus="true">true</visible>
+					<onclick>back</onclick>
+					<onup>97</onup>
 					<ondown>6</ondown>
 					<label>-</label>			
 					<animation effect="zoom" start="100" end="120" center="auto" time="100">Focus</animation>

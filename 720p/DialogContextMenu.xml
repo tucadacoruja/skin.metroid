@@ -98,7 +98,35 @@
 			<visible>System.HasAddon(plugin.video.youtube) + [Container.Content(albums) | Container.Content(songs)]</visible>
 			<onclick>ActivateWindow(videos,plugin://plugin.video.youtube/?path=/root/search&amp;feed=search&amp;search=$INFO[ListItem.Artist] $INFO[ListItem.Label],return)</onclick>
 		</control>
+		<control type="button" id="2010">
+			<description>Custom button</description>
+			<posx>15</posx>
+			<posy>0</posy>
+			<font>context</font>
+			<textcolor>darklist</textcolor>
+			<focusedcolor>white</focusedcolor>
+			<disabledcolor>black</disabledcolor>
+			<texturefocus>white.png</texturefocus>
+			<texturenofocus>-</texturenofocus>
+			<width>378</width>
+			<height>40</height>
+			<aligny>top</aligny>
+			<align>left</align>
+			<label>31211</label>
+			<colordiffuse>skin.string(MainColorString)</colordiffuse>
+			<visible>ListItem.IsFolder</visible>
+			<visible>IsEmpty(Skin.String(PluginWidgetPath1)) | IsEmpty(Skin.String(PluginWidgetPath2))</visible>
+			<!--visible>Substring(Container.FolderPath,plugin://,left) | Substring(Container.FolderPath,addons://,left)</visible-->
+			<!--visible>Substring(Container.FolderPath,user_feed=playlists) | Substring(Container.FolderPath,feed=feed_categories) | Substring(Container.FolderPath,user_feed=subscriptions)</visible-->
+			<onclick condition="IsEmpty(Skin.String(PluginWidgetPath1))">Skin.SetString(PluginWidgetPath1,$INFO[ListItem.FolderPath])</onclick>
+			<onclick condition="IsEmpty(Skin.String(PluginWidgetPath1))">Skin.SetString(PluginWidgetName1,$INFO[ListItem.Label])</onclick>
+			
+			<onclick condition="!IsEmpty(Skin.String(PluginWidgetPath1)) + IsEmpty(Skin.String(PluginWidgetPath2))">Skin.SetString(PluginWidgetPath2,$INFO[ListItem.FolderPath])</onclick>
+			<onclick condition="!IsEmpty(Skin.String(PluginWidgetPath1)) + IsEmpty(Skin.String(PluginWidgetPath2))">Skin.SetString(PluginWidgetName2,$INFO[ListItem.Label])</onclick>
+			
+		</control>
 		
+		<onload condition="IsEmpty(Window(home.Property(UseWidget))">SetProperty(UseWidget,NumberOne,home)</onload>
 		<control type="button" id="2018">
 			<description>Custom button</description>
 			<posx>15</posx>
@@ -134,10 +162,17 @@
 			<aligny>top</aligny>
 			<align>left</align>
 			<colordiffuse>skin.string(MainColorString)</colordiffuse>
-			<label>$VAR[BookmarkName]</label>
-			<visible>Container.Content(episodes)</visible>
-			<onclick>Skin.SetString($VAR[BookmarkName],$INFO[ListItem.DBID])</onclick>
-			<include>BookmarkCycle</include>
+			<label>31214</label>
+			<visible>Container.Content(episodes) + substring(Container.FolderPath,videodb://tvshows) + [IsEmpty(Skin.String(BookmarkDBID1)) | IsEmpty(Skin.String(BookmarkDBID2)) | IsEmpty(Skin.String(BookmarkDBID3))]</visible>
+		
+			<onclick condition="IsEmpty(Skin.String(BookmarkDBID1))">Skin.SetString(BookmarkDBID1,$INFO[ListItem.DBID])</onclick>
+			<onclick condition="IsEmpty(Skin.String(BookmarkDBID1))">Skin.SetString(BookmarkName1,S$INFO[ListItem.Season]E$INFO[ListItem.Episode] $INFO[ListItem.TVShowTitle])</onclick>
+			
+			<onclick condition="!IsEmpty(Skin.String(BookmarkDBID1)) + IsEmpty(Skin.String(BookmarkDBID2))">Skin.SetString(BookmarkDBID2,$INFO[ListItem.DBID])</onclick>
+			<onclick condition="!IsEmpty(Skin.String(BookmarkDBID1)) + IsEmpty(Skin.String(BookmarkDBID2))">Skin.SetString(BookmarkName2,S$INFO[ListItem.Season]E$INFO[ListItem.Episode] $INFO[ListItem.TVShowTitle])</onclick>
+			
+			<onclick condition="![IsEmpty(Skin.String(BookmarkDBID1)) | IsEmpty(Skin.String(BookmarkDBID2))] + IsEmpty(Skin.String(BookmarkDBID3))">Skin.SetString(BookmarkDBID3,$INFO[ListItem.DBID])</onclick>
+			<onclick condition="![IsEmpty(Skin.String(BookmarkDBID1)) | IsEmpty(Skin.String(BookmarkDBID2))] + IsEmpty(Skin.String(BookmarkDBID3))">Skin.SetString(BookmarkName3,S$INFO[ListItem.Season]E$INFO[ListItem.Episode] $INFO[ListItem.TVShowTitle])</onclick>
 		</control>
 	</control>
 	

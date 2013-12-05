@@ -789,3 +789,19 @@ msgctxt "#31210"
 msgid "Home button in main menu"
 msgstr ""
 
+msgctxt "#31211"
+msgid "Make Widget"
+msgstr ""
+
+msgctxt "#31212"
+msgid "Random Movies"
+msgstr ""
+
+msgctxt "#31213"
+msgid "Random Album"
+msgstr ""
+
+msgctxt "#31214"
+msgid "Set bookmark"
+msgstr ""
+

@@ -2,7 +2,7 @@
 <window id="2006">
 	<defaultcontrol always="true">1</defaultcontrol>
 	<backgroundcolor>0</backgroundcolor>
-	<!--onload condition="skin.hassetting(ArtistSlide1)">RunScript(script.artistslideshow)</onload-->
+	<onunload>Dialog.Close(9504)</onunload>
 	<allowoverlay>yes</allowoverlay>
 	<controls>
 		
@@ -30,16 +30,16 @@
 			<width>1280</width>
 			<height>720</height>
 			<aspectratio>stretch</aspectratio>
-			<imagepath background="true">$VAR[MultiSlide]</imagepath>
+			<imagepath background="true">$INFO[Window(Home).Property(script.grab.fanart.Music.FanArt)]</imagepath>
 			<timeperimage>10100</timeperimage>
 			<fadetime>1000</fadetime>
 			<randomize>true</randomize>
 			<animation effect="fade" start="0" end="100" time="100">VisibleChange</animation>
 			<animation effect="fade" start="0" end="20" time="100000" delay="2000" reversable="true" pulse="true" condition="true">Conditional</animation>
 			
-			<visible>IsEmpty(Player.Art(fanart))</visible>
+			
 		</control>
-		<control type="image">
+		<!--control type="image">
 			<posx>0</posx>
 			<posy>0</posy>
 			<width>1280</width>
@@ -49,7 +49,7 @@
 			<animation effect="fade" start="0" end="100" time="100">VisibleChange</animation>
 		
 			<animation effect="fade" start="0" end="20" time="100000" delay="2000" reversable="true" pulse="true" condition="true">Conditional</animation>
-		</control>
+		</control-->
 		
 		
 
@@ -59,11 +59,13 @@
 			<width>500</width>
 			<height>30</height>
 			<label>Next: $INFO[MusicPlayer.offset(1).Title]</label>
+	
 			<font>Segoe28</font>
 			<textcolor>white</textcolor>
 			<!--shadowcolor>skin.string(MainColorString)</shadowcolor-->
 			<align>left</align>
 			<scroll>false</scroll>
+			<scroll>true</scroll>
 			<animation effect="fade" start="0" end="60" time="0" reversable="false" condition="true">Conditional</animation>
 		</control>
 		
