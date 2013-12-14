@@ -195,81 +195,156 @@
 		
 		
 		<control type="group">
-		<posx>265</posx>
+		<posx>270</posx>
 		<animation effect="zoom" end="92" center="auto" time="0" condition="true">Conditional</animation>
 		<animation effect="slide" start="0,0" end="-140,0" time="400" condition="!Control.HasFocus(301) + !Skin.HasSetting(LockMainMenu)">Conditional</animation>
 		
 				<control type="group">
 				<posy>-45</posy>
-				<posx>5</posx>
+				<posx>-5</posx>
 					
 					<animation effect="rotate" end="10" center="auto" time="0" condition="true">Conditional</animation>
-					<animation effect="slide" start="0,0" end="-60,0" time="600" condition="!Control.HasFocus(301) + !Skin.HasSetting(LockMainMenu)">Conditional</animation>
+					<animation effect="slide" start="0,0" end="-80,0" time="600" condition="!Control.HasFocus(301) + !Skin.HasSetting(LockMainMenu)">Conditional</animation>
 		
-					
-					
+	
 					<control type="image">
-						<posx>122</posx>
-						<posy>93</posy>
+						<posx>70</posx>
+						<posy>105</posy>
 						<width>446</width>
-						<height>519</height>
+						<height>500</height>
 						<aspectratio>stretch</aspectratio>
 						<colordiffuse>55FFFFFF</colordiffuse>
 						<texture background="true">diffuse/postershadow.png</texture>
 						
 					</control>
+					
 					<control type="image">
-						<posx>98</posx>
-						<posy>93</posy>
-						<width>446</width>
-						<height>497</height>
-						<aspectratio scalediffuse="false">stretch</aspectratio>
-						<texture border="12" diffuse="diffuse/bannerdiff.png">whitepanel2.png</texture>
-						<colordiffuse>FFACACAC</colordiffuse>
+						<posx>108</posx>
+						<posy>108</posy>
+						<width>428</width>
+						<height>494</height>
+						<aspectratio>stretch</aspectratio>
+						<texture border="5">BlueBackground.png</texture>
+						<bordertexture border="5">whiteborder.png</bordertexture>
+						<bordersize>5</bordersize>
+						<animation effect="fade" start="0" end="80" time="0" condition="true">Conditional</animation>
 					</control>
+					
 					<control type="image">
 						<posx>110</posx>
 						<posy>109</posy>
 						<width>422</width>
 						<height>410</height>
 						<aspectratio scalediffuse="false">scale</aspectratio>
-						<texture fallback="noalbum.png">$INFO[ListItem(-1).Art(thumb)]</texture>
+						<texture diffuse="diffuse/albumdiffuse.png">$INFO[ListItem(-1).Art(thumb)]</texture>
+						<fadetime>100</fadetime>
+					</control>
+					<control type="image">
+						<posx>110</posx>
+						<posy>109</posy>
+						<width>422</width>
+						<height>410</height>
+						<aspectratio>keep</aspectratio>
+						<texture>DefaultFallback.png</texture>
+						<visible>IsEmpty(ListItem(-1).Art(thumb))</visible>
+						
+					</control>
+					<control type="image">
+						<description>white image</description>
+						<posx>112</posx>
+						<posy>479</posy>
+						<width>420</width>
+						<height>120</height>
+						
+						<aspectratio>stretch</aspectratio>
+						<texture border="12">white.png</texture>
+						<colordiffuse>FFC2C2C2</colordiffuse>
 					</control>
 					
+					
 				</control>
-				<control type="group">
 				
-					<control type="image">
-						<posx>128</posx>
-						<posy>96</posy>
-						<width>446</width>
-						<height>524</height>
-						<aspectratio>stretch</aspectratio>
-						<colordiffuse>55FFFFFF</colordiffuse>
-						<texture background="true">diffuse/postershadow.png</texture>
-						
-					</control>
-					<control type="image">
-						<posx>98</posx>
-						<posy>93</posy>
-						<width>446</width>
-						<height>504</height>
-						<aspectratio scalediffuse="false">stretch</aspectratio>
-						<texture border="12" diffuse="diffuse/bannerdiff.png">whitepanel2.png</texture>
-						
-						<colordiffuse>FFEBEBEB</colordiffuse>
-					</control>
-					<control type="image">
-						<posx>110</posx>
-						<posy>109</posy>
-						<width>422</width>
-						<height>410</height>
-						<aspectratio scalediffuse="false">scale</aspectratio>
-						<texture diffuse="diffuse/albumdiffuse.png" fallback="DefaultAlbumCover.png">$INFO[ListItem.Art(thumb)]</texture>
-						<animation effect="fade" start="100" end="80" time="0" condition="true">Conditional</animation>
-					</control>
-					
-				</control>
+				
+			<control type="image">
+				<posx>70</posx>
+				<posy>105</posy>
+				<width>446</width>
+				<height>500</height>
+				<aspectratio>stretch</aspectratio>
+				<colordiffuse>70FFFFFF</colordiffuse>
+				<texture background="true">diffuse/postershadow.png</texture>
+				
+			</control>
+			
+			<control type="image">
+				<posx>108</posx>
+				<posy>108</posy>
+				<width>428</width>
+				<height>494</height>
+				<aspectratio>stretch</aspectratio>
+				<texture border="5">BlueBackground.png</texture>
+				<bordertexture border="5">whiteborder.png</bordertexture>
+				<bordersize>5</bordersize>
+				<animation effect="fade" start="0" end="80" time="0" condition="true">Conditional</animation>
+			</control>
+			
+			<control type="image">
+				<posx>110</posx>
+				<posy>109</posy>
+				<width>422</width>
+				<height>410</height>
+				<aspectratio scalediffuse="false">scale</aspectratio>
+				<texture diffuse="diffuse/albumdiffuse.png">$INFO[ListItem.Art(thumb)]</texture>
+				<fadetime>100</fadetime>
+			</control>
+			<control type="image">
+				<posx>110</posx>
+				<posy>109</posy>
+				<width>422</width>
+				<height>410</height>
+				<aspectratio>keep</aspectratio>
+				<texture>DefaultFallback.png</texture>
+				<visible>IsEmpty(ListItem.Art(thumb))</visible>
+				<!--animation effect="fade" start="0" end="5" time="0" condition="true">Conditional</animation-->
+			</control>
+			<control type="image">
+				<description>white image</description>
+				<posx>112</posx>
+				<posy>479</posy>
+				<width>420</width>
+				<height>120</height>
+				
+				<aspectratio>stretch</aspectratio>
+				<texture border="12">white.png</texture>
+				<colordiffuse>FFEBEBEB</colordiffuse>
+			</control>
+			<control type="label">
+				<posx>125</posx>
+				<posy>480</posy>
+				<width>410</width>
+				<height>60</height>
+				<align>left</align>
+				<label>$INFO[ListItem.Artist]</label>
+				<visible>true</visible>
+				<scroll>false</scroll>
+				<font>Favourites</font>
+				<textcolor>FF707070</textcolor>
+				<!--animation effect="fade" start="0" end="6" time="0" reversable="false" condition="true">Conditional</animation-->
+			</control>
+
+			<control type="label">
+				<posx>125</posx>
+				<posy>515</posy>
+				<width>410</width>
+				<height>60</height>
+				<label>[UPPERCASE]$INFO[ListItem.Title] - $INFO[ListItem.Duration][/UPPERCASE]</label>
+				<font>MainMenu21</font>
+				<textcolor>FF707070</textcolor>
+				<!--shadowcolor>skin.string(MainColorString)</shadowcolor-->
+				<align>left</align>
+				<scroll>false</scroll>
+				<!--animation effect="fade" start="0" end="60" time="00" reversable="false" condition="true">Conditional</animation-->
+			</control>
 		</control>	
 
 	

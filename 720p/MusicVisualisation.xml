@@ -58,7 +58,7 @@
 			<posy>55</posy>
 			<width>500</width>
 			<height>30</height>
-			<label>Next: $INFO[MusicPlayer.offset(1).Title]</label>
+			<label>Next: $INFO[MusicPlayer.offset(1).Title] - $INFO[MusicPlayer.offset(1).Artist]</label>
 	
 			<font>Segoe28</font>
 			<textcolor>white</textcolor>
@@ -158,7 +158,7 @@
 				<description>white image</description>
 				<posx>0</posx>
 				<posy>118</posy>
-				<width>120</width>
+				<width>100</width>
 				<height>125</height>
 				
 				<aspectratio>stretch</aspectratio>
@@ -168,9 +168,9 @@
 			<control type="image">
 				<posx>0</posx>
 				<posy>118</posy>
-				<width>120</width>
+				<width>100</width>
 				<height>125</height>
-				<aspectratio scalediffuse="false">scale</aspectratio>
+				<aspectratio scalediffuse="false">stretch</aspectratio>
 				<texture diffuse="diffuse/albumdiffuse.png" fallback="DefaultAlbumCover.png">$INFO[MusicPlayer.offset(2).Cover]</texture>
 				<colordiffuse>FFC2C2C2</colordiffuse>
 				<animation effect="fade" start="0" end="80" time="0" condition="true">Conditional</animation>
@@ -178,7 +178,7 @@
 			<control type="image">
 				<posx>0</posx>
 				<posy>118</posy>
-				<width>120</width>
+				<width>100</width>
 				<height>125</height>
 				<aspectratio>keep</aspectratio>
 				<texture>DefaultFallback.png</texture>
@@ -190,7 +190,7 @@
 				<description>white image</description>
 				<posx>0</posx>
 				<posy>260</posy>
-				<width>120</width>
+				<width>100</width>
 				<height>125</height>
 				
 				<aspectratio>stretch</aspectratio>
@@ -200,9 +200,9 @@
 			<control type="image">
 				<posx>0</posx>
 				<posy>260</posy>
-				<width>120</width>
+				<width>100</width>
 				<height>125</height>
-				<aspectratio scalediffuse="false">scale</aspectratio>
+				<aspectratio scalediffuse="false">stretch</aspectratio>
 				<texture diffuse="diffuse/albumdiffuse.png" fallback="DefaultAlbumCover.png">$INFO[MusicPlayer.offset(1).Cover]</texture>
 				<colordiffuse>FFC2C2C2</colordiffuse>
 				<animation effect="fade" start="0" end="80" time="0" condition="true">Conditional</animation>
@@ -210,7 +210,7 @@
 			<control type="image">
 				<posx>0</posx>
 				<posy>260</posy>
-				<width>120</width>
+				<width>100</width>
 				<height>125</height>
 				<aspectratio>keep</aspectratio>
 				<texture>DefaultFallback.png</texture>
@@ -234,18 +234,6 @@
 				<texture background="true">diffuse/postershadow.png</texture>
 				
 			</control>
-		
-			<!--control type="image">
-				<description>background image</description>
-				<posx>89</posx>
-				<posy>81</posy>
-				<width>466</width>
-				<height>549</height>
-				
-				<aspectratio>stretch</aspectratio>
-				<texture border="12">dialog/contentbg.png</texture>
-				<colordiffuse>FFC2C2C2</colordiffuse>
-			</control-->
 			
 			<control type="image">
 				<posx>108</posx>
@@ -265,24 +253,26 @@
 				<width>422</width>
 				<height>410</height>
 				<aspectratio scalediffuse="false">scale</aspectratio>
-				<texture diffuse="diffuse/albumdiffuse.png">$INFO[MusicPlayer.offset(0).Cover]</texture>
+				<texture diffuse="diffuse/albumdiffuse.png" >$INFO[MusicPlayer.Cover]</texture>
+				<visible>!substring(MusicPlayer.Cover,DefaultAlbumCover.png)</visible>
 			</control>
 			<control type="image">
 				<posx>110</posx>
-				<posy>109</posy>
+				<posy>90</posy>
 				<width>422</width>
 				<height>410</height>
 				<aspectratio>keep</aspectratio>
 				<texture>DefaultFallback.png</texture>
-				<visible>Substring(MusicPlayer.Cover,.png)</visible>
+				<visible>substring(MusicPlayer.Cover,DefaultAlbumCover.png)</visible>
 				<!--animation effect="fade" start="0" end="5" time="0" condition="true">Conditional</animation-->
+				<animation effect="fade" start="0" end="70" time="0" condition="true">Conditional</animation>
 			</control>
 			<control type="image">
 				<description>white image</description>
 				<posx>112</posx>
-				<posy>419</posy>
+				<posy>436</posy>
 				<width>420</width>
-				<height>180</height>
+				<height>160</height>
 				
 				<aspectratio>stretch</aspectratio>
 				<texture border="12">white.png</texture>
@@ -290,7 +280,7 @@
 			</control>
 			<control type="label">
 				<posx>125</posx>
-				<posy>420</posy>
+				<posy>432</posy>
 				<width>410</width>
 				<height>60</height>
 				<align>left</align>
@@ -304,7 +294,7 @@
 
 			<control type="label">
 				<posx>125</posx>
-				<posy>455</posy>
+				<posy>467</posy>
 				<width>410</width>
 				<height>60</height>
 				<label>[UPPERCASE]$INFO[MusicPlayer.Title][/UPPERCASE]</label>
@@ -317,7 +307,7 @@
 			</control>
 			<control type="label">
 				<posx>125</posx>
-				<posy>521</posy>
+				<posy>523</posy>
 				<width min="29" max="200">auto</width>
 				<height>30</height>
 				<label>[UPPERCASE]$INFO[MusicPlayer.Time][/UPPERCASE]</label>
@@ -329,7 +319,7 @@
 			</control>
 			<control type="label">
 				<posx>664</posx>
-				<posy>521</posy>
+				<posy>523</posy>
 				<width min="29" max="200">auto</width>
 				<height>30</height>
 				<label>[UPPERCASE]$INFO[MusicPlayer.Duration][/UPPERCASE]</label>
@@ -345,8 +335,8 @@
 		
 		
 		<control type="group">
-			<posx>-60</posx>
-			<posy>493</posy>
+			<posx>-57</posx>
+			<posy>496</posy>
 			<animation effect="zoom" end="65" center="auto" time="0" condition="true">Conditional</animation>
 			<control type="image">
 				<posx>48</posx>

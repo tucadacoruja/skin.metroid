@@ -41,6 +41,7 @@
 	<texture background="true" fallback="MetroidBG.png">$INFO[Skin.String(GlobalBackground)]</texture>
 	<animation effect="fade" start="80" end="95" time="200" reversible="true" condition="!Player.HasVideo">Conditional</animation>
 	<animation effect="fade" start="95" end="80" time="200" reversible="true" condition="Player.HasVideo">Conditional</animation>
+	<animation effect="fade" start="84" end="90" time="90000" reversable="true" pulse="true" condition="Player.HasAudio + !Skin.HasSetting(VisLibrary)">Conditional</animation>
 </control>
 
 <include>MainMenu</include>
