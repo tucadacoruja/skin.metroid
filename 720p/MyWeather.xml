@@ -31,10 +31,10 @@
 </control>
 
 
-<include>VideoWindow</include>
+<include>VideoWindow</include>	
+<include>MainMenu</include>
 <include>GeneralFanart</include>
 <include>Background</include>
-<include>MainMenu</include>
 	
 <control type="group">	
 	<posx>70</posx>
@@ -125,7 +125,7 @@
 	</control>
 	<control type="image">
 		<description>current weather icon</description>
-		<posx>230</posx>
+		<posx>250</posx>
 		<posy>140</posy>
 		<height>164</height>
 		<width>164</width>

@@ -247,7 +247,7 @@
 	<font>
 		<name>MusicFO</name>
 		<filename>SegoeWP.ttf</filename>
-		<size>32</size>
+		<size>28</size>
 	</font>
 	<font>
 		<name>MusicPlaying</name>
@@ -453,7 +453,7 @@
 	</font>
 	<font>
 		<name>Postertitlebig</name>
-		<filename>SegoeWP-Semibold.ttf</filename>
+		<filename>SegoeWP.ttf</filename>
 		<size>44</size>
 		
 	</font>

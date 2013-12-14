@@ -1,4 +1,9 @@
 [B]0.1.0[/B]
+- Main menu can now slide, lockable in settings.
+- Changed some views to better fit sliding main menu.
+
+
+[B]0.1.0[/B]
 - Reworked Bookmarks.
 - Added custom widgets function.
 - Improved fanart view.

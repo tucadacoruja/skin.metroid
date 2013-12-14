@@ -1,18 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
 	
-	<include name="Polaroid">
+<include name="Polaroid">
 	<control type="group">
-		<visible>!Window.IsVisible(pictureinfo)</visible>
 		<posx>-43</posx>
 		<posy>15</posy>
 
 		<include>InfoOpenClose</include>
 		<include>MusicInfoOpenClose</include>
-		<include>ViewWindowOC</include>
+		
 		<include>ContextFade</include>	
 		<include>Keyboard</include>
-		<include>Favourites</include>
+		<include>WidgetsAnimation</include>
+		<visible>Control.IsVisible(602)</visible>
+		<visible>!Window.IsVisible(pictureinfo)</visible>
 		
 		<control type="list" id="602">
 			<viewtype label="Polaroid">list</viewtype>
@@ -140,7 +141,19 @@
 						<font>MusicFO</font>
 						<textcolor>ffffffff</textcolor>
 						<selectedcolor>lightblue</selectedcolor>
-						<visible>Container.Content(songs)</visible>
+						<visible>Container.Content(songs) + Control.HasFocus(602)</visible>
+					</control>
+					<control type="label">
+						<posx>580</posx>
+						<posy>-8</posy>
+						<width>433</width>
+						<height>40</height>
+						<align>right</align>
+						<label>$INFO[ListItem.Title]</label>
+						<font>MusicNF2</font>
+						<textcolor>ffffffff</textcolor>
+						<selectedcolor>lightblue</selectedcolor>
+						<visible>Container.Content(songs) + !Control.HasFocus(602)</visible>
 					</control>
 					<control type="label">
 						<posx>580</posx>
@@ -182,13 +195,19 @@
 		
 		
 		<control type="group">
-		<posx>245</posx>
+		<posx>265</posx>
 		<animation effect="zoom" end="92" center="auto" time="0" condition="true">Conditional</animation>
+		<animation effect="slide" start="0,0" end="-140,0" time="400" condition="!Control.HasFocus(301) + !Skin.HasSetting(LockMainMenu)">Conditional</animation>
+		
 				<control type="group">
 				<posy>-45</posy>
 				<posx>5</posx>
-					<visible>StringCompare(Container.Viewmode,Polaroid) + Control.IsVisible(602)</visible>
+					
 					<animation effect="rotate" end="10" center="auto" time="0" condition="true">Conditional</animation>
+					<animation effect="slide" start="0,0" end="-60,0" time="600" condition="!Control.HasFocus(301) + !Skin.HasSetting(LockMainMenu)">Conditional</animation>
+		
+					
+					
 					<control type="image">
 						<posx>122</posx>
 						<posy>93</posy>
@@ -219,7 +238,7 @@
 					
 				</control>
 				<control type="group">
-					<visible>StringCompare(Container.Viewmode,Polaroid) + Control.IsVisible(602)</visible>
+				
 					<control type="image">
 						<posx>128</posx>
 						<posy>96</posy>
@@ -247,6 +266,7 @@
 						<height>410</height>
 						<aspectratio scalediffuse="false">scale</aspectratio>
 						<texture diffuse="diffuse/albumdiffuse.png" fallback="DefaultAlbumCover.png">$INFO[ListItem.Art(thumb)]</texture>
+						<animation effect="fade" start="100" end="80" time="0" condition="true">Conditional</animation>
 					</control>
 					
 				</control>
@@ -271,12 +291,13 @@
 			<onleft>300</onleft>
 			<onright>602</onright>
 			<visible>Control.IsVisible(602)</visible>
-			<animation effect="fade" start="100" end="10" time="200" reversable="false" condition="!Control.HasFocus(63)">Conditional</animation>
+			<animation effect="fade" start="100" end="40" time="200" reversable="false" condition="!Control.HasFocus(63)">Conditional</animation>
+			<animation effect="slide" start="0,0" end="-250,0" time="400" condition="!Control.HasFocus(301) + !Skin.HasSetting(LockMainMenu)">Conditional</animation>
 		</control>
 		
 	</control>
 	
 
-	</include>
+</include>
 	
 </includes>

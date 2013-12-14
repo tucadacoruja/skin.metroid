@@ -1,45 +1,59 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
-	<include name="PosterWrapView">
+<include name="PosterWrapView">
 
 	<control type="group">
 		<include>InfoOpenClose</include>
-		<include>ViewWindowOC</include>
+		<include>WidgetsAnimation</include>
 		<include>ContextFade</include>	
 		<include>Keyboard</include>
 		<include>Favourites</include>
-		
+		<visible>Control.IsVisible(501)</visible>
+	
 		<control type="grouplist">
 			<description>Media Codec Flagging Images</description>
-			<posx>307</posx>
-			<posy>85</posy>
+			<posx>255</posx>
+			<posy>93</posy>
 			<width>1030</width>
 			<height>50</height>
-			<align>left</align>
+			<align>center</align>
 			<itemgap>0</itemgap>
 			<orientation>horizontal</orientation>
 			<include>Media_flags_big</include>
-			
-			<animation effect="fade" start="0" end="80" time="600">WindowOpen</animation>
-			<animation effect="fade" start="80" end="0" time="600" tween="sine">WindowClose</animation>
+		
+			<visible>[Control.HasFocus(301) + Skin.HasSetting(LockMainMenu)] | !Skin.HasSetting(LockMainMenu)</visible>
+			<animation effect="fade" start="0" end="80" time="600">Visible</animation>
+			<animation effect="fade" start="80" end="0" time="600" tween="sine">Hidden</animation>
+		
+		</control>
+		<control type="grouplist">
+			<description>Media Codec Flagging Images</description>
+			<posx>5</posx>
+			<posy>93</posy>
+			<width>1280</width>
+			<height>50</height>
+			<align>center</align>
+			<itemgap>0</itemgap>
+			<orientation>horizontal</orientation>
+			<include>Media_flags_fullscreen</include>
 			<visible>Control.IsVisible(501)</visible>
+			<visible>!Control.HasFocus(301) + !Skin.HasSetting(LockMainMenu)</visible>
+			<animation effect="fade" start="0" end="80" time="600">Visible</animation>
+			<animation effect="fade" start="80" end="0" time="600" tween="sine">Hidden</animation>
+		
 		</control>
 			
+			
 		<control type="group">
-			<visible>Control.IsVisible(501)</visible>
+
 			<posx>0</posx>
 			<posy>35</posy>
-		
-			
-			
-			
-			
-			
+
 			<control type="wraplist" id="501">
 				<visible>Container.Content(Movies) | Container.Content(TVShows) | Container.Content(seasons)</visible>
 				
-				<posx>270</posx>
-				<posy>115</posy>
+				<posx>640</posx>
+				<posy>190</posy>
 				<width>1600</width>
 				<height>560</height>
 				<onleft>57</onleft>
@@ -49,115 +63,134 @@
 				<viewtype label="PosterWrap">bigwrap</viewtype>
 				<pagecontrol>63</pagecontrol>
 				<scrolltime>200</scrolltime>
-				<focusposition>1</focusposition>
+
+				<focusposition>0</focusposition>
 				<orientation>horizontal</orientation>
 				<preloaditems>6</preloaditems>
-				<itemlayout height="310" width="174">
+				<animation effect="slide" start="0,0" end="-110,0" time="400" condition="!Control.HasFocus(301) + !Skin.HasSetting(LockMainMenu)">Conditional</animation>
+				<itemlayout height="310" width="134">
 					
 					<control type="image">
-						<posx>0</posx>
-						<posy>60</posy>
-						<width>166</width>
-						<height>245</height>
-						<bordertexture border="10">empty.png</bordertexture>
-						<bordersize>10</bordersize>
+						<posx>2</posx>
+						<posy>100</posy>
+						<width>123</width>
+						<height>180</height>
 						<aspectratio>stretch</aspectratio>
-						<texture background="true" diffuse="poster/posterdiffusesmall.png" fallback="DefaultAlbumCover.png">$INFO[ListItem.Art(poster)]</texture>
-						<animation effect="fade" start="0" end="80" time="0" condition="true">Conditional</animation>
+						<bordertexture border="3">-</bordertexture>
+						<bordersize>3</bordersize>
+						<fadetime>200</fadetime>
+						<texture background="true" fallback="DefaultAlbumCover.png">$INFO[ListItem.Art(poster)]</texture>
+						<animation effect="fade" start="0" end="60" time="0" condition="true">Conditional</animation>
 					</control>
 					<control type="image">
-						<posx>20</posx>
-						<posy>80</posy>
-						<width>120</width>
-						<height>130</height>
+						<posx>10</posx>
+						<posy>120</posy>
+						<width>100</width>
+						<height>120</height>
 						<aspectratio>stretch</aspectratio>
-						<texture background="true" diffuse="poster/posterdiffusesmall.png">$VAR[Fallback_Icon]</texture>
+						<texture background="true" diffuse="poster/posterdiffusesmall.png" >$VAR[Fallback_Icon]</texture>
 						<animation effect="fade" start="0" end="80" time="0" condition="true">Conditional</animation>
 						
 						<colordiffuse>EBFFFFFF</colordiffuse>
 					</control>
-					
 					<control type="image">
-						<posy>253</posy>
-						<posx>127</posx>
-						<width>36</width>
-						<height>60</height>
+						<posx>101</posx>
+						<posy>257</posy>
+						<width>20</width>
+						<height>20</height>
 						<aspectratio>keep</aspectratio>
 						<texture>$INFO[ListItem.Overlay]</texture>
 						<visible>Skin.HasSetting(WatchedOverlays)</visible>
-					</control>					
+						<animation effect="fade" start="0" end="50" time="0" condition="true">Conditional</animation>
+					</control>						
 				</itemlayout>
 						
-				<focusedlayout height="310" width="204" />
-							
+				<focusedlayout height="310" width="0" />
+					
+
 			</control>	
 
+		<control type="group">	
+			<posy>45</posy>
+			<animation effect="slide" start="0,0" end="-250,0" time="600" condition="!Control.HasFocus(301) + !Skin.HasSetting(LockMainMenu)">Conditional</animation>
 			
-		<control type="image">
-			<posx>250</posx>
-			<posy>295</posy>
-			<width>1100</width>
-			<height>170</height>
-			<bordertexture border="4">BlueBackground.png</bordertexture>
-			<bordersize>0,4,0,0</bordersize>
-			<aspectratio>stretch</aspectratio>
-			<texture >white.png</texture>
-			<colordiffuse>FFC2C2C2</colordiffuse>
-		</control>
-		<control type="image">
-			<posx>630</posx>
-			<posy>363</posy>
-			<width>450</width>
-			<height>4</height>
-		
-			<aspectratio>stretch</aspectratio>
-			<texture diffuse="SelectDiff.png">BlueBackground.png</texture>
-			<colordiffuse>44FFFFFF</colordiffuse>
-		</control>
-		<control type="image">
-			<posx>250</posx>
-			<posy>367</posy>
-			<width>1195</width>
-			<height>86</height>
-		
-			<aspectratio>stretch</aspectratio>
-			<texture>white.png</texture>
-			<colordiffuse>44FFFFFF</colordiffuse>
+			<control type="image">
+				<posx>250</posx>
+				<posy>385</posy>
+				<width>1400</width>
+				<height>60</height>
+			
+				<aspectratio>stretch</aspectratio>
+				<texture>white.png</texture>
+				<colordiffuse>FF959595</colordiffuse>
+				<animation effect="fade" start="0" end="100" time="0" reversable="false" condition="true">Conditional</animation>
+			</control>
 		</control>
 		
-		
+		<!----Text----->
+		<control type="group">
+		<posx>185</posx>
+		<posy>6</posy>
+
+		<animation effect="slide" start="0,0" end="-110,0" time="400" condition="!Control.HasFocus(301) + !Skin.HasSetting(LockMainMenu)">Conditional</animation>
+			<control type="image">
+				<posx>430</posx>
+				<posy>414</posy>
+				<width>450</width>
+				<height>4</height>
+			
+				<aspectratio>stretch</aspectratio>
+				<texture diffuse="SelectDiff.png">BlueBackground.png</texture>
+				<colordiffuse>44FFFFFF</colordiffuse>
+			</control>
+			<control type="label">
+				<posx>477</posx>
+				<posy>427</posy>
+				<width>565</width>
+				<height>45</height>
+				<font>Postertitlebig</font>
+				<textcolor>ACFFFFFF</textcolor>
+				<scroll>false</scroll>
+				<align>left</align>
+				<label>$INFO[ListItem.Title]</label>
+	
+				<!--shadowcolor>FF959595</shadowcolor-->
+			</control>
+
+			<control type="textbox">
+				<posx>456</posx>
+				<posy>495</posy>
+				<width>575</width>
+				<height>50</height>
+				<font>recent</font>
+				<textcolor>95FFFFFF</textcolor>
+				<scroll>true</scroll>
+				<align>justify</align>
+				<autoscroll delay="922000" time="5000" repeat="10000" />
+				<label>$INFO[ListItem.Plot]</label>
+			</control>
+			
+		</control>
 					
 					
 		<control type="group">
-			<posx>308</posx>
-			<posy>123</posy>
+			<posx>298</posx>
+			<posy>130</posy>
+			<!--visible>false</visible-->
+			<animation effect="slide" start="0,0" end="-110,0" time="400" condition="!Control.HasFocus(301) + !Skin.HasSetting(LockMainMenu)">Conditional</animation>
 			
 			<control type="image">
-				<posx>23</posx>
-				<posy>27</posy>
+				<posx>27</posx>
+				<posy>24</posy>
 				<width>328</width>
 				<height>473</height>
 				<texture>diffuse/postershadow.png</texture>
 				<align>bottom</align>
 				<aspectratio>stretch</aspectratio>
-				<colordiffuse>70ffffff</colordiffuse>
+				<colordiffuse>89ffffff</colordiffuse>
 				
 			</control>					
-			<control type="image">
-				<posx>3</posx>
-				<posy>7</posy>
-				<width>328</width>
-				<height>473</height>
-				<aspectratio>stretch</aspectratio>
-				<texture border="12">whitepanel2.png</texture>
-				<!--colordiffuse>ffB7B7B7</colordiffuse-->
-				<colordiffuse>blue</colordiffuse>
-				<animation type="Focus">
-					<effect type="zoom" start="90" end="100" time="200" />
-				</animation>
-				<visible>!Control.HasFocus(300) + !Control.HasFocus(551)</visible>
-				<animation effect="fade" end="50" time="0" condition="true">Conditional</animation>
-			</control>
+
 			<control type="image">
 				<posx>15</posx>
 				<posy>18</posy>
@@ -194,47 +227,9 @@
 			</control>	
 			
 		</control>
-					
-					
-		
-			
+
 		</control>
-	
-		
-		<!----Text----->
-		<control type="group">
-		<posx>185</posx>
-		<posy>0</posy>
-		<visible>Control.IsVisible(501)</visible>
-			<control type="label">
-				<posx>477</posx>
-				<posy>361</posy>
-				<width>565</width>
-				<height>45</height>
-				<font>Postertitlebig</font>
-				<textcolor>FF7D7D7D</textcolor>
-				<scroll>false</scroll>
-				<align>left</align>
-				<label>$INFO[ListItem.Title]</label>
-				<visible>Control.IsVisible(501)</visible>
-				<!--shadowcolor>ff464646</shadowcolor-->
-			</control>
-			<control type="textbox">
-				<posx>481</posx>
-				<posy>408</posy>
-				<width>575</width>
-				<height>70</height>
-				<font>recent</font>
-				<textcolor>FF707070</textcolor>
-				<scroll>true</scroll>
-				<align>justify</align>
-				<autoscroll delay="922000" time="5000" repeat="10000" />
-				<label>$INFO[ListItem.Plot]</label>
-			</control>
-			
-		</control>
-		
-		
+
 		<control type="scrollbar" id="63">
 			
 			<texturesliderbackground>buttons/scrollbgH.png</texturesliderbackground>
@@ -249,16 +244,14 @@
 			<width>920</width>
 			<height>10</height>
 			<onup>501</onup>
-			<visible>Control.IsVisible(501)</visible>
+
 			<animation effect="fade" start="100" end="50" time="200" reversable="false" condition="!Control.HasFocus(63)">Conditional</animation>
-			
+			<animation effect="slide" start="0,0" end="-150,0" time="600" condition="!Control.HasFocus(301) + !Skin.HasSetting(LockMainMenu)">Conditional</animation>
 		</control>
 		
 		
 	</control>
 
-
-
-	</include>
+</include>
 	
 </includes>

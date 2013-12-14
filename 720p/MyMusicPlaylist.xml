@@ -88,11 +88,10 @@
 </control>
 
 
-<include>VideoWindow</include>
+<include>VideoWindow</include>	
+<include>MainMenu</include>
 <include>GeneralFanart</include>
 <include>Background</include>
-
-<include>MainMenu</include>
 
 <include>List</include>
 <include>Landscape</include>

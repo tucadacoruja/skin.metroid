@@ -4,16 +4,126 @@
 
 	<control type="group">
 		<include>InfoOpenClose</include>
-		<include>ViewWindowOC</include>
 		<include>ContextFade</include>	
 		<include>Keyboard</include>
 		<include>Favourites</include>
+		<include>WidgetsAnimation</include>
+		<visible>Control.IsVisible(781)</visible>
+		
+		<control type="wraplist" id="781">
+			<visible>Container.Content(Movies) | Container.Content(TVShows)</visible>
+			<visible>!Window.IsVisible(favourites)</visible>
+			<hitrect x="0" y="-10" w="1280" h="190" />
+			<posx>255</posx>
+			<posy>415</posy>
+			<width>1420</width>
+			<height>300</height>
+			<onleft>781</onleft>
+			<onright>781</onright>
+			<onup condition="Control.IsVisible(782)">782</onup>
+			<onup condition="!Control.IsVisible(782)">300</onup>
+			<ondown>63</ondown>
+			<viewtype label="Fanart">list</viewtype>
+			<pagecontrol>63</pagecontrol>
+			<scrolltime>200</scrolltime>
+			<focusposition>3</focusposition>
+			<movement>3</movement>
+			<orientation>horizontal</orientation>
+			<preloaditems>4</preloaditems>
+			
+			<animation effect="slide" start="0,0" end="-300,0" time="600" condition="!Control.HasFocus(301) + !Skin.HasSetting(LockMainMenu)">Conditional</animation>
+		
+			<itemlayout height="200" width="135">
+
+				<control type="image">
+					<posx>2</posx>
+					<posy>100</posy>
+					<width>123</width>
+					<height>180</height>
+					<aspectratio>stretch</aspectratio>
+					<bordertexture border="3">-</bordertexture>
+					<bordersize>3</bordersize>
+					<fadetime>200</fadetime>
+					<texture background="true" fallback="DefaultAlbumCover.png">$INFO[ListItem.Art(poster)]</texture>
+					<animation effect="fade" start="0" end="60" time="0" condition="true">Conditional</animation>
+				</control>
+				<control type="image">
+					<posx>10</posx>
+					<posy>120</posy>
+					<width>100</width>
+					<height>120</height>
+					<aspectratio>stretch</aspectratio>
+					<texture background="true" diffuse="poster/posterdiffusesmall.png" >$VAR[Fallback_Icon]</texture>
+					<animation effect="fade" start="0" end="80" time="0" condition="true">Conditional</animation>
+					
+					<colordiffuse>EBFFFFFF</colordiffuse>
+				</control>
+				<control type="image">
+					<posx>101</posx>
+					<posy>257</posy>
+					<width>20</width>
+					<height>20</height>
+					<aspectratio>keep</aspectratio>
+					<texture>$INFO[ListItem.Overlay]</texture>
+					<visible>Skin.HasSetting(WatchedOverlays)</visible>
+					<animation effect="fade" start="0" end="50" time="0" condition="true">Conditional</animation>
+				</control>					
+			</itemlayout>
+			
+						
+			<focusedlayout height="310" width="200">
+			
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>190</width>
+					<height>280</height>
+					<aspectratio>stretch</aspectratio>
+				
+					<fadetime>200</fadetime>
+					<texture background="true">white.png</texture>
+					<colordiffuse>FFEBEBEB</colordiffuse>
+				</control>
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>190</width>
+					<height>280</height>
+					<aspectratio>stretch</aspectratio>
+					<bordertexture border="6">-</bordertexture>
+					<bordersize>6</bordersize>
+					<fadetime>200</fadetime>
+					<texture background="true" fallback="DefaultAlbumCover.png">$INFO[ListItem.Art(poster)]</texture>
+				</control>
+				<control type="image">
+					<posx>20</posx>
+					<posy>30</posy>
+					<width>150</width>
+					<height>190</height>
+					<aspectratio>stretch</aspectratio>
+					<texture background="true" diffuse="poster/posterdiffusesmall.png" >$VAR[Fallback_Icon]</texture>
+					<animation effect="fade" start="0" end="80" time="0" condition="true">Conditional</animation>
+					
+					<colordiffuse>EBFFFFFF</colordiffuse>
+				</control>
+				
+				<control type="image">
+					<posx>151</posx>
+					<posy>235</posy>
+					<width>35</width>
+					<height>45</height>
+					<aspectratio>keep</aspectratio>
+					<texture>$INFO[ListItem.Overlay]</texture>
+					<visible>Skin.HasSetting(WatchedOverlays)</visible>
+				</control>
+			</focusedlayout>
+
+		</control>
+			
 		
 		<control type="group">
 		<visible>!substring(Listitem.Label,..,left)</visible>
-		<visible>Control.IsVisible(781)</visible>
-		<include>WidgetsAnimation</include>
-				
+
 			<control type="textbox">
 				<posx>945</posx>
 				<posy>185</posy>
@@ -23,7 +133,7 @@
 				<info>ListItem.Plot</info>
 				<font>plot</font>
 				<textcolor>FFD7D7D7</textcolor>
-				<autoscroll delay="35000" time="4000" repeat="10000" />
+				<autoscroll delay="600000" time="4000" repeat="10000" />
 			</control>
 			<control type="image">
 				<description>Rating Info</description>
@@ -38,31 +148,7 @@
 				<visible>![Container.Content(movies) + Listitem.IsFolder]</visible>
 				<animation effect="slide" start="0,0" end="0,30" time="0"condition="Container.Content(tvshows)">Conditional</animation>
 			</control>
-			<!--control type="label">
-				<posx>945</posx>
-				<posy>355</posy>
-				<width>633</width>
-				<height>60</height>
-				<align>left</align>
-				<label>$LOCALIZE[31179]</label>
-				<font>homemenu3</font>
-				<textcolor>ACEBEBEB</textcolor>
-				<selectedcolor>taskbar</selectedcolor>
-				<visible>Container.Content(tvshows)</visible>
-			</control>
-			<control type="label">
-				<posx>1165</posx>
-				<posy>355</posy>
-				<width>633</width>
-				<height>60</height>
-				<align>right</align>
-				<label>$INFO[ListItem.Property(TotalEpisodes)]</label>
-				<font>homemenu3</font>
-				<textcolor>ACEBEBEB</textcolor>
-				<selectedcolor>taskbar</selectedcolor>
-				<visible>Container.Content(tvshows)</visible>
-			</control-->
-			
+		
 			<control type="label">
 				<posx>945</posx>
 				<posy>285</posy>
@@ -87,315 +173,91 @@
 				<selectedcolor>taskbar</selectedcolor>
 				<visible>Container.Content(tvshows)</visible>
 			</control>
-		</control>
-		
-		<control type="wraplist" id="782">
-				<visible>Control.IsVisible(781)</visible>
-				<visible>ListItem.IsFolder + ![substring(Listitem.Label,..,left) | Container.Content(tvshows)]</visible>
-				<posx>900</posx>
-				<posy>100</posy>
-				<width>288</width>
-				<height>260</height>
-				<onleft>782</onleft>
-				<onright>782</onright>
-				<onup>-</onup>
-				<ondown>781</ondown>
-								
-				<scrolltime>200</scrolltime>
-				<focusposition>1</focusposition>
-				<movement>3</movement>
-				<orientation>horizontal</orientation>
-				<preloaditems>2</preloaditems>
-				
-				<itemlayout height="250" width="80">
-					<control type="image">
-						<posx>2</posx>
-						<posy>60</posy>
-						<width>110</width>
-						<height>160</height>
-						<aspectratio>stretch</aspectratio>
-					
-						<fadetime>200</fadetime>
-						<texture background="true">white.png</texture>
-						<colordiffuse>FFEBEBEB</colordiffuse>
-						<!--animation effect="fade" start="0" end="60" time="0" condition="true">Conditional</animation-->
-					</control>
-					<control type="image">
-						<posx>2</posx>
-						<posy>60</posy>
-						<width>110</width>
-						<height>160</height>
-						<aspectratio>stretch</aspectratio>
-						<bordertexture border="3">-</bordertexture>
-						<bordersize>3</bordersize>
-						<fadetime>200</fadetime>
-						<texture background="true" fallback="DefaultAlbumCover.png">$INFO[ListItem.Art(poster)]</texture>
-						<!--animation effect="fade" start="0" end="80" time="0" condition="true">Conditional</animation-->
-					</control>
-					<!--control type="image">
-						<posx>10</posx>
-						<posy>80</posy>
-						<width>87</width>
-						<height>105</height>
-						<aspectratio>stretch</aspectratio>
-						<texture background="true" diffuse="poster/posterdiffusesmall.png" >$VAR[Fallback_Icon]</texture>
-						
-						
-						<colordiffuse>EBFFFFFF</colordiffuse>
-					</control-->
-						
-				</itemlayout>
-				
-							
-				<focusedlayout height="250" width="123">
-					<control type="image">
-						<posx>10</posx>
-						<posy>50</posy>
-						<width>123</width>
-						<height>180</height>
-						<aspectratio>stretch</aspectratio>
-					
-						<fadetime>200</fadetime>
-						<texture background="true">white.png</texture>
-						<colordiffuse>FFEBEBEB</colordiffuse>
-						<!--animation effect="fade" start="0" end="60" time="0" condition="true">Conditional</animation-->
-					</control>
-					<control type="image">
-						<posx>10</posx>
-						<posy>50</posy>
-						<width>123</width>
-						<height>180</height>
-						<aspectratio>stretch</aspectratio>
-						<bordertexture border="3">-</bordertexture>
-						<bordersize>3</bordersize>
-						<fadetime>200</fadetime>
-						<texture background="true" fallback="DefaultAlbumCover.png">$INFO[ListItem.Art(poster)]</texture>
-						<!--animation effect="fade" start="0" end="80" time="0" condition="true">Conditional</animation-->
-					</control>
-					<!--control type="image">
-						<posx>20</posx>
-						<posy>70</posy>
-						<width>100</width>
-						<height>120</height>
-						<aspectratio>stretch</aspectratio>
-						<texture background="true" diffuse="poster/posterdiffusesmall.png" >$VAR[Fallback_Icon]</texture>
-						
-						
-						<colordiffuse>EBFFFFFF</colordiffuse>
-					</control-->
-		
-				</focusedlayout>
-					<content target="video">$INFO[Container.ListItem.Path]</content>
-			</control>	
-				
-				
-				
-				
-				
-				
-		<control type="textbox">
-			<posx>350</posx>
-			<posy>175</posy>
-			<width>230</width>
-			<height>190</height>
-			<label>$INFO[ListItem.Title]</label>
-			<scroll>false</scroll>
-			<textcolor>E1d2e0fe</textcolor>
-			<shadowcolor>ff464646</shadowcolor>
-			<font>ThinTitle</font>
-			<align>left</align>
-			<visible>Control.IsVisible(781) + ![substring(Control.GetLabel(1963),.png]</visible>
-			<animation effect="fade" start="0" end="1000" time="150" >Visible</animation>
-			<animation effect="fade" start="100" end="0" time="150" >Hidden</animation>
-		
-		 </control>
-		
-	
-		
-		<control type="image" id="1963">
-			<posx>310</posx>
-			<posy>135</posy>
-			<width>300</width>
-			<height>240</height>
-			<aspectratio>keep</aspectratio>
-			<texture>$INFO[ListItem.Art(clearlogo)]</texture>
-			<animation effect="fade" start="0" end="80" time="100" delay="0" condition="true">Conditional</animation>
-			<visible>Control.IsVisible(781)</visible>
-		</control>
-		<!--control type="image" id="1964">
-			<posx>296</posx>
-			<posy>135</posy>
-			<width>300</width>
-			<height>190</height>
-			<aspectratio>keep</aspectratio>
-			<texture>DefaultMovies.png</texture>
-			<animation effect="fade" start="0" end="80" time="100" delay="0" condition="true">Conditional</animation>
+
+			<control type="textbox">
+				<posx>350</posx>
+				<posy>175</posy>
+				<width>230</width>
+				<height>190</height>
+				<label>$INFO[ListItem.Title]</label>
+				<scroll>false</scroll>
+				<textcolor>E1d2e0fe</textcolor>
+				<shadowcolor>ff464646</shadowcolor>
+				<font>ThinTitle</font>
+				<align>left</align>
+				<visible>Control.IsVisible(781) + ![substring(Control.GetLabel(1963),.png]</visible>
+				<animation effect="fade" start="0" end="1000" time="150" >Visible</animation>
+				<animation effect="fade" start="100" end="0" time="150" >Hidden</animation>
 			
-			<visible>Control.IsVisible(781) + ![substring(Control.GetLabel(1963),.png | !substring(Listitem.Label,..,left)]"</visible>
-		
-		</control-->
-		
-		<control type="grouplist">
-			<description>Media Codec Flagging Images</description>
-			<posx>255</posx>
-			<posy>93</posy>
-			<width>1030</width>
-			<height>50</height>
-			<align>center</align>
-			<itemgap>0</itemgap>
-			<orientation>horizontal</orientation>
-			<include>Media_flags_big</include>
-			<visible>Control.IsVisible(781) | Control.IsVisible(777)</visible>
-			<animation effect="fade" start="0" end="80" time="600">WindowOpen</animation>
-			<animation effect="fade" start="80" end="0" time="600" tween="sine">WindowClose</animation>
-			
-		</control>
-		
-		<control type="group">
-			
-			
-			<posx>0</posx>
-			<posy>15</posy>
-			<control type="wraplist" id="781">
-				<visible>Container.Content(Movies) | Container.Content(TVShows)</visible>
-				<visible>!Window.IsVisible(favourites)</visible>
-				<hitrect x="0" y="-10" w="1280" h="190" />
-				<posx>255</posx>
-				<posy>400</posy>
-				<width>1420</width>
-				<height>300</height>
-				<onleft>781</onleft>
-				<onright>781</onright>
-				<onup condition="Control.IsVisible(782)">782</onup>
-				<onup condition="!Control.IsVisible(782)">300</onup>
-				<ondown>63</ondown>
-				<viewtype label="Fanart">list</viewtype>
-				<pagecontrol>63</pagecontrol>
-				<scrolltime>200</scrolltime>
-				<focusposition>3</focusposition>
-				<movement>3</movement>
-				<orientation>horizontal</orientation>
-				<preloaditems>4</preloaditems>
-				
-				<itemlayout height="200" width="135">
-					<!--control type="image">
-						<posx>2</posx>
-						<posy>100</posy>
-						<width>123</width>
-						<height>180</height>
-						<aspectratio>stretch</aspectratio>
-					
-						<fadetime>200</fadetime>
-						<texture background="true">white.png</texture>
-						<colordiffuse>FFEBEBEB</colordiffuse>
-						<animation effect="fade" start="0" end="60" time="0" condition="true">Conditional</animation>
-					</control-->
-					<control type="image">
-						<posx>2</posx>
-						<posy>100</posy>
-						<width>123</width>
-						<height>180</height>
-						<aspectratio>stretch</aspectratio>
-						<bordertexture border="3">-</bordertexture>
-						<bordersize>3</bordersize>
-						<fadetime>200</fadetime>
-						<texture background="true" fallback="DefaultAlbumCover.png">$INFO[ListItem.Art(poster)]</texture>
-						<animation effect="fade" start="0" end="60" time="0" condition="true">Conditional</animation>
-					</control>
-					<control type="image">
-						<posx>10</posx>
-						<posy>120</posy>
-						<width>100</width>
-						<height>120</height>
-						<aspectratio>stretch</aspectratio>
-						<texture background="true" diffuse="poster/posterdiffusesmall.png" >$VAR[Fallback_Icon]</texture>
-						<animation effect="fade" start="0" end="80" time="0" condition="true">Conditional</animation>
-						
-						<colordiffuse>EBFFFFFF</colordiffuse>
-					</control>
-					<control type="image">
-						<posx>101</posx>
-						<posy>257</posy>
-						<width>20</width>
-						<height>20</height>
-						<aspectratio>keep</aspectratio>
-						<texture>$INFO[ListItem.Overlay]</texture>
-						<visible>Skin.HasSetting(WatchedOverlays)</visible>
-						<animation effect="fade" start="0" end="50" time="0" condition="true">Conditional</animation>
-					</control>					
-				</itemlayout>
-				
-							
-				<focusedlayout height="310" width="200">
-				
-					<control type="image">
-						<posx>0</posx>
-						<posy>0</posy>
-						<width>190</width>
-						<height>280</height>
-						<aspectratio>stretch</aspectratio>
-					
-						<fadetime>200</fadetime>
-						<texture background="true">white.png</texture>
-						<colordiffuse>FFEBEBEB</colordiffuse>
-					</control>
-					<control type="image">
-						<posx>0</posx>
-						<posy>0</posy>
-						<width>190</width>
-						<height>280</height>
-						<aspectratio>stretch</aspectratio>
-						<bordertexture border="6">-</bordertexture>
-						<bordersize>6</bordersize>
-						<fadetime>200</fadetime>
-						<texture background="true" fallback="DefaultAlbumCover.png">$INFO[ListItem.Art(poster)]</texture>
-					</control>
-					<control type="image">
-						<posx>20</posx>
-						<posy>30</posy>
-						<width>150</width>
-						<height>190</height>
-						<aspectratio>stretch</aspectratio>
-						<texture background="true" diffuse="poster/posterdiffusesmall.png" >$VAR[Fallback_Icon]</texture>
-						<animation effect="fade" start="0" end="80" time="0" condition="true">Conditional</animation>
-						
-						<colordiffuse>EBFFFFFF</colordiffuse>
-					</control>
-					
-					<control type="image">
-						<posx>151</posx>
-						<posy>235</posy>
-						<width>35</width>
-						<height>45</height>
-						<aspectratio>keep</aspectratio>
-						<texture>$INFO[ListItem.Overlay]</texture>
-						<visible>Skin.HasSetting(WatchedOverlays)</visible>
-					</control>
-				</focusedlayout>
-				
-				
-			
-			</control>
-	
-			
-			<control type="scrollbar" id="63">
-				<texturesliderbackground>buttons/scrollbgH.png</texturesliderbackground>
-				<texturesliderbar>-</texturesliderbar>
-				<texturesliderbarfocus>-</texturesliderbarfocus>
-				<textureslidernib>buttons/scrollnibH.png</textureslidernib>
-				<textureslidernibfocus>buttons/scrollnibH.png</textureslidernibfocus>
-				<orientation>horizontal</orientation>
-				<showonepage>true</showonepage>
+			 </control>
+
+			<control type="image" id="1963">
 				<posx>310</posx>
-				<posy>689</posy>
-				<width>900</width>
-				<height>10</height>
-				<onup>781</onup>
+				<posy>135</posy>
+				<width>300</width>
+				<height>240</height>
+				<aspectratio>keep</aspectratio>
+				<texture>$INFO[ListItem.Art(clearlogo)]</texture>
+				<animation effect="fade" start="0" end="80" time="100" delay="0" condition="true">Conditional</animation>
 				<visible>Control.IsVisible(781)</visible>
-				<animation effect="fade" start="100" end="70" time="200" reversable="false" condition="!Control.HasFocus(63)">Conditional</animation>
 			</control>
 			
+			<control type="grouplist">
+				<description>Media Codec Flagging Images</description>
+				<posx>255</posx>
+				<posy>93</posy>
+				<width>1030</width>
+				<height>50</height>
+				<align>center</align>
+				<itemgap>0</itemgap>
+				<orientation>horizontal</orientation>
+				<include>Media_flags_big</include>
+				<visible>Control.IsVisible(781)</visible>
+				<visible>[Control.HasFocus(301) + Skin.HasSetting(LockMainMenu)] | !Skin.HasSetting(LockMainMenu)</visible>
+				<animation effect="fade" start="0" end="80" time="600">Visible</animation>
+				<animation effect="fade" start="80" end="0" time="600" tween="sine">Hidden</animation>
+			
+			</control>
+			<control type="grouplist">
+				<description>Media Codec Flagging Images</description>
+				<posx>5</posx>
+				<posy>93</posy>
+				<width>1280</width>
+				<height>50</height>
+				<align>center</align>
+				<itemgap>0</itemgap>
+				<orientation>horizontal</orientation>
+				<include>Media_flags_fullscreen</include>
+				<visible>Control.IsVisible(781)</visible>
+				<visible>!Control.HasFocus(301) + !Skin.HasSetting(LockMainMenu)</visible>
+				<animation effect="fade" start="0" end="80" time="600">Visible</animation>
+				<animation effect="fade" start="80" end="0" time="600" tween="sine">Hidden</animation>
+			
+			</control>
 		</control>
+
+			
+	
+			
+		<control type="scrollbar" id="63">
+			<texturesliderbackground>buttons/scrollbgH.png</texturesliderbackground>
+			<texturesliderbar>-</texturesliderbar>
+			<texturesliderbarfocus>-</texturesliderbarfocus>
+			<textureslidernib>buttons/scrollnibH.png</textureslidernib>
+			<textureslidernibfocus>buttons/scrollnibH.png</textureslidernibfocus>
+			<orientation>horizontal</orientation>
+			<showonepage>true</showonepage>
+			<posx>310</posx>
+			<posy>704</posy>
+			<width>900</width>
+			<height>10</height>
+			<onup>781</onup>
+			<visible>Control.IsVisible(781)</visible>
+			
+			<animation effect="slide" start="0,0" end="-150,0" time="600" condition="!Control.HasFocus(301) + !Skin.HasSetting(LockMainMenu)">Conditional</animation>
+		</control>
+			
+		
 	</control>
 </include>
 	

@@ -87,11 +87,10 @@
 	<animation effect="fade" start="1" end="0" time="0" condition="true">Conditional</animation>
 </control>
 
-<include>VideoWindow</include>
+<include>VideoWindow</include>	
+<include>MainMenu</include>
 <include>GeneralFanart</include>
 <include>Background</include>
-
-<include>MainMenu</include>
 
 <include>List</include>
 <include>Landscape</include>

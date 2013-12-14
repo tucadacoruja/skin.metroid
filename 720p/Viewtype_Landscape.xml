@@ -10,20 +10,23 @@
 			
 			<include>InfoOpenClose</include>
 			<include>MusicInfoOpenClose</include>
-			<include>ViewWindowOC</include>
+			<include>WidgetsAnimation</include>
 			<include>ContextFade</include>	
 			<include>Keyboard</include>
 			<include>Favourites</include>
 			<visible>Control.IsVisible(603)</visible>
 			<visible>![Window.IsVisible(pictureinfo) | Window.IsVisible(smartplaylisteditor)]</visible>
+	
 			
 			<control type="panel" id="603">
 					
 				<posx>230</posx>
 				<posy>75</posy>
-				<width>1000</width>
+				<!--include condition="!Skin.HasSetting(LockMainMenu)">LandscapeSmall</include>
+				<include condition="Skin.HasSetting(LockMainMenu)">LandscapeBig</include-->
+				<width>960</width>
 				<height>610</height>
-				<onup>301</onup>
+				<onup>300</onup>
 				<ondown>730</ondown>
 				<onleft>603</onleft>
 				<onright>603</onright>
@@ -33,7 +36,8 @@
 				<focusposition>0</focusposition>
 				<scrolltime tween="cubic" easing="out">600</scrolltime>
 				<preloaditems>2</preloaditems>
-				
+				<animation effect="slide" start="0,0" end="-110,0" time="400" condition="!Control.HasFocus(301) + !Skin.HasSetting(LockMainMenu)">Conditional</animation>
+								
 				<itemlayout width="192" height="288">
 					<control type="group">
 						<posx>0</posx>
@@ -303,6 +307,7 @@
 				<onup>603</onup>
 				<visible>Control.IsVisible(603) + StringCompare(Container.Viewmode,Landscape)</visible>
 				<animation effect="fade" start="100" end="50" time="200" reversable="false" condition="!Control.HasFocus(730)">Conditional</animation>
+				<animation effect="slide" start="0,0" end="-110,0" time="400" condition="!Control.HasFocus(301) + !Skin.HasSetting(LockMainMenu)">Conditional</animation>
 			</control>
 		
 		</control>

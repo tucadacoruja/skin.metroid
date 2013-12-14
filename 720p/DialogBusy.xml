@@ -10,18 +10,143 @@
 </coordinates>
         
 <controls>
-
-	<control type="image">
-		<description>vignette</description>
-		<posx>0</posx>
-		<posy>0</posy>
-		<width>1280</width>
-		<height>720</height>
-		<texture>black.png</texture>
-		<aspectratio>stretch</aspectratio>
-		<animation effect="fade" start="0" end="90" time="900" reversable="false" >WindowOpen</animation>
-		<animation effect="fade" start="90" end="0" time="350" reversable="false" >WindowClose</animation>
-		<visible>Window.IsVisible(fullscreenvideo) | Window.IsVisible(visualisation)</visible>
+	
+	
+	
+	<control type="group"> 
+	<posx>0</posx>
+	<posy>0</posy>
+	<visible>Window.IsVisible(fullscreenvideo) | Window.IsVisible(visualisation)</visible>
+		
+		<control type="image">
+			<description>vignette</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+			<texture>black.png</texture>
+			<aspectratio>stretch</aspectratio>
+			<animation effect="fade" start="0" end="90" time="900" reversable="false" >WindowOpen</animation>
+			<animation effect="fade" start="90" end="0" time="350" reversable="false" >WindowClose</animation>
+		</control>
+		<!--control type="image">
+			<description>model</description>
+			<posx>590</posx>
+			<posy>310</posy>
+			<width>100</width>
+			<height>100</height>
+			<texture>whitedot.png</texture>
+			<aspectratio>stretch</aspectratio>
+			<animation effect="fade" start="0" end="90" time="900" reversable="false" >WindowOpen</animation>
+			<animation effect="fade" start="90" end="0" time="350" reversable="false" >WindowClose</animation>
+			
+		</control-->
+		
+		<control type="image">
+			<description>N dot</description>
+			<posx>630</posx>
+			<posy>310</posy>
+			<width>20</width>
+			<height>20</height>
+			<texture>whitedot.png</texture>
+			<aspectratio>stretch</aspectratio>
+			
+			<animation effect="fade" start="90" end="30" time="1800" delay="1125" loop="true" condition="true">Conditional</animation>
+			<animation effect="zoom" start="50" end="10" time="1800" delay="1125" center="auto" loop="true" condition="true">Conditional</animation>
+			<colordiffuse>skin.string(MainColorString)</colordiffuse>
+		</control>
+		<control type="image">
+			<description>NE dot</description>
+			<posx>660</posx>
+			<posy>320</posy>
+			<width>20</width>
+			<height>20</height>
+			<texture>whitedot.png</texture>
+			<aspectratio>stretch</aspectratio>
+			<animation effect="fade" start="90" end="30" time="1800" delay="900" loop="true" condition="true">Conditional</animation>
+			<animation effect="zoom" start="50" end="10" time="1800" delay="900" center="auto" loop="true" condition="true">Conditional</animation>
+			
+			<colordiffuse>skin.string(MainColorString)</colordiffuse>
+		</control>
+		<control type="image">
+			<description>E dot</description>
+			<posx>670</posx>
+			<posy>350</posy>
+			<width>20</width>
+			<height>20</height>
+			<texture>whitedot.png</texture>
+			<aspectratio>stretch</aspectratio>
+			<animation effect="fade" start="90" end="30" time="1800" delay="1575" loop="true" condition="true">Conditional</animation>
+			<animation effect="zoom" start="50" end="10" time="1800" delay="1575" center="auto" loop="true" condition="true">Conditional</animation>
+			
+			<colordiffuse>skin.string(MainColorString)</colordiffuse>
+		</control>
+		<control type="image">
+			<description>SE dot</description>
+			<posx>660</posx>
+			<posy>380</posy>
+			<width>20</width>
+			<height>20</height>
+			<texture>whitedot.png</texture>
+			<aspectratio>stretch</aspectratio>
+			<animation effect="fade" start="90" end="30" time="1800" delay="675" loop="true" condition="true">Conditional</animation>
+			<animation effect="zoom" start="50" end="10" time="1800" delay="675" center="auto" loop="true" condition="true">Conditional</animation>
+			
+			<colordiffuse>skin.string(MainColorString)</colordiffuse>
+		</control>
+		<control type="image">
+			<description>S dot</description>
+			<posx>630</posx>
+			<posy>390</posy>
+			<width>20</width>
+			<height>20</height>
+			<texture>whitedot.png</texture>
+			<aspectratio>stretch</aspectratio>
+			
+			<animation effect="fade" start="90" end="30" time="1800" delay="225" loop="true" condition="true">Conditional</animation>
+			<animation effect="zoom" start="50" end="10" time="1800" delay="225" center="auto" loop="true" condition="true">Conditional</animation>
+			<colordiffuse>skin.string(MainColorString)</colordiffuse>
+		</control>
+		<control type="image">
+			<description>SW dot</description>
+			<posx>600</posx>
+			<posy>380</posy>
+			<width>20</width>
+			<height>20</height>
+			<texture>whitedot.png</texture>
+			<aspectratio>stretch</aspectratio>
+			<animation effect="fade" start="90" end="30" time="1800" delay="0" loop="true" condition="true">Conditional</animation>
+			<animation effect="zoom" start="50" end="10" time="1800" delay="0" center="auto" loop="true" condition="true">Conditional</animation>
+			
+			<colordiffuse>skin.string(MainColorString)</colordiffuse>
+		</control>
+		<control type="image">
+			<description>W dot</description>
+			<posx>590</posx>
+			<posy>350</posy>
+			<width>20</width>
+			<height>20</height>
+			<texture>whitedot.png</texture>
+			<aspectratio>stretch</aspectratio>
+			<animation effect="fade" start="90" end="30" time="1800" delay="1350" loop="true" condition="true">Conditional</animation>
+			<animation effect="zoom" start="50" end="10" time="1800" delay="1350" center="auto" loop="true" condition="true">Conditional</animation>
+			
+			<colordiffuse>skin.string(MainColorString)</colordiffuse>
+		</control>
+		<control type="image">
+			<description>NW dot</description>
+			<posx>600</posx>
+			<posy>320</posy>
+			<width>20</width>
+			<height>20</height>
+			<texture>whitedot.png</texture>
+			<aspectratio>stretch</aspectratio>
+			
+			<animation effect="fade" start="90" end="30" time="1800" delay="450" loop="true" condition="true">Conditional</animation>
+			<animation effect="zoom" start="50" end="10" time="1800" delay="450" center="auto" loop="true" condition="true">Conditional</animation>
+			<colordiffuse>skin.string(MainColorString)</colordiffuse>
+		</control>
+	
 	</control>
 	
 	<control type="group"> 

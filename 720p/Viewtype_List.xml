@@ -10,12 +10,14 @@
 	<include>Favourites</include>
 	<include>ContextFade</include>
 	<include>Keyboard</include>
+	<include>WidgetsAnimation</include>
 	
 		<!-- ==== Info & Thumb Code ==== -->
 		<control type="group">
 		<posx>350</posx>
 		<posy>-36</posy>
-	
+		<animation effect="slide" start="0,0" end="-80,0" time="400" condition="!Control.HasFocus(301) + !Skin.HasSetting(LockMainMenu)">Conditional</animation>
+		
 			<control type="group">
 			<include>WidgetsAnimation</include>
 				<visible>!Stringcompare(ListItem.Label,..)</visible>
@@ -53,13 +55,25 @@
 					
 					<colordiffuse>EBFFFFFF</colordiffuse>
 				</control>
-				
+				<control type="textbox">
+					<posx>640</posx>
+					<posy>460</posy>
+					<height>110</height>
+					<width>190</width>
+					<label fallback="195">$INFO[ListItem.Plot]</label>
+					<font>font12</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>7000</shadowcolor>
+					<scrollspeed>3000</scrollspeed>
+					<align>justify</align>
+				</control>
 			</control>
 			
 			<control type="group">
 			<include>WidgetsAnimation</include>
-	      <visible>IsEmpty(ListItem.Property(Addon.Name))</visible>
-	      <visible>![Container.Content(Movies) | Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes) | Container.Content(Sets)] | [substring(Container.FolderPath,plugin,left) + Container.Content(Episodes)]</visible>
+			
+			<visible>IsEmpty(ListItem.Property(Addon.Name))</visible>
+			<visible>![Container.Content(Movies) | Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes) | Container.Content(Sets)] | [substring(Container.FolderPath,plugin,left) + Container.Content(Episodes)]</visible>
 				<control type="image">
 					<posx>631</posx>
 					<posy>167</posy>
@@ -89,6 +103,7 @@
 		<control type="group">
 		<posx>350</posx>
 		<posy>236</posy>
+		<animation effect="slide" start="0,0" end="-80,0" time="400" condition="!Control.HasFocus(301) + !Skin.HasSetting(LockMainMenu)">Conditional</animation>
 		<visible>Container.Content(Episodes) + ![SubString(Container.FolderPath,plugin,left) | SubString(Container.FolderPath,addons,left)]</visible>
 		<visible>!IsEmpty(ListItem.Title)</visible>
 		<include>WidgetsAnimation</include>
@@ -123,6 +138,7 @@
 		<control type="group">
 		<posx>350</posx>
 		<posy>-36</posy>
+		<animation effect="slide" start="0,0" end="-80,0" time="400" condition="!Control.HasFocus(301) + !Skin.HasSetting(LockMainMenu)">Conditional</animation>
 		<include>WidgetsAnimation</include>
 	    <visible>![Container.Content(Movies) | Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes) | Container.Content(Sets) | Window.IsVisible(VideoPlaylist)] | [substring(Container.FolderPath,plugin,left) + Container.Content(Episodes)]</visible>
 			<control type="group">
@@ -150,8 +166,7 @@
 					<bordertexture border="20">empty.png</bordertexture>
 					<bordersize>6</bordersize>
 				</control>
-				
-				
+								
 				
 				<control type="grouplist">
 					<posx>640</posx>
@@ -209,6 +224,7 @@
 		
 		<!-- ==== Main List ==== -->
 		<control type="group">
+			<animation effect="slide" start="0,0" end="-170,0" time="400" condition="!Control.HasFocus(301) + !Skin.HasSetting(LockMainMenu)">Conditional</animation>
 			
 			<control type="list" id="50">
 				<posx>330</posx>
@@ -450,7 +466,7 @@
 				<orientation>Vertical</orientation>
 				<showonepage>true</showonepage>
 				<posx>290</posx>
-				<posy>100</posy>
+				<posy>120</posy>
 				<width>10</width>
 				<height>580</height>
 				<onleft>300</onleft>

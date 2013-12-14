@@ -110,10 +110,11 @@
 
 
 <include>VideoWindow</include>	
+<include>MainMenu</include>
 <include>GeneralFanart</include>
 <include>Background</include>
 
-<include>MainMenu</include>
+
 
 
 <include>List</include><!---50-->

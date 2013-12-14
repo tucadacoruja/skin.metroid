@@ -45,13 +45,10 @@
 	<height>1</height>
 </control>
 	
-<include>VideoWindow</include>
-<include>GeneralFanart</include>
-<include>Background</include>	
-
-
-
+<include>VideoWindow</include>	
 <include>MainMenu</include>
+<include>GeneralFanart</include>
+<include>Background</include>
 
 <include>List</include>  
   

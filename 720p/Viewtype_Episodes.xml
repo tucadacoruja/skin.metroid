@@ -7,9 +7,12 @@
 			
 	<control type="group">
 		<include>InfoOpenClose</include>
-		<include>ViewWindowOC</include>
+		
 		<include>ContextFade</include>
 		<include>Keyboard</include>
+		<include>WidgetsAnimation</include>
+		<visible>Control.IsVisible(504)</visible>
+		<animation effect="slide" start="0,0" end="-130,0" time="400" condition="!Control.HasFocus(301) + !Skin.HasSetting(LockMainMenu)">Conditional</animation>
 		
 		<control type="grouplist">
 			<description>Media Codec Flags</description>
@@ -39,8 +42,8 @@
 			<focusposition>1</focusposition>
 			<onup>504</onup>
 			<ondown>504</ondown>
-			<onleft>300</onleft>
-			<onright>65</onright>
+			<onleft>65</onleft>
+			<onright>-</onright>
 			<pagecontrol>65</pagecontrol>
 			
 			<visible>Container.Content(episodes) + substring(Container.FolderPath,videodb://tvshows)</visible>
@@ -261,29 +264,27 @@
 			</focusedlayout>
 		</control>
 
-		
-		
-	</control>
 	
-	<control type="scrollbar" id="65">
+		<control type="scrollbar" id="65">
 
-		<texturesliderbackground>buttons/scrollbgV.png</texturesliderbackground>
-		<texturesliderbar>-</texturesliderbar>
-		<texturesliderbarfocus>-</texturesliderbarfocus>
-		<textureslidernib>buttons/scrollnibV.png</textureslidernib>
-		<textureslidernibfocus>buttons/scrollnibV.png</textureslidernibfocus>
-		<orientation>Vertical</orientation>
-		<showonepage>true</showonepage>
-		<posx>290</posx>
-		<posy>100</posy>
-		<width>10</width>
-		<height>580</height>
-		<onleft>300</onleft>
-		<onright>50</onright>
-		<visible>Control.IsVisible(504)</visible>
-		<animation effect="fade" start="100" end="50" time="200" reversable="false" condition="!Control.HasFocus(60)">Conditional</animation>
+			<texturesliderbackground>buttons/scrollbgV.png</texturesliderbackground>
+			<texturesliderbar>-</texturesliderbar>
+			<texturesliderbarfocus>-</texturesliderbarfocus>
+			<textureslidernib>buttons/scrollnibV.png</textureslidernib>
+			<textureslidernibfocus>buttons/scrollnibV.png</textureslidernibfocus>
+			<orientation>Vertical</orientation>
+			<showonepage>true</showonepage>
+			<posx>290</posx>
+			<posy>100</posy>
+			<width>10</width>
+			<height>580</height>
+			<onleft>300</onleft>
+			<onright>504</onright>
+			<visible>Control.IsVisible(504)</visible>
+			<animation effect="fade" start="100" end="50" time="200" reversable="false" condition="!Control.HasFocus(60)">Conditional</animation>
+		</control>
+	
 	</control>
-
 
 </include>
 	

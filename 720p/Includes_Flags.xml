@@ -155,7 +155,7 @@
 	</include>
 	
 	
-	<!--Flags full screen-->
+	<!--Flags collapsed screen-->
 	<include name="Media_flags_big">
 		<control type="grouplist">
 			
@@ -164,6 +164,103 @@
 			<width>1280</width>
 			<height>64</height>
 			<itemgap>55</itemgap>
+			<orientation>horizontal</orientation>
+			<usecontrolcoords>true</usecontrolcoords>
+			<visible>!Window.IsVisible(movieinformation) + !Skin.HasSetting(HideFlagsInfo)</visible>
+			<control type="image">
+				<posy>-1</posy>
+				<description>Bluray Image</description>
+				<width>73</width>
+				<height>28</height>
+				<aspectratio>keep</aspectratio>
+				<colordiffuse>FFFFFFFF</colordiffuse>
+				<texture>flags/video/resolution/bluray.png</texture>
+				<visible>substring(ListItem.FilenameAndPath,bluray) | substring(ListItem.FilenameAndPath,brrip) | substring(ListItem.FilenameAndPath,bdrip) | substring(ListItem.FilenameAndPath,blu-ray)</visible>
+			</control>
+			<control type="image">
+				<description>DVD Image</description>
+				<posy>2</posy>
+				<width>73</width>
+				<height>23</height>
+				<aspectratio>keep</aspectratio>
+				<colordiffuse>FFFFFFFF</colordiffuse>
+				<texture>flags/codec/mpeg2video.png</texture>
+				<visible>substring(ListItem.FilenameAndPath,dvd) + !substring(ListItem.FilenameAndPath,hddvd)</visible>
+			</control>
+			<control type="image">
+				<description>HDTV Image</description>
+				<width>73</width>
+				<height>32</height>
+				<aspectratio>keep</aspectratio>
+				<colordiffuse>FFFFFFFF</colordiffuse>
+				<texture>flags/video/HD/nf-HD.png</texture>
+				<visible>substring(ListItem.FilenameAndPath,hdtv) | substring(ListItem.FilenameAndPath,hd-tv)</visible>
+			</control>
+					
+			<control type="image">
+				<posx>-5</posx>
+				<posy>0</posy>
+				<width>94</width>
+				<height>28</height>
+				<colordiffuse>FFFFFFFF</colordiffuse>
+				<texture>$INFO[ListItem.VideoResolution,flags/video/resolution/,.png]</texture>
+				<aspectratio>keep</aspectratio>
+				<visible>!IsEmpty(Listitem.VideoResolution)</visible>
+			</control>
+			<control type="image">
+				<posy>1</posy>
+				<width>96</width>
+				<height>24</height>
+				<colordiffuse>FFFFFFFF</colordiffuse>
+				<texture fallback="flags/NA.png">$INFO[Listitem.VideoCodec,flags/codec/,.png]</texture>
+				<aspectratio>keep</aspectratio>
+				<visible>!IsEmpty(Listitem.VideoCodec)</visible>
+			</control>
+
+			<control type="image">
+				<posx>3</posx>
+				<posy>-3</posy>
+				<width>70</width>
+				<height>32</height>
+				<aligny>center</aligny>
+				<colordiffuse>FFFFFFFF</colordiffuse>
+				<aspectratio>keep</aspectratio>
+				<texture fallback="flags/NA.png">$INFO[Listitem.AudioChannels,flags/audio/,.png]</texture>
+				<visible>!IsEmpty(Listitem.AudioChannels)</visible>
+			</control>
+			<control type="image">
+				<posx>9</posx>
+				<posy>-3</posy>
+				<width>96</width>
+				<height>33</height>
+				<colordiffuse>FFFFFFFF</colordiffuse>
+				<texture fallback="flags/NA.png">$INFO[Listitem.AudioCodec,flags/codec/,.png]</texture>
+				<aspectratio>keep</aspectratio>
+				<visible>!IsEmpty(Listitem.AudioCodec)</visible>
+			</control>
+			<control type="image">
+				<posy>0</posy>
+				<posx>8</posx>
+				<width>96</width>
+				<height>30</height>
+				<colordiffuse>FFFFFFFF</colordiffuse>
+				<texture fallback="flags/NA.png">$INFO[Listitem.VideoAspect,flags/video/aspectratio/,.png]</texture>
+				<aspectratio>keep</aspectratio>
+				<visible>!IsEmpty(Listitem.VideoAspect)</visible>
+			</control>
+			<include>VideoMPAAFlaggingConditions</include>
+		</control>	
+	</include>
+	
+	<!--Flags full screen-->
+	<include name="Media_flags_fullscreen">
+		<control type="grouplist">
+			
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>64</height>
+			<itemgap>80</itemgap>
 			<orientation>horizontal</orientation>
 			<usecontrolcoords>true</usecontrolcoords>
 			<visible>!Window.IsVisible(movieinformation) + !Skin.HasSetting(HideFlagsInfo)</visible>

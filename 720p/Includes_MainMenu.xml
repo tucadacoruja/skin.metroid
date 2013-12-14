@@ -8,6 +8,10 @@
 		<!-- ============== -->
 
 	<include name="MainMenu">
+	
+	<control type="group">
+		<animation effect="slide" start="0,0" end="-250,0" time="800" delay="100" reversible="false" condition="![Control.HasFocus(301) | Window.IsVisible(home) | Window.IsVisible(profiles) | Window.IsVisible(weather)] + !Skin.HasSetting(LockMainMenu)">Conditional</animation>
+		<animation effect="slide" start="-250,0" end="0,0" time="250" reversible="false" condition="Control.HasFocus(301) + ![Window.IsVisible(home) | Window.IsVisible(profiles) | Window.IsVisible(weather)] + !Skin.HasSetting(LockMainMenu)">Conditional</animation>
 		
 		<control type="button" id="300">
 			<posx>1</posx>
@@ -16,7 +20,9 @@
 			<height>1</height>
 			<aspectratio>stretch</aspectratio>
 			<texture>blank.png</texture>
+			<!--onfocus condition="Skin.HasSetting(DisableAnimation)">Skin.reset(DisableAnimation)</onfocus-->
 			<onfocus>SetFocus(301)</onfocus>
+			
 		</control>
 
 	
@@ -30,7 +36,7 @@
 			
 		</control>
 		
-		<control type="image">
+		<!--control type="image">
 			<posx>235</posx>
 			<posy>72</posy>
 			<width>15</width>
@@ -38,23 +44,24 @@
 			<aspectratio>stretch</aspectratio>
 			<texture>shadowv.png</texture>
 			<animation effect="fade" start="0" end="70" time="0" condition="true">Conditional</animation>
-		</control>
+		</control-->
 
 		<include>EmptyMenu</include>
 	
 		<control type="list" id="301">
 				<posx>2</posx>
 				<posy>71</posy>
-				<width>250</width>
+				<width>300</width>
 				<height>648</height>
 				<onleft condition="!Skin.HasSetting(GlobalSearch)">999</onleft>
+				
 				<onright>50</onright>
 				<onup>-</onup>
 				<ondown>301</ondown>
 				<pagecontrol>-</pagecontrol>
 				<scrolltime tween="cubic" easing="inout">325</scrolltime>
 				<orientation>vertical</orientation>
-						
+										
 				<itemlayout height="50"  width="240">
 					
 					<control type="label">
@@ -297,9 +304,12 @@
 						<item id="114">
 							<description>viewtype</description>
 							<label>$INFO[Container.ViewMode] $LOCALIZE[31083]</label>
+							
 							<onclick>Container.NextViewMode</onclick>
+													
 							<visible>Window.IsActive(musiclibrary) | Window.IsActive(musicfiles) | Window.IsActive(videolibrary) | Window.IsActive(videofiles) | Window.IsActive(pictures) | Window.IsActive(programs) | Window.IsActive(40) | Window.IsActive(videoplaylist) | Window.IsActive(musicplaylist)</visible>
 							<visible>!Skin.HasSetting(HideGlobalViews)</visible>
+							
 						</item>
 						
 						<item id="115">
@@ -371,11 +381,12 @@
 						</item>
 							  
 						<item id="112">
-							<description>Play DVD</description>
+							<description>Play Disk</description>
 							<label>31092</label>
 							<icon>Home/icons/dvd.png</icon>
-							<onclick>PlayDVD()</onclick>
+							<onclick>XBMC.PlayDVD</onclick>
 							<visible>System.HasMediaDVD</visible>
+							<visible>Window.IsVisible(home) | ![Library.HasContent(movies) | Library.HasContent(movies) | Library.HasContent(movies)]</visible>
 						</item>
 															  
 						<item id="113">
@@ -449,7 +460,7 @@
 												
 					</content>		
 		</control>
-
+	</control>
 	</include>
 
 	<include name="MusicPlaylistItems">
@@ -838,7 +849,7 @@
 			<item id="18">
 				<description>Play DVD</description>
 				<label>$LOCALIZE[31193]</label>
-				<onclick>SendClick(6)</onclick>
+				<onclick>XBMC.PlayDVD</onclick>
 				
 				<visible>System.HasMediadvd</visible>
 				<visible>!IsEmpty(skin.string(SubMenu1))</visible>
@@ -992,7 +1003,17 @@
 				<property name="SubMenuItem">not_empty</property>
 				<property name="DropdownMenu1">not_empty</property>
 			</item>
-			
+			<item id="18">
+				<description>Play CD</description>
+				<label>$LOCALIZE[31217]</label>
+				<onclick>XBMC.PlayDVD</onclick>
+				
+				<visible>System.HasMediadvd</visible>
+				<visible>!IsEmpty(skin.string(SubMenu1))</visible>
+				<property name="SubMenuItem">not_empty</property>
+				<property name="DropdownMenu1">not_empty</property>
+				
+			</item>
 		
 	</include>
 

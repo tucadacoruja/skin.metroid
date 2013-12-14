@@ -114,7 +114,7 @@
 			<align>left</align>
 			<label>31211</label>
 			<colordiffuse>skin.string(MainColorString)</colordiffuse>
-			<visible>ListItem.IsFolder</visible>
+			<visible>ListItem.IsFolder + [Container.Content(video) | substring(Container.FolderPath,addons://sources/video) | substring(Container.FolderPath,plugin://plugin.video)]</visible>
 			<visible>IsEmpty(Skin.String(PluginWidgetPath1)) | IsEmpty(Skin.String(PluginWidgetPath2))</visible>
 			<!--visible>Substring(Container.FolderPath,plugin://,left) | Substring(Container.FolderPath,addons://,left)</visible-->
 			<!--visible>Substring(Container.FolderPath,user_feed=playlists) | Substring(Container.FolderPath,feed=feed_categories) | Substring(Container.FolderPath,user_feed=subscriptions)</visible-->
@@ -124,6 +124,7 @@
 			<onclick condition="!IsEmpty(Skin.String(PluginWidgetPath1)) + IsEmpty(Skin.String(PluginWidgetPath2))">Skin.SetString(PluginWidgetPath2,$INFO[ListItem.FolderPath])</onclick>
 			<onclick condition="!IsEmpty(Skin.String(PluginWidgetPath1)) + IsEmpty(Skin.String(PluginWidgetPath2))">Skin.SetString(PluginWidgetName2,$INFO[ListItem.Label])</onclick>
 			
+			<onclick>notification(created, New widget)</onclick>
 		</control>
 		
 		<onload condition="IsEmpty(Window(home.Property(UseWidget))">SetProperty(UseWidget,NumberOne,home)</onload>

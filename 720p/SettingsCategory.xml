@@ -20,13 +20,7 @@
 	<height>1</height>
 	<animation effect="fade" start="1" end="0" time="0" condition="true">Conditional</animation>
 </control>
-<control type="edit" id="12">
-	<posx>-10</posx>
-	<posy>-10</posy>
-	<width>1</width>
-	<height>1</height>
-	<animation effect="fade" start="1" end="0" time="0" condition="true">Conditional</animation>
-</control>
+
 
 <include>VideoWindow</include>
 <include>GeneralFanart</include>
@@ -34,6 +28,14 @@
 
 	
 	<control type="button" id="50">
+		<posx>10</posx>
+		<posy>10</posy>
+		<width>1</width>
+		<height>1</height>
+		<texture>black.png</texture>
+		<onfocus>SetFocus(3)</onfocus>
+	</control>
+	<control type="button" id="300">
 		<posx>10</posx>
 		<posy>10</posy>
 		<width>1</width>
@@ -96,11 +98,12 @@
 			<posx>388</posx>
 			<posy>620</posy>
 			<width>760</width>
-			<height>75</height>
+			<height>60</height>
 			<align>justify</align>
 			<label>-</label>
 			<font>SubMenu20</font>
 			<textcolor>blue</textcolor>
+			<autoscroll delay="3000" time="1000" repeat="10000">true</autoscroll>
 			<animation effect="fade" start="100" end="80" time="0" condition="true">Conditional</animation>
 		</control>
 	
@@ -111,12 +114,13 @@
 			<width>810</width>
 			<height>440</height>
 			<itemgap>.5</itemgap>
-			<onleft>3</onleft>
+			<onleft>63</onleft>
 			<onright>3</onright>
 			<onup>5</onup>
 			<ondown>5</ondown>
 			<orientation>vertical</orientation>
-			<animation effect="fade" start="100" end="70" time="0" condition="true">Conditional</animation>
+			<pagecontrol>63</pagecontrol>
+			<!--animation effect="fade" start="100" end="70" time="0" condition="true">Conditional</animation-->
 		</control>
 		
 		<control type="button" id="7">
@@ -126,9 +130,9 @@
 			<height>43.5</height>
 			<width>810</width>
 			<font>DefaultButton</font>
-			<textcolor>ampm</textcolor>
+			<textcolor>95FFFFFF</textcolor>
 			<focusedcolor>white</focusedcolor>
-			<disabledcolor>12ffffff</disabledcolor>
+			<disabledcolor>46FFFFFF</disabledcolor>
 			<texturefocus>setting.png</texturefocus>
 			<texturenofocus>-</texturenofocus>
 		</control>
@@ -137,9 +141,9 @@
 			<description>Default Radio Button</description>
 			<height>43.5</height>
 			<width>810</width>
-			<textcolor>ampm</textcolor>
+			<textcolor>95FFFFFF</textcolor>
 			<focusedcolor>white</focusedcolor>
-			<disabledcolor>12ffffff</disabledcolor>
+			<disabledcolor>46FFFFFF</disabledcolor>
 			<texturefocus>setting.png</texturefocus>
 			<texturenofocus>-</texturenofocus>
 			<textoffsetx>20</textoffsetx>
@@ -152,10 +156,10 @@
 			<height>43.5</height>
 			<width>810</width>
 			<font>DefaultButton</font>
-			<textcolor>ampm</textcolor>
+			<textcolor>95FFFFFF</textcolor>
 			<textoffsetx>20</textoffsetx>
 			<focusedcolor>white</focusedcolor>
-			<disabledcolor>12ffffff</disabledcolor>
+			<disabledcolor>46FFFFFF</disabledcolor>
 			<texturefocus>setting.png</texturefocus>
 			<texturenofocus>-</texturenofocus>
 			<align>left</align>
@@ -173,6 +177,21 @@
 			<focusedcolor>white</focusedcolor>
 			<texturefocus>category.png</texturefocus>
 			<texturenofocus>-</texturenofocus>
+			
+		</control>
+		<control type="edit" id="12">
+			<description>Default Edit Button</description>
+			<height>43.5</height>
+			<width>810</width>
+			<font>DefaultButton</font>
+			<textcolor>95FFFFFF</textcolor>
+			<textoffsetx>20</textoffsetx>
+			<focusedcolor>white</focusedcolor>
+			<disabledcolor>46FFFFFF</disabledcolor>
+			<texturefocus>setting.png</texturefocus>
+			<texturenofocus>-</texturenofocus>
+			<align>left</align>
+			<aligny>center</aligny>
 			
 		</control>
 		
@@ -218,6 +237,23 @@
 
 	</control>
 
+	<control type="scrollbar" id="63">
+		<texturesliderbackground>buttons/scrollbgV.png</texturesliderbackground>
+		<texturesliderbar>-</texturesliderbar>
+		<texturesliderbarfocus>-</texturesliderbarfocus>
+		<textureslidernib>buttons/scrollnibV.png</textureslidernib>
+		<textureslidernibfocus>buttons/scrollnibV.png</textureslidernibfocus>
+		<orientation>Vertical</orientation>
+		<showonepage>true</showonepage>
+		<posx>325</posx>
+		<posy>120</posy>
+		<width>10</width>
+		<height>560</height>
+		<onleft>3</onleft>
+		<onright>5</onright>
+		<animation effect="fade" start="100" end="40" time="200" reversable="false" condition="!Control.HasFocus(63)">Conditional</animation>
+	
+	</control>
 
 <include>BottomInfoBar</include>
  

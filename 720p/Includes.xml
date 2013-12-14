@@ -44,9 +44,9 @@
 	<description>Default Radio Button</description>
 	<height>42.5</height>
 	<width>810</width>
-	<textcolor>ampm</textcolor>
+	<textcolor>95FFFFFF</textcolor>
 	<focusedcolor>white</focusedcolor>
-	<disabledcolor>12ffffff</disabledcolor>
+	<disabledcolor>46ffffff</disabledcolor>
 	<texturefocus>setting.png</texturefocus>
 	<texturenofocus>-</texturenofocus>
 	<textoffsetx>20</textoffsetx>
@@ -122,21 +122,13 @@
 	<height>42</height>	
 </include>
 
-<include name="BookmarkCycle">
-    <onclick condition="Stringcompare(skin.string(cycle),0)">skin.setstring(cycle,9003)</onclick>
-    <onclick condition="Stringcompare(skin.string(cycle),9001)">skin.setstring(cycle,0)</onclick>
-    <onclick condition="Stringcompare(skin.string(cycle),9003)">skin.setstring(cycle,9001)</onclick>
-    <onclick condition="Stringcompare(skin.string(cycle),9002)">skin.setstring(cycle,9003)</onclick>
-    <onclick condition="Stringcompare(skin.string(cycle),9001)">skin.setstring(cycle,9002)</onclick>
+<include name="FocusPosition1">
+	<focusposition>1</focusposition>
+</include>
+<include name="FocusPosition3">
+	<focusposition>2</focusposition>
 </include>
 
-	
-<include name="SettingsHeight1">
-	<height>500</height>
-</include>
-<include name="SettingsHeight2">
-	<height>410</height>
-</include>
 	
 <include name="NotVisibleAllSettingsWindows">
 <visible>![Window.IsActive(settings) | Window.IsActive(profilesettings) | Window.IsActive(systeminfo) | Window.IsActive(skinsettings) | Window.IsActive(picturessettings) | Window.IsActive(programssettings) | Window.IsActive(weathersettings) | Window.IsActive(musicsettings) | Window.IsActive(systemsettings) | Window.IsActive(videossettings) | Window.IsActive(networksettings) | Window.IsActive(appearancesettings)]</visible>
@@ -280,14 +272,17 @@
 	
 	<include name="GeneralFanart">
 	
+	<control type="group">
+		<animation effect="slide" start="0,0" end="-250,0" time="600" condition="!Control.HasFocus(301) + ![Window.IsVisible(home) | Window.IsVisible(profiles) | Window.IsVisible(weather)] + !Skin.HasSetting(LockMainMenu)">Conditional</animation>
+		
 		<control type="multiimage">
-			<posx>0</posx>
+			<posx>250</posx>
 			<posy>0</posy>
 			<width>1280</width>
 			<height>720</height>
 			<aspectratio>stretch</aspectratio>
 			<imagepath background="true">$VAR[MultiSlide]</imagepath>
-			<timeperimage>10100</timeperimage>
+			<timeperimage>11000</timeperimage>
 			<fadetime>1000</fadetime>
 			<randomize>true</randomize>
 			<animation effect="fade" start="0" end="100" time="100">VisibleChange</animation>
@@ -296,7 +291,7 @@
 			<visible>!Player.HasVideo + IsEmpty(ListItem.Art(fanart)) + !Skin.HasSetting(BackgroundSlideshow)</visible>
 		</control>
 		<control type="image">
-			<posx>0</posx>
+			<posx>250</posx>
 			<posy>0</posy>
 			<width>1280</width>
 			<height>720</height>
@@ -306,7 +301,27 @@
 			<visible>!Player.HasVideo</visible>
 			<animation effect="fade" start="40" end="95" time="100000" delay="2000" reversable="true" pulse="true" condition="Player.HasAudio + !Skin.HasSetting(VisLibrary)">Conditional</animation>
 		</control>
-	
+		<control type="image">
+			<posx>250</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+			<aspectratio>stretch</aspectratio>
+			<texture background="true" fallback="MetroidBG.png">$INFO[Skin.String(GlobalBackground)]</texture>
+			<animation effect="fade" start="75" end="90" time="200" reversible="true" condition="!Player.HasVideo">Conditional</animation>
+			<animation effect="fade" start="90" end="75" time="200" reversible="true" condition="Player.HasVideo">Conditional</animation>
+			<animation effect="fade" start="84" end="90" time="90000" reversable="true" pulse="true" condition="Player.HasAudio + !Skin.HasSetting(VisLibrary)">Conditional</animation>
+		</control>
+		<control type="image">
+			<posx>235</posx>
+			<posy>72</posy>
+			<width>15</width>
+			<height>650</height>
+			<aspectratio>stretch</aspectratio>
+			<texture>shadowv.png</texture>
+			<animation effect="fade" start="0" end="70" time="0" condition="true">Conditional</animation>
+		</control>
+	</control>
 	</include>
 	
 	
@@ -329,8 +344,8 @@
 	
 	<include name="Background">
 					
-		<control type="image">
-			<posx>0</posx>
+		<!--control type="image">
+			<posx>250</posx>
 			<posy>0</posy>
 			<width>1280</width>
 			<height>720</height>
@@ -339,7 +354,7 @@
 			<animation effect="fade" start="75" end="90" time="200" reversible="true" condition="!Player.HasVideo">Conditional</animation>
 			<animation effect="fade" start="90" end="75" time="200" reversible="true" condition="Player.HasVideo">Conditional</animation>
 			<animation effect="fade" start="84" end="90" time="90000" reversable="true" pulse="true" condition="Player.HasAudio + !Skin.HasSetting(VisLibrary)">Conditional</animation>
-		</control>
+		</control-->
 	
 	
 	
@@ -406,51 +421,6 @@
 		
 	</include>
 	
-	<include name="Now_Playing_Popup">
-		<control type="image" id="7657">
-			<visible>!Skin.HasSetting(FullScreenNowPlaying) + !SubString(Player.Time,01:,left) + [SubString(Player.Time,00:51,right) | SubString(Player.Time,00:52,right) | SubString(Player.Time,00:53,right) | SubString(Player.Time,00:54,right) | SubString(Player.Time,00:55,right)]</visible>
-			<posx>10</posx>
-			<posy>10</posy>
-			<width>1</width>
-			<height>1</height>
-			<texture>blank.png</texture>
-		</control>
-
-		<control type="grouplist">
-			<posx>80</posx>
-			<width min="29" max="200">auto</width>
-			<orientation>vertical</orientation>
-			<usecontrolcoords>true</usecontrolcoords>
-			
-			<control type="image">
-				<posx>20</posx>
-				<posy>25</posy>
-				<width>170</width>
-				<height>70</height>
-				<texture>$VAR[Now_Playing_Popup_Logo]</texture>
-				<aspectratio aligny="top" scalediffuse="false">keep</aspectratio>
-				<animation effect="fade" start="0" end="100" delay="0" time="300" condition="Control.IsVisible(7657)">Conditional</animation>
-				<animation effect="fade" start="100" end="0" delay="1700" time="300" condition="!Control.IsVisible(7657)">Conditional</animation>
-			</control>
-					
-			<!--control type="label">
-				<posx>0</posx>
-				<posy>-5</posy>
-				<width>210</width>
-				<label>[UPPERCASE]$VAR[Now_Playing_Popup_Text][/UPPERCASE]</label>
-				<font>NowPlaying2</font>
-				<textcolor>ffe9e8e9</textcolor>
-				<align>center</align>
-				<scroll>false</scroll>
-				<wrapmultiline>true</wrapmultiline>
-				<visible>![IsEmpty(Player.Art(clearlogo)) + IsEmpty(Player.Art(tvshow.clearlogo))]</visible>
-				<animation effect="zoom" start="0" end="100" center="auto" delay="1600" time="300" condition="Control.IsVisible(7657)">Conditional</animation>
-				<animation effect="zoom" start="100" end="0" center="auto" delay="100" time="300" condition="!Control.IsVisible(7657)">Conditional</animation>
-				<animation effect="fade" start="0" end="95" delay="1700" time="300" condition="Control.IsVisible(7657)">Conditional</animation>
-				<animation effect="fade" start="95" end="0" delay="100" time="300" condition="!Control.IsVisible(7657)">Conditional</animation>
-			</control-->
-		</control>
-	</include>
 	
 	
 	<include name="EmptyMenu">
@@ -593,5 +563,6 @@
 			
 		</item>
 	</include>
+	
 	
 </includes>

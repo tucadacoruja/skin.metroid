@@ -20,7 +20,15 @@
 			<texture>black.png</texture>
 			<onfocus>SetFocus(9000)</onfocus>
 		</control>
-
+		<control type="button" id="300">
+			<posx>10</posx>
+			<posy>10</posy>
+			<width>1</width>
+			<height>1</height>
+			<texture>black.png</texture>
+			<onfocus>SetFocus(9000)</onfocus>
+		</control>
+	
 		<control type="image">
 			<posx>0</posx>
 			<posy>72</posy>
@@ -61,7 +69,7 @@
 				<posy>72</posy>
 				<width>300</width>
 				<height>570</height>
-				<onleft>300</onleft>
+				<onleft>999</onleft>
 				<onright>100</onright>
 				<onup>301</onup>
 				<ondown>444</ondown>
@@ -193,12 +201,12 @@
 						<width>770</width>
 						<height>400</height>
 						<font>HelpText</font>
-						<textcolor>FFD7D7D7</textcolor>
+						<textcolor>95FFFFFF</textcolor>
 						<scroll>-</scroll>
 						<aligny>top</aligny>
 						<wrapmultiline>true</wrapmultiline>
 						<scrollspeed>50</scrollspeed>
-						<animation effect="fade" start="100" end="70" time="0" condition="true">Conditional</animation>
+						
 						<label>31003</label>
 					</control>
 					
@@ -222,12 +230,12 @@
 						<width>770</width>
 						<height>500</height>
 						<font>HelpText</font>
-						<textcolor>FFD7D7D7</textcolor>
+						<textcolor>95FFFFFF</textcolor>
 						<scroll>-</scroll>
 						<aligny>top</aligny>
 						<wrapmultiline>true</wrapmultiline>
 						<scrollspeed>50</scrollspeed>
-						<animation effect="fade" start="100" end="70" time="0" condition="true">Conditional</animation>
+						
 						<label>31004</label>
 					</control>
 					<control type="button" id="100">
@@ -235,7 +243,7 @@
 						<posy>433</posy>
 						<height>43.5</height>
 						<width>810</width>
-						<textcolor>FFD7D7D7</textcolor>
+						<textcolor>95FFFFFF</textcolor>
 						<focusedcolor>white</focusedcolor>
 						<disabledcolor>12ffffff</disabledcolor>
 						<texturefocus>setting.png</texturefocus>
@@ -267,12 +275,12 @@
 						<width>770</width>
 						<height>500</height>
 						<font>HelpText</font>
-						<textcolor>FFD7D7D7</textcolor>
+						<textcolor>95FFFFFF</textcolor>
 						<scroll>-</scroll>
 						<aligny>top</aligny>
 						<wrapmultiline>true</wrapmultiline>
 						<scrollspeed>50</scrollspeed>
-						<animation effect="fade" start="100" end="70" time="0" condition="true">Conditional</animation>
+						
 						<label>31005</label>
 					</control>
 					
@@ -296,12 +304,12 @@
 						<width>770</width>
 						<height>500</height>
 						<font>HelpText</font>
-						<textcolor>FFD7D7D7</textcolor>
+						<textcolor>95FFFFFF</textcolor>
 						<scroll>-</scroll>
 						<aligny>top</aligny>
 						<wrapmultiline>true</wrapmultiline>
 						<scrollspeed>50</scrollspeed>
-						<animation effect="fade" start="100" end="70" time="0" condition="true">Conditional</animation>
+						
 						<label>31006</label>
 					</control>
 					
@@ -325,12 +333,12 @@
 						<width>770</width>
 						<height>500</height>
 						<font>HelpText</font>
-						<textcolor>FFD7D7D7</textcolor>
+						<textcolor>95FFFFFF</textcolor>
 						<scroll>-</scroll>
 						<aligny>top</aligny>
 						<wrapmultiline>true</wrapmultiline>
 						<scrollspeed>50</scrollspeed>
-						<animation effect="fade" start="100" end="70" time="0" condition="true">Conditional</animation>
+						
 						<label>31007</label>
 					</control>
 					<control type="button" id="100">
@@ -338,7 +346,7 @@
 						<posy>384</posy>
 						<height>43.5</height>
 						<width>810</width>
-						<textcolor>FFD7D7D7</textcolor>
+						<textcolor>95FFFFFF</textcolor>
 						<focusedcolor>white</focusedcolor>
 						<disabledcolor>12ffffff</disabledcolor>
 						<texturefocus>setting.png</texturefocus>
@@ -356,7 +364,7 @@
 						<posy>433</posy>
 						<height>43.5</height>
 						<width>810</width>
-						<textcolor>FFD7D7D7</textcolor>
+						<textcolor>95FFFFFF</textcolor>
 						<focusedcolor>white</focusedcolor>
 						<disabledcolor>12ffffff</disabledcolor>
 						<texturefocus>setting.png</texturefocus>
@@ -389,32 +397,52 @@
 						<width>770</width>
 						<height>500</height>
 						<font>HelpText</font>
-						<textcolor>FFD7D7D7</textcolor>
+						<textcolor>95FFFFFF</textcolor>
 						<scroll>-</scroll>
 						<aligny>top</aligny>
 						<wrapmultiline>true</wrapmultiline>
 						<scrollspeed>50</scrollspeed>
-						<animation effect="fade" start="100" end="70" time="0" condition="true">Conditional</animation>
+						
 						<label>31008</label>
 					</control>
 					
 					<control type="button" id="100">
 						<description>reload</description>
 						<posx>0</posx>
-						<posy>433</posy>
+						<posy>384</posy>
 						<height>43.5</height>
 						<width>810</width>
-						<textcolor>FFD7D7D7</textcolor>
+						<textcolor>95FFFFFF</textcolor>
 						<focusedcolor>white</focusedcolor>
 						<disabledcolor>12ffffff</disabledcolor>
 						<texturefocus>setting.png</texturefocus>
 						<texturenofocus>-</texturenofocus>
 						<textoffsetx>20</textoffsetx>
 						<onleft>9000</onleft>
-						
+						<ondown>101</ondown>
 						<align>center</align>
 						<label>[LOWERCASE]$LOCALIZE[31023][/LOWERCASE]</label>
 						<onclick>XBMC.ReloadSkin()</onclick>
+						
+					</control>
+					<control type="button" id="101">
+						<description>reset</description>
+						<posx>0</posx>
+						<posy>433</posy>
+						<height>43.5</height>
+						<width>810</width>
+						<textcolor>95FFFFFF</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<disabledcolor>12ffffff</disabledcolor>
+						<texturefocus>setting.png</texturefocus>
+						<texturenofocus>-</texturenofocus>
+						<textoffsetx>20</textoffsetx>
+						<onleft>9000</onleft>
+						<onup>100</onup>
+						<align>center</align>
+						<label>[LOWERCASE]$LOCALIZE[31216][/LOWERCASE]</label>
+						<onclick>RunScript(script.artwork.downloader,mode=custom,mediatype=tvshow,clearlogo)</onclick>
+						<onclick>RunScript(script.artwork.downloader,mode=custom,mediatype=movie,clearlogo)</onclick>
 						
 					</control>
 				</control>
@@ -437,12 +465,12 @@
 						<width>770</width>
 						<height>500</height>
 						<font>HelpText</font>
-						<textcolor>FFD7D7D7</textcolor>
+						<textcolor>95FFFFFF</textcolor>
 						<scroll>-</scroll>
 						<aligny>top</aligny>
 						<wrapmultiline>true</wrapmultiline>
 						<scrollspeed>50</scrollspeed>
-						<animation effect="fade" start="100" end="70" time="0" condition="true">Conditional</animation>
+						
 						<label>31009</label>
 					</control>
 					
@@ -451,7 +479,7 @@
 						<posy>384</posy>
 						<height>43.5</height>
 						<width>810</width>
-						<textcolor>FFD7D7D7</textcolor>
+						<textcolor>95FFFFFF</textcolor>
 						<focusedcolor>white</focusedcolor>
 						<disabledcolor>12ffffff</disabledcolor>
 						<texturefocus>setting.png</texturefocus>
@@ -470,7 +498,7 @@
 						<posy>433</posy>
 						<height>43.5</height>
 						<width>810</width>
-						<textcolor>FFD7D7D7</textcolor>
+						<textcolor>95FFFFFF</textcolor>
 						<focusedcolor>white</focusedcolor>
 						<disabledcolor>12ffffff</disabledcolor>
 						<texturefocus>setting.png</texturefocus>
@@ -511,7 +539,22 @@
 			</control>
 		</control>
 		
-
+	<control type="scrollbar" id="63">
+		<texturesliderbackground>buttons/scrollbgV.png</texturesliderbackground>
+		<texturesliderbar>-</texturesliderbar>
+		<texturesliderbarfocus>-</texturesliderbarfocus>
+		<textureslidernib>buttons/scrollnibV.png</textureslidernib>
+		<textureslidernibfocus>buttons/scrollnibV.png</textureslidernibfocus>
+		<orientation>Vertical</orientation>
+		<showonepage>true</showonepage>
+		<posx>325</posx>
+		<posy>120</posy>
+		<width>10</width>
+		<height>560</height>
+		
+		<animation effect="fade" start="100" end="40" time="200" reversable="false" condition="!Control.HasFocus(63)">Conditional</animation>
+	
+	</control>
 		
 	<include>BottomInfoBar</include>
 
