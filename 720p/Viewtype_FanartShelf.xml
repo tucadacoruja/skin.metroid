@@ -7,8 +7,23 @@
 		<include>ContextFade</include>	
 		<include>Keyboard</include>
 		<include>Favourites</include>
-		<include>WidgetsAnimation</include>
 		<visible>Control.IsVisible(781)</visible>
+		<animation type="Visible" reversible="false">
+			<effect type="fade" start="0" end="100" time="950" delay="0" />
+			<effect type="zoom" start="1" end="100" time="370" center="900,360" delay="0" />
+			<effect type="slide" start="0,1700" end="0,0" time="500" delay="100" reversible="false" />
+		</animation>
+		<animation type="Hidden" reversible="false">
+			<effect type="fade" start="100" end="0" time="100" delay="0" />
+		</animation>
+		<animation type="WindowOpen" reversible="false">
+			<effect type="fade" start="0" end="100" time="950" delay="0" />
+			<effect type="zoom" start="1" end="100" time="370" center="900,360" delay="0" />
+			<effect type="slide" start="0,1700" end="0,0" time="500" delay="0" reversible="false" />
+		</animation>
+		<animation type="WindowClose" reversible="false">
+			<effect type="fade" start="100" end="0" time="100" delay="100" />
+		</animation>
 		
 		<control type="wraplist" id="781">
 			<visible>Container.Content(Movies) | Container.Content(TVShows)</visible>
@@ -59,7 +74,7 @@
 					<colordiffuse>EBFFFFFF</colordiffuse>
 				</control>
 				<control type="image">
-					<posx>101</posx>
+					<posx>102</posx>
 					<posy>257</posy>
 					<width>20</width>
 					<height>20</height>
@@ -122,6 +137,7 @@
 			
 		
 		<control type="group">
+		<animation effect="slide" start="0,0" end="-80,0" time="400" condition="!Control.HasFocus(301) + !Skin.HasSetting(LockMainMenu)">Conditional</animation>
 		<visible>!substring(Listitem.Label,..,left)</visible>
 
 			<control type="textbox">
@@ -213,7 +229,7 @@
 				<orientation>horizontal</orientation>
 				<include>Media_flags_big</include>
 				<visible>Control.IsVisible(781)</visible>
-				<visible>[Control.HasFocus(301) + Skin.HasSetting(LockMainMenu)] | !Skin.HasSetting(LockMainMenu)</visible>
+				<visible>Control.HasFocus(301) + !Skin.HasSetting(LockMainMenu)</visible>
 				<animation effect="fade" start="0" end="80" time="600">Visible</animation>
 				<animation effect="fade" start="80" end="0" time="600" tween="sine">Hidden</animation>
 			

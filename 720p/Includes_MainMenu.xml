@@ -242,35 +242,48 @@
 						</item>
 											
 						<item id="103">
-							<description>Music</description>
+							<description>My Music</description>
 							<label>31078</label>
 							<icon>Home/icons/music.png</icon>
 							<visible>!Skin.HasSetting(HideGlobalMusic)</visible>
-							<onclick>xbmc.activatewindow(musiclibrary,songs)</onclick>
+							<onclick>xbmc.activatewindow(musiclibrary,songs,return)</onclick>
 							<visible>Library.HasContent(Music)</visible>
 						</item>
+						
+						<item id="126">
+							<description>My Music Videos</description>
+							<label>31218</label>
+							<icon>Home/icons/music.png</icon>
+							<visible>!Skin.HasSetting(HideMyMusicVideos)</visible>
+							<onclick>ActivateWindow(Videos,MusicVideoTitles,return)</onclick>
+							<visible>Library.HasContent(MusicVideos)</visible>
+						</item>	
 											
 						<item id="101">
+							<description>My movies</description>
 							<label>31079</label>
 							<icon>-</icon>						  
 							<visible>Library.HasContent(movies)</visible>
 							<visible>!Skin.HasSetting(HideGlobalMovies)</visible>
-							<onclick condition="IsEmpty(skin.string(SubMenu4))">Skin.Setstring(SubMenu4,open)</onclick>
-							<onclick condition="!IsEmpty(skin.string(SubMenu4))">Skin.Reset(SubMenu4)</onclick>
-							<onclick condition="IsEmpty(skin.string(SubMenu4))">Skin.Setstring(SubMenu4,open)</onclick>
+							<onclick condition="IsEmpty(skin.string(SubMenu4)) + !Skin.HasSetting(MoviePlaylists)">Skin.Setstring(SubMenu4,open)</onclick>
+							<onclick condition="!IsEmpty(skin.string(SubMenu4)) + !Skin.HasSetting(MoviePlaylists)">Skin.Reset(SubMenu4)</onclick>
+							<onclick condition="IsEmpty(skin.string(SubMenu4)) + !Skin.HasSetting(MoviePlaylists)">Skin.Setstring(SubMenu4,open)</onclick>
+							<onclick condition="Skin.HasSetting(MoviePlaylists)">ActivateWindow(Videos,MovieTitles,return)</onclick>
 							<property name="DropdownMenu4">not_empty</property>
 						</item>
 						<include>MovieSortItems</include>
 					  
 						<item id="102">
-							<description>TV Shows</description>
+							<description>My TV Shows</description>
 							<label>31080</label>
 							<label2></label2>
 							<icon>Home/icons/tv.png</icon>
 							<visible>!Skin.HasSetting(HideGlobalTvshows)</visible>
 							<visible>Library.HasContent(TVShows)</visible>
-							<onclick condition="IsEmpty(skin.string(SubMenu5))">Skin.Setstring(SubMenu5,open)</onclick>
-							<onclick condition="!IsEmpty(skin.string(SubMenu5))">Skin.Setstring(SubMenu5,)</onclick>
+							<onclick condition="IsEmpty(skin.string(SubMenu5)) + !Skin.HasSetting(TvShowPlaylists)">Skin.Setstring(SubMenu5,open)</onclick>
+							<onclick condition="!IsEmpty(skin.string(SubMenu5)) + !Skin.HasSetting(TvShowPlaylists)">Skin.Setstring(SubMenu5,)</onclick>
+							<onclick condition="IsEmpty(skin.string(SubMenu5)) + !Skin.HasSetting(TvShowPlaylists)">Skin.Setstring(SubMenu5,open)</onclick>
+							<onclick condition="Skin.HasSetting(TvShowPlaylists)">ActivateWindow(Videos,TvShowTitles,return)</onclick>
 							<property name="DropdownMenu5">not_empty</property>
 						</item>
 						<include>TvshowSortItems</include>
@@ -281,7 +294,19 @@
 							<onclick>ActivateWindow(Favourites)</onclick>
 							<visible>Skin.HasSetting(FavoritesHome)</visible>
 						</item>
-					  
+						<item id="127">
+							<description>Video Library</description>
+							<label>31219</label>
+							<visible>Skin.HasSetting(HideVideoLibrary)</visible>
+							<onclick>ActivateWindow(Video,library://video/)</onclick>
+						</item>	
+						
+						<item id="128">
+							<description>Music Library</description>
+							<label>31220</label>
+							<visible>Skin.HasSetting(HideMusicLibrary)</visible>
+							<onclick>ActivateWindow(Music,library://music/)</onclick>
+						</item>
 						<item id="105">
 							<description>Sort</description>
 							<label>31082</label>
@@ -1253,14 +1278,14 @@
 			<description>All Movies</description>
 			<label>*$LOCALIZE[31129]</label>
 			<icon>-</icon>
-			<onclick>ActivateWindow(Videos,MovieTitles)</onclick>
+			<onclick>ActivateWindow(Videos,MovieTitles,return)</onclick>
 			<visible>!IsEmpty(skin.string(SubMenu4))</visible>
 			<property name="SubMenuItem">not_empty</property>
 			<property name="DropdownMenu4">not_empty</property>
 		</item>
 		<item id="2">
-			<description>A-E $LOCALIZE[31130]</description>
-			<label>A-E</label>
+			<description>A-E Playlists</description>
+			<label>a b c d e</label>
 			<icon>-</icon>
 			<onclick>ActivateWindow(Videos,special://skin/extras/library/movies/AE_Playlist.xsp,return)</onclick>
 			<visible>!IsEmpty(skin.string(SubMenu4))</visible>
@@ -1268,8 +1293,8 @@
 			<property name="DropdownMenu4">not_empty</property>
 		</item>
 		<item id="3">
-			<description>F-J $LOCALIZE[31130]</description>
-			<label>F-J</label>
+			<description>F-J Playlists</description>
+			<label>f g h i j</label>
 			<icon>-</icon>
 			<onclick>ActivateWindow(Videos,special://skin/extras/library/movies/FJ_Playlist.xsp,return)</onclick>
 			<visible>!IsEmpty(skin.string(SubMenu4))</visible>
@@ -1277,8 +1302,8 @@
 			<property name="DropdownMenu4">not_empty</property>
 		</item>
 		<item id="4">
-			<description>K-O $LOCALIZE[31130]</description>
-			<label>K-O</label>
+			<description>K-O Playlists</description>
+			<label>k l m n o</label>
 			<icon>-</icon>
 			<onclick>ActivateWindow(Videos,special://skin/extras/library/movies/KO_Playlist.xsp,return)</onclick>
 			<visible>!IsEmpty(skin.string(SubMenu4))</visible>
@@ -1286,8 +1311,8 @@
 			<property name="DropdownMenu4">not_empty</property>
 		</item>
 		<item id="5">
-			<description>P-T $LOCALIZE[31130]</description>
-			<label>P-T</label>
+			<description>P-T Playlists</description>
+			<label>p q r s t</label>
 			<icon>-</icon>
 			<onclick>ActivateWindow(Videos,special://skin/extras/library/movies/PT_Playlist.xsp,return)</onclick>
 			<visible>!IsEmpty(skin.string(SubMenu4))</visible>
@@ -1295,8 +1320,8 @@
 			<property name="DropdownMenu4">not_empty</property>
 		</item>
 		<item id="6">
-			<description>U-Z $LOCALIZE[31130]</description>
-			<label>U-Z</label>
+			<description>U-Z Playlists</description>
+			<label>u v w x y z</label>
 			<icon>-</icon>
 			<onclick>ActivateWindow(Videos,special://skin/extras/library/movies/UZ_Playlist.xsp,return)</onclick>
 			<visible>!IsEmpty(skin.string(SubMenu4))</visible>
@@ -1309,14 +1334,14 @@
 			<description>All TvShows</description>
 			<label>*$LOCALIZE[31129]</label>
 			<icon>-</icon>
-			<onclick>ActivateWindow(Videos,TvShowTitles)</onclick>
+			<onclick>ActivateWindow(Videos,TvShowTitles,return)</onclick>
 			<visible>!IsEmpty(skin.string(SubMenu5))</visible>
 			<property name="SubMenuItem">not_empty</property>
 			<property name="DropdownMenu5">not_empty</property>
 		</item>
 		<item id="2">
-			<description>A-E $LOCALIZE[31130]</description>
-			<label>A-E</label>
+			<description>A-E Playlists</description>
+			<label>a b c d e</label>
 			<icon>-</icon>
 			<onclick>ActivateWindow(Videos,special://skin/extras/library/tvshows/AE_Playlist.xsp,return)</onclick>
 			<visible>!IsEmpty(skin.string(SubMenu5))</visible>
@@ -1324,8 +1349,8 @@
 			<property name="DropdownMenu5">not_empty</property>
 		</item>
 		<item id="3">
-			<description>F-J $LOCALIZE[31130]</description>
-			<label>F-J</label>
+			<description>F-J Playlists</description>
+			<label>f g h i j</label>
 			<icon>-</icon>
 			<onclick>ActivateWindow(Videos,special://skin/extras/library/tvshows/FJ_Playlist.xsp,return)</onclick>
 			<visible>!IsEmpty(skin.string(SubMenu5))</visible>
@@ -1333,8 +1358,8 @@
 			<property name="DropdownMenu5">not_empty</property>
 		</item>
 		<item id="4">
-			<description>K-O $LOCALIZE[31130]</description>
-			<label>K-O</label>
+			<description>K-O Playlists</description>
+			<label>k l m n o</label>
 			<icon>-</icon>
 			<onclick>ActivateWindow(Videos,special://skin/extras/library/tvshows/KO_Playlist.xsp,return)</onclick>
 			<visible>!IsEmpty(skin.string(SubMenu5))</visible>
@@ -1342,8 +1367,8 @@
 			<property name="DropdownMenu5">not_empty</property>
 		</item>
 		<item id="5">
-			<description>P-T $LOCALIZE[31130]</description>
-			<label>P-T</label>
+			<description>P-T Playlists</description>
+			<label>p q r s t</label>
 			<icon>-</icon>
 			<onclick>ActivateWindow(Videos,special://skin/extras/library/tvshows/PT_Playlist.xsp,return)</onclick>
 			<visible>!IsEmpty(skin.string(SubMenu5))</visible>
@@ -1351,8 +1376,8 @@
 			<property name="DropdownMenu5">not_empty</property>
 		</item>
 		<item id="6">
-			<description>U-Z $LOCALIZE[31130]</description>
-			<label>U-Z</label>
+			<description>U-Z Playlists</description>
+			<label>u v w x y z</label>
 			<icon>-</icon>
 			<onclick>ActivateWindow(Videos,special://skin/extras/library/tvshows/UZ_Playlist.xsp,return)</onclick>
 			<visible>!IsEmpty(skin.string(SubMenu5))</visible>

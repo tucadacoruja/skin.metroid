@@ -323,7 +323,7 @@
 						<colordiffuse>55ffffff</colordiffuse>
 						<aspectratio align="center" aligny="center">keep</aspectratio>
 						<texture>$INFO[ListItem.VideoResolution,flags/video/resolution/,.png]</texture>
-						<visible>Container.Content(Movies) | Container.Content(Episodes) | Container.Content(MusicVideos) | Window.IsVisible(VideoPlaylist)</visible>
+						<visible>Container.Content(Movies) | Container.Content(Episodes) | Window.IsVisible(VideoPlaylist)</visible>
 					</control>
 
 					<control type="label">
@@ -436,7 +436,7 @@
 							<colordiffuse>ffcccccc</colordiffuse>
 							<aspectratio align="center" aligny="center">keep</aspectratio>
 							<texture>$INFO[ListItem.VideoResolution,flags/video/resolution/,.png]</texture>
-							<visible>Container.Content(Movies) | Container.Content(Episodes) | Container.Content(MusicVideos) | Window.IsVisible(VideoPlaylist)</visible>
+							<visible>Container.Content(Movies) | Container.Content(Episodes) | Window.IsVisible(VideoPlaylist)</visible>
 						</control>
 		
 						<control type="label">

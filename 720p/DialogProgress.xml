@@ -12,9 +12,8 @@
 <controls>
 
 <control type="group">
-<visible>!Window.IsVisible(infodialog)</visible>
-<animation effect="fade" start="100" end="0" time="150">Hidden</animation>
-<animation effect="fade" start="0" end="100" time="150">Visible</animation>
+
+<animation effect="fade" start="100" end="0" time="150" reversible="true" condition="Window.IsVisible(infodialog)">Conditional</animation>
 
 <animation type="WindowOpen" reversible="false">
   <effect type="fade" start="0" end="100" time="350" delay="800" />
@@ -32,6 +31,13 @@
 	<animation effect="fade" start="1" end="0" time="0" condition="true">Conditional</animation>
 </control>
 <control type="label" id="4">
+	<posx>-10</posx>
+	<posy>-10</posy>
+	<width>1</width>
+	<height>1</height>
+	<animation effect="fade" start="1" end="0" time="0" condition="true">Conditional</animation>
+</control>
+<control type="button" id="10">
 	<posx>-10</posx>
 	<posy>-10</posy>
 	<width>1</width>
@@ -63,7 +69,7 @@
 		<height>55</height>
 		<texturefocus>osd/kai.png</texturefocus>
 		<texturenofocus>osd/kai.png</texturenofocus>
-		
+		<onclick>Sendclick(10)</onclick>
 	</control>
   
 	<control type="progress" id="20">

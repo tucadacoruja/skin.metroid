@@ -53,7 +53,7 @@
 				<visible>Container.Content(Movies) | Container.Content(TVShows) | Container.Content(seasons)</visible>
 				
 				<posx>640</posx>
-				<posy>190</posy>
+				<posy>200</posy>
 				<width>1600</width>
 				<height>560</height>
 				<onleft>57</onleft>
@@ -76,11 +76,11 @@
 						<width>123</width>
 						<height>180</height>
 						<aspectratio>stretch</aspectratio>
-						<bordertexture border="3">-</bordertexture>
+						<bordertexture border="3">blue3.png</bordertexture>
 						<bordersize>3</bordersize>
 						<fadetime>200</fadetime>
 						<texture background="true" fallback="DefaultAlbumCover.png">$INFO[ListItem.Art(poster)]</texture>
-						<animation effect="fade" start="0" end="60" time="0" condition="true">Conditional</animation>
+						<animation effect="fade" start="0" end="70" time="0" condition="true">Conditional</animation>
 					</control>
 					<control type="image">
 						<posx>10</posx>
@@ -111,31 +111,34 @@
 			</control>	
 
 		<control type="group">	
-			<posy>45</posy>
+			<posy>50</posy>
 			<animation effect="slide" start="0,0" end="-250,0" time="600" condition="!Control.HasFocus(301) + !Skin.HasSetting(LockMainMenu)">Conditional</animation>
 			
 			<control type="image">
 				<posx>250</posx>
+				<posy>443</posy>
+				<width>1400</width>
+				<height>6</height>
+				<aspectratio>stretch</aspectratio>
+				<texture >highlight.png</texture>
+				<colordiffuse>20FFFFFF</colordiffuse>
+			</control>
+			<control type="image">
+				<posx>250</posx>
 				<posy>385</posy>
 				<width>1400</width>
-				<height>60</height>
-			
+				<height>58</height>
+				<aspectratio>stretch</aspectratio>
+				<bordertexture border="3">BackMenu.png</bordertexture>
+				<bordersize>0,3,0,0</bordersize>
 				<aspectratio>stretch</aspectratio>
 				<texture>white.png</texture>
-				<colordiffuse>FF959595</colordiffuse>
-				<animation effect="fade" start="0" end="100" time="0" reversable="false" condition="true">Conditional</animation>
+				<colordiffuse>FFACACAC</colordiffuse>
+				<!--animation effect="fade" start="0" end="100" time="0" reversable="false" condition="true">Conditional</animation-->
 			</control>
-		</control>
-		
-		<!----Text----->
-		<control type="group">
-		<posx>185</posx>
-		<posy>6</posy>
-
-		<animation effect="slide" start="0,0" end="-110,0" time="400" condition="!Control.HasFocus(301) + !Skin.HasSetting(LockMainMenu)">Conditional</animation>
 			<control type="image">
-				<posx>430</posx>
-				<posy>414</posy>
+				<posx>615</posx>
+				<posy>375</posy>
 				<width>450</width>
 				<height>4</height>
 			
@@ -143,9 +146,28 @@
 				<texture diffuse="SelectDiff.png">BlueBackground.png</texture>
 				<colordiffuse>44FFFFFF</colordiffuse>
 			</control>
+			<!--control type="image">
+				<posx>250</posx>
+				<posy>385</posy>
+				<width>1400</width>
+				<height>6</height>
+				<aspectratio>stretch</aspectratio>
+				<texture>highlight.png</texture>
+				<colordiffuse>40FFFFFF</colordiffuse>
+			</control-->
+			
+		</control>
+		
+		<!----Text----->
+		<control type="group">
+		<posx>185</posx>
+		<posy>80</posy>
+
+		<animation effect="slide" start="0,0" end="-110,0" time="400" condition="!Control.HasFocus(301) + !Skin.HasSetting(LockMainMenu)">Conditional</animation>
+			
 			<control type="label">
-				<posx>477</posx>
-				<posy>427</posy>
+				<posx>460</posx>
+				<posy>423</posy>
 				<width>565</width>
 				<height>45</height>
 				<font>Postertitlebig</font>
@@ -154,12 +176,12 @@
 				<align>left</align>
 				<label>$INFO[ListItem.Title]</label>
 	
-				<!--shadowcolor>FF959595</shadowcolor-->
+				<!--shadowcolor>blue</shadowcolor-->
 			</control>
 
 			<control type="textbox">
-				<posx>456</posx>
-				<posy>495</posy>
+				<posx>460</posx>
+				<posy>485</posy>
 				<width>575</width>
 				<height>50</height>
 				<font>recent</font>
@@ -197,10 +219,10 @@
 				<width>305</width>
 				<height>450</height>
 				<aspectratio>stretch</aspectratio>
+				<bordertexture border="3">blue3.png</bordertexture>
+				<bordersize>3</bordersize>
 				<texture background="true" diffuse="diffuse/posterdiffuse.png" fallback="DefaultAlbumCover.png">$INFO[ListItem.Art(poster)]</texture>
-				<animation type="Focus">
-					<effect type="zoom" start="90" end="100" time="200" />
-				</animation>
+				<fadetime>500</fadetime>
 			</control>
 			<control type="image">
 				<posx>40</posx>

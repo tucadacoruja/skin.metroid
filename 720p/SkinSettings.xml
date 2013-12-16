@@ -210,108 +210,145 @@
 					<control type="radiobutton" id="100">
 						<include>SettingsButton</include>
 						<description>Sources in main menu</description>
-						<label>31142</label>
+						<label>$LOCALIZE[31088] $LOCALIZE[31142]</label>
 						<onclick>Skin.ToggleSetting(HideGlobalSources)</onclick>
 						<selected>!Skin.HasSetting(HideGlobalSources)</selected>
 					</control>
 					<control type="radiobutton" id="101">
 						<include>SettingsButton</include>
-						<description>Movie library in main menu</description>
-						<label>31143</label>
+						<description>My Movies in main menu</description>
+						<label>$LOCALIZE[31079] $LOCALIZE[31142]</label>
 						<onclick>Skin.ToggleSetting(HideGlobalMovies)</onclick>
 						<selected>!Skin.HasSetting(HideGlobalMovies)</selected>
 					</control>
+					<control type="radiobutton" id="119">
+						<include>SettingsButton</include>
+						<description>alphabetical subcategories</description>
+						<label> - $LOCALIZE[31079] $LOCALIZE[31221]</label>
+						<onclick>Skin.ToggleSetting(MoviePlaylists)</onclick>
+						<selected>!Skin.HasSetting(MoviePlaylists)</selected>
+					</control>
 					<control type="radiobutton" id="102">
 						<include>SettingsButton</include>
-						<description>Tvshow library in main menu</description>
-						<label>31144</label>
+						<description>My Tv Shows in main menu</description>
+						<label>$LOCALIZE[31080] $LOCALIZE[31142]</label>
 						<onclick>Skin.ToggleSetting(HideGlobalTvshows)</onclick>
 						<selected>!Skin.HasSetting(HideGlobalTvshows)</selected>
 					</control>
+					<control type="radiobutton" id="118">
+						<include>SettingsButton</include>
+						<description>alphabetical subcategories</description>
+						<label> - $LOCALIZE[31080] $LOCALIZE[31221]</label>
+						<onclick>Skin.ToggleSetting(TvShowPlaylists)</onclick>
+						<selected>!Skin.HasSetting(TvShowPlaylists)</selected>
+					</control>
 					<control type="radiobutton" id="103">
 						<include>SettingsButton</include>
-						<description>Music library in main menu</description>
-						<label>31145</label>
+						<description>My Music in main menu</description>
+						<label>$LOCALIZE[31078] $LOCALIZE[31142]</label>
 						<onclick>Skin.ToggleSetting(HideGlobalMusic)</onclick>
 						<selected>!Skin.HasSetting(HideGlobalMusic)</selected>
+					</control>
+					<control type="radiobutton" id="117">
+						<include>SettingsButton</include>
+						<description>My Music Videos in main menu</description>
+						<label>$LOCALIZE[31218] $LOCALIZE[31142]</label>
+						<onclick>Skin.ToggleSetting(HideMyMusicVideos)</onclick>
+						<selected>!Skin.HasSetting(HideMyMusicVideos)</selected>
+					</control>
+					<control type="radiobutton" id="115">
+						<include>SettingsButton</include>
+						<description>Video Library in main menu</description>
+						<label>$LOCALIZE[31219] $LOCALIZE[31142]</label>
+						<onclick>Skin.ToggleSetting(HideVideoLibrary)</onclick>
+						<selected>Skin.HasSetting(HideVideoLibrary)</selected>
+					</control>
+					<control type="radiobutton" id="116">
+						<include>SettingsButton</include>
+						<description>Music Library in main menu</description>
+						<label>$LOCALIZE[31220] $LOCALIZE[31142]</label>
+						<onclick>Skin.ToggleSetting(HideMusicLibrary)</onclick>
+						<selected>Skin.HasSetting(HideMusicLibrary)</selected>
 					</control>
 					<control type="radiobutton" id="104">
 						<include>SettingsButton</include>
 						<description>Pictures in main menu</description>
-						<label>31146</label>
+						<label>$LOCALIZE[31146] $LOCALIZE[31142]</label>
 						<onclick>Skin.ToggleSetting(PicsHome)</onclick>
 						<selected>!Skin.HasSetting(PicsHome)</selected>
 					</control>
 					<control type="radiobutton" id="105">
 						<include>SettingsButton</include>
 						<description>Programs in main menu</description>
-						<label>31147</label>
+						<label>$LOCALIZE[31147] $LOCALIZE[31142]</label>
 						<onclick>Skin.ToggleSetting(ProgramsHome)</onclick>
 						<selected>Skin.HasSetting(ProgramsHome)</selected>
 					</control>
 					<control type="radiobutton" id="106">
 						<include>SettingsButton</include>
 						<description>Weather in main menu</description>
-						<label>31148</label>
+						<label>$LOCALIZE[31093] $LOCALIZE[31142]</label>
 						<onclick>Skin.ToggleSetting(WeatherHome)</onclick>
 						<selected>Skin.HasSetting(WeatherHome)</selected>
 					</control>
 					<control type="radiobutton" id="107">
 						<include>SettingsButton</include>
 						<description>Video addons in main menu</description>
-						<label>31149</label>
+						<label>$LOCALIZE[31149] $LOCALIZE[31142]</label>
 						<onclick>Skin.ToggleSetting(AddonHome)</onclick>
 						<selected>Skin.HasSetting(AddonHome)</selected>
 					</control>
 					<control type="radiobutton" id="108">
 						<include>SettingsButton</include>
 						<description>Favorites dialog in main menu</description>
-						<label>31151</label>
+						<label>$LOCALIZE[31151] $LOCALIZE[31142]</label>
 						<onclick>Skin.ToggleSetting(FavoritesHome)</onclick>
 						<selected>Skin.HasSetting(FavoritesHome)</selected>
 					</control>
 					<control type="radiobutton" id="109">
 						<include>SettingsButton</include>
 						<description>Power in main menu</description>
-						<label>31152</label>
+						<label>$LOCALIZE[31090] $LOCALIZE[31142]</label>
 						<onclick>Skin.ToggleSetting(PowerHome)</onclick>
 						<selected>!Skin.HasSetting(PowerHome)</selected>
 					</control>
 					<control type="radiobutton" id="110">
 						<include>SettingsButton</include>
 						<description>viewtype button in main menu</description>
-						<label>31153</label>
+						<label>$LOCALIZE[31153] $LOCALIZE[31142]</label>
 						<onclick>Skin.ToggleSetting(HideGlobalViews)</onclick>
 						<selected>!Skin.HasSetting(HideGlobalViews)</selected>
 					</control>
 					<control type="radiobutton" id="111">
 						<include>SettingsButton</include>
 						<description>Home button in main menu</description>
-						<label>31210</label>
+						<label>$LOCALIZE[31210] $LOCALIZE[31142]</label>
 						<onclick>Skin.ToggleSetting(HideGlobalHome)</onclick>
 						<selected>!Skin.HasSetting(HideGlobalHome)</selected>
 					</control>
 					<control type="radiobutton" id="112">
 						<include>SettingsButton</include>
 						<description>Back button in main menu</description>
-						<label>31154</label>
+						<label>$LOCALIZE[31154] $LOCALIZE[31142]</label>
 						<onclick>Skin.ToggleSetting(HideGlobalBack)</onclick>
 						<selected>Skin.HasSetting(HideGlobalBack)</selected>
 					</control>
 					<control type="radiobutton" id="113">
 						<include>SettingsButton</include>
 						<description>Previous button in main menu</description>
-						<label>31155</label>
+						<label>$LOCALIZE[31155] $LOCALIZE[31142]</label>
 						<onclick>Skin.ToggleSetting(HideGlobalPrevious)</onclick>
 						<selected>Skin.HasSetting(HideGlobalPrevious)</selected>
 					</control>
 					<control type="radiobutton" id="114">
 						<include>SettingsButton</include>
 						<description>Sort options in main menu</description>
-						<label>31156</label>
+						<label>$LOCALIZE[31156] $LOCALIZE[31142]</label>
 						<onclick>Skin.ToggleSetting(HideGlobalSort)</onclick>
 						<selected>Skin.HasSetting(HideGlobalSort)</selected>
 					</control>
+					
+					
 					
 				</control>
 				

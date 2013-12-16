@@ -25,9 +25,9 @@
 			<orientation>horizontal</orientation>
 			<include>Media_flags</include>
 			<visible>Control.IsVisible(504)</visible>
-			<animation effect="fade" start="0" end="60" time="600">WindowOpen</animation>
-			<animation effect="fade" start="60" end="0" time="600" tween="sine">WindowClose</animation>
-			<animation effect="fade" start="0" end="60" time="600" tween="sine" easing="inout" reversable="true">VisibleCHange</animation>
+			<visible>![Container(504).OnNext | Container(504).OnPrevious]</visible>
+			
+			<animation effect="fade" start="0" end="100" time="400" delay="200">Visible</animation>
 		</control>
 		
 		<control type="wraplist" id="504">
@@ -213,7 +213,7 @@
 					<animation type="Focus" reversible="false">
 						<effect type="fade" start="0" end="90" time="300" />
 					</animation>
-					<visible>IsEmpty(ListItem.Title)</visible>					
+					<visible>IsEmpty(ListItem.Title) + !substring(ListItem.Label,..,left)</visible>					
 				</control>			
 				<control type="label">
 					<posx>350</posx>
@@ -274,10 +274,10 @@
 			<textureslidernibfocus>buttons/scrollnibV.png</textureslidernibfocus>
 			<orientation>Vertical</orientation>
 			<showonepage>true</showonepage>
-			<posx>290</posx>
-			<posy>100</posy>
+			<posx>310</posx>
+			<posy>140</posy>
 			<width>10</width>
-			<height>580</height>
+			<height>520</height>
 			<onleft>300</onleft>
 			<onright>504</onright>
 			<visible>Control.IsVisible(504)</visible>
