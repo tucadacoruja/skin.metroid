@@ -137,59 +137,62 @@
 			
 		
 		<control type="group">
-		<animation effect="slide" start="0,0" end="-80,0" time="400" condition="!Control.HasFocus(301) + !Skin.HasSetting(LockMainMenu)">Conditional</animation>
+		
 		<visible>!substring(Listitem.Label,..,left)</visible>
 
-			<control type="textbox">
-				<posx>945</posx>
-				<posy>185</posy>
-				<width>230</width>
-				<height>118</height>
-				<align>justify</align>
-				<info>ListItem.Plot</info>
-				<font>plot</font>
-				<textcolor>FFD7D7D7</textcolor>
-				<autoscroll delay="600000" time="4000" repeat="10000" />
+			<control type="group">
+			<animation effect="slide" start="0,0" end="-80,0" time="400" condition="!Control.HasFocus(301) + !Skin.HasSetting(LockMainMenu)">Conditional</animation>
+				<control type="textbox">
+					<posx>945</posx>
+					<posy>185</posy>
+					<width>230</width>
+					<height>118</height>
+					<align>justify</align>
+					<info>ListItem.Plot</info>
+					<font>plot</font>
+					<textcolor>FFD7D7D7</textcolor>
+					<autoscroll delay="600000" time="4000" repeat="10000" />
+				</control>
+				<control type="image">
+					<description>Rating Info</description>
+					<posx>945</posx>
+					<posy>315</posy>
+					<posy>315</posy>
+					<width>230</width>
+					<height>40</height>
+					<info>ListItem.StarRating</info>
+					<fadetime>250</fadetime>
+					<visible>![IsEmpty(ListItem.foldername) | substring(Container.Listitem.Label,..,left)]</visible>
+					<visible>![Container.Content(movies) + Listitem.IsFolder]</visible>
+					<animation effect="slide" start="0,0" end="0,30" time="0"condition="Container.Content(tvshows)">Conditional</animation>
+				</control>
+			
+				<control type="label">
+					<posx>945</posx>
+					<posy>285</posy>
+					<width>633</width>
+					<height>60</height>
+					<align>left</align>
+					<label>$LOCALIZE[31180]</label>
+					<font>plot</font>
+					<textcolor>FFD7D7D7</textcolor>
+					<selectedcolor>taskbar</selectedcolor>
+					<visible>Container.Content(tvshows)</visible>
+				</control>
+				<control type="label">
+					<posx>1165</posx>
+					<posy>285</posy>
+					<width>633</width>
+					<height>60</height>
+					<align>right</align>
+					<label>$INFO[ListItem.Property(UnWatchedEpisodes)]</label>
+					<font>plot</font>
+					<textcolor>FFD7D7D7</textcolor>
+					<selectedcolor>taskbar</selectedcolor>
+					<visible>Container.Content(tvshows)</visible>
+				</control>
 			</control>
-			<control type="image">
-				<description>Rating Info</description>
-				<posx>945</posx>
-				<posy>315</posy>
-				<posy>315</posy>
-				<width>230</width>
-				<height>40</height>
-				<info>ListItem.StarRating</info>
-				<fadetime>250</fadetime>
-				<visible>![IsEmpty(ListItem.foldername) | substring(Container.Listitem.Label,..,left)]</visible>
-				<visible>![Container.Content(movies) + Listitem.IsFolder]</visible>
-				<animation effect="slide" start="0,0" end="0,30" time="0"condition="Container.Content(tvshows)">Conditional</animation>
-			</control>
-		
-			<control type="label">
-				<posx>945</posx>
-				<posy>285</posy>
-				<width>633</width>
-				<height>60</height>
-				<align>left</align>
-				<label>$LOCALIZE[31180]</label>
-				<font>plot</font>
-				<textcolor>FFD7D7D7</textcolor>
-				<selectedcolor>taskbar</selectedcolor>
-				<visible>Container.Content(tvshows)</visible>
-			</control>
-			<control type="label">
-				<posx>1165</posx>
-				<posy>285</posy>
-				<width>633</width>
-				<height>60</height>
-				<align>right</align>
-				<label>$INFO[ListItem.Property(UnWatchedEpisodes)]</label>
-				<font>plot</font>
-				<textcolor>FFD7D7D7</textcolor>
-				<selectedcolor>taskbar</selectedcolor>
-				<visible>Container.Content(tvshows)</visible>
-			</control>
-
+			
 			<control type="textbox">
 				<posx>350</posx>
 				<posy>175</posy>
