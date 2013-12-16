@@ -274,15 +274,15 @@ msgid "Random Music"
 msgstr ""
 
 msgctxt "#31078"
-msgid "Music Library"
+msgid "My Music"
 msgstr ""
 
 msgctxt "#31079"
-msgid "Movie Library"
+msgid "My Movies"
 msgstr ""
 
 msgctxt "#31080"
-msgid "Tv Show Library"
+msgid "My Tv Shows"
 msgstr ""
 
 msgctxt "#31081"
@@ -522,63 +522,47 @@ msgid "Favorites"
 msgstr ""
 
 msgctxt "#31142"
-msgid "Sources in main menu"
-msgstr ""
-
-msgctxt "#31143"
-msgid "Movie library in main menu"
-msgstr ""
-
-msgctxt "#31144"
-msgid "Tvshow library in main menu"
-msgstr ""
-
-msgctxt "#31145"
-msgid "Music library in main menu"
+msgid "in main menu"
 msgstr ""
 
 msgctxt "#31146"
-msgid "Pictures in main menu"
+msgid "Pictures"
 msgstr ""
 
 msgctxt "#31147"
-msgid "Programs in main menu"
+msgid "Programs"
 msgstr ""
 
 msgctxt "#31148"
-msgid "Weather in main menu"
+msgid ""
 msgstr ""
 
 msgctxt "#31149"
-msgid "Video addons in main menu"
+msgid "Video addons"
 msgstr ""
 
 msgctxt "#31151"
-msgid "Favorites dialog in main menu"
-msgstr ""
-
-msgctxt "#31152"
-msgid "Power in main menu"
+msgid "Favorites dialog"
 msgstr ""
 
 msgctxt "#31153"
-msgid "Viewtype button in main menu"
+msgid "Viewtype button"
 msgstr ""
 
 msgctxt "#31154"
-msgid "Back button in main menu"
+msgid "Back button"
 msgstr ""
 
 msgctxt "#31155"
-msgid "Previous button in main menu"
+msgid "Previous button"
 msgstr ""
 
 msgctxt "#31156"
-msgid "Sort options in main menu"
+msgid "Sort options"
 msgstr ""
 
 msgctxt "#31157"
-msgid "Enable Favorites In Main Menu"
+msgid "Enable custom main menu items"
 msgstr ""
 
 msgctxt "#31158"
@@ -786,7 +770,7 @@ msgid "Lock"
 msgstr ""
 
 msgctxt "#31210"
-msgid "Home button in main menu"
+msgid "Home button"
 msgstr ""
 
 msgctxt "#31211"
@@ -815,4 +799,20 @@ msgstr ""
 
 msgctxt "#31217"
 msgid "play CD"
+msgstr ""
+
+msgctxt "#31218"
+msgid "My Music Videos"
+msgstr ""
+
+msgctxt "#31219"
+msgid "Video Library"
+msgstr ""
+
+msgctxt "#31220"
+msgid "Music Library"
+msgstr ""
+
+msgctxt "#31221"
+msgid "alphabetical subcategories"
 msgstr ""
