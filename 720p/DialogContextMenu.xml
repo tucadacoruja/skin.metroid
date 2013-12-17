@@ -167,13 +167,13 @@
 			<visible>Container.Content(episodes) + substring(Container.FolderPath,videodb://tvshows) + [IsEmpty(Skin.String(BookmarkDBID1)) | IsEmpty(Skin.String(BookmarkDBID2)) | IsEmpty(Skin.String(BookmarkDBID3))]</visible>
 		
 			<onclick condition="IsEmpty(Skin.String(BookmarkDBID1))">Skin.SetString(BookmarkDBID1,$INFO[ListItem.DBID])</onclick>
-			<onclick condition="IsEmpty(Skin.String(BookmarkDBID1))">Skin.SetString(BookmarkName1,S$INFO[ListItem.Season]E$INFO[ListItem.Episode] $INFO[ListItem.TVShowTitle])</onclick>
+			<onclick condition="IsEmpty(Skin.String(BookmarkDBID1))">Skin.SetString(BookmarkName1,S$VAR[Padded_season]E$VAR[Padded_episodes] $INFO[ListItem.TVShowTitle])</onclick>
 			
 			<onclick condition="!IsEmpty(Skin.String(BookmarkDBID1)) + IsEmpty(Skin.String(BookmarkDBID2))">Skin.SetString(BookmarkDBID2,$INFO[ListItem.DBID])</onclick>
-			<onclick condition="!IsEmpty(Skin.String(BookmarkDBID1)) + IsEmpty(Skin.String(BookmarkDBID2))">Skin.SetString(BookmarkName2,S$INFO[ListItem.Season]E$INFO[ListItem.Episode] $INFO[ListItem.TVShowTitle])</onclick>
+			<onclick condition="!IsEmpty(Skin.String(BookmarkDBID1)) + IsEmpty(Skin.String(BookmarkDBID2))">Skin.SetString(BookmarkName2,S$VAR[Padded_season]E$VAR[Padded_episodes] $INFO[ListItem.TVShowTitle])</onclick>
 			
 			<onclick condition="![IsEmpty(Skin.String(BookmarkDBID1)) | IsEmpty(Skin.String(BookmarkDBID2))] + IsEmpty(Skin.String(BookmarkDBID3))">Skin.SetString(BookmarkDBID3,$INFO[ListItem.DBID])</onclick>
-			<onclick condition="![IsEmpty(Skin.String(BookmarkDBID1)) | IsEmpty(Skin.String(BookmarkDBID2))] + IsEmpty(Skin.String(BookmarkDBID3))">Skin.SetString(BookmarkName3,S$INFO[ListItem.Season]E$INFO[ListItem.Episode] $INFO[ListItem.TVShowTitle])</onclick>
+			<onclick condition="![IsEmpty(Skin.String(BookmarkDBID1)) | IsEmpty(Skin.String(BookmarkDBID2))] + IsEmpty(Skin.String(BookmarkDBID3))">Skin.SetString(BookmarkName3,S$VAR[Padded_season]E$VAR[Padded_episodes] $INFO[ListItem.TVShowTitle])</onclick>
 		</control>
 	</control>
 	

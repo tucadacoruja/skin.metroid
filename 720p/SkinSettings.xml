@@ -661,42 +661,47 @@
 						<include>SettingsButton</include>
 						<label2>$INFO[Skin.String(PluginWidgetName1)]</label2>
 						<label>- Reset plugin widget 1</label>
+						<onclick>up</onclick>
 						<onclick>Skin.Reset(PluginWidgetPath1)</onclick>
 						<onclick>Skin.Reset(PluginWidgetName1)</onclick>
-					
+						<enable>!IsEmpty(Skin.String(PluginWidgetPath1))</enable>
 					</control>
 					<control type="button" id="112">
 						<include>SettingsButton</include>
 						<label2>$INFO[Skin.String(PluginWidgetName2)]</label2>
 						<label>- Reset plugin widget 2</label>
+						<onclick>up</onclick>
 						<onclick>Skin.Reset(PluginWidgetPath2)</onclick>
 						<onclick>Skin.Reset(PluginWidgetName2)</onclick>
-					
+						<enable>!IsEmpty(Skin.String(PluginWidgetPath2))</enable>
 					</control>
 					
 					<control type="button" id="113">
 						<include>SettingsButton</include>
 						<label2>$INFO[Skin.String(BookmarkName1)]</label2>
 						<label>- Reset Bookmark 1</label>
+						<onclick>up</onclick>
 						<onclick>Skin.Reset(BookmarkDBID1)</onclick>
 						<onclick>Skin.Reset(BookmarkName1)</onclick>
-					
+						<enable>!IsEmpty(Skin.String(BookmarkDBID1))</enable>
 					</control>
 					<control type="button" id="114">
 						<include>SettingsButton</include>
 						<label2>$INFO[Skin.String(BookmarkName2)]</label2>
 						<label>- Reset Bookmark 2</label>
+						<onclick>up</onclick>
 						<onclick>Skin.Reset(BookmarkDBID2)</onclick>
 						<onclick>Skin.Reset(BookmarkName2)</onclick>
-					
+						<enable>!IsEmpty(Skin.String(BookmarkDBID2))</enable>
 					</control>
 					<control type="button" id="115">
 						<include>SettingsButton</include>
 						<label2>$INFO[Skin.String(BookmarkName3)]</label2>
 						<label>- Reset Bookmark 3</label>
+						<onclick>up</onclick>
 						<onclick>Skin.Reset(BookmarkDBID3)</onclick>
 						<onclick>Skin.Reset(BookmarkName3)</onclick>
-					
+						<enable>!IsEmpty(Skin.String(BookmarkDBID3))</enable>
 					</control>
 				</control>
 				
