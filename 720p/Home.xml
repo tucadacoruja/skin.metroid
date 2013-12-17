@@ -32,18 +32,6 @@
 <include>VideoWindow</include>
 <include>GeneralFanart</include>
 
-<control type="image">
-	<posx>0</posx>
-	<posy>0</posy>
-	<width>1280</width>
-	<height>720</height>
-	<aspectratio>stretch</aspectratio>
-	<texture background="true" fallback="MetroidBG.png">$INFO[Skin.String(GlobalBackground)]</texture>
-	<animation effect="fade" start="75" end="85" time="200" reversible="true" condition="!Player.HasVideo">Conditional</animation>
-	<animation effect="fade" start="85" end="75" time="200" reversible="true" condition="Player.HasVideo">Conditional</animation>
-	<animation effect="fade" start="84" end="90" time="90000" reversable="true" pulse="true" condition="Player.HasAudio + !Skin.HasSetting(VisLibrary)">Conditional</animation>
-</control>
-
 <include>MainMenu</include>
 <control type="image">
 	<posx>235</posx>

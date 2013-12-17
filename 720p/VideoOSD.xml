@@ -79,17 +79,17 @@
 			</control>
 			<control type="slider" id="88">
 				<description>Seek Slider</description>
-				<posx>318</posx>
-				<posy>41</posy>
+				<posx>319</posx>
+				<posy>42</posy>
 				<width>643</width>
 				<height>4</height>
 				<onup>9000</onup>
-				
+				<pulseonselect>true</pulseonselect>
 				<action>seek</action>
 				<texturesliderbar>osd/seek/EmptyBar.png</texturesliderbar>
 				<textureslidernib>osd/seek/OsdSearchNib.png</textureslidernib>
 				<textureslidernibfocus>osd/seek/OsdSearchNib.png</textureslidernibfocus>
-				<!--animation effect="fade" start="0" end="50" time="0" reversible="false" condition="true">Conditional</animation-->
+				<animation reversible="false" effect="zoom" end="100" start="80" time="300">focus</animation>
 			</control>
 			
 			<control type="label">
