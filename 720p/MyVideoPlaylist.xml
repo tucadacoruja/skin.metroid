@@ -6,7 +6,7 @@
 <onload condition="Player.HasMedia">ActivateWindow(playercontrols)</onload>
 <onunload>Dialog.Close(playercontrols)</onunload>
 
-<views>50</views>  
+<views>50,603</views>  
 <controls>
 
 <control type="button" id="2">
@@ -93,7 +93,7 @@
 <include>Background</include>
 
 <include>List</include>
-<include>Landscape</include>
+<include>Panel</include><!---603--> 
 
 <include>ScrollOffsetLabel</include>
 

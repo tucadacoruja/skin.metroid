@@ -237,7 +237,7 @@
 						<height>410</height>
 						<aspectratio scalediffuse="false">scale</aspectratio>
 						<texture diffuse="diffuse/albumdiffuse.png">$INFO[ListItem(-1).Art(thumb)]</texture>
-						<fadetime>100</fadetime>
+						<fadetime>300</fadetime>
 					</control>
 					<control type="image">
 						<posx>110</posx>
@@ -258,7 +258,7 @@
 						
 						<aspectratio>stretch</aspectratio>
 						<texture border="12">white.png</texture>
-						<colordiffuse>FFC2C2C2</colordiffuse>
+						<colordiffuse>FFD7D7D7</colordiffuse>
 					</control>
 					
 					
@@ -295,7 +295,7 @@
 				<height>410</height>
 				<aspectratio scalediffuse="false">scale</aspectratio>
 				<texture diffuse="diffuse/albumdiffuse.png">$INFO[ListItem.Art(thumb)]</texture>
-				<fadetime>100</fadetime>
+				<fadetime>400</fadetime>
 			</control>
 			<control type="image">
 				<posx>110</posx>

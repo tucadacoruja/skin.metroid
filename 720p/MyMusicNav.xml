@@ -5,7 +5,7 @@
 <allowoverlay>yes</allowoverlay>
 
 
- <views>602,603,579,523,51,50</views> 
+ <views>602,603,579,523,51,720,50</views> 
 <controls>
 
 <control type="button" id="2">
@@ -93,7 +93,8 @@
 
 <include>Polaroid</include>
 <include>List</include>
-<include>Landscape</include><!---603--> 
+<include>Panel</include><!---603--> 
+<include>Landscape</include><!---720-->  
 
 <include>ScrollOffsetLabel</include>
 	

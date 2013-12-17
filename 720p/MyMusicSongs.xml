@@ -3,7 +3,7 @@
 <defaultcontrol always="true">50</defaultcontrol>
 <backgroundcolor>0</backgroundcolor>
 <allowoverlay>yes</allowoverlay>
-<views>50,603</views>
+<views>50,603,720</views>
   
 <controls>
 
@@ -79,7 +79,8 @@
 <include>Background</include>
 
 <include>List</include>
-<include>Landscape</include>
+<include>Panel</include><!---603--> 
+<include>Landscape</include><!---720--> 
 
 <include>BottomInfoBar</include>
  

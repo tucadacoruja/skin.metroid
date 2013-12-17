@@ -51,7 +51,7 @@
 
 			<control type="wraplist" id="501">
 				<visible>Container.Content(Movies) | Container.Content(TVShows) | Container.Content(seasons)</visible>
-				
+				<hitrect x="325" y="154" w="328" h="473" />
 				<posx>640</posx>
 				<posy>200</posy>
 				<width>1600</width>

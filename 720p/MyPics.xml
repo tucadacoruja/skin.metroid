@@ -118,7 +118,7 @@
 
 <include>Polaroid</include>
 <include>List</include>
-<include>Landscape</include><!---603--> 
+<include>Panel</include><!---603--> 
 
 <include>BottomInfoBar</include>
  

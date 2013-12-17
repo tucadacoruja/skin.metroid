@@ -246,7 +246,7 @@
 							<label>31078</label>
 							<icon>Home/icons/music.png</icon>
 							<visible>!Skin.HasSetting(HideGlobalMusic)</visible>
-							<onclick>xbmc.activatewindow(musiclibrary,songs,return)</onclick>
+							<onclick>xbmc.activatewindow(musiclibrary,songs)</onclick>
 							<visible>Library.HasContent(Music)</visible>
 						</item>
 						
@@ -255,7 +255,7 @@
 							<label>31218</label>
 							<icon>Home/icons/music.png</icon>
 							<visible>!Skin.HasSetting(HideMyMusicVideos)</visible>
-							<onclick>ActivateWindow(Videos,MusicVideoTitles,return)</onclick>
+							<onclick>ActivateWindow(Videos,MusicVideoTitles)</onclick>
 							<visible>Library.HasContent(MusicVideos)</visible>
 						</item>	
 											
@@ -268,7 +268,7 @@
 							<onclick condition="IsEmpty(skin.string(SubMenu4)) + !Skin.HasSetting(MoviePlaylists)">Skin.Setstring(SubMenu4,open)</onclick>
 							<onclick condition="!IsEmpty(skin.string(SubMenu4)) + !Skin.HasSetting(MoviePlaylists)">Skin.Reset(SubMenu4)</onclick>
 							<onclick condition="IsEmpty(skin.string(SubMenu4)) + !Skin.HasSetting(MoviePlaylists)">Skin.Setstring(SubMenu4,open)</onclick>
-							<onclick condition="Skin.HasSetting(MoviePlaylists)">ActivateWindow(Videos,MovieTitles,return)</onclick>
+							<onclick condition="Skin.HasSetting(MoviePlaylists)">ActivateWindow(Videos,MovieTitles)</onclick>
 							<property name="DropdownMenu4">not_empty</property>
 						</item>
 						<include>MovieSortItems</include>
@@ -283,7 +283,7 @@
 							<onclick condition="IsEmpty(skin.string(SubMenu5)) + !Skin.HasSetting(TvShowPlaylists)">Skin.Setstring(SubMenu5,open)</onclick>
 							<onclick condition="!IsEmpty(skin.string(SubMenu5)) + !Skin.HasSetting(TvShowPlaylists)">Skin.Setstring(SubMenu5,)</onclick>
 							<onclick condition="IsEmpty(skin.string(SubMenu5)) + !Skin.HasSetting(TvShowPlaylists)">Skin.Setstring(SubMenu5,open)</onclick>
-							<onclick condition="Skin.HasSetting(TvShowPlaylists)">ActivateWindow(Videos,TvShowTitles,return)</onclick>
+							<onclick condition="Skin.HasSetting(TvShowPlaylists)">ActivateWindow(Videos,TvShowTitles)</onclick>
 							<property name="DropdownMenu5">not_empty</property>
 						</item>
 						<include>TvshowSortItems</include>

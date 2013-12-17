@@ -19,9 +19,32 @@
 		<value condition="VideoPlayer.Content(episodes)">$INFO[Player.Art(tvshow.clearlogo)]</value>
 	</variable>
 	
+	
+	
+	<variable name="Episode_title">
+		<value condition="!substring(ListItem.Label,..,left) + Container.Content(episodes)">S$VAR[Padded_season]E$VAR[Padded_episodes] - $INFO[ListItem.Title]</value>
+		<value condition="!substring(ListItem.Label,..,left) + Container.Content(albums)">$INFO[ListItem.Artist]</value>
+		<value condition="substring(ListItem.Label,..,left)">Back</value>
+	</variable>
+	
+	<variable name="Aired_or_Artist">
+		<value condition="Container.Content(episodes)">$LOCALIZE[31181] $INFO[ListItem.Premiered] - $INFO[ListItem.Duration] min</value>
+		<value condition="Container.Content(albums)">$INFO[ListItem.Album] - $INFO[ListItem.Year]</value>
+	</variable>
+	
 	<variable name="Padded_string">
 		<value condition="IntegerGreaterThan(ListItem.TrackNumber,9)">$INFO[ListItem.TrackNumber]</value>
 		<value condition="!IntegerGreaterThan(ListItem.TrackNumber,9)">$INFO[ListItem.TrackNumber,0]</value>
+	</variable>
+	
+	<variable name="Padded_episodes">
+		<value condition="IntegerGreaterThan(ListItem.Episode,9)">$INFO[ListItem.Episode]</value>
+		<value condition="!IntegerGreaterThan(ListItem.Episode,9)">$INFO[ListItem.Episode,0]</value>
+	</variable>
+	
+	<variable name="Padded_season">
+		<value condition="IntegerGreaterThan(ListItem.Season,9)">$INFO[ListItem.Season]</value>
+		<value condition="!IntegerGreaterThan(ListItem.Season,9)">$INFO[ListItem.Season,0]</value>
 	</variable>
 	
 	<variable name="Info_Poster">
@@ -109,6 +132,12 @@
 		<value condition="[SubString(Container.FolderPath,addons,left) | SubString(Container.FolderPath,plugin,left)] + !IsEmpty(ListItem.Fanart)">$INFO[ListItem.Fanart]</value>
 		<value condition="![substring(listitem.filenameandpath,addons://sources/) | substring(listitem.filenameandpath,plugin://) | substring(listitem.filenameandpath,sources://video/)]">$INFO[ListItem.Thumb]</value>
 		 
+	</variable>
+	
+	<variable name="Episode_Fallback">
+		<value condition="substring(Listitem.Label,..,left)">$INFO[ListItem.Icon]</value>
+		
+		<value condition="IsEmpty(ListItem.Art(thumb))">DefaultFallback.png</value>
 	</variable>
 	
 	<variable name="Landscape_Fallback">

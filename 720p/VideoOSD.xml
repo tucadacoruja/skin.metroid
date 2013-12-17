@@ -365,14 +365,14 @@
 				<aspectratio>stretch</aspectratio>
 				<animation effect="fade" start="100" end="60" time="100" condition="Control.HasFocus(13)">Conditional</animation>
 			</control>
-			<control type="image">
+			<!--control type="image">
 				<height>60</height>
 				<width>60</width>
 				<texture>osd/osdbg.png</texture>
 				<aspectratio>stretch</aspectratio>
 				<visible>!IsEmpty(Skin.String(PluginWidgetPath1))</visible>
 				<animation effect="fade" start="100" end="60" time="100" condition="Control.HasFocus(14)">Conditional</animation>
-			</control>
+			</control-->
 			
 		</control>
 		
@@ -552,7 +552,7 @@
 
 			</control>
 			
-			<control type="button" id="14">
+			<!--control type="button" id="14">
 				
 				<description>playlist</description>
 				<height>60</height>
@@ -569,7 +569,7 @@
 				<animation effect="zoom" start="100" end="120" center="auto" time="100">Focus</animation>
 				<animation effect="zoom" start="120" end="100" center="auto" time="100">UnFocus</animation>
 				<visible>!IsEmpty(Skin.String(PluginWidgetPath1))</visible>
-			</control>
+			</control-->
 		</control>
 		
 	

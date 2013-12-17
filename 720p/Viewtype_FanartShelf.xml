@@ -88,48 +88,102 @@
 						
 			<focusedlayout height="310" width="200">
 			
-				<control type="image">
-					<posx>0</posx>
-					<posy>0</posy>
-					<width>190</width>
-					<height>280</height>
-					<aspectratio>stretch</aspectratio>
-				
-					<fadetime>200</fadetime>
-					<texture background="true">white.png</texture>
-					<colordiffuse>FFEBEBEB</colordiffuse>
-				</control>
-				<control type="image">
-					<posx>0</posx>
-					<posy>0</posy>
-					<width>190</width>
-					<height>280</height>
-					<aspectratio>stretch</aspectratio>
-					<bordertexture border="6">-</bordertexture>
-					<bordersize>6</bordersize>
-					<fadetime>200</fadetime>
-					<texture background="true" fallback="DefaultAlbumCover.png">$INFO[ListItem.Art(poster)]</texture>
-				</control>
-				<control type="image">
-					<posx>20</posx>
-					<posy>30</posy>
-					<width>150</width>
-					<height>190</height>
-					<aspectratio>stretch</aspectratio>
-					<texture background="true" diffuse="poster/posterdiffusesmall.png" >$VAR[Fallback_Icon]</texture>
-					<animation effect="fade" start="0" end="80" time="0" condition="true">Conditional</animation>
+				<control type="group">
+				<animation reversible="false" effect="zoom" end="0,0,190,280" start="2,100,123,180" time="300">focus</animation>
+				<animation reversible="false" effect="zoom" start="0,0,190,280" end="2,100,123,180" time="300">unfocus</animation>
+						
+					<control type="image">
+						<posx>5</posx>
+						<posy>0</posy>
+						<width>190</width>
+						<height>280</height>
+						<aspectratio>stretch</aspectratio>
 					
-					<colordiffuse>EBFFFFFF</colordiffuse>
+						<fadetime>200</fadetime>
+						<texture background="true">white.png</texture>
+						<colordiffuse>FFEBEBEB</colordiffuse>
+					</control>
+					<control type="image">
+						<posx>5</posx>
+						<posy>0</posy>
+						<width>190</width>
+						<height>280</height>
+						<aspectratio>stretch</aspectratio>
+						<bordertexture border="6">-</bordertexture>
+						<bordersize>6</bordersize>
+						<fadetime>200</fadetime>
+						<texture background="true" fallback="DefaultAlbumCover.png">$INFO[ListItem.Art(poster)]</texture>
+					</control>
+					<control type="image">
+						<posx>25</posx>
+						<posy>30</posy>
+						<width>150</width>
+						<height>190</height>
+						<aspectratio>stretch</aspectratio>
+						<texture background="true" diffuse="poster/posterdiffusesmall.png" >$VAR[Fallback_Icon]</texture>
+						<animation effect="fade" start="0" end="80" time="0" condition="true">Conditional</animation>
+						
+						<colordiffuse>EBFFFFFF</colordiffuse>
+					</control>
+					
+					<control type="image">
+						<posx>156</posx>
+						<posy>235</posy>
+						<width>35</width>
+						<height>45</height>
+						<aspectratio>keep</aspectratio>
+						<texture>$INFO[ListItem.Overlay]</texture>
+						<visible>Skin.HasSetting(WatchedOverlays)</visible>
+					</control>
 				</control>
 				
-				<control type="image">
-					<posx>151</posx>
-					<posy>235</posy>
-					<width>35</width>
-					<height>45</height>
-					<aspectratio>keep</aspectratio>
-					<texture>$INFO[ListItem.Overlay]</texture>
-					<visible>Skin.HasSetting(WatchedOverlays)</visible>
+				<control type="group">
+				<animation reversible="false" effect="zoom" end="0,0,190,280" start="2,100,123,180" time="300">Visible</animation>
+				<visible>Control.HasFocus(301)</visible>
+						
+					<control type="image">
+						<posx>5</posx>
+						<posy>0</posy>
+						<width>190</width>
+						<height>280</height>
+						<aspectratio>stretch</aspectratio>
+					
+						<fadetime>200</fadetime>
+						<texture background="true">white.png</texture>
+						<colordiffuse>FFEBEBEB</colordiffuse>
+					</control>
+					<control type="image">
+						<posx>5</posx>
+						<posy>0</posy>
+						<width>190</width>
+						<height>280</height>
+						<aspectratio>stretch</aspectratio>
+						<bordertexture border="6">-</bordertexture>
+						<bordersize>6</bordersize>
+						<fadetime>200</fadetime>
+						<texture background="true" fallback="DefaultAlbumCover.png">$INFO[ListItem.Art(poster)]</texture>
+					</control>
+					<control type="image">
+						<posx>25</posx>
+						<posy>30</posy>
+						<width>150</width>
+						<height>190</height>
+						<aspectratio>stretch</aspectratio>
+						<texture background="true" diffuse="poster/posterdiffusesmall.png" >$VAR[Fallback_Icon]</texture>
+						<animation effect="fade" start="0" end="80" time="0" condition="true">Conditional</animation>
+						
+						<colordiffuse>EBFFFFFF</colordiffuse>
+					</control>
+					
+					<control type="image">
+						<posx>156</posx>
+						<posy>235</posy>
+						<width>35</width>
+						<height>45</height>
+						<aspectratio>keep</aspectratio>
+						<texture>$INFO[ListItem.Overlay]</texture>
+						<visible>Skin.HasSetting(WatchedOverlays)</visible>
+					</control>
 				</control>
 			</focusedlayout>
 
@@ -219,6 +273,7 @@
 				<texture>$INFO[ListItem.Art(clearlogo)]</texture>
 				<animation effect="fade" start="0" end="80" time="100" delay="0" condition="true">Conditional</animation>
 				<visible>Control.IsVisible(781)</visible>
+				<fadetime>200</fadetime>
 			</control>
 			
 			<control type="grouplist">

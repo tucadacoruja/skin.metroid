@@ -15,15 +15,14 @@
 <include file="_debug.xml" />
 
 <!------viewtypes------>
-<include file="Viewtype_Landscape.xml" />
+<include file="Viewtype_Panel.xml" />
 <include file="Viewtype_Banners.xml" />
-<include file="Viewtype_Episodes.xml" />
 <include file="Viewtype_FanartShelf.xml" />
-<include file="Viewtype_Grid.xml" />
-<include file="Viewtype_Icon.xml" />
 <include file="Viewtype_List.xml" />
 <include file="Viewtype_PosterWrap.xml" />
 <include file="Viewtype_Songs.xml" />
+<include file="Viewtype_Episodes.xml" />
+<include file="Viewtype_Landscape.xml" />
 
 
 	
@@ -297,7 +296,7 @@
 			<height>720</height>
 			<aspectratio>stretch</aspectratio>
 			<texture background="true">$INFO[ListItem.Art(fanart)]</texture>
-			<fadetime>100</fadetime>
+			<fadetime>400</fadetime>
 			<visible>!Player.HasVideo</visible>
 			<animation effect="fade" start="40" end="95" time="100000" delay="2000" reversable="true" pulse="true" condition="Player.HasAudio + !Skin.HasSetting(VisLibrary)">Conditional</animation>
 		</control>

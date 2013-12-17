@@ -1,316 +1,328 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
 
+	
+	<include name="Landscape">
 
-    <include name="Landscape">
-        <control type="group">
+	<control type="group">
+		<include>InfoOpenClose</include>
+		<include>ContextFade</include>	
+		<include>Keyboard</include>
+		<include>Favourites</include>
+		<visible>Control.IsVisible(720)</visible>
+		<animation type="Visible" reversible="false">
+			<effect type="fade" start="0" end="100" time="950" delay="0" />
+			<effect type="zoom" start="1" end="100" time="370" center="900,360" delay="0" />
+			<effect type="slide" start="0,1700" end="0,0" time="500" delay="100" reversible="false" />
+		</animation>
+		<animation type="Hidden" reversible="false">
+			<effect type="fade" start="100" end="0" time="100" delay="0" />
+		</animation>
+		<animation type="WindowOpen" reversible="false">
+			<effect type="fade" start="0" end="100" time="950" delay="0" />
+			<effect type="zoom" start="1" end="100" time="370" center="900,360" delay="0" />
+			<effect type="slide" start="0,1700" end="0,0" time="500" delay="0" reversible="false" />
+		</animation>
+		<animation type="WindowClose" reversible="false">
+			<effect type="fade" start="100" end="0" time="100" delay="100" />
+		</animation>
+		
+		<control type="wraplist" id="720">
+			<visible>[Container.Content(episodes) + substring(Container.FolderPath,videodb://tvshows)] | Container.Content(albums)</visible>
+			<visible>!Window.IsVisible(favourites)</visible>
+	
+			<posx>250</posx>
+			<posy>370</posy>
+			<width>1280</width>
+			<height>500</height>
+			<onleft>720</onleft>
+			<onright>720</onright>
+
+			<onup>300</onup>
+			<ondown>63</ondown>
+			<viewtype label="Landscape">list</viewtype>
+			<pagecontrol>63</pagecontrol>
+			<scrolltime>200</scrolltime>
+			<focusposition>0</focusposition>
+			<movement>3</movement>
+			<orientation>horizontal</orientation>
+			<preloaditems>4</preloaditems>
 			
-			<posx>60</posx>
-			<posy>10</posy>
+			<animation effect="slide" start="0,0" end="-250,0" time="600" condition="!Control.HasFocus(301) + !Skin.HasSetting(LockMainMenu)">Conditional</animation>
+		
+			<itemlayout height="440" width="340">
+
 			
-			<include>InfoOpenClose</include>
-			<include>MusicInfoOpenClose</include>
-			<include>WidgetsAnimation</include>
-			<include>ContextFade</include>	
-			<include>Keyboard</include>
-			<include>Favourites</include>
-			<visible>Control.IsVisible(603)</visible>
-			<visible>![Window.IsVisible(pictureinfo) | Window.IsVisible(smartplaylisteditor)]</visible>
+				<control type="image">
+					<posx>15</posx>
+					<posy>5</posy>
+					<width>346</width>
+					<height>340</height>
+					<aspectratio>stretch</aspectratio>
+					<colordiffuse>70FFFFFF</colordiffuse>
+					<texture background="true">diffuse/postershadow.png</texture>
+					
+				</control>
+
+				<control type="image">
+					<posx>40</posx>
+					<posy>9</posy>
+					<width>322</width>
+					<height>300</height>
+					<aspectratio scalediffuse="false">scale</aspectratio>
+					<texture diffuse="diffuse/albumdiffuse.png" fallback="DefaultAlbumCover.png">$INFO[ListItem.Art(thumb)]</texture>
+					<fadetime>400</fadetime>
+					<visible>Container.Content(albums)</visible>
+				</control>
+				<control type="image">
+					<posx>40</posx>
+					<posy>9</posy>
+					<width>322</width>
+					<height>240</height>
+					<aspectratio scalediffuse="false">scale</aspectratio>
+					<texture diffuse="diffuse/albumdiffuse.png" fallback="DefaultAlbumCover.png">$INFO[ListItem.Art(thumb)]</texture>
+					<fadetime>400</fadetime>
+					<visible>Container.Content(episodes)</visible>
+				</control>
+				<control type="image">
+					<posx>40</posx>
+					<posy>9</posy>
+					<width>322</width>
+					<height>250</height>
+					<aspectratio>keep</aspectratio>
+					<texture fallback="DefaultFallback.png">$VAR[Episode_Fallback]</texture>
+					<visible>IsEmpty(ListItem.Art(thumb))</visible>
+					
+				</control>
+				<control type="image">
+					<posx>70</posx>
+					<posy>9</posy>
+					<width>40</width>
+					<height>40</height>
+					<texture>bookmark.png</texture>
+					<visible>!substring(ListItem.Label,..,left) + [Stringcompare(Skin.String(BookmarkDBID1),ListItem.DBID) | Stringcompare(Skin.String(BookmarkDBID2),ListItem.DBID) | Stringcompare(Skin.String(BookmarkDBID3),ListItem.DBID)]</visible>
+					<visible>Container.Content(episodes) + substring(Container.FolderPath,videodb://tvshows)</visible>
+				</control>
+				<control type="image">
+					<description>white image</description>
+					<posx>42</posx>
+					<posy>239</posy>
+					<width>320</width>
+					<height>80</height>
+					
+					<aspectratio>stretch</aspectratio>
+					<texture border="12">white.png</texture>
+					<colordiffuse>FFE1E1E1</colordiffuse>
+				</control>
+				<control type="label">
+					<posx>55</posx>
+					<posy>230</posy>
+					<width>290</width>
+					<height>60</height>
+					<label>$VAR[Episode_title]</label>
+					<font>MainMenu21</font>
+					<textcolor>FF707070</textcolor>
+					<align>left</align>
+					<scroll>false</scroll>
+				</control>
+				<control type="label">
+					<posx>55</posx>
+					<posy>260</posy>
+					<width>290</width>
+					<height>60</height>
+					<align>left</align>
+					<label>$VAR[Aired_or_Artist]</label>
+					<visible>true</visible>
+					<scroll>false</scroll>
+					<font>SubMenu20</font>
+					<textcolor>FF959595</textcolor>
+					<visible>!IsEmpty(ListItem.Title) | !substring(ListItem.Label,..,left)</visible>
+				</control>
+				<control type="image">
+					<posx>328</posx>
+					<posy>285</posy>
+					<width>30</width>
+					<height>30</height>
+					<texture>$INFO[ListItem.Overlay]</texture>
+					<aspectratio>stretch</aspectratio>
+					<colordiffuse>FF959595</colordiffuse>
+				</control>
+									
+			</itemlayout>
+			
+						
+			<focusedlayout height="440" width="340">
+			
+				<control type="image">
+					<posx>15</posx>
+					<posy>5</posy>
+					<width>346</width>
+					<height>340</height>
+					<aspectratio>stretch</aspectratio>
+					<colordiffuse>70FFFFFF</colordiffuse>
+					<texture background="true">diffuse/postershadow.png</texture>
+					
+				</control>
+
+				<control type="image">
+					<posx>40</posx>
+					<posy>9</posy>
+					<width>322</width>
+					<height>300</height>
+					<aspectratio scalediffuse="false">scale</aspectratio>
+					<texture diffuse="diffuse/albumdiffuse.png" fallback="DefaultAlbumCover.png">$INFO[ListItem.Art(thumb)]</texture>
+					<fadetime>400</fadetime>
+					<visible>Container.Content(albums)</visible>
+				</control>
+				<control type="image">
+					<posx>40</posx>
+					<posy>9</posy>
+					<width>322</width>
+					<height>240</height>
+					<aspectratio scalediffuse="false">scale</aspectratio>
+					<texture diffuse="diffuse/albumdiffuse.png" fallback="DefaultAlbumCover.png">$INFO[ListItem.Art(thumb)]</texture>
+					<fadetime>400</fadetime>
+					<visible>Container.Content(episodes)</visible>
+				</control>
+				<control type="image">
+					<posx>40</posx>
+					<posy>9</posy>
+					<width>322</width>
+					<height>250</height>
+					<aspectratio>keep</aspectratio>
+					<texture fallback="DefaultFallback.png">$VAR[Episode_Fallback]</texture>
+					<visible>IsEmpty(ListItem.Art(thumb))</visible>
+					
+				</control>
+				<control type="image">
+					<posx>70</posx>
+					<posy>9</posy>
+					<width>40</width>
+					<height>40</height>
+					<texture>bookmark.png</texture>
+					<visible>!substring(ListItem.Label,..,left) + [Stringcompare(Skin.String(BookmarkDBID1),ListItem.DBID) | Stringcompare(Skin.String(BookmarkDBID2),ListItem.DBID) | Stringcompare(Skin.String(BookmarkDBID3),ListItem.DBID)]</visible>
+					<visible>Container.Content(episodes) + substring(Container.FolderPath,videodb://tvshows)</visible>
+				</control>
+				<control type="image">
+					<description>white image</description>
+					<posx>42</posx>
+					<posy>239</posy>
+					<width>320</width>
+					<height>80</height>
+					
+					<aspectratio>stretch</aspectratio>
+					<texture border="12">white.png</texture>
+					<colordiffuse>skin.string(MainColorString)</colordiffuse>
+				</control>
+				<control type="label">
+					<posx>55</posx>
+					<posy>230</posy>
+					<width>290</width>
+					<height>60</height>
+					<label>$VAR[Episode_title]</label>
+					<font>MainMenu21</font>
+					<textcolor>FFE1E1E1</textcolor>
+					<align>left</align>
+					<scroll>false</scroll>
+				</control>
+				
+				<control type="label">
+					<posx>55</posx>
+					<posy>260</posy>
+					<width>290</width>
+					<height>60</height>
+					<align>left</align>
+					<label>$VAR[Aired_or_Artist]</label>
+					<visible>true</visible>
+					<scroll>false</scroll>
+					<font>SubMenu20</font>
+					<textcolor>FFE1E1E1</textcolor>
+					<visible>!IsEmpty(ListItem.Title) | !substring(ListItem.Label,..,left)</visible>	
+				</control>
+				<control type="image">
+					<posx>328</posx>
+					<posy>285</posy>
+					<width>30</width>
+					<height>30</height>
+					<texture>$INFO[ListItem.Overlay]</texture>
+					<aspectratio>stretch</aspectratio>
+					<!--colordiffuse>FF959595</colordiffuse-->
+				</control>
+
+			</focusedlayout>
+
+		</control>
+			
+		
+		<control type="textbox">
+			<posx>945</posx>
+			<posy>185</posy>
+			<width>230</width>
+			<height>118</height>
+			<align>justify</align>
+			<info>ListItem.Plot</info>
+			<font>plot</font>
+			<textcolor>FFD7D7D7</textcolor>
+			<autoscroll delay="600000" time="4000" repeat="10000" />
+		</control>
+			
+			<control type="grouplist">
+				<description>Media Codec Flagging Images</description>
+				<posx>255</posx>
+				<posy>93</posy>
+				<width>1030</width>
+				<height>50</height>
+				<align>center</align>
+				<itemgap>0</itemgap>
+				<orientation>horizontal</orientation>
+				<include>Media_flags_big</include>
+				<visible>Control.IsVisible(720)</visible>
+				<visible>Control.HasFocus(301) + !Skin.HasSetting(LockMainMenu)</visible>
+				<animation effect="fade" start="0" end="80" time="600">Visible</animation>
+				<animation effect="fade" start="80" end="0" time="600" tween="sine">Hidden</animation>
+			
+			</control>
+			<control type="grouplist">
+				<description>Media Codec Flagging Images</description>
+				<posx>5</posx>
+				<posy>93</posy>
+				<width>1280</width>
+				<height>50</height>
+				<align>center</align>
+				<itemgap>0</itemgap>
+				<orientation>horizontal</orientation>
+				<include>Media_flags_fullscreen</include>
+				<visible>Control.IsVisible(720)</visible>
+				<visible>!Control.HasFocus(301) + !Skin.HasSetting(LockMainMenu)</visible>
+				<animation effect="fade" start="0" end="80" time="600">Visible</animation>
+				<animation effect="fade" start="80" end="0" time="600" tween="sine">Hidden</animation>
+			
+			</control>
+
+
+			
 	
 			
-			<control type="panel" id="603">
-					
-				<posx>230</posx>
-				<posy>75</posy>
-				<!--include condition="!Skin.HasSetting(LockMainMenu)">LandscapeSmall</include>
-				<include condition="Skin.HasSetting(LockMainMenu)">LandscapeBig</include-->
-				<width>960</width>
-				<height>610</height>
-				<onup>300</onup>
-				<ondown>730</ondown>
-				<onleft>603</onleft>
-				<onright>603</onright>
-				<viewtype label="Landscape">info</viewtype>
-				<orientation>horizontal</orientation>
-				<pagecontrol>730</pagecontrol>
-				<focusposition>0</focusposition>
-				<scrolltime tween="cubic" easing="out">600</scrolltime>
-				<preloaditems>2</preloaditems>
-				<animation effect="slide" start="0,0" end="-110,0" time="400" condition="!Control.HasFocus(301) + !Skin.HasSetting(LockMainMenu)">Conditional</animation>
-								
-				<itemlayout width="192" height="288">
-					<control type="group">
-						<posx>0</posx>
-						<posy>24</posy>
-						<width>180</width>
-						<height>264</height>
-						
-						<control type="image">
-							<posx>0</posx>
-							<posy>0</posy>
-							<width>180</width>
-							<height>360</height>
-							<texture background="true">white.png</texture>
-							<colordiffuse>FFEBEBEB</colordiffuse>
-						</control>
-																	
-						<control type="image">
-							<posx>0</posx>
-							<posy>0</posy>
-							<width>180</width>
-							<height>102</height>
-							<texture background="true" fallback="DefaultAlbumCover.png">$VAR[Landscape_Image]</texture>
-							<aspectratio aligny="top">scale</aspectratio>
-							<!--visible>!substring(Listitem.Label,..,Left)</visible-->
-						</control>
-						
-						<control type="image">
-							<posx>30</posx>
-							<posy>0</posy>
-							<width>120</width>
-							<height>102</height>
-							<aspectratio>stretch</aspectratio>
-							<texture background="true" diffuse="poster/posterdiffusesmall.png" >$VAR[Landscape_Fallback]</texture>
-							<animation effect="fade" start="0" end="80" time="0" condition="true">Conditional</animation>
-							
-							<colordiffuse>EBFFFFFF</colordiffuse>
-						</control>
-						
-						<control type="image">
-							<posx>10</posx>
-							<posy>0</posy>
-							<width>30</width>
-							<height>30</height>
-							<texture>bookmark.png</texture>
-							<visible>!substring(ListItem.Label,..,left) + [Stringcompare(Skin.String(BookmarkDBID1),ListItem.DBID) | Stringcompare(Skin.String(BookmarkDBID2),ListItem.DBID) | Stringcompare(Skin.String(BookmarkDBID3),ListItem.DBID)]</visible>
-							<visible>Container.Content(episodes) + substring(Container.FolderPath,videodb://tvshows)</visible>
-						</control>
-						
-						<control type="textbox">
-							<posx>6</posx>
-							<posy>102</posy>
-							<width>156</width>
-							<height>85</height>
-							<label>$VAR[Landscape_Header]</label>
-							<font>font14</font>
-							<textcolor>FF898989</textcolor>
-							<aligny>top</aligny>
-							<shadowcolor>00FFFFFF</shadowcolor>
-							<autoscroll>false</autoscroll>
-						</control>
-						
-						<control type="image">
-							<posx>35</posx>
-							<posy>205</posy>
-							<width>100</width>
-							<height>20</height>
-							<texture background="true">$INFO[ListItem.StarRating]</texture>
-							
-							<aspectratio>scale</aspectratio>
-							
-						</control>
-										
-						<control type="label">
-							<posx>6</posx>
-							<posy>240</posy>
-							<width>156</width>
-							<height>15</height>
-							<label>$VAR[Landscape_Detail]</label>
-							<font>landscape_small</font>
-							<textcolor>FF898989</textcolor>
-							<aligny>center</aligny>
-							<scroll>false</scroll>
-						</control>
-						
-						<control type="label">
-							<posx>160</posx>
-							<posy>240</posy>
-							<width>156</width>
-							<height>15</height>
-							<label>$INFO[ListItem.Property(UnWatchedEpisodes)]</label>
-							<font>landscape_small</font>
-							<textcolor>FF898989</textcolor>
-							<align>right</align>
-							<aligny>center</aligny>
-							
-							<visible>!StringCompare(ListItem.Property(UnWatchedEpisodes),0)</visible>
-						</control>
-						
-						<control type="image">
-							<posx>150</posx>
-							<posy>236</posy>
-							<width>24</width>
-							<height>24</height>
-							<texture>$VAR[Menu_Overlay_Image]</texture>
-							<aspectratio>stretch</aspectratio>
-							<colordiffuse>FFABABAB</colordiffuse>
-							
-						</control>
-						
-						<control type="image">
-							<posx>148</posx>
-							<posy>236</posy>
-							<width>24</width>
-							<height>24</height>
-							<texture>$INFO[ListItem.Overlay]</texture>
-							<aspectratio>stretch</aspectratio>
-							<colordiffuse>FFABABAB</colordiffuse>
-							
-						</control>
-						
-					</control>	
-					
-				</itemlayout>
-
-				<focusedlayout width="192" height="288">
-				
-					<control type="group">
-					
-						<posx>0</posx>
-						<posy>24</posy>
-						<width>180</width>
-						<height>264</height>
-						
-						<control type="image">
-						
-							<posx>0</posx>
-							<posy>0</posy>
-							<width>180</width>
-							<height>360</height>
-							<texture background="true">white.png</texture>
-							
-							<colordiffuse>skin.string(MainColorString)</colordiffuse>
-							
-						</control>
-																	
-						<control type="image">
-						
-							<posx>0</posx>
-							<posy>0</posy>
-							<width>180</width>
-							<height>102</height>
-							<texture background="true" fallback="DefaultAlbumCover.png">$VAR[Landscape_Image]</texture>
-							<aspectratio aligny="top">scale</aspectratio>
-							<!--visible>!substring(Listitem.Label,..,Left)</visible-->
-						</control>
-						
-						<control type="image">
-							<posx>30</posx>
-							<posy>0</posy>
-							<width>120</width>
-							<height>102</height>
-							<aspectratio>stretch</aspectratio>
-							<texture background="true" diffuse="poster/posterdiffusesmall.png" >$VAR[Landscape_Fallback]</texture>
-							<animation effect="fade" start="0" end="80" time="0" condition="true">Conditional</animation>
-							
-							<colordiffuse>EBFFFFFF</colordiffuse>
-						</control>
-						
-						<control type="image">
-						
-							<posx>10</posx>
-							<posy>0</posy>
-							<width>30</width>
-							<height>30</height>
-							<texture>bookmark.png</texture>
-							<visible>!substring(ListItem.Label,..,left) + [Stringcompare(Skin.String(BookmarkDBID1),ListItem.DBID) | Stringcompare(Skin.String(BookmarkDBID2),ListItem.DBID) | Stringcompare(Skin.String(BookmarkDBID3),ListItem.DBID)]</visible>
-							<visible>Container.Content(episodes) + substring(Container.FolderPath,videodb://tvshows)</visible>
-						</control>
-						
-						<control type="textbox">
-						
-							<posx>6</posx>
-							<posy>102</posy>
-							<width>156</width>
-							<height>85</height>
-							<label>$VAR[Landscape_Header]</label>
-							<font>font14</font>
-							<textcolor>FFE1E1E1</textcolor>
-							<aligny>top</aligny>
-							<shadowcolor>00FFFFFF</shadowcolor>
-							<autoscroll>false</autoscroll>
-							
-						</control>
-						
-						<control type="image">
-						
-							<posx>35</posx>
-							<posy>205</posy>
-							<width>100</width>
-							<height>20</height>
-							<texture background="true">$INFO[ListItem.StarRating]</texture>
-							
-							<aspectratio>scale</aspectratio>
-							
-						</control>
-						
-						<control type="label">
-						
-							<posx>6</posx>
-							<posy>240</posy>
-							<width>156</width>
-							<height>15</height>
-							<label>$VAR[Landscape_Detail]</label>
-							<font>landscape_small</font>
-							<textcolor>FFE1E1E1</textcolor>
-							<aligny>center</aligny>
-							
-						</control>
-						
-						<control type="label">
-						
-							<posx>160</posx>
-							<posy>240</posy>
-							<width>156</width>
-							<height>15</height>
-							<label>$INFO[ListItem.Property(UnWatchedEpisodes)]</label>
-							<font>landscape_small</font>
-							<textcolor>FFE1E1E1</textcolor>
-							<align>right</align>
-							<aligny>center</aligny>
-							
-							<visible>!StringCompare(ListItem.Property(UnWatchedEpisodes),0)</visible>
-							
-						</control>
-						
-						<control type="image">
-							
-							<posx>148</posx>
-							<posy>236</posy>
-							<width>24</width>
-							<height>24</height>
-							<texture>$INFO[ListItem.Overlay]</texture>
-							<aspectratio>stretch</aspectratio>
-							<!--colordiffuse>FFABABAB</colordiffuse-->
-							
-						</control>
-						
-					</control>	
-					
-				</focusedlayout>
-
-			</control>
+		<control type="scrollbar" id="63">
+			<texturesliderbackground>buttons/scrollbgH.png</texturesliderbackground>
+			<texturesliderbar>-</texturesliderbar>
+			<texturesliderbarfocus>-</texturesliderbarfocus>
+			<textureslidernib>buttons/scrollnibH.png</textureslidernib>
+			<textureslidernibfocus>buttons/scrollnibH.png</textureslidernibfocus>
+			<orientation>horizontal</orientation>
+			<showonepage>true</showonepage>
+			<posx>310</posx>
+			<posy>704</posy>
+			<width>900</width>
+			<height>10</height>
+			<onup>720</onup>
+			<visible>Control.IsVisible(720)</visible>
 			
-			<control type="scrollbar" id="730">
-			
-				<texturesliderbackground>buttons/scrollbgH.png</texturesliderbackground>
-				<texturesliderbar>-</texturesliderbar>
-				<texturesliderbarfocus>-</texturesliderbarfocus>
-				<textureslidernib>buttons/scrollnibH.png</textureslidernib>
-				<textureslidernibfocus>buttons/scrollnibH.png</textureslidernibfocus>
-				<orientation>horizontal</orientation>
-				<showonepage>true</showonepage>
-				<posx>240</posx>
-				<posy>690</posy>
-				<width>950</width>
-				<height>10</height>
-				<onup>603</onup>
-				<visible>Control.IsVisible(603) + StringCompare(Container.Viewmode,Landscape)</visible>
-				<animation effect="fade" start="100" end="50" time="200" reversable="false" condition="!Control.HasFocus(730)">Conditional</animation>
-				<animation effect="slide" start="0,0" end="-110,0" time="400" condition="!Control.HasFocus(301) + !Skin.HasSetting(LockMainMenu)">Conditional</animation>
-			</control>
-		
+			<animation effect="slide" start="0,0" end="-150,0" time="600" condition="!Control.HasFocus(301) + !Skin.HasSetting(LockMainMenu)">Conditional</animation>
 		</control>
-    </include>
+			
+		
+	</control>
+</include>
 	
 </includes>
