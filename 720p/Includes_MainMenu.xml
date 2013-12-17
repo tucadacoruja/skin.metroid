@@ -10,8 +10,8 @@
 	<include name="MainMenu">
 	
 	<control type="group">
-		<animation effect="slide" start="0,0" end="-250,0" time="800" delay="100" reversible="false" condition="![Control.HasFocus(301) | Window.IsVisible(home) | Window.IsVisible(profiles) | Window.IsVisible(weather)] + !Skin.HasSetting(LockMainMenu)">Conditional</animation>
-		<animation effect="slide" start="-250,0" end="0,0" time="250" reversible="false" condition="Control.HasFocus(301) + ![Window.IsVisible(home) | Window.IsVisible(profiles) | Window.IsVisible(weather)] + !Skin.HasSetting(LockMainMenu)">Conditional</animation>
+		<animation effect="slide" start="0,0" end="-250,0" time="800" delay="100" reversible="false" tween="cubic" easing="out" condition="![Control.HasFocus(301) | Window.IsVisible(home) | Window.IsVisible(profiles) | Window.IsVisible(weather)] + !Skin.HasSetting(LockMainMenu)">Conditional</animation>
+		<animation effect="slide" start="-250,0" end="0,0" time="400" delay="20" reversible="false" tween="cubic" easing="out" condition="Control.HasFocus(301) + ![Window.IsVisible(home) | Window.IsVisible(profiles) | Window.IsVisible(weather)] + !Skin.HasSetting(LockMainMenu)">Conditional</animation>
 		
 		<control type="button" id="300">
 			<posx>1</posx>
