@@ -3,16 +3,14 @@
 
 <!------file includes------>
 <include file="Defaults.xml" />
-<include file="Includes_Views.xml" />
 <include file="Includes_MainMenu.xml" />
 <include file="Includes_Animations.xml" />
 <include file="Includes_Flags.xml" />
-<include file="Includes_Music.xml" />
 <include file="Includes_Widgets.xml" />
 <include file="Includes_Metroid.xml" />
 <include file="Includes_Holiday.xml" />
 <include file="Variables.xml" />
-<include file="_debug.xml" />
+
 
 <!------viewtypes------>
 <include file="Viewtype_Panel.xml" />
