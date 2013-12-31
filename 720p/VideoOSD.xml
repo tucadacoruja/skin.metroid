@@ -89,7 +89,7 @@
 				<texturesliderbar>osd/seek/EmptyBar.png</texturesliderbar>
 				<textureslidernib>osd/seek/OsdSearchNib.png</textureslidernib>
 				<textureslidernibfocus>osd/seek/OsdSearchNib.png</textureslidernibfocus>
-				<animation reversible="false" effect="zoom" end="100" start="80" time="300">focus</animation>
+				<animation effect="fade" end="100" start="30" time="500">focus</animation>
 			</control>
 			
 			<control type="label">

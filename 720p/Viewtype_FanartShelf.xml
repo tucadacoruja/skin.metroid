@@ -139,7 +139,7 @@
 				
 				<control type="group">
 				<animation reversible="false" effect="zoom" end="0,0,190,280" start="2,100,123,180" time="300">Visible</animation>
-				<visible>Control.HasFocus(301)</visible>
+				<visible>!Control.HasFocus(781)</visible>
 						
 					<control type="image">
 						<posx>5</posx>

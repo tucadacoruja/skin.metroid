@@ -221,14 +221,15 @@
 						<onclick>Skin.ToggleSetting(HideGlobalMovies)</onclick>
 						<selected>!Skin.HasSetting(HideGlobalMovies)</selected>
 					</control>
-					<control type="radiobutton" id="119">
-						<include>SettingsButton</include>
-						<description>alphabetical subcategories</description>
-						<label> - $LOCALIZE[31079] $LOCALIZE[31221]</label>
-						<onclick>Skin.ToggleSetting(MoviePlaylists)</onclick>
-						<selected>!Skin.HasSetting(MoviePlaylists)</selected>
-						<enable>!Skin.HasSetting(HideGlobalMovies)</enable>
-					</control>
+						<control type="radiobutton" id="118">
+							<include>SettingsButton</include>
+							<description>alphabetical subcategories</description>
+							<label> - $LOCALIZE[31079] $LOCALIZE[31221]</label>
+							<onclick>Skin.ToggleSetting(MoviePlaylists)</onclick>
+							<selected>!Skin.HasSetting(MoviePlaylists)</selected>
+							<enable>!Skin.HasSetting(HideGlobalMovies)</enable>
+						</control>
+
 					<control type="radiobutton" id="102">
 						<include>SettingsButton</include>
 						<description>My Tv Shows in main menu</description>
@@ -236,14 +237,15 @@
 						<onclick>Skin.ToggleSetting(HideGlobalTvshows)</onclick>
 						<selected>!Skin.HasSetting(HideGlobalTvshows)</selected>
 					</control>
-					<control type="radiobutton" id="118">
-						<include>SettingsButton</include>
-						<description>alphabetical subcategories</description>
-						<label> - $LOCALIZE[31080] $LOCALIZE[31221]</label>
-						<onclick>Skin.ToggleSetting(TvShowPlaylists)</onclick>
-						<selected>!Skin.HasSetting(TvShowPlaylists)</selected>
-						<enable>!Skin.HasSetting(HideGlobalTvshows)</enable>
-					</control>
+						<control type="radiobutton" id="120">
+							<include>SettingsButton</include>
+							<description>alphabetical subcategories</description>
+							<label> - $LOCALIZE[31080] $LOCALIZE[31221]</label>
+							<onclick>Skin.ToggleSetting(TvShowPlaylists)</onclick>
+							<selected>!Skin.HasSetting(TvShowPlaylists)</selected>
+							<enable>!Skin.HasSetting(HideGlobalTvshows)</enable>
+						</control>
+
 					<control type="radiobutton" id="103">
 						<include>SettingsButton</include>
 						<description>My Music in main menu</description>
@@ -251,6 +253,14 @@
 						<onclick>Skin.ToggleSetting(HideGlobalMusic)</onclick>
 						<selected>!Skin.HasSetting(HideGlobalMusic)</selected>
 					</control>
+						<control type="radiobutton" id="121">
+							<include>SettingsButton</include>
+							<description>back behavior</description>
+							<label> - $LOCALIZE[31222]</label>
+							<onclick>Skin.ToggleSetting(MusicBackInOneStep)</onclick>
+							<selected>!Skin.HasSetting(MusicBackInOneStep)</selected>
+							<enable>!Skin.HasSetting(HideGlobalMusic)</enable>
+						</control>
 					<control type="radiobutton" id="117">
 						<include>SettingsButton</include>
 						<description>My Music Videos in main menu</description>
@@ -279,13 +289,7 @@
 						<onclick>Skin.ToggleSetting(PicsHome)</onclick>
 						<selected>!Skin.HasSetting(PicsHome)</selected>
 					</control>
-					<control type="radiobutton" id="105">
-						<include>SettingsButton</include>
-						<description>Programs in main menu</description>
-						<label>$LOCALIZE[31147] $LOCALIZE[31142]</label>
-						<onclick>Skin.ToggleSetting(ProgramsHome)</onclick>
-						<selected>Skin.HasSetting(ProgramsHome)</selected>
-					</control>
+				
 					<control type="radiobutton" id="106">
 						<include>SettingsButton</include>
 						<description>Weather in main menu</description>
@@ -295,8 +299,8 @@
 					</control>
 					<control type="radiobutton" id="107">
 						<include>SettingsButton</include>
-						<description>Video addons in main menu</description>
-						<label>$LOCALIZE[31149] $LOCALIZE[31142]</label>
+						<description>addons in main menu</description>
+						<label>$LOCALIZE[24001] $LOCALIZE[31142]</label>
 						<onclick>Skin.ToggleSetting(AddonHome)</onclick>
 						<selected>Skin.HasSetting(AddonHome)</selected>
 					</control>
@@ -307,19 +311,27 @@
 						<onclick>Skin.ToggleSetting(FavoritesHome)</onclick>
 						<selected>Skin.HasSetting(FavoritesHome)</selected>
 					</control>
-					<control type="radiobutton" id="109">
-						<include>SettingsButton</include>
-						<description>Power in main menu</description>
-						<label>$LOCALIZE[31090] $LOCALIZE[31142]</label>
-						<onclick>Skin.ToggleSetting(PowerHome)</onclick>
-						<selected>!Skin.HasSetting(PowerHome)</selected>
-					</control>
+					
 					<control type="radiobutton" id="110">
 						<include>SettingsButton</include>
 						<description>viewtype button in main menu</description>
 						<label>$LOCALIZE[31153] $LOCALIZE[31142]</label>
 						<onclick>Skin.ToggleSetting(HideGlobalViews)</onclick>
 						<selected>!Skin.HasSetting(HideGlobalViews)</selected>
+					</control>
+					<control type="radiobutton" id="114">
+						<include>SettingsButton</include>
+						<description>Sort options in main menu</description>
+						<label>$LOCALIZE[31156] $LOCALIZE[31142]</label>
+						<onclick>Skin.ToggleSetting(HideGlobalSort)</onclick>
+						<selected>Skin.HasSetting(HideGlobalSort)</selected>
+					</control>
+					<control type="radiobutton" id="109">
+						<include>SettingsButton</include>
+						<description>Power in main menu</description>
+						<label>$LOCALIZE[31090] $LOCALIZE[31142]</label>
+						<onclick>Skin.ToggleSetting(PowerHome)</onclick>
+						<selected>!Skin.HasSetting(PowerHome)</selected>
 					</control>
 					<control type="radiobutton" id="111">
 						<include>SettingsButton</include>
@@ -342,13 +354,7 @@
 						<onclick>Skin.ToggleSetting(HideGlobalPrevious)</onclick>
 						<selected>Skin.HasSetting(HideGlobalPrevious)</selected>
 					</control>
-					<control type="radiobutton" id="114">
-						<include>SettingsButton</include>
-						<description>Sort options in main menu</description>
-						<label>$LOCALIZE[31156] $LOCALIZE[31142]</label>
-						<onclick>Skin.ToggleSetting(HideGlobalSort)</onclick>
-						<selected>Skin.HasSetting(HideGlobalSort)</selected>
-					</control>
+					
 					
 					
 					

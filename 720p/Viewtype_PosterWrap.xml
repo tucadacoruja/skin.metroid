@@ -21,7 +21,7 @@
 			<orientation>horizontal</orientation>
 			<include>Media_flags_big</include>
 		
-			<visible>[Control.HasFocus(301) + Skin.HasSetting(LockMainMenu)] | !Skin.HasSetting(LockMainMenu)</visible>
+			<visible>Control.HasFocus(301) + !Skin.HasSetting(LockMainMenu)</visible>
 			<animation effect="fade" start="0" end="80" time="600">Visible</animation>
 			<animation effect="fade" start="80" end="0" time="600" tween="sine">Hidden</animation>
 		

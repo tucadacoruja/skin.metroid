@@ -10,7 +10,7 @@
 	<include name="MainMenu">
 	
 	<control type="group">
-		<animation effect="slide" start="0,0" end="-250,0" time="800" delay="100" reversible="false" tween="cubic" easing="out" condition="![Control.HasFocus(301) | Window.IsVisible(home) | Window.IsVisible(profiles) | Window.IsVisible(weather)] + !Skin.HasSetting(LockMainMenu)">Conditional</animation>
+		<animation effect="slide" start="0,0" end="-250,0" time="730" delay="70" reversible="false" condition="![Control.HasFocus(301) | Window.IsVisible(home) | Window.IsVisible(profiles) | Window.IsVisible(weather)] + !Skin.HasSetting(LockMainMenu)">Conditional</animation>
 		<animation effect="slide" start="-250,0" end="0,0" time="400" delay="20" reversible="false" tween="cubic" easing="out" condition="Control.HasFocus(301) + ![Window.IsVisible(home) | Window.IsVisible(profiles) | Window.IsVisible(weather)] + !Skin.HasSetting(LockMainMenu)">Conditional</animation>
 		
 		<control type="button" id="300">
@@ -95,6 +95,7 @@
 						<animation effect="slide" start="-300,0" end="0,0" time="350" reversable="true" condition="!IsEmpty(skin.string(SubMenu3))">Conditional</animation> 
 						<animation effect="slide" start="-300,0" end="0,0" time="350" reversable="true" condition="!IsEmpty(skin.string(SubMenu4))">Conditional</animation> 
 						<animation effect="slide" start="-300,0" end="0,0" time="350" reversable="true" condition="!IsEmpty(skin.string(SubMenu5))">Conditional</animation> 
+						<animation effect="slide" start="-300,0" end="0,0" time="350" reversable="true" condition="!IsEmpty(skin.string(SubMenu6))">Conditional</animation> 
 					</control>
 					
 				</itemlayout>
@@ -183,6 +184,7 @@
 						<onfocus condition="IsEmpty(Container(301).ListItem.Property(DropdownMenu3)">Skin.Setstring(SubMenu3,)</onfocus>
 						<onfocus condition="IsEmpty(Container(301).ListItem.Property(DropdownMenu4)">Skin.Setstring(SubMenu4,)</onfocus>
 						<onfocus condition="IsEmpty(Container(301).ListItem.Property(DropdownMenu5)">Skin.Setstring(SubMenu5,)</onfocus>
+						<onfocus condition="IsEmpty(Container(301).ListItem.Property(DropdownMenu6)">Skin.Setstring(SubMenu6,)</onfocus>
 						<visible allowhiddenfocus="true">false</visible>
 						<enable>true</enable>
 					</control> 
@@ -246,7 +248,8 @@
 							<label>31078</label>
 							<icon>Home/icons/music.png</icon>
 							<visible>!Skin.HasSetting(HideGlobalMusic)</visible>
-							<onclick>xbmc.activatewindow(musiclibrary,songs)</onclick>
+							<onclick condition="!Skin.HasSetting(MusicBackInOneStep)">xbmc.activatewindow(musiclibrary,songs,return)</onclick>
+							<onclick condition="Skin.HasSetting(MusicBackInOneStep)">xbmc.activatewindow(musiclibrary,songs)</onclick>
 							<visible>Library.HasContent(Music)</visible>
 						</item>
 						
@@ -357,11 +360,17 @@
 						
 						<item id="106">
 							<description>Addons</description>
-							<label>31086</label>
-							<onclick>ActivateWindow(Videos, addons://sources/video)</onclick>
+							<!--label>31086</label-->
+							<label>$LOCALIZE[24001]</label>
+							<!--onclick>ActivateWindow(Videos, addons://sources/video)</onclick-->
+							<onclick condition="IsEmpty(Skin.String(SubMenu6))">Skin.SetString(SubMenu6,open)</onclick>
+							<onclick condition="!IsEmpty(Skin.String(SubMenu6))">Skin.Reset(SubMenu6)</onclick>
+							<onclick condition="IsEmpty(Skin.String(SubMenu6))">Skin.SetString(SubMenu6,open)</onclick> 
+							<property name="DropdownMenu6">not_empty</property>
 							<visible>Skin.HasSetting(AddonHome)</visible>
 						</item>
-										  
+						<include>AddonSubItems</include>
+						
 						<item id="107">
 							<label>31087</label>
 							<icon>-</icon>
@@ -377,6 +386,7 @@
 							<label>31088</label>
 							<onclick condition="IsEmpty(skin.string(SubMenu3))">Skin.Setstring(SubMenu3,open)</onclick>
 							<onclick condition="!IsEmpty(skin.string(SubMenu3))">Skin.Reset(SubMenu2)</onclick>
+							<onclick condition="IsEmpty(skin.string(SubMenu3))">Skin.Setstring(SubMenu3,open)</onclick>
 							<property name="DropdownMenu3">not_empty</property>
 							<visible>!Skin.HasSetting(HideGlobalSources)</visible>
 						</item>
@@ -397,13 +407,13 @@
 							<visible>!Skin.HasSetting(PowerHome)</visible>
 						</item>
 									  
-						<item id="111">
+						<!--item id="111">
 							<description>Programs</description>
 							<label>31091</label>
 							<label2></label2>
 							<onclick>xbmc.activatewindow(programs)</onclick>
 							<visible>Skin.HasSetting(ProgramsHome)</visible>
-						</item>
+						</item-->
 							  
 						<item id="112">
 							<description>Play Disk</description>
@@ -1384,6 +1394,51 @@
 			<property name="SubMenuItem">not_empty</property>
 			<property name="DropdownMenu5">not_empty</property>
 		</item>
+	</include>
+	
+	<include name="AddonSubItems">
+		<item id="1">
+			<description>install</description>
+			<label>Install</label>
+			<onclick>XBMC.ActivateWindow(Programs,Addons://all/,return)</onclick>
+			<visible>!IsEmpty(skin.string(SubMenu6))</visible>
+			<property name="SubMenuItem">not_empty</property>
+			<property name="DropdownMenu6">not_empty</property>
+		</item>
+		<item id="2">
+			<description>Program addons</description>
+			<label>$LOCALIZE[0]</label>
+			<onclick>XBMC.ActivateWindow(Programs,Addons,return)</onclick>
+			<visible>!IsEmpty(skin.string(SubMenu6))</visible>
+			<property name="SubMenuItem">not_empty</property>
+			<property name="DropdownMenu6">not_empty</property>
+		</item>
+		<item id="3">
+			<description>Video addons</description>
+			<label>$LOCALIZE[157]</label>
+			<onclick>ActivateWindow(VideoLibrary,Addons,return)</onclick>
+			<visible>!IsEmpty(skin.string(SubMenu6))</visible>
+			<property name="SubMenuItem">not_empty</property>
+			<property name="DropdownMenu6">not_empty</property>
+		</item>
+		<item id="4">
+			<description>Music addons</description>
+			<label>$LOCALIZE[2]</label>
+			<onclick condition="Library.HasContent(Music)">ActivateWindow(MusicLibrary,Addons,return)</onclick>
+			<onclick condition="!Library.HasContent(Music)">ActivateWindow(MusicFiles,Addons,return)</onclick>
+			<visible>!IsEmpty(skin.string(SubMenu6))</visible>
+			<property name="SubMenuItem">not_empty</property>
+			<property name="DropdownMenu6">not_empty</property>
+		</item>
+		<item id="5">
+			<description>Picture addons</description>
+			<label>$LOCALIZE[1]</label>
+			<onclick>XBMC.ActivateWindow(Pictures,Addons,return)</onclick>
+			<visible>!IsEmpty(skin.string(SubMenu6))</visible>
+			<property name="SubMenuItem">not_empty</property>
+			<property name="DropdownMenu6">not_empty</property>
+		</item>
+		
 	</include>
 
 </includes>

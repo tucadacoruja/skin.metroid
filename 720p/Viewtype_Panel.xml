@@ -22,8 +22,6 @@
 					
 				<posx>230</posx>
 				<posy>75</posy>
-				<!--include condition="!Skin.HasSetting(LockMainMenu)">LandscapeSmall</include>
-				<include condition="Skin.HasSetting(LockMainMenu)">LandscapeBig</include-->
 				<width>960</width>
 				<height>610</height>
 				<onup>300</onup>

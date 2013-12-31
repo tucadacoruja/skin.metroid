@@ -6,7 +6,7 @@
 <onload></onload>
 
 
-<views>603,602,579,525,504,781,501,709,720,50</views>
+<views>603,602,579,525,504,781,677,501,709,50</views>
 <controls>
 
 
@@ -123,7 +123,7 @@
 <include>FanartShelf</include><!---781-->
 <include>Episodes</include><!---504-->
 <include>Panel</include><!---603--> 
-<include>Landscape</include><!---720--> 
+<include>Icons</include><!---677--> 
 
 
 <include>BottomInfoBar</include>

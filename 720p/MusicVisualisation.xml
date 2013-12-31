@@ -72,55 +72,44 @@
 	<control type="group">
 	<animation effect="slide" start="0,0" end="-350,0" time="500" condition="Window.IsVisible(addonsettings) | Window.IsActive(DialogSelect.xml)">Conditional</animation>
 	
-		<!--control type="image">
-			<posx>200</posx>
-			<posy>445</posy>
-			<width>330</width>
-			<height>450</height>
-			<aspectratio>stretch</aspectratio>
-			<colordiffuse>36FFFFFF</colordiffuse>
-			<texture background="true">diffuse/postershadow.png</texture>
-			<animation effect="rotatex" end="25" center="auto" time="0" condition="true">Conditional</animation>
-		</control-->
 		
-		<!--control type="group">
-		<posx>-300</posx>
-		<posy>15</posy>
-			<animation effect="zoom" end="50" center="auto" time="0" condition="true">Conditional</animation>
-			<animation effect="rotatey" end="-25" center="auto" time="0" condition="true">Conditional</animation>
+		
+		<control type="group">
+		<posx>-160</posx>
+		<posy>0</posy>
+		<animation effect="zoom" end="80" center="auto" time="0" condition="true">Conditional</animation>
+		
 			<control type="image">
-				<posx>128</posx>
-				<posy>96</posy>
+				<posx>70</posx>
+				<posy>105</posy>
 				<width>446</width>
-				<height>524</height>
+				<height>500</height>
 				<aspectratio>stretch</aspectratio>
-				<colordiffuse>55FFFFFF</colordiffuse>
+				<colordiffuse>70FFFFFF</colordiffuse>
 				<texture background="true">diffuse/postershadow.png</texture>
 				
 			</control>
 			
 			<control type="image">
-				<description>background image</description>
-				<posx>91</posx>
-				<posy>83</posy>
-				<width>290</width>
-				<height>520</height>
-				
+				<posx>108</posx>
+				<posy>108</posy>
+				<width>428</width>
+				<height>494</height>
 				<aspectratio>stretch</aspectratio>
-				<texture border="12" diffuse="SelectDiff.png">dialog/contentbg.png</texture>
-				<colordiffuse>FFC2C2C2</colordiffuse>
-				<animation effect="fade" start="0" end="70" time="0" condition="true">Conditional</animation>
+				<texture border="5">BlueBackground.png</texture>
+				<bordertexture border="5">whiteborder.png</bordertexture>
+				<bordersize>5</bordersize>
+				<animation effect="fade" start="0" end="80" time="0" condition="true">Conditional</animation>
 			</control>
 			
 			<control type="image">
-				<posx>110</posx>
+				<posx>112</posx>
 				<posy>109</posy>
-				<width>300</width>
+				<width>422</width>
 				<height>410</height>
 				<aspectratio scalediffuse="false">scale</aspectratio>
-				<texture diffuse="diffuse/albumdiffuse.png" fallback="DefaultAlbumCover.png">$INFO[MusicPlayer.offset(1).Cover]</texture>
-				<colordiffuse>FFC2C2C2</colordiffuse>
-				<animation effect="fade" start="0" end="60" time="0" condition="true">Conditional</animation>
+				<texture >$INFO[MusicPlayer.offset(1).Cover]</texture>
+				<fadetime>400</fadetime>
 			</control>
 			<control type="image">
 				<posx>110</posx>
@@ -129,27 +118,50 @@
 				<height>410</height>
 				<aspectratio>keep</aspectratio>
 				<texture>DefaultFallback.png</texture>
-				<visible>Substring(MusicPlayer.offset(1).Cover,.png) | IsEmpty(MusicPlayer.offset(1).Cover)</visible>
-				<animation effect="fade" start="0" end="5" time="0" condition="true">Conditional</animation>
-			</control>
-			
-			<control type="label">
-				<posx>120</posx>
-				<posy>527</posy>
-				<height>30</height>
-				<width min="29" max="350">auto</width>
-				<label>[UPPERCASE]$INFO[MusicPlayer.offset(1).Title][/UPPERCASE]</label>
-				<font>MainMenu21</font>
-				<textcolor>white</textcolor>
+				<visible>IsEmpty(MusicPlayer.offset(1).Cover)</visible>
 				
-				<scroll>false</scroll>
-				<align>left</align>
-				<animation effect="fade" start="0" end="37" time="0" reversable="false" condition="true">Conditional</animation>
 			</control>
-			
-		</control-->
+			<control type="image">
+				<description>white image</description>
+				<posx>112</posx>
+				<posy>479</posy>
+				<width>420</width>
+				<height>120</height>
+				
+				<aspectratio>stretch</aspectratio>
+				<texture border="12">white.png</texture>
+				<colordiffuse>FFEBEBEB</colordiffuse>
+			</control>
+			<control type="label">
+				<posx>125</posx>
+				<posy>480</posy>
+				<width>410</width>
+				<height>60</height>
+				<align>left</align>
+				<label>$INFO[MusicPlayer.offset(1).Artist]</label>
+				<visible>true</visible>
+				<scroll>false</scroll>
+				<font>Favourites</font>
+				<textcolor>FF707070</textcolor>
+				<!--animation effect="fade" start="0" end="6" time="0" reversable="false" condition="true">Conditional</animation-->
+			</control>
+
+			<control type="label">
+				<posx>125</posx>
+				<posy>515</posy>
+				<width>410</width>
+				<height>60</height>
+				<label>[UPPERCASE]$INFO[MusicPlayer.offset(1).Title] - $INFO[MusicPlayer.offset(1).Duration][/UPPERCASE]</label>
+				<font>MainMenu21</font>
+				<textcolor>FF707070</textcolor>
+				<!--shadowcolor>skin.string(MainColorString)</shadowcolor-->
+				<align>left</align>
+				<scroll>false</scroll>
+				<!--animation effect="fade" start="0" end="60" time="00" reversable="false" condition="true">Conditional</animation-->
+			</control>
+		</control>
 		
-		<control type="group">
+		<!--control type="group">
 			<posx>-8</posx>
 			<posy>92</posy>
 			<animation effect="rotatey" end="-30" center="auto" time="0" condition="true">Conditional</animation>
@@ -183,7 +195,7 @@
 				<aspectratio>keep</aspectratio>
 				<texture>DefaultFallback.png</texture>
 				<visible>Substring(MusicPlayer.offset(2).Cover,.png) | IsEmpty(MusicPlayer.offset(2).Cover)</visible>
-				<!--animation effect="fade" start="0" end="100" time="0" condition="true">Conditional</animation-->
+			
 			</control>
 			
 			<control type="image">
@@ -215,9 +227,9 @@
 				<aspectratio>keep</aspectratio>
 				<texture>DefaultFallback.png</texture>
 				<visible>Substring(MusicPlayer.offset(1).Cover,.png) | IsEmpty(MusicPlayer.offset(1).Cover)</visible>
-				<!--animation effect="fade" start="0" end="100" time="0" condition="true">Conditional</animation-->
+		
 			</control>
-		</control>
+		</control-->
 
 		
 		<control type="group">

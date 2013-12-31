@@ -514,20 +514,8 @@
 				<property name="Fanart">$INFO[Window(Home).Property(RandomEpisode.7.Art(tvshow.fanart))]</property>
 				<property name="Path">$INFO[Window(Home).Property(RandomEpisode.7.File)]</property>
 				<property name="Logo">$INFO[Window(Home).Property(RandomEpisode.7.Art(tvshow.clearlogo))]</property>
-			</item>
-			<item>
-				<label>$INFO[Window(Home).Property(RandomEpisode.8.Title)]</label>
-				<label2>$INFO[Window(Home).Property(RandomEpisode.8.TVshowTitle)]</label2>
-				<onclick>$INFO[Window(Home).Property(RandomEpisode.8.Play)]</onclick>
-				<thumb>$INFO[Window(Home).Property(RandomEpisode.8.Art(thumb))]</thumb>
-				<property name="Plot">$INFO[Window(Home).Property(RandomEpisode.8.Plot)]</property>
-				<property name="Rating">$INFO[Window(Home).Property(RandomEpisode.8.Rating)]</property>
-				<property name="EpisodeNumber">S$INFO[Window(Home).Property(RandomEpisode.7.Season)]E$INFO[Window(Home).Property(RandomEpisode.8.Episode)]</property>
-				<property name="RootPath">$INFO[Window(Home).Property(RandomEpisode.8.Path)]</property>
-				<property name="Fanart">$INFO[Window(Home).Property(RandomEpisode.8.Art(tvshow.fanart))]</property>
-				<property name="Path">$INFO[Window(Home).Property(RandomEpisode.8.File)]</property>
-				<property name="Logo">$INFO[Window(Home).Property(RandomEpisode.8.Art(tvshow.clearlogo))]</property>
 			</item-->
+
 		</content>
 	</include>
 	
@@ -575,6 +563,318 @@
 				<thumb>$INFO[Window(Home).Property(RandomAlbum.6.Art(thumb))]</thumb>
 				<property name="Fanart">$INFO[Window(Home).Property(RandomAlbum.5.Art(fanart))]</property>
 			</item>
+		</content>
+	</include>
+	
+	<include name="HomeTrendingMovies">
+		<content>
+					
+			<item id="1">
+				<label>$INFO[Window(Home).Property(TrendingMovies.1.Title)]</label>
+				<thumb>$INFO[Window(Home).Property(TrendingMovies.1.Art(poster))]</thumb>
+				<property name="Fanart">$INFO[Window(Home).Property(TrendingMovies.1.Art(fanart))]</property>
+				<onclick>noop</onclick>
+			</item>
+			
+			<item id="2">
+				<label>$INFO[Window(Home).Property(TrendingMovies.2.Title)]</label>
+				<thumb>$INFO[Window(Home).Property(TrendingMovies.2.Art(poster))]</thumb>
+				<property name="Fanart">$INFO[Window(Home).Property(TrendingMovies.2.Art(fanart))]</property>
+				<onclick>noop</onclick>
+			</item>
+			
+			<item id="3">
+				<label>$INFO[Window(Home).Property(TrendingMovies.3.Title)]</label>
+				<thumb>$INFO[Window(Home).Property(TrendingMovies.3.Art(poster))]</thumb>
+				<property name="Fanart">$INFO[Window(Home).Property(TrendingMovies.3.Art(fanart))]</property>
+				<onclick>noop</onclick>
+			</item>
+			
+			<item id="4">
+				<label>$INFO[Window(Home).Property(TrendingMovies.4.Title)]</label>
+				<thumb>$INFO[Window(Home).Property(TrendingMovies.4.Art(poster))]</thumb>
+				<property name="Fanart">$INFO[Window(Home).Property(TrendingMovies.4.Art(fanart))]</property>
+				<onclick>noop</onclick>
+			</item>
+			
+			<item id="5">
+				<label>$INFO[Window(Home).Property(TrendingMovies.5.Title)]</label>
+				<thumb>$INFO[Window(Home).Property(TrendingMovies.5.Art(poster))]</thumb>
+				<property name="Fanart">$INFO[Window(Home).Property(TrendingMovies.5.Art(fanart))]</property>
+				<onclick>noop</onclick>
+			</item>
+			
+			<item id="6">
+				<label>$INFO[Window(Home).Property(TrendingMovies.6.Title)]</label>
+				<thumb>$INFO[Window(Home).Property(TrendingMovies.6.Art(poster))]</thumb>
+				<property name="Fanart">$INFO[Window(Home).Property(TrendingMovies.6.Art(fanart))]</property>
+				<onclick>noop</onclick>
+			</item>
+			
+			<item id="7">
+				<label>$INFO[Window(Home).Property(TrendingMovies.7.Title)]</label>
+				<thumb>$INFO[Window(Home).Property(TrendingMovies.7.Art(poster))]</thumb>
+				<property name="Fanart">$INFO[Window(Home).Property(TrendingMovies.7.Art(fanart))]</property>
+				<onclick>noop</onclick>
+			</item>
+			
+			<item id="8">
+				<label>$INFO[Window(Home).Property(TrendingMovies.8.Title)]</label>
+				<thumb>$INFO[Window(Home).Property(TrendingMovies.8.Art(poster))]</thumb>
+				<property name="Fanart">$INFO[Window(Home).Property(TrendingMovies.8.Art(fanart))]</property>
+				<onclick>noop</onclick>
+			</item>
+			
+			<item id="9">
+				<label>$INFO[Window(Home).Property(TrendingMovies.9.Title)]</label>
+				<thumb>$INFO[Window(Home).Property(TrendingMovies.9.Art(poster))]</thumb>
+				<property name="Fanart">$INFO[Window(Home).Property(TrendingMovies.9.Art(fanart))]</property>
+				<onclick>noop</onclick>
+			</item>
+			
+			<item id="10">
+				<label>$INFO[Window(Home).Property(TrendingMovies.10.Title)]</label>
+				<thumb>$INFO[Window(Home).Property(TrendingMovies.10.Art(poster))]</thumb>
+				<property name="Fanart">$INFO[Window(Home).Property(TrendingMovies.10.Art(fanart))]</property>
+				<onclick>noop</onclick>
+			</item>
+			
+			<item id="11">
+				<label>$INFO[Window(Home).Property(TrendingMovies.11.Title)]</label>
+				<thumb>$INFO[Window(Home).Property(TrendingMovies.11.Art(poster))]</thumb>
+				<property name="Fanart">$INFO[Window(Home).Property(TrendingMovies.11.Art(fanart))]</property>
+				<onclick>noop</onclick>
+			</item>
+			
+			<item id="12">
+				<label>$INFO[Window(Home).Property(TrendingMovies.12.Title)]</label>
+				<thumb>$INFO[Window(Home).Property(TrendingMovies.12.Art(poster))]</thumb>
+				<property name="Fanart">$INFO[Window(Home).Property(TrendingMovies.12.Art(fanart))]</property>
+				<onclick>noop</onclick>
+			</item>
+			
+			
+			<!--item id="20">
+				<thumb>$INFO[Window(Home).Property(TrendingMovies.20.Art(poster))]</thumb>
+				
+				<include>Common_TraktTV_ClearProperties</include>
+				<onclick>SetProperty(Title,$INFO[Window(Home).Property(TrendingMovies.20.Title)],58)</onclick>
+				<onclick>SetProperty(MPAA,$INFO[Window(Home).Property(TrendingMovies.20.MPAA)],58)</onclick>
+				<onclick>SetProperty(Plot,$ESCINFO[Window(Home).Property(TrendingMovies.20.Plot)],58)</onclick>
+				<onclick>SetProperty(Tagline,$INFO[Window(Home).Property(TrendingMovies.20.Tagline)],58)</onclick>
+				<onclick>SetProperty(Year,$INFO[Window(Home).Property(TrendingMovies.20.Year)],58)</onclick>
+				<onclick>SetProperty(Genre,$INFO[Window(Home).Property(TrendingMovies.20.Genre)],58)</onclick>
+				<onclick>SetProperty(Runtime,$INFO[Window(Home).Property(TrendingMovies.20.Runtime)],58)</onclick>
+				<onclick>SetProperty(Rating,$INFO[Window(Home).Property(TrendingMovies.20.Rating)],58)</onclick>
+				<onclick>SetProperty(Poster,$INFO[Window(Home).Property(TrendingMovies.20.Art(poster))],58)</onclick>
+				<onclick>SetProperty(Fanart,$INFO[Window(Home).Property(TrendingMovies.20.Art(fanart))],58)</onclick>
+				<onclick>SetProperty(Trailer,$INFO[Window(Home).Property(TrendingMovies.20.Play)],58)</onclick>
+				<onclick>SetProperty(ID,$INFO[Window(Home).Property(TrendingMovies.20.ID)],58)</onclick>
+				<onclick>SetProperty(Type,movie,58)</onclick>
+				<onclick>ActivateWindow(58)</onclick>
+			</item-->
+		
+		</content>
+	</include>
+	
+	<include name="HomeTrendingTvshows">
+		<content>
+					
+			<item id="1">
+				<label>$INFO[Window(Home).Property(TrendingShows.1.Title)]</label>
+				<thumb>$INFO[Window(Home).Property(TrendingShows.1.Art(poster))]</thumb>
+				<property name="Fanart">$INFO[Window(Home).Property(TrendingShows.1.Art(fanart))]</property>
+				<onclick>noop</onclick>
+			</item>
+			
+			<item id="2">
+				<label>$INFO[Window(Home).Property(TrendingShows.2.Title)]</label>
+				<thumb>$INFO[Window(Home).Property(TrendingShows.2.Art(poster))]</thumb>
+				<property name="Fanart">$INFO[Window(Home).Property(TrendingShows.2.Art(fanart))]</property>
+				<onclick>noop</onclick>
+			</item>
+			
+			<item id="3">
+				<label>$INFO[Window(Home).Property(TrendingShows.3.Title)]</label>
+				<thumb>$INFO[Window(Home).Property(TrendingShows.3.Art(poster))]</thumb>
+				<property name="Fanart">$INFO[Window(Home).Property(TrendingShows.3.Art(fanart))]</property>
+				<onclick>noop</onclick>
+			</item>
+			
+			<item id="4">
+				<label>$INFO[Window(Home).Property(TrendingShows.4.Title)]</label>
+				<thumb>$INFO[Window(Home).Property(TrendingShows.4.Art(poster))]</thumb>
+				<property name="Fanart">$INFO[Window(Home).Property(TrendingShows.4.Art(fanart))]</property>
+				<onclick>noop</onclick>
+			</item>
+			
+			<item id="5">
+				<label>$INFO[Window(Home).Property(TrendingShows.5.Title)]</label>
+				<thumb>$INFO[Window(Home).Property(TrendingShows.5.Art(poster))]</thumb>
+				<property name="Fanart">$INFO[Window(Home).Property(TrendingShows.5.Art(fanart))]</property>
+				<onclick>noop</onclick>
+			</item>
+			
+			<item id="6">
+				<label>$INFO[Window(Home).Property(TrendingShows.6.Title)]</label>
+				<thumb>$INFO[Window(Home).Property(TrendingShows.6.Art(poster))]</thumb>
+				<property name="Fanart">$INFO[Window(Home).Property(TrendingShows.6.Art(fanart))]</property>
+				<onclick>noop</onclick>
+			</item>
+			
+			<item id="7">
+				<label>$INFO[Window(Home).Property(TrendingShows.7.Title)]</label>
+				<thumb>$INFO[Window(Home).Property(TrendingShows.7.Art(poster))]</thumb>
+				<property name="Fanart">$INFO[Window(Home).Property(TrendingShows.7.Art(fanart))]</property>
+				<onclick>noop</onclick>
+			</item>
+			
+			<item id="8">
+				<label>$INFO[Window(Home).Property(TrendingShows.8.Title)]</label>
+				<thumb>$INFO[Window(Home).Property(TrendingShows.8.Art(poster))]</thumb>
+				<property name="Fanart">$INFO[Window(Home).Property(TrendingShows.8.Art(fanart))]</property>
+				<onclick>noop</onclick>
+			</item>
+			
+			<item id="9">
+				<label>$INFO[Window(Home).Property(TrendingShows.9.Title)]</label>
+				<thumb>$INFO[Window(Home).Property(TrendingShows.9.Art(poster))]</thumb>
+				<property name="Fanart">$INFO[Window(Home).Property(TrendingShows.9.Art(fanart))]</property>
+				<onclick>noop</onclick>
+			</item>
+			
+			<item id="10">
+				<label>$INFO[Window(Home).Property(TrendingShows.10.Title)]</label>
+				<thumb>$INFO[Window(Home).Property(TrendingShows.10.Art(poster))]</thumb>
+				<property name="Fanart">$INFO[Window(Home).Property(TrendingShows.10.Art(fanart))]</property>
+				<onclick>noop</onclick>
+			</item>
+			
+			<item id="11">
+				<label>$INFO[Window(Home).Property(TrendingShows.11.Title)]</label>
+				<thumb>$INFO[Window(Home).Property(TrendingShows.11.Art(poster))]</thumb>
+				<property name="Fanart">$INFO[Window(Home).Property(TrendingShows.11.Art(fanart))]</property>
+				<onclick>noop</onclick>
+			</item>
+			
+			<item id="12">
+				<label>$INFO[Window(Home).Property(TrendingShows.12.Title)]</label>
+				<thumb>$INFO[Window(Home).Property(TrendingShows.12.Art(poster))]</thumb>
+				<property name="Fanart">$INFO[Window(Home).Property(TrendingShows.12.Art(fanart))]</property>
+				<onclick>noop</onclick>
+			</item>
+			
+			<!--item id="20">
+				<thumb>$INFO[Window(Home).Property(TrendingShows.20.Art(poster))]</thumb>
+				
+				<include>Common_TraktTV_ClearProperties</include>
+				<onclick>SetProperty(Title,$INFO[Window(Home).Property(TrendingShows.20.Title)],58)</onclick>
+				<onclick>SetProperty(MPAA,$INFO[Window(Home).Property(TrendingShows.20.MPAA)],58)</onclick>
+				<onclick>SetProperty(Plot,$ESCINFO[Window(Home).Property(TrendingShows.20.Plot)],58)</onclick>
+				<onclick>SetProperty(Tagline,$INFO[Window(Home).Property(TrendingShows.20.Studio)],58)</onclick>
+				<onclick>SetProperty(Year,$INFO[Window(Home).Property(TrendingShows.20.Year)],58)</onclick>
+				<onclick>SetProperty(Genre,$INFO[Window(Home).Property(TrendingShows.20.Genre)],58)</onclick>
+				<onclick>SetProperty(Runtime,$INFO[Window(Home).Property(TrendingShows.20.Runtime)],58)</onclick>
+				<onclick>SetProperty(Rating,$INFO[Window(Home).Property(TrendingShows.20.Rating)],58)</onclick>
+				<onclick>SetProperty(Poster,$INFO[Window(Home).Property(TrendingShows.20.Art(poster))],58)</onclick>
+				<onclick>SetProperty(Fanart,$INFO[Window(Home).Property(TrendingShows.20.Art(fanart))],58)</onclick>
+				<onclick>SetProperty(Country,$INFO[Window(Home).Property(TrendingShows.20.Country)],58)</onclick>
+				<onclick>SetProperty(NextTime,$INFO[Window(Home).Property(TrendingShows.20.ShortTime)] $INFO[Window(Home).Property(TrendingShows.20.NextDate)],58)</onclick>
+				<onclick>SetProperty(ID,$INFO[Window(Home).Property(TrendingShows.20.ID)],58)</onclick>
+				<onclick>SetProperty(Type,tvshow,58)</onclick>
+				<onclick>ActivateWindow(58)</onclick>
+			</item-->
+		
+		</content>	
+
+	</include>
+	
+	<include name="HomeAiringTvshows">
+		<content>
+			<item id="1">
+				<label>$INFO[Window(Home).Property(AiringShows.1.Title)]</label>
+				<thumb>$INFO[Window(Home).Property(AiringShows.1.Art(poster))]</thumb>
+				<property name="Fanart">$INFO[Window(Home).Property(AiringShows.1.Art(fanart))]</property>
+				<onclick>noop</onclick>
+			</item>
+			
+			<item id="2">
+				<label>$INFO[Window(Home).Property(AiringShows.2.Title)]</label>
+				<thumb>$INFO[Window(Home).Property(AiringShows.2.Art(poster))]</thumb>
+				<property name="Fanart">$INFO[Window(Home).Property(AiringShows.2.Art(fanart))]</property>
+				<onclick>noop</onclick>
+			</item>
+			
+			<item id="3">
+				<label>$INFO[Window(Home).Property(AiringShows.3.Title)]</label>
+				<thumb>$INFO[Window(Home).Property(AiringShows.3.Art(poster))]</thumb>
+				<property name="Fanart">$INFO[Window(Home).Property(AiringShows.3.Art(fanart))]</property>
+				<onclick>noop</onclick>
+			</item>
+			
+			<item id="4">
+				<label>$INFO[Window(Home).Property(AiringShows.4.Title)]</label>
+				<thumb>$INFO[Window(Home).Property(AiringShows.4.Art(poster))]</thumb>
+				<property name="Fanart">$INFO[Window(Home).Property(AiringShows.4.Art(fanart))]</property>
+				<onclick>noop</onclick>
+			</item>
+			
+			<item id="5">
+				<label>$INFO[Window(Home).Property(AiringShows.5.Title)]</label>
+				<thumb>$INFO[Window(Home).Property(AiringShows.5.Art(poster))]</thumb>
+				<property name="Fanart">$INFO[Window(Home).Property(AiringShows.5.Art(fanart))]</property>
+				<onclick>noop</onclick>
+			</item>
+			
+			<item id="6">
+				<label>$INFO[Window(Home).Property(AiringShows.6.Title)]</label>
+				<thumb>$INFO[Window(Home).Property(AiringShows.6.Art(poster))]</thumb>
+				<property name="Fanart">$INFO[Window(Home).Property(AiringShows.6.Art(fanart))]</property>
+				<onclick>noop</onclick>
+			</item>
+			
+			<item id="7">
+				<label>$INFO[Window(Home).Property(AiringShows.7.Title)]</label>
+				<thumb>$INFO[Window(Home).Property(AiringShows.7.Art(poster))]</thumb>
+				<property name="Fanart">$INFO[Window(Home).Property(AiringShows.7.Art(fanart))]</property>
+				<onclick>noop</onclick>
+			</item>
+			
+			<item id="8">
+				<label>$INFO[Window(Home).Property(AiringShows.8.Title)]</label>
+				<thumb>$INFO[Window(Home).Property(AiringShows.8.Art(poster))]</thumb>
+				<property name="Fanart">$INFO[Window(Home).Property(AiringShows.8.Art(fanart))]</property>
+				<onclick>noop</onclick>
+			</item>
+			
+			<item id="9">
+				<label>$INFO[Window(Home).Property(AiringShows.9.Title)]</label>
+				<thumb>$INFO[Window(Home).Property(AiringShows.9.Art(poster))]</thumb>
+				<property name="Fanart">$INFO[Window(Home).Property(AiringShows.9.Art(fanart))]</property>
+				<onclick>noop</onclick>
+			</item>
+			
+			<item id="10">
+				<label>$INFO[Window(Home).Property(AiringShows.10.Title)]</label>
+				<thumb>$INFO[Window(Home).Property(AiringShows.10.Art(poster))]</thumb>
+				<property name="Fanart">$INFO[Window(Home).Property(AiringShows.10.Art(fanart))]</property>
+				<onclick>noop</onclick>
+			</item>
+			
+			<item id="11">
+				<label>$INFO[Window(Home).Property(AiringShows.11.Title)]</label>
+				<thumb>$INFO[Window(Home).Property(AiringShows.11.Art(poster))]</thumb>
+				<property name="Fanart">$INFO[Window(Home).Property(AiringShows.11.Art(fanart))]</property>
+				<onclick>noop</onclick>
+			</item>
+			
+			<item id="12">
+				<label>$INFO[Window(Home).Property(AiringShows.12.Title)]</label>
+				<thumb>$INFO[Window(Home).Property(AiringShows.12.Art(poster))]</thumb>
+				<property name="Fanart">$INFO[Window(Home).Property(AiringShows.12.Art(fanart))]</property>
+				<onclick>noop</onclick>
+			</item>
+		
 		</content>
 	</include>
 	

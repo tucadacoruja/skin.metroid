@@ -9,7 +9,16 @@
 		
 		
 			<control type="group">
-				<include>Background</include>
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>1280</width>
+					<height>720</height>
+					<aspectratio>stretch</aspectratio>
+					<texture background="true" fallback="MetroidBG.png">$INFO[Skin.String(GlobalBackground)]</texture>
+					<animation effect="fade" start="100" end="85" time="600" reversible="true" >WindowOpen</animation>
+					
+				</control>
 				<control type="image">
 					<posx>0</posx>
 					<posy>72</posy>
@@ -701,6 +710,7 @@
 				<visible>false</visible>
 			</control>
 		</control>
+		<include>Background</include>
 		<include>BottomInfoBar</include>
 
 		  

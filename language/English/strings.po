@@ -816,3 +816,7 @@ msgstr ""
 msgctxt "#31221"
 msgid "alphabetical subcategories"
 msgstr ""
+
+msgctxt "#31222"
+msgid "Back in one step"
+msgstr ""
