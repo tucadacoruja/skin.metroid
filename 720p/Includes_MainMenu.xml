@@ -90,12 +90,13 @@
 						<label>- $INFO[ListItem.Label]</label>
 						<visible>!IsEmpty(ListItem.Property(SubMenuItem))</visible>
 						
-						<animation effect="slide" start="-300,0" end="0,0" time="350" reversable="true" condition="!IsEmpty(skin.string(SubMenu1))">Conditional</animation> 
+						<!--animation effect="slide" start="-300,0" end="0,0" time="350" reversable="true" condition="!IsEmpty(skin.string(SubMenu1))">Conditional</animation> 
 						<animation effect="slide" start="-300,0" end="0,0" time="350" reversable="true" condition="!IsEmpty(skin.string(SubMenu2))">Conditional</animation> 
 						<animation effect="slide" start="-300,0" end="0,0" time="350" reversable="true" condition="!IsEmpty(skin.string(SubMenu3))">Conditional</animation> 
 						<animation effect="slide" start="-300,0" end="0,0" time="350" reversable="true" condition="!IsEmpty(skin.string(SubMenu4))">Conditional</animation> 
 						<animation effect="slide" start="-300,0" end="0,0" time="350" reversable="true" condition="!IsEmpty(skin.string(SubMenu5))">Conditional</animation> 
 						<animation effect="slide" start="-300,0" end="0,0" time="350" reversable="true" condition="!IsEmpty(skin.string(SubMenu6))">Conditional</animation> 
+						<animation effect="fade" start="0" end="100" time="200" >Visible</animation--> 
 					</control>
 					
 				</itemlayout>
@@ -290,7 +291,15 @@
 							<property name="DropdownMenu5">not_empty</property>
 						</item>
 						<include>TvshowSortItems</include>
-					  						
+					  	
+						<item id="129">
+							<description>fullscreen</description>
+							<label>31225</label>
+							<visible>Player.HasMedia</visible>
+							<visible>!Skin.HasSetting(FullScreenHome)</visible>
+							<onclick>FullScreen</onclick>
+						</item>
+						
 						<item id="104">
 							<description>favourites</description>
 							<label>31081</label>
@@ -1400,7 +1409,7 @@
 		<item id="1">
 			<description>install</description>
 			<label>Install</label>
-			<onclick>XBMC.ActivateWindow(Programs,Addons://all/,return)</onclick>
+			<onclick>XBMC.ActivateWindow(addonbrowser,Addons://all/,return)</onclick>
 			<visible>!IsEmpty(skin.string(SubMenu6))</visible>
 			<property name="SubMenuItem">not_empty</property>
 			<property name="DropdownMenu6">not_empty</property>

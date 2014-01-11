@@ -151,13 +151,13 @@
 						<onclick>SetFocus(9001)</onclick>
 					</item>
 					<item id="3">
-						<description>Views</description>
-						<label>31139</label>
+						<description>Options</description>
+						<label>31187</label>
 						<onclick>SetFocus(9006)</onclick>
 					</item>
 					<item id="4">
-						<description>Images</description>
-						<label>31140</label>
+						<description>Background</description>
+						<label>31223</label>
 						<onclick>SetFocus(9004)</onclick>
 					</item>
 					<item id="5">
@@ -200,13 +200,6 @@
 					<pagecontrol>63</pagecontrol>
 					<!--animation effect="fade" start="100" end="70" time="0" condition="true">Conditional</animation-->
 					
-					<control type="radiobutton" id="99">
-						<include>SettingsButton</include>
-						<description>Lock main menu</description>
-						<label>31215</label>
-						<onclick>Skin.ToggleSetting(LockMainMenu)</onclick>
-						<selected>Skin.HasSetting(LockMainMenu)</selected>
-					</control>
 					<control type="radiobutton" id="100">
 						<include>SettingsButton</include>
 						<description>Sources in main menu</description>
@@ -281,6 +274,13 @@
 						<label>$LOCALIZE[31220] $LOCALIZE[31142]</label>
 						<onclick>Skin.ToggleSetting(HideMusicLibrary)</onclick>
 						<selected>Skin.HasSetting(HideMusicLibrary)</selected>
+					</control>
+					<control type="radiobutton" id="122">
+						<include>SettingsButton</include>
+						<description>fullscreen in main menu</description>
+						<label>$LOCALIZE[31225] $LOCALIZE[31142]</label>
+						<onclick>Skin.ToggleSetting(FullScreenHome)</onclick>
+						<selected>!Skin.HasSetting(FullScreenHome)</selected>
 					</control>
 					<control type="radiobutton" id="104">
 						<include>SettingsButton</include>
@@ -543,53 +543,31 @@
 						<onclick>Skin.SetImage(GlobalBackground)</onclick>
 						
 					</control>
-					
-					<!--control type="button" id="111">
+					<control type="radiobutton" id="110">
 						<include>SettingsButton</include>
-						<label> - $LOCALIZE[31162]</label>
-						<label2>$INFO[Skin.String(VideoFallbackImage)]</label2>
-						<onclick>Skin.Reset(VideoFallbackImage)</onclick>
-						<onclick>Skin.SetImage(VideoFallbackImage)</onclick>
-						
+						<description>Music Visualisation in library</description>
+						<label>$LOCALIZE[31196]</label>
+						<onclick>Skin.ToggleSetting(VisLibrary)</onclick>
+						<selected>!Skin.HasSetting(VisLibrary)</selected>
 					</control>
-					<control type="button" id="112">
-						<include>SettingsButton</include>
-						<label> - $LOCALIZE[31163]</label>
-						<label2>$INFO[Skin.String(MusicFallbackImage)]</label2>
-						<onclick>Skin.Reset(MusicFallbackImage)</onclick>
-						<onclick>Skin.SetImage(MusicFallbackImage)</onclick>
-						
-					</control>
-					<control type="button" id="113">
-						<include>SettingsButton</include>
-						<label> - $LOCALIZE[31164]</label>
-						<label2>$INFO[Skin.String(HomeFallbackImage)]</label2>
-						<onclick>Skin.Reset(HomeFallbackImage)</onclick>
-						<onclick>Skin.SetImage(HomeFallbackImage)</onclick>
-					</control>
-				
-					<control type="button" id="115">
-						<include>SettingsButton</include>
-						<label> - $LOCALIZE[31165]</label>
-						<label2>$INFO[Skin.String(ProgramFallbackImage)]</label2>
-						<onclick>Skin.Reset(ProgramFallbackImage)</onclick>
-						<onclick>Skin.SetImage(ProgramFallbackImage)</onclick>
-					</control>
-					<control type="button" id="116">
-						<include>SettingsButton</include>
-						<label> - $LOCALIZE[31166]</label>
-						<label2>$INFO[Skin.String(FullMusicFallback)]</label2>
-						<onclick>Skin.Reset(FullMusicFallback)</onclick>
-						<onclick>Skin.SetImage(FullMusicFallback)</onclick>
-					</control-->
+
 					<control type="radiobutton" id="117">
 						<include>SettingsButton</include>
 						<description>Background Slideshow</description>
-						<label>Background Slideshow</label>
+						<label>$LOCALIZE[31223] $LOCALIZE[31105]</label>31105
 						
 						<onclick>Skin.ToggleSetting(BackgroundSlideshow)</onclick>
 						<selected>!Skin.HasSetting(BackgroundSlideshow)</selected>
 					</control>
+					<control type="radiobutton" id="118">
+						<include>SettingsButton</include>
+						<description>Library Fanart</description>
+						<label>31224</label>
+						
+						<onclick>Skin.ToggleSetting(LibraryFanart)</onclick>
+						<selected>!Skin.HasSetting(LibraryFanart)</selected>
+					</control>
+					
 				</control>
 
 				
@@ -607,6 +585,21 @@
 					<ondown>9007</ondown>
 					<pagecontrol>63</pagecontrol>
 					
+					<control type="radiobutton" id="99">
+						<include>SettingsButton</include>
+						<description>Lock main menu</description>
+						<label>31215</label>
+						<onclick>Skin.ToggleSetting(LockMainMenu)</onclick>
+						<selected>Skin.HasSetting(LockMainMenu)</selected>
+					</control>
+					<control type="radiobutton" id="108">
+						<include>SettingsButton</include>
+						<description>Show Globalsearch</description>
+						<label>$LOCALIZE[31185]</label>
+						<onclick>Skin.ToggleSetting(GlobalSearch)</onclick>
+						<selected>!Skin.HasSetting(GlobalSearch)</selected>
+					</control>
+										
 					<control type="radiobutton" id="101">
 						<include>SettingsButton</include>
 						<description>Show watched overlays</description>
@@ -638,21 +631,7 @@
 						<selected>Skin.HasSetting(DlLogosStartup)</selected>
 					</control>
 					
-					<control type="radiobutton" id="108">
-						<include>SettingsButton</include>
-						<description>Show Globalsearch</description>
-						<label>$LOCALIZE[31185]</label>
-						<onclick>Skin.ToggleSetting(GlobalSearch)</onclick>
-						<selected>!Skin.HasSetting(GlobalSearch)</selected>
-					</control>
 					
-					<control type="radiobutton" id="109">
-						<include>SettingsButton</include>
-						<description>Music Visualisation in library</description>
-						<label>$LOCALIZE[31196]</label>
-						<onclick>Skin.ToggleSetting(VisLibrary)</onclick>
-						<selected>!Skin.HasSetting(VisLibrary)</selected>
-					</control>
 					
 					<control type="radiobutton" id="110">
 						<include>SettingsButton</include>

@@ -111,8 +111,8 @@
 	<texturefocus colordiffuse="FF00d8ff">AddCategoryFO.png</texturefocus>
 	<texturenofocus>-</texturenofocus>	
 	<font>homemenu3</font>
-	<textcolor>FFC2C2C2</textcolor>
-	<focusedcolor>FFEBEBEB</focusedcolor>
+	<textcolor>FF959595</textcolor>
+	<focusedcolor>FFF3F3F3</focusedcolor>
 	<disabledcolor>FF626262</disabledcolor>
 	
 	<width>160</width>
@@ -285,7 +285,7 @@
 			<height>720</height>
 			<aspectratio>stretch</aspectratio>
 			<imagepath background="true">$VAR[MultiSlide]</imagepath>
-			<timeperimage>11000</timeperimage>
+			<timeperimage>31000</timeperimage>
 			<fadetime>1000</fadetime>
 			<randomize>true</randomize>
 			<animation effect="fade" start="0" end="100" time="100">VisibleChange</animation>
@@ -301,7 +301,7 @@
 			<aspectratio>stretch</aspectratio>
 			<texture background="true">$INFO[ListItem.Art(fanart)]</texture>
 			<fadetime>400</fadetime>
-			<visible>!Player.HasVideo</visible>
+			<visible>![Player.HasVideo | Skin.HasSetting(LibraryFanart)]</visible>
 			<animation effect="fade" start="40" end="95" time="100000" delay="2000" reversable="true" pulse="true" condition="Player.HasAudio + !Skin.HasSetting(VisLibrary)">Conditional</animation>
 		</control>
 		<control type="image">
@@ -367,7 +367,7 @@
 			 
 			<animation effect="fade" start="0" end="20" time="0" reversible="false" condition="true">Conditional</animation>
 		</control>
-		<control type="image"><!----top line---->
+		<control type="image">
 			<posx>0</posx>
 			<posy>67</posy>
 			<width>1285</width>

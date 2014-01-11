@@ -371,6 +371,7 @@
 				<texture>osd/osdbg.png</texture>
 				<aspectratio>stretch</aspectratio>
 				<visible>!IsEmpty(Skin.String(PluginWidgetPath1))</visible>
+				<visible>System.HasAddon(script.tvguide)</visible>
 				<animation effect="fade" start="100" end="60" time="100" condition="Control.HasFocus(14)">Conditional</animation>
 			</control-->
 			
@@ -562,13 +563,15 @@
 				<texturenofocus>osd/addon.png</texturenofocus>
 				
 				<onclick>Dialog.Close(videoosd)</onclick>
-				<onclick>ActivateWindow(9506)</onclick>
+				<!--onclick>ActivateWindow(9506)</onclick>
+				<onclick>RunScript(script.tvguide)</onclick>
 				
 				
 				
 				<animation effect="zoom" start="100" end="120" center="auto" time="100">Focus</animation>
 				<animation effect="zoom" start="120" end="100" center="auto" time="100">UnFocus</animation>
-				<visible>!IsEmpty(Skin.String(PluginWidgetPath1))</visible>
+				<!--visible>!IsEmpty(Skin.String(PluginWidgetPath1))</visible>
+				<visible>System.HasAddon(script.tvguide)</visible>
 			</control-->
 		</control>
 		

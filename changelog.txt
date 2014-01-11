@@ -1,3 +1,7 @@
+[B]0.1.2[/B]
+- Layout improvements.
+- Bugs.
+
 [B]0.1.0[/B]
 - Main menu can now slide, lockable in settings.
 - Changed some views to better fit sliding main menu.

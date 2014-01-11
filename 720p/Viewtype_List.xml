@@ -206,7 +206,7 @@
 						<font>font12</font>
 						<textcolor>white</textcolor>
 						<shadowcolor>77000000</shadowcolor>
-						<scrollspeed>30</scrollspeed>
+						<autoscroll delay="3500" time="4000" repeat="10000" />
 					</control>
 				</control>
 			
