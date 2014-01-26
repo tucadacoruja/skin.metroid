@@ -6,7 +6,7 @@
 	<include name="RecentMoviePanel"> 
 		<control type="grouplist">
 			<height>300</height>
-			<visible>Library.HasContent(movies) + !IsEmpty(Window(Home).Property(SkinWidgets_RecentItems))</visible>
+			<visible>Library.HasContent(movies) + substring(Window(Home).Property(SkinWidgets_RecentItems),true)</visible>
 			<orientation>horizontal</orientation>
 			<usecontrolcoords>true</usecontrolcoords>
 			
@@ -131,7 +131,7 @@
 		<control type="grouplist">
 			
 			<height>300</height>
-			<visible>Library.HasContent(tvshows) + !IsEmpty(Window(Home).Property(SkinWidgets_RecentItems))</visible>
+			<visible>Library.HasContent(tvshows) + substring(Window(Home).Property(SkinWidgets_RecentItems),true)</visible>
 		
 			<orientation>horizontal</orientation>
 			<usecontrolcoords>true</usecontrolcoords>
@@ -310,7 +310,7 @@
 	<include name="RandomMoviePanel"> 
 		<control type="grouplist">
 			<height>300</height>
-			<visible>Library.HasContent(movies) + !IsEmpty(Window(Home).Property(SkinWidgets_RandomItems))</visible>
+			<visible>Library.HasContent(movies) + substring(Window(Home).Property(SkinWidgets_RandomItems),true)</visible>
 			<orientation>horizontal</orientation>
 			<usecontrolcoords>true</usecontrolcoords>
 						
@@ -432,7 +432,7 @@
 		<control type="grouplist">
 			
 			<height>300</height>
-			<visible>Library.HasContent(music) + !IsEmpty(Window(Home).Property(SkinWidgets_RandomItems))</visible>
+			<visible>Library.HasContent(music) + substring(Window(Home).Property(SkinWidgets_RandomItems),true)</visible>
 			<orientation>horizontal</orientation>
 			<usecontrolcoords>true</usecontrolcoords>
 			<align>left</align>
