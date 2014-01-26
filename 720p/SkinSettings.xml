@@ -226,7 +226,7 @@
 							<description>alphabetical subcategories</description>
 							<label> - $LOCALIZE[31079] $LOCALIZE[31221]</label>
 							<onclick>Skin.ToggleSetting(MoviePlaylists)</onclick>
-							<selected>!Skin.HasSetting(MoviePlaylists)</selected>
+							<selected>Skin.HasSetting(MoviePlaylists)</selected>
 							<enable>![Skin.HasSetting(HideGlobalMovies) | Skin.HasSetting(MovieSubmenu)]</enable>
 						
 						</control>
@@ -251,7 +251,7 @@
 							<description>alphabetical subcategories</description>
 							<label> - $LOCALIZE[31080] $LOCALIZE[31221]</label>
 							<onclick>Skin.ToggleSetting(TvShowPlaylists)</onclick>
-							<selected>!Skin.HasSetting(TvShowPlaylists)</selected>
+							<selected>Skin.HasSetting(TvShowPlaylists)</selected>
 							<enable>![Skin.HasSetting(HideGlobalTvshows) | Skin.HasSetting(TvShowSubmenu)]</enable>
 						</control>
 
@@ -318,14 +318,14 @@
 						<description>addons in main menu</description>
 						<label>$LOCALIZE[24001] $LOCALIZE[31142]</label>
 						<onclick>Skin.ToggleSetting(AddonHome)</onclick>
-						<selected>Skin.HasSetting(AddonHome)</selected>
+						<selected>!Skin.HasSetting(AddonHome)</selected>
 					</control>
 					<control type="radiobutton" id="108">
 						<include>SettingsButton</include>
 						<description>Favorites dialog in main menu</description>
 						<label>$LOCALIZE[31151] $LOCALIZE[31142]</label>
 						<onclick>Skin.ToggleSetting(FavoritesHome)</onclick>
-						<selected>Skin.HasSetting(FavoritesHome)</selected>
+						<selected>!Skin.HasSetting(FavoritesHome)</selected>
 					</control>
 					
 					<control type="radiobutton" id="110">
