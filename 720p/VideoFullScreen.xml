@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window id="2005">
  <defaultcontrol>-</defaultcontrol>
-
+<backgroundcolor>0</backgroundcolor>
 <onunload>Dialog.Close(9506)</onunload>
 
  
@@ -24,7 +24,7 @@
 			<control type="label" id="11">
 				<description>row 2</description>
 				<posx>25</posx>
-				<posy>45</posy>
+				<posy>65</posy>
 				<width>1280</width>
 				<label>-</label>
 				<align>left</align>
@@ -35,7 +35,7 @@
 			<control type="label" id="12">
 				<description>row 3</description>
 				<posx>25</posx>
-				<posy>65</posy>
+				<posy>85</posy>
 				<width>1280</width>
 				<height>80</height>
 				<label>-</label>

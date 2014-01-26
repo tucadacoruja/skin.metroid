@@ -21,7 +21,8 @@
 			<posy>75</posy>
 			<width>700</width>
 			<height>613</height><!---438-->
-			<scrolltime>200</scrolltime>
+			<scrolltime>0</scrolltime>
+			<preloaditems>2</preloaditems>
 			<orientation>vertical</orientation>
 			<onup>602</onup>
 			<ondown>602</ondown>

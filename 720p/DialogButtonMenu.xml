@@ -34,12 +34,12 @@
 </control>
 
 	<control type="group">
-		<include>ContextSlide</include>
+		<include>DialogEffect</include>
 					
         <control type="group">
 			<posx>420</posx>
 			<posy>230</posy>
-            <visible>true</visible>
+
 			<control type="image" id="1">
 				<description>background image</description>
 				<posx>22</posx>
@@ -103,6 +103,7 @@
 			<width>401</width>
 			<itemgap>0</itemgap>
 			<align>center</align>
+			<aligny>top</aligny>
 			<onup>300</onup>
 			<orientation>Vertical</orientation>
 			
@@ -128,17 +129,17 @@
 				<font>context</font>
 				<textcolor>darklist</textcolor>
 				<focusedcolor>white</focusedcolor>
-				<disabledcolor>black</disabledcolor>
+				<disabledcolor>95000000</disabledcolor>
 				<texturefocus>white.png</texturefocus>
 				<texturenofocus>-</texturenofocus>
 				<width>376</width>
 				<height>40</height>
 				<onclick>XBMC.Shutdown()</onclick>
+				<!--onclick condition="System.CanPowerDown">XBMC.Powerdown()</onclick-->
 				<align>left</align>
 				<aligny>top</aligny>
 				<colordiffuse>skin.string(MainColorString)</colordiffuse>
 				<label>13005</label>
-				
 				
 			</control>
 			
@@ -147,7 +148,7 @@
 				<font>context</font>
 				<textcolor>darklist</textcolor>
 				<focusedcolor>white</focusedcolor>
-				<disabledcolor>black</disabledcolor>
+				<disabledcolor>95000000</disabledcolor>
 				<texturefocus>white.png</texturefocus>
 				<texturenofocus>-</texturenofocus>
 				<width>376</width>
@@ -157,14 +158,15 @@
 				<aligny>top</aligny>
 				<colordiffuse>skin.string(MainColorString)</colordiffuse>
 				<label>$LOCALIZE[13011]</label>
-				
+				<enable>System.CanSuspend</enable>
+	
 			</control>
 			<control type="button" id="14">
 				<description>Reboot button</description>
 				<font>context</font>
 				<textcolor>darklist</textcolor>
 				<focusedcolor>white</focusedcolor>
-				<disabledcolor>black</disabledcolor>
+				<disabledcolor>95000000</disabledcolor>
 				<texturefocus>white.png</texturefocus>
 				<texturenofocus>-</texturenofocus>
 				<width>376</width>
@@ -174,14 +176,14 @@
 				<aligny>top</aligny>
 				<colordiffuse>skin.string(MainColorString)</colordiffuse>
 				<label>13013</label>
-				
+				<enable>System.CanReboot</enable>
 			</control>
 			<control type="button" id="16">
 				<description>Log out</description>
 				<font>context</font>
 				<textcolor>darklist</textcolor>
 				<focusedcolor>white</focusedcolor>
-				<disabledcolor>black</disabledcolor>
+				<disabledcolor>95000000</disabledcolor>
 				<texturefocus>white.png</texturefocus>
 				<texturenofocus>-</texturenofocus>
 				<width>376</width>
@@ -191,7 +193,8 @@
 				<aligny>top</aligny>
 				<colordiffuse>skin.string(MainColorString)</colordiffuse>
 				<label>31052</label>
-				
+				<enable>System.HasLoginScreen | IntegerGreaterThan(System.ProfileCount,1)</enable>
+                <enable>System.Loggedon</enable>
 			</control>
 	
 			

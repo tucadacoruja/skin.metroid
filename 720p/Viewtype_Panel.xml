@@ -32,7 +32,8 @@
 				<orientation>horizontal</orientation>
 				<pagecontrol>730</pagecontrol>
 				<focusposition>0</focusposition>
-				<scrolltime tween="cubic" easing="out">600</scrolltime>
+				<scrolltime tween="Cubic" easing="in">300</scrolltime>
+			
 				<preloaditems>2</preloaditems>
 				<animation effect="slide" start="0,0" end="-110,0" time="400" condition="!Control.HasFocus(301) + !Skin.HasSetting(LockMainMenu)">Conditional</animation>
 								
@@ -303,7 +304,7 @@
 				<width>950</width>
 				<height>10</height>
 				<onup>603</onup>
-				<visible>Control.IsVisible(603) + StringCompare(Container.Viewmode,Landscape)</visible>
+				<visible>Control.IsVisible(603)</visible>
 				<animation effect="fade" start="100" end="50" time="200" reversable="false" condition="!Control.HasFocus(730)">Conditional</animation>
 				<animation effect="slide" start="0,0" end="-110,0" time="400" condition="!Control.HasFocus(301) + !Skin.HasSetting(LockMainMenu)">Conditional</animation>
 			</control>

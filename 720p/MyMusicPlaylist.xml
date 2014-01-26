@@ -37,7 +37,7 @@
 	<height>1</height>
 	<animation effect="fade" start="1" end="0" time="0" condition="true">Conditional</animation>
 </control>
-<control type="radiobutton" id="20">
+<control type="button" id="20">
 	<posx>-10</posx>
 	<posy>-10</posy>
 	<width>1</width>

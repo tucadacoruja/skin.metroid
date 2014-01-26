@@ -27,9 +27,9 @@
 
 	
 		<control type="image">
-			<posx>0</posx>
+			<posx>-20</posx>
 			<posy>72</posy>
-			<width>250</width>
+			<width>270</width>
 			<height>648</height>
 			<aspectratio>stretch</aspectratio>
 			<texture>MetroidMenu.png</texture>
@@ -59,7 +59,9 @@
 				<onup>-</onup>
 				<ondown>301</ondown>
 				<pagecontrol>-</pagecontrol>
-				<scrolltime tween="cubic" easing="inout">325</scrolltime>
+				<!--scrolltime tween="cubic" easing="inout">325</scrolltime-->
+				<scrolltime>0</scrolltime>
+				<preloaditems>2</preloaditems>
 				<orientation>vertical</orientation>
 										
 				<itemlayout height="50"  width="240">
@@ -180,12 +182,13 @@
 						<visible>!IsEmpty(ListItem.Property(SubMenuItem))</visible>
 					</control>
 					<control type="button">
-						<onfocus condition="IsEmpty(Container(301).ListItem.Property(DropdownMenu1)">Skin.Setstring(SubMenu1,)</onfocus>
-						<onfocus condition="IsEmpty(Container(301).ListItem.Property(DropdownMenu2)">Skin.Setstring(SubMenu2,)</onfocus>
-						<onfocus condition="IsEmpty(Container(301).ListItem.Property(DropdownMenu3)">Skin.Setstring(SubMenu3,)</onfocus>
-						<onfocus condition="IsEmpty(Container(301).ListItem.Property(DropdownMenu4)">Skin.Setstring(SubMenu4,)</onfocus>
-						<onfocus condition="IsEmpty(Container(301).ListItem.Property(DropdownMenu5)">Skin.Setstring(SubMenu5,)</onfocus>
-						<onfocus condition="IsEmpty(Container(301).ListItem.Property(DropdownMenu6)">Skin.Setstring(SubMenu6,)</onfocus>
+						<onfocus condition="IsEmpty(Container(301).ListItem.Property(DropdownMenu1))">Skin.Reset(SubMenu1)</onfocus>
+						<onfocus condition="IsEmpty(Container(301).ListItem.Property(DropdownMenu2))">Skin.Reset(SubMenu2)</onfocus>
+						<onfocus condition="IsEmpty(Container(301).ListItem.Property(DropdownMenu3))">Skin.Reset(SubMenu3)</onfocus>
+						<onfocus condition="IsEmpty(Container(301).ListItem.Property(DropdownMenu4))">Skin.Reset(SubMenu4)</onfocus>
+						<onfocus condition="IsEmpty(Container(301).ListItem.Property(DropdownMenu5))">Skin.Reset(SubMenu5)</onfocus>
+						<onfocus condition="IsEmpty(Container(301).ListItem.Property(DropdownMenu6))">Skin.Reset(SubMenu6)</onfocus>
+						<onfocus condition="IsEmpty(Container(301).ListItem.Property(DropdownMenu7))">Skin.Reset(SubMenu7)</onfocus>
 						<visible allowhiddenfocus="true">false</visible>
 						<enable>true</enable>
 					</control> 
@@ -249,10 +252,15 @@
 							<label>31078</label>
 							<icon>Home/icons/music.png</icon>
 							<visible>!Skin.HasSetting(HideGlobalMusic)</visible>
-							<onclick condition="!Skin.HasSetting(MusicBackInOneStep)">xbmc.activatewindow(musiclibrary,songs,return)</onclick>
-							<onclick condition="Skin.HasSetting(MusicBackInOneStep)">xbmc.activatewindow(musiclibrary,songs)</onclick>
+							<onclick condition="IsEmpty(skin.string(SubMenu7)) + !Skin.HasSetting(MusicSubmenu)">Skin.Setstring(SubMenu7,open)</onclick>
+							<onclick condition="!IsEmpty(skin.string(SubMenu7)) + !Skin.HasSetting(MusicSubmenu)">Skin.Reset(SubMenu7)</onclick>
+							<onclick condition="IsEmpty(skin.string(SubMenu7)) + !Skin.HasSetting(MusicSubmenu)">Skin.Setstring(SubMenu7,open)</onclick>
+							<onclick condition="Skin.HasSetting(MusicSubmenu)">ActivateWindow(musiclibrary,songs)</onclick>
+							<property name="DropdownMenu7">not_empty</property>
+
 							<visible>Library.HasContent(Music)</visible>
 						</item>
+						<include condition="!Skin.HasSetting(MusicSubmenu)">MusicSubItems</include>
 						
 						<item id="126">
 							<description>My Music Videos</description>
@@ -269,13 +277,13 @@
 							<icon>-</icon>						  
 							<visible>Library.HasContent(movies)</visible>
 							<visible>!Skin.HasSetting(HideGlobalMovies)</visible>
-							<onclick condition="IsEmpty(skin.string(SubMenu4)) + !Skin.HasSetting(MoviePlaylists)">Skin.Setstring(SubMenu4,open)</onclick>
-							<onclick condition="!IsEmpty(skin.string(SubMenu4)) + !Skin.HasSetting(MoviePlaylists)">Skin.Reset(SubMenu4)</onclick>
-							<onclick condition="IsEmpty(skin.string(SubMenu4)) + !Skin.HasSetting(MoviePlaylists)">Skin.Setstring(SubMenu4,open)</onclick>
-							<onclick condition="Skin.HasSetting(MoviePlaylists)">ActivateWindow(Videos,MovieTitles)</onclick>
+							<onclick condition="IsEmpty(skin.string(SubMenu4)) + !Skin.HasSetting(MovieSubmenu)">Skin.Setstring(SubMenu4,open)</onclick>
+							<onclick condition="!IsEmpty(skin.string(SubMenu4)) + !Skin.HasSetting(MovieSubmenu)">Skin.Reset(SubMenu4)</onclick>
+							<onclick condition="IsEmpty(skin.string(SubMenu4)) + !Skin.HasSetting(MovieSubmenu)">Skin.Setstring(SubMenu4,open)</onclick>
+							<onclick condition="Skin.HasSetting(MovieSubmenu)">ActivateWindow(Videos,MovieTitles)</onclick>
 							<property name="DropdownMenu4">not_empty</property>
 						</item>
-						<include>MovieSortItems</include>
+						<include condition="!Skin.HasSetting(MovieSubmenu)">MovieSortItems</include>
 					  
 						<item id="102">
 							<description>My TV Shows</description>
@@ -284,13 +292,13 @@
 							<icon>Home/icons/tv.png</icon>
 							<visible>!Skin.HasSetting(HideGlobalTvshows)</visible>
 							<visible>Library.HasContent(TVShows)</visible>
-							<onclick condition="IsEmpty(skin.string(SubMenu5)) + !Skin.HasSetting(TvShowPlaylists)">Skin.Setstring(SubMenu5,open)</onclick>
-							<onclick condition="!IsEmpty(skin.string(SubMenu5)) + !Skin.HasSetting(TvShowPlaylists)">Skin.Setstring(SubMenu5,)</onclick>
-							<onclick condition="IsEmpty(skin.string(SubMenu5)) + !Skin.HasSetting(TvShowPlaylists)">Skin.Setstring(SubMenu5,open)</onclick>
-							<onclick condition="Skin.HasSetting(TvShowPlaylists)">ActivateWindow(Videos,TvShowTitles)</onclick>
+							<onclick condition="IsEmpty(skin.string(SubMenu5)) + !Skin.HasSetting(TvShowSubmenu)">Skin.Setstring(SubMenu5,open)</onclick>
+							<onclick condition="!IsEmpty(skin.string(SubMenu5)) + !Skin.HasSetting(TvShowSubmenu)">Skin.Setstring(SubMenu5,)</onclick>
+							<onclick condition="IsEmpty(skin.string(SubMenu5)) + !Skin.HasSetting(TvShowSubmenu)">Skin.Setstring(SubMenu5,open)</onclick>
+							<onclick condition="Skin.HasSetting(TvShowSubmenu)">ActivateWindow(Videos,TvShowTitles)</onclick>
 							<property name="DropdownMenu5">not_empty</property>
 						</item>
-						<include>TvshowSortItems</include>
+						<include condition="!Skin.HasSetting(TvShowSubmenu)">TvshowSortItems</include>
 					  	
 						<item id="129">
 							<description>fullscreen</description>
@@ -310,14 +318,16 @@
 							<description>Video Library</description>
 							<label>31219</label>
 							<visible>Skin.HasSetting(HideVideoLibrary)</visible>
-							<onclick>ActivateWindow(Video,library://video/)</onclick>
+							<!--onclick>ActivateWindow(Video,library://video/)</onclick-->
+							<onclick>ActivateWindow(Videos,root)</onclick>
 						</item>	
 						
 						<item id="128">
 							<description>Music Library</description>
 							<label>31220</label>
 							<visible>Skin.HasSetting(HideMusicLibrary)</visible>
-							<onclick>ActivateWindow(Music,library://music/)</onclick>
+							<!--onclick>ActivateWindow(Music,library://music/)</onclick-->
+							<onclick>ActivateWindow(MusicLibrary,root)</onclick>
 						</item>
 						<item id="105">
 							<description>Sort</description>
@@ -329,14 +339,14 @@
 							<onclick condition="!IsEmpty(skin.string(SubMenu1))">Skin.Setstring(SubMenu1,)</onclick>
 							<property name="DropdownMenu1">not_empty</property>
 						</item>
-						<include condition="Window.IsActive(musicplaylist)">MusicPlaylistItems</include>
-						<include condition="Window.IsActive(videoplaylist)">VideoPlaylistItems</include>
-						<include condition="Window.IsActive(programs) | Window.IsActive(40)">ProgramsItems</include>
-						<include condition="Window.IsActive(pictures)">PicturesItems</include>
-						<include condition="Window.IsActive(videofiles)">VideoFilesItems</include>
-						<include condition="Window.IsActive(videolibrary)">VideoLibraryItems</include>
-						<include condition="Window.IsActive(musicfiles)">MusicFilesItems</include>
-						<include condition="Window.IsActive(musiclibrary)">MusicLibraryItems</include>
+						<include condition="Window.IsActive(musicplaylist) + Skin.HasSetting(HideGlobalSort)">MusicPlaylistItems</include>
+						<include condition="Window.IsActive(videoplaylist) + Skin.HasSetting(HideGlobalSort)">VideoPlaylistItems</include>
+						<include condition="[Window.IsActive(programs) | Window.IsActive(40)] + Skin.HasSetting(HideGlobalSort)">ProgramsItems</include>
+						<include condition="Window.IsActive(pictures) + Skin.HasSetting(HideGlobalSort)">PicturesItems</include>
+						<include condition="Window.IsActive(videofiles) + Skin.HasSetting(HideGlobalSort)">VideoFilesItems</include>
+						<include condition="Window.IsActive(videolibrary) + Skin.HasSetting(HideGlobalSort)">VideoLibraryItems</include>
+						<include condition="Window.IsActive(musicfiles) + Skin.HasSetting(HideGlobalSort)">MusicFilesItems</include>
+						<include condition="Window.IsActive(musiclibrary) + Skin.HasSetting(HideGlobalSort)">MusicLibraryItems</include>
 						
 						<item id="114">
 							<description>viewtype</description>
@@ -378,7 +388,7 @@
 							<property name="DropdownMenu6">not_empty</property>
 							<visible>Skin.HasSetting(AddonHome)</visible>
 						</item>
-						<include>AddonSubItems</include>
+						<include condition="Skin.HasSetting(AddonHome)">AddonSubItems</include>
 						
 						<item id="107">
 							<label>31087</label>
@@ -399,7 +409,7 @@
 							<property name="DropdownMenu3">not_empty</property>
 							<visible>!Skin.HasSetting(HideGlobalSources)</visible>
 						</item>
-						<include>SourceWindowItems</include>
+						<include condition="!Skin.HasSetting(HideGlobalSources)">SourceWindowItems</include>
 						
 						<item id="109">
 							<description>Home</description>
@@ -549,7 +559,7 @@
 				<property name="DropdownMenu1">not_empty</property>
 			</item>
 			<item id="7">
-				<label>$LOCALIZE[31099]</label>
+				<label>$INFO[Control.GetLabel(26)]</label>
 				<onclick>SendClick(26)</onclick>
 				<visible>!IsEmpty(skin.string(SubMenu1))</visible>
 				<property name="SubMenuItem">not_empty</property>
@@ -614,7 +624,7 @@
 				<property name="DropdownMenu1">not_empty</property>
 			</item>
 			<item id="7">
-				<label>$LOCALIZE[31099]</label>
+				<label>$INFO[Control.GetLabel(26)]</label>
 				<onclick>SendClick(26)</onclick>
 				<visible>!IsEmpty(skin.string(SubMenu1))</visible>
 				<property name="SubMenuItem">not_empty</property>
@@ -719,8 +729,17 @@
 				<visible>!IsEmpty(skin.string(SubMenu1))</visible>
 				<property name="SubMenuItem">not_empty</property>
 				<property name="DropdownMenu1">not_empty</property>
+			</item><!---marker--->
+			<item id="9">
+				<description>Filter</description>
+				
+				<label>31111</label>
+				<onclick>SendClick(19)</onclick>
+				<visible>!Container.CanFilterAdvanced</visible>
+				<visible>!IsEmpty(skin.string(SubMenu1))</visible>
+				<property name="SubMenuItem">not_empty</property>
+				<property name="DropdownMenu1">not_empty</property>
 			</item>
-
 			
 	</include>
 
@@ -937,14 +956,7 @@
 				<property name="SubMenuItem">not_empty</property>
 				<property name="DropdownMenu1">not_empty</property>
 			</item>
-			<item id="2">
-				<label>$LOCALIZE[31095]</label>
-				<onclick>SendClick(4)</onclick>
-				<visible>container.sortdirection(ascending)</visible>
-				<visible>!IsEmpty(skin.string(SubMenu1))</visible>
-				<property name="SubMenuItem">not_empty</property>
-				<property name="DropdownMenu1">not_empty</property>
-			</item>
+			
 			<item id="2">
 				<label>$LOCALIZE[31096]</label>
 				<onclick>SendClick(4)</onclick>
@@ -953,27 +965,44 @@
 				<property name="SubMenuItem">not_empty</property>
 				<property name="DropdownMenu1">not_empty</property>
 			</item>
-					
-			<!--item id="9">
-				<description>Stack</description>
-				<label>$LOCALIZE[14000]</label>
-				<onclick>SendClick(7)</onclick>
-				<visible>!SubString(Control.GetLabel(7),*)</visible>
+			<item id="2">
+				<label>$LOCALIZE[31095]</label>
+				<onclick>SendClick(4)</onclick>
+				<visible>container.sortdirection(ascending)</visible>
 				<visible>!IsEmpty(skin.string(SubMenu1))</visible>
 				<property name="SubMenuItem">not_empty</property>
 				<property name="DropdownMenu1">not_empty</property>
-				<visible>SubString(System.BuildVersion,12,left)</visible>
+			</item>
+			<item id="4">
+				<label>$INFO[Control.GetLabel(10)]</label>
+				<onclick>SendClick(10)</onclick>
+
+				<visible>!IsEmpty(skin.string(SubMenu1))</visible>
+				<property name="SubMenuItem">not_empty</property>
+				<property name="DropdownMenu1">not_empty</property>
 			</item>
 			<item id="9">
-				<description>Stack</description>
-				<label>$LOCALIZE[14001]</label>
-				<onclick>SendClick(7)</onclick>
-				<visible>SubString(Control.GetLabel(7),*)</visible>
+				<description>Filter</description>
+				
+				<label>31111</label>
+				<onclick>SendClick(19)</onclick>
+				<visible>!Container.CanFilterAdvanced</visible>
 				<visible>!IsEmpty(skin.string(SubMenu1))</visible>
 				<property name="SubMenuItem">not_empty</property>
 				<property name="DropdownMenu1">not_empty</property>
-				<visible>SubString(System.BuildVersion,12,left)</visible>
-			</item-->
+			</item>
+			<item id="10">
+				<description>A.Filter</description>
+				
+				<label>Adv. $LOCALIZE[31111]</label>
+				<!--selected>Container.Filtered</selected-->
+				<onclick>Filter</onclick>
+				<visible>Container.CanFilterAdvanced</visible>
+				<visible>!IsEmpty(skin.string(SubMenu1))</visible>
+				<property name="SubMenuItem">not_empty</property>
+				<property name="DropdownMenu1">not_empty</property>
+			</item>
+
 		
 	</include>
 
@@ -1090,23 +1119,24 @@
 			<item id="3">
 				<label>$LOCALIZE[31190]</label>
 				<onclick>SendClick(9)</onclick>
-				<visible>container.sortdirection(descending)</visible>
+	
 				<visible>!IsEmpty(skin.string(SubMenu1))</visible>
 				<property name="SubMenuItem">not_empty</property>
 				<property name="DropdownMenu1">not_empty</property>
 			</item>
 			<item id="4">
-				<label>$LOCALIZE[31191]</label>
+				<label>$INFO[Control.GetLabel(10)]</label>
 				<onclick>SendClick(10)</onclick>
-				<visible>container.sortdirection(descending)</visible>
+
 				<visible>!IsEmpty(skin.string(SubMenu1))</visible>
 				<property name="SubMenuItem">not_empty</property>
 				<property name="DropdownMenu1">not_empty</property>
 			</item>
+
 			<item id="5">
 				<label>$LOCALIZE[31192]</label>
 				<onclick>SendClick(11)</onclick>
-				<visible>container.sortdirection(descending)</visible>
+
 				<visible>!IsEmpty(skin.string(SubMenu1))</visible>
 				<property name="SubMenuItem">not_empty</property>
 				<property name="DropdownMenu1">not_empty</property>
@@ -1163,6 +1193,16 @@
 			<icon>settings/audio.png</icon>
 			<property name="focused">settings/audioFO.png</property>
 			<onclick>ActivateWindow(musicsettings)</onclick>
+			<visible>!IsEmpty(skin.string(SubMenu2))</visible>
+			<property name="SubMenuItem">not_empty</property>
+			<property name="DropdownMenu2">not_empty</property>
+		</item>
+		<item id="11">
+			<description>System</description>
+			<label>31124</label>
+			<icon>settings/system.png</icon>
+			<property name="focused">settings/systemFO.png</property>
+			<onclick>ActivateWindow(systemsettings)</onclick>
 			<visible>!IsEmpty(skin.string(SubMenu2))</visible>
 			<property name="SubMenuItem">not_empty</property>
 			<property name="DropdownMenu2">not_empty</property>
@@ -1229,16 +1269,7 @@
 			<property name="SubMenuItem">not_empty</property>
 			<property name="DropdownMenu2">not_empty</property>
 		</item>
-		<item id="11">
-			<description>System</description>
-			<label>31124</label>
-			<icon>settings/system.png</icon>
-			<property name="focused">settings/systemFO.png</property>
-			<onclick>ActivateWindow(systemsettings)</onclick>
-			<visible>!IsEmpty(skin.string(SubMenu2))</visible>
-			<property name="SubMenuItem">not_empty</property>
-			<property name="DropdownMenu2">not_empty</property>
-		</item>
+		
 		<!--item id="12">
 			<description>Live TV settings</description>
 			<label>31125</label>
@@ -1258,7 +1289,8 @@
 			<description>Video</description>
 			<label>31116</label>
 			<icon>-</icon>
-			<onclick>ActivateWindow(videos,files,return)</onclick>
+			<!--onclick>ActivateWindow(Videos,Files,return)</onclick-->
+			<onclick>ActivateWindow(VideoLibrary,Files,return)</onclick>
 			<visible>!IsEmpty(skin.string(SubMenu3))</visible>
 			<property name="SubMenuItem">not_empty</property>
 			<property name="DropdownMenu3">not_empty</property>
@@ -1292,12 +1324,14 @@
 			<property name="DropdownMenu3">not_empty</property>
 		</item>
 	</include>
+	
 	<include name="MovieSortItems">
 		<item id="1">
 			<description>All Movies</description>
 			<label>*$LOCALIZE[31129]</label>
 			<icon>-</icon>
 			<onclick>ActivateWindow(Videos,MovieTitles,return)</onclick>
+			<visible>!Skin.HasSetting(MoviePlaylists)</visible>
 			<visible>!IsEmpty(skin.string(SubMenu4))</visible>
 			<property name="SubMenuItem">not_empty</property>
 			<property name="DropdownMenu4">not_empty</property>
@@ -1307,6 +1341,7 @@
 			<label>a b c d e</label>
 			<icon>-</icon>
 			<onclick>ActivateWindow(Videos,special://skin/extras/library/movies/AE_Playlist.xsp,return)</onclick>
+			<visible>!Skin.HasSetting(MoviePlaylists)</visible>
 			<visible>!IsEmpty(skin.string(SubMenu4))</visible>
 			<property name="SubMenuItem">not_empty</property>
 			<property name="DropdownMenu4">not_empty</property>
@@ -1316,6 +1351,7 @@
 			<label>f g h i j</label>
 			<icon>-</icon>
 			<onclick>ActivateWindow(Videos,special://skin/extras/library/movies/FJ_Playlist.xsp,return)</onclick>
+			<visible>!Skin.HasSetting(MoviePlaylists)</visible>
 			<visible>!IsEmpty(skin.string(SubMenu4))</visible>
 			<property name="SubMenuItem">not_empty</property>
 			<property name="DropdownMenu4">not_empty</property>
@@ -1325,6 +1361,7 @@
 			<label>k l m n o</label>
 			<icon>-</icon>
 			<onclick>ActivateWindow(Videos,special://skin/extras/library/movies/KO_Playlist.xsp,return)</onclick>
+			<visible>!Skin.HasSetting(MoviePlaylists)</visible>
 			<visible>!IsEmpty(skin.string(SubMenu4))</visible>
 			<property name="SubMenuItem">not_empty</property>
 			<property name="DropdownMenu4">not_empty</property>
@@ -1334,6 +1371,7 @@
 			<label>p q r s t</label>
 			<icon>-</icon>
 			<onclick>ActivateWindow(Videos,special://skin/extras/library/movies/PT_Playlist.xsp,return)</onclick>
+			<visible>!Skin.HasSetting(MoviePlaylists)</visible>
 			<visible>!IsEmpty(skin.string(SubMenu4))</visible>
 			<property name="SubMenuItem">not_empty</property>
 			<property name="DropdownMenu4">not_empty</property>
@@ -1343,17 +1381,110 @@
 			<label>u v w x y z</label>
 			<icon>-</icon>
 			<onclick>ActivateWindow(Videos,special://skin/extras/library/movies/UZ_Playlist.xsp,return)</onclick>
+			<visible>!Skin.HasSetting(MoviePlaylists)</visible>
 			<visible>!IsEmpty(skin.string(SubMenu4))</visible>
 			<property name="SubMenuItem">not_empty</property>
 			<property name="DropdownMenu4">not_empty</property>
 		</item>
+		
+		
+		<item id="10" description="title">
+			<visible>Skin.HasSetting(MoviePlaylists)</visible>
+			<label>369</label>
+			<onclick>ActivateWindow(Videos,MovieTitles,return)</onclick>
+			<visible>!IsEmpty(skin.string(SubMenu4))</visible>
+			<property name="SubMenuItem">not_empty</property>
+			<property name="DropdownMenu4">not_empty</property>
+		</item>
+
+		<item id="11" description="genres">
+			<visible>Skin.HasSetting(MoviePlaylists)</visible>
+			<label>135</label>
+			<onclick>ActivateWindow(Videos,Moviegenres,return)</onclick>
+			<visible>!IsEmpty(skin.string(SubMenu4))</visible>
+			<property name="SubMenuItem">not_empty</property>
+			<property name="DropdownMenu4">not_empty</property>
+		</item>
+			<item id="12" description="sets">
+			<visible>Skin.HasSetting(MoviePlaylists)</visible>
+			<label>20434</label>
+			<onclick>ActivateWindow(Videos,Moviesets,return)</onclick>
+			<visible>!IsEmpty(skin.string(SubMenu4))</visible>
+			<property name="SubMenuItem">not_empty</property>
+			<property name="DropdownMenu4">not_empty</property>
+		</item>
+		<item id="13" description="Recent">
+			<visible>Skin.HasSetting(MoviePlaylists)</visible>
+			<label>31226</label>
+			<onclick>ActivateWindow(Videos,RecentlyAddedMovies,return)</onclick>
+			<visible>!IsEmpty(skin.string(SubMenu4))</visible>
+			<property name="SubMenuItem">not_empty</property>
+			<property name="DropdownMenu4">not_empty</property>
+		</item>
+		<item id="14" description="tags">
+			<visible>Skin.HasSetting(MoviePlaylists)</visible>
+			<label>20459</label>
+			<onclick>ActivateWindow(Videos,MovieTags,return)</onclick>
+			<visible>!IsEmpty(skin.string(SubMenu4))</visible>
+			<property name="SubMenuItem">not_empty</property>
+			<property name="DropdownMenu4">not_empty</property>
+		</item>
+		<item id="15" description="Library">
+			<visible>Skin.HasSetting(MoviePlaylists)</visible>
+			<label>14022</label>
+			<onclick>ActivateWindow(VideoLibrary,root)</onclick>
+			<visible>!IsEmpty(skin.string(SubMenu4))</visible>
+			<property name="SubMenuItem">not_empty</property>
+			<property name="DropdownMenu4">not_empty</property>
+		</item>
+	
 	</include>
+	
+	<include name="MusicSubItems">
+		<item id="1" description="Artists">
+			<label>$LOCALIZE[134]</label>
+			<onclick>xbmc.activatewindow(musiclibrary,songs,return)</onclick>
+			<visible>!IsEmpty(skin.string(SubMenu7))</visible>
+			<property name="SubMenuItem">not_empty</property>
+			<property name="DropdownMenu7">not_empty</property>
+		</item>
+		<item id="2" description="Artists">
+			<label>$LOCALIZE[133]</label>
+			<onclick>ActivateWindow(MusicLibrary,Artists,return)</onclick>
+			<visible>!IsEmpty(skin.string(SubMenu7))</visible>
+			<property name="SubMenuItem">not_empty</property>
+			<property name="DropdownMenu7">not_empty</property>
+		</item>
+		<item id="3" description="Top 100">
+			<label>$LOCALIZE[271]</label>
+			<onclick>ActivateWindow(MusicLibrary,top100,return)</onclick>
+			<visible>!IsEmpty(skin.string(SubMenu7))</visible>
+			<property name="SubMenuItem">not_empty</property>
+			<property name="DropdownMenu7">not_empty</property>
+		</item>
+		<item id="4" description="Recently added">
+			<label>$LOCALIZE[31226]</label>
+			<onclick>ActivateWindow(MusicLibrary,recentlyaddedalbums,return)</onclick>
+			<visible>!IsEmpty(skin.string(SubMenu7))</visible>
+			<property name="SubMenuItem">not_empty</property>
+			<property name="DropdownMenu7">not_empty</property>
+		</item>
+		<item id="5" description="Library">
+			<label>$LOCALIZE[14022]</label>
+			<onclick>ActivateWindow(MusicLibrary,root)</onclick>
+			<visible>!IsEmpty(skin.string(SubMenu7))</visible>
+			<property name="SubMenuItem">not_empty</property>
+			<property name="DropdownMenu7">not_empty</property>
+		</item>
+	</include>
+	
 	<include name="TvshowSortItems">
 		<item id="1">
 			<description>All TvShows</description>
 			<label>*$LOCALIZE[31129]</label>
 			<icon>-</icon>
 			<onclick>ActivateWindow(Videos,TvShowTitles,return)</onclick>
+			<visible>!Skin.HasSetting(TvShowPlaylists)</visible>
 			<visible>!IsEmpty(skin.string(SubMenu5))</visible>
 			<property name="SubMenuItem">not_empty</property>
 			<property name="DropdownMenu5">not_empty</property>
@@ -1363,6 +1494,7 @@
 			<label>a b c d e</label>
 			<icon>-</icon>
 			<onclick>ActivateWindow(Videos,special://skin/extras/library/tvshows/AE_Playlist.xsp,return)</onclick>
+			<visible>!Skin.HasSetting(TvShowPlaylists)</visible>
 			<visible>!IsEmpty(skin.string(SubMenu5))</visible>
 			<property name="SubMenuItem">not_empty</property>
 			<property name="DropdownMenu5">not_empty</property>
@@ -1372,6 +1504,7 @@
 			<label>f g h i j</label>
 			<icon>-</icon>
 			<onclick>ActivateWindow(Videos,special://skin/extras/library/tvshows/FJ_Playlist.xsp,return)</onclick>
+			<visible>!Skin.HasSetting(TvShowPlaylists)</visible>
 			<visible>!IsEmpty(skin.string(SubMenu5))</visible>
 			<property name="SubMenuItem">not_empty</property>
 			<property name="DropdownMenu5">not_empty</property>
@@ -1381,6 +1514,7 @@
 			<label>k l m n o</label>
 			<icon>-</icon>
 			<onclick>ActivateWindow(Videos,special://skin/extras/library/tvshows/KO_Playlist.xsp,return)</onclick>
+			<visible>!Skin.HasSetting(TvShowPlaylists)</visible>
 			<visible>!IsEmpty(skin.string(SubMenu5))</visible>
 			<property name="SubMenuItem">not_empty</property>
 			<property name="DropdownMenu5">not_empty</property>
@@ -1390,6 +1524,7 @@
 			<label>p q r s t</label>
 			<icon>-</icon>
 			<onclick>ActivateWindow(Videos,special://skin/extras/library/tvshows/PT_Playlist.xsp,return)</onclick>
+			<visible>!Skin.HasSetting(TvShowPlaylists)</visible>
 			<visible>!IsEmpty(skin.string(SubMenu5))</visible>
 			<property name="SubMenuItem">not_empty</property>
 			<property name="DropdownMenu5">not_empty</property>
@@ -1399,17 +1534,72 @@
 			<label>u v w x y z</label>
 			<icon>-</icon>
 			<onclick>ActivateWindow(Videos,special://skin/extras/library/tvshows/UZ_Playlist.xsp,return)</onclick>
+			<visible>!Skin.HasSetting(TvShowPlaylists)</visible>
 			<visible>!IsEmpty(skin.string(SubMenu5))</visible>
 			<property name="SubMenuItem">not_empty</property>
 			<property name="DropdownMenu5">not_empty</property>
 		</item>
+		
+		<item id="7">
+			<description>U-Z Playlists</description>
+			<label>u v w x y z</label>
+			<icon>-</icon>
+			<onclick>ActivateWindow(Videos,special://skin/extras/library/tvshows/UZ_Playlist.xsp,return)</onclick>
+			<visible>!Skin.HasSetting(TvShowPlaylists)</visible>
+			<visible>!IsEmpty(skin.string(SubMenu5))</visible>
+			<property name="SubMenuItem">not_empty</property>
+			<property name="DropdownMenu5">not_empty</property>
+		</item>
+		
+		<item id="10" description="title">
+			<visible>Skin.HasSetting(TvShowPlaylists)</visible>
+			<label>369</label>
+			<onclick>ActivateWindow(VideoLibrary,TvShowTitles,return)</onclick>
+			<visible>!IsEmpty(skin.string(SubMenu5))</visible>
+			<property name="SubMenuItem">not_empty</property>
+			<property name="DropdownMenu5">not_empty</property>
+		</item>
+		<item id="11" description="in progress">
+			<visible>Skin.HasSetting(TvShowPlaylists)</visible>
+			<label>575</label>
+			<onclick>ActivateWindow(Videos,"library://video/inprogressshows.xml/",return)</onclick>
+			<visible>!IsEmpty(skin.string(SubMenu5))</visible>
+			<property name="SubMenuItem">not_empty</property>
+			<property name="DropdownMenu5">not_empty</property>
+		</item>
+		<item id="12" description="Recently Added">
+			<visible>Skin.HasSetting(TvShowPlaylists)</visible>
+			<label>31226</label>
+			<onclick>ActivateWindow(VideoLibrary,RecentlyAddedEpisodes,return)</onclick>
+			<visible>!IsEmpty(skin.string(SubMenu5))</visible>
+			<property name="SubMenuItem">not_empty</property>
+			<property name="DropdownMenu5">not_empty</property>
+		</item>
+		<item id="13" description="Genres">
+			<visible>Skin.HasSetting(TvShowPlaylists)</visible>
+			<label>135</label>
+			<onclick>ActivateWindow(VideoLibrary,TvShowGenres,return)</onclick>
+			<visible>!IsEmpty(skin.string(SubMenu5))</visible>
+			<property name="SubMenuItem">not_empty</property>
+			<property name="DropdownMenu5">not_empty</property>
+		</item>
+		<item id="13" description="Library">
+			<visible>Skin.HasSetting(TvShowPlaylists)</visible>
+			<label>14022</label>
+			<onclick>ActivateWindow(VideoLibrary,root)</onclick>
+			<visible>!IsEmpty(skin.string(SubMenu5))</visible>
+			<property name="SubMenuItem">not_empty</property>
+			<property name="DropdownMenu5">not_empty</property>
+		</item>
+		
+		
 	</include>
 	
 	<include name="AddonSubItems">
 		<item id="1">
 			<description>install</description>
 			<label>Install</label>
-			<onclick>XBMC.ActivateWindow(addonbrowser,Addons://all/,return)</onclick>
+			<onclick>XBMC.ActivateWindow(addonbrowser,"Addons://all/",return)</onclick>
 			<visible>!IsEmpty(skin.string(SubMenu6))</visible>
 			<property name="SubMenuItem">not_empty</property>
 			<property name="DropdownMenu6">not_empty</property>

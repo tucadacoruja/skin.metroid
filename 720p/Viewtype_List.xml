@@ -57,7 +57,7 @@
 				</control>
 				<control type="textbox">
 					<posx>640</posx>
-					<posy>460</posy>
+					<posy>470</posy>
 					<height>110</height>
 					<width>190</width>
 					<label fallback="195">$INFO[ListItem.Plot]</label>
@@ -237,7 +237,9 @@
 				<ondown>50</ondown>
 				<viewtype label="List">list</viewtype>
 				<pagecontrol>60</pagecontrol>
-			    <scrolltime tween="cubic" easing="out">300</scrolltime>
+				<scrolltime>0</scrolltime>
+				<preloaditems>2</preloaditems>
+			    <!--scrolltime tween="cubic" easing="out">300</scrolltime-->
 				<itemlayout height="44" width="710">
 					<control type="label">
 						<posx>14</posx>
@@ -465,7 +467,7 @@
 				<textureslidernibfocus>buttons/scrollnibV.png</textureslidernibfocus>
 				<orientation>Vertical</orientation>
 				<showonepage>true</showonepage>
-				<posx>290</posx>
+				<posx>310</posx>
 				<posy>120</posy>
 				<width>10</width>
 				<height>580</height>

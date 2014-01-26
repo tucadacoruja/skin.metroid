@@ -1,6 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <includes>
-
 	
 	<variable name="MultiSlide">
 		<value  condition="!IsEmpty(Skin.String(Wallpaper_Folder_Path))">$INFO[Skin.String(Wallpaper_Folder_Path)]</value>

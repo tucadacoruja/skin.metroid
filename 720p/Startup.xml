@@ -4,12 +4,41 @@
     <defaultcontrol always="true">10</defaultcontrol>
     <allowoverlay>no</allowoverlay>
 	<backgroundcolor>0</backgroundcolor>
-    <controls>
-        <control type="button" id="10">
-            <description>trigger</description>
-            <onfocus>ReplaceWindow($INFO[System.StartupWindow])</onfocus>
-            <texturenofocus>-</texturenofocus>
-            <texturefocus>-</texturefocus>
-        </control>
-    </controls>
+	<animation effect="fade" time="800">WindowOpen</animation>
+    <animation effect="fade" time="200">WindowClose</animation>
+
+<controls>
+    <control type="button" id="10">
+        <description>trigger</description>
+        <onfocus>SetFocus(11)</onfocus>
+        <animation effect="fade" end="1" time="0" condition="true">Conditional</animation>
+    </control>
+
+    <!-- Show home if skin widgets loading is finished -->
+    <control type="button" id="11">
+	  <onfocus condition="!System.HasAddon(service.skin.widgets)">SetFocus(12)</onfocus>
+      <onfocus condition="System.HasAddon(service.skin.widgets)">SetFocus(11)</onfocus>
+      <visible>IsEmpty(Window(Home).Property(SkinWidgets_Running))</visible>
+	  <animation effect="fade" end="1" time="0" condition="true">Conditional</animation>
+    </control>
+    <control type="button" id="11">
+      <onfocus>ReplaceWindow($INFO[System.StartupWindow])</onfocus>
+      <visible>!IsEmpty(Window(Home).Property(SkinWidgets_Running))</visible>
+	  <animation effect="fade" end="1" time="0" condition="true">Conditional</animation>
+    </control>
+    <control type="button" id="12">
+      <onfocus>ReplaceWindow($INFO[System.StartupWindow])</onfocus>
+	  <animation effect="fade" end="1" time="0" condition="true">Conditional</animation>
+    </control>
+	<control type="image">
+		<posx>0</posx>
+		<posy>0</posy>
+		<width>1280</width>
+		<height>720</height>
+		<aspectratio>stretch</aspectratio>
+		<texture background="true">MetroidBG.png</texture>
+	</control>
+	
+	<include>Loading</include>
+  </controls>
 </window>

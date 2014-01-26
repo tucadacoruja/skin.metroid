@@ -4,9 +4,9 @@
 
 <onload condition="Window.Previous(startup) + Skin.HasSetting(DlLogosStartup)">RunScript(script.artwork.downloader,mode=custom,mediatype=tvshow,clearlogo)</onload>
 <onload condition="Window.Previous(startup) + Skin.HasSetting(DlLogosStartup)">RunScript(script.artwork.downloader,mode=custom,mediatype=movie,clearlogo)</onload>
-<onload condition="System.HasAddon(script.extendedinfo)">RunScript(script.extendedinfo,info=TrendingMovies)</onload>
+<!--onload condition="System.HasAddon(script.extendedinfo)">RunScript(script.extendedinfo,info=TrendingMovies)</onload>
 <onload condition="System.HasAddon(script.extendedinfo)">RunScript(script.extendedinfo,info=TrendingShows)</onload>
-<onload condition="System.HasAddon(script.extendedinfo)">RunScript(script.extendedinfo,info=AiringShows)</onload>
+<onload condition="System.HasAddon(script.extendedinfo)">RunScript(script.extendedinfo,info=AiringShows)</onload-->
 
 <onload>Skin.SetString(MainColorString,blue)</onload>
 <!--onload condition="System.HasAddon(script.grab.fanart)">RunScript(script.grab.fanart,mode=random,refresh=10)</onload-->

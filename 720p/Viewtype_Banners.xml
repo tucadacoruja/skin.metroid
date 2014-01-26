@@ -18,7 +18,7 @@
 			<posy>112</posy>
 			<width>950</width>
 			<height>550</height>
-			<scrolltime>275</scrolltime>
+			
 			<orientation>vertical</orientation>
 			<movement>4</movement>
 			<focusposition>1</focusposition>
@@ -27,6 +27,7 @@
 			<onleft>710</onleft>
 			<onright>-</onright>
 			<pagecontrol>710</pagecontrol>
+			<scrolltime>150</scrolltime>
 			<preloaditems>2</preloaditems>
 			<visible>Window.IsActive(25)</visible>
 			<visible>Container.Content(TVShows)</visible>

@@ -19,7 +19,6 @@
 <include file="Viewtype_List.xml" />
 <include file="Viewtype_PosterWrap.xml" />
 <include file="Viewtype_Songs.xml" />
-<include file="Viewtype_Episodes.xml" />
 <include file="Viewtype_Icons.xml" />
 
 
@@ -245,13 +244,13 @@
 			<visible>System.HasNetwork + Weather.IsFetched + Skin.HasSetting(GlobalSearch)</visible>
 		</control>
 		<control type="button" id="999">
-			<description>next</description>
+			<description>global search</description>
 			<posx>70r</posx>
 			<posy>8</posy>
 			<height>55</height>
 			<width>55</width>
 			<aspectratio>keep</aspectratio>
-			<texturefocus>osd/search.png</texturefocus>
+			<texturefocus colordiffuse="6200d8ff">osd/search.png</texturefocus>
 			<texturenofocus>osd/search.png</texturenofocus>
 			<onleft condition="!Window.IsActive(script-globalsearch-main.xml)">300</onleft>
 			<onleft condition="Window.IsActive(script-globalsearch-main.xml)">9000</onleft>
@@ -263,8 +262,8 @@
 			<onup condition="Window.IsActive(script-globalsearch-main.xml)">9000</onup>
 			<onclick condition="!Window.IsActive(script-globalsearch-main.xml)">RunScript(script.globalsearch)</onclick>
 			<onclick condition="Window.IsActive(script-globalsearch-main.xml)">SendClick(198)</onclick>
-			<animation effect="zoom" start="100" end="120" center="auto" time="100">Focus</animation>
-			<animation effect="zoom" start="120" end="100" center="auto" time="100">UnFocus</animation>
+			<animation effect="zoom" start="100" end="110" center="auto" time="100">Focus</animation>
+			<animation effect="zoom" start="110" end="100" center="auto" time="100">UnFocus</animation>
 			<visible>!Skin.HasSetting(GlobalSearch)</visible>
 		</control>
 		
@@ -289,7 +288,7 @@
 			<fadetime>1000</fadetime>
 			<randomize>true</randomize>
 			<animation effect="fade" start="0" end="100" time="100">VisibleChange</animation>
-			<animation effect="fade" start="40" end="95" time="100000" delay="2000" reversable="true" pulse="true" condition="Player.HasAudio + !Skin.HasSetting(VisLibrary)">Conditional</animation>
+			<animation effect="fade" start="10" end="74" time="100000" delay="2000" reversable="true" pulse="true" condition="Player.HasAudio + !Skin.HasSetting(VisLibrary)">Conditional</animation>
 			
 			<visible>!Player.HasVideo + IsEmpty(ListItem.Art(fanart)) + !Skin.HasSetting(BackgroundSlideshow)</visible>
 		</control>
@@ -311,10 +310,9 @@
 			<height>720</height>
 			<aspectratio>stretch</aspectratio>
 			<texture background="true" fallback="MetroidBG.png">$INFO[Skin.String(GlobalBackground)]</texture>
-			<animation effect="fade" start="100" end="99" time="600" reversible="true" >WindowOpen</animation>
 			<animation effect="fade" start="75" end="85" time="200" reversible="true" condition="!Player.HasVideo">Conditional</animation>
 			<animation effect="fade" start="85" end="75" time="200" reversible="true" condition="Player.HasVideo">Conditional</animation>
-			<animation effect="fade" start="84" end="90" time="90000" reversable="true" pulse="true" condition="Player.HasAudio + !Skin.HasSetting(VisLibrary)">Conditional</animation>
+			<animation effect="fade" start="85" end="100" time="50000" reversable="true" pulse="true" condition="Player.HasAudio + !Skin.HasSetting(VisLibrary) + !Skin.HasSetting(BackgroundSlideshow)">Conditional</animation>
 		</control>
 		<control type="image">
 			<posx>235</posx>
@@ -465,6 +463,128 @@
 				
 		</control>
 	</include>
+	
+	
+	<include name="Loading">
+		<!--control type="image">
+			<description>model</description>
+			<posx>590</posx>
+			<posy>310</posy>
+			<width>100</width>
+			<height>100</height>
+			<texture>whitedot.png</texture>
+			<aspectratio>stretch</aspectratio>
+			<animation effect="fade" start="0" end="90" time="900" reversable="false" >WindowOpen</animation>
+			<animation effect="fade" start="90" end="0" time="350" reversable="false" >WindowClose</animation>
+			
+		</control-->
+		
+		<control type="image">
+			<description>N dot</description>
+			<posx>630</posx>
+			<posy>310</posy>
+			<width>20</width>
+			<height>20</height>
+			<texture>whitedot.png</texture>
+			<aspectratio>stretch</aspectratio>
+			
+			<animation effect="fade" start="90" end="30" time="1800" delay="1125" loop="true" condition="true">Conditional</animation>
+			<animation effect="zoom" start="50" end="10" time="1800" delay="1125" center="auto" loop="true" condition="true">Conditional</animation>
+			<colordiffuse>skin.string(MainColorString)</colordiffuse>
+		</control>
+		<control type="image">
+			<description>NE dot</description>
+			<posx>660</posx>
+			<posy>320</posy>
+			<width>20</width>
+			<height>20</height>
+			<texture>whitedot.png</texture>
+			<aspectratio>stretch</aspectratio>
+			<animation effect="fade" start="90" end="30" time="1800" delay="900" loop="true" condition="true">Conditional</animation>
+			<animation effect="zoom" start="50" end="10" time="1800" delay="900" center="auto" loop="true" condition="true">Conditional</animation>
+			
+			<colordiffuse>skin.string(MainColorString)</colordiffuse>
+		</control>
+		<control type="image">
+			<description>E dot</description>
+			<posx>670</posx>
+			<posy>350</posy>
+			<width>20</width>
+			<height>20</height>
+			<texture>whitedot.png</texture>
+			<aspectratio>stretch</aspectratio>
+			<animation effect="fade" start="90" end="30" time="1800" delay="1575" loop="true" condition="true">Conditional</animation>
+			<animation effect="zoom" start="50" end="10" time="1800" delay="1575" center="auto" loop="true" condition="true">Conditional</animation>
+			
+			<colordiffuse>skin.string(MainColorString)</colordiffuse>
+		</control>
+		<control type="image">
+			<description>SE dot</description>
+			<posx>660</posx>
+			<posy>380</posy>
+			<width>20</width>
+			<height>20</height>
+			<texture>whitedot.png</texture>
+			<aspectratio>stretch</aspectratio>
+			<animation effect="fade" start="90" end="30" time="1800" delay="675" loop="true" condition="true">Conditional</animation>
+			<animation effect="zoom" start="50" end="10" time="1800" delay="675" center="auto" loop="true" condition="true">Conditional</animation>
+			
+			<colordiffuse>skin.string(MainColorString)</colordiffuse>
+		</control>
+		<control type="image">
+			<description>S dot</description>
+			<posx>630</posx>
+			<posy>390</posy>
+			<width>20</width>
+			<height>20</height>
+			<texture>whitedot.png</texture>
+			<aspectratio>stretch</aspectratio>
+			
+			<animation effect="fade" start="90" end="30" time="1800" delay="225" loop="true" condition="true">Conditional</animation>
+			<animation effect="zoom" start="50" end="10" time="1800" delay="225" center="auto" loop="true" condition="true">Conditional</animation>
+			<colordiffuse>skin.string(MainColorString)</colordiffuse>
+		</control>
+		<control type="image">
+			<description>SW dot</description>
+			<posx>600</posx>
+			<posy>380</posy>
+			<width>20</width>
+			<height>20</height>
+			<texture>whitedot.png</texture>
+			<aspectratio>stretch</aspectratio>
+			<animation effect="fade" start="90" end="30" time="1800" delay="0" loop="true" condition="true">Conditional</animation>
+			<animation effect="zoom" start="50" end="10" time="1800" delay="0" center="auto" loop="true" condition="true">Conditional</animation>
+			
+			<colordiffuse>skin.string(MainColorString)</colordiffuse>
+		</control>
+		<control type="image">
+			<description>W dot</description>
+			<posx>590</posx>
+			<posy>350</posy>
+			<width>20</width>
+			<height>20</height>
+			<texture>whitedot.png</texture>
+			<aspectratio>stretch</aspectratio>
+			<animation effect="fade" start="90" end="30" time="1800" delay="1350" loop="true" condition="true">Conditional</animation>
+			<animation effect="zoom" start="50" end="10" time="1800" delay="1350" center="auto" loop="true" condition="true">Conditional</animation>
+			
+			<colordiffuse>skin.string(MainColorString)</colordiffuse>
+		</control>
+		<control type="image">
+			<description>NW dot</description>
+			<posx>600</posx>
+			<posy>320</posy>
+			<width>20</width>
+			<height>20</height>
+			<texture>whitedot.png</texture>
+			<aspectratio>stretch</aspectratio>
+			
+			<animation effect="fade" start="90" end="30" time="1800" delay="450" loop="true" condition="true">Conditional</animation>
+			<animation effect="zoom" start="50" end="10" time="1800" delay="450" center="auto" loop="true" condition="true">Conditional</animation>
+			<colordiffuse>skin.string(MainColorString)</colordiffuse>
+		</control>
+	</include>
+	
 	
 	<include name="EmptyMenuItems">
 		<item id="86">

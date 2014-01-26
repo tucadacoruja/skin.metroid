@@ -171,10 +171,9 @@
 
 			<control type="group" id="9010">
 			<posy>20</posy>	
-				<animation type="Conditional" condition="Window.IsVisible(126) | Window.IsVisible(selectdialog)">
-					<effect type="fade" start="100" end="0" time="400" />
-				</animation>
-				
+
+				<animation effect="fade" start="0" end="100" time="0" condition="true">Visible</animation>
+				<animation effect="fade" start="100" end="0" time="0" condition="true">Hidden</animation>
 				<visible>!Window.IsVisible(selectdialog)</visible>
 				<visible>!Window.IsVisible(favourites)</visible>
 				<visible>!Window.IsVisible(filebrowser)</visible>
@@ -214,13 +213,22 @@
 						<onclick>Skin.ToggleSetting(HideGlobalMovies)</onclick>
 						<selected>!Skin.HasSetting(HideGlobalMovies)</selected>
 					</control>
+						<control type="radiobutton" id="124">
+							<include>SettingsButton</include>
+							<description>sub toggle</description>
+							<label> - $LOCALIZE[31222]</label>
+							<onclick>Skin.ToggleSetting(MovieSubmenu)</onclick>
+							<selected>!Skin.HasSetting(MovieSubmenu)</selected>
+							<enable>!Skin.HasSetting(HideGlobalMovies)</enable>
+						</control>
 						<control type="radiobutton" id="118">
 							<include>SettingsButton</include>
 							<description>alphabetical subcategories</description>
 							<label> - $LOCALIZE[31079] $LOCALIZE[31221]</label>
 							<onclick>Skin.ToggleSetting(MoviePlaylists)</onclick>
 							<selected>!Skin.HasSetting(MoviePlaylists)</selected>
-							<enable>!Skin.HasSetting(HideGlobalMovies)</enable>
+							<enable>![Skin.HasSetting(HideGlobalMovies) | Skin.HasSetting(MovieSubmenu)]</enable>
+						
 						</control>
 
 					<control type="radiobutton" id="102">
@@ -230,13 +238,21 @@
 						<onclick>Skin.ToggleSetting(HideGlobalTvshows)</onclick>
 						<selected>!Skin.HasSetting(HideGlobalTvshows)</selected>
 					</control>
+						<control type="radiobutton" id="123">
+							<include>SettingsButton</include>
+							<description>sub toggle</description>
+							<label> - $LOCALIZE[31222]</label>
+							<onclick>Skin.ToggleSetting(TvShowSubmenu)</onclick>
+							<selected>!Skin.HasSetting(TvShowSubmenu)</selected>
+							<enable>!Skin.HasSetting(HideGlobalTvshows)</enable>
+						</control>
 						<control type="radiobutton" id="120">
 							<include>SettingsButton</include>
 							<description>alphabetical subcategories</description>
 							<label> - $LOCALIZE[31080] $LOCALIZE[31221]</label>
 							<onclick>Skin.ToggleSetting(TvShowPlaylists)</onclick>
 							<selected>!Skin.HasSetting(TvShowPlaylists)</selected>
-							<enable>!Skin.HasSetting(HideGlobalTvshows)</enable>
+							<enable>![Skin.HasSetting(HideGlobalTvshows) | Skin.HasSetting(TvShowSubmenu)]</enable>
 						</control>
 
 					<control type="radiobutton" id="103">
@@ -248,10 +264,10 @@
 					</control>
 						<control type="radiobutton" id="121">
 							<include>SettingsButton</include>
-							<description>back behavior</description>
+							<description>sub toggle</description>
 							<label> - $LOCALIZE[31222]</label>
-							<onclick>Skin.ToggleSetting(MusicBackInOneStep)</onclick>
-							<selected>!Skin.HasSetting(MusicBackInOneStep)</selected>
+							<onclick>Skin.ToggleSetting(MusicSubmenu)</onclick>
+							<selected>!Skin.HasSetting(MusicSubmenu)</selected>
 							<enable>!Skin.HasSetting(HideGlobalMusic)</enable>
 						</control>
 					<control type="radiobutton" id="117">
@@ -374,8 +390,8 @@
 					<itemgap>.5</itemgap>
 					<onleft>63</onleft>
 					<onright>9000</onright>
-					<onup>9004</onup>
-					<ondown>9004</ondown>
+					<onup>9003</onup>
+					<ondown>9003</ondown>
 					<pagecontrol>63</pagecontrol>
 					
 					 <!-- EXTRA ITEMS FAVOURITES 1-10 -->
@@ -567,7 +583,13 @@
 						<onclick>Skin.ToggleSetting(LibraryFanart)</onclick>
 						<selected>!Skin.HasSetting(LibraryFanart)</selected>
 					</control>
-					
+					<control type="radiobutton" id="119">
+						<include>SettingsButton</include>
+						<description>Snow on Home screen</description>
+						<label>$LOCALIZE[31169]</label>
+						<onclick>Skin.ToggleSetting(HolidayEffects)</onclick>
+						<selected>Skin.HasSetting(HolidayEffects)</selected>
+					</control>
 				</control>
 
 				
@@ -582,7 +604,7 @@
 					<onleft>63</onleft>
 					<onright>9000</onright>
 					<onup>9006</onup>
-					<ondown>9007</ondown>
+					<ondown>9006</ondown>
 					<pagecontrol>63</pagecontrol>
 					
 					<control type="radiobutton" id="99">
@@ -592,7 +614,7 @@
 						<onclick>Skin.ToggleSetting(LockMainMenu)</onclick>
 						<selected>Skin.HasSetting(LockMainMenu)</selected>
 					</control>
-					<control type="radiobutton" id="108">
+					<control type="radiobutton" id="100">
 						<include>SettingsButton</include>
 						<description>Show Globalsearch</description>
 						<label>$LOCALIZE[31185]</label>
@@ -615,15 +637,16 @@
 						<selected>!Skin.HasSetting(FullScreenNowPlaying)</selected>
 					</control>
 					
-					<control type="radiobutton" id="104">
+					<control type="radiobutton" id="103">
 						<include>SettingsButton</include>
-						<description>Snow on Home screen</description>
-						<label>$LOCALIZE[31169]</label>
-						<onclick>Skin.ToggleSetting(HolidayEffects)</onclick>
-						<selected>Skin.HasSetting(HolidayEffects)</selected>
+						<description>Show flags</description>
+						<label>$LOCALIZE[31227]</label>
+						<onclick>Skin.ToggleSetting(HideFlagsInfo)</onclick>
+						<selected>!Skin.HasSetting(HideFlagsInfo)</selected>
 					</control>
 					
-					<control type="radiobutton" id="107">
+					
+					<control type="radiobutton" id="104">
 						<include>SettingsButton</include>
 						<description>Download logos on startup</description>
 						<label>$LOCALIZE[31170]</label>
@@ -633,7 +656,7 @@
 					
 					
 					
-					<control type="radiobutton" id="110">
+					<control type="radiobutton" id="105">
 						<include>SettingsButton</include>
 						<description>Show skin help</description>
 						<label>$LOCALIZE[31200]</label>
@@ -642,47 +665,47 @@
 						<selected>!Skin.HasSetting(ShowSkinHelp)</selected>
 					</control>
 					
-					<control type="button" id="111">
+					<control type="button" id="106">
 						<include>SettingsButton</include>
 						<label2>$INFO[Skin.String(PluginWidgetName1)]</label2>
-						<label>- Reset plugin widget 1</label>
+						<label>- $LOCALIZE[31228] 1</label>
 						<onclick>up</onclick>
 						<onclick>Skin.Reset(PluginWidgetPath1)</onclick>
 						<onclick>Skin.Reset(PluginWidgetName1)</onclick>
 						<enable>!IsEmpty(Skin.String(PluginWidgetPath1))</enable>
 					</control>
-					<control type="button" id="112">
+					<control type="button" id="107">
 						<include>SettingsButton</include>
 						<label2>$INFO[Skin.String(PluginWidgetName2)]</label2>
-						<label>- Reset plugin widget 2</label>
+						<label>- $LOCALIZE[31228] 2</label>
 						<onclick>up</onclick>
 						<onclick>Skin.Reset(PluginWidgetPath2)</onclick>
 						<onclick>Skin.Reset(PluginWidgetName2)</onclick>
 						<enable>!IsEmpty(Skin.String(PluginWidgetPath2))</enable>
 					</control>
 					
-					<control type="button" id="113">
+					<control type="button" id="108">
 						<include>SettingsButton</include>
 						<label2>$INFO[Skin.String(BookmarkName1)]</label2>
-						<label>- Reset Bookmark 1</label>
+						<label>- $LOCALIZE[31229] 1</label>
 						<onclick>up</onclick>
 						<onclick>Skin.Reset(BookmarkDBID1)</onclick>
 						<onclick>Skin.Reset(BookmarkName1)</onclick>
 						<enable>!IsEmpty(Skin.String(BookmarkDBID1))</enable>
 					</control>
-					<control type="button" id="114">
+					<control type="button" id="109">
 						<include>SettingsButton</include>
 						<label2>$INFO[Skin.String(BookmarkName2)]</label2>
-						<label>- Reset Bookmark 2</label>
+						<label>- $LOCALIZE[31229] 2</label>
 						<onclick>up</onclick>
 						<onclick>Skin.Reset(BookmarkDBID2)</onclick>
 						<onclick>Skin.Reset(BookmarkName2)</onclick>
 						<enable>!IsEmpty(Skin.String(BookmarkDBID2))</enable>
 					</control>
-					<control type="button" id="115">
+					<control type="button" id="110">
 						<include>SettingsButton</include>
 						<label2>$INFO[Skin.String(BookmarkName3)]</label2>
-						<label>- Reset Bookmark 3</label>
+						<label>- $LOCALIZE[31229] 3</label>
 						<onclick>up</onclick>
 						<onclick>Skin.Reset(BookmarkDBID3)</onclick>
 						<onclick>Skin.Reset(BookmarkName3)</onclick>
@@ -816,7 +839,7 @@
 			<onright condition="Control.IsVisible(9004)">9004</onright>
 			<onright condition="Control.IsVisible(9006)">9006</onright>
 			<animation effect="fade" start="100" end="40" time="200" reversable="false" condition="!Control.HasFocus(63)">Conditional</animation>
-		
+			<visible>Control.IsVisible(9010)</visible>
 		</control>
 		
 		

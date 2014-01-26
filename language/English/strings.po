@@ -818,7 +818,7 @@ msgid "alphabetical subcategories"
 msgstr ""
 
 msgctxt "#31222"
-msgid "Back in one step"
+msgid "Sub menu"
 msgstr ""
 
 msgctxt "#31223"
@@ -831,4 +831,24 @@ msgstr ""
 
 msgctxt "#31225"
 msgid "Full screen"
+msgstr ""
+
+msgctxt "#31226"
+msgid "Recent"
+msgstr ""
+
+msgctxt "#31227"
+msgid "Show flags"
+msgstr ""
+
+msgctxt "#31228"
+msgid "Reset plugin widget"
+msgstr ""
+
+msgctxt "#31229"
+msgid "Reset Bookmark"
+msgstr ""
+
+msgctxt "#31230"
+msgid "Manual"
 msgstr ""

@@ -30,12 +30,12 @@
 			
 			<control type="panel" id="677">
 				<visible>[Container.Content(episodes) + substring(Container.FolderPath,videodb://tvshows)]</visible>
-				<visible>!Window.IsVisible(favourites)</visible>	
+	
 				<posx>270</posx>
 				<posy>170</posy>
 				<include condition="!Skin.HasSetting(LockMainMenu)">IconsViewWidth1</include>
 				<include condition="Skin.HasSetting(LockMainMenu)">IconsViewWidth2</include>
-				<height>620</height>
+				<height>480</height>
 				<onup>677</onup>
 				<ondown>677</ondown>
 				<onleft>730</onleft>
@@ -136,10 +136,10 @@
 	
 						
 						<control type="image">
-							<posx>116</posx>
-							<posy>116</posy>
-							<width>24</width>
-							<height>24</height>
+							<posx>108</posx>
+							<posy>108</posy>
+							<width>32</width>
+							<height>32</height>
 							<texture>$INFO[ListItem.Overlay]</texture>
 							<aspectratio>stretch</aspectratio>
 							<colordiffuse>FFABABAB</colordiffuse>
@@ -153,9 +153,7 @@
 				<focusedlayout width="600" height="160">
 				
 					<control type="group">
-						<posx>0</posx>
-						<posy>0</posy>
-
+					<animation effect="zoom" start="90" end="100" center="70,70" time="300" tween="sine" easing="in">Focus</animation>
 						<control type="image">
 							<posx>0</posx>
 							<posy>0</posy>
@@ -177,7 +175,7 @@
 							<bordersize>3</bordersize>
 							<texture fallback="DefaultAlbumCover.png">$INFO[ListItem.Art(thumb)]</texture>
 							<fadetime>400</fadetime>
-							<visible>Container.Content(episodes)</visible>
+							
 						</control>
 						
 						<control type="image">
@@ -188,9 +186,7 @@
 							<aspectratio>keep</aspectratio>
 							<texture fallback="DefaultFallback.png">$VAR[Episode_Fallback]</texture>
 							<visible>IsEmpty(ListItem.Art(thumb))</visible>
-							
 						</control>
-						
 						<control type="image">
 							<posx>10</posx>
 							<posy>0</posy>
@@ -200,7 +196,18 @@
 							<visible>!substring(ListItem.Label,..,left) + [Stringcompare(Skin.String(BookmarkDBID1),ListItem.DBID) | Stringcompare(Skin.String(BookmarkDBID2),ListItem.DBID) | Stringcompare(Skin.String(BookmarkDBID3),ListItem.DBID)]</visible>
 							<visible>Container.Content(episodes) + substring(Container.FolderPath,videodb://tvshows)</visible>
 						</control>
-						
+									
+						<control type="image">
+							<posx>108</posx>
+							<posy>108</posy>
+							<width>32</width>
+							<height>32</height>
+							<texture>$INFO[ListItem.Overlay]</texture>
+							<aspectratio>stretch</aspectratio>
+							<colordiffuse>blue</colordiffuse>
+						</control>
+					</control>
+					
 						<control type="label">
 							<posx>160</posx>
 							<posy>5</posy>
@@ -237,21 +244,7 @@
 						
 							<autoscroll>false</autoscroll>
 						</control>
-	
-						
-						<control type="image">
-							<posx>116</posx>
-							<posy>116</posy>
-							<width>24</width>
-							<height>24</height>
-							<texture>$INFO[ListItem.Overlay]</texture>
-							<aspectratio>stretch</aspectratio>
-							<colordiffuse>blue</colordiffuse>
-							
-						</control>
-						
-					</control>	
-					
+									
 				</focusedlayout>
 
 			</control>

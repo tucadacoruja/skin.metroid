@@ -8,6 +8,7 @@
   <controls>
   
     <control type="group">
+	<animation effect="slide" start="0,0" end="0,170" time="300" condition="Window.IsVisible(virtualkeyboard)">Conditional</animation>
 	<posy>50</posy>
 		<animation type="Visible">
 			<effect type="fade" time="200" start="0" end="100" />
@@ -43,6 +44,7 @@
 			<posy>45</posy>
 			<width>150</width>
 			<height>80</height>
+			<visible>!Window.IsVisible(virtualkeyboard)</visible>
 		</control>
 		<control type="image">
 			<posx>50</posx>
@@ -52,11 +54,12 @@
 			<texture>white.png</texture>
 			<colordiffuse>4dffffff</colordiffuse>
 			<aspectratio>stretch</aspectratio>
+			<include>keyboard</include>
 		  </control>
 	</control>
 	
 <control type="group">	
-
+	<visible>!Window.IsVisible(virtualkeyboard)</visible>
 	<posx>240</posx>
 	<posy>65</posy>
 	<animation type="Visible">
@@ -146,7 +149,7 @@
 				<align>left</align>
 				<info>ListItem.Label</info>
 			</control>
-			<control type="image">
+			<!--control type="image">
 				<posx>105</posx>
 				<posy>10</posy>
 				<width>34</width>
@@ -163,7 +166,7 @@
 				<textcolor>list</textcolor>
 				<align>left</align>
 				<info>ListItem.Label2</info>
-			</control>
+			</control-->
 		  
         </itemlayout>
         <focusedlayout height="38">
@@ -199,7 +202,7 @@
 				<align>left</align>
 				<info>ListItem.Label</info>
 			</control>
-			<control type="image">
+			<!--control type="image">
 				<posx>105</posx>
 				<posy>10</posy>
 				<width>34</width>
@@ -217,7 +220,7 @@
 
 				<align>left</align>
 				<info>ListItem.Label2</info>
-			</control>
+			</control-->
         </focusedlayout>
 		
     </control>
@@ -381,13 +384,25 @@
 	
 	<control type="button" id="651">
 		<description>close</description>
-		<posx>810</posx>
+		<posx>690</posx>
 		<posy>357</posy>
 		<height>42</height>
 		<width>140</width>
 		<label>31056</label>
 		<onleft>120</onleft>
+		<onright>160</onright>
 		<onclick>dialog.close(SubtitleSearch)</onclick>
+		<include>BottomDialog</include>
+	</control>
+	<control type="button" id="160">
+		<description>manual</description>
+		<posx>860</posx>
+		<posy>357</posy>
+		<height>42</height>
+		<width>140</width>
+		<label>31230</label>
+		<onleft>651</onleft>
+		<onclick>-</onclick>
 		<include>BottomDialog</include>
 	</control>
 		
