@@ -206,6 +206,16 @@
 				<texture>osd/osdbg.png</texture>
 				<aspectratio>stretch</aspectratio>
 				<animation effect="fade" start="100" end="60" time="100" condition="Control.HasFocus(307)">Conditional</animation>
+				<visible>Visualisation.Enabled</visible>
+			</control>
+			<control type="image">
+				<posy>365</posy>
+				<height>55</height>
+				<width>55</width>
+				<texture>osd/GrayBackground.png</texture>
+				<aspectratio>stretch</aspectratio>
+				<animation effect="fade" start="100" end="60" time="100" condition="Control.HasFocus(307)">Conditional</animation>
+				<visible>!Visualisation.Enabled</visible>
 			</control>
 			<control type="button" id="307">
 				<description>settings</description>
@@ -220,7 +230,7 @@
 				<onclick>Addon.Default.OpenSettings(xbmc.player.musicviz)</onclick>
 				<animation effect="zoom" start="100" end="120" center="auto" time="100">Focus</animation>
 				<animation effect="zoom" start="120" end="100" center="auto" time="100">UnFocus</animation>
-				
+				<enable>Visualisation.Enabled</enable>
 				<onup>306</onup>
 				<ondown>308</ondown>
 			</control>
@@ -359,6 +369,16 @@
 				<texture>osd/osdbg.png</texture>
 				<aspectratio>stretch</aspectratio>
 				<animation effect="fade" start="100" end="60" time="100" condition="Control.HasFocus(311)">Conditional</animation>
+				<visible>Visualisation.Enabled + [System.HasAddon(visualization.milkdrop) | System.HasAddon(visualization.vortex)]</visible>
+			</control>
+			<control type="image">
+				<posy>605</posy>
+				<height>55</height>
+				<width>55</width>
+				<texture>osd/GrayBackground.png</texture>
+				<aspectratio>stretch</aspectratio>
+				<animation effect="fade" start="100" end="60" time="100" condition="Control.HasFocus(311)">Conditional</animation>
+				<visible>!Visualisation.Enabled + ![System.HasAddon(visualization.milkdrop) | System.HasAddon(visualization.vortex)]</visible>
 			</control>
 			<control type="button" id="311">
 				<posy>605</posy>
@@ -372,7 +392,7 @@
 				<onclick>ActivateWindow(visualisationpresetlist)</onclick>
 				<animation effect="zoom" start="100" end="120" center="auto" time="100">Focus</animation>
 				<animation effect="zoom" start="120" end="100" center="auto" time="100">UnFocus</animation>
-				
+				<enable>Visualisation.Enabled + [System.HasAddon(visualization.milkdrop) | System.HasAddon(visualization.vortex)]</enable>
 				<onup>310</onup>
 				<ondown>312</ondown>
 			</control>

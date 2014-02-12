@@ -232,7 +232,7 @@
 				<width>1190</width>
 				<height>648</height>
 				<onleft>60</onleft>
-				<onright>-</onright>
+				<onright>noop</onright>
 				<onup>50</onup>
 				<ondown>50</ondown>
 				<viewtype label="List">list</viewtype>
@@ -289,6 +289,7 @@
 						<aspectratio align="left" aligny="center">stretch</aspectratio>
 						<texture>Watched.png</texture>
 						<visible>stringcompare(ListItem.Overlay,OverlayWatched.png)</visible>
+						<visible>!Skin.HasSetting(WatchedOverlays)</visible>
 					</control>
 					<control type="label">
 						<posx>95</posx>
@@ -326,6 +327,7 @@
 						<aspectratio align="center" aligny="center">keep</aspectratio>
 						<texture>$INFO[ListItem.VideoResolution,flags/video/resolution/,.png]</texture>
 						<visible>Container.Content(Movies) | Container.Content(Episodes) | Window.IsVisible(VideoPlaylist)</visible>
+						<visible>!Skin.HasSetting(HideFlagsInfo)</visible>
 					</control>
 
 					<control type="label">
@@ -403,6 +405,7 @@
 							<aspectratio align="left" aligny="center">stretch</aspectratio>
 							<texture>Watched.png</texture>
 							<visible>stringcompare(ListItem.Overlay,OverlayWatched.png)</visible>
+							<visible>!Skin.HasSetting(WatchedOverlays)</visible>
 						</control>
 						<control type="label">
 							<posx>95</posx>
@@ -439,6 +442,7 @@
 							<aspectratio align="center" aligny="center">keep</aspectratio>
 							<texture>$INFO[ListItem.VideoResolution,flags/video/resolution/,.png]</texture>
 							<visible>Container.Content(Movies) | Container.Content(Episodes) | Window.IsVisible(VideoPlaylist)</visible>
+							<visible>!Skin.HasSetting(HideFlagsInfo)</visible>
 						</control>
 		
 						<control type="label">

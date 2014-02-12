@@ -96,8 +96,8 @@
     <disabledcolor>Red</disabledcolor>
     <textoffsetx>0</textoffsetx>
     <textoffsety>0</textoffsety>
-    <onup>-</onup>
-    <ondown>-</ondown>
+    <onup>noop</onup>
+    <ondown>noop</ondown>
     <onleft>11</onleft>
     <onright>11</onright>
   </control>

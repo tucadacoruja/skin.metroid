@@ -178,6 +178,7 @@
 				<visible>!Window.IsVisible(favourites)</visible>
 				<visible>!Window.IsVisible(filebrowser)</visible>
 				<visible>!Window.IsActive(DialogSelect.xml)</visible>
+				<visible>!Window.IsVisible(virtualkeyboard)</visible>
 				
 				<animation type="WindowClose" reversible="false">
 					<effect type="fade" start="100" end="0" time="350" delay="0" />
@@ -421,6 +422,17 @@
 						<label> - $LOCALIZE[31159]</label>
 						<label2>$INFO[Skin.String(CustomFavourite1.Label)]</label2>
 						<onclick>RunScript(script.favourites,property=CustomFavourite1)</onclick>
+						
+						<enable>Skin.HasSetting(Menu_Custom1)</enable>
+						<visible>Skin.HasSetting(cust_favorite)</visible>
+					</control>
+					<control type="button" id="203">
+						<include>SettingsButton</include>
+						<description>Set Name</description>
+						<label> - $LOCALIZE[31232]</label>
+						<label2>$INFO[Skin.String(CustomFavName1)]</label2>
+						<onclick>Skin.SetString(CustomFavName1,$INFO[Skin.String(CustomFavourite1.Label)])</onclick>
+						<onclick>Skin.SetString(CustomFavName1)</onclick>
 						<enable>Skin.HasSetting(Menu_Custom1)</enable>
 						<visible>Skin.HasSetting(cust_favorite)</visible>
 					</control>
@@ -441,10 +453,20 @@
 						<label> - $LOCALIZE[31159]</label>
 						<label2>$INFO[Skin.String(CustomFavourite2.Label)]</label2>
 						<onclick>RunScript(script.favourites,property=CustomFavourite2)</onclick>
+						
 						<enable>Skin.HasSetting(Menu_Custom2)</enable>
 						<visible>Skin.HasSetting(cust_favorite)</visible>
 					</control>
-					
+					<control type="button" id="209">
+						<include>SettingsButton</include>
+						<description>Set Name</description>
+						<label> - $LOCALIZE[31232]</label>
+						<label2>$INFO[Skin.String(CustomFavName2)]</label2>
+						<onclick>Skin.SetString(CustomFavName2,$INFO[Skin.String(CustomFavourite2.Label)])</onclick>
+						<onclick>Skin.SetString(CustomFavName2)</onclick>
+						<enable>Skin.HasSetting(Menu_Custom2)</enable>
+						<visible>Skin.HasSetting(cust_favorite)</visible>
+					</control>
 					
 					 <!-- EXTRA ITEMS FAVOURITES 3 -->
 					
@@ -461,10 +483,20 @@
 						<label> - $LOCALIZE[31159]</label>
 						<label2>$INFO[Skin.String(CustomFavourite3.Label)]</label2>
 						<onclick>RunScript(script.favourites,property=CustomFavourite3)</onclick>
+						
 						<enable>Skin.HasSetting(Menu_Custom3)</enable>
 						<visible>Skin.HasSetting(cust_favorite)</visible>
 					</control>
-					
+					<control type="button" id="215">
+						<include>SettingsButton</include>
+						<description>Set Name</description>
+						<label> - $LOCALIZE[31232]</label>
+						<label2>$INFO[Skin.String(CustomFavName3)]</label2>
+						<onclick>Skin.SetString(CustomFavName3,$INFO[Skin.String(CustomFavourite3.Label)])</onclick>
+						<onclick>Skin.SetString(CustomFavName3)</onclick>
+						<enable>Skin.HasSetting(Menu_Custom3)</enable>
+						<visible>Skin.HasSetting(cust_favorite)</visible>
+					</control>
 					
 					<!-- EXTRA ITEMS FAVOURITES 4 -->
 					
@@ -481,10 +513,20 @@
 						<label> - $LOCALIZE[31159]</label>
 						<label2>$INFO[Skin.String(CustomFavourite4.Label)]</label2>
 						<onclick>RunScript(script.favourites,property=CustomFavourite4)</onclick>
+						
 						<enable>Skin.HasSetting(Menu_Custom4)</enable>
 						<visible>Skin.HasSetting(cust_favorite)</visible>
 					</control>
-					
+					<control type="button" id="221">
+						<include>SettingsButton</include>
+						<description>Set Name</description>
+						<label> - $LOCALIZE[31232]</label>
+						<label2>$INFO[Skin.String(CustomFavName4)]</label2>
+						<onclick>Skin.SetString(CustomFavName4,$INFO[Skin.String(CustomFavourite4.Label)])</onclick>
+						<onclick>Skin.SetString(CustomFavName4)</onclick>
+						<enable>Skin.HasSetting(Menu_Custom4)</enable>
+						<visible>Skin.HasSetting(cust_favorite)</visible>
+					</control>
 					
 					<!-- EXTRA ITEMS FAVOURITES 5 -->
 					
@@ -501,10 +543,21 @@
 						<label> - $LOCALIZE[31159]</label>
 						<label2>$INFO[Skin.String(CustomFavourite5.Label)]</label2>
 						<onclick>RunScript(script.favourites,property=CustomFavourite5)</onclick>
+						
 						<enable>Skin.HasSetting(Menu_Custom5)</enable>
 						<visible>Skin.HasSetting(cust_favorite)</visible>
 					</control>
-								
+					<control type="button" id="227">
+						<include>SettingsButton</include>
+						<description>Set Name</description>
+						<label> - $LOCALIZE[31232]</label>
+						<label2>$INFO[Skin.String(CustomFavName5)]</label2>
+						<onclick>Skin.SetString(CustomFavName5,$INFO[Skin.String(CustomFavourite5.Label)])</onclick>
+						<onclick>Skin.SetString(CustomFavName5)</onclick>
+						<enable>Skin.HasSetting(Menu_Custom5)</enable>
+						<visible>Skin.HasSetting(cust_favorite)</visible>
+					</control>
+					
 					<!-- EXTRA ITEMS FAVOURITES 6 -->
 					
 					<control type="radiobutton" id="230">
@@ -520,10 +573,21 @@
 						<label> - $LOCALIZE[31159]</label>
 						<label2>$INFO[Skin.String(CustomFavourite6.Label)]</label2>
 						<onclick>RunScript(script.favourites,property=CustomFavourite6)</onclick>
+						
 						<enable>Skin.HasSetting(Menu_Custom6)</enable>
 						<visible>Skin.HasSetting(cust_favorite)</visible>
 					</control>
-							
+					<control type="button" id="233">
+						<include>SettingsButton</include>
+						<description>Set Name</description>
+						<label> - $LOCALIZE[31232]</label>
+						<label2>$INFO[Skin.String(CustomFavName6)]</label2>
+						<onclick>Skin.SetString(CustomFavName6,$INFO[Skin.String(CustomFavourite6.Label)])</onclick>
+						<onclick>Skin.SetString(CustomFavName6)</onclick>
+						<enable>Skin.HasSetting(Menu_Custom6)</enable>
+						<visible>Skin.HasSetting(cust_favorite)</visible>
+					</control>
+					
 				</control>	
 					
 					
@@ -565,6 +629,13 @@
 						<label>$LOCALIZE[31196]</label>
 						<onclick>Skin.ToggleSetting(VisLibrary)</onclick>
 						<selected>!Skin.HasSetting(VisLibrary)</selected>
+					</control>
+					<control type="radiobutton" id="120">
+						<include>SettingsButton</include>
+						<description>Background video in library</description>
+						<label>$LOCALIZE[31231]</label>
+						<onclick>Skin.ToggleSetting(VidWinLibrary)</onclick>
+						<selected>!Skin.HasSetting(VidWinLibrary)</selected>
 					</control>
 
 					<control type="radiobutton" id="117">
@@ -627,7 +698,7 @@
 						<description>Show watched overlays</description>
 						<label>$LOCALIZE[31167]</label>
 						<onclick>Skin.ToggleSetting(WatchedOverlays)</onclick>
-						<selected>Skin.HasSetting(WatchedOverlays)</selected>
+						<selected>!Skin.HasSetting(WatchedOverlays)</selected>
 					</control>
 					<control type="radiobutton" id="102">
 						<include>SettingsButton</include>

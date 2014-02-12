@@ -106,7 +106,7 @@
 		<orientation>vertical</orientation>
 		<pagecontrol>60</pagecontrol>
 		<onleft>60</onleft>
-		<onright>-</onright>
+		<onright>noop</onright>
 		<onup>444</onup>
 		<ondown>444</ondown>
 		<pagecontrol>603</pagecontrol>

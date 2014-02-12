@@ -25,7 +25,7 @@
 			<onup>709</onup>
 			<ondown>709</ondown>
 			<onleft>710</onleft>
-			<onright>-</onright>
+			<onright>noop</onright>
 			<pagecontrol>710</pagecontrol>
 			<scrolltime>150</scrolltime>
 			<preloaditems>2</preloaditems>

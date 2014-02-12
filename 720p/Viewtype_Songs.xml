@@ -28,7 +28,7 @@
 			<ondown>602</ondown>
 			
 			<onleft>63</onleft>
-			<onright>-</onright>
+			<onright>noop</onright>
 			<pagecontrol>63</pagecontrol>
 			<visible>Container.Content(songs) | Window.IsVisible(pictures)</visible>
 			<visible>!Window.IsVisible(favourites)</visible>

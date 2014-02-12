@@ -78,7 +78,7 @@
 		<itemgap>0</itemgap>
 		<onleft>999</onleft>
 		<onright>5</onright>
-		<onup>-</onup>
+		<onup>noop</onup>
 		<ondown condition="!Skin.HasSetting(HideGlobalBack)">20</ondown>
 		<ondown condition="Skin.HasSetting(HideGlobalBack)">444</ondown>
 		<orientation>vertical</orientation>
@@ -252,7 +252,8 @@
 		<onleft>3</onleft>
 		<onright>5</onright>
 		<animation effect="fade" start="100" end="40" time="200" reversable="false" condition="!Control.HasFocus(63)">Conditional</animation>
-	
+		<visible>![Window.IsVisible(126) | Window.IsVisible(2000) | Window.IsVisible(peripherals)]</visible>
+		
 	</control>
 
 <include>BottomInfoBar</include>

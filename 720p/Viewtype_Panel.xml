@@ -154,7 +154,7 @@
 							<texture>$INFO[ListItem.Overlay]</texture>
 							<aspectratio>stretch</aspectratio>
 							<colordiffuse>FFABABAB</colordiffuse>
-							
+							<visible>!Skin.HasSetting(WatchedOverlays)</visible>
 						</control>
 						
 					</control>	
@@ -281,7 +281,7 @@
 							<texture>$INFO[ListItem.Overlay]</texture>
 							<aspectratio>stretch</aspectratio>
 							<!--colordiffuse>FFABABAB</colordiffuse-->
-							
+							<visible>!Skin.HasSetting(WatchedOverlays)</visible>
 						</control>
 						
 					</control>	

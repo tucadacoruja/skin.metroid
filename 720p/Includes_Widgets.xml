@@ -214,7 +214,7 @@
 				<thumb>$INFO[Window(Home).Property(RecentEpisode.1.Art(thumb))]</thumb>
 				<property name="Plot">$INFO[Window(Home).Property(RecentEpisode.1.Plot)]</property>
 				<property name="Rating">$INFO[Window(Home).Property(RecentEpisode.1.Rating)]</property>
-				<property name="EpisodeNumber">S$INFO[Window(Home).Property(RecentEpisode.1.Season)]E$INFO[Window(Home).Property(RecentEpisode.1.Episode)]</property>
+				<property name="EpisodeNumber">$INFO[Window(Home).Property(RecentEpisode.1.Season),S]$INFO[Window(Home).Property(RecentEpisode.1.Episode),E]</property>
 				<property name="RootPath">$INFO[Window(Home).Property(RecentEpisode.1.Path)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecentEpisode.1.Art(tvshow.fanart))]</property>
 				<property name="Path">$INFO[Window(Home).Property(RecentEpisode.1.File)]</property>
@@ -227,7 +227,7 @@
 				<thumb>$INFO[Window(Home).Property(RecentEpisode.2.Art(thumb))]</thumb>
 				<property name="Plot">$INFO[Window(Home).Property(RecentEpisode.2.Plot)]</property>
 				<property name="Rating">$INFO[Window(Home).Property(RecentEpisode.2.Rating)]</property>
-				<property name="EpisodeNumber">S$INFO[Window(Home).Property(RecentEpisode.2.Season)]E$INFO[Window(Home).Property(RecentEpisode.2.Episode)]</property>
+				<property name="EpisodeNumber">$INFO[Window(Home).Property(RecentEpisode.2.Season),S]$INFO[Window(Home).Property(RecentEpisode.2.Episode),E]</property>
 				<property name="RootPath">$INFO[Window(Home).Property(RecentEpisode.2.Path)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecentEpisode.2.Art(tvshow.fanart))]</property>
 				<property name="Path">$INFO[Window(Home).Property(RecentEpisode.2.File)]</property>
@@ -240,7 +240,7 @@
 				<thumb>$INFO[Window(Home).Property(RecentEpisode.3.Art(thumb))]</thumb>
 				<property name="Plot">$INFO[Window(Home).Property(RecentEpisode.3.Plot)]</property>
 				<property name="Rating">$INFO[Window(Home).Property(RecentEpisode.3.Rating)]</property>
-				<property name="EpisodeNumber">S$INFO[Window(Home).Property(RecentEpisode.3.Season)]E$INFO[Window(Home).Property(RecentEpisode.3.Episode)]</property>
+				<property name="EpisodeNumber">$INFO[Window(Home).Property(RecentEpisode.3.Season),S]$INFO[Window(Home).Property(RecentEpisode.3.Episode),E]</property>
 				<property name="RootPath">$INFO[Window(Home).Property(RecentEpisode.3.Path)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecentEpisode.3.Art(tvshow.fanart))]</property>
 				<property name="Path">$INFO[Window(Home).Property(RecentEpisode.3.File)]</property>
@@ -253,7 +253,7 @@
 				<thumb>$INFO[Window(Home).Property(RecentEpisode.4.Art(thumb))]</thumb>
 				<property name="Plot">$INFO[Window(Home).Property(RecentEpisode.4.Plot)]</property>
 				<property name="Rating">$INFO[Window(Home).Property(RecentEpisode.4.Rating)]</property>
-				<property name="EpisodeNumber">S$INFO[Window(Home).Property(RecentEpisode.4.Season)]E$INFO[Window(Home).Property(RecentEpisode.4.Episode)]</property>
+				<property name="EpisodeNumber">$INFO[Window(Home).Property(RecentEpisode.4.Season),S]$INFO[Window(Home).Property(RecentEpisode.4.Episode),E]</property>
 				<property name="RootPath">$INFO[Window(Home).Property(RecentEpisode.4.Path)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecentEpisode.4.Art(tvshow.fanart))]</property>
 				<property name="Path">$INFO[Window(Home).Property(RecentEpisode.4.File)]</property>
@@ -266,7 +266,7 @@
 				<thumb>$INFO[Window(Home).Property(RecentEpisode.5.Art(thumb))]</thumb>
 				<property name="Plot">$INFO[Window(Home).Property(RecentEpisode.5.Plot)]</property>
 				<property name="Rating">$INFO[Window(Home).Property(RecentEpisode.5.Rating)]</property>
-				<property name="EpisodeNumber">S$INFO[Window(Home).Property(RecentEpisode.5.Season)]E$INFO[Window(Home).Property(RecentEpisode.5.Episode)]</property>
+				<property name="EpisodeNumber">S$INFO[Window(Home).Property(RecentEpisode.5.Season),S]$INFO[Window(Home).Property(RecentEpisode.5.Episode),E]</property>
 				<property name="RootPath">$INFO[Window(Home).Property(RecentEpisode.5.Path)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecentEpisode.5.Art(tvshow.fanart))]</property>
 				<property name="Path">$INFO[Window(Home).Property(RecentEpisode.5.File)]</property>
@@ -279,38 +279,13 @@
 				<thumb>$INFO[Window(Home).Property(RecentEpisode.6.Art(thumb))]</thumb>
 				<property name="Plot">$INFO[Window(Home).Property(RecentEpisode.6.Plot)]</property>
 				<property name="Rating">$INFO[Window(Home).Property(RecentEpisode.6.Rating)]</property>
-				<property name="EpisodeNumber">S$INFO[Window(Home).Property(RecentEpisode.6.Season)]E$INFO[Window(Home).Property(RecentEpisode.6.Episode)]</property>
+				<property name="EpisodeNumber">S$INFO[Window(Home).Property(RecentEpisode.6.Season),S]E$INFO[Window(Home).Property(RecentEpisode.6.Episode),E]</property>
 				<property name="RootPath">$INFO[Window(Home).Property(RecentEpisode.6.Path)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecentEpisode.6.Art(tvshow.fanart))]</property>
 				<property name="Path">$INFO[Window(Home).Property(RecentEpisode.6.File)]</property>
 				<property name="Logo">$INFO[Window(Home).Property(RecentEpisode.6.Art(tvshow.clearlogo))]</property>
 			</item>
-			<!--item>
-				<label>$INFO[Window(Home).Property(RecentEpisode.7.Title)]</label>
-				<label2>$INFO[Window(Home).Property(RecentEpisode.7.TVshowTitle)]</label2>
-				<onclick>$INFO[Window(Home).Property(RecentEpisode.7.Play)]</onclick>
-				<thumb>$INFO[Window(Home).Property(RecentEpisode.7.Art(thumb))]</thumb>
-				<property name="Plot">$INFO[Window(Home).Property(RecentEpisode.7.Plot)]</property>
-				<property name="Rating">$INFO[Window(Home).Property(RecentEpisode.7.Rating)]</property>
-				<property name="EpisodeNumber">$INFO[Window(Home).Property(RecentEpisode.7.Episode)]</property>
-				<property name="RootPath">$INFO[Window(Home).Property(RecentEpisode.7.Path)]</property>
-				<property name="Fanart">$INFO[Window(Home).Property(RecentEpisode.7.Art(tvshow.fanart))]</property>
-				<property name="Path">$INFO[Window(Home).Property(RecentEpisode.7.File)]</property>
-				<property name="Logo">$INFO[Window(Home).Property(RecentEpisode.7.Art(tvshow.clearlogo))]</property>
-			</item>
-			<item>
-				<label>$INFO[Window(Home).Property(RecentEpisode.8.Title)]</label>
-				<label2>$INFO[Window(Home).Property(RecentEpisode.8.TVshowTitle)]</label2>
-				<onclick>$INFO[Window(Home).Property(RecentEpisode.8.Play)]</onclick>
-				<thumb>$INFO[Window(Home).Property(RecentEpisode.8.Art(thumb))]</thumb>
-				<property name="Plot">$INFO[Window(Home).Property(RecentEpisode.8.Plot)]</property>
-				<property name="Rating">$INFO[Window(Home).Property(RecentEpisode.8.Rating)]</property>
-				<property name="EpisodeNumber">$INFO[Window(Home).Property(RecentEpisode.8.Episode)]</property>
-				<property name="RootPath">$INFO[Window(Home).Property(RecentEpisode.8.Path)]</property>
-				<property name="Fanart">$INFO[Window(Home).Property(RecentEpisode.8.Art(tvshow.fanart))]</property>
-				<property name="Path">$INFO[Window(Home).Property(RecentEpisode.8.File)]</property>
-				<property name="Logo">$INFO[Window(Home).Property(RecentEpisode.8.Art(tvshow.clearlogo))]</property>
-			</item-->
+
 		</content>
 	</include>
 	<include name="HomeContentRecommendedTVShows">				
@@ -322,7 +297,7 @@
 				<thumb>$INFO[Window(Home).Property(RecommendedEpisode.1.Art(thumb))]</thumb>
 				<property name="Plot">$INFO[Window(Home).Property(RecommendedEpisode.1.Plot)]</property>
 				<property name="Rating">$INFO[Window(Home).Property(RecommendedEpisode.1.Rating)]</property>
-				<property name="EpisodeNumber">S$INFO[Window(Home).Property(RecommendedEpisode.1.Season)]E$INFO[Window(Home).Property(RecommendedEpisode.1.Episode)]</property>
+				<property name="EpisodeNumber">$INFO[Window(Home).Property(RecommendedEpisode.1.Season),S]$INFO[Window(Home).Property(RecommendedEpisode.1.Episode),E]</property>
 				<property name="RootPath">$INFO[Window(Home).Property(RecommendedEpisode.1.Path)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecommendedEpisode.1.Art(tvshow.fanart))]</property>
 				<property name="Path">$INFO[Window(Home).Property(RecommendedEpisode.1.File)]</property>
@@ -335,7 +310,7 @@
 				<thumb>$INFO[Window(Home).Property(RecommendedEpisode.2.Art(thumb))]</thumb>
 				<property name="Plot">$INFO[Window(Home).Property(RecommendedEpisode.2.Plot)]</property>
 				<property name="Rating">$INFO[Window(Home).Property(RecommendedEpisode.2.Rating)]</property>
-				<property name="EpisodeNumber">S$INFO[Window(Home).Property(RecommendedEpisode.2.Season)]E$INFO[Window(Home).Property(RecommendedEpisode.2.Episode)]</property>
+				<property name="EpisodeNumber">$INFO[Window(Home).Property(RecommendedEpisode.2.Season),S]$INFO[Window(Home).Property(RecommendedEpisode.2.Episode),E]</property>
 				<property name="RootPath">$INFO[Window(Home).Property(RecommendedEpisode.2.Path)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecommendedEpisode.2.Art(tvshow.fanart))]</property>
 				<property name="Path">$INFO[Window(Home).Property(RecommendedEpisode.2.File)]</property>
@@ -348,7 +323,7 @@
 				<thumb>$INFO[Window(Home).Property(RecommendedEpisode.3.Art(thumb))]</thumb>
 				<property name="Plot">$INFO[Window(Home).Property(RecommendedEpisode.3.Plot)]</property>
 				<property name="Rating">$INFO[Window(Home).Property(RecommendedEpisode.3.Rating)]</property>
-				<property name="EpisodeNumber">S$INFO[Window(Home).Property(RecommendedEpisode.3.Season)]E$INFO[Window(Home).Property(RecommendedEpisode.3.Episode)]</property>
+				<property name="EpisodeNumber">$INFO[Window(Home).Property(RecommendedEpisode.3.Season),S]$INFO[Window(Home).Property(RecommendedEpisode.3.Episode),E]</property>
 				<property name="RootPath">$INFO[Window(Home).Property(RecommendedEpisode.3.Path)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecommendedEpisode.3.Art(tvshow.fanart))]</property>
 				<property name="Path">$INFO[Window(Home).Property(RecommendedEpisode.3.File)]</property>
@@ -361,7 +336,7 @@
 				<thumb>$INFO[Window(Home).Property(RecommendedEpisode.4.Art(thumb))]</thumb>
 				<property name="Plot">$INFO[Window(Home).Property(RecommendedEpisode.4.Plot)]</property>
 				<property name="Rating">$INFO[Window(Home).Property(RecommendedEpisode.4.Rating)]</property>
-				<property name="EpisodeNumber">S$INFO[Window(Home).Property(RecommendedEpisode.4.Season)]E$INFO[Window(Home).Property(RecommendedEpisode.4.Episode)]</property>
+				<property name="EpisodeNumber">$INFO[Window(Home).Property(RecommendedEpisode.4.Season),S]$INFO[Window(Home).Property(RecommendedEpisode.4.Episode),E]</property>
 				<property name="RootPath">$INFO[Window(Home).Property(RecommendedEpisode.4.Path)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecommendedEpisode.4.Art(tvshow.fanart))]</property>
 				<property name="Path">$INFO[Window(Home).Property(RecommendedEpisode.4.File)]</property>
@@ -374,8 +349,8 @@
 				<thumb>$INFO[Window(Home).Property(RecommendedEpisode.5.Art(thumb))]</thumb>
 				<property name="Plot">$INFO[Window(Home).Property(RecommendedEpisode.5.Plot)]</property>
 				<property name="Rating">$INFO[Window(Home).Property(RecommendedEpisode.5.Rating)]</property>
-				<property name="EpisodeNumber">$INFO[Window(Home).Property(RecommendedEpisode.5.Episode)]</property>
-				<property name="RootPath">S$INFO[Window(Home).Property(RecommendedEpisode.5.Season)]E$INFO[Window(Home).Property(RecommendedEpisode.5.Path)]</property>
+				<property name="EpisodeNumber">$INFO[Window(Home).Property(RecommendedEpisode.5.Season),S]$INFO[Window(Home).Property(RecommendedEpisode.5.Episode),E]</property>
+				<property name="RootPath">$INFO[Window(Home).Property(RecommendedEpisode.4.Path)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecommendedEpisode.5.Art(tvshow.fanart))]</property>
 				<property name="Path">$INFO[Window(Home).Property(RecommendedEpisode.5.File)]</property>
 				<property name="Logo">$INFO[Window(Home).Property(RecommendedEpisode.5.Art(tvshow.clearlogo))]</property>
@@ -387,38 +362,13 @@
 				<thumb>$INFO[Window(Home).Property(RecommendedEpisode.6.Art(thumb))]</thumb>
 				<property name="Plot">$INFO[Window(Home).Property(RecommendedEpisode.6.Plot)]</property>
 				<property name="Rating">$INFO[Window(Home).Property(RecommendedEpisode.6.Rating)]</property>
-				<property name="EpisodeNumber">S$INFO[Window(Home).Property(RecommendedEpisode.6.Season)]E$INFO[Window(Home).Property(RecommendedEpisode.6.Episode)]</property>
+				<property name="EpisodeNumber">$INFO[Window(Home).Property(RecommendedEpisode.6.Season),S]$INFO[Window(Home).Property(RecommendedEpisode.6.Episode),E]</property>
 				<property name="RootPath">$INFO[Window(Home).Property(RecommendedEpisode.6.Path)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RecommendedEpisode.6.Art(tvshow.fanart))]</property>
 				<property name="Path">$INFO[Window(Home).Property(RecommendedEpisode.6.File)]</property>
 				<property name="Logo">$INFO[Window(Home).Property(RecommendedEpisode.6.Art(tvshow.clearlogo))]</property>
 			</item>
-			<!--item>
-				<label>$INFO[Window(Home).Property(RecommendedEpisode.7.Title)]</label>
-				<label2>$INFO[Window(Home).Property(RecommendedEpisode.7.TVshowTitle)]</label2>
-				<onclick>$INFO[Window(Home).Property(RecommendedEpisode.7.Play)]</onclick>
-				<thumb>$INFO[Window(Home).Property(RecommendedEpisode.7.Art(thumb))]</thumb>
-				<property name="Plot">$INFO[Window(Home).Property(RecommendedEpisode.7.Plot)]</property>
-				<property name="Rating">$INFO[Window(Home).Property(RecommendedEpisode.7.Rating)]</property>
-				<property name="EpisodeNumber">S$INFO[Window(Home).Property(RecommendedEpisode.7.Season)]E$INFO[Window(Home).Property(RecommendedEpisode.7.Episode)]</property>
-				<property name="RootPath">$INFO[Window(Home).Property(RecommendedEpisode.7.Path)]</property>
-				<property name="Fanart">$INFO[Window(Home).Property(RecommendedEpisode.7.Art(tvshow.fanart))]</property>
-				<property name="Path">$INFO[Window(Home).Property(RecommendedEpisode.7.File)]</property>
-				<property name="Logo">$INFO[Window(Home).Property(RecommendedEpisode.7.Art(tvshow.clearlogo))]</property>
-			</item>
-			<item>
-				<label>$INFO[Window(Home).Property(RecommendedEpisode.8.Title)]</label>
-				<label2>$INFO[Window(Home).Property(RecommendedEpisode.8.TVshowTitle)]</label2>
-				<onclick>$INFO[Window(Home).Property(RecommendedEpisode.8.Play)]</onclick>
-				<thumb>$INFO[Window(Home).Property(RecommendedEpisode.8.Art(thumb))]</thumb>
-				<property name="Plot">$INFO[Window(Home).Property(RecommendedEpisode.8.Plot)]</property>
-				<property name="Rating">$INFO[Window(Home).Property(RecommendedEpisode.8.Rating)]</property>
-				<property name="EpisodeNumber">S$INFO[Window(Home).Property(RecommendedEpisode.8.Season)]E$INFO[Window(Home).Property(RecommendedEpisode.8.Episode)]</property>
-				<property name="RootPath">$INFO[Window(Home).Property(RecommendedEpisode.8.Path)]</property>
-				<property name="Fanart">$INFO[Window(Home).Property(RecommendedEpisode.8.Art(tvshow.fanart))]</property>
-				<property name="Path">$INFO[Window(Home).Property(RecommendedEpisode.8.File)]</property>
-				<property name="Logo">$INFO[Window(Home).Property(RecommendedEpisode.8.Art(tvshow.clearlogo))]</property>
-			</item-->
+			
 		</content>
 	</include>
 
@@ -431,7 +381,7 @@
 				<thumb>$INFO[Window(Home).Property(RandomEpisode.1.Art(thumb))]</thumb>
 				<property name="Plot">$INFO[Window(Home).Property(RandomEpisode.1.Plot)]</property>
 				<property name="Rating">$INFO[Window(Home).Property(RandomEpisode.1.Rating)]</property>
-				<property name="EpisodeNumber">S$INFO[Window(Home).Property(RandomEpisode.1.Season)]E$INFO[Window(Home).Property(RandomEpisode.1.Episode)]</property>
+				<property name="EpisodeNumber">$INFO[Window(Home).Property(RandomEpisode.1.Season),S]E$INFO[Window(Home).Property(RandomEpisode.1.Episode),E]</property>
 				<property name="RootPath">$INFO[Window(Home).Property(RandomEpisode.1.Path)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RandomEpisode.1.Art(tvshow.fanart))]</property>
 				<property name="Path">$INFO[Window(Home).Property(RandomEpisode.1.File)]</property>
@@ -444,7 +394,7 @@
 				<thumb>$INFO[Window(Home).Property(RandomEpisode.2.Art(thumb))]</thumb>
 				<property name="Plot">$INFO[Window(Home).Property(RandomEpisode.2.Plot)]</property>
 				<property name="Rating">$INFO[Window(Home).Property(RandomEpisode.2.Rating)]</property>
-				<property name="EpisodeNumber">S$INFO[Window(Home).Property(RandomEpisode.2.Season)]E$INFO[Window(Home).Property(RandomEpisode.2.Episode)]</property>
+				<property name="EpisodeNumber">$INFO[Window(Home).Property(RandomEpisode.2.Season),S]$INFO[Window(Home).Property(RandomEpisode.2.Episode),E]</property>
 				<property name="RootPath">$INFO[Window(Home).Property(RandomEpisode.2.Path)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RandomEpisode.2.Art(tvshow.fanart))]</property>
 				<property name="Path">$INFO[Window(Home).Property(RandomEpisode.2.File)]</property>
@@ -457,7 +407,7 @@
 				<thumb>$INFO[Window(Home).Property(RandomEpisode.3.Art(thumb))]</thumb>
 				<property name="Plot">$INFO[Window(Home).Property(RandomEpisode.3.Plot)]</property>
 				<property name="Rating">$INFO[Window(Home).Property(RandomEpisode.3.Rating)]</property>
-				<property name="EpisodeNumber">S$INFO[Window(Home).Property(RandomEpisode.2.Season)]E$INFO[Window(Home).Property(RandomEpisode.3.Episode)]</property>
+				<property name="EpisodeNumber">$INFO[Window(Home).Property(RandomEpisode.2.Season),S]$INFO[Window(Home).Property(RandomEpisode.3.Episode),E]</property>
 				<property name="RootPath">$INFO[Window(Home).Property(RandomEpisode.3.Path)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RandomEpisode.3.Art(tvshow.fanart))]</property>
 				<property name="Path">$INFO[Window(Home).Property(RandomEpisode.3.File)]</property>
@@ -470,7 +420,7 @@
 				<thumb>$INFO[Window(Home).Property(RandomEpisode.4.Art(thumb))]</thumb>
 				<property name="Plot">$INFO[Window(Home).Property(RandomEpisode.4.Plot)]</property>
 				<property name="Rating">$INFO[Window(Home).Property(RandomEpisode.4.Rating)]</property>
-				<property name="EpisodeNumber">S$INFO[Window(Home).Property(RandomEpisode.4.Season)]E$INFO[Window(Home).Property(RandomEpisode.4.Episode)]</property>
+				<property name="EpisodeNumber">$INFO[Window(Home).Property(RandomEpisode.4.Season),S]$INFO[Window(Home).Property(RandomEpisode.4.Episode),E]</property>
 				<property name="RootPath">$INFO[Window(Home).Property(RandomEpisode.4.Path)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RandomEpisode.4.Art(tvshow.fanart))]</property>
 				<property name="Path">$INFO[Window(Home).Property(RandomEpisode.4.File)]</property>
@@ -483,7 +433,7 @@
 				<thumb>$INFO[Window(Home).Property(RandomEpisode.5.Art(thumb))]</thumb>
 				<property name="Plot">$INFO[Window(Home).Property(RandomEpisode.5.Plot)]</property>
 				<property name="Rating">$INFO[Window(Home).Property(RandomEpisode.5.Rating)]</property>
-				<property name="EpisodeNumber">S$INFO[Window(Home).Property(RandomEpisode.5.Season)]E$INFO[Window(Home).Property(RandomEpisode.5.Episode)]</property>
+				<property name="EpisodeNumber">$INFO[Window(Home).Property(RandomEpisode.5.Season),S]$INFO[Window(Home).Property(RandomEpisode.5.Episode),E]</property>
 				<property name="RootPath">$INFO[Window(Home).Property(RandomEpisode.5.Path)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RandomEpisode.5.Art(tvshow.fanart))]</property>
 				<property name="Path">$INFO[Window(Home).Property(RandomEpisode.5.File)]</property>
@@ -496,25 +446,12 @@
 				<thumb>$INFO[Window(Home).Property(RandomEpisode.6.Art(thumb))]</thumb>
 				<property name="Plot">$INFO[Window(Home).Property(RandomEpisode.6.Plot)]</property>
 				<property name="Rating">$INFO[Window(Home).Property(RandomEpisode.6.Rating)]</property>
-				<property name="EpisodeNumber">S$INFO[Window(Home).Property(RandomEpisode.6.Season)]E$INFO[Window(Home).Property(RandomEpisode.6.Episode)]</property>
+				<property name="EpisodeNumber">$INFO[Window(Home).Property(RandomEpisode.6.Season),S]E$INFO[Window(Home).Property(RandomEpisode.6.Episode),E]</property>
 				<property name="RootPath">$INFO[Window(Home).Property(RandomEpisode.6.Path)]</property>
 				<property name="Fanart">$INFO[Window(Home).Property(RandomEpisode.6.Art(tvshow.fanart))]</property>
 				<property name="Path">$INFO[Window(Home).Property(RandomEpisode.6.File)]</property>
 				<property name="Logo">$INFO[Window(Home).Property(RandomEpisode.6.Art(tvshow.clearlogo))]</property>
 			</item>
-			<!--item>
-				<label>$INFO[Window(Home).Property(RandomEpisode.7.Title)]</label>
-				<label2>$INFO[Window(Home).Property(RandomEpisode.7.TVshowTitle)]</label2>
-				<onclick>$INFO[Window(Home).Property(RandomEpisode.7.Play)]</onclick>
-				<thumb>$INFO[Window(Home).Property(RandomEpisode.7.Art(thumb))]</thumb>
-				<property name="Plot">$INFO[Window(Home).Property(RandomEpisode.7.Plot)]</property>
-				<property name="Rating">$INFO[Window(Home).Property(RandomEpisode.7.Rating)]</property>
-				<property name="EpisodeNumber">S$INFO[Window(Home).Property(RandomEpisode.7.Season)]E$INFO[Window(Home).Property(RandomEpisode.7.Episode)]</property>
-				<property name="RootPath">$INFO[Window(Home).Property(RandomEpisode.7.Path)]</property>
-				<property name="Fanart">$INFO[Window(Home).Property(RandomEpisode.7.Art(tvshow.fanart))]</property>
-				<property name="Path">$INFO[Window(Home).Property(RandomEpisode.7.File)]</property>
-				<property name="Logo">$INFO[Window(Home).Property(RandomEpisode.7.Art(tvshow.clearlogo))]</property>
-			</item-->
 
 		</content>
 	</include>

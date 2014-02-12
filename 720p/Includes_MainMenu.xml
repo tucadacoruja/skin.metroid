@@ -56,7 +56,7 @@
 				<onleft condition="!Skin.HasSetting(GlobalSearch)">999</onleft>
 				
 				<onright>50</onright>
-				<onup>-</onup>
+				<onup>noop</onup>
 				<ondown>301</ondown>
 				<pagecontrol>-</pagecontrol>
 				<!--scrolltime tween="cubic" easing="inout">325</scrolltime-->
@@ -246,7 +246,16 @@
 							<visible>Window.IsActive(home) + Library.HasContent(Music)</visible>
 							<visible>!Skin.HasSetting(HideGlobalMusic)</visible>
 						</item>
-											
+						
+						<item id="120">
+							<description>Custom Favourite 1</description>
+							<label>$INFO[Skin.String(CustomFavName1)]</label>
+							<icon>$INFO[Skin.String(CustomFavourite1.Icon)]</icon>
+							<onclick>$INFO[Skin.String(CustomFavourite1.Path)]</onclick>
+							<visible>Skin.HasSetting(Menu_Custom1) + !IsEmpty(Skin.SetString(CustomFavName1))</visible>
+							<visible>Skin.HasSetting(cust_favorite)</visible>
+						</item>
+						
 						<item id="103">
 							<description>My Music</description>
 							<label>31078</label>
@@ -307,6 +316,14 @@
 							<visible>!Skin.HasSetting(FullScreenHome)</visible>
 							<onclick>FullScreen</onclick>
 						</item>
+						<item id="121">
+							<description>Custom Favourite 2</description>
+							<label>$INFO[Skin.String(CustomFavName2)]</label>
+							<icon>$INFO[Skin.String(CustomFavourite2.Icon)]</icon>
+							<onclick>$INFO[Skin.String(CustomFavourite2.Path)]</onclick>
+							<visible>Skin.HasSetting(Menu_Custom2) + !IsEmpty(Skin.SetString(CustomFavName2))</visible>
+							<visible>Skin.HasSetting(cust_favorite)</visible>
+						</item>
 						
 						<item id="104">
 							<description>favourites</description>
@@ -359,6 +376,15 @@
 							
 						</item>
 						
+						<item id="122">
+							<description>Custom Favourite 3</description>
+							<label>$INFO[Skin.String(CustomFavName3)]</label>
+							<icon>$INFO[Skin.String(CustomFavourite3.Icon)]</icon>
+							<onclick>$INFO[Skin.String(CustomFavourite3.Path)]</onclick>
+							<visible>Skin.HasSetting(Menu_Custom3) + !IsEmpty(Skin.SetString(CustomFavName3))</visible>
+							<visible>Skin.HasSetting(cust_favorite)</visible>
+						</item>
+						
 						<item id="115">
 							<label>31084</label>
 							<onclick>Back</onclick>
@@ -390,7 +416,17 @@
 						</item>
 						<include condition="!Skin.HasSetting(AddonHome)">AddonSubItems</include>
 						
+						<item id="123">
+							<description>Custom Favourite 4</description>
+							<label>$INFO[Skin.String(CustomFavName4)]</label>
+							<icon>$INFO[Skin.String(CustomFavourite4.Icon)]</icon>
+							<onclick>$INFO[Skin.String(CustomFavourite4.Path)]</onclick>
+							<visible>Skin.HasSetting(Menu_Custom4) + !IsEmpty(Skin.SetString(CustomFavName4))</visible>
+							<visible>Skin.HasSetting(cust_favorite)</visible>
+						</item>
+						
 						<item id="107">
+							<description>Settings</description>
 							<label>31087</label>
 							<icon>-</icon>
 							<onclick condition="IsEmpty(Skin.String(SubMenu2))">Skin.SetString(SubMenu2,open)</onclick>
@@ -404,7 +440,7 @@
 							<description>Sources</description>
 							<label>31088</label>
 							<onclick condition="IsEmpty(skin.string(SubMenu3))">Skin.Setstring(SubMenu3,open)</onclick>
-							<onclick condition="!IsEmpty(skin.string(SubMenu3))">Skin.Reset(SubMenu2)</onclick>
+							<onclick condition="!IsEmpty(skin.string(SubMenu3))">Skin.Reset(SubMenu3)</onclick>
 							<onclick condition="IsEmpty(skin.string(SubMenu3))">Skin.Setstring(SubMenu3,open)</onclick>
 							<property name="DropdownMenu3">not_empty</property>
 							<visible>!Skin.HasSetting(HideGlobalSources)</visible>
@@ -418,7 +454,16 @@
 							<onclick>xbmc.activatewindow(home)</onclick>
 							<visible>!Skin.HasSetting(HideGlobalHome)</visible>
 						</item>
-											  
+						
+						<item id="124">
+							<description>Custom Favourite 5</description>
+							<label>$INFO[Skin.String(CustomFavName5)]</label>
+							<icon>$INFO[Skin.String(CustomFavourite5.Icon)]</icon>
+							<onclick>$INFO[Skin.String(CustomFavourite5.Path)]</onclick>
+							<visible>Skin.HasSetting(Menu_Custom5) + !IsEmpty(Skin.SetString(CustomFavName5))</visible>
+							<visible>Skin.HasSetting(cust_favorite)</visible>
+						</item>
+						
 						<item id="110">
 							<label>31090</label>
 							<icon>-</icon>
@@ -452,55 +497,13 @@
 							<visible>Skin.HasSetting(WeatherHome)</visible>
 						</item>
 					  
-						<!-- EXTRA ITEM FAVOURITES -->
-
-						<item id="120">
-							<description>Custom Favourite 1</description>
-							<label>[UPPERCASE]$INFO[Skin.String(CustomFavourite1.Label)][/UPPERCASE]</label>
-							<icon>$INFO[Skin.String(CustomFavourite1.Icon)]</icon>
-							<onclick>$INFO[Skin.String(CustomFavourite1.Path)]</onclick>
-							<visible>Skin.HasSetting(Menu_Custom1)</visible>
-							<visible>Skin.HasSetting(cust_favorite)</visible>
-						</item>
-						<item id="121">
-							<description>Custom Favourite 2</description>
-							<label>[UPPERCASE]$INFO[Skin.String(CustomFavourite2.Label)][/UPPERCASE]</label>
-							<icon>$INFO[Skin.String(CustomFavourite2.Icon)]</icon>
-							<onclick>$INFO[Skin.String(CustomFavourite2.Path)]</onclick>
-							<visible>Skin.HasSetting(Menu_Custom2)</visible>
-							<visible>Skin.HasSetting(cust_favorite)</visible>
-						</item>
-						<item id="122">
-							<description>Custom Favourite 3</description>
-							<label>[UPPERCASE]$INFO[Skin.String(CustomFavourite3.Label)][/UPPERCASE]</label>
-							<icon>$INFO[Skin.String(CustomFavourite3.Icon)]</icon>
-							<onclick>$INFO[Skin.String(CustomFavourite3.Path)]</onclick>
-							<visible>Skin.HasSetting(Menu_Custom3)</visible>
-							<visible>Skin.HasSetting(cust_favorite)</visible>
-						</item>
-						<item id="123">
-							<description>Custom Favourite 4</description>
-							<label>[UPPERCASE]$INFO[Skin.String(CustomFavourite4.Label)][/UPPERCASE]</label>
-							<icon>$INFO[Skin.String(CustomFavourite4.Icon)]</icon>
-							<onclick>$INFO[Skin.String(CustomFavourite4.Path)]</onclick>
-							<visible>Skin.HasSetting(Menu_Custom4)</visible>
-							<visible>Skin.HasSetting(cust_favorite)</visible>
-						</item>
-						<item id="124">
-							<description>Custom Favourite 5</description>
-							<label>[UPPERCASE]$INFO[Skin.String(CustomFavourite5.Label)][/UPPERCASE]</label>
-							<icon>$INFO[Skin.String(CustomFavourite5.Icon)]</icon>
-							<onclick>$INFO[Skin.String(CustomFavourite5.Path)]</onclick>
-							<visible>Skin.HasSetting(Menu_Custom5)</visible>
-							<visible>Skin.HasSetting(cust_favorite)</visible>
-						</item>
 
 						<item id="125">
 							<description>Custom Favourite 6</description>
-							<label>[UPPERCASE]$INFO[Skin.String(CustomFavourite6.Label)][/UPPERCASE]</label>
+							<label>$INFO[Skin.String(CustomFavName6)]</label>
 							<icon>$INFO[Skin.String(CustomFavourite6.Icon)]</icon>
 							<onclick>$INFO[Skin.String(CustomFavourite6.Path)]</onclick>
-							<visible>Skin.HasSetting(Menu_Custom6)</visible>
+							<visible>Skin.HasSetting(Menu_Custom6) + !IsEmpty(Skin.SetString(CustomFavName6))</visible>
 							<visible>Skin.HasSetting(cust_favorite)</visible>
 						</item>
 									  
@@ -1172,7 +1175,7 @@
 			<label>31114</label>
 			<icon>settings/addons.png</icon>
 			<property name="focused">settings/addonsFO.png</property>
-			<onclick>ActivateWindow(addonbrowser)</onclick>
+			<onclick>ActivateWindow(AddonBrowser,root)</onclick>
 			<visible>!IsEmpty(skin.string(SubMenu2))</visible>
 			<property name="SubMenuItem">not_empty</property>
 			<property name="DropdownMenu2">not_empty</property>

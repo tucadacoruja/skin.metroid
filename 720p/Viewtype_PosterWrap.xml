@@ -9,7 +9,24 @@
 		<include>Keyboard</include>
 		<include>Favourites</include>
 		<visible>Control.IsVisible(501)</visible>
-	
+		
+		<control type="grouplist">
+			<description>Media Codec Flagging Images</description>
+			<posx>255</posx>
+			<posy>93</posy>
+			<width>1030</width>
+			<height>50</height>
+			<align>center</align>
+			<itemgap>0</itemgap>
+			<orientation>horizontal</orientation>
+			<include>Media_flags_big</include>
+		
+			<visible>Skin.HasSetting(LockMainMenu)</visible>
+			<visible>!Skin.HasSetting(HideFlagsInfo)</visible>
+			<animation effect="fade" start="0" end="80" time="600">Visible</animation>
+			<animation effect="fade" start="80" end="0" time="600" tween="sine">Hidden</animation>
+		
+		</control>
 		<control type="grouplist">
 			<description>Media Codec Flagging Images</description>
 			<posx>255</posx>
@@ -22,6 +39,7 @@
 			<include>Media_flags_big</include>
 		
 			<visible>Control.HasFocus(301) + !Skin.HasSetting(LockMainMenu)</visible>
+			<visible>!Skin.HasSetting(HideFlagsInfo)</visible>
 			<animation effect="fade" start="0" end="80" time="600">Visible</animation>
 			<animation effect="fade" start="80" end="0" time="600" tween="sine">Hidden</animation>
 		
@@ -38,6 +56,7 @@
 			<include>Media_flags_fullscreen</include>
 			<visible>Control.IsVisible(501)</visible>
 			<visible>!Control.HasFocus(301) + !Skin.HasSetting(LockMainMenu)</visible>
+			<visible>!Skin.HasSetting(HideFlagsInfo)</visible>
 			<animation effect="fade" start="0" end="80" time="600">Visible</animation>
 			<animation effect="fade" start="80" end="0" time="600" tween="sine">Hidden</animation>
 		
@@ -243,7 +262,7 @@
 				<height>66</height>
 				<aspectratio>keep</aspectratio>
 				<texture>$INFO[Container(501).ListItem.Overlay]</texture>
-				<visible>Skin.HasSetting(WatchedOverlays)</visible>
+				<visible>!Skin.HasSetting(WatchedOverlays)</visible>
 				<colordiffuse>blue</colordiffuse>
 			</control>	
 			

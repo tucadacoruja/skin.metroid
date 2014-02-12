@@ -96,7 +96,7 @@
 			<height>37</height>
 			<onup>5</onup>
 			<ondown>4</ondown>
-			<onleft>-</onleft>
+			<onleft>noop</onleft>
 			<onright>9001</onright>
 			<label>20344</label>
 			<texturefocus>setting.png</texturefocus>
@@ -120,7 +120,7 @@
 			<width>689</width>
 			<height>148</height>
 			<onup>3</onup>
-			<onleft>-</onleft>
+			<onleft>noop</onleft>
 			<onright>9001</onright>
 			<ondown>5</ondown>
 			<pagecontrol>-</pagecontrol>
@@ -174,7 +174,7 @@
 			<itemgap>0</itemgap>
 			<onup>4</onup>
 			<ondown>3</ondown>
-			<onleft>-</onleft>
+			<onleft>noop</onleft>
 			<onright>9001</onright>
 		</control>
 		

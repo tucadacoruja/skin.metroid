@@ -252,7 +252,7 @@
 				<label>186</label>
 				<onup>20</onup>
 				<onleft>10</onleft>
-				<onright>-</onright>
+				<onright>noop</onright>
 				<ondown>19</ondown>
 			
 				<include>RightHandDialog</include>
@@ -263,7 +263,7 @@
 				<label>222</label>
 				<onup>18</onup>
 				<onleft>10</onleft>
-				<onright>-</onright>
+				<onright>noop</onright>
 				<ondown>11</ondown>
 			
 				<include>RightHandDialog</include>

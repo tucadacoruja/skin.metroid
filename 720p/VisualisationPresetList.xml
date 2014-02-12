@@ -43,8 +43,8 @@
 				<posy>0</posy>
 				<width>500</width>
 				<height>468</height>
-				<onleft>-</onleft>
-				<onright>-</onright>
+				<onleft>noop</onleft>
+				<onright>noop</onright>
 				<onup>2</onup>
 				<ondown>2</ondown>
 

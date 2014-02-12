@@ -205,7 +205,7 @@
 					<aligny>center</aligny>
 					<align>right</align>
 					<scroll>false</scroll>
-					<label>$INFO[Container(8001).ListItem.Label] $INFO[Container(8001).ListItem.Property(episodenumber)]</label>
+					<label>$INFO[Container(8001).ListItem.Label2] $INFO[Container(8001).ListItem.Property(episodenumber)]</label>
 				</control>
 			</control>
 					

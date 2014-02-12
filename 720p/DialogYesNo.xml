@@ -26,14 +26,7 @@
 			
 	<control type="group">
 		<posy>50</posy>
-		<animation type="WindowClose" reversible="false">
-			<effect type="fade" start="100" end="0" time="350" delay="0" />
-			<effect type="slide" start="0,0" end="0,700" time="550" delay="0" tween="sine" easing="out" />
-		</animation>
-		<animation type="WindowOpen" reversible="false">
-			<effect type="fade" start="0" end="100" time="350" delay="0" />
-			<effect type="slide" start="0,500" end="0,0" time="450" delay="0" tween="back" easing="out" />
-		</animation>    
+		<include>DialogEffect</include> 
 
 			
 			<control type="image">

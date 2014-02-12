@@ -78,7 +78,7 @@
 			<height>570</height>
 			<itemgap>0</itemgap>
 			<onleft>999</onleft>
-			<onright>-</onright>
+			<onright>noop</onright>
 			<onup>300</onup>
 			<ondown>444</ondown>
 			

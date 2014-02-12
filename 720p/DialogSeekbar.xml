@@ -32,8 +32,8 @@
 		<control type="group">
 			<posx>0</posx>
 			<posy>640</posy>
-			<visible>![Window.IsActive(142) | Window.IsActive(10140) | Window.IsActive(2901)] + [Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding]</visible>
-			
+			<visible>![Window.IsActive(fullscreeninfo) | Window.IsActive(addonsettings) | Window.IsActive(videoosd)] + [Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding]</visible>
+			<visible>!Window.IsVisible(virtualkeyboard)</visible>
 			
 			<animation type="Visible">
 				<effect type="fade" time="200" start="0" end="100" />

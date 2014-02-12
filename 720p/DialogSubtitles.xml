@@ -402,7 +402,7 @@
 		<width>140</width>
 		<label>31230</label>
 		<onleft>651</onleft>
-		<onclick>-</onclick>
+		<onclick>noop</onclick>
 		<include>BottomDialog</include>
 	</control>
 		
