@@ -6,6 +6,7 @@
 <control type="group">
 <!--visible>System.Date(12-21,12-26)</visible><!---(start date, end date, in MM-DD format)--->
 <visible>Skin.HasSetting(HolidayEffects)</visible>
+<visible>![System.ScreenSaverActive | System.IdleTime(1200)]</visible>
 	<control type="group">
 		<posx>-100</posx><!---Use this to space all the groups--->
 		<animation effect="rotate" end="20" time="9000" delay="300" pulse="true" condition="true">Conditional</animation>

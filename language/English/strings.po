@@ -860,3 +860,7 @@ msgstr ""
 msgctxt "#31232"
 msgid "Set Name"
 msgstr ""
+
+msgctxt "#31233"
+msgid "Global back button"
+msgstr ""

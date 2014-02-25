@@ -41,9 +41,9 @@
 	
 			<control type="textbox" id="5">
 				<description>textarea</description>
-				<posx>30</posx>
+				<posx>40</posx>
 				<posy>90</posy>
-				<width>1000</width>
+				<width>800</width>
 				<height>414</height>
 				<label>-</label>
 				<font>aired</font>
@@ -54,19 +54,35 @@
 			</control>
 		
 			<control type="scrollbar" id="78">
-				<posx>50r</posx>
-				<posy>88</posy>
-				<width>8</width>
-				<height>415</height>
-				<visible allowhiddenfocus="true">true</visible>
-				<texturesliderbackground>scroll/scrollbg.png</texturesliderbackground>
-				<textureslidernibfocus>scroll/scrollnib.png</textureslidernibfocus>
-				<onleft>78</onleft>
-				<onright>78</onright>
+				<texturesliderbackground>buttons/scrollbgV.png</texturesliderbackground>
+				<texturesliderbar>-</texturesliderbar>
+				<texturesliderbarfocus>-</texturesliderbarfocus>
+				<textureslidernib>buttons/scrollnibV.png</textureslidernib>
+				<textureslidernibfocus>buttons/scrollnibV.png</textureslidernibfocus>
+				<orientation>Vertical</orientation>
 				<showonepage>true</showonepage>
-				<orientation>vertical</orientation>
+				<posx>0</posx>
+				<posy>100</posy>
+				<width>10</width>
+				<height>400</height>
+				
+				<onright>20</onright>
+				<visible>Control.IsVisible(5)</visible>
+				<animation effect="fade" start="100" end="50" time="200" reversable="false" condition="!Control.HasFocus(78)">Conditional</animation>
 			</control>
+			
+			<control type="button" id="20">
+				<description>manual</description>
+				<posx>700</posx>
+				<posy>530</posy>
+				<height>42</height>
+				<width>140</width>
+				<label>31056</label>
+				<onleft>651</onleft>
+				<include>BottomDialog</include>
+				<onclick>back</onclick>
 
+			</control>
 		</control>
 	</controls>
 </window>

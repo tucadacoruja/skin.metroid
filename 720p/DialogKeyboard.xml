@@ -7,7 +7,7 @@
 		<posy>370</posy>
 	</coordinates>
 	<controls>
-	
+		
 		<control type="label" id="311">
 			<description>dialog Heading</description>
 			<posx>855</posx>
@@ -725,6 +725,20 @@
 				<texturefocus>-</texturefocus>
 			</control>	
 			
+		</control>
+		
+		<control type="button">
+			<posx>-340</posx>
+			<posy>-370</posy>
+			<width>250</width>
+			<height>720</height>
+			<description>Invisible back button</description>
+			<aspectratio>stretch</aspectratio>
+			<texturefocus>empty.png</texturefocus>
+			<texturenofocus>empty.png</texturenofocus>
+			
+			<onclick>dialog.close(virtualkeyboard)</onclick>
+			<animation effect="fade" start="1" end="50" time="0" condition="true">Conditional</animation>
 		</control>
 	</controls>
 </window>

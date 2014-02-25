@@ -27,7 +27,7 @@
 			<control type="wraplist" id="8000">
 				<posx>0</posx>
 				<posy>20</posy>
-				<width>1100</width>
+				<width>900</width>
 				<height>300</height>
 				<scrolltime>200</scrolltime>
 				<orientation>horizontal</orientation>
@@ -69,9 +69,9 @@
 			</control>
 
 			<control type="group">
-				<posx>-1100</posx>
+				<posx>-900</posx>
 				<control type="image">
-					<posx>-20</posx>
+					<posx>-25</posx>
 					<posy>20</posy>
 					<width>430</width>
 					<height>265</height>
@@ -80,7 +80,7 @@
 					<colordiffuse>46ffffff</colordiffuse>
 				</control>
 				<control type="image">
-					<posx>-20</posx>
+					<posx>-25</posx>
 					<posy>20</posy>
 					<width>400</width>
 					<height>250</height>
@@ -89,7 +89,7 @@
 				</control>
 
 				<control type="image">
-					<posx>-20</posx>
+					<posx>-25</posx>
 					<posy>20</posy>
 					<width>10</width>
 					<height>100</height>
@@ -99,7 +99,7 @@
 					<visible>Control.HasFocus(8000)</visible>
 				</control>
 				<control type="image">
-					<posx>-20</posx>
+					<posx>-25</posx>
 					<posy>230</posy>
 					<width>400</width>
 					<height>40</height>
@@ -181,7 +181,7 @@
 					<posy>30</posy>
 					<width>320</width>
 					<height>235</height>
-					<texture fallback="DefaultAlbumCover.png">$INFO[Container(8001).ListItem.Property(Logo)]</texture>
+					<texture>$INFO[Container(8001).ListItem.Property(Logo)]</texture>
 					<aspectratio>keep</aspectratio>
 					<visible>IsEmpty(Container(8001).ListItem.Art(thumb))</visible>	
 				</control>
@@ -211,7 +211,7 @@
 					
 			<control type="panel" id="8001">
 				<viewtype label="RecentEpisodes">icon</viewtype>
-				<posx>190</posx>
+				<posx>380</posx>
 				<posy>20</posy>
 				<width>500</width>
 				<height>300</height>
@@ -331,7 +331,7 @@
 			<control type="wraplist" id="8002">
 				<posx>0</posx>
 				<posy>20</posy>
-				<width>1100</width>
+				<width>900</width>
 				<height>300</height>
 				<scrolltime>200</scrolltime>
 				<orientation>horizontal</orientation>
@@ -373,9 +373,9 @@
 			</control>	
 			
 			<control type="group">
-			<posx>-1100</posx>
+			<posx>-900</posx>
 				<control type="image">
-					<posx>-20</posx>
+					<posx>-25</posx>
 					<posy>20</posy>
 					<width>430</width>
 					<height>265</height>
@@ -384,7 +384,7 @@
 					<colordiffuse>46ffffff</colordiffuse>
 				</control>
 				<control type="image">
-					<posx>-20</posx>
+					<posx>-25</posx>
 					<posy>20</posy>
 					<width>400</width>
 					<height>250</height>
@@ -392,7 +392,7 @@
 					<aspectratio scalediffuse="false">scale</aspectratio>
 				</control>
 				<control type="image">
-					<posx>-20</posx>
+					<posx>-25</posx>
 					<posy>20</posy>
 					<width>10</width>
 					<height>100</height>
@@ -402,7 +402,7 @@
 					<visible>Control.HasFocus(8002)</visible>
 				</control>
 				<control type="image">
-					<posx>-20</posx>
+					<posx>-25</posx>
 					<posy>230</posy>
 					<width>400</width>
 					<height>40</height>
@@ -512,7 +512,7 @@
 					
 			<control type="panel" id="8003">
 				<viewtype label="RandomAlbum">icon</viewtype>
-				<posx>190</posx>
+				<posx>380</posx>
 				<posy>20</posy>
 				<width>500</width>
 				<height>300</height>
@@ -663,7 +663,7 @@
 					
 			<control type="panel" id="8004">
 				<viewtype label="PluginWidget1">icon</viewtype>
-				<posx>190</posx>
+				<posx>380</posx>
 				<posy>20</posy>
 				<width>500</width>
 				<height>300</height>
@@ -814,7 +814,7 @@
 					
 			<control type="panel" id="8005">
 				<viewtype label="PluginWidget2">icon</viewtype>
-				<posx>190</posx>
+				<posx>380</posx>
 				<posy>20</posy>
 				<width>500</width>
 				<height>300</height>

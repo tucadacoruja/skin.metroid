@@ -28,10 +28,10 @@
 		<control type="wraplist" id="781">
 			<visible>Container.Content(Movies) | Container.Content(TVShows)</visible>
 			<visible>!Window.IsVisible(favourites)</visible>
-			<hitrect x="0" y="-10" w="1280" h="190" />
+			<hitrect x="275" y="415" w="1280" h="250" />
 			<posx>275</posx>
 			<posy>415</posy>
-			<width>1420</width>
+			<width>1320</width>
 			<height>300</height>
 			<onleft>781</onleft>
 			<onright>781</onright>

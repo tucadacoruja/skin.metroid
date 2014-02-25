@@ -3,7 +3,7 @@
 
 	<include name="WidgetsAnimation">
 		<animation type="Visible" reversible="false">
-			<effect type="fade" start="0" end="100" time="950" delay="0" />
+			<effect type="fade" start="0" end="100" time="750" delay="200" />
 			<effect type="zoom" start="1" end="100" time="370" center="900,360" delay="0" />
 			<effect type="slide" start="1780,0" end="0,0" time="300" delay="0" reversible="false" />
 		</animation>

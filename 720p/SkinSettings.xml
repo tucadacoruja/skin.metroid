@@ -357,13 +357,7 @@
 						<onclick>Skin.ToggleSetting(HideGlobalHome)</onclick>
 						<selected>!Skin.HasSetting(HideGlobalHome)</selected>
 					</control>
-					<control type="radiobutton" id="112">
-						<include>SettingsButton</include>
-						<description>Back button in main menu</description>
-						<label>$LOCALIZE[31154] $LOCALIZE[31142]</label>
-						<onclick>Skin.ToggleSetting(HideGlobalBack)</onclick>
-						<selected>Skin.HasSetting(HideGlobalBack)</selected>
-					</control>
+					
 					<control type="radiobutton" id="113">
 						<include>SettingsButton</include>
 						<description>Previous button in main menu</description>
@@ -684,6 +678,13 @@
 						<label>31215</label>
 						<onclick>Skin.ToggleSetting(LockMainMenu)</onclick>
 						<selected>Skin.HasSetting(LockMainMenu)</selected>
+					</control>
+					<control type="radiobutton" id="112">
+						<include>SettingsButton</include>
+						<description>Global back button</description>
+						<label>$LOCALIZE[31233]</label>
+						<onclick>Skin.ToggleSetting(HideGlobalBack)</onclick>
+						<selected>Skin.HasSetting(HideGlobalBack)</selected>
 					</control>
 					<control type="radiobutton" id="100">
 						<include>SettingsButton</include>

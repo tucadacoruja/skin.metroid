@@ -448,7 +448,7 @@
 					<description>Disclaimer</description>
 					<posx>150</posx>
 					<posy>650</posy>
-					<width>970</width>
+					<width>870</width>
 					<height>30</height>
 					<font>plot</font>
 					<align>-</align>
