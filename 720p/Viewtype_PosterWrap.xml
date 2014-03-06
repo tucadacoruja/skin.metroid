@@ -99,7 +99,7 @@
 						<bordersize>3</bordersize>
 						<fadetime>200</fadetime>
 						<texture background="true" fallback="DefaultAlbumCover.png">$INFO[ListItem.Art(poster)]</texture>
-						<animation effect="fade" start="0" end="70" time="0" condition="true">Conditional</animation>
+						<animation effect="fade" start="0" end="76" time="0" condition="true">Conditional</animation>
 					</control>
 					<control type="image">
 						<posx>10</posx>

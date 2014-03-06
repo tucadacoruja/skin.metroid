@@ -39,7 +39,19 @@
 				<aspectratio>stretch</aspectratio>
 				<texture flipy="true">BlueBackground.png</texture>
 			</control>
-			
+			<control type="button" id="9000">
+				<posx>0</posx>
+				<posy>70</posy>
+				<width>1280</width>
+				<height>650</height>
+				<description>fullscreen back button</description>
+				<aspectratio>stretch</aspectratio>
+				<texturefocus>empty.png</texturefocus>
+				<texturenofocus>empty.png</texturenofocus>
+				
+				<onclick>back</onclick>
+				<animation effect="fade" start="1" end="1" time="0" condition="true">Conditional</animation>
+			</control>
 			
 	</control>
 	

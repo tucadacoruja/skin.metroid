@@ -66,6 +66,7 @@
 					<shadowcolor>7000</shadowcolor>
 					<scrollspeed>3000</scrollspeed>
 					<align>justify</align>
+					<visible>Container.Content(Episodes)</visible>
 				</control>
 			</control>
 			
