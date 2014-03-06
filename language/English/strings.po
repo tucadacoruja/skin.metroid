@@ -864,3 +864,11 @@ msgstr ""
 msgctxt "#31233"
 msgid "Global back button"
 msgstr ""
+
+msgctxt "#31234"
+msgid "Install"
+msgstr ""
+
+msgctxt "#31235"
+msgid "root"
+msgstr ""

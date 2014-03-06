@@ -1170,16 +1170,7 @@
 			<property name="SubMenuItem">not_empty</property>
 			<property name="DropdownMenu2">not_empty</property>
 		</item>
-		<item id="6">
-			<description>Addons</description>
-			<label>31114</label>
-			<icon>settings/addons.png</icon>
-			<property name="focused">settings/addonsFO.png</property>
-			<onclick>ActivateWindow(AddonBrowser,root)</onclick>
-			<visible>!IsEmpty(skin.string(SubMenu2))</visible>
-			<property name="SubMenuItem">not_empty</property>
-			<property name="DropdownMenu2">not_empty</property>
-		</item>
+		
 		<item id="1">
 			<description>Video</description>
 			<label>31116</label>
@@ -1601,12 +1592,14 @@
 	<include name="AddonSubItems">
 		<item id="1">
 			<description>install</description>
-			<label>Install</label>
-			<onclick>XBMC.ActivateWindow(addonbrowser,"Addons://all/",return)</onclick>
+			<label>31234</label>
+			<onclick>ActivateWindow(AddonBrowser,root,return)</onclick>
+			<visible>!Skin.HasSetting(AddonInstallHome)</visible>
 			<visible>!IsEmpty(skin.string(SubMenu6))</visible>
 			<property name="SubMenuItem">not_empty</property>
 			<property name="DropdownMenu6">not_empty</property>
 		</item>
+	
 		<item id="2">
 			<description>Program addons</description>
 			<label>$LOCALIZE[0]</label>
