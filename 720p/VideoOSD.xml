@@ -7,7 +7,7 @@
 	
 		<control type="group">
 			<posx>0</posx>
-			<posy>640</posy>
+			<posy>620</posy>
 			<visible>![Window.IsActive(142) | Window.IsActive(10140) | Window.IsActive(osdvideosettings) | Window.IsActive(osdaudiosettings)]</visible>
 		
 			<decscription>bottom bar</decscription>
@@ -39,7 +39,7 @@
 				<posx>323</posx>
 				<posy>49</posy>
 				<width>633</width>
-				<height>6</height>
+				<height>7</height>
 				<texture>white.png</texture>
 				<aspectratio>stretch</aspectratio>
 				<animation effect="fade" start="0" end="5" time="0" condition="true">Conditional</animation>
@@ -74,9 +74,9 @@
 			<control type="slider" id="87">
 				<description>Seek Slider</description>
 				<posx>318</posx>
-				<posy>37</posy>
+				<posy>7</posy>
 				<width>643</width>
-				<height>50</height>
+				<height>80</height>
 				<onup>1</onup>
 				<ondown>1</ondown>
 				<action>seek</action>

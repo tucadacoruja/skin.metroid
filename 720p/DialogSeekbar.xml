@@ -31,7 +31,7 @@
 	
 		<control type="group">
 			<posx>0</posx>
-			<posy>640</posy>
+			<posy>620</posy>
 			<visible>![Window.IsActive(fullscreeninfo) | Window.IsActive(addonsettings) | Window.IsActive(videoosd)] + [Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding]</visible>
 			<visible>!Window.IsVisible(virtualkeyboard)</visible>
 			
@@ -63,7 +63,7 @@
 				<posx>323</posx>
 				<posy>49</posy>
 				<width>633</width>
-				<height>6</height>
+				<height>7</height>
 				<texture>white.png</texture>
 				<aspectratio>stretch</aspectratio>
 				<animation effect="fade" start="0" end="5" time="0" condition="true">Conditional</animation>
