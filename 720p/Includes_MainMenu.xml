@@ -218,7 +218,7 @@
 							<description>Update Library</description>
 							<label>31075</label>
 							<onclick>UpdateLibrary(video)</onclick>
-							<visible>Window.IsActive(Home)</visible>
+							<visible>Window.IsActive(Home) + !Skin.HasSetting(HideUpdateLibrary)</visible>
 							<visible>Library.HasContent(movies) | Library.HasContent(TVShows)</visible>
 						</item>
 						
@@ -227,7 +227,7 @@
 							<label>31076</label>
 							<onclick>RunScript(script.artwork.downloader,mode=custom,mediatype=tvshow,clearlogo)</onclick>
 							<onclick>RunScript(script.artwork.downloader,mode=custom,mediatype=movie,clearlogo)</onclick>
-							<visible>Window.IsActive(Home)</visible>
+							<visible>Window.IsActive(Home) + !Skin.HasSetting(HideDownloadLogos)</visible>
 							<visible>Library.HasContent(movies) | Library.HasContent(TVShows)</visible>
 						</item>
 						

@@ -374,6 +374,20 @@
 						<onclick>Skin.ToggleSetting(HideGlobalPrevious)</onclick>
 						<selected>Skin.HasSetting(HideGlobalPrevious)</selected>
 					</control>
+					<control type="radiobutton" id="123">
+						<include>SettingsButton</include>
+						<description>Update Library in main menu</description>
+						<label>$LOCALIZE[31075] $LOCALIZE[31142]</label>
+						<onclick>Skin.ToggleSetting(HideUpdateLibrary)</onclick>
+						<selected>!Skin.HasSetting(HideUpdateLibrary)</selected>
+					</control>
+					<control type="radiobutton" id="124">
+						<include>SettingsButton</include>
+						<description>download logos in main menu</description>
+						<label>$LOCALIZE[31076] $LOCALIZE[31142]</label>
+						<onclick>Skin.ToggleSetting(HideDownloadLogos)</onclick>
+						<selected>!Skin.HasSetting(HideDownloadLogos)</selected>
+					</control>
 					
 					
 					
