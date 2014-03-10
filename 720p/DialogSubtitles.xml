@@ -79,7 +79,7 @@
 		<effect type="slide" time="200" start="0,0" end="0,400" easing="in" tween="cubic" />
 	</animation>
     
-	<!-- ** Required ** Do not change <id> or <type> -->
+	<!--  ** Required ** Do not change <id> or <type>  -->
 	<control type="label" id="300">
 		<description>textarea</description>
 		<posx>445</posx>
@@ -89,7 +89,7 @@
 		<font>font13</font>
 		<textcolor>ff404040</textcolor>
 		<align>right</align>
-		<!--animation effect="fade" start="1" end="0" time="1" condition="true">Conditional</animation-->
+		<!-- animation effect="fade" start="1" end="0" time="1" condition="true">Conditional</animation -->
 	</control>
 	<control type="label" id="301">
 		<description>textarea</description>
@@ -114,7 +114,7 @@
 		<animation effect="fade" start="1" end="0" time="1" condition="true">Conditional</animation>
 	</control>
 
-	<!-- ** Required ** Do not change <id> or <type> -->
+	<!--  ** Required ** Do not change <id> or <type>  -->
     <control type="list" id="150">
         <posx>-194</posx>
         <posy>110</posy>
@@ -149,7 +149,7 @@
 				<align>left</align>
 				<info>ListItem.Label</info>
 			</control>
-			<!--control type="image">
+			<!-- control type="image">
 				<posx>105</posx>
 				<posy>10</posy>
 				<width>34</width>
@@ -166,7 +166,7 @@
 				<textcolor>list</textcolor>
 				<align>left</align>
 				<info>ListItem.Label2</info>
-			</control-->
+			</control -->
 		  
         </itemlayout>
         <focusedlayout height="38">
@@ -202,7 +202,7 @@
 				<align>left</align>
 				<info>ListItem.Label</info>
 			</control>
-			<!--control type="image">
+			<!-- control type="image">
 				<posx>105</posx>
 				<posy>10</posy>
 				<width>34</width>
@@ -220,13 +220,13 @@
 
 				<align>left</align>
 				<info>ListItem.Label2</info>
-			</control-->
+			</control -->
         </focusedlayout>
 		
     </control>
 	  
 	
-	<!--control type="label" id="140">
+	<!-- control type="label" id="140">
 		<description>textarea</description>
 		<posx>-194</posx>
         <posy>355</posy>
@@ -237,7 +237,7 @@
 		<align>left</align>
 		<aligny>center</aligny>
 		<wrapmultiline>true</wrapmultiline>
-	</control-->
+	</control -->
 	<control type="label">
 		<description>Video label</description>
 		<posx>-194</posx>
@@ -253,7 +253,7 @@
 	</control>
 				
 				
-      <!-- ** Required ** Do not change <id> or <type> -->
+      <!--  ** Required ** Do not change <id> or <type>  -->
     <control type="list" id="120">
         <posx>18</posx>
         <posy>111</posy>

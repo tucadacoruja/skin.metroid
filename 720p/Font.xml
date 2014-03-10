@@ -3,10 +3,10 @@
 <fontset id="default" unicode="true">
 
 	
-	<!--------------------------------------------------------------->
-	<!--------------Example of current font options------------------>
-	<!--------------------------------------------------------------->
-	<!--
+	<!-- ----------------------------------------------------------- -->
+	<!-- ------------Example of current font options---------------- -->
+	<!-- ----------------------------------------------------------- -->
+	<!-- 
 	<font>
 		<name>font12</name>
 		<filename>arial.ttf</name>
@@ -15,11 +15,11 @@
 		<aspect>0.75</aspect>
 		<linespacing>1.0</linespacing>
 	</font>
-  <!--------------------------------------------------------------->
-  <!-----example width of the font will be 0.75 of the height------>
-  <!--------------------------------------------------------------->
+  <!-- ----------------------------------------------------------- -->
+  <!-- ---example width of the font will be 0.75 of the height---- -->
+  <!-- ----------------------------------------------------------- -->
   
-<!-----Confluence Fonts for addon support----->
+<!-- ---Confluence Fonts for addon support--- -->
 
 	 	<font>
 			<name>font10</name>
@@ -108,10 +108,10 @@
 			<size>80</size>
 		</font>
 
-<!-----End Confluence Fonts----->
+<!-- ---End Confluence Fonts--- -->
 
 
-<!-----Metroid Fonts----->
+<!-- ---Metroid Fonts--- -->
 	
 	<font>
 		<name>MainMenu21</name>
@@ -142,7 +142,7 @@
 		<name>LoginList</name>
 		<filename>SegoeWP-Semibold.ttf</filename>
 		<size>27</size>
-		<!--style>bold</style-->
+		<!-- style>bold</style -->
 	</font>	
 	<font>
 		<name>context</name>
@@ -163,7 +163,7 @@
 	</font>
 	<font>
 		<name>EditorBig</name>
-		<filename>SegoeWP-Bold.ttf</filename><!--Optima_DemiBold.ttf---37-->
+		<filename>SegoeWP-Bold.ttf</filename><!-- Optima_DemiBold.ttf---37 -->
 		<size>37</size>
 		<style>bold</style>
 	</font>
@@ -204,18 +204,18 @@
 		
 	</font>
 	<font>
-		<name>recent</name> <!---carefull, used in popup menus--->
+		<name>recent</name> <!-- -carefull, used in popup menus- -->
 		<filename>SegoeWP-Semibold.ttf</filename>
 		<size>18</size>
 	</font>
 	<font>
-		<name>PlotOnly</name> <!---Use only with plot icm fontsets!--->
+		<name>PlotOnly</name> <!-- -Use only with plot icm fontsets!- -->
 		<filename>SegoeWP-Semibold.ttf</filename>
 		<size>19</size>
 	</font>
 	
 	<font>
-		<name>tags</name> <!---carefull, used in popup menus--->
+		<name>tags</name> <!-- -carefull, used in popup menus- -->
 		<filename>SegoeWP-Semibold.ttf</filename>
 		<size>18</size>
 	</font>
@@ -386,7 +386,7 @@
 		<name>MainMenuBig</name>
 		<filename>SegoeWP-Bold.ttf</filename>
 		<size>35</size>
-		<!--style>bold</style-->
+		<!-- style>bold</style -->
 	</font>
 	<font>
 		<name>MainMenuSmall</name>
@@ -557,7 +557,7 @@
 		<name>aired</name>
 		<filename>SegoeWP-Semilight.ttf</filename>
 		<size>16</size>
-		<!--style>bold</style-->
+		<!-- style>bold</style -->
 	</font>
 	<font>
 		<name>mainposter</name>

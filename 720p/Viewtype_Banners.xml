@@ -105,7 +105,7 @@
 				
 							
 				
-				<!--control type="image">
+				<!-- control type="image">
 					<posx>5</posx>
 					<posy>3</posy>
 					<width>590</width>
@@ -115,7 +115,7 @@
 					<aspectratio>stretch</aspectratio>
 					<colordiffuse>70ffffff</colordiffuse>
 					
-				</control-->
+				</control -->
 				<control type="image">
 					<posx>1</posx>
 					<posy>12</posy>
@@ -209,7 +209,7 @@
 					<texture diffuse="banner/fandiff.png">$INFO[ListItem.Property(Fanart_Image)]</texture>
 					<animation effect="fade" start="0" end="90" time="0" condition="true">Conditional</animation>
 				</control>
-				<!--control type="image">
+				<!-- control type="image">
 					<posx>654</posx>
 					<posy>114</posy>
 					<width>520</width>
@@ -217,7 +217,7 @@
 					<aspectratio>stretch</aspectratio>
 					<texture background="true">white.png</texture>
 					<colordiffuse>FFEBEBEB</colordiffuse>
-				</control-->
+				</control -->
 				<control type="label">
 					<posx>670</posx>
 					<posy>448</posy>
@@ -244,7 +244,7 @@
 					<label>[UPPERCASE]$LOCALIZE[31180] $INFO[ListItem.Property(UnWatchedEpisodes)][/UPPERCASE]</label>
 				   <visible>!IsEmpty(ListItem.foldername) + !substring(Container.Listitem.Label,..,left)</visible>
 				</control>
-				<!--control type="image">
+				<!-- control type="image">
 					<description>Rating Info</description>
 					<posx>998</posx>
 					<posy>351</posy>
@@ -253,7 +253,7 @@
 					<info>ListItem.StarRating</info>
 					<fadetime>250</fadetime>
 					<visible>![IsEmpty(ListItem.foldername) + substring(Container.Listitem.Label,..,left)] | IsEmpty(Container(709).Listitem.Art(fanart))</visible>
-				</control-->
+				</control -->
 				<control type="textbox">
 					<posx>670</posx>
 					<posy>525</posy>
@@ -339,7 +339,7 @@
 			</control>
 		</control>
 		
-		<!-- Scroll Bar -->
+		<!--  Scroll Bar  -->
 
 		<control type="scrollbar" id="710">
 			

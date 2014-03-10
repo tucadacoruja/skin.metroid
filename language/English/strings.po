@@ -876,3 +876,23 @@ msgstr ""
 msgctxt "#31236"
 msgid "Show OSD volume bar (mouse/touch)"
 msgstr ""
+
+msgctxt "#31237"
+msgid "Question:"
+msgstr ""
+
+msgctxt "#31238"
+msgid "Are you on a tablet or touch screen device?"
+msgstr ""
+
+msgctxt "#31239"
+msgid "Title"
+msgstr ""
+
+msgctxt "#31240"
+msgid "Description"
+msgstr ""
+
+msgctxt "#31241"
+msgid "No PVR support."
+msgstr ""

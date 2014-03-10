@@ -22,7 +22,7 @@
 			<width>942</width>
 			<height>482</height>
 			<texture>dialog/setcontentbg2.png</texture>
-			<!--colordiffuse>FF707070</colordiffuse-->
+			<!-- colordiffuse>FF707070</colordiffuse -->
 		</control>
 
 		<control type="label" id="1">
@@ -35,7 +35,7 @@
 			<align>center</align>
 			<aligny>center</aligny>
 			<textcolor>babyblue</textcolor>
-			<label>Filter</label>
+			<label>31060</label>
 			
 		</control>
 		<control type="grouplist" id="5">

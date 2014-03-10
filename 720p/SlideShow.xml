@@ -16,7 +16,7 @@
 			</control>
 		
 		</control>
-		<!-- media infos -->
+		<!--  media infos  -->
 		<control type="group">
 			<posx>20</posx>
 			<posy>180r</posy>

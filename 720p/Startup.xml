@@ -14,7 +14,7 @@
         <animation effect="fade" end="1" time="0" condition="true">Conditional</animation>
     </control>
 
-    <!-- Show home if skin widgets loading is finished -->
+    <!--  Show home if skin widgets loading is finished  -->
     <control type="button" id="11">
 	  <onfocus condition="!System.HasAddon(service.skin.widgets)">SetFocus(12)</onfocus>
       <onfocus condition="System.HasAddon(service.skin.widgets)">SetFocus(11)</onfocus>

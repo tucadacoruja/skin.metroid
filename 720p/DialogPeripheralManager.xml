@@ -24,7 +24,7 @@
 				<height>650</height>
 				<aspectratio>stretch</aspectratio>
 				<texture border="62">dialog/contentbg2.png</texture>
-				<!--colordiffuse>FF959595</colordiffuse-->
+				<!-- colordiffuse>FF959595</colordiffuse -->
 
 			</control>
 			
@@ -160,7 +160,7 @@
 				<showonepage>true</showonepage>
 				<orientation>vertical</orientation>
 			</control>
-			<!--control type="label">
+			<!-- control type="label">
 				<description>number of files/pages in list text label</description>
 				<posx>580</posx>
 				<posy>585</posy>
@@ -172,7 +172,7 @@
 				<scroll>true</scroll>
 				<textcolor>ff959595</textcolor>
 				<label>([COLOR=blue]$INFO[Container(20).NumItems][/COLOR]) $LOCALIZE[31025] - $LOCALIZE[31024] ([COLOR=blue]$INFO[Container(20).CurrentPage]/$INFO[Container(20).NumPages][/COLOR])</label>
-			</control-->
+			</control -->
 			<control type="button" id="10">
 				<description>OK button</description>
 				<posx>120</posx>

@@ -76,7 +76,7 @@
 			<effect type="slide" time="200" start="0,0" end="0,400" easing="in" tween="cubic" />
 		</animation>
     
-      <!-- ** Required ** Do not change <id> or <type> -->
+      <!--  ** Required ** Do not change <id> or <type>  -->
       <control type="label" id="300">
         <description>textarea</description>
         <posx>445</posx>
@@ -110,7 +110,7 @@
         <aligny>center</aligny>
       </control>
 
-	  <!-- ** Required ** Do not change <id> or <type> -->
+	  <!--  ** Required ** Do not change <id> or <type>  -->
       <control type="list" id="150">
         <posx>-194</posx>
         <posy>110</posy>
@@ -216,7 +216,7 @@
           </control>
         </focusedlayout>
       </control>
-      <!-- ** Required ** Do not change <id> or <type> -->
+      <!--  ** Required ** Do not change <id> or <type>  -->
       <control type="list" id="120">
         <posx>18</posx>
         <posy>161</posy>

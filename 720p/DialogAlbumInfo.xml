@@ -34,7 +34,7 @@
 		<height>600</height>
 		<scrolltime tween="cubic" easing="out">600</scrolltime>
 		<pagecontrol>9010</pagecontrol>
-		<!--itemgap>60</itemgap-->
+		<!-- itemgap>60</itemgap -->
 		<orientation>horizontal</orientation>
 	
 		<control type="grouplist" id="1">
@@ -46,14 +46,14 @@
 			<itemgap>10</itemgap>
 			<orientation>vertical</orientation>
 			
-			<!--spacer-->
+			<!-- spacer -->
 			<control type="group">
 				
 				<width>70</width>
 				<height>50</height>
 			</control>
 			
-			<!--Refresh Button-->
+			<!-- Refresh Button -->
 			<control type="group">
 				
 				<width>70</width>
@@ -94,7 +94,7 @@
 												
 			</control>
 
-			<!--Art Button-->
+			<!-- Art Button -->
 			<control type="group">
 			
 				<width>70</width>
@@ -136,7 +136,7 @@
 				
 			</control>
 			
-			<!--Fanart Button-->
+			<!-- Fanart Button -->
 			<control type="group">
 			
 				<width>70</width>
@@ -178,7 +178,7 @@
 				
 			</control>
 			
-			<!--Toggle Button-->
+			<!-- Toggle Button -->
 			<control type="group">
 			
 				<width>70</width>
@@ -220,7 +220,7 @@
 				</control>
 			</control>
 			
-			<!--Close Button-->
+			<!-- Close Button -->
 			<control type="group">
 				<visible>Skin.HasSetting(HideGlobalBack)</visible>
 				<width>70</width>
@@ -265,7 +265,7 @@
 	
 			
 		</control>	
-		<!--Info-->
+		<!-- Info -->
 		<control type="group">
 		
 			<width>405</width>
@@ -393,7 +393,7 @@
 		
 		</control>
 		
-		<!--Text-->
+		<!-- Text -->
 		<control type="group">
 		
 			<width>360</width>

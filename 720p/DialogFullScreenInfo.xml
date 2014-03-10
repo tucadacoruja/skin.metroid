@@ -98,7 +98,7 @@
 				<height>40</height>
 				<font>FullscreenInfo2</font>
 				<wrapmultiline>true</wrapmultiline>
-				<label> </label><!---empty spacer---->
+				<label> </label><!-- empty spacer -->
 				<textcolor>FFD7D7D7</textcolor>
 				<autoscroll>false</autoscroll>
 				<align>left</align>

@@ -31,7 +31,7 @@
 			<width>830</width>
 			<height>290</height>
 			<texture border="62">dialog/contentbg2.png</texture>
-			<!--colordiffuse>FF959595</colordiffuse-->
+			<!-- colordiffuse>FF959595</colordiffuse -->
 			<aspectratio>stretch</aspectratio>
 		</control>
 		<control type="label">

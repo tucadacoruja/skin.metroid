@@ -23,7 +23,7 @@
 			<height>482</height>
 			<aspectratio>stretch</aspectratio>
 			<texture>dialog/setcontentbg2.png</texture>
-			<!--colordiffuse>FF707070</colordiffuse-->
+			<!-- colordiffuse>FF707070</colordiffuse -->
 		</control>
 		<control type="image">
 			<posx>911</posx>
@@ -72,7 +72,7 @@
 			<ondown>6</ondown>
 			<pagecontrol>-</pagecontrol>
 			<scrolltime>0</scrolltime>
-			<!--UNFOCUSED LAYOUT-->
+			<!-- UNFOCUSED LAYOUT -->
 			<itemlayout width="600" height="84">
 			
 				<control type="image">

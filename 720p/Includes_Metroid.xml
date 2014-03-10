@@ -734,7 +734,7 @@
 					</control>
 					
 				</focusedlayout>
-				<!--content target="video">plugin://plugin.video.youtube/?login=true%26path=%2froot%2fplaylists%26playlist=PL29685DF58E70D8FD%26user_feed=playlist</content-->
+				<!-- content target="video">plugin://plugin.video.youtube/?login=true%26path=%2froot%2fplaylists%26playlist=PL29685DF58E70D8FD%26user_feed=playlist</content -->
 				<content target="video">$INFO[Skin.String(PluginWidgetPath1)]</content>
 			</control>	
 		</control>	
@@ -884,7 +884,7 @@
 					</control>
 					
 				</focusedlayout>
-				<!--content target="video">plugin://plugin.video.youtube/?login=true%26path=%2froot%2fplaylists%26playlist=PL29685DF58E70D8FD%26user_feed=playlist</content-->
+				<!-- content target="video">plugin://plugin.video.youtube/?login=true%26path=%2froot%2fplaylists%26playlist=PL29685DF58E70D8FD%26user_feed=playlist</content -->
 				<content target="video">$INFO[Skin.String(PluginWidgetPath2)]</content>
 			</control>	
 		</control>	

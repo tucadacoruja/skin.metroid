@@ -2,13 +2,13 @@
 <includes>
 
 	<include name="Holiday"> 
-		<!--snow-->
+		<!-- snow -->
 <control type="group">
-<!--visible>System.Date(12-21,12-26)</visible><!---(start date, end date, in MM-DD format)--->
+<!-- visible>System.Date(12-21,12-26)</visible><!-- (start date, end date, in MM-DD format) -->
 <visible>Skin.HasSetting(HolidayEffects)</visible>
 <visible>![System.ScreenSaverActive | System.IdleTime(1200)]</visible>
 	<control type="group">
-		<posx>-100</posx><!---Use this to space all the groups--->
+		<posx>-100</posx><!-- Use this to space all the groups -->
 		<animation effect="rotate" end="20" time="9000" delay="300" pulse="true" condition="true">Conditional</animation>
 		<control type="image">
 			<posx>40</posx>
@@ -64,7 +64,7 @@
 		</control>
 	</control>
 	<control type="group">
-		<posx>100</posx><!---Use this to space all the groups--->
+		<posx>100</posx><!-- -Use this to space all the groups- -->
 		<animation effect="rotate" start="20" end="40" time="9000" delay="800" pulse="true" condition="true">Conditional</animation>
 		<control type="image">
 			<posx>80</posx>
@@ -99,7 +99,7 @@
 		</control>
 	</control>
 	<control type="group">
-		<posx>600</posx><!---Use this to space all the groups--->
+		<posx>600</posx><!-- -Use this to space all the groups- -->
 		<posy>-200</posy>
 		<animation effect="rotate" end="15" time="7000" delay="500" pulse="true" condition="true">Conditional</animation>
 		<control type="image">
@@ -156,7 +156,7 @@
 		</control>
 	</control>
 	<control type="group">
-		<posx>900</posx><!---Use this to space all the groups--->
+		<posx>900</posx><!-- -Use this to space all the groups- -->
 		<animation effect="rotate" start="15" end="30" time="12000" delay="300" pulse="true" condition="true">Conditional</animation>
 		<control type="image">
 			<posx>100</posx>

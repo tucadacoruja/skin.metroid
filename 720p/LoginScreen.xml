@@ -28,7 +28,7 @@
 		<height>720</height>
 		<aspectratio>stretch</aspectratio>
 		<texture>MetroidBG.png</texture>
-		<!--colordiffuse>70FFFFFF</colordiffuse-->
+		<!-- colordiffuse>70FFFFFF</colordiffuse -->
 	</control>
 		
  <control type="group"> 	
@@ -43,8 +43,8 @@
 		<height>400</height>
 		<aspectratio>keep</aspectratio>
 		<texture>DefaultFallback.png</texture>
-		<!--colordiffuse>ddffffff</colordiffuse-->
-		<!--animation effect="zoom" end="50" center="auto" time="0" condition="true">Conditional</animation-->
+		<!-- colordiffuse>ddffffff</colordiffuse -->
+		<!-- animation effect="zoom" end="50" center="auto" time="0" condition="true">Conditional</animation -->
 		<animation effect="rotatey" end="360" center="640,360" time="60000" loop="true" condition="true">Conditional</animation>
 	</control>
 	<control type="label">

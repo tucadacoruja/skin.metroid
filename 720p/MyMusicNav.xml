@@ -58,7 +58,7 @@
 	<animation effect="fade" start="1" end="0" time="0" condition="true">Conditional</animation>
 </control>
 	
-<!---for filter sendclick 19--->
+<!-- -for filter sendclick 19- -->
 <control type="button" id="19">
 	<posx>0</posx>
 	<posy>0</posy>
@@ -67,7 +67,7 @@
 	<description>Filter</description>
 	<label>-</label>
 </control>
-<!---for filter sendclick 17--->
+<!-- -for filter sendclick 17- -->
 <control type="button" id="17">
 	<posx>0</posx>
 	<posy>0</posy>
@@ -76,7 +76,7 @@
 	<description>lookup</description>
 	<label>-</label>
 </control>
-<!---for filter sendclick 16--->
+<!-- -for filter sendclick 16- -->
 <control type="button" id="16">
 	<posx>0</posx>
 	<posy>0</posy>
@@ -93,7 +93,7 @@
 
 <include>Polaroid</include>
 <include>List</include>
-<include>Panel</include><!---603--> 
+<include>Panel</include><!-- -603 --> 
 
 <include>ScrollOffsetLabel</include>
 	

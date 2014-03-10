@@ -117,13 +117,13 @@
 
 
 
-<include>List</include><!---50-->
-<include>Banners</include><!---709-->
-<include>PosterWrapView</include><!---501-->
-<include>FanartShelf</include><!---781-->
-<include>Episodes</include><!---504-->
-<include>Panel</include><!---603--> 
-<include>Icons</include><!---677--> 
+<include>List</include><!-- -50 -->
+<include>Banners</include><!-- -709 -->
+<include>PosterWrapView</include><!-- -501 -->
+<include>FanartShelf</include><!-- -781 -->
+<include>Episodes</include><!-- -504 -->
+<include>Panel</include><!-- -603 --> 
+<include>Icons</include><!-- -677 --> 
 
 
 <include>BottomInfoBar</include>

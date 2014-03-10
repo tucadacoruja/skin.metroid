@@ -59,7 +59,7 @@
 				<texturesliderbar>osd/seek/EmptyBar.png</texturesliderbar>
 				<textureslidernib>osd/seek/OsdSearchNib.png</textureslidernib>
 				<textureslidernibfocus>osd/seek/OsdSearchNib.png</textureslidernibfocus>
-				<!--animation effect="fade" end="100" start="30" time="500">focus</animation-->
+				<!-- animation effect="fade" end="100" start="30" time="500">focus</animation -->
 			</control>
 		</control>
 			
@@ -125,7 +125,7 @@
 				<righttexture>-</righttexture>
 				<info>Player.Progress</info>
 				<colordiffuse>skin.string(MainColorString)</colordiffuse>
-				<!--animation effect="fade" start="0" end="60" time="0" condition="true">Conditional</animation-->
+				<!-- animation effect="fade" start="0" end="60" time="0" condition="true">Conditional</animation -->
 
 			</control>
 			
@@ -198,9 +198,9 @@
 				<visible>!Player.Forwarding + !Player.Rewinding</visible>
 			</control>
 			
-			<!-- TIMINGS -->
+			<!--  TIMINGS  -->
 			<control type="group">
-				<!-- REWIND -->
+				<!--  REWIND  -->
 				<control type="group">
                     <posx>1050</posx>
 					<posy>30</posy>
@@ -266,7 +266,7 @@
 					</control>
 				</control>
 
-				<!-- FORWARD -->
+				<!--  FORWARD  -->
 				<control type="group">
 					<posx>1050</posx>
 					<posy>30</posy>
@@ -444,7 +444,7 @@
 				<visible>System.GetBool(services.upnpcontroller)</visible>
 				
 			</control>
-			<!--control type="image">
+			<!-- control type="image">
 				<height>60</height>
 				<width>60</width>
 				<texture>osd/osdbg.png</texture>
@@ -452,7 +452,7 @@
 				<visible>!IsEmpty(Skin.String(PluginWidgetPath1))</visible>
 				<visible>System.HasAddon(script.tvguide)</visible>
 				<animation effect="fade" start="100" end="60" time="100" condition="Control.HasFocus(14)">Conditional</animation>
-			</control-->
+			</control -->
 			
 		</control>
 		
@@ -643,14 +643,14 @@
 				
 				<onclick>SwitchPlayer</onclick>
 				<onclick>ActivateWindow(videoplaylist)</onclick>
-				<!--onclick>playercontrol(SwitchPlayer)</onclick-->
+				<!-- onclick>playercontrol(SwitchPlayer)</onclick -->
 				
 				<animation effect="zoom" start="100" end="120" center="auto" time="100">Focus</animation>
 				<animation effect="zoom" start="120" end="100" center="auto" time="100">UnFocus</animation>
 				<visible>System.GetBool(services.upnpcontroller)</visible>
 			</control>
 			
-			<!--control type="button" id="15">
+			<!-- control type="button" id="15">
 				
 				<description>playlist</description>
 				<height>60</height>
@@ -660,16 +660,16 @@
 				<texturenofocus>osd/addon.png</texturenofocus>
 				
 				<onclick>Dialog.Close(videoosd)</onclick>
-				<!--onclick>ActivateWindow(9506)</onclick>
+				<!-- onclick>ActivateWindow(9506)</onclick>
 				<onclick>RunScript(script.tvguide)</onclick>
 				
 				
 				
 				<animation effect="zoom" start="100" end="120" center="auto" time="100">Focus</animation>
 				<animation effect="zoom" start="120" end="100" center="auto" time="100">UnFocus</animation>
-				<!--visible>!IsEmpty(Skin.String(PluginWidgetPath1))</visible>
+				<!-- visible>!IsEmpty(Skin.String(PluginWidgetPath1))</visible>
 				<visible>System.HasAddon(script.tvguide)</visible>
-			</control-->
+			</control -->
 		</control>
 		
 	

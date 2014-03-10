@@ -48,7 +48,7 @@
 				<height>48</height>
 				<texture>MetroidMenu.png</texture>
 				<aspectratio>stretch</aspectratio>
-				<!--colordiffuse>ff262626</colordiffuse-->
+				<!-- colordiffuse>ff262626</colordiffuse -->
 			</control>
 			<control type="label">
 				<posx>380</posx>
@@ -57,7 +57,7 @@
 				<height>44</height>
 				<align>right</align>
 				<aligny>center</aligny>
-				<label>Power</label>
+				<label>31090</label>
 				<textcolor>blue</textcolor>
 				<font>context</font>
 			</control>
@@ -79,7 +79,7 @@
 				<height>195</height>
 				<texture>MetroidMenu.png</texture>
 				<aspectratio>stretch</aspectratio>
-				<!--colordiffuse>ff262626</colordiffuse-->
+				<!-- colordiffuse>ff262626</colordiffuse -->
 			</control>
 			<control type="image" id="3">
 				<description>background image</description>
@@ -89,7 +89,7 @@
 				<height>10</height>
 				<texture>MetroidMenu.png</texture>
 				<aspectratio>stretch</aspectratio>
-				<!--colordiffuse>ff262626</colordiffuse-->
+				<!-- colordiffuse>ff262626</colordiffuse -->
 			</control>
 		</control>
 
@@ -135,7 +135,7 @@
 				<width>376</width>
 				<height>40</height>
 				<onclick>XBMC.Shutdown()</onclick>
-				<!--onclick condition="System.CanPowerDown">XBMC.Powerdown()</onclick-->
+				<!-- onclick condition="System.CanPowerDown">XBMC.Powerdown()</onclick -->
 				<align>left</align>
 				<aligny>top</aligny>
 				<colordiffuse>skin.string(MainColorString)</colordiffuse>

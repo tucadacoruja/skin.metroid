@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
 		
-		<!-- ============== -->
-		<!-- ============== -->
-		<!-- Main Menu -->
-		<!-- ============== -->
-		<!-- ============== -->
+		<!--  ==============  -->
+		<!--  ==============  -->
+		<!--  Main Menu  -->
+		<!--  ==============  -->
+		<!--  ==============  -->
 
 	<include name="MainMenu">
 	
@@ -20,7 +20,7 @@
 			<height>1</height>
 			<aspectratio>stretch</aspectratio>
 			<texture>blank.png</texture>
-			<!--onfocus condition="Skin.HasSetting(DisableAnimation)">Skin.reset(DisableAnimation)</onfocus-->
+			<!--  onfocus condition="Skin.HasSetting(DisableAnimation)">Skin.reset(DisableAnimation)</onfocus  -->
 			<onfocus>SetFocus(301)</onfocus>
 			
 		</control>
@@ -36,7 +36,7 @@
 			
 		</control>
 		
-		<!--control type="image">
+		<!--  control type="image">
 			<posx>235</posx>
 			<posy>72</posy>
 			<width>15</width>
@@ -44,7 +44,7 @@
 			<aspectratio>stretch</aspectratio>
 			<texture>shadowv.png</texture>
 			<animation effect="fade" start="0" end="70" time="0" condition="true">Conditional</animation>
-		</control-->
+		</control  -->
 
 		<include>EmptyMenu</include>
 	
@@ -59,7 +59,7 @@
 				<onup>noop</onup>
 				<ondown>301</ondown>
 				<pagecontrol>-</pagecontrol>
-				<!--scrolltime tween="cubic" easing="inout">325</scrolltime-->
+				<!--  scrolltime tween="cubic" easing="inout">325</scrolltime  -->
 				<scrolltime>0</scrolltime>
 				<preloaditems>2</preloaditems>
 				<orientation>vertical</orientation>
@@ -92,13 +92,13 @@
 						<label>- $INFO[ListItem.Label]</label>
 						<visible>!IsEmpty(ListItem.Property(SubMenuItem))</visible>
 						
-						<!--animation effect="slide" start="-300,0" end="0,0" time="350" reversable="true" condition="!IsEmpty(skin.string(SubMenu1))">Conditional</animation> 
+						<!--  animation effect="slide" start="-300,0" end="0,0" time="350" reversable="true" condition="!IsEmpty(skin.string(SubMenu1))">Conditional</animation> 
 						<animation effect="slide" start="-300,0" end="0,0" time="350" reversable="true" condition="!IsEmpty(skin.string(SubMenu2))">Conditional</animation> 
 						<animation effect="slide" start="-300,0" end="0,0" time="350" reversable="true" condition="!IsEmpty(skin.string(SubMenu3))">Conditional</animation> 
 						<animation effect="slide" start="-300,0" end="0,0" time="350" reversable="true" condition="!IsEmpty(skin.string(SubMenu4))">Conditional</animation> 
 						<animation effect="slide" start="-300,0" end="0,0" time="350" reversable="true" condition="!IsEmpty(skin.string(SubMenu5))">Conditional</animation> 
 						<animation effect="slide" start="-300,0" end="0,0" time="350" reversable="true" condition="!IsEmpty(skin.string(SubMenu6))">Conditional</animation> 
-						<animation effect="fade" start="0" end="100" time="200" >Visible</animation--> 
+						<animation effect="fade" start="0" end="100" time="200" >Visible</animation  --> 
 					</control>
 					
 				</itemlayout>
@@ -113,7 +113,7 @@
 						<height>50</height>
 						<aspectratio>stretch</aspectratio>
 						<texture>black.png</texture>
-						<!--visible>Control.HasFocus(301)</visible-->
+						<!--  visible>Control.HasFocus(301)</visible  -->
 						<animation effect="fade" start="0" end="40" time="0" condition="true">Conditional</animation>
 					</control>
 					<control type="image">
@@ -231,18 +231,18 @@
 							<visible>Library.HasContent(movies) | Library.HasContent(TVShows)</visible>
 						</item>
 						
-						<!--item id="98">
+						<!--  item id="98">
 							<description>party Mode</description>
 							<label>$LOCALIZE[589]</label>
 							<onclick>SendClick(16)</onclick>
 							<visible>Window.IsActive(musiclibrary)</visible>
-						</item-->
+						</item  -->
 						<item id="96">
 							<description>Party Mode</description>
 							<label>$LOCALIZE[589]</label>
 							<onclick condition="!Window.IsVisible(musiclibrary)">ActivateWindow(musiclibrary)</onclick>
 							<onclick>SendClick(16)</onclick>
-							<!--onclick>XBMC.PlayerControl(Partymode(special://skin/extras/library/music/Party_Mode.xsp))</onclick-->
+							<!--  onclick>XBMC.PlayerControl(Partymode(special://skin/extras/library/music/Party_Mode.xsp))</onclick  -->
 							<visible>[Window.IsActive(home) | Window.IsActive(musiclibrary)] + Library.HasContent(Music)</visible>
 							<visible>!Skin.HasSetting(HideGlobalMusic)</visible>
 						</item>
@@ -252,7 +252,7 @@
 							<label>$INFO[Skin.String(CustomFavName1)]</label>
 							<icon>$INFO[Skin.String(CustomFavourite1.Icon)]</icon>
 							<onclick>$INFO[Skin.String(CustomFavourite1.Path)]</onclick>
-							<visible>Skin.HasSetting(Menu_Custom1) + !IsEmpty(Skin.SetString(CustomFavName1))</visible>
+							<visible>Skin.HasSetting(Menu_Custom1) + !IsEmpty(Skin.String(CustomFavName1))</visible>
 							<visible>Skin.HasSetting(cust_favorite)</visible>
 						</item>
 						
@@ -321,7 +321,7 @@
 							<label>$INFO[Skin.String(CustomFavName2)]</label>
 							<icon>$INFO[Skin.String(CustomFavourite2.Icon)]</icon>
 							<onclick>$INFO[Skin.String(CustomFavourite2.Path)]</onclick>
-							<visible>Skin.HasSetting(Menu_Custom2) + !IsEmpty(Skin.SetString(CustomFavName2))</visible>
+							<visible>Skin.HasSetting(Menu_Custom2) + !IsEmpty(Skin.String(CustomFavName2))</visible>
 							<visible>Skin.HasSetting(cust_favorite)</visible>
 						</item>
 						
@@ -335,7 +335,7 @@
 							<description>Video Library</description>
 							<label>31219</label>
 							<visible>Skin.HasSetting(HideVideoLibrary)</visible>
-							<!--onclick>ActivateWindow(Video,library://video/)</onclick-->
+							<!--  onclick>ActivateWindow(Video,library://video/)</onclick  -->
 							<onclick>ActivateWindow(Videos,root)</onclick>
 						</item>	
 						
@@ -343,7 +343,7 @@
 							<description>Music Library</description>
 							<label>31220</label>
 							<visible>Skin.HasSetting(HideMusicLibrary)</visible>
-							<!--onclick>ActivateWindow(Music,library://music/)</onclick-->
+							<!--  onclick>ActivateWindow(Music,library://music/)</onclick  -->
 							<onclick>ActivateWindow(MusicLibrary,root)</onclick>
 						</item>
 						<item id="105">
@@ -381,7 +381,7 @@
 							<label>$INFO[Skin.String(CustomFavName3)]</label>
 							<icon>$INFO[Skin.String(CustomFavourite3.Icon)]</icon>
 							<onclick>$INFO[Skin.String(CustomFavourite3.Path)]</onclick>
-							<visible>Skin.HasSetting(Menu_Custom3) + !IsEmpty(Skin.SetString(CustomFavName3))</visible>
+							<visible>Skin.HasSetting(Menu_Custom3) + !IsEmpty(Skin.String(CustomFavName3))</visible>
 							<visible>Skin.HasSetting(cust_favorite)</visible>
 						</item>
 						
@@ -405,9 +405,9 @@
 						
 						<item id="106">
 							<description>Addons</description>
-							<!--label>31086</label-->
+							<!--  label>31086</label  -->
 							<label>$LOCALIZE[24001]</label>
-							<!--onclick>ActivateWindow(Videos, addons://sources/video)</onclick-->
+							<!--  onclick>ActivateWindow(Videos, addons://sources/video)</onclick  -->
 							<onclick condition="IsEmpty(Skin.String(SubMenu6))">Skin.SetString(SubMenu6,open)</onclick>
 							<onclick condition="!IsEmpty(Skin.String(SubMenu6))">Skin.Reset(SubMenu6)</onclick>
 							<onclick condition="IsEmpty(Skin.String(SubMenu6))">Skin.SetString(SubMenu6,open)</onclick> 
@@ -421,7 +421,7 @@
 							<label>$INFO[Skin.String(CustomFavName4)]</label>
 							<icon>$INFO[Skin.String(CustomFavourite4.Icon)]</icon>
 							<onclick>$INFO[Skin.String(CustomFavourite4.Path)]</onclick>
-							<visible>Skin.HasSetting(Menu_Custom4) + !IsEmpty(Skin.SetString(CustomFavName4))</visible>
+							<visible>Skin.HasSetting(Menu_Custom4) + !IsEmpty(Skin.String(CustomFavName4))</visible>
 							<visible>Skin.HasSetting(cust_favorite)</visible>
 						</item>
 						
@@ -460,7 +460,7 @@
 							<label>$INFO[Skin.String(CustomFavName5)]</label>
 							<icon>$INFO[Skin.String(CustomFavourite5.Icon)]</icon>
 							<onclick>$INFO[Skin.String(CustomFavourite5.Path)]</onclick>
-							<visible>Skin.HasSetting(Menu_Custom5) + !IsEmpty(Skin.SetString(CustomFavName5))</visible>
+							<visible>Skin.HasSetting(Menu_Custom5) + !IsEmpty(Skin.String(CustomFavName5))</visible>
 							<visible>Skin.HasSetting(cust_favorite)</visible>
 						</item>
 						
@@ -471,13 +471,13 @@
 							<visible>!Skin.HasSetting(PowerHome)</visible>
 						</item>
 									  
-						<!--item id="111">
+						<!--  item id="111">
 							<description>Programs</description>
 							<label>31091</label>
 							<label2></label2>
 							<onclick>xbmc.activatewindow(programs)</onclick>
 							<visible>Skin.HasSetting(ProgramsHome)</visible>
-						</item-->
+						</item  -->
 							  
 						<item id="112">
 							<description>Play Disk</description>
@@ -503,17 +503,17 @@
 							<label>$INFO[Skin.String(CustomFavName6)]</label>
 							<icon>$INFO[Skin.String(CustomFavourite6.Icon)]</icon>
 							<onclick>$INFO[Skin.String(CustomFavourite6.Path)]</onclick>
-							<visible>Skin.HasSetting(Menu_Custom6) + !IsEmpty(Skin.SetString(CustomFavName6))</visible>
+							<visible>Skin.HasSetting(Menu_Custom6) + !IsEmpty(Skin.String(CustomFavName6))</visible>
 							<visible>Skin.HasSetting(cust_favorite)</visible>
 						</item>
 									  
-						<!--item id="41">
+						<!--  item id="41">
 							<label>Live Tv</label>
 							<onclick>ActivateWindow(PVR)</onclick>
 							<icon>-</icon>
 							<thumb>-</thumb>
 							<visible>System.GetBool(pvrmanager.enabled)</visible>
-						</item-->
+						</item  -->
 												
 					</content>		
 		</control>
@@ -732,7 +732,7 @@
 				<visible>!IsEmpty(skin.string(SubMenu1))</visible>
 				<property name="SubMenuItem">not_empty</property>
 				<property name="DropdownMenu1">not_empty</property>
-			</item><!---marker--->
+			</item>
 			<item id="9">
 				<description>Filter</description>
 				
@@ -777,7 +777,7 @@
 				<description>Slideshow</description>
 				<label>$LOCALIZE[108]</label>
 				<onclick>SendClick(6)</onclick>
-				<!--visible>ListItem.IsFolder</visible-->
+				<!--  visible>ListItem.IsFolder</visible  -->
 				<visible>!IsEmpty(skin.string(SubMenu1))</visible>
 				<property name="SubMenuItem">not_empty</property>
 				<property name="DropdownMenu1">not_empty</property>
@@ -786,7 +786,7 @@
 				<description>Recursive Slideshow</description>
 				<label>$LOCALIZE[31106] $LOCALIZE[108]</label>
 				<onclick>SendClick(7)</onclick>
-				<!--visible>ListItem.IsFolder</visible-->
+				<!--  visible>ListItem.IsFolder</visible  -->
 				<visible>!IsEmpty(skin.string(SubMenu1))</visible>
 				<property name="SubMenuItem">not_empty</property>
 				<property name="DropdownMenu1">not_empty</property>
@@ -889,7 +889,7 @@
 				<property name="DropdownMenu1">not_empty</property>
 			</item>
 			
-			<!--item id="17">
+			<!--  item id="17">
 				<description>Flatten</description>
 				<label>$LOCALIZE[20411] $LOCALIZE[31109]</label>
 				<onclick>SendClick(17)</onclick>
@@ -910,7 +910,7 @@
 				<property name="SubMenuItem">not_empty</property>
 				<property name="DropdownMenu1">not_empty</property>
 				<visible>SubString(System.BuildVersion,12,left)</visible>
-			</item-->
+			</item  -->
 			
 			<item id="18">
 				<description>Play DVD</description>
@@ -924,8 +924,8 @@
 				
 			</item>
 			
-			<!--should show in context menu?-->
-			<!--item id="19">
+			<!--  should show in context menu?  -->
+			<!--  item id="19">
 				<description>Unlock Shares</description>
 				<label>$LOCALIZE[31194]</label>
 				<onclick>SendClick(11)</onclick>
@@ -934,7 +934,7 @@
 				<property name="SubMenuItem">not_empty</property>
 				<property name="DropdownMenu1">not_empty</property>
 				
-			</item-->
+			</item  -->
 			<item id="20">
 				<description>Music video party</description>
 				<label>$LOCALIZE[589]</label>
@@ -998,7 +998,7 @@
 				<description>A.Filter</description>
 				
 				<label>Adv. $LOCALIZE[31111]</label>
-				<!--selected>Container.Filtered</selected-->
+				<!--  selected>Container.Filtered</selected  -->
 				<onclick>Filter</onclick>
 				<visible>Container.CanFilterAdvanced</visible>
 				<visible>!IsEmpty(skin.string(SubMenu1))</visible>
@@ -1061,7 +1061,7 @@
 				<description>A.Filter</description>
 				
 				<label>Adv. $LOCALIZE[31111]</label>
-				<!--selected>Container.Filtered</selected-->
+				<!--  selected>Container.Filtered</selected  -->
 				<onclick>Filter</onclick>
 				<visible>Container.CanFilterAdvanced</visible>
 				<visible>!IsEmpty(skin.string(SubMenu1))</visible>
@@ -1264,7 +1264,7 @@
 			<property name="DropdownMenu2">not_empty</property>
 		</item>
 		
-		<!--item id="12">
+		<!--  item id="12">
 			<description>Live TV settings</description>
 			<label>31125</label>
 			<icon>settings/LiveTV.png</icon>
@@ -1273,7 +1273,7 @@
 			<visible>!IsEmpty(skin.string(SubMenu2))</visible>
 			<property name="SubMenuItem">not_empty</property>
 			<property name="DropdownMenu2">not_empty</property>
-		</item-->
+		</item  -->
 		
 		
 	</include>
@@ -1283,7 +1283,7 @@
 			<description>Video</description>
 			<label>31116</label>
 			<icon>-</icon>
-			<!--onclick>ActivateWindow(Videos,Files,return)</onclick-->
+			<!--  onclick>ActivateWindow(Videos,Files,return)</onclick  -->
 			<onclick>ActivateWindow(VideoLibrary,Files,return)</onclick>
 			<visible>!IsEmpty(skin.string(SubMenu3))</visible>
 			<property name="SubMenuItem">not_empty</property>
@@ -1293,7 +1293,7 @@
 			<description>Music</description>
 			<label>31126</label>
 			<icon>-</icon>
-			<onclick>ActivateWindow(501)</onclick><!----use number--->
+			<onclick>ActivateWindow(501)</onclick><!--  use number  -->
 			<visible>!IsEmpty(skin.string(SubMenu3))</visible>
 			<property name="SubMenuItem">not_empty</property>
 			<property name="DropdownMenu3">not_empty</property>

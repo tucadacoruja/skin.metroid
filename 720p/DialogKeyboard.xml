@@ -202,7 +202,7 @@
 			</control>	
 				
 				
-			<!--row 2-->	
+			<!-- row 2 -->	
 			<control type="group">
 				<posx>0</posx>
 				<posy>65</posy>	
@@ -338,7 +338,7 @@
 					 
 					<include>keybutton</include>
 				</control>
-				<!--control type="radiobutton" id="302">
+				<!-- control type="radiobutton" id="302">
 					<description>SHIFT button</description>
 					<posx>650</posx>
 					<posy>0</posy>
@@ -354,7 +354,7 @@
 					<radiowidth>18</radiowidth>
 					<radioheight>18</radioheight>
 					<include>keybutton</include>
-				</control-->
+				</control -->
 				<control type="button" id="300">
 					<description>DONE button</description>
 					<posx>670</posx>
@@ -374,7 +374,7 @@
 				
 				
 				
-			<!--row 3-->	
+			<!-- row 3 -->	
 			<control type="group">
 				<posx>0</posx>
 				<posy>130</posy>	
@@ -532,7 +532,7 @@
 				
 				
 				
-			<!--row 4-->	
+			<!-- row 4 -->	
 			<control type="group">
 				<posx>0</posx>
 				<posy>195</posy>	
@@ -665,7 +665,7 @@
 			</control>	
 				
 				
-			<!--row 5-->	
+			<!-- row 5 -->	
 			<control type="group">
 				<posx>0</posx>
 				<posy>260</posy>	

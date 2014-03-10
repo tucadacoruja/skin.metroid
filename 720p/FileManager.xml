@@ -98,7 +98,7 @@
 </control>
 
   
-<!-- Left -->
+<!--  Left  -->
 <control type="label" id="101">
 	<description>Header Label</description>
 	<posx>15</posx>
@@ -230,7 +230,7 @@
 		</control>
 	</control>
 	
-<!-- Right -->
+<!--  Right  -->
 
 <control type="label" id="102">
 	<description>Header Label</description>
@@ -388,7 +388,7 @@
 	<animation effect="fade" start="100" end="0" time="200" condition="Window.IsVisible(mediasource)">Conditional</animation>
 </control>
 
-<!--include>BottomInfoBar</include-->
+<!-- include>BottomInfoBar</include -->
  
 </controls>
 

@@ -36,7 +36,7 @@
 				<animation effect="fade" start="10" end="0" time="10" condition="true">Conditional</animation>
 			</control>
 			
-			<!-- ** Required ** Do not change <id> or <type> -->
+			<!--  ** Required ** Do not change <id> or <type>  -->
 			<control type="textbox" id="100">
 				
 				<description>textarea</description>
@@ -57,11 +57,11 @@
 			<control type="spincontrol" id="101">
 				
 				
-				<!--visible>Control.IsVisible(100)</visible-->
+				<!-- visible>Control.IsVisible(100)</visible -->
 				<animation effect="fade" start="10" end="0" time="10" condition="true">Conditional</animation>
 			</control>
   		
-			<!-- ** Required ** Do not change <id> or <type> -->
+			<!--  ** Required ** Do not change <id> or <type>  -->
 			<control type="list" id="110">
 				
 				<pagecontrol>111</pagecontrol>
@@ -123,11 +123,11 @@
 			<control type="spincontrol" id="111">
 				
 				
-				<!--visible>Control.IsVisible(110)</visible-->
+				<!-- visible>Control.IsVisible(110)</visible -->
 				<animation effect="fade" start="10" end="0" time="10" condition="true">Conditional</animation>
 			</control>
   		
-			<!-- ** Required ** Do not change <id> or <type> -->
+			<!--  ** Required ** Do not change <id> or <type>  -->
 			<control type="list" id="120">
 
 				<pagecontrol>121</pagecontrol>
@@ -189,7 +189,7 @@
 			<control type="spincontrol" id="121">
 				
 				<animation effect="fade" start="10" end="0" time="10" condition="true">Conditional</animation>
-				<!--visible>Control.IsVisible(120)</visible-->
+				<!-- visible>Control.IsVisible(120)</visible -->
 				
 			</control>
 			

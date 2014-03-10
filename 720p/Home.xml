@@ -4,12 +4,14 @@
 
 <onload condition="Window.Previous(startup) + Skin.HasSetting(DlLogosStartup)">RunScript(script.artwork.downloader,mode=custom,mediatype=tvshow,clearlogo)</onload>
 <onload condition="Window.Previous(startup) + Skin.HasSetting(DlLogosStartup)">RunScript(script.artwork.downloader,mode=custom,mediatype=movie,clearlogo)</onload>
-<!--onload condition="System.HasAddon(script.extendedinfo)">RunScript(script.extendedinfo,info=TrendingMovies)</onload>
+<!-- onload condition="System.HasAddon(script.extendedinfo)">RunScript(script.extendedinfo,info=TrendingMovies)</onload>
 <onload condition="System.HasAddon(script.extendedinfo)">RunScript(script.extendedinfo,info=TrendingShows)</onload>
-<onload condition="System.HasAddon(script.extendedinfo)">RunScript(script.extendedinfo,info=AiringShows)</onload-->
+<onload condition="System.HasAddon(script.extendedinfo)">RunScript(script.extendedinfo,info=AiringShows)</onload -->
 
 <onload>Skin.SetString(MainColorString,blue)</onload>
-<!--onload condition="System.HasAddon(script.grab.fanart)">RunScript(script.grab.fanart,mode=random,refresh=10)</onload-->
+
+<onload condition="IsEmpty(Skin.String(FirstRunTouch))">ActivateWindow(9506)</onload>
+<!-- onload condition="System.HasAddon(script.grab.fanart)">RunScript(script.grab.fanart,mode=random,refresh=10)</onload -->
 
 
 
@@ -71,7 +73,7 @@
 <include>PluginWidget2</include>
 
 <pagecontrol>63</pagecontrol>
-<!--visible>SubString(Window(Home).Property(RandomAlbum.6.Art(thumb)),jpg) | SubString(Window(Home).Property(RandomMovie.6.Art(poster)),jpg) | SubString(Window(Home).Property(RecentEpisode.8.Art(thumb)),jpg) | SubString(Window(Home).Property(RecentMovie.6.Art(poster)),jpg)</visible-->
+<!-- visible>SubString(Window(Home).Property(RandomAlbum.6.Art(thumb)),jpg) | SubString(Window(Home).Property(RandomMovie.6.Art(poster)),jpg) | SubString(Window(Home).Property(RecentEpisode.8.Art(thumb)),jpg) | SubString(Window(Home).Property(RecentMovie.6.Art(poster)),jpg)</visible -->
 <visible>Control.IsVisible(8000) | Control.IsVisible(8001) | Control.IsVisible(8002) | Control.IsVisible(8003) | Control.IsVisible(8004) | Control.IsVisible(8005)</visible>
 <animation effect="fade" start="100" end="0" time="150" condition="Window.IsVisible(numericinput) | Window.IsVisible(virtualkeyboard)">Conditional</animation>	  
 

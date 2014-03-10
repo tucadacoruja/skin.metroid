@@ -4,7 +4,7 @@
 	<visible>!Window.IsVisible(startup)</visible>
 	<controls>
 
-		<!-- Global debug grid -->
+		<!--  Global debug grid  -->
 
 		<control type="image">
 			<visible>Skin.HasSetting(DebugGrid)</visible>
@@ -13,15 +13,15 @@
 			<width>1280</width>
 			<height>720</height>
 			<texture>special://skin/debuggrid720.png</texture>
-			<!--width>1920</width>
+			<!-- width>1920</width>
 			<height>1080</height>
-			<texture>special://skin/debuggrid1080.png</texture-->
-			<!--width>1280</width>
+			<texture>special://skin/debuggrid1080.png</texture -->
+			<!-- width>1280</width>
 			<height>960</height>
-			<texture>special://skin/debuggrid960.png</texture-->
+			<texture>special://skin/debuggrid960.png</texture -->
 		</control>
 
-		<!-- Window/Dialog debug -->
+		<!--  Window/Dialog debug  -->
 
 		<control type="grouplist">
 			<posx>15</posx>
@@ -31,7 +31,7 @@
 			<itemgap>12</itemgap>
 			<visible>Skin.HasSetting(HideDebugInfo)</visible>
 
-			<!-- Window labels -->
+			<!--  Window labels  -->
 
 			<control type="label">
 				<width>780</width>
@@ -242,7 +242,7 @@
 				<visible>Window.IsVisible(VideoFullScreen.xml)</visible>
 			</control>
 
-			<!-- Dialog labels -->
+			<!--  Dialog labels  -->
 
 			<control type="label">
 				<width>780</width>
@@ -906,7 +906,7 @@
 
 		</control>
 
-		<!-- Control label -->
+		<!--  Control label  -->
 
 		<control type="label">
 			<posx>15r</posx>
@@ -921,7 +921,7 @@
 			<visible>Skin.HasSetting(HideDebugInfo)</visible>
 		</control>
 
-		<!-- Path label -->
+		<!--  Path label  -->
 
 		<control type="label">
 			<posx>15r</posx>

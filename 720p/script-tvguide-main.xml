@@ -7,7 +7,7 @@
 		<posy>100</posy>
 	</coordinates>
 	<controls>
-		<!-- Background -->
+		<!--  Background  -->
 		<control type="image">
             <posx>0</posx>
             <posy>-100</posy>
@@ -37,9 +37,9 @@
             <posy>-100</posy>
             <width>1280</width>
             <height>720</height>
-            <!--animation type="Conditional" condition="!Control.IsVisible(5000)">
+            <!-- animation type="Conditional" condition="!Control.IsVisible(5000)">
                 <effect type="zoom" end="13" center="1240,660" time="500" />
-            </animation-->
+            </animation -->
         </control>
         <control type="image">
             <posx>0</posx>
@@ -74,7 +74,7 @@
                 <visible>false</visible>
             </control>
 			
-			<!--TOP BAR-->
+			<!-- TOP BAR -->
 			<control type="group">
 				<description>Top Bar Area</description>
 				<include>TopBarImage</include>
@@ -116,7 +116,7 @@
 				<include>Notifications</include>
 			</control>			
 			
- <!--TIME AND DATE LABELS-->
+ <!-- TIME AND DATE LABELS -->
 
 		<control type="group">
 			<posx>20</posx>
@@ -182,7 +182,7 @@
 				</control>
 			</control>
 		</control>
-		<!--CHANNEL BUTTONS AND LABELS-->
+		<!-- CHANNEL BUTTONS AND LABELS -->
 
 		<control type="group">
 
@@ -375,7 +375,7 @@
 			</control>
 
 
-                 <!-- logo images -->
+                 <!--  logo images  -->
 			<control type="group">
 			<posx>8</posx>
 			<posy>111</posy>
@@ -483,7 +483,7 @@
 				<height>80</height>
                 <aspectratio>keep</aspectratio>
                 <fadetime>500</fadetime>
-                <visible>false</visible><!-- unused in default skin -->
+                <visible>false</visible><!--  unused in default skin  -->
 				<texture background="true" fallback="pvr/DefaultPVRLogo.png"></texture>
             </control>
 			<control type="label" id="4021">
@@ -530,7 +530,7 @@
                 <height>470</height>
                 <texture>tvguide-timebar.png</texture>
 				<aspectratio>stretch</aspectratio>
-				<!--colordiffuse>FFED1C24</colordiffuse-->
+				<!-- colordiffuse>FFED1C24</colordiffuse -->
             </control>
 
             <control type="label" id="4200">
@@ -744,7 +744,7 @@
 
             </control>
 
-        </control><!-- id="5000" -->
+        </control><!--  id="5000"  -->
 
         
 
@@ -769,14 +769,14 @@
                 <texture>tvguide-glasspane.png</texture>
             </control>
 
-            <!-- Program description -->
+            <!--  Program description  -->
             <control type="label" id="6001">
                 <description>Program title</description>
                 <posx>30</posx>
                 <posy>10</posy>
                 <width>850</width>
                 <height>50</height>
-                <label>[B]Title[/B]</label>
+                <label>[B]31239[/B]</label>
                 <textcolor>ffffffff</textcolor>
                 <font>font13</font>
                 <aligny>center</aligny>
@@ -799,7 +799,7 @@
                 <posy>50</posy>
                 <width>1230</width>
                 <height>149</height>
-                <label>Description</label>
+                <label>31240</label>
                 <textcolor>ffffffff</textcolor>
                 <font>font13</font>
                 <wrapmultiline>true</wrapmultiline>

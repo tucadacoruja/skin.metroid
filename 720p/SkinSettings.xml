@@ -183,7 +183,7 @@
 				<animation type="WindowClose" reversible="false">
 					<effect type="fade" start="100" end="0" time="350" delay="0" />
 				</animation> 
-				<!-- Main Items -->
+				<!--  Main Items  -->
 			
 				<control type="grouplist" id="9001">
 					<description>Control Area</description>
@@ -198,7 +198,7 @@
 					<onup>9001</onup>
 					<ondown>9001</ondown>
 					<pagecontrol>63</pagecontrol>
-					<!--animation effect="fade" start="100" end="70" time="0" condition="true">Conditional</animation-->
+					<!-- animation effect="fade" start="100" end="70" time="0" condition="true">Conditional</animation -->
 					
 					<control type="radiobutton" id="100">
 						<include>SettingsButton</include>
@@ -395,7 +395,7 @@
 				</control>
 				
 						
-				<!-- FAVORITES -->
+				<!--  FAVORITES  -->
 				
 				<control type="grouplist" id="9003">
 					<description>Control Area</description>
@@ -412,7 +412,7 @@
 					<ondown>9003</ondown>
 					<pagecontrol>63</pagecontrol>
 					
-					 <!-- EXTRA ITEMS FAVOURITES 1-10 -->
+					 <!--  EXTRA ITEMS FAVOURITES 1-10  -->
 					
 					<control type="radiobutton" id="199">
 						<include>SettingsButton</include>
@@ -422,7 +422,7 @@
 						<selected>Skin.HasSetting(cust_favorite)</selected>
 					</control>
 					
-					 <!-- EXTRA ITEMS FAVOURITES 1 -->
+					 <!--  EXTRA ITEMS FAVOURITES 1  -->
 					
 					<control type="radiobutton" id="200">
 						<include>SettingsButton</include>
@@ -455,7 +455,7 @@
 					</control>
 					
 					
-					 <!-- EXTRA ITEMS FAVOURITES 2 -->
+					 <!--  EXTRA ITEMS FAVOURITES 2  -->
 					
 					<control type="radiobutton" id="206">
 						<include>SettingsButton</include>
@@ -485,7 +485,7 @@
 						<visible>Skin.HasSetting(cust_favorite)</visible>
 					</control>
 					
-					 <!-- EXTRA ITEMS FAVOURITES 3 -->
+					 <!--  EXTRA ITEMS FAVOURITES 3  -->
 					
 					<control type="radiobutton" id="212">
 						<include>SettingsButton</include>
@@ -515,7 +515,7 @@
 						<visible>Skin.HasSetting(cust_favorite)</visible>
 					</control>
 					
-					<!-- EXTRA ITEMS FAVOURITES 4 -->
+					<!--  EXTRA ITEMS FAVOURITES 4  -->
 					
 					<control type="radiobutton" id="218">
 						<include>SettingsButton</include>
@@ -545,7 +545,7 @@
 						<visible>Skin.HasSetting(cust_favorite)</visible>
 					</control>
 					
-					<!-- EXTRA ITEMS FAVOURITES 5 -->
+					<!--  EXTRA ITEMS FAVOURITES 5  -->
 					
 					<control type="radiobutton" id="224">
 						<include>SettingsButton</include>
@@ -575,7 +575,7 @@
 						<visible>Skin.HasSetting(cust_favorite)</visible>
 					</control>
 					
-					<!-- EXTRA ITEMS FAVOURITES 6 -->
+					<!--  EXTRA ITEMS FAVOURITES 6  -->
 					
 					<control type="radiobutton" id="230">
 						<include>SettingsButton</include>
@@ -608,7 +608,7 @@
 				</control>	
 					
 					
-				 <!-- Images -->
+				 <!--  Images  -->
 				 
 				 
 				<control type="grouplist" id="9004">
@@ -817,10 +817,10 @@
 					</control>
 				</control>
 				
-				<!---disabled color changer not sure if i want to keep it-->
+				<!-- disabled color changer not sure if i want to keep it -->
 				
-				<!--control type="group" id="9007"><!---move 44 down--->
-					<!--posx>368</posx>
+				<!-- control type="group" id="9007"><!-- move 44 down -->
+					<!-- posx>368</posx>
 					<posy>349</posy>
 					<onup>9006</onup>
 					<ondown>9006</ondown>
@@ -899,7 +899,7 @@
 						<onclick condition="Stringcompare(Skin.String(MainColorString),blue)">Skin.SetString(MainColorString,darkorchid)</onclick>
 						
 					</control>
-				</control-->
+				</control -->
 				
 			</control>
 			

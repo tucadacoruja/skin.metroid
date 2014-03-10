@@ -44,7 +44,7 @@
 
 
 <include>List</include>
-<include>Panel</include><!---603--> 
+<include>Panel</include><!-- -603 --> 
 
 
 <include>BottomInfoBar</include>

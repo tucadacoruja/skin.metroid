@@ -44,17 +44,17 @@
 		 <control type="group">
 				<visible>IsEmpty(Control.GetLabel(190)) + !Window.IsVisible(AddonSettings)</visible>
 
-				<!-- Movies -->
+				<!--  Movies  -->
 				<control type="group" id="119">
 					<width>750</width>
 					<height>530</height>
 					<control type="label" id="110">
-						<!-- Hide this Control and use the list to pass the label -->
+						<!--  Hide this Control and use the list to pass the label  -->
 						<label>-</label>
 						<visible>false</visible>
 					</control>
 					<control type="fixedlist" id="111">
-						<visible>!IsEmpty(Container(9000).ListItem.Property(movies)</visible>
+						<visible>!IsEmpty(Container(9000).ListItem.Property(movies))</visible>
 						<animation effect="fade" start="100" end="0" time="300" condition="Window.IsVisible(virtualkeyboard)">Conditional</animation>
 
 						<posx>300</posx>
@@ -109,17 +109,17 @@
 					</control>
 				</control>
 
-				<!-- TV Shows -->
+				<!--  TV Shows  -->
 				<control type="group" id="129">
 					<width>750</width>
 					<height>530</height>
 					<control type="label" id="120">
-						<!-- Hide this Control and use the list to pass the label -->
+						<!--  Hide this Control and use the list to pass the label  -->
 						<label>-</label>
 						<visible>false</visible>
 					</control>
 					<control type="fixedlist" id="121">
-						<visible>!IsEmpty(Container(9000).ListItem.Property(tvshows)</visible>
+						<visible>!IsEmpty(Container(9000).ListItem.Property(tvshows))</visible>
 						<animation effect="fade" start="100" end="0" time="300" condition="Window.IsVisible(virtualkeyboard)">Conditional</animation>
 
 						<posx>300</posx>
@@ -174,12 +174,12 @@
 					</control>
 				</control>
 
-				<!-- Seasons (Disabled) -->
+				<!--  Seasons (Disabled)  -->
 				<control type="group" id="139">
 					<width>750</width>
 					<height>530</height>
 					<control type="label" id="130">
-						<!-- Hide this Control and use the list to pass the label -->
+						<!--  Hide this Control and use the list to pass the label  -->
 						<label>-</label>
 						<visible>false</visible>
 					</control>
@@ -188,17 +188,17 @@
 					</control>
 				</control>
 
-				<!-- Episodes -->
+				<!--  Episodes  -->
 				<control type="group" id="149">
 					<width>750</width>
 					<height>530</height>
 					<control type="label" id="140">
-						<!-- Hide this Control and use the list to pass the label -->
+						<!--  Hide this Control and use the list to pass the label  -->
 						<label>-</label>
 						<visible>false</visible>
 					</control>
 					<control type="fixedlist" id="141">
-						<visible>!IsEmpty(Container(9000).ListItem.Property(episodes)</visible>
+						<visible>!IsEmpty(Container(9000).ListItem.Property(episodes))</visible>
 						<animation effect="fade" start="100" end="0" time="300" condition="Window.IsVisible(virtualkeyboard)">Conditional</animation>
 		
 						<posx>300</posx>
@@ -253,17 +253,17 @@
 					</control>
 				</control>
 
-				<!-- Music Videos -->
+				<!--  Music Videos  -->
 				<control type="group" id="159">
 					<width>750</width>
 					<height>530</height>
 					<control type="label" id="150">
-						<!-- Hide this Control and use the list to pass the label -->
+						<!--  Hide this Control and use the list to pass the label  -->
 						<label>-</label>
 						<visible>false</visible>
 					</control>
 					<control type="fixedlist" id="151">
-						<visible>!IsEmpty(Container(9000).ListItem.Property(musicvideos)</visible>
+						<visible>!IsEmpty(Container(9000).ListItem.Property(musicvideos))</visible>
 						<animation effect="fade" start="100" end="0" time="300" condition="Window.IsVisible(virtualkeyboard)">Conditional</animation>
 				   
 						<posx>300</posx>
@@ -318,17 +318,17 @@
 					</control>
 				</control>
 
-				<!-- Artists -->
+				<!--  Artists  -->
 				<control type="group" id="169">
 					<width>750</width>
 					<height>530</height>
 					<control type="label" id="160">
-						<!-- Hide this Control and use the list to pass the label -->
+						<!--  Hide this Control and use the list to pass the label  -->
 						<label>-</label>
 						<visible>false</visible>
 					</control>
 					<control type="fixedlist" id="161">
-						<visible>!IsEmpty(Container(9000).ListItem.Property(artists)</visible>
+						<visible>!IsEmpty(Container(9000).ListItem.Property(artists))</visible>
 						<animation effect="fade" start="100" end="0" time="300" condition="Window.IsVisible(virtualkeyboard)">Conditional</animation>
 				
 						<posx>300</posx>
@@ -383,17 +383,17 @@
 					</control>
 				</control>
 
-				<!-- Albums -->	
+				<!--  Albums  -->	
 				<control type="group" id="179">
 					<width>750</width>
 					<height>530</height>
 					<control type="label" id="170">
-						<!-- Hide this Control and use the list to pass the label -->
+						<!--  Hide this Control and use the list to pass the label  -->
 						<label>-</label>
 						<visible>false</visible>
 					</control>
 					<control type="fixedlist" id="171">
-						<visible>!IsEmpty(Container(9000).ListItem.Property(albums)</visible>
+						<visible>!IsEmpty(Container(9000).ListItem.Property(albums))</visible>
 						<animation effect="fade" start="100" end="0" time="300" condition="Window.IsVisible(virtualkeyboard)">Conditional</animation>
 				    
 						<posx>300</posx>
@@ -448,17 +448,17 @@
 					</control>
 				</control>
 	
-				<!-- Songs -->	
+				<!--  Songs  -->	
 				<control type="group" id="189">
 					<width>750</width>
 					<height>530</height>
 					<control type="label" id="180">
-						<!-- Hide this Control and use the list to pass the label -->
+						<!--  Hide this Control and use the list to pass the label  -->
 						<label>-</label>
 						<visible>false</visible>
 					</control>
 					<control type="fixedlist" id="181">
-						<visible>!IsEmpty(Container(9000).ListItem.Property(songs)</visible>
+						<visible>!IsEmpty(Container(9000).ListItem.Property(songs))</visible>
 						<animation effect="fade" start="100" end="0" time="300" condition="Window.IsVisible(virtualkeyboard)">Conditional</animation>
 				    
 						<posx>300</posx>
@@ -520,7 +520,7 @@
 	
 	
 
-	  <!-- Menu -->
+	  <!--  Menu  -->
 
 		<control type="group">
 			
@@ -572,7 +572,7 @@
 						<height>50</height>
 						<aspectratio>stretch</aspectratio>
 						<texture>black.png</texture>
-						<!--visible>Control.HasFocus(301)</visible-->
+						<!-- visible>Control.HasFocus(301)</visible -->
 						<animation effect="fade" start="0" end="40" time="0" condition="true">Conditional</animation>
 					</control>
 					<control type="image">
@@ -667,12 +667,12 @@
 						<visible>Control.IsVisible(189)</visible>
 						<property name="songs">not_empty</property>
 					</item>
-					<!--item id="9">
+					<!-- item id="9">
 						<label>$LOCALIZE[31186]</label>
 						<onclick>SendClick(198)</onclick>
 						<onclick>Control.Setfocus(9000,0)</onclick>
 						<visible>Control.IsVisible(198)</visible>
-					</item-->
+					</item -->
 					<item id="10">
 						<label>5</label>
 						<onclick>Addon.OpenSettings(script.globalsearch)</onclick>
@@ -682,7 +682,7 @@
 			</control>
 
 			<control type="button" id="198">
-				<!-- Hide this Control and use the list to pass the label -->
+				<!--  Hide this Control and use the list to pass the label  -->
 				<posx>2000</posx>
 				<posy>2000</posy>
 				<onup>9000</onup>
@@ -691,7 +691,7 @@
 				<onright>101</onright>
 			</control>
 			<control type="label" id="199">
-				<!-- Hide this Control and use the list to pass the label -->
+				<!--  Hide this Control and use the list to pass the label  -->
 				<posx>2000</posx>
 				<posy>2000</posy>
 				<width>0</width>
@@ -700,12 +700,12 @@
 				<font>-</font>
 			</control>
 			<control type="label" id="190">
-				<!-- Hide this Control and use the list to pass the label -->
+				<!--  Hide this Control and use the list to pass the label  -->
 				<label>-</label>
 				<visible>false</visible>
 			</control>
 			<control type="label" id="191">
-				<!-- Hide this Control and use the list to pass the label -->
+				<!--  Hide this Control and use the list to pass the label  -->
 				<label>-</label>
 				<visible>false</visible>
 			</control>

@@ -19,7 +19,7 @@
 	  <animation effect="fade" start="100" end="0" time="150" condition="Window.IsVisible(locksettings) | Window.IsVisible(filebrowser) | Window.IsVisible(virtualkeyboard)">Conditional</animation>	  
 	  <animation effect="fade" start="10" end="100" time="150">WindowOpen</animation>	  
 		
-		<!--control type="image">
+		<!-- control type="image">
 			<description>background image</description>
 			<posx>15</posx>
 			<posy>20</posy>
@@ -28,7 +28,7 @@
 			<aspectratio>stretch</aspectratio>
 			<texture>white.png</texture>
 			<colordiffuse>36FFFFFF</colordiffuse>
-		</control-->	
+		</control -->	
 		<control type="image">
 			<description>background image</description>
 			<posx>-16</posx>
@@ -37,7 +37,7 @@
 			<height>615</height>
 			<aspectratio>stretch</aspectratio>
 			<texture border="62">dialog/contentbg2.png</texture>
-			<!--colordiffuse>FF959595</colordiffuse-->
+			<!-- colordiffuse>FF959595</colordiffuse -->
 		</control>	
 			
 	

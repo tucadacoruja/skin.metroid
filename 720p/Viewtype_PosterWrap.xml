@@ -112,7 +112,7 @@
 						
 						<colordiffuse>EBFFFFFF</colordiffuse>
 					</control>
-					<!--control type="image">
+					<!-- control type="image">
 						<posx>101</posx>
 						<posy>257</posy>
 						<width>20</width>
@@ -121,7 +121,7 @@
 						<texture>$INFO[ListItem.Overlay]</texture>
 						<visible>Skin.HasSetting(WatchedOverlays)</visible>
 						<animation effect="fade" start="0" end="50" time="0" condition="true">Conditional</animation>
-					</control-->						
+					</control -->						
 				</itemlayout>
 						
 				<focusedlayout height="310" width="0" />
@@ -154,7 +154,7 @@
 				<aspectratio>stretch</aspectratio>
 				<texture>white.png</texture>
 				<colordiffuse>FFACACAC</colordiffuse>
-				<!--animation effect="fade" start="0" end="100" time="0" reversable="false" condition="true">Conditional</animation-->
+				<!-- animation effect="fade" start="0" end="100" time="0" reversable="false" condition="true">Conditional</animation -->
 			</control>
 			<control type="image">
 				<posx>615</posx>
@@ -166,7 +166,7 @@
 				<texture diffuse="SelectDiff.png">BlueBackground.png</texture>
 				<colordiffuse>44FFFFFF</colordiffuse>
 			</control>
-			<!--control type="image">
+			<!-- control type="image">
 				<posx>250</posx>
 				<posy>385</posy>
 				<width>1400</width>
@@ -174,11 +174,11 @@
 				<aspectratio>stretch</aspectratio>
 				<texture>highlight.png</texture>
 				<colordiffuse>40FFFFFF</colordiffuse>
-			</control-->
+			</control -->
 			
 		</control>
 		
-		<!----Text----->
+		<!-- --Text--- -->
 		<control type="group">
 		<posx>185</posx>
 		<posy>80</posy>
@@ -217,7 +217,7 @@
 		<control type="group">
 			<posx>298</posx>
 			<posy>130</posy>
-			<!--visible>false</visible-->
+			<!-- visible>false</visible -->
 			<animation effect="slide" start="0,0" end="-110,0" time="400" condition="!Control.HasFocus(301) + !Skin.HasSetting(LockMainMenu)">Conditional</animation>
 			
 			<control type="image">

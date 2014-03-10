@@ -97,8 +97,8 @@
 				<texturenofocus>-</texturenofocus>
 			</control>
 			
-			<!--causes crash-->
-			<!--control type="button" id="94">
+			<!-- causes crash -->
+			<!-- control type="button" id="94">
 				<description>Storage</description>
 				<label>$LOCALIZE[13277]</label>
 				<align>left</align>
@@ -111,7 +111,7 @@
 				<disabledcolor>12ffffff</disabledcolor>
 				<texturefocus>category.png</texturefocus>
 				<texturenofocus>-</texturenofocus>
-      		</control-->
+      		</control -->
 			<control type="button" id="96">
 				<description>Network</description>
 				<label>$LOCALIZE[13279]</label>
@@ -330,7 +330,7 @@
 			<onclick>back</onclick>
 			<onup>9000</onup>
 			
-			<!--visible>Skin.HasSetting(HideGlobalBack)</visible-->
+			<!-- visible>Skin.HasSetting(HideGlobalBack)</visible -->
 		</control>
 	</control>
 	

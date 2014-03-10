@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <window id="120">
 	<defaultcontrol always="true">306</defaultcontrol>
 	
@@ -73,7 +73,7 @@
 				<texturesliderbar>osd/seek/EmptyBar.png</texturesliderbar>
 				<textureslidernib>osd/seek/OsdSearchNib.png</textureslidernib>
 				<textureslidernibfocus>osd/seek/OsdSearchNib.png</textureslidernibfocus>
-				<!--animation effect="fade" end="100" start="30" time="500">focus</animation-->
+				<!-- animation effect="fade" end="100" start="30" time="500">focus</animation -->
 			</control>
 		</control>
 		
@@ -282,7 +282,7 @@
 				<texturefocus flipx="true">osd/settings.png</texturefocus>
 				<texturenofocus flipx="true">osd/settings.png</texturenofocus>
 				
-				<!--onclick>ActivateWindow(1112)</onclick-->
+				<!-- onclick>ActivateWindow(1112)</onclick -->
 				<onclick>Addon.Default.OpenSettings(xbmc.player.musicviz)</onclick>
 				<animation effect="zoom" start="100" end="120" center="auto" time="100">Focus</animation>
 				<animation effect="zoom" start="120" end="100" center="auto" time="100">UnFocus</animation>

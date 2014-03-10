@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
 
-<!------file includes------>
+<!-- ----file includes---- -->
 <include file="Defaults.xml" />
 <include file="Includes_MainMenu.xml" />
 <include file="Includes_Animations.xml" />
@@ -12,7 +12,7 @@
 <include file="Variables.xml" />
 
 
-<!------viewtypes------>
+<!-- ----viewtypes---- -->
 <include file="Viewtype_Panel.xml" />
 <include file="Viewtype_Banners.xml" />
 <include file="Viewtype_FanartShelf.xml" />
@@ -29,7 +29,7 @@
 	<font>keyboard</font>
 	<focusedcolor>FFD7D7D7</focusedcolor>
 	<textcolor>white</textcolor>
-	<!--colordiffuse>skin.string(MainColorString)</colordiffuse-->
+	<!-- colordiffuse>skin.string(MainColorString)</colordiffuse -->
 	<shadowcolor>70464646</shadowcolor>
 	<textoffsetx>-2</textoffsetx>
 	<texturenofocus>Keyboard/light.png</texturenofocus>
@@ -139,7 +139,7 @@
 
 <include name="BottomInfoBar">
 	
-	<!-- clock Group-->
+	<!--  clock Group -->
 	<control type="group">
 	 
 	<visible>![Window.IsVisible(107) | Library.IsScanningMusic | Library.IsScanningVideo | Window.IsVisible(extendedprogressdialog) | Window.IsVisible(614) | Window.IsVisible(112) | Window.IsVisible(101) | Window.IsVisible(133)]</visible>
@@ -328,7 +328,7 @@
 	
 	
 	<include name="VideoWindow">
-		<control type="visualisation"><!--id="2"-->
+		<control type="visualisation"><!-- id="2" -->
 			<posx>0</posx>
 			<posy>0</posy>
 			<width>1280</width>
@@ -466,7 +466,7 @@
 	
 	
 	<include name="Loading">
-		<!--control type="image">
+		<!-- control type="image">
 			<description>model</description>
 			<posx>590</posx>
 			<posy>310</posy>
@@ -477,7 +477,7 @@
 			<animation effect="fade" start="0" end="90" time="900" reversable="false" >WindowOpen</animation>
 			<animation effect="fade" start="90" end="0" time="350" reversable="false" >WindowClose</animation>
 			
-		</control-->
+		</control -->
 		
 		<control type="image">
 			<description>N dot</description>

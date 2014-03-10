@@ -21,7 +21,7 @@
 			<height>482</height>
 			<aspectratio>stretch</aspectratio>
 			<texture>dialog/setcontentbg2.png</texture>
-			<!--colordiffuse>FF707070</colordiffuse-->
+			<!-- colordiffuse>FF707070</colordiffuse -->
 		</control>
 			<control type="label">
 			<posx>254</posx>

@@ -3,7 +3,7 @@
 <defaultcontrol always="true">3</defaultcontrol>
 
 <allowoverlay>yes</allowoverlay>
-
+<onload condition="IsEmpty(Skin.String(FirstRunTouch))">ActivateWindow(9506)</onload>
 <controls>
 
 <control type="label" id="2">
@@ -120,7 +120,7 @@
 			<ondown>5</ondown>
 			<orientation>vertical</orientation>
 			<pagecontrol>63</pagecontrol>
-			<!--animation effect="fade" start="100" end="70" time="0" condition="true">Conditional</animation-->
+			<!-- animation effect="fade" start="100" end="70" time="0" condition="true">Conditional</animation -->
 		</control>
 		
 		<control type="button" id="7">

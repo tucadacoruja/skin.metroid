@@ -7,7 +7,7 @@
  
  <controls>
 
-		<!-- codec info -->
+		<!--  codec info  -->
 	<control type="group">
 						
 			<control type="label" id="10">

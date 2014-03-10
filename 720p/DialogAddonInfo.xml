@@ -144,7 +144,7 @@
 			</control>			
 
 		
-			<!--Buttons-->
+			<!-- Buttons -->
   
 			<control type="grouplist" id="9000">
 				<posx>145</posx>

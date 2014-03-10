@@ -197,8 +197,8 @@
 	
 	
 	
-	<!--fake musicOSD-->
-	<!--control type="group">
+	<!-- fake musicOSD -->
+	<!-- control type="group">
 			<visible>Window.IsActive(script-XBMC_Lyrics-main.xml)</visible>
 			<posx>60r</posx>
 			<posy>-2</posy>
@@ -600,7 +600,7 @@
 			<textureslidernibfocus>empty.png</textureslidernibfocus>
 			<animation effect="fade" start="0" end="50" time="0" reversible="false" condition="true">Conditional</animation>
 		</control>
-	</control-->	
+	</control -->	
 	
 </controls>
   

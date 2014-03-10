@@ -12,7 +12,7 @@
 	<include>Keyboard</include>
 	<include>WidgetsAnimation</include>
 	
-		<!-- ==== Info & Thumb Code ==== -->
+		<!--  ==== Info & Thumb Code ====  -->
 		<control type="group">
 		<posx>350</posx>
 		<posy>-36</posy>
@@ -223,7 +223,7 @@
 		
 		
 		
-		<!-- ==== Main List ==== -->
+		<!--  ==== Main List ====  -->
 		<control type="group">
 			<animation effect="slide" start="0,0" end="-170,0" time="400" condition="!Control.HasFocus(301) + !Skin.HasSetting(LockMainMenu)">Conditional</animation>
 			
@@ -240,7 +240,7 @@
 				<pagecontrol>60</pagecontrol>
 				<scrolltime>0</scrolltime>
 				<preloaditems>2</preloaditems>
-			    <!--scrolltime tween="cubic" easing="out">300</scrolltime-->
+			    <!-- scrolltime tween="cubic" easing="out">300</scrolltime -->
 				<itemlayout height="44" width="710">
 					<control type="label">
 						<posx>14</posx>
@@ -252,7 +252,7 @@
 						<shadowcolor>77000000</shadowcolor>
 						<align>left</align>
 						<aligny>center</aligny>
-						<label>back</label>
+						<label>31084</label>
 						<visible>Stringcompare(ListItem.Label,..)</visible>
 					</control>
 					<control type="label">
@@ -369,7 +369,7 @@
 							<shadowcolor>77000000</shadowcolor>
 							<align>left</align>
 							<aligny>center</aligny>
-							<label>back</label>
+							<label>31084</label>
 							<visible>Stringcompare(ListItem.Label,..)</visible>
 						</control>
 						<control type="label">

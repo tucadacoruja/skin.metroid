@@ -79,8 +79,8 @@
 <include>Background</include>
 
 <include>List</include>
-<include>Panel</include><!---603--> 
-<include>Landscape</include><!---720--> 
+<include>Panel</include><!-- -603 --> 
+<include>Landscape</include><!-- -720 --> 
 
 <include>BottomInfoBar</include>
  

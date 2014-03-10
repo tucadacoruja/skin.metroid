@@ -78,7 +78,7 @@
 				<width>826</width>
 				<height>680</height>
 				<texture border="62">dialog/contentbg2.png</texture>
-				<!--colordiffuse>FF959595</colordiffuse-->
+				<!--  colordiffuse>FF959595</colordiffuse  -->
 				<aspectratio>stretch</aspectratio>
 				
 			</control>
@@ -96,7 +96,7 @@
 				<label>31207</label>
 			</control>
 	
-			<!--control type="label">
+			<!--  control type="label">
 				<description>rules label</description>
 				<posx>30</posx>
 				<posy>33</posy>
@@ -106,7 +106,7 @@
 				<font>about</font>
 				<textcolor>list</textcolor>
 			</control>
-			<!--control type="label">
+			<!--  control type="label">
 				<description>rules label</description>
 				<posx>30</posx>
 				<posy>375</posy>
@@ -115,7 +115,7 @@
 				<label>31174</label>
 				<font>about</font>
 				<textcolor>list</textcolor>
-			</control-->
+			</control -->
 			<control type="spincontrolex" id="22">
 				<description>Set Playlist type</description>
 				<posx>20</posx>
@@ -163,7 +163,7 @@
 				<onright>12</onright>
 				<ondown>10</ondown>
 				
-				<!--colordiffuse>95FFFFFF</colordiffuse-->
+				<!--  colordiffuse>95FFFFFF</colordiffuse  -->
 			</control>
 			<control type="label">
 				<description>rules label</description>

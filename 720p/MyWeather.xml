@@ -105,7 +105,7 @@
 		<width>395</width>
 		<height>440</height>
 		<texture border="22">white.png</texture>
-		<!--colordiffuse>ff262626</colordiffuse-->
+		<!-- colordiffuse>ff262626</colordiffuse -->
 		<aspectratio>stretch</aspectratio>
 		<animation effect="fade" start="7" end="16" pulse="true" time="10000" condition="true">Conditional</animation>
 	</control>

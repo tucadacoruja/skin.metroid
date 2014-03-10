@@ -1,7 +1,7 @@
 <window type="window" id="9506">
 	<allowoverlay>yes</allowoverlay>
 	<defaultcontrol always="true">60</defaultcontrol>
-	<!--zorder>6</zorder-->
+
 	<onload condition="Skin.HasSetting(ColorMenu)">Skin.ToggleSetting(ColorMenu)</onload>
 	<onunload condition="Skin.HasSetting(ColorMenu)">Skin.ToggleSetting(ColorMenu)</onunload>
 	<onload condition="IsEmpty(skin.string(ChatMenuColorString))">Skin.SetString(ChatMenuColorString,deeppink)</onload>
@@ -234,7 +234,7 @@
 				<textoffsetx>18</textoffsetx>
 				<aligny>center</aligny>
 				<textcolor>FF363636</textcolor>
-				<!--shadowcolor>aa373737</shadowcolor-->
+				<!--  shadowcolor>aa373737</shadowcolor  -->
 				<label>[B]$LOCALIZE[737]: $INFO[Skin.String(ChatMenuColorString)][/B]</label>
 				<visible>Skin.HasSetting(ColorMenu)</visible>
 			</control>
@@ -541,7 +541,7 @@
 				<aspectratio>stretch</aspectratio>
 				<texture border="20">IrcChat/ChatListbg.png</texture>
 			</control>
-			<control type="image"><!----double texture, animation fails to reach 100% visible--->
+			<control type="image"><!--  double texture, animation fails to reach 100% visible  -->
 				<posx>510</posx>
 				<posy>300</posy>
 				<width>260</width>

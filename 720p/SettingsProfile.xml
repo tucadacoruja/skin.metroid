@@ -50,8 +50,8 @@
 		<height>528</height>
 		<aspectratio>stretch</aspectratio>
 		<texture border="62">dialog/contentbg2.png</texture>
-		<visible>!Control.IsVisible(28235)</visible>
-		<!--colordiffuse>FF959595</colordiffuse-->
+		
+		<!-- colordiffuse>FF959595</colordiffuse -->
 	</control>
 	<control type="label">
 		<description>header label</description>

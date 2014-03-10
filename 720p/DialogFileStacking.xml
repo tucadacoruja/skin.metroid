@@ -20,7 +20,7 @@
 	
 	<aspectratio>stretch</aspectratio>
 	<texture border="52">dialog/contentbg2.png</texture>
-	<!--colordiffuse>ffD7D7D7</colordiffuse-->
+	<!-- colordiffuse>ffD7D7D7</colordiffuse -->
 </control>
 
 	<control type="button" id="444">

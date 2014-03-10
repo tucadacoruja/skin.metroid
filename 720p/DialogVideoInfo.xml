@@ -57,7 +57,7 @@
 	<visible>![Window.IsVisible(addonsettings) | Window.IsVisible(virtualkeyboard) | Window.IsVisible(filebrowser) | Window.IsVisible(selectdialog) | Window.IsActive(DialogSelect.xml)]</visible>	
 
 		
-		<!--Content Area-->
+		<!-- Content Area -->
 		<control type="group">
 		
 			<posx>300</posx>
@@ -74,11 +74,11 @@
 				<height>600</height>
 				<scrolltime tween="cubic" easing="out">600</scrolltime>
 				<pagecontrol>9010</pagecontrol>
-				<!--itemgap>60</itemgap-->
+				<!-- itemgap>60</itemgap -->
 				<orientation>horizontal</orientation>
 				
 				
-				<!--Poster Section-->
+				<!-- Poster Section -->
 				<control type="group">
 					<visible>[Container.Content(episodes) | Container.Content(movies)] + !SubString(Container.FolderPath,plugin,left)</visible>
 					
@@ -110,14 +110,14 @@
 					<itemgap>10</itemgap>
 					<orientation>vertical</orientation>
 					
-					<!--spacer-->
+					<!-- spacer -->
 					<control type="group">
 						
 						<width>70</width>
 						<height>50</height>
 					</control>
 					
-					<!--Play Button-->
+					<!-- Play Button -->
 					<control type="group">
 						
 						<width>70</width>
@@ -157,7 +157,7 @@
 														
 					</control>
 
-					<!--Resume Button-->
+					<!-- Resume Button -->
 					<control type="group">
 					
 						<width>70</width>
@@ -201,7 +201,7 @@
 						
 					</control>
 					
-					<!--Trailer Button-->
+					<!-- Trailer Button -->
 					<control type="group">
 					
 						<width>70</width>
@@ -246,7 +246,7 @@
 					</control>
 			
 					
-					<!--Refresh Button-->
+					<!-- Refresh Button -->
 					<control type="group">
 					
 						<width>70</width>
@@ -287,7 +287,7 @@
 					</control>
 				
 					
-					<!--Artwork Button-->
+					<!-- Artwork Button -->
 					<control type="group">
 					
 						<width>70</width>
@@ -327,7 +327,7 @@
 											
 					</control>
 					
-					<!--close Button-->
+					<!-- close Button -->
 					<control type="group">
 						<visible>Skin.HasSetting(HideGlobalBack)</visible>
 						<width>70</width>
@@ -368,7 +368,7 @@
 					</control>
 				</control>	
 		
-				<!--Information Section-->
+				<!-- Information Section -->
 				<control type="group">
 				
 					<width>400</width>
@@ -442,7 +442,7 @@
 							<onleft>8</onleft>
 							<onright>50</onright>
 						
-							<!--visible allowhiddenfocus="true">Container.Content(movies) | Container.Content(episodes)</visible-->
+							<!-- visible allowhiddenfocus="true">Container.Content(movies) | Container.Content(episodes)</visible -->
 				
 						</control>
 						
@@ -493,7 +493,7 @@
 							<align>bottom</align>
 							<usecontrolcoords>true</usecontrolcoords>
 							
-							<!--control type="label">
+							<!-- control type="label">
 							
 								<width>360</width>
 								<height>24</height>
@@ -502,7 +502,7 @@
 								<label>$INFO[ListItem.MPAA]</label>
 								<visible>!IsEmpty(ListItem.MPAA)</visible>
 							
-							</control-->
+							</control -->
 							
 							<control type="label">
 							
@@ -526,7 +526,7 @@
 							
 							</control>
 							
-							<!--control type="label">
+							<!-- control type="label">
 							
 								<width>360</width>
 								<height>24</height>
@@ -535,7 +535,7 @@
 								<label>$INFO[ListItem.Writer]</label>
 								<visible>!IsEmpty(ListItem.Writer)</visible>
 							
-							</control-->
+							</control -->
 							
 							<control type="label">
 							
@@ -564,7 +564,7 @@
 				
 				</control>
 				
-				<!--Overview Section-->
+				<!-- Overview Section -->
 				<control type="group">
 				
 					<width>390</width>
@@ -599,13 +599,13 @@
 					
 				</control>
 				
-				<!--Actors Section-->
+				<!-- Actors Section -->
 				<control type="group">
 				
 					<width>800</width>
 					<height>560</height>
 					
-					<!--visible>!StringCompare(Container(50).NumItems,0)</visible-->
+					<!-- visible>!StringCompare(Container(50).NumItems,0)</visible -->
 					
 					
 					<control type="panel" id="50">
@@ -763,7 +763,7 @@
 				
 			</control>
 			
-		</control><!--content-->
+		</control><!-- content -->
 		
 
 		
