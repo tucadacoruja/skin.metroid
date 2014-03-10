@@ -5,27 +5,85 @@
 	
 	<controls>
 	
+	
+		<control type="group">
+		<posx>1390</posx>
+		<posy>350</posy>
+		<visible>system.getbool(input.enablemouse) + Skin.HasSetting(HideVolumeBar)</visible>
+		<visible>![Window.IsActive(142) | Window.IsActive(10140) | Window.IsActive(osdvideosettings) | Window.IsActive(osdaudiosettings)]</visible>
+		<animation effect="rotate" end="90" center="auto" time="0" reversible="false" condition="true">Conditional</animation>
+		
+			<control type="image">
+				<posx>5</posx>
+				<posy>24</posy>
+				<width>380</width>
+				<height>8</height>
+				<texture>white.png</texture>
+				<aspectratio>stretch</aspectratio>
+				<animation effect="fade" start="0" end="10" time="0" condition="true">Conditional</animation>
+			</control>
+			<control type="progress" id="2">
+				<description>Volume</description>
+				<posx>5</posx>
+				<posy>23</posy>
+				<width>380</width>
+				<height>4</height>
+				<info>Player.Volume</info>
+				<texturebg>osd/seek/progresscache_back.png</texturebg>
+				<lefttexture>-</lefttexture>
+				<midtexture>osd/osdbg.png</midtexture>
+				<righttexture>-</righttexture>
+				<animation effect="fade" start="0" end="60" time="0" condition="true">Conditional</animation>
+			</control>
+			<control type="slider" id="1">
+				<description>Volume Slider</description>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>380</width>
+				<height>60</height>
+				<info>Player.Volume</info>
+				<action>Volume</action>
+				<texturesliderbar>empty.png</texturesliderbar>
+				<textureslidernib>empty.png</textureslidernib>
+				<textureslidernibfocus>empty.png</textureslidernibfocus>
+				
+			</control>
+			<control type="slider" id="1">
+				<description>Volume Slider</description>
+				<posx>0</posx>
+				<posy>17</posy>
+				<width>390</width>
+				<height>4</height>
+				<info>Player.Volume</info>
+				<action>Volume</action>
+				<texturesliderbar>osd/seek/EmptyBar.png</texturesliderbar>
+				<textureslidernib>osd/seek/OsdSearchNib.png</textureslidernib>
+				<textureslidernibfocus>osd/seek/OsdSearchNib.png</textureslidernibfocus>
+				<!--animation effect="fade" end="100" start="30" time="500">focus</animation-->
+			</control>
+		</control>
+			
 		<control type="group">
 			<posx>0</posx>
-			<posy>620</posy>
+			<posy>630</posy>
 			<visible>![Window.IsActive(142) | Window.IsActive(10140) | Window.IsActive(osdvideosettings) | Window.IsActive(osdaudiosettings)]</visible>
 		
 			<decscription>bottom bar</decscription>
 			<animation type="Visible">
 				<effect type="fade" time="200" start="0" end="100" />
-				<effect type="slide" time="200" start="0,98" end="0,0" easing="out" tween="cubic" />
+				<effect type="slide" time="200" start="0,150" end="0,0" easing="out" tween="cubic" />
 			</animation>
 			<animation type="Hidden">
 				<effect type="fade" time="200" start="100" end="0" />
-				<effect type="slide" time="200" start="0,0" end="0,98" easing="in" tween="cubic" />
+				<effect type="slide" time="200" start="0,0" end="0,150" easing="in" tween="cubic" />
 			</animation>
 			<animation type="WindowOpen">
 				<effect type="fade" time="200" start="0" end="100" />
-				<effect type="slide" time="200" start="0,98" end="0,0" easing="out" tween="cubic" />
+				<effect type="slide" time="200" start="0,150" end="0,0" easing="out" tween="cubic" />
 			</animation>
 			<animation type="WindowClose">
 				<effect type="fade" time="200" start="100" end="0" />
-				<effect type="slide" time="200" start="0,0" end="0,98" easing="in" tween="cubic" />
+				<effect type="slide" time="200" start="0,0" end="0,150" easing="in" tween="cubic" />
 			</animation>
 			<control type="image">
 				<posx>0</posx>
@@ -39,7 +97,7 @@
 				<posx>323</posx>
 				<posy>49</posy>
 				<width>633</width>
-				<height>7</height>
+				<height>8</height>
 				<texture>white.png</texture>
 				<aspectratio>stretch</aspectratio>
 				<animation effect="fade" start="0" end="5" time="0" condition="true">Conditional</animation>
@@ -99,6 +157,9 @@
 				<textureslidernibfocus>osd/seek/OsdSearchNib.png</textureslidernibfocus>
 				<animation effect="fade" end="100" start="30" time="500">focus</animation>
 			</control>
+			
+			
+			
 			
 			<control type="label">
 				<posx>205</posx>
@@ -372,6 +433,16 @@
 				<texture>osd/osdbg.png</texture>
 				<aspectratio>stretch</aspectratio>
 				<animation effect="fade" start="100" end="60" time="100" condition="Control.HasFocus(13)">Conditional</animation>
+				
+			</control>
+			<control type="image">
+				<height>60</height>
+				<width>60</width>
+				<texture>osd/osdbg.png</texture>
+				<aspectratio>stretch</aspectratio>
+				<animation effect="fade" start="100" end="60" time="100" condition="Control.HasFocus(14)">Conditional</animation>
+				<visible>System.GetBool(services.upnpcontroller)</visible>
+				
 			</control>
 			<!--control type="image">
 				<height>60</height>
@@ -558,10 +629,28 @@
 				<onclick>ActivateWindow(videoplaylist)</onclick>
 				<animation effect="zoom" start="100" end="120" center="auto" time="100">Focus</animation>
 				<animation effect="zoom" start="120" end="100" center="auto" time="100">UnFocus</animation>
-
+				
 			</control>
 			
-			<!--control type="button" id="14">
+			<control type="button" id="14">
+				
+				<description>upnp switchplayer</description>
+				<height>60</height>
+				<width>60</width>
+				<aspectratio>keep</aspectratio>
+				<texturefocus>osd/upnp.png</texturefocus>
+				<texturenofocus>osd/upnp.png</texturenofocus>
+				
+				<onclick>SwitchPlayer</onclick>
+				<onclick>ActivateWindow(videoplaylist)</onclick>
+				<!--onclick>playercontrol(SwitchPlayer)</onclick-->
+				
+				<animation effect="zoom" start="100" end="120" center="auto" time="100">Focus</animation>
+				<animation effect="zoom" start="120" end="100" center="auto" time="100">UnFocus</animation>
+				<visible>System.GetBool(services.upnpcontroller)</visible>
+			</control>
+			
+			<!--control type="button" id="15">
 				
 				<description>playlist</description>
 				<height>60</height>

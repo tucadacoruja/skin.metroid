@@ -872,3 +872,7 @@ msgstr ""
 msgctxt "#31235"
 msgid "root"
 msgstr ""
+
+msgctxt "#31236"
+msgid "Show OSD volume bar (mouse/touch)"
+msgstr ""

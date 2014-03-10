@@ -281,7 +281,7 @@
 						<control type="radiobutton" id="110">
 							<include>SettingsButton</include>
 							<description>install in main menu</description>
-							<label>$LOCALIZE[31234] $LOCALIZE[31142]</label>
+							<label> - $LOCALIZE[31234] $LOCALIZE[31142]</label>
 							<onclick>Skin.ToggleSetting(AddonInstallHome)</onclick>
 							<selected>!Skin.HasSetting(AddonInstallHome)</selected>
 							<enable>!Skin.HasSetting(AddonHome)</enable>
@@ -744,6 +744,15 @@
 						
 						<onclick>Skin.ToggleSetting(ShowSkinHelp)</onclick>
 						<selected>!Skin.HasSetting(ShowSkinHelp)</selected>
+					</control>
+					
+					<control type="radiobutton" id="111">
+						<include>SettingsButton</include>
+						<description>Show volume bar</description>
+						<label>$LOCALIZE[31236]</label>
+						
+						<onclick>Skin.ToggleSetting(HideVolumeBar)</onclick>
+						<selected>Skin.HasSetting(HideVolumeBar)</selected>
 					</control>
 					
 					<control type="button" id="106">

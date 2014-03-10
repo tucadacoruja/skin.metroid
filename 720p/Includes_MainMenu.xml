@@ -231,19 +231,19 @@
 							<visible>Library.HasContent(movies) | Library.HasContent(TVShows)</visible>
 						</item>
 						
-						<item id="98">
+						<!--item id="98">
 							<description>party Mode</description>
 							<label>$LOCALIZE[589]</label>
 							<onclick>SendClick(16)</onclick>
 							<visible>Window.IsActive(musiclibrary)</visible>
-						</item>
+						</item-->
 						<item id="96">
 							<description>Party Mode</description>
 							<label>$LOCALIZE[589]</label>
-							<onclick>ActivateWindow(musiclibrary)</onclick>
+							<onclick condition="!Window.IsVisible(musiclibrary)">ActivateWindow(musiclibrary)</onclick>
 							<onclick>SendClick(16)</onclick>
 							<!--onclick>XBMC.PlayerControl(Partymode(special://skin/extras/library/music/Party_Mode.xsp))</onclick-->
-							<visible>Window.IsActive(home) + Library.HasContent(Music)</visible>
+							<visible>[Window.IsActive(home) | Window.IsActive(musiclibrary)] + Library.HasContent(Music)</visible>
 							<visible>!Skin.HasSetting(HideGlobalMusic)</visible>
 						</item>
 						

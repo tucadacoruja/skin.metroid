@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window type="dialog">
-<defaultcontrol always="true">306</defaultcontrol>
+<defaultcontrol always="true">407</defaultcontrol>
 <allowoverlay>yes</allowoverlay>
 
 <onload condition="!Player.HasMedia | [Window.IsVisible(fullscreenvideo) | Window.IsVisible(visualisation)]">Dialog.Close(playercontrols)</onload>
@@ -111,7 +111,7 @@
 				<height>55</height>
 				<width>55</width>
 				<aspectratio>keep</aspectratio>
-				<texturefocus colordiffuse="6200d8ff" flipx="true">osd/ff.png</texturefocus>
+				<texturefocus colordiffuse="FFACACAC" flipx="true">osd/ff.png</texturefocus>
 				<texturenofocus flipx="true">osd/ff.png</texturenofocus>
 			
 				<onclick>xbmc.playercontrol(rewind)</onclick>
@@ -124,7 +124,7 @@
 				<height>55</height>
 				<width>55</width>
 				<aspectratio>keep</aspectratio>
-				<texturefocus colordiffuse="6200d8ff" flipx="true">osd/skip.png</texturefocus>
+				<texturefocus colordiffuse="FFACACAC" flipx="true">osd/skip.png</texturefocus>
 				<texturenofocus flipx="true">osd/skip.png</texturenofocus>
 				
 				<onclick>xbmc.playercontrol(previous)</onclick>
@@ -136,10 +136,10 @@
 				<description>Play</description>
 				<height>55</height>
 				<width>55</width>
-				<texturefocus colordiffuse="6200d8ff">osd/play.png</texturefocus>
+				<texturefocus colordiffuse="FFACACAC">osd/play.png</texturefocus>
 				<texturenofocus>osd/play.png</texturenofocus>
 				<usealttexture>Player.Playing</usealttexture>
-				<alttexturefocus colordiffuse="6200d8ff">osd/pause.png</alttexturefocus>
+				<alttexturefocus colordiffuse="FFACACAC">osd/pause.png</alttexturefocus>
 				<alttexturenofocus>osd/pause.png</alttexturenofocus>
 				<onclick>playercontrol(play)</onclick>
 				<animation effect="zoom" start="100" end="120" center="auto" time="100">Focus</animation>
@@ -151,7 +151,7 @@
 				<height>55</height>
 				<width>55</width>
 				<aspectratio>keep</aspectratio>
-				<texturefocus colordiffuse="6200d8ff">osd/stop.png</texturefocus>
+				<texturefocus colordiffuse="FFACACAC">osd/stop.png</texturefocus>
 				<texturenofocus>osd/stop.png</texturenofocus>
 				
 				<onclick>xbmc.playercontrol(stop)</onclick>
@@ -164,7 +164,7 @@
 				<height>55</height>
 				<width>55</width>
 				<aspectratio>keep</aspectratio>
-				<texturefocus colordiffuse="6200d8ff">osd/skip.png</texturefocus>
+				<texturefocus colordiffuse="FFACACAC">osd/skip.png</texturefocus>
 				<texturenofocus>osd/skip.png</texturenofocus>
 				
 				<onclick>xbmc.playercontrol(next)</onclick>
@@ -177,7 +177,7 @@
 				<height>55</height>
 				<width>55</width>
 				<aspectratio>keep</aspectratio>
-				<texturefocus colordiffuse="6200d8ff">osd/ff.png</texturefocus>
+				<texturefocus colordiffuse="FFACACAC">osd/ff.png</texturefocus>
 				<texturenofocus>osd/ff.png</texturenofocus>
 				
 				<onclick>xbmc.playercontrol(forward)</onclick>

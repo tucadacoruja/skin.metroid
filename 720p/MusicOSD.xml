@@ -23,6 +23,62 @@
 		
 		
 		<control type="group">
+		<posx>100</posx>
+		<posy>660</posy>
+		<visible>system.getbool(input.enablemouse) + Skin.HasSetting(HideVolumeBar)</visible>
+				
+			<control type="image">
+				<posx>5</posx>
+				<posy>24</posy>
+				<width>380</width>
+				<height>5</height>
+				<texture>white.png</texture>
+				<aspectratio>stretch</aspectratio>
+				<animation effect="fade" start="0" end="10" time="0" condition="true">Conditional</animation>
+			</control>
+			<control type="progress" id="2">
+				<description>Volume</description>
+				<posx>5</posx>
+				<posy>23</posy>
+				<width>380</width>
+				<height>2.9</height>
+				<info>Player.Volume</info>
+				<texturebg>osd/seek/progresscache_back.png</texturebg>
+				<lefttexture>-</lefttexture>
+				<midtexture>osd/osdbg.png</midtexture>
+				<righttexture>-</righttexture>
+				<animation effect="fade" start="0" end="60" time="0" condition="true">Conditional</animation>
+			</control>
+			<control type="slider" id="1">
+				<description>Volume Slider</description>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>380</width>
+				<height>60</height>
+				<info>Player.Volume</info>
+				<action>Volume</action>
+				<texturesliderbar>empty.png</texturesliderbar>
+				<textureslidernib>empty.png</textureslidernib>
+				<textureslidernibfocus>empty.png</textureslidernibfocus>
+				
+			</control>
+			<control type="slider" id="1">
+				<description>Volume Slider</description>
+				<posx>0</posx>
+				<posy>16.5</posy>
+				<width>390</width>
+				<height>3.5</height>
+				<info>Player.Volume</info>
+				<action>Volume</action>
+				<texturesliderbar>osd/seek/EmptyBar.png</texturesliderbar>
+				<textureslidernib>osd/seek/OsdSearchNib.png</textureslidernib>
+				<textureslidernibfocus>osd/seek/OsdSearchNib.png</textureslidernibfocus>
+				<!--animation effect="fade" end="100" start="30" time="500">focus</animation-->
+			</control>
+		</control>
+		
+		
+		<control type="group">
 			
 			<posx>60r</posx>
 			<posy>-2</posy>

@@ -250,7 +250,7 @@
 			<height>55</height>
 			<width>55</width>
 			<aspectratio>keep</aspectratio>
-			<texturefocus colordiffuse="6200d8ff">osd/search.png</texturefocus>
+			<texturefocus colordiffuse="FFACACAC">osd/search.png</texturefocus>
 			<texturenofocus>osd/search.png</texturenofocus>
 			<onleft condition="!Window.IsActive(script-globalsearch-main.xml)">300</onleft>
 			<onleft condition="Window.IsActive(script-globalsearch-main.xml)">9000</onleft>

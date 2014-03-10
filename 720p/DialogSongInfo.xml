@@ -136,7 +136,7 @@
 				<height>55</height>
 				<width>55</width>
 				<aspectratio>keep</aspectratio>
-				<texturefocus flipx="true">osd/increase.png</texturefocus>
+				<texturefocus flipx="true"  colordiffuse="FFACACAC">osd/increase.png</texturefocus>
 				<texturenofocus flipx="true">osd/increase.png</texturenofocus>
 				
 				<onclick>DecreaseRating</onclick>
@@ -149,7 +149,7 @@
 				<height>55</height>
 				<width>55</width>
 				<aspectratio>keep</aspectratio>
-				<texturefocus>osd/increase.png</texturefocus>
+				<texturefocus  colordiffuse="FFACACAC">osd/increase.png</texturefocus>
 				<texturenofocus>osd/increase.png</texturenofocus>
 				
 				<onclick>IncreaseRating</onclick>
@@ -162,7 +162,7 @@
 				<height>55</height>
 				<width>55</width>
 				<aspectratio>keep</aspectratio>
-				<texturefocus>osd/ok.png</texturefocus>
+				<texturefocus colordiffuse="FFACACAC">osd/ok.png</texturefocus>
 				<texturenofocus>osd/ok.png</texturenofocus>
 				
 				<animation effect="zoom" start="100" end="120" center="auto" time="100">Focus</animation>
@@ -174,7 +174,7 @@
 				<height>55</height>
 				<width>55</width>
 				<aspectratio>keep</aspectratio>
-				<texturefocus>osd/cancel.png</texturefocus>
+				<texturefocus colordiffuse="FFACACAC">osd/cancel.png</texturefocus>
 				<texturenofocus>osd/cancel.png</texturenofocus>
 							
 				<animation effect="zoom" start="100" end="120" center="auto" time="100">Focus</animation>
