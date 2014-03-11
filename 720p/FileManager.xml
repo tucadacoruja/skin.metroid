@@ -44,6 +44,13 @@
 		<animation effect="fade" start="75" end="85" time="200" reversible="true" condition="!Player.HasVideo + !Skin.HasSetting(VidWinLibrary)">Conditional</animation>
 		<animation effect="fade" start="85" end="75" time="200" reversible="true" condition="Player.HasVideo + !Skin.HasSetting(VidWinLibrary)">Conditional</animation>
 		<animation effect="fade" start="85" end="100" time="50000" reversable="true" pulse="true" condition="Player.HasAudio + !Skin.HasSetting(VisLibrary) + !Skin.HasSetting(BackgroundSlideshow)">Conditional</animation>
+	
+		<animation effect="fade" start="100" end="100" time="0" condition="Stringcompare(Skin.String(BackgroundPercentage),100) + !Player.HasMedia">Conditional</animation>
+		<animation effect="fade" start="100" end="95" time="0" condition="Stringcompare(Skin.String(BackgroundPercentage),95) + !Player.HasMedia">Conditional</animation>
+		<animation effect="fade" start="100" end="90" time="0" condition="Stringcompare(Skin.String(BackgroundPercentage),90) + !Player.HasMedia">Conditional</animation>
+		<animation effect="fade" start="100" end="85" time="0" condition="Stringcompare(Skin.String(BackgroundPercentage),85) + !Player.HasMedia">Conditional</animation>
+		<animation effect="fade" start="100" end="80" time="0" condition="Stringcompare(Skin.String(BackgroundPercentage),80) + !Player.HasMedia">Conditional</animation>
+		<animation effect="fade" start="100" end="75" time="0" condition="Stringcompare(Skin.String(BackgroundPercentage),75) + !Player.HasMedia">Conditional</animation>
 	</control>
 
 </control>

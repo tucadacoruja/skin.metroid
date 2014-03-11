@@ -627,7 +627,7 @@
 					
 					<control type="button" id="108">
 						<include>SettingsButton</include>
-						<label> - $LOCALIZE[31160]</label>
+						<label>$LOCALIZE[31160]</label>
 						<label2>$INFO[Skin.String(Wallpaper_Folder_Path)]</label2>
 						<onclick>Skin.Reset(Wallpaper_Folder_Path)</onclick>
 				    	<onclick>Skin.SetPath(Wallpaper_Folder_Path)</onclick>
@@ -635,11 +635,45 @@
 					<control type="button" id="109">
 						<include>SettingsButton</include>
 						<label2>$INFO[Skin.String(GlobalBackground)]</label2>
-						<label>- $LOCALIZE[31161]</label>
+						<label>$LOCALIZE[31161]</label>
 						<onclick>Skin.Reset(GlobalBackground)</onclick>
+						<onclick>Skin.SetString(GlobalBackground,special://skin/extras/backgrounds/)</onclick>
 						<onclick>Skin.SetImage(GlobalBackground)</onclick>
-						
 					</control>
+					
+					<control type="button" id="121">
+						<include>SettingsButton</include>
+						<label2>$INFO[Skin.String(BackgroundPercentage),,%]</label2>
+						<label> - Opacity percentage</label>
+						<onclick condition="Stringcompare(Skin.String(BackgroundPercentage),100) | IsEmpty(Skin.String(BackgroundPercentage))">Skin.SetString(BackgroundPercentage,95)</onclick>
+						<onclick condition="Stringcompare(Skin.String(BackgroundPercentage),95)">Skin.SetString(BackgroundPercentage,90)</onclick>
+						<onclick condition="Stringcompare(Skin.String(BackgroundPercentage),90)">Skin.SetString(BackgroundPercentage,85)</onclick>
+						<onclick condition="Stringcompare(Skin.String(BackgroundPercentage),85)">Skin.SetString(BackgroundPercentage,80)</onclick>
+						<onclick condition="Stringcompare(Skin.String(BackgroundPercentage),80)">Skin.SetString(BackgroundPercentage,75)</onclick>
+						<onclick condition="Stringcompare(Skin.String(BackgroundPercentage),75)">Skin.SetString(BackgroundPercentage,100)</onclick>
+					</control>
+					
+					<control type="button" id="122">
+						<include>SettingsButton</include>
+						<label2>$INFO[Skin.String(DarknessPercentage),,%]</label2>
+						<label> - Darkness percentage</label>
+						<onclick condition="Stringcompare(Skin.String(BackgroundDarkness),FFFFFFFF) | IsEmpty(Skin.String(BackgroundDarkness))">Skin.SetString(BackgroundDarkness,FFEBEBEB)</onclick>
+						<onclick condition="Stringcompare(Skin.String(BackgroundDarkness),FFEBEBEB)">Skin.SetString(BackgroundDarkness,FFD7D7D7)</onclick>
+						<onclick condition="Stringcompare(Skin.String(BackgroundDarkness),FFD7D7D7)">Skin.SetString(BackgroundDarkness,FFC2C2C2)</onclick>
+						<onclick condition="Stringcompare(Skin.String(BackgroundDarkness),FFC2C2C2)">Skin.SetString(BackgroundDarkness,FFACACAC)</onclick>
+						<onclick condition="Stringcompare(Skin.String(BackgroundDarkness),FFACACAC)">Skin.SetString(BackgroundDarkness,FF959595)</onclick>
+						<onclick condition="Stringcompare(Skin.String(BackgroundDarkness),FF959595)">Skin.SetString(BackgroundDarkness,FFFFFFFF)</onclick>
+						
+						<onclick condition="Stringcompare(Skin.String(DarknessPercentage),100) | IsEmpty(Skin.String(DarknessPercentage))">Skin.SetString(DarknessPercentage,90)</onclick>
+						<onclick condition="Stringcompare(Skin.String(DarknessPercentage),90)">Skin.SetString(DarknessPercentage,80)</onclick>
+						<onclick condition="Stringcompare(Skin.String(DarknessPercentage),80)">Skin.SetString(DarknessPercentage,70)</onclick>
+						<onclick condition="Stringcompare(Skin.String(DarknessPercentage),70)">Skin.SetString(DarknessPercentage,60)</onclick>
+						<onclick condition="Stringcompare(Skin.String(DarknessPercentage),60)">Skin.SetString(DarknessPercentage,50)</onclick>
+						<onclick condition="Stringcompare(Skin.String(DarknessPercentage),50)">Skin.SetString(DarknessPercentage,100)</onclick>
+					</control>
+					
+					
+		
 					<control type="radiobutton" id="110">
 						<include>SettingsButton</include>
 						<description>Music Visualisation in library</description>
@@ -701,6 +735,13 @@
 						<label>31215</label>
 						<onclick>Skin.ToggleSetting(LockMainMenu)</onclick>
 						<selected>Skin.HasSetting(LockMainMenu)</selected>
+					</control>
+					<control type="radiobutton" id="113">
+						<include>SettingsButton</include>
+						<description>Sub menu's auto close</description>
+						<label> - $LOCALIZE[31241]</label>
+						<onclick>Skin.ToggleSetting(MenuAutoClose)</onclick>
+						<selected>!Skin.HasSetting(MenuAutoClose)</selected>
 					</control>
 					<control type="radiobutton" id="112">
 						<include>SettingsButton</include>

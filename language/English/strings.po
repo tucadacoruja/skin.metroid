@@ -894,5 +894,9 @@ msgid "Description"
 msgstr ""
 
 msgctxt "#31241"
-msgid "No PVR support."
+msgid "Sub menu's auto close"
+msgstr ""
+
+msgctxt "#31242"
+msgid "Forecast"
 msgstr ""

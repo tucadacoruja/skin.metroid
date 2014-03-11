@@ -38,7 +38,7 @@
 	
 <control type="group">	
 	<posx>70</posx>
-	<posy>75</posy>
+	<posy>85</posy>
 		<include>Favourites</include>
 
 		<animation type="WindowClose" reversible="false">
@@ -50,7 +50,16 @@
 			<effect type="slide" start="1780,0" end="0,0" time="300" delay="0" reversible="false" />
 		</animation>
 			
-	
+	<control type="label">
+		<posx>250</posx>
+		<posy>35</posy>
+		<width>870</width>
+		<font>Segoe28</font>
+		<label>31242</label>
+		<textcolor>itemdetail</textcolor>
+		<scroll>true</scroll>
+		
+	</control>
 	<control type="image">
 		<posx>645</posx>
 		<posy>95</posy>

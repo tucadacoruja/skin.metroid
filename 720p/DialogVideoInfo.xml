@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window id="2003">
 	
-	<defaultcontrol always="true">1</defaultcontrol>
+	<defaultcontrol always="true">8</defaultcontrol>
 	<allowoverlay>yes</allowoverlay>
 	<coordinates>
         <system>1</system>
@@ -54,8 +54,10 @@
 	<animation effect="slide" start="0,0" end="1600,0" time="450" delay="0" reversible="false">WindowClose</animation>
 	<animation effect="fade" start="100" end="0" time="200" >Visible</animation>
 	<animation effect="fade" start="0" end="100" time="200" >Hidden</animation>
-	<visible>![Window.IsVisible(addonsettings) | Window.IsVisible(virtualkeyboard) | Window.IsVisible(filebrowser) | Window.IsVisible(selectdialog) | Window.IsActive(DialogSelect.xml)]</visible>	
+	<!--visible>![Window.IsVisible(addonsettings) | Window.IsVisible(virtualkeyboard) | Window.IsVisible(filebrowser) | Window.IsVisible(selectdialog) | Window.IsActive(DialogSelect.xml)]</visible-->
 
+	<!-- fade selectdialog instead of change visible condition due to bug -->
+	<animation effect="fade" start="100" end="0" time="200" condition="Window.IsVisible(addonsettings) | Window.IsVisible(virtualkeyboard) | Window.IsVisible(filebrowser) | Window.IsVisible(selectdialog) | Window.IsActive(DialogSelect.xml)">Conditional</animation>
 		
 		<!-- Content Area -->
 		<control type="group">

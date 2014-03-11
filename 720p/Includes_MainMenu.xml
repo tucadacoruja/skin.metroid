@@ -181,17 +181,8 @@
 						<label>- $INFO[ListItem.Label]</label>
 						<visible>!IsEmpty(ListItem.Property(SubMenuItem))</visible>
 					</control>
-					<control type="button">
-						<onfocus condition="IsEmpty(Container(301).ListItem.Property(DropdownMenu1))">Skin.Reset(SubMenu1)</onfocus>
-						<onfocus condition="IsEmpty(Container(301).ListItem.Property(DropdownMenu2))">Skin.Reset(SubMenu2)</onfocus>
-						<onfocus condition="IsEmpty(Container(301).ListItem.Property(DropdownMenu3))">Skin.Reset(SubMenu3)</onfocus>
-						<onfocus condition="IsEmpty(Container(301).ListItem.Property(DropdownMenu4))">Skin.Reset(SubMenu4)</onfocus>
-						<onfocus condition="IsEmpty(Container(301).ListItem.Property(DropdownMenu5))">Skin.Reset(SubMenu5)</onfocus>
-						<onfocus condition="IsEmpty(Container(301).ListItem.Property(DropdownMenu6))">Skin.Reset(SubMenu6)</onfocus>
-						<onfocus condition="IsEmpty(Container(301).ListItem.Property(DropdownMenu7))">Skin.Reset(SubMenu7)</onfocus>
-						<visible allowhiddenfocus="true">false</visible>
-						<enable>true</enable>
-					</control> 
+					<include condition="!Skin.HasSetting(MenuAutoClose)">MenuAutoClose</include>
+					 
 				
 				</focusedlayout>
 					<content>

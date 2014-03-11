@@ -131,7 +131,22 @@
 <include name="IconsViewWidth2">
 	<width>1000</width>
 </include>
+
+<include name="MenuAutoClose">
+	<control type="button">
+		<onfocus condition="IsEmpty(Container(301).ListItem.Property(DropdownMenu1))">Skin.Reset(SubMenu1)</onfocus>
+		<onfocus condition="IsEmpty(Container(301).ListItem.Property(DropdownMenu2))">Skin.Reset(SubMenu2)</onfocus>
+		<onfocus condition="IsEmpty(Container(301).ListItem.Property(DropdownMenu3))">Skin.Reset(SubMenu3)</onfocus>
+		<onfocus condition="IsEmpty(Container(301).ListItem.Property(DropdownMenu4))">Skin.Reset(SubMenu4)</onfocus>
+		<onfocus condition="IsEmpty(Container(301).ListItem.Property(DropdownMenu5))">Skin.Reset(SubMenu5)</onfocus>
+		<onfocus condition="IsEmpty(Container(301).ListItem.Property(DropdownMenu6))">Skin.Reset(SubMenu6)</onfocus>
+		<onfocus condition="IsEmpty(Container(301).ListItem.Property(DropdownMenu7))">Skin.Reset(SubMenu7)</onfocus>
+		<visible allowhiddenfocus="true">false</visible>
+		<enable>true</enable>
+	</control>
 	
+</include>
+
 <include name="NotVisibleAllSettingsWindows">
 <visible>![Window.IsActive(settings) | Window.IsActive(profilesettings) | Window.IsActive(systeminfo) | Window.IsActive(skinsettings) | Window.IsActive(picturessettings) | Window.IsActive(programssettings) | Window.IsActive(weathersettings) | Window.IsActive(musicsettings) | Window.IsActive(systemsettings) | Window.IsActive(videossettings) | Window.IsActive(networksettings) | Window.IsActive(appearancesettings)]</visible>
 </include>
@@ -243,6 +258,19 @@
 			<visible>![Window.IsVisible(extendedprogressdialog) | Library.IsScanningMusic | Library.IsScanningVideo | Substring(Weather.Temperature,Busy) | Window.IsVisible(infodialog) | Window.IsVisible(volumebar) | Window.IsVisible(musicscan) | Window.IsVisible(progressdialog) | Window.IsVisible(videoscan)]</visible>
 			<visible>System.HasNetwork + Weather.IsFetched + Skin.HasSetting(GlobalSearch)</visible>
 		</control>
+		<control type="button">
+			<posx>70r</posx>
+			<posy>5</posy>
+			<width>51</width>
+			<height>58</height>
+			<aspectratio>keep</aspectratio>
+			<texturefocus>$INFO[Weather.Conditions]</texturefocus>
+			<texturenofocus>$INFO[Weather.Conditions]</texturenofocus>
+			<onclick>xbmc.activatewindow(weather)</onclick>
+			<visible>![Window.IsVisible(extendedprogressdialog) | Library.IsScanningMusic | Library.IsScanningVideo | Substring(Weather.Temperature,Busy) | Window.IsVisible(infodialog) | Window.IsVisible(volumebar) | Window.IsVisible(musicscan) | Window.IsVisible(progressdialog) | Window.IsVisible(videoscan)]</visible>
+			<visible>System.HasNetwork + Weather.IsFetched + Skin.HasSetting(GlobalSearch)</visible>
+		</control>
+		
 		<control type="button" id="999">
 			<description>global search</description>
 			<posx>70r</posx>
@@ -313,6 +341,14 @@
 			<animation effect="fade" start="75" end="85" time="200" reversible="true" condition="!Player.HasVideo + !Skin.HasSetting(VidWinLibrary)">Conditional</animation>
 			<animation effect="fade" start="85" end="75" time="200" reversible="true" condition="Player.HasVideo + !Skin.HasSetting(VidWinLibrary)">Conditional</animation>
 			<animation effect="fade" start="85" end="100" time="50000" reversable="true" pulse="true" condition="Player.HasAudio + !Skin.HasSetting(VisLibrary) + !Skin.HasSetting(BackgroundSlideshow)">Conditional</animation>
+			<colordiffuse>skin.string(BackgroundDarkness)</colordiffuse>
+			<!--colordiffuse>$INFO[Skin.String(BackgroundAlpha)]$INFO[Skin.String(BackgroundDarkness)]</colordiffuse-->
+			<animation effect="fade" start="100" end="100" time="0" condition="Stringcompare(Skin.String(BackgroundPercentage),100) + !Player.HasMedia">Conditional</animation>
+			<animation effect="fade" start="100" end="95" time="0" condition="Stringcompare(Skin.String(BackgroundPercentage),95) + !Player.HasMedia">Conditional</animation>
+			<animation effect="fade" start="100" end="90" time="0" condition="Stringcompare(Skin.String(BackgroundPercentage),90) + !Player.HasMedia">Conditional</animation>
+			<animation effect="fade" start="100" end="85" time="0" condition="Stringcompare(Skin.String(BackgroundPercentage),85) + !Player.HasMedia">Conditional</animation>
+			<animation effect="fade" start="100" end="80" time="0" condition="Stringcompare(Skin.String(BackgroundPercentage),80) + !Player.HasMedia">Conditional</animation>
+			<animation effect="fade" start="100" end="75" time="0" condition="Stringcompare(Skin.String(BackgroundPercentage),75) + !Player.HasMedia">Conditional</animation>
 		</control>
 		<control type="image">
 			<posx>235</posx>

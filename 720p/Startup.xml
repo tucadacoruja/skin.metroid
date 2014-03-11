@@ -39,6 +39,10 @@
 		<texture background="true">MetroidBG.png</texture>
 	</control>
 	
-	<include>Loading</include>
+	<control type="group">
+		<animation effect="fade" start="0" end="100" time="300" delay="600" >WindowOpen</animation>
+		<include>Loading</include>
+	</control>
+	
   </controls>
 </window>

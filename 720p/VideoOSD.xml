@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window id="2901">
-	<defaultcontrol always="true">2</defaultcontrol>
+	<defaultcontrol always="true">202</defaultcontrol>
 	<allowoverlay>yes</allowoverlay>
 	
 	<controls>
@@ -35,7 +35,7 @@
 				<righttexture>-</righttexture>
 				<animation effect="fade" start="0" end="60" time="0" condition="true">Conditional</animation>
 			</control>
-			<control type="slider" id="1">
+			<control type="slider">
 				<description>Volume Slider</description>
 				<posx>0</posx>
 				<posy>0</posy>
@@ -354,49 +354,49 @@
 				<width>60</width>
 				<texture>osd/osdbg.png</texture>
 				<aspectratio>stretch</aspectratio>
-				<animation effect="fade" start="100" end="60" time="100" condition="Control.HasFocus(1)">Conditional</animation>
+				<animation effect="fade" start="100" end="60" time="100" condition="Control.HasFocus(201)">Conditional</animation>
 			</control>
 			<control type="image">
 				<height>60</height>
 				<width>60</width>
 				<texture>osd/osdbg.png</texture>
 				<aspectratio>stretch</aspectratio>
-				<animation effect="fade" start="100" end="60" time="100" condition="Control.HasFocus(2)">Conditional</animation>
+				<animation effect="fade" start="100" end="60" time="100" condition="Control.HasFocus(202)">Conditional</animation>
 			</control>
 			<control type="image">
 				<height>60</height>
 				<width>60</width>
 				<texture>osd/osdbg.png</texture>
 				<aspectratio>stretch</aspectratio>
-				<animation effect="fade" start="100" end="60" time="100" condition="Control.HasFocus(3)">Conditional</animation>
+				<animation effect="fade" start="100" end="60" time="100" condition="Control.HasFocus(203)">Conditional</animation>
 			</control>
 			<control type="image">
 				<height>60</height>
 				<width>60</width>
 				<texture>osd/osdbg.png</texture>
 				<aspectratio>stretch</aspectratio>
-				<animation effect="fade" start="100" end="60" time="100" condition="Control.HasFocus(4)">Conditional</animation>
+				<animation effect="fade" start="100" end="60" time="100" condition="Control.HasFocus(204)">Conditional</animation>
 			</control>
 			<control type="image">
 				<height>60</height>
 				<width>60</width>
 				<texture>osd/osdbg.png</texture>
 				<aspectratio>stretch</aspectratio>
-				<animation effect="fade" start="100" end="60" time="100" condition="Control.HasFocus(5)">Conditional</animation>
+				<animation effect="fade" start="100" end="60" time="100" condition="Control.HasFocus(205)">Conditional</animation>
 			</control>
 			<control type="image">
 				<height>60</height>
 				<width>60</width>
 				<texture>osd/osdbg.png</texture>
 				<aspectratio>stretch</aspectratio>
-				<animation effect="fade" start="100" end="60" time="100" condition="Control.HasFocus(6)">Conditional</animation>
+				<animation effect="fade" start="100" end="60" time="100" condition="Control.HasFocus(206)">Conditional</animation>
 			</control>
 			<control type="image">
 				<height>60</height>
 				<width>60</width>
 				<texture>osd/osdbg.png</texture>
 				<aspectratio>stretch</aspectratio>
-				<animation effect="fade" start="100" end="60" time="100" condition="Control.HasFocus(7)">Conditional</animation>
+				<animation effect="fade" start="100" end="60" time="100" condition="Control.HasFocus(207)">Conditional</animation>
 			</control>
 
 			<control type="image">
@@ -404,35 +404,35 @@
 				<width>60</width>
 				<texture>osd/osdbg.png</texture>
 				<aspectratio>stretch</aspectratio>
-				<animation effect="fade" start="100" end="60" time="100" condition="Control.HasFocus(9)">Conditional</animation>
+				<animation effect="fade" start="100" end="60" time="100" condition="Control.HasFocus(208)">Conditional</animation>
 			</control>
 			<control type="image">
 				<height>60</height>
 				<width>60</width>
 				<texture>osd/osdbg.png</texture>
 				<aspectratio>stretch</aspectratio>
-				<animation effect="fade" start="100" end="60" time="100" condition="Control.HasFocus(10)">Conditional</animation>
+				<animation effect="fade" start="100" end="60" time="100" condition="Control.HasFocus(209)">Conditional</animation>
 			</control>
 			<control type="image">
 				<height>60</height>
 				<width>60</width>
 				<texture>osd/osdbg.png</texture>
 				<aspectratio>stretch</aspectratio>
-				<animation effect="fade" start="100" end="60" time="100" condition="Control.HasFocus(11)">Conditional</animation>
+				<animation effect="fade" start="100" end="60" time="100" condition="Control.HasFocus(210)">Conditional</animation>
 			</control>
 			<control type="image">
 				<height>60</height>
 				<width>60</width>
 				<texture>osd/osdbg.png</texture>
 				<aspectratio>stretch</aspectratio>
-				<animation effect="fade" start="100" end="60" time="100" condition="Control.HasFocus(12)">Conditional</animation>
+				<animation effect="fade" start="100" end="60" time="100" condition="Control.HasFocus(211)">Conditional</animation>
 			</control>
 			<control type="image">
 				<height>60</height>
 				<width>60</width>
 				<texture>osd/osdbg.png</texture>
 				<aspectratio>stretch</aspectratio>
-				<animation effect="fade" start="100" end="60" time="100" condition="Control.HasFocus(13)">Conditional</animation>
+				<animation effect="fade" start="100" end="60" time="100" condition="Control.HasFocus(212)">Conditional</animation>
 				
 			</control>
 			<control type="image">
@@ -440,7 +440,7 @@
 				<width>60</width>
 				<texture>osd/osdbg.png</texture>
 				<aspectratio>stretch</aspectratio>
-				<animation effect="fade" start="100" end="60" time="100" condition="Control.HasFocus(14)">Conditional</animation>
+				<animation effect="fade" start="100" end="60" time="100" condition="Control.HasFocus(213)">Conditional</animation>
 				<visible>System.GetBool(services.upnpcontroller)</visible>
 				
 			</control>
@@ -467,12 +467,13 @@
 			<orientation>horizontal</orientation>
 			<itemgap>5</itemgap>
 			<ondown>88</ondown>
+			<onup>back</onup>
 			<focusposition>2</focusposition>
 			
 			<visible>![Window.IsActive(142) | Window.IsActive(145) | Window.IsActive(10140)]</visible>
 			
 			
-			<control type="button" id="1">
+			<control type="button" id="201">
 				<height>60</height>
 				<width>60</width>
 				<aspectratio>keep</aspectratio>
@@ -484,7 +485,7 @@
 				<animation effect="zoom" start="120" end="100" center="auto" time="100">UnFocus</animation>
 			</control>
 			
-			<control type="togglebutton" id="2">
+			<control type="togglebutton" id="202">
 				<description>Play</description>
 				<height>60</height>
 				<width>60</width>
@@ -498,7 +499,7 @@
 				<animation effect="zoom" start="120" end="100" center="auto" time="100">UnFocus</animation>
 			</control>
 			
-			<control type="button" id="3">
+			<control type="button" id="203">
 				<description>Rewind</description>
 				<height>60</height>
 				<width>60</width>
@@ -512,7 +513,7 @@
 				<animation effect="zoom" start="120" end="100" center="auto" time="100">UnFocus</animation>
 			</control>
 	
-			<control type="button" id="4">
+			<control type="button" id="204">
 				<description>skip</description>
 				<height>60</height>
 				<width>60</width>
@@ -525,7 +526,7 @@
 				<animation effect="zoom" start="120" end="100" center="auto" time="100">UnFocus</animation>
 			</control>
 			
-			<control type="button" id="5">
+			<control type="button" id="205">
 				<description>Stop</description>
 				<height>60</height>
 				<width>60</width>
@@ -538,7 +539,7 @@
 				<animation effect="zoom" start="120" end="100" center="auto" time="100">UnFocus</animation>
 			</control>
 			
-			<control type="button" id="6">
+			<control type="button" id="206">
 				<description>skip</description>
 				<height>60</height>
 				<width>60</width>
@@ -551,7 +552,7 @@
 				<animation effect="zoom" start="120" end="100" center="auto" time="100">UnFocus</animation>
 			</control>
 		
-			<control type="button" id="7">
+			<control type="button" id="207">
 				<description>Info</description>
 				<height>60</height>
 				<width>60</width>
@@ -564,7 +565,7 @@
 				<animation effect="zoom" start="120" end="100" center="auto" time="100">UnFocus</animation>
 			</control>
 			
-			<control type="button" id="9">
+			<control type="button" id="208">
 				<description>get subtitles</description>
 				<height>60</height>
 				<width>60</width>
@@ -579,7 +580,7 @@
 				
 			</control>
 			
-			<control type="button" id="10">
+			<control type="button" id="209">
 				<description>Audio Settings</description>
 				<height>60</height>
 				<width>60</width>
@@ -591,7 +592,7 @@
 				<animation effect="zoom" start="100" end="120" center="auto" time="100">Focus</animation>
 				<animation effect="zoom" start="120" end="100" center="auto" time="100">UnFocus</animation>
 			</control>
-			<control type="button" id="11">
+			<control type="button" id="210">
 				<description>Video Settings</description>
 				<height>60</height>
 				<width>60</width>
@@ -604,7 +605,7 @@
 				<animation effect="zoom" start="120" end="100" center="auto" time="100">UnFocus</animation>
 			</control>
 			
-			<control type="button" id="12">
+			<control type="button" id="211">
 				<description>bookmark</description>
 				<height>60</height>
 				<width>60</width>
@@ -617,7 +618,7 @@
 				<animation effect="zoom" start="120" end="100" center="auto" time="100">UnFocus</animation>
 			</control>
 			
-			<control type="button" id="13">
+			<control type="button" id="212">
 				
 				<description>playlist</description>
 				<height>60</height>
@@ -632,7 +633,7 @@
 				
 			</control>
 			
-			<control type="button" id="14">
+			<control type="button" id="213">
 				
 				<description>upnp switchplayer</description>
 				<height>60</height>
