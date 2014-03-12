@@ -48,31 +48,31 @@
 							<posx>0</posx>
 							<posy>0</posy>
 							<width>180</width>
-							<height>360</height>
-							<texture background="true">white.png</texture>
-							<colordiffuse>FFEBEBEB</colordiffuse>
+							<height>102</height>
+							<texture background="true" >white.png</texture>
+							<aspectratio>stretch</aspectratio>
+							<colordiffuse>FF898989</colordiffuse>
 						</control>
-																	
+																							
 						<control type="image">
 							<posx>0</posx>
 							<posy>0</posy>
 							<width>180</width>
 							<height>102</height>
-							<texture background="true" fallback="DefaultAlbumCover.png">$VAR[Landscape_Image]</texture>
-							<aspectratio aligny="top">scale</aspectratio>
-							<!-- visible>!substring(Listitem.Label,..,Left)</visible -->
+							<texture>$VAR[Landscape_Image]</texture>
+							<aspectratio aligny="center">scale</aspectratio>
 						</control>
 						
+						
 						<control type="image">
-							<posx>30</posx>
-							<posy>0</posy>
-							<width>120</width>
-							<height>102</height>
+							<posx>0</posx>
+							<posy>100</posy>
+							<width>180</width>
+							<height>170</height>
+							<texture background="true">white.png</texture>
 							<aspectratio>stretch</aspectratio>
-							<texture background="true" diffuse="poster/posterdiffusesmall.png" >$VAR[Landscape_Fallback]</texture>
-							<animation effect="fade" start="0" end="80" time="0" condition="true">Conditional</animation>
-							
-							<colordiffuse>EBFFFFFF</colordiffuse>
+							<colordiffuse>FFEBEBEB</colordiffuse>
+													
 						</control>
 						
 						<control type="image">
@@ -92,7 +92,7 @@
 							<height>85</height>
 							<label>$VAR[Landscape_Header]</label>
 							<font>font14</font>
-							<textcolor>FF898989</textcolor>
+							<textcolor>FF7D7D7D</textcolor>
 							<aligny>top</aligny>
 							<shadowcolor>00FFFFFF</shadowcolor>
 							<autoscroll>false</autoscroll>
@@ -169,40 +169,35 @@
 						<posy>24</posy>
 						<width>180</width>
 						<height>264</height>
-						
+																										
 						<control type="image">
-						
 							<posx>0</posx>
 							<posy>0</posy>
 							<width>180</width>
-							<height>360</height>
+							<height>102</height>
+							<texture background="true" >white.png</texture>
+							<aspectratio>stretch</aspectratio>
+							<colordiffuse>FF898989</colordiffuse>
+						</control>
+																							
+						<control type="image">
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>180</width>
+							<height>102</height>
+							<texture>$VAR[Landscape_Image]</texture>
+							<aspectratio aligny="center">scale</aspectratio>
+						</control>
+												
+						<control type="image">
+							<posx>0</posx>
+							<posy>100</posy>
+							<width>180</width>
+							<height>170</height>
 							<texture background="true">white.png</texture>
+							<aspectratio>stretch</aspectratio>
 							
 							<colordiffuse>skin.string(MainColorString)</colordiffuse>
-							
-						</control>
-																	
-						<control type="image">
-						
-							<posx>0</posx>
-							<posy>0</posy>
-							<width>180</width>
-							<height>102</height>
-							<texture background="true" fallback="DefaultAlbumCover.png">$VAR[Landscape_Image]</texture>
-							<aspectratio aligny="top">scale</aspectratio>
-							<!-- visible>!substring(Listitem.Label,..,Left)</visible -->
-						</control>
-						
-						<control type="image">
-							<posx>30</posx>
-							<posy>0</posy>
-							<width>120</width>
-							<height>102</height>
-							<aspectratio>stretch</aspectratio>
-							<texture background="true" diffuse="poster/posterdiffusesmall.png" >$VAR[Landscape_Fallback]</texture>
-							<animation effect="fade" start="0" end="80" time="0" condition="true">Conditional</animation>
-							
-							<colordiffuse>EBFFFFFF</colordiffuse>
 						</control>
 						
 						<control type="image">
