@@ -49,6 +49,7 @@
 		<include>EmptyMenu</include>
 	
 		<control type="list" id="301">
+
 				<posx>2</posx>
 				<posy>71</posy>
 				<width>300</width>
@@ -58,7 +59,7 @@
 				<onright>50</onright>
 				<onup>noop</onup>
 				<ondown>301</ondown>
-				<pagecontrol>-</pagecontrol>
+				<pagecontrol>64</pagecontrol>
 				<!--  scrolltime tween="cubic" easing="inout">325</scrolltime  -->
 				<scrolltime>0</scrolltime>
 				<preloaditems>2</preloaditems>
@@ -508,6 +509,21 @@
 												
 					</content>		
 		</control>
+	</control>
+	
+	<control type="scrollbar" id="64">
+		<texturesliderbackground>empty.png</texturesliderbackground>
+		<texturesliderbar>-</texturesliderbar>
+		<texturesliderbarfocus>-</texturesliderbarfocus>
+		<textureslidernib>empty.png</textureslidernib>
+		<textureslidernibfocus>empty.png</textureslidernibfocus>
+		<orientation>Vertical</orientation>
+		<showonepage>true</showonepage>
+		<posx>205</posx>
+		<posy>73</posy>
+		<width>90</width>
+		<height>640</height>
+		<visible>Skin.HasSetting(LockMainMenu)</visible>
 	</control>
 	</include>
 

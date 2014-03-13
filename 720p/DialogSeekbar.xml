@@ -63,7 +63,7 @@
 				<posx>323</posx>
 				<posy>49</posy>
 				<width>633</width>
-				<height>7</height>
+				<height>8</height>
 				<texture>white.png</texture>
 				<aspectratio>stretch</aspectratio>
 				<animation effect="fade" start="0" end="5" time="0" condition="true">Conditional</animation>

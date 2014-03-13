@@ -467,7 +467,7 @@
 			<orientation>horizontal</orientation>
 			<itemgap>5</itemgap>
 			<ondown>88</ondown>
-			<onup>back</onup>
+			
 			<focusposition>2</focusposition>
 			
 			<visible>![Window.IsActive(142) | Window.IsActive(145) | Window.IsActive(10140)]</visible>

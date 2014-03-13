@@ -67,7 +67,7 @@
 			<onleft>9080</onleft>
 			<onright>9080</onright>
 			<ondown>3</ondown>
-			<pagecontrol>-</pagecontrol>
+			<pagecontrol>63</pagecontrol>
 			<scrolltime>0</scrolltime>		
 			<itemlayout height="37">
 				<control type="label">
@@ -117,7 +117,7 @@
 			<onleft>9080</onleft>
 			<onright>9080</onright>
 			<ondown>6</ondown>
-			<pagecontrol>-</pagecontrol>
+			<pagecontrol>63</pagecontrol>
 			<scrolltime>0</scrolltime>
 	
 			<itemlayout width="600" height="84">
@@ -248,7 +248,28 @@
 				</control>
 			</focusedlayout>
 		</control>
- 
+		
+		<control type="scrollbar" id="63">
+			<texturesliderbackground>buttons/scrollbgV.png</texturesliderbackground>
+			<texturesliderbar>-</texturesliderbar>
+			<texturesliderbarfocus>-</texturesliderbarfocus>
+			<textureslidernib>buttons/scrollnibV.png</textureslidernib>
+			<textureslidernibfocus>buttons/scrollnibV.png</textureslidernibfocus>
+			<orientation>Vertical</orientation>
+			<showonepage>false</showonepage>
+			<posx>886</posx>
+			<posy>185</posy>
+			<width>10</width>
+			<height>335</height>
+
+			<onleft condition="Control.IsVisible(3)">3</onleft>
+			<onleft condition="Control.IsVisible(6)">6</onleft>
+
+			<onright>9080</onright>
+
+			<animation effect="fade" start="100" end="40" time="200" reversable="false" condition="!Control.HasFocus(63)">Conditional</animation>
+
+		</control>
  
   
 		<control type="label" id="2">

@@ -240,16 +240,7 @@
 						<texture >$INFO[ListItem(-1).Art(thumb)]</texture>
 						<fadetime>300</fadetime>
 					</control>
-					<control type="image">
-						<posx>110</posx>
-						<posy>109</posy>
-						<width>422</width>
-						<height>410</height>
-						<aspectratio>keep</aspectratio>
-						<texture>DefaultFallback.png</texture>
-						<visible>IsEmpty(ListItem(-1).Art(thumb))</visible>
-						
-					</control>
+
 					<control type="image">
 						<description>white image</description>
 						<posx>112</posx>
@@ -283,12 +274,35 @@
 				<width>428</width>
 				<height>494</height>
 				<aspectratio>stretch</aspectratio>
+				<texture background="true" border="5">white.png</texture>
+				<bordertexture border="5">whiteborder.png</bordertexture>
+				<bordersize>5</bordersize>
+				<visible>IsEmpty(ListItem.Art(thumb))</visible>
+				<colordiffuse>FFD7D7D7</colordiffuse>
+			</control>
+			<control type="image">
+				<posx>140</posx>
+				<posy>139</posy>
+				<width>122</width>
+				<height>110</height>
+				<aspectratio>keep</aspectratio>
+				<texture>DefaultFallback.png</texture>
+				<visible>IsEmpty(ListItem.Art(thumb))</visible>
+				<animation effect="fade" start="0" end="30" time="0" condition="true">Conditional</animation>
+			</control>
+			
+			<control type="image">
+				<posx>108</posx>
+				<posy>108</posy>
+				<width>428</width>
+				<height>494</height>
+				<aspectratio>stretch</aspectratio>
 				<texture border="5">BlueBackground.png</texture>
 				<bordertexture border="5">whiteborder.png</bordertexture>
 				<bordersize>5</bordersize>
+				<visible>!IsEmpty(ListItem.Art(thumb))</visible>
 				<animation effect="fade" start="0" end="80" time="0" condition="true">Conditional</animation>
 			</control>
-			
 			<control type="image">
 				<posx>110</posx>
 				<posy>109</posy>
@@ -298,16 +312,7 @@
 				<texture diffuse="diffuse/albumdiffuse.png">$INFO[ListItem.Art(thumb)]</texture>
 				<fadetime>400</fadetime>
 			</control>
-			<control type="image">
-				<posx>110</posx>
-				<posy>109</posy>
-				<width>422</width>
-				<height>410</height>
-				<aspectratio>keep</aspectratio>
-				<texture>DefaultFallback.png</texture>
-				<visible>IsEmpty(ListItem.Art(thumb))</visible>
-				<!-- animation effect="fade" start="0" end="5" time="0" condition="true">Conditional</animation -->
-			</control>
+			
 			<control type="image">
 				<description>white image</description>
 				<posx>112</posx>
@@ -321,7 +326,7 @@
 			</control>
 			<control type="label">
 				<posx>125</posx>
-				<posy>480</posy>
+				<posy>485</posy>
 				<width>410</width>
 				<height>60</height>
 				<align>left</align>
@@ -335,12 +340,12 @@
 
 			<control type="label">
 				<posx>125</posx>
-				<posy>515</posy>
+				<posy>525</posy>
 				<width>410</width>
 				<height>60</height>
 				<label>[UPPERCASE]$INFO[ListItem.Title] - $INFO[ListItem.Duration][/UPPERCASE]</label>
 				<font>MainMenu21</font>
-				<textcolor>FF707070</textcolor>
+				<textcolor>FF898989</textcolor>
 				<!-- shadowcolor>skin.string(MainColorString)</shadowcolor -->
 				<align>left</align>
 				<scroll>false</scroll>

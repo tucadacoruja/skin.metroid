@@ -403,6 +403,15 @@
 		</control>
 		<control type="image">
 			<posx>0</posx>
+			<posy>0</posy>
+			<width>1285</width>
+			<height>4</height>
+			<aspectratio>stretch</aspectratio>
+			<texture flipy="true">BackMenu.png</texture>
+			<animation effect="fade" start="100" end="60" time="0" reversible="false" condition="true">Conditional</animation>
+		</control>
+		<control type="image">
+			<posx>0</posx>
 			<posy>67</posy>
 			<width>1285</width>
 			<height>5</height>

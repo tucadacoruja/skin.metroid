@@ -23,7 +23,7 @@
             <width>600</width>
             <height>340</height>
 			<aspectratio>stretch</aspectratio>
-			<texture background="true">bluebackground.png</texture>
+			<texture background="true">BlueBackground.png</texture>
 			<bordertexture border="1">whiteborder.png</bordertexture>
 			<bordersize>4</bordersize>
             <colordiffuse>CC555555</colordiffuse>
