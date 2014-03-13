@@ -27,7 +27,7 @@
 			<onleft>710</onleft>
 			<onright>noop</onright>
 			<pagecontrol>710</pagecontrol>
-			<scrolltime>150</scrolltime>
+			<scrolltime>200</scrolltime>
 			<preloaditems>2</preloaditems>
 			<visible>Window.IsActive(25)</visible>
 			<visible>Container.Content(TVShows)</visible>
@@ -66,7 +66,7 @@
 				</control>
 				<control type="image">
 					<posx>20</posx>
-					<posy>15</posy>
+					<posy>10</posy>
 					<width>120</width>
 					<height>100</height>
 					<aspectratio>stretch</aspectratio>
@@ -119,7 +119,7 @@
 				<control type="image">
 					<posx>1</posx>
 					<posy>12</posy>
-					<width>573</width>
+					<width>575</width>
 					<height>143</height>
 					<texture border="12">white.png</texture>
 					<aspectratio>stretch</aspectratio>
@@ -153,8 +153,8 @@
 				</control>
 				<control type="image">
 					<posx>20</posx>
-					<posy>5</posy>
-					<width>130</width>
+					<posy>10</posy>
+					<width>120</width>
 					<height>100</height>
 					<aspectratio>stretch</aspectratio>
 					<texture background="true" diffuse="poster/posterdiffusesmall.png">$VAR[Fallback_Icon]</texture>
