@@ -87,7 +87,7 @@
 
 	<control type="group">
 	<posy>0</posy>
-		<animation type="Conditional" condition="Window.IsVisible(126) | Window.IsVisible(2000) | Window.IsVisible(peripherals)">
+		<animation type="Conditional" condition="Window.IsVisible(filebrowser) | Window.IsVisible(addonsettings) | Window.IsVisible(selectdialog) | Window.IsVisible(peripherals)">
 			<effect type="fade" start="100" end="0" time="200" />
 		</animation>
 		<animation type="WindowClose" reversible="false">
@@ -252,8 +252,8 @@
 		<onleft>3</onleft>
 		<onright>5</onright>
 		<animation effect="fade" start="100" end="40" time="200" reversable="false" condition="!Control.HasFocus(63)">Conditional</animation>
-		<visible>![Window.IsVisible(126) | Window.IsVisible(2000) | Window.IsVisible(peripherals)]</visible>
-		
+		<visible>![Window.IsVisible(filebrowser) | Window.IsVisible(addonsettings) | Window.IsVisible(selectdialog) | Window.IsVisible(peripherals)]</visible>
+
 	</control>
 
 <include>BottomInfoBar</include>
