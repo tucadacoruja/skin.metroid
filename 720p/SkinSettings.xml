@@ -367,13 +367,13 @@
 						<onclick>Skin.ToggleSetting(HideMusicLibrary)</onclick>
 						<selected>Skin.HasSetting(HideMusicLibrary)</selected>
 					</control>
-					<control type="radiobutton" id="122">
+					<!--control type="radiobutton" id="122">
 						<include>SettingsButton</include>
 						<description>Previous button in main menu</description>
 						<label>$LOCALIZE[31155] $LOCALIZE[31142]</label>
 						<onclick>Skin.ToggleSetting(HideGlobalPrevious)</onclick>
 						<selected>Skin.HasSetting(HideGlobalPrevious)</selected>
-					</control>
+					</control-->
 					<control type="radiobutton" id="123">
 						<include>SettingsButton</include>
 						<description>Update Library in main menu</description>
