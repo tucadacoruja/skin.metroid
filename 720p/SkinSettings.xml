@@ -304,7 +304,7 @@
 					<control type="radiobutton" id="113">
 						<include>SettingsButton</include>
 						<description>Pictures in main menu</description>
-						<label>$LOCALIZE[31146] $LOCALIZE[31142]</label>
+						<label>$LOCALIZE[31146] $LOCALIZE[31142] $LOCALIZE[31244]</label>
 						<onclick>Skin.ToggleSetting(PicsHome)</onclick>
 						<selected>!Skin.HasSetting(PicsHome)</selected>
 					</control>
@@ -749,7 +749,15 @@
 						<label>$LOCALIZE[31233]</label>
 						<onclick>Skin.ToggleSetting(HideGlobalBack)</onclick>
 						<selected>Skin.HasSetting(HideGlobalBack)</selected>
-					</control>
+					</control> condition="Skin.HasSetting(DirectoryUp)"
+						<control type="radiobutton" id="114">
+							<include>SettingsButton</include>
+							<description>Back button goes back by directory</description>
+							<label> - $LOCALIZE[31243]</label>
+							<onclick>Skin.ToggleSetting(DirectoryUp)</onclick>
+							<selected>Skin.HasSetting(DirectoryUp)</selected>
+						</control>
+						
 					<control type="radiobutton" id="100">
 						<include>SettingsButton</include>
 						<description>Show Globalsearch</description>

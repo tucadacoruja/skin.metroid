@@ -232,9 +232,9 @@
 						<item id="96">
 							<description>Party Mode</description>
 							<label>$LOCALIZE[589]</label>
-							<onclick condition="!Window.IsVisible(musiclibrary)">ActivateWindow(musiclibrary)</onclick>
-							<onclick>SendClick(16)</onclick>
-							<!--  onclick>XBMC.PlayerControl(Partymode(special://skin/extras/library/music/Party_Mode.xsp))</onclick  -->
+							<onclick condition="!Window.IsVisible(musiclibrary) + Skin.HasSetting(DirectoryUp)">ActivateWindow(musiclibrary)</onclick>
+							<onclick condition="Skin.HasSetting(DirectoryUp)">SendClick(16)</onclick>
+							<onclick condition="!Skin.HasSetting(DirectoryUp)">XBMC.PlayerControl(Partymode(special://skin/extras/library/music/Party_Mode.xsp))</onclick>
 							<visible>[Window.IsActive(home) | Window.IsActive(musiclibrary)] + Library.HasContent(Music)</visible>
 							<visible>!Skin.HasSetting(HideGlobalMusic)</visible>
 						</item>
@@ -256,7 +256,9 @@
 							<onclick condition="IsEmpty(skin.string(SubMenu7)) + !Skin.HasSetting(MusicSubmenu)">Skin.Setstring(SubMenu7,open)</onclick>
 							<onclick condition="!IsEmpty(skin.string(SubMenu7)) + !Skin.HasSetting(MusicSubmenu)">Skin.Reset(SubMenu7)</onclick>
 							<onclick condition="IsEmpty(skin.string(SubMenu7)) + !Skin.HasSetting(MusicSubmenu)">Skin.Setstring(SubMenu7,open)</onclick>
-							<onclick condition="Skin.HasSetting(MusicSubmenu)">ActivateWindow(musiclibrary,songs)</onclick>
+							<onclick condition="Skin.HasSetting(MusicSubmenu) + Skin.HasSetting(DirectoryUp)">ActivateWindow(musiclibrary,songs)</onclick>
+							<onclick condition="Skin.HasSetting(MusicSubmenu) + !Skin.HasSetting(DirectoryUp)">ActivateWindow(musiclibrary,songs,return)</onclick>
+							
 							<property name="DropdownMenu7">not_empty</property>
 
 							<visible>Library.HasContent(Music)</visible>
@@ -268,7 +270,8 @@
 							<label>31218</label>
 							<icon>Home/icons/music.png</icon>
 							<visible>!Skin.HasSetting(HideMyMusicVideos)</visible>
-							<onclick>ActivateWindow(Videos,MusicVideoTitles)</onclick>
+							<onclick condition="Skin.HasSetting(DirectoryUp)">ActivateWindow(Videos,MusicVideoTitles)</onclick>
+							<onclick condition="!Skin.HasSetting(DirectoryUp)">ActivateWindow(Videos,MusicVideoTitles,return)</onclick>
 							<visible>Library.HasContent(MusicVideos)</visible>
 						</item>	
 											
@@ -281,7 +284,9 @@
 							<onclick condition="IsEmpty(skin.string(SubMenu4)) + !Skin.HasSetting(MovieSubmenu)">Skin.Setstring(SubMenu4,open)</onclick>
 							<onclick condition="!IsEmpty(skin.string(SubMenu4)) + !Skin.HasSetting(MovieSubmenu)">Skin.Reset(SubMenu4)</onclick>
 							<onclick condition="IsEmpty(skin.string(SubMenu4)) + !Skin.HasSetting(MovieSubmenu)">Skin.Setstring(SubMenu4,open)</onclick>
-							<onclick condition="Skin.HasSetting(MovieSubmenu)">ActivateWindow(Videos,MovieTitles)</onclick>
+							<onclick condition="Skin.HasSetting(MovieSubmenu) + Skin.HasSetting(DirectoryUp)">ActivateWindow(Videos,MovieTitles)</onclick>
+							<onclick condition="Skin.HasSetting(MovieSubmenu) + !Skin.HasSetting(DirectoryUp)">ActivateWindow(Videos,MovieTitles,return)</onclick>
+							
 							<property name="DropdownMenu4">not_empty</property>
 						</item>
 						<include condition="!Skin.HasSetting(MovieSubmenu)">MovieSortItems</include>
@@ -296,7 +301,9 @@
 							<onclick condition="IsEmpty(skin.string(SubMenu5)) + !Skin.HasSetting(TvShowSubmenu)">Skin.Setstring(SubMenu5,open)</onclick>
 							<onclick condition="!IsEmpty(skin.string(SubMenu5)) + !Skin.HasSetting(TvShowSubmenu)">Skin.Setstring(SubMenu5,)</onclick>
 							<onclick condition="IsEmpty(skin.string(SubMenu5)) + !Skin.HasSetting(TvShowSubmenu)">Skin.Setstring(SubMenu5,open)</onclick>
-							<onclick condition="Skin.HasSetting(TvShowSubmenu)">ActivateWindow(Videos,TvShowTitles)</onclick>
+							<onclick condition="Skin.HasSetting(TvShowSubmenu) + Skin.HasSetting(DirectoryUp)">ActivateWindow(Videos,TvShowTitles)</onclick>
+							<onclick condition="Skin.HasSetting(TvShowSubmenu) + !Skin.HasSetting(DirectoryUp)">ActivateWindow(Videos,TvShowTitles,return)</onclick>
+							
 							<property name="DropdownMenu5">not_empty</property>
 						</item>
 						<include condition="!Skin.HasSetting(TvShowSubmenu)">TvshowSortItems</include>
@@ -379,21 +386,22 @@
 						
 						<item id="115">
 							<label>31084</label>
-							<onclick>Back</onclick>
+							<onclick condition="Skin.HasSetting(DirectoryUp)">back</onclick>
+							<onclick condition="!Skin.HasSetting(DirectoryUp)">PreviousMenu</onclick>
 							<icon>-</icon>
 							<thumb>-</thumb>
 							<visible>!Window.IsActive(Home)</visible>
 							<visible>Skin.HasSetting(HideGlobalBack)</visible>
 						</item>
 						
-						<item id="116">
+						<!--item id="116">
 							<label>31085</label>
 							<onclick>PreviousMenu</onclick>
 							<icon>-</icon>
 							<thumb>-</thumb>
 							<visible>!Window.IsActive(Home)</visible>
 							<visible>Skin.HasSetting(HideGlobalPrevious)</visible>
-						</item>
+						</item-->
 						
 						<item id="106">
 							<description>Addons</description>
@@ -1338,6 +1346,15 @@
 			<property name="DropdownMenu4">not_empty</property>
 		</item>
 		<item id="2">
+			<description>123 Playlists</description>
+			<label>1 2 3 ...</label>
+			<onclick>ActivateWindow(Videos,special://skin/extras/library/movies/123_Playlist.xsp,return)</onclick>
+			<visible>Skin.HasSetting(MoviePlaylists)</visible>
+			<visible>!IsEmpty(skin.string(SubMenu4))</visible>
+			<property name="SubMenuItem">not_empty</property>
+			<property name="DropdownMenu4">not_empty</property>
+		</item>
+		<item id="3">
 			<description>A-E Playlists</description>
 			<label>a b c d e</label>
 			<icon>-</icon>
@@ -1347,7 +1364,7 @@
 			<property name="SubMenuItem">not_empty</property>
 			<property name="DropdownMenu4">not_empty</property>
 		</item>
-		<item id="3">
+		<item id="4">
 			<description>F-J Playlists</description>
 			<label>f g h i j</label>
 			<icon>-</icon>
@@ -1357,7 +1374,7 @@
 			<property name="SubMenuItem">not_empty</property>
 			<property name="DropdownMenu4">not_empty</property>
 		</item>
-		<item id="4">
+		<item id="5">
 			<description>K-O Playlists</description>
 			<label>k l m n o</label>
 			<icon>-</icon>
@@ -1367,7 +1384,7 @@
 			<property name="SubMenuItem">not_empty</property>
 			<property name="DropdownMenu4">not_empty</property>
 		</item>
-		<item id="5">
+		<item id="6">
 			<description>P-T Playlists</description>
 			<label>p q r s t</label>
 			<icon>-</icon>
@@ -1377,7 +1394,7 @@
 			<property name="SubMenuItem">not_empty</property>
 			<property name="DropdownMenu4">not_empty</property>
 		</item>
-		<item id="6">
+		<item id="7">
 			<description>U-Z Playlists</description>
 			<label>u v w x y z</label>
 			<icon>-</icon>
@@ -1392,7 +1409,8 @@
 		<item id="10" description="title">
 			<visible>!Skin.HasSetting(MoviePlaylists)</visible>
 			<label>369</label>
-			<onclick>ActivateWindow(Videos,MovieTitles,return)</onclick>
+			<onclick condition="Skin.HasSetting(DirectoryUp)">ActivateWindow(Videos,MovieTitles)</onclick>
+			<onclick condition="!Skin.HasSetting(DirectoryUp)">ActivateWindow(Videos,MovieTitles,return)</onclick>
 			<visible>!IsEmpty(skin.string(SubMenu4))</visible>
 			<property name="SubMenuItem">not_empty</property>
 			<property name="DropdownMenu4">not_empty</property>
@@ -1401,7 +1419,8 @@
 		<item id="11" description="genres">
 			<visible>!Skin.HasSetting(MoviePlaylists)</visible>
 			<label>135</label>
-			<onclick>ActivateWindow(Videos,Moviegenres,return)</onclick>
+			<onclick condition="Skin.HasSetting(DirectoryUp)">ActivateWindow(Videos,Moviegenres)</onclick>
+			<onclick condition="!Skin.HasSetting(DirectoryUp)">ActivateWindow(Videos,Moviegenres,return)</onclick>
 			<visible>!IsEmpty(skin.string(SubMenu4))</visible>
 			<property name="SubMenuItem">not_empty</property>
 			<property name="DropdownMenu4">not_empty</property>
@@ -1409,7 +1428,8 @@
 			<item id="12" description="sets">
 			<visible>!Skin.HasSetting(MoviePlaylists)</visible>
 			<label>20434</label>
-			<onclick>ActivateWindow(Videos,Moviesets,return)</onclick>
+			<onclick condition="Skin.HasSetting(DirectoryUp)">ActivateWindow(Videos,Moviesets)</onclick>
+			<onclick condition="!Skin.HasSetting(DirectoryUp)">ActivateWindow(Videos,Moviesets,return)</onclick>
 			<visible>!IsEmpty(skin.string(SubMenu4))</visible>
 			<property name="SubMenuItem">not_empty</property>
 			<property name="DropdownMenu4">not_empty</property>
@@ -1417,7 +1437,8 @@
 		<item id="13" description="Recent">
 			<visible>!Skin.HasSetting(MoviePlaylists)</visible>
 			<label>31226</label>
-			<onclick>ActivateWindow(Videos,RecentlyAddedMovies,return)</onclick>
+			<onclick condition="Skin.HasSetting(DirectoryUp)">ActivateWindow(Videos,RecentlyAddedMovies)</onclick>
+			<onclick condition="!Skin.HasSetting(DirectoryUp)">ActivateWindow(Videos,RecentlyAddedMovies,return)</onclick>
 			<visible>!IsEmpty(skin.string(SubMenu4))</visible>
 			<property name="SubMenuItem">not_empty</property>
 			<property name="DropdownMenu4">not_empty</property>
@@ -1425,7 +1446,8 @@
 		<item id="14" description="tags">
 			<visible>!Skin.HasSetting(MoviePlaylists)</visible>
 			<label>20459</label>
-			<onclick>ActivateWindow(Videos,MovieTags,return)</onclick>
+			<onclick condition="Skin.HasSetting(DirectoryUp)">ActivateWindow(Videos,MovieTags)</onclick>
+			<onclick condition="!Skin.HasSetting(DirectoryUp)">ActivateWindow(Videos,MovieTags,return)</onclick>
 			<visible>!IsEmpty(skin.string(SubMenu4))</visible>
 			<property name="SubMenuItem">not_empty</property>
 			<property name="DropdownMenu4">not_empty</property>
@@ -1433,7 +1455,8 @@
 		<item id="15" description="Library">
 			<visible>!Skin.HasSetting(MoviePlaylists)</visible>
 			<label>14022</label>
-			<onclick>ActivateWindow(VideoLibrary,root)</onclick>
+			<onclick condition="Skin.HasSetting(DirectoryUp)">ActivateWindow(VideoLibrary,movies)</onclick>
+			<onclick condition="!Skin.HasSetting(DirectoryUp)">ActivateWindow(VideoLibrary,movies,return)</onclick>
 			<visible>!IsEmpty(skin.string(SubMenu4))</visible>
 			<property name="SubMenuItem">not_empty</property>
 			<property name="DropdownMenu4">not_empty</property>
@@ -1442,37 +1465,50 @@
 	</include>
 	
 	<include name="MusicSubItems">
-		<item id="1" description="Artists">
+		<item id="1" description="Songs">
 			<label>$LOCALIZE[134]</label>
-			<onclick>xbmc.activatewindow(musiclibrary,songs,return)</onclick>
+			<onclick condition="Skin.HasSetting(DirectoryUp)">ActivateWindow(MusicLibrary,Songs)</onclick>
+			<onclick condition="!Skin.HasSetting(DirectoryUp)">ActivateWindow(MusicLibrary,Songs,return)</onclick>
 			<visible>!IsEmpty(skin.string(SubMenu7))</visible>
 			<property name="SubMenuItem">not_empty</property>
 			<property name="DropdownMenu7">not_empty</property>
 		</item>
-		<item id="2" description="Artists">
+		<item id="2" description="Albums">
+			<label>$LOCALIZE[132]</label>
+			<onclick condition="Skin.HasSetting(DirectoryUp)">ActivateWindow(MusicLibrary,Albums)</onclick>
+			<onclick condition="!Skin.HasSetting(DirectoryUp)">ActivateWindow(MusicLibrary,Albums,return)</onclick>
+			<visible>!IsEmpty(skin.string(SubMenu7))</visible>
+			<property name="SubMenuItem">not_empty</property>
+			<property name="DropdownMenu7">not_empty</property>
+		</item>
+		<item id="3" description="Artists">
 			<label>$LOCALIZE[133]</label>
-			<onclick>ActivateWindow(MusicLibrary,Artists,return)</onclick>
+			<onclick condition="Skin.HasSetting(DirectoryUp)">ActivateWindow(MusicLibrary,Artists)</onclick>
+			<onclick condition="!Skin.HasSetting(DirectoryUp)">ActivateWindow(MusicLibrary,Artists,return)</onclick>
 			<visible>!IsEmpty(skin.string(SubMenu7))</visible>
 			<property name="SubMenuItem">not_empty</property>
 			<property name="DropdownMenu7">not_empty</property>
 		</item>
-		<item id="3" description="Top 100">
+		<item id="4" description="Top 100">
 			<label>$LOCALIZE[271]</label>
-			<onclick>ActivateWindow(MusicLibrary,top100,return)</onclick>
+			<onclick condition="Skin.HasSetting(DirectoryUp)">ActivateWindow(MusicLibrary,top100)</onclick>
+			<onclick condition="!Skin.HasSetting(DirectoryUp)">ActivateWindow(MusicLibrary,top100,return)</onclick>
 			<visible>!IsEmpty(skin.string(SubMenu7))</visible>
 			<property name="SubMenuItem">not_empty</property>
 			<property name="DropdownMenu7">not_empty</property>
 		</item>
-		<item id="4" description="Recently added">
+		<item id="5" description="Recently added">
 			<label>$LOCALIZE[31226]</label>
-			<onclick>ActivateWindow(MusicLibrary,recentlyaddedalbums,return)</onclick>
+			<onclick condition="Skin.HasSetting(DirectoryUp)">ActivateWindow(MusicLibrary,recentlyaddedalbums)</onclick>
+			<onclick condition="!Skin.HasSetting(DirectoryUp)">ActivateWindow(MusicLibrary,recentlyaddedalbums,return)</onclick>
 			<visible>!IsEmpty(skin.string(SubMenu7))</visible>
 			<property name="SubMenuItem">not_empty</property>
 			<property name="DropdownMenu7">not_empty</property>
 		</item>
-		<item id="5" description="Library">
+		<item id="6" description="Library">
 			<label>$LOCALIZE[14022]</label>
-			<onclick>ActivateWindow(MusicLibrary,root)</onclick>
+			<onclick condition="Skin.HasSetting(DirectoryUp)">ActivateWindow(MusicLibrary,root)</onclick>
+			<onclick condition="!Skin.HasSetting(DirectoryUp)">ActivateWindow(MusicLibrary,root,return)</onclick>
 			<visible>!IsEmpty(skin.string(SubMenu7))</visible>
 			<property name="SubMenuItem">not_empty</property>
 			<property name="DropdownMenu7">not_empty</property>
@@ -1483,7 +1519,6 @@
 		<item id="1">
 			<description>All TvShows</description>
 			<label>*$LOCALIZE[31129]</label>
-			<icon>-</icon>
 			<onclick>ActivateWindow(Videos,TvShowTitles,return)</onclick>
 			<visible>Skin.HasSetting(TvShowPlaylists)</visible>
 			<visible>!IsEmpty(skin.string(SubMenu5))</visible>
@@ -1491,6 +1526,15 @@
 			<property name="DropdownMenu5">not_empty</property>
 		</item>
 		<item id="2">
+			<description>123 Playlists</description>
+			<label>1 2 3 ...</label>
+			<onclick>ActivateWindow(Videos,special://skin/extras/library/tvshows/123_Playlist.xsp,return)</onclick>
+			<visible>Skin.HasSetting(TvShowPlaylists)</visible>
+			<visible>!IsEmpty(skin.string(SubMenu5))</visible>
+			<property name="SubMenuItem">not_empty</property>
+			<property name="DropdownMenu5">not_empty</property>
+		</item>
+		<item id="3">
 			<description>A-E Playlists</description>
 			<label>a b c d e</label>
 			<icon>-</icon>
@@ -1500,7 +1544,7 @@
 			<property name="SubMenuItem">not_empty</property>
 			<property name="DropdownMenu5">not_empty</property>
 		</item>
-		<item id="3">
+		<item id="4">
 			<description>F-J Playlists</description>
 			<label>f g h i j</label>
 			<icon>-</icon>
@@ -1510,7 +1554,7 @@
 			<property name="SubMenuItem">not_empty</property>
 			<property name="DropdownMenu5">not_empty</property>
 		</item>
-		<item id="4">
+		<item id="5">
 			<description>K-O Playlists</description>
 			<label>k l m n o</label>
 			<icon>-</icon>
@@ -1520,7 +1564,7 @@
 			<property name="SubMenuItem">not_empty</property>
 			<property name="DropdownMenu5">not_empty</property>
 		</item>
-		<item id="5">
+		<item id="6">
 			<description>P-T Playlists</description>
 			<label>p q r s t</label>
 			<icon>-</icon>
@@ -1530,17 +1574,6 @@
 			<property name="SubMenuItem">not_empty</property>
 			<property name="DropdownMenu5">not_empty</property>
 		</item>
-		<item id="6">
-			<description>U-Z Playlists</description>
-			<label>u v w x y z</label>
-			<icon>-</icon>
-			<onclick>ActivateWindow(Videos,special://skin/extras/library/tvshows/UZ_Playlist.xsp,return)</onclick>
-			<visible>Skin.HasSetting(TvShowPlaylists)</visible>
-			<visible>!IsEmpty(skin.string(SubMenu5))</visible>
-			<property name="SubMenuItem">not_empty</property>
-			<property name="DropdownMenu5">not_empty</property>
-		</item>
-		
 		<item id="7">
 			<description>U-Z Playlists</description>
 			<label>u v w x y z</label>
@@ -1552,10 +1585,12 @@
 			<property name="DropdownMenu5">not_empty</property>
 		</item>
 		
+		
 		<item id="10" description="title">
 			<visible>!Skin.HasSetting(TvShowPlaylists)</visible>
 			<label>369</label>
-			<onclick>ActivateWindow(VideoLibrary,TvShowTitles,return)</onclick>
+			<onclick condition="Skin.HasSetting(DirectoryUp)">ActivateWindow(VideoLibrary,TvShowTitles)</onclick>
+			<onclick condition="!Skin.HasSetting(DirectoryUp)">ActivateWindow(VideoLibrary,TvShowTitles,return)</onclick>
 			<visible>!IsEmpty(skin.string(SubMenu5))</visible>
 			<property name="SubMenuItem">not_empty</property>
 			<property name="DropdownMenu5">not_empty</property>
@@ -1571,7 +1606,8 @@
 		<item id="12" description="Recently Added">
 			<visible>!Skin.HasSetting(TvShowPlaylists)</visible>
 			<label>31226</label>
-			<onclick>ActivateWindow(VideoLibrary,RecentlyAddedEpisodes,return)</onclick>
+			<onclick condition="Skin.HasSetting(DirectoryUp)">ActivateWindow(VideoLibrary,RecentlyAddedEpisodes)</onclick>
+			<onclick condition="!Skin.HasSetting(DirectoryUp)">ActivateWindow(VideoLibrary,RecentlyAddedEpisodes,return)</onclick>
 			<visible>!IsEmpty(skin.string(SubMenu5))</visible>
 			<property name="SubMenuItem">not_empty</property>
 			<property name="DropdownMenu5">not_empty</property>
@@ -1579,7 +1615,8 @@
 		<item id="13" description="Genres">
 			<visible>!Skin.HasSetting(TvShowPlaylists)</visible>
 			<label>135</label>
-			<onclick>ActivateWindow(VideoLibrary,TvShowGenres,return)</onclick>
+			<onclick condition="Skin.HasSetting(DirectoryUp)">ActivateWindow(VideoLibrary,TvShowGenres)</onclick>
+			<onclick condition="!Skin.HasSetting(DirectoryUp)">ActivateWindow(VideoLibrary,TvShowGenres,return)</onclick>
 			<visible>!IsEmpty(skin.string(SubMenu5))</visible>
 			<property name="SubMenuItem">not_empty</property>
 			<property name="DropdownMenu5">not_empty</property>
@@ -1587,7 +1624,8 @@
 		<item id="13" description="Library">
 			<visible>!Skin.HasSetting(TvShowPlaylists)</visible>
 			<label>14022</label>
-			<onclick>ActivateWindow(VideoLibrary,root)</onclick>
+			<onclick condition="Skin.HasSetting(DirectoryUp)">ActivateWindow(VideoLibrary,tvshows)</onclick>
+			<onclick condition="!Skin.HasSetting(DirectoryUp)">ActivateWindow(VideoLibrary,tvshows,return)</onclick>
 			<visible>!IsEmpty(skin.string(SubMenu5))</visible>
 			<property name="SubMenuItem">not_empty</property>
 			<property name="DropdownMenu5">not_empty</property>

@@ -746,7 +746,7 @@
 		<control type="grouplist">
 			
 			<height>300</height>
-			<visible>!IsEmpty(Skin.String(PluginWidgetPath2))</visible>
+			<!--visible>!IsEmpty(Skin.String(PluginWidgetPath2))</visible-->
 			<orientation>horizontal</orientation>
 			<usecontrolcoords>true</usecontrolcoords>
 			<align>left</align>
@@ -813,14 +813,14 @@
 			</control>
 					
 			<control type="panel" id="8005">
-				<viewtype label="PluginWidget2">icon</viewtype>
+				<viewtype>icon</viewtype>
 				<posx>380</posx>
 				<posy>20</posy>
 				<width>500</width>
 				<height>300</height>
 				<scrolltime>200</scrolltime>
 				<orientation>Horizontal</orientation>
-				<preloaditems>6</preloaditems>
+				<preloaditems>2</preloaditems>
 				
 				<onup condition="![Control.IsVisible(8004) | Control.IsVisible(8003) | Control.IsVisible(8002) | Control.IsVisible(8001)] + Control.IsVisible(8000)">8000</onup>
 				<onup condition="![Control.IsVisible(8004) | Control.IsVisible(8003) | Control.IsVisible(8002)] + Control.IsVisible(8001)">8001</onup>

@@ -900,3 +900,11 @@ msgstr ""
 msgctxt "#31242"
 msgid "Forecast"
 msgstr ""
+
+msgctxt "#31243"
+msgid "Back button goes back by directory (where possible)"
+msgstr ""
+
+msgctxt "#31244"
+msgid "(under sources)"
+msgstr ""

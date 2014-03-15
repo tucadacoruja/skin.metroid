@@ -444,6 +444,16 @@
 				<visible>System.GetBool(services.upnpcontroller)</visible>
 				
 			</control>
+			<control type="image">
+				<height>60</height>
+				<width>60</width>
+				<texture>osd/osdbg.png</texture>
+				<aspectratio>stretch</aspectratio>
+				<animation effect="fade" start="100" end="60" time="100" condition="Control.HasFocus(214)">Conditional</animation>
+				<!--visible>VideoPlayer.HasMenu</visible-->
+				
+			</control>
+			
 			<!-- control type="image">
 				<height>60</height>
 				<width>60</width>
@@ -651,6 +661,22 @@
 				<visible>System.GetBool(services.upnpcontroller)</visible>
 			</control>
 			
+			<control type="button" id="214">
+				
+				<description>dvd menu</description>
+				<height>60</height>
+				<width>60</width>
+				<aspectratio>keep</aspectratio>
+				<texturefocus>osd/dvdmenu2.png</texturefocus>
+				<texturenofocus>osd/dvdmenu2.png</texturenofocus>
+				
+				<onclick>PlayerControl(ShowVideoMenu)</onclick>
+								
+				<animation effect="zoom" start="100" end="120" center="auto" time="100">Focus</animation>
+				<animation effect="zoom" start="120" end="100" center="auto" time="100">UnFocus</animation>
+				<!--visible>VideoPlayer.HasMenu</visible-->
+			</control>
+				
 			<!-- control type="button" id="15">
 				
 				<description>playlist</description>
