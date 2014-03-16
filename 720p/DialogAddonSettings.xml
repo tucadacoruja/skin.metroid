@@ -78,21 +78,36 @@
 			<description>control area</description>
 			<posx>211</posx>
 			<posy>160</posy>
-			<width>690</width>
+			<width>674</width>
 			<height>335</height>
 			<itemgap>0</itemgap>
-			<pagecontrol>30</pagecontrol>
 			<scrolltime>0</scrolltime>
 			<onup>2</onup>
 			<ondown>9</ondown>
 			<onleft>9</onleft>
 			<onright>9001</onright>
-			
+			<pagecontrol>66</pagecontrol>
 		</control>
 		
-		<control type="scrollbar" id="30">
-			<posx>1300</posx>
-			<visible>false</visible>
+		<control type="scrollbar" id="66">
+			<texturesliderbackground>buttons/scrollbgV.png</texturesliderbackground>
+			<texturesliderbar>-</texturesliderbar>
+			<texturesliderbarfocus>-</texturesliderbarfocus>
+			<textureslidernib>buttons/scrollnibV.png</textureslidernib>
+			<textureslidernibfocus>buttons/scrollnibV.png</textureslidernibfocus>
+			<orientation>Vertical</orientation>
+			<showonepage>true</showonepage>
+			<posx>887</posx>
+			<posy>163</posy>
+			<width>10</width>
+			<height>335</height>
+
+			<onleft>450</onleft>
+
+			<onright>9000</onright>
+
+			<animation effect="fade" start="100" end="40" time="200" reversable="false" condition="!Control.HasFocus(66)">Conditional</animation>
+
 		</control>
 		
 		<control type="group" id="9001">

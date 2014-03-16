@@ -256,7 +256,7 @@
 			<textureslidernib>buttons/scrollnibV.png</textureslidernib>
 			<textureslidernibfocus>buttons/scrollnibV.png</textureslidernibfocus>
 			<orientation>Vertical</orientation>
-			<showonepage>false</showonepage>
+			<showonepage>true</showonepage>
 			<posx>886</posx>
 			<posy>185</posy>
 			<width>10</width>

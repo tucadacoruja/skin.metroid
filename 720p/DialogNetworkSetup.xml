@@ -44,7 +44,7 @@
 	<control type="image">
 		<posx>211</posx>
 		<posy>219</posy>
-		<width>689</width>
+		<width>675</width>
 		<height>1</height>
 		<aspectratio>stretch</aspectratio>
 		<texture>white.png</texture>
@@ -53,7 +53,7 @@
 	<control type="image">
 		<posx>211</posx>
 		<posy>255</posy>
-		<width>689</width>
+		<width>675</width>
 		<height>1</height>
 		<aspectratio>stretch</aspectratio>
 		<texture>white.png</texture>
@@ -62,7 +62,7 @@
 	<control type="image">
 		<posx>211</posx>
 		<posy>293</posy>
-		<width>689</width>
+		<width>675</width>
 		<height>1</height>
 		<aspectratio>stretch</aspectratio>
 		<texture>white.png</texture>
@@ -71,7 +71,7 @@
 	<control type="image">
 		<posx>211</posx>
 		<posy>330</posy>
-		<width>689</width>
+		<width>675</width>
 		<height>1</height>
 		<aspectratio>stretch</aspectratio>
 		<texture>white.png</texture>
@@ -80,7 +80,7 @@
 	<control type="image">
 		<posx>211</posx>
 		<posy>367</posy>
-		<width>689</width>
+		<width>675</width>
 		<height>1</height>
 		<aspectratio>stretch</aspectratio>
 		<texture>white.png</texture>
@@ -89,7 +89,7 @@
 	<control type="image">
 		<posx>211</posx>
 		<posy>404</posy>
-		<width>689</width>
+		<width>675</width>
 		<height>1</height>
 		<aspectratio>stretch</aspectratio>
 		<texture>white.png</texture>
@@ -101,7 +101,7 @@
 		<description>Protocol</description>
 		<posx>211</posx>
 		<posy>182</posy>
-		<width>685</width>
+		<width>670</width>
 		<height>37</height>
 		<label>$LOCALIZE[1008]</label>
 		<reverse>no</reverse>
@@ -125,7 +125,7 @@
 		<description>Server Address</description>
 		<posx>211</posx>
 		<posy>219</posy>
-		<width>530</width>
+		<width>511</width>
 		<height>37</height>
 		<aligny>center</aligny>
 		<label></label>
@@ -145,7 +145,7 @@
 	
 	<control type="button" id="12">
 		<description>Server Browse</description>
-		<posx>741</posx>
+		<posx>722</posx>
 		<posy>219</posy>
    		<width>159</width>
 		<height>37</height>
@@ -164,7 +164,7 @@
 		<description>Remote</description>
 		<posx>211</posx>
 		<posy>256</posy>
-		<width>689</width>
+		<width>670</width>
 		<height>37</height>
 		<aligny>center</aligny>
 		<font>recent</font>
@@ -185,7 +185,7 @@
 		<description>Port</description>
 		<posx>211</posx>
 		<posy>293</posy>
-		<width>689</width>
+		<width>670</width>
 		<height>37</height>
 		<aligny>center</aligny>
 		<font>recent</font>
@@ -206,7 +206,7 @@
 		<description>Username</description>
 		<posx>211</posx>
 		<posy>330</posy>
-		<width>689</width>
+		<width>670</width>
 		<height>37</height>
 		<aligny>center</aligny>
 		<font>recent</font>
@@ -227,7 +227,7 @@
 		<description>password</description>
 		<posx>211</posx>
 		<posy>367</posy>
-		<width>689</width>
+		<width>670</width>
 		<height>37</height>
 		<aligny>center</aligny>
 		<font>recent</font>
@@ -245,6 +245,27 @@
 		<ondown>10</ondown>
 	</control>
 
+	<control type="scrollbar" id="65">
+		<texturesliderbackground>buttons/scrollbgV.png</texturesliderbackground>
+		<texturesliderbar>-</texturesliderbar>
+		<texturesliderbarfocus>-</texturesliderbarfocus>
+		<textureslidernib>buttons/scrollnibV.png</textureslidernib>
+		<textureslidernibfocus>buttons/scrollnibV.png</textureslidernibfocus>
+		<orientation>Vertical</orientation>
+		<showonepage>true</showonepage>
+		<posx>887</posx>
+		<posy>181</posy>
+		<width>10</width>
+		<height>335</height>
+
+		<onleft>9001</onleft>
+
+		<onright>9001</onright>
+
+		<animation effect="fade" start="100" end="40" time="200" reversable="false" condition="!Control.HasFocus(65)">Conditional</animation>
+
+	</control>
+		
 		<control type="group" id="9001">
 			<posx>921</posx>
 			<posy>180</posy>

@@ -17,6 +17,7 @@
 
 	
 	<control type="list" id="451">
+		<description>List of available thumbnails</description>
 		<posx>-10</posx>
 		<posy>-10</posy>
 		<width>1</width>
@@ -24,6 +25,7 @@
 		<animation effect="fade" start="1" end="0" time="0" condition="true">Conditional</animation>
 	</control>
 	<control type="radiobutton" id="416">
+		<description>Flip Image horizontally</description>
 		<posx>-10</posx>
 		<posy>-10</posy>
 		<width>1</width>
@@ -95,13 +97,14 @@
 		<control type="list" id="450">
 			<posx>221</posx>
 			<posy>172</posy>
-			<width>689</width>
+			<width>663</width>
 			<height>345</height>
 			<onup>450</onup>
 			<onleft>noop</onleft>
 			<onright>9000</onright>
 			<ondown>450</ondown>
 			<scrolltime>0</scrolltime>
+			<pagecontrol>64</pagecontrol>
 			<animation type="Conditional" condition="Window.IsVisible(128)">
 				<effect type="fade" start="100" end="0" time="400" />
 				<effect type="zoom" start="100" end="80" center="auto" time="300" />
@@ -174,7 +177,27 @@
 			</focusedlayout>
 		</control>
 
+		<control type="scrollbar" id="64">
+			<texturesliderbackground>buttons/scrollbgV.png</texturesliderbackground>
+			<texturesliderbar>-</texturesliderbar>
+			<texturesliderbarfocus>-</texturesliderbarfocus>
+			<textureslidernib>buttons/scrollnibV.png</textureslidernib>
+			<textureslidernibfocus>buttons/scrollnibV.png</textureslidernibfocus>
+			<orientation>Vertical</orientation>
+			<showonepage>true</showonepage>
+			<posx>887</posx>
+			<posy>181</posy>
+			<width>10</width>
+			<height>335</height>
 
+			<onleft>450</onleft>
+
+			<onright>9000</onright>
+
+			<animation effect="fade" start="100" end="40" time="200" reversable="false" condition="!Control.HasFocus(64)">Conditional</animation>
+
+		</control>
+		
  		<control type="group" id="9000">
 			<posx>921</posx>
 			<posy>170</posy>

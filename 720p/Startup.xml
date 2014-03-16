@@ -4,10 +4,14 @@
     <defaultcontrol always="true">10</defaultcontrol>
     <allowoverlay>no</allowoverlay>
 	<backgroundcolor>0</backgroundcolor>
-	<animation effect="fade" time="800">WindowOpen</animation>
-    <animation effect="fade" time="200">WindowClose</animation>
-
+	
+	<onload condition="Skin.HasSetting(WidgetVisibility)">Skin.ToggleSetting(WidgetVisibility)</onload>
+	
 <controls>
+
+	<animation effect="fade" start="0" end="100" time="800">WindowOpen</animation>
+    <animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
+	
     <control type="button" id="10">
         <description>trigger</description>
         <onfocus>SetFocus(11)</onfocus>
@@ -40,7 +44,7 @@
 	</control>
 	
 	<control type="group">
-		<animation effect="fade" start="0" end="100" time="300" delay="600" >WindowOpen</animation>
+		<animation effect="fade" start="0" end="100" time="300" delay="700" >WindowOpen</animation>
 		<include>Loading</include>
 	</control>
 	

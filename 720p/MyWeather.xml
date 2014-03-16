@@ -38,7 +38,7 @@
 	
 <control type="group">	
 	<posx>70</posx>
-	<posy>85</posy>
+	<posy>88</posy>
 		<include>Favourites</include>
 
 		<animation type="WindowClose" reversible="false">
@@ -67,7 +67,7 @@
 		<height>215</height>
 		<aspectratio>stretch</aspectratio>
 		<texture>white.png</texture>
-		<animation effect="fade" start="4" end="14" pulse="true" time="5000" condition="true">Conditional</animation>
+		<animation effect="fade" start="4" end="18" pulse="true" time="5000" condition="true">Conditional</animation>
 	</control>
 	<control type="image">
 		<posx>645</posx>
@@ -76,7 +76,7 @@
 		<height>215</height>
 		<aspectratio>stretch</aspectratio>
 		<texture>white.png</texture>
-		<animation effect="fade" start="4" end="14" pulse="true" time="5000" delay="5000" condition="true">Conditional</animation>
+		<animation effect="fade" start="4" end="18" pulse="true" time="5000" delay="5000" condition="true">Conditional</animation>
 	</control>
 	
 	<control type="image">
@@ -86,7 +86,7 @@
 		<height>215</height>
 		<aspectratio>stretch</aspectratio>
 		<texture>white.png</texture>
-		<animation effect="fade" start="4" end="14" pulse="true" time="5000" delay="5000" condition="true">Conditional</animation>
+		<animation effect="fade" start="4" end="18" pulse="true" time="5000" delay="5000" condition="true">Conditional</animation>
 	</control>
 	<control type="image">
 		<posx>905</posx>
@@ -95,7 +95,7 @@
 		<height>215</height>
 		<aspectratio>stretch</aspectratio>
 		<texture>white.png</texture>
-		<animation effect="fade" start="4" end="14" pulse="true" time="5000" condition="true">Conditional</animation>
+		<animation effect="fade" start="4" end="18" pulse="true" time="5000" condition="true">Conditional</animation>
 	</control>
 	
 	<control type="image">

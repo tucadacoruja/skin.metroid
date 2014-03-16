@@ -126,12 +126,12 @@
 		<height>420</height>
 		<itemgap>3</itemgap>
 		<orientation>vertical</orientation>
-		<pagecontrol>60</pagecontrol>
+
 		<onleft>60</onleft>
-		<onright>noop</onright>
+		<onright>67</onright>
 		<onup>28</onup>
 		<ondown>28</ondown>
-		<pagecontrol>603</pagecontrol>
+		<pagecontrol>67</pagecontrol>
 	</control>
 	
 	<control type="button" id="28">
@@ -160,17 +160,19 @@
 		<include>BottomDialog</include>
 	</control>
 	
-	<control type="scrollbar" id="603">
+	<control type="scrollbar" id="67">
 		<posx>940</posx>
 		<posy>120</posy>
-		<width>5</width>
+		<width>7</width>
 		<height>400</height>
-		<visible>true</visible>
+
 		<texturesliderbackground>white2.png</texturesliderbackground>
+		<textureslidernib>white3v.png</textureslidernib>
 		<textureslidernibfocus>white3v.png</textureslidernibfocus>
+		
 		<onleft>5</onleft>
 		<onright>5</onright>
-		<showonepage>false</showonepage>
+		<showonepage>true</showonepage>
 		<orientation>vertical</orientation>
 		
 	</control>

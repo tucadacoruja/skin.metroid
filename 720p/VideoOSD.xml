@@ -450,7 +450,7 @@
 				<texture>osd/osdbg.png</texture>
 				<aspectratio>stretch</aspectratio>
 				<animation effect="fade" start="100" end="60" time="100" condition="Control.HasFocus(214)">Conditional</animation>
-				<!--visible>VideoPlayer.HasMenu</visible-->
+				<visible>VideoPlayer.HasMenu</visible>
 				
 			</control>
 			
@@ -674,7 +674,7 @@
 								
 				<animation effect="zoom" start="100" end="120" center="auto" time="100">Focus</animation>
 				<animation effect="zoom" start="120" end="100" center="auto" time="100">UnFocus</animation>
-				<!--visible>VideoPlayer.HasMenu</visible-->
+				<visible>VideoPlayer.HasMenu</visible>
 			</control>
 				
 			<!-- control type="button" id="15">

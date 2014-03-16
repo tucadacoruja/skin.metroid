@@ -595,7 +595,7 @@
 		<control type="grouplist">
 			
 			<height>300</height>
-			<visible>!IsEmpty(Skin.String(PluginWidgetPath1))</visible>
+			<visible>!IsEmpty(Skin.String(PluginWidgetPath1)) + Skin.HasSetting(WidgetVisibility)</visible>
 			<orientation>horizontal</orientation>
 			<usecontrolcoords>true</usecontrolcoords>
 			<align>left</align>
@@ -616,6 +616,7 @@
 			
 			<control type="group">
 				<posx>-20</posx>
+				<visible>!IsEmpty(Container(8004).ListItem(1).Art(thumb))</visible>
 				
 				<control type="image">
 					<description>shadow</description>
@@ -662,7 +663,7 @@
 			</control>
 					
 			<control type="panel" id="8004">
-				<viewtype label="PluginWidget1">icon</viewtype>
+				<viewtype>icon</viewtype>
 				<posx>380</posx>
 				<posy>20</posy>
 				<width>500</width>
@@ -677,7 +678,7 @@
 				<onup condition="Control.IsVisible(8003)">8003</onup>
 				
 				<ondown condition="Control.IsVisible(8005)">8005</ondown>
-								
+		
 				<itemlayout width="185" height="135">
 					
 					<control type="image">
@@ -746,7 +747,7 @@
 		<control type="grouplist">
 			
 			<height>300</height>
-			<!--visible>!IsEmpty(Skin.String(PluginWidgetPath2))</visible-->
+			<visible>!IsEmpty(Skin.String(PluginWidgetPath2)) + Skin.HasSetting(WidgetVisibility)</visible>
 			<orientation>horizontal</orientation>
 			<usecontrolcoords>true</usecontrolcoords>
 			<align>left</align>
@@ -767,7 +768,7 @@
 			
 			<control type="group">
 				<posx>-20</posx>
-				
+				<visible>!IsEmpty(Container(8005).ListItem(1).Art(thumb))</visible>
 				<control type="image">
 					<description>shadow</description>
 					<posx>0</posx>
@@ -827,7 +828,7 @@
 				<onup condition="![Control.IsVisible(8004) | Control.IsVisible(8003)] + Control.IsVisible(8002)">8002</onup>
 				<onup condition="!Control.IsVisible(8004) + Control.IsVisible(8003)">8003</onup>
 				<onup condition="Control.IsVisible(8004)">8004</onup>
-				
+
 				<itemlayout width="185" height="135">
 					
 					<control type="image">
@@ -884,7 +885,7 @@
 					</control>
 					
 				</focusedlayout>
-				<!-- content target="video">plugin://plugin.video.youtube/?login=true%26path=%2froot%2fplaylists%26playlist=PL29685DF58E70D8FD%26user_feed=playlist</content -->
+				<!-- content target="video">plugin://plugin.video.youtube/?contact=trailers&amp;external=true&amp;feed=uploads&amp;login=false&amp;path=%2froot%2fexplore%2ftrailers</content -->
 				<content target="video">$INFO[Skin.String(PluginWidgetPath2)]</content>
 			</control>	
 		</control>	
