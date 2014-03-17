@@ -3,7 +3,7 @@
 <defaultcontrol always="true">50</defaultcontrol>
 <backgroundcolor>0</backgroundcolor>
 <allowoverlay>yes</allowoverlay>
-<views>59,602,603,50</views> 
+<views>50,602,603</views> 
 
 <controls>
  
@@ -123,9 +123,10 @@
 
 
 
-<include>Polaroid</include>
+
 <include>List</include>
 <include>Panel</include><!-- -603 --> 
+<include>Polaroid</include>
 
 <include>BottomInfoBar</include>
  

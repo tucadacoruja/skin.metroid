@@ -10,7 +10,7 @@
 	<posy>-10</posy>
 	<width>1</width>
 	<height>1</height>
-	<animation effect="fade" start="1" end="0" time="0" condition="true">Conditional</animation>
+	<visible>false</visible>
 </control>
 
 
@@ -84,7 +84,7 @@
 			
 			<control type="button" id="95">
 				<label>$LOCALIZE[128]</label>
-				<description>Default Button</description>
+				<description>Summary</description>
 				<align>left</align>
 				<textoffsetx>23</textoffsetx>
 				<height>50</height>
@@ -97,8 +97,8 @@
 				<texturenofocus>-</texturenofocus>
 			</control>
 			
-			<!-- causes crash -->
-			<!-- control type="button" id="94">
+
+			<control type="button" id="94">
 				<description>Storage</description>
 				<label>$LOCALIZE[13277]</label>
 				<align>left</align>
@@ -111,7 +111,7 @@
 				<disabledcolor>12ffffff</disabledcolor>
 				<texturefocus>category.png</texturefocus>
 				<texturenofocus>-</texturenofocus>
-      		</control -->
+      		</control>
 			<control type="button" id="96">
 				<description>Network</description>
 				<label>$LOCALIZE[13279]</label>
@@ -154,8 +154,8 @@
 				<texturefocus>category.png</texturefocus>
 				<texturenofocus>-</texturenofocus>
 			</control>
-      		<control type="button" id="99">
-        		<description>HDD</description>
+      		<!--control type="button" id="99">
+        		<description>PVR</description>
         		<label>$LOCALIZE[13275]</label>
 				<align>left</align>
 				<textoffsetx>23</textoffsetx>
@@ -167,7 +167,7 @@
 				<disabledcolor>12ffffff</disabledcolor>
 				<texturefocus>category.png</texturefocus>
 				<texturenofocus>-</texturenofocus>
-			</control>
+			</control-->
 			
 		</control>
 		

@@ -8,7 +8,8 @@
 
 		<include>InfoOpenClose</include>
 		<include>MusicInfoOpenClose</include>
-		
+		<include>AddSource</include>
+		<include>Favourites</include>
 		<include>ContextFade</include>	
 		<include>Keyboard</include>
 		<include>WidgetsAnimation</include>
@@ -31,7 +32,7 @@
 			<onright>noop</onright>
 			<pagecontrol>63</pagecontrol>
 			<visible>Container.Content(songs) | Window.IsVisible(pictures)</visible>
-			<visible>!Window.IsVisible(favourites)</visible>
+
 			<itemlayout width="633" height="45">
 					<control type="label">
 						<posy>0</posy>
@@ -277,7 +278,8 @@
 				<texture background="true" border="5">white.png</texture>
 				<bordertexture border="5">whiteborder.png</bordertexture>
 				<bordersize>5</bordersize>
-				<visible>IsEmpty(ListItem.Art(thumb))</visible>
+				<visible>IsEmpty(ListItem.Art(thumb)) | Window.IsVisible(pictures)</visible>
+			
 				<colordiffuse>FFD7D7D7</colordiffuse>
 			</control>
 			<control type="image">
@@ -301,6 +303,7 @@
 				<bordertexture border="5">whiteborder.png</bordertexture>
 				<bordersize>5</bordersize>
 				<visible>!IsEmpty(ListItem.Art(thumb))</visible>
+				<visible>!Window.IsVisible(pictures)</visible>
 				<animation effect="fade" start="0" end="80" time="0" condition="true">Conditional</animation>
 			</control>
 			<control type="image">
@@ -315,9 +318,9 @@
 			
 			<control type="image">
 				<description>white image</description>
-				<posx>112</posx>
+				<posx>113</posx>
 				<posy>479</posy>
-				<width>420</width>
+				<width>418</width>
 				<height>120</height>
 				
 				<aspectratio>stretch</aspectratio>
@@ -361,7 +364,7 @@
 			<texturesliderbackground>buttons/scrollbgV.png</texturesliderbackground>
 			<texturesliderbar>-</texturesliderbar>
 			<texturesliderbarfocus>-</texturesliderbarfocus>
-			<textureslidernib>-</textureslidernib>
+			<textureslidernib>buttons/scrollnibV.png</textureslidernib>
 			<textureslidernibfocus>buttons/scrollnibV.png</textureslidernibfocus>
 			<orientation>Vertical</orientation>
 			<showonepage>true</showonepage>
