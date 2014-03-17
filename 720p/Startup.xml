@@ -5,7 +5,7 @@
     <allowoverlay>no</allowoverlay>
 	<backgroundcolor>0</backgroundcolor>
 	
-	<onload condition="Skin.HasSetting(WidgetVisibility)">Skin.ToggleSetting(WidgetVisibility)</onload>
+	<onload condition="!Skin.HasSetting(WidgetVisibility)">Skin.ToggleSetting(WidgetVisibility)</onload>
 	
 <controls>
 

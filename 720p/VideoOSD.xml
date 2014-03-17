@@ -453,6 +453,14 @@
 				<visible>VideoPlayer.HasMenu</visible>
 				
 			</control>
+			<control type="image">
+				<height>60</height>
+				<width>60</width>
+				<texture>osd/osdbg.png</texture>
+				<aspectratio>stretch</aspectratio>
+				<animation effect="fade" start="100" end="60" time="100" condition="Control.HasFocus(215)">Conditional</animation>
+					
+			</control>
 			
 			<!-- control type="image">
 				<height>60</height>
@@ -675,6 +683,22 @@
 				<animation effect="zoom" start="100" end="120" center="auto" time="100">Focus</animation>
 				<animation effect="zoom" start="120" end="100" center="auto" time="100">UnFocus</animation>
 				<visible>VideoPlayer.HasMenu</visible>
+			</control>
+			
+			<control type="button" id="215">
+				
+				<description>dvd menu</description>
+				<height>60</height>
+				<width>60</width>
+				<aspectratio>keep</aspectratio>
+				<texturefocus>osd/cancel.png</texturefocus>
+				<texturenofocus>osd/cancel.png</texturenofocus>
+				
+				<onclick>back</onclick>
+								
+				<animation effect="zoom" start="100" end="120" center="auto" time="100">Focus</animation>
+				<animation effect="zoom" start="120" end="100" center="auto" time="100">UnFocus</animation>
+				<visible>Skin.HasSetting(HideGlobalBack)</visible>
 			</control>
 				
 			<!-- control type="button" id="15">

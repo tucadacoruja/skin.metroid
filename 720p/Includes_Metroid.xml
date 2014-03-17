@@ -595,7 +595,7 @@
 		<control type="grouplist">
 			
 			<height>300</height>
-			<visible>!IsEmpty(Skin.String(PluginWidgetPath1)) + Skin.HasSetting(WidgetVisibility)</visible>
+			<visible>!IsEmpty(Skin.String(PluginWidgetPath1))</visible>
 			<orientation>horizontal</orientation>
 			<usecontrolcoords>true</usecontrolcoords>
 			<align>left</align>
@@ -747,7 +747,7 @@
 		<control type="grouplist">
 			
 			<height>300</height>
-			<visible>!IsEmpty(Skin.String(PluginWidgetPath2)) + Skin.HasSetting(WidgetVisibility)</visible>
+			<visible>!IsEmpty(Skin.String(PluginWidgetPath2))</visible>
 			<orientation>horizontal</orientation>
 			<usecontrolcoords>true</usecontrolcoords>
 			<align>left</align>

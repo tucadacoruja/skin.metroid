@@ -311,6 +311,8 @@
 			</control>
 		</control>
 	</control>
+	
+	<include>LowBattery</include>
 </controls>
   
 </window>

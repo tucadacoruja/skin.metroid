@@ -458,7 +458,7 @@
 	
 	<include name="LowBattery">
 		<control type="group">
-			<visible>StringCompare(System.BatteryLevel,5%) | StringCompare(System.BatteryLevel,4%) | StringCompare(System.BatteryLevel,3%) | StringCompare(System.BatteryLevel,2%) | StringCompare(System.BatteryLevel,1%) | StringCompare(System.BatteryLevel,0%)</visible>
+			<visible>StringCompare(System.BatteryLevel,5%) | StringCompare(System.BatteryLevel,4%) | StringCompare(System.BatteryLevel,3%) | StringCompare(System.BatteryLevel,2%) | StringCompare(System.BatteryLevel,1%)</visible>
 			
 			<animation effect="fade" start="0" end="100" time="100">Visible</animation>
 			<animation effect="fade" start="100" end="0" delay="500" time="300">Hidden</animation>

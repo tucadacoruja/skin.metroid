@@ -16,9 +16,9 @@
 
 <onload condition="IsEmpty(Skin.String(FirstRunTouch))">ActivateWindow(9506)</onload>
 
-<onunload condition="Skin.HasSetting(WidgetVisibility)">Skin.ToggleSetting(WidgetVisibility)</onunload>
-<onload condition="Skin.HasSetting(WidgetVisibility)">Skin.ToggleSetting(WidgetVisibility)</onload>
-<onload>AlarmClock(WidgetDelay,Skin.ToggleSetting(WidgetVisibility),00:01,silent)</onload>
+<!--onunload condition="Skin.HasSetting(WidgetVisibility)">Skin.Reset(WidgetVisibility)</onunload>
+<onload condition="Skin.HasSetting(WidgetVisibility)">Skin.Reset(WidgetVisibility)</onload-->
+<onload>AlarmClock(WidgetDelay,Skin.Reset(WidgetVisibility),00:02,silent)</onload>
 
 <allowoverlay>yes</allowoverlay>
 	<coordinates>
@@ -65,7 +65,6 @@
 <onup>63</onup>
 
 <itemgap>0</itemgap>
-<include>Favourites</include>
 <include>WidgetsAnimation</include>
 
 <include>RecentMoviePanel</include>
@@ -77,8 +76,9 @@
 <include>PluginWidget1</include>
 <include>PluginWidget2</include>
 
-<visible>Skin.HasSetting(WidgetVisibility) + [Control.IsVisible(8000) | Control.IsVisible(8001) | Control.IsVisible(8002) | Control.IsVisible(8003) | Control.IsVisible(8004) | Control.IsVisible(8005)]</visible>
+<visible>[Control.IsVisible(8000) | Control.IsVisible(8001) | Control.IsVisible(8002) | Control.IsVisible(8003) | Control.IsVisible(8004) | Control.IsVisible(8005)] + !Skin.HasSetting(WidgetVisibility)</visible>
 <animation effect="fade" start="100" end="0" time="150" condition="Window.IsVisible(numericinput) | Window.IsVisible(virtualkeyboard)">Conditional</animation>	  
+<include>Favourites</include>
 <pagecontrol>63</pagecontrol>
 </control>
 

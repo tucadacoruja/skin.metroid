@@ -48,7 +48,6 @@
 				<height>48</height>
 				<texture>MetroidMenu.png</texture>
 				<aspectratio>stretch</aspectratio>
-				<!-- colordiffuse>ff262626</colordiffuse -->
 			</control>
 			<control type="label">
 				<posx>380</posx>
@@ -76,20 +75,18 @@
 				<posx>22</posx>
 				<posy>0</posy>
 				<width>376</width>
-				<height>195</height>
+				<height>245</height>
 				<texture>MetroidMenu.png</texture>
 				<aspectratio>stretch</aspectratio>
-				<!-- colordiffuse>ff262626</colordiffuse -->
 			</control>
 			<control type="image" id="3">
 				<description>background image</description>
 				<posx>22</posx>
 				<posy>195</posy>
 				<width>376</width>
-				<height>10</height>
+				<height>15</height>
 				<texture>MetroidMenu.png</texture>
 				<aspectratio>stretch</aspectratio>
-				<!-- colordiffuse>ff262626</colordiffuse -->
 			</control>
 		</control>
 
@@ -99,7 +96,7 @@
 		<control type="grouplist">
 			
 			<posx>442</posx>
-			<posy>-69</posy>
+			<posy>-30</posy>
 			<width>401</width>
 			<itemgap>0</itemgap>
 			<align>center</align>
@@ -195,6 +192,25 @@
 				<label>31052</label>
 				<enable>System.HasLoginScreen | IntegerGreaterThan(System.ProfileCount,1)</enable>
                 <enable>System.Loggedon</enable>
+			</control>
+			
+			<control type="button" id="17">
+				<description>Skin refresh</description>
+				<font>context</font>
+				<textcolor>darklist</textcolor>
+				<focusedcolor>white</focusedcolor>
+				<disabledcolor>95000000</disabledcolor>
+				<texturefocus>white.png</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<width>376</width>
+				<height>40</height>
+				<onclick>Dialog.Close(all,true)</onclick>
+				<onclick>ReloadSkin()</onclick>
+				<align>left</align>
+				<aligny>top</aligny>
+				<colordiffuse>skin.string(MainColorString)</colordiffuse>
+				<label>$LOCALIZE[31245]</label>
+
 			</control>
 	
 			

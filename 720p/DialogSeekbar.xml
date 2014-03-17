@@ -29,7 +29,7 @@
 			<animation effect="fade" start="100" end="0" delay="1700" time="300" condition="!Skin.HasSetting(AnimationTiming)">Conditional</animation>
 		</control>
 		
-		<include>LowBattery"</include>
+		<include>LowBattery</include>
 		
 		<control type="group">
 			<posx>0</posx>
