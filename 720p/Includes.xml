@@ -436,6 +436,7 @@
 				<height>55</height>
 				<texture>osd/GrayBackground.png</texture>
 				<animation effect="slide" start="0,0" end="60,0" time="200" tween="quadratic" easing="out" condition="Window.Isvisible(musicplaylist) | Window.Isvisible(videoplaylist)">Conditional</animation>
+			
 			</control>
 			<control type="label">
 				<posx>0</posx>
@@ -451,6 +452,11 @@
 			</control>
 						
 		</control>
+		<include>LowBattery</include>
+		
+	</include>
+	
+	<include name="LowBattery">
 		<control type="group">
 			<visible>StringCompare(System.BatteryLevel,5%) | StringCompare(System.BatteryLevel,4%) | StringCompare(System.BatteryLevel,3%) | StringCompare(System.BatteryLevel,2%) | StringCompare(System.BatteryLevel,1%) | StringCompare(System.BatteryLevel,0%)</visible>
 			
@@ -465,6 +471,7 @@
 				<height>55</height>
 				<texture>osd/GrayBackground.png</texture>
 				<animation effect="slide" start="0,0" end="60,0" time="200" tween="quadratic" easing="out" condition="Window.Isvisible(musicplaylist) | Window.Isvisible(videoplaylist)">Conditional</animation>
+				<visible>![Window.IsVisible(seekbar) | Window.IsVisible(visualisation)]</visible>
 			</control>
 			<control type="image">
 				<posx>0</posx>
@@ -477,10 +484,7 @@
 			</control>
 						
 		</control>
-		
 	</include>
-	
-	
 	
 	<include name="EmptyMenu">
 		<control type="list">
