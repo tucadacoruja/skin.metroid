@@ -114,7 +114,7 @@
 </control>
 
 <include>BottomInfoBar</include>
- 
+<include>ScrollOffsetLabel</include>
 
 </controls>
   

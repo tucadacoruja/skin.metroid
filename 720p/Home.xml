@@ -130,7 +130,7 @@
 	<texture flipy="true">BackMenu.png</texture>
 </control>
 <include>BottomInfoBar</include>
-
+<include>ScrollOffsetLabel</include>
 
 <include>Holiday</include>
  

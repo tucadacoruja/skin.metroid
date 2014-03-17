@@ -95,8 +95,6 @@
 <include>List</include>
 <include>Panel</include><!-- -603 --> 
 
-<include>ScrollOffsetLabel</include>
-
 <control type="image">
 	<posx>10</posx>
 	<posy>10</posy>
@@ -113,7 +111,7 @@
 </control>
 
 <include>BottomInfoBar</include>
- 
+<include>ScrollOffsetLabel</include>
     
 </controls>
 
