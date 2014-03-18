@@ -1,3 +1,7 @@
+[B]0.1.5[/B]
+- Live tv Channel switching added.
+- Loads of fixes
+
 [B]0.1.2[/B]
 - Layout improvements.
 - Bugs.
