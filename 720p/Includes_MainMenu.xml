@@ -416,6 +416,14 @@
 						</item>
 						<include condition="!Skin.HasSetting(AddonHome)">AddonSubItems</include>
 						
+						<item id="41">
+							<label>Live Tv</label>
+							<onclick>ActivateWindow(PVR)</onclick>
+							<icon>-</icon>
+							<thumb>-</thumb>
+							<visible>System.GetBool(pvrmanager.enabled)</visible>
+						</item>
+						
 						<item id="123">
 							<description>Custom Favourite 4</description>
 							<label>$INFO[Skin.String(CustomFavName4)]</label>
@@ -507,13 +515,7 @@
 							<visible>Skin.HasSetting(cust_favorite)</visible>
 						</item>
 									  
-						<!--  item id="41">
-							<label>Live Tv</label>
-							<onclick>ActivateWindow(PVR)</onclick>
-							<icon>-</icon>
-							<thumb>-</thumb>
-							<visible>System.GetBool(pvrmanager.enabled)</visible>
-						</item  -->
+						
 												
 					</content>		
 		</control>

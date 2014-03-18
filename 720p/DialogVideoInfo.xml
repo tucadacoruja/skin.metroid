@@ -425,7 +425,7 @@
 								<posy>0</posy>
 								<width>380</width>
 								<height>215</height>
-								
+								<visible>!Control.HasFocus(50)</visible>
 							</control>
 						</control>
 						
@@ -439,7 +439,7 @@
 							<texturenofocus>empty.png</texturenofocus>
 							<colordiffuse>FF959595</colordiffuse>
 							<pulseonselect>true</pulseonselect>
-							<!--onfocus condition="!Control.IsVisible(50)">SendClick(2003,5)</onfocus-->
+							<onfocus condition="!Control.IsVisible(50)">SendClick(2003,5)</onfocus>
 							<onfocus>SetFocus(50)</onfocus>
 							<onleft>8</onleft>
 							<onright>50</onright>
@@ -783,7 +783,8 @@
 			<height>650</height>
 			<texturefocus>empty.png</texturefocus>
 			<texturenofocus>empty.png</texturenofocus>
-			<onfocus>SetFocus(50)</onfocus>
+
+			<onfocus>SetFocus(9001)</onfocus>
 			<visible>!Control.HasFocus(50)</visible>
 		</control>
 

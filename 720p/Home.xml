@@ -16,9 +16,7 @@
 
 <onload condition="IsEmpty(Skin.String(FirstRunTouch))">ActivateWindow(9506)</onload>
 
-<!--onunload condition="Skin.HasSetting(WidgetVisibility)">Skin.Reset(WidgetVisibility)</onunload>
-<onload condition="Skin.HasSetting(WidgetVisibility)">Skin.Reset(WidgetVisibility)</onload-->
-<onload>AlarmClock(WidgetDelay,Skin.Reset(WidgetVisibility),00:02,silent)</onload>
+<onload condition="Window.Previous(startup)">AlarmClock(WidgetDelay,Skin.Reset(WidgetVisibility),00:02,silent)</onload>
 
 <allowoverlay>yes</allowoverlay>
 	<coordinates>
@@ -35,9 +33,7 @@
 	<width>1</width>
 	<height>1</height>
 	<description>hack</description>
-	<label>-</label>
 	<onfocus>SetFocus(4000)</onfocus>
-	
 </control>
 
 <include>VideoWindow</include>
@@ -78,6 +74,9 @@
 
 <visible>[Control.IsVisible(8000) | Control.IsVisible(8001) | Control.IsVisible(8002) | Control.IsVisible(8003) | Control.IsVisible(8004) | Control.IsVisible(8005)] + !Skin.HasSetting(WidgetVisibility)</visible>
 <animation effect="fade" start="100" end="0" time="150" condition="Window.IsVisible(numericinput) | Window.IsVisible(virtualkeyboard)">Conditional</animation>	  
+<animation effect="fade" start="100" end="0" time="1" >WindowClose</animation>	  
+<animation effect="fade" start="100" end="0" time="1" >Hidden</animation>	  
+<animation effect="fade" start="0" end="100" time="100" >Visible</animation>	  
 <include>Favourites</include>
 <pagecontrol>63</pagecontrol>
 </control>

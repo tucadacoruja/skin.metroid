@@ -241,7 +241,7 @@
 				<bordertexture border="3">blue3.png</bordertexture>
 				<bordersize>3</bordersize>
 				<texture background="true" diffuse="diffuse/posterdiffuse.png" fallback="DefaultAlbumCover.png">$INFO[ListItem.Art(poster)]</texture>
-				<fadetime>500</fadetime>
+				<fadetime>400</fadetime>
 			</control>
 			<control type="image">
 				<posx>40</posx>

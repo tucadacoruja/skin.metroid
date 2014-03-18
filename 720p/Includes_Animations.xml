@@ -4,16 +4,16 @@
 	<include name="WidgetsAnimation">
 		<animation type="Visible" reversible="false">
 			<!--effect type="fade" start="0" end="100" time="750" delay="200" /-->
-			<effect type="zoom" start="1" end="100" time="370" center="900,360" delay="0" />
-			<effect type="slide" start="1780,0" end="0,0" time="300" delay="0" reversible="false" />
+			<effect type="zoom" start="1" end="100" time="270" center="1000,300" delay="10"/>
+			<effect type="slide" start="1780,0" end="0,0" time="300" delay="10"tween="circle" easing="out"/>
 		</animation>
 		<animation type="Hidden" reversible="false">
 			<effect type="fade" start="100" end="0" time="100" delay="0" />
 		</animation>
 		<animation type="WindowOpen" reversible="false">
 			<!-- effect type="fade" start="0" end="100" time="950" / --> <!-- fade in both WindowOpen and Visible causes problem, never reaching 100% -->
-			<effect type="zoom" start="1" end="100" time="370" center="900,360" delay="0" />
-			<effect type="slide" start="1780,0" end="0,0" time="300" delay="0" reversible="false" />
+			<effect type="zoom" start="1" end="100" time="270" center="1000,300" delay="10" />
+			<effect type="slide" start="1780,0" end="0,0" time="300" delay="10" tween="circle" easing="out"/>
 		</animation>
 		<animation type="WindowClose" reversible="false">
 			<effect type="fade" start="100" end="0" time="100" delay="0" />

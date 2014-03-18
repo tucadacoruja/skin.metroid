@@ -1,0 +1,318 @@
+<window>
+	<defaultcontrol always="true">11</defaultcontrol>
+	<coordinates>
+		<system>1</system>
+		<posx>0</posx>
+		<posy>0</posy>
+	</coordinates>
+	<!--include>dialogeffect</include-->
+	<controls>
+	
+		<control type="button" id="9000">
+			<posx>150</posx>
+			<posy>100</posy>
+			<width>600</width>
+			<height>520</height>
+			<description>fullscreen back button</description>
+			<aspectratio>stretch</aspectratio>
+			<texturefocus>empty.png</texturefocus>
+			<texturenofocus>empty.png</texturenofocus>
+			
+			<onclick>back</onclick>
+			<animation effect="fade" start="1" end="1" time="0" condition="true">Conditional</animation>
+		</control>
+	
+		<control type="group">
+			<posx>835</posx>
+			<posy>0</posy>
+			<control type="image">
+				<description>background image</description>
+				<posx>5</posx>
+				<posy>0</posy>
+				<width>480</width>
+				<height>720</height>
+				<texture background="true">BlueBackground.png</texture>
+				<colordiffuse>55555555</colordiffuse>
+				<aspectratio>stretch</aspectratio>
+			</control>
+			
+			<control type="list" id="11">
+				<posx>20</posx>
+				<posy>15</posy>
+				<width>410</width>
+				<height>690</height>
+				<onleft>60</onleft>
+				<onright>60</onright>
+				<onup>11</onup>
+				<ondown>11</ondown>
+				<viewtype label="PVROSD">list</viewtype>
+				<pagecontrol>60</pagecontrol>
+				<scrolltime>200</scrolltime>
+				<itemlayout height="70" width="410">
+					<control type="image">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>410</width>
+						<height>65</height>
+						<texture border="5">BlueBackground.png</texture>
+						<colordiffuse>95555555</colordiffuse>
+						<bordertexture border="3">white.png</bordertexture>
+						<bordersize>0,3,0,0</bordersize>
+						<aspectratio>stretch</aspectratio>
+						<animation effect="fade" start="1" end="70" time="0" condition="true">Conditional</animation>
+					</control>
+					<control type="label">
+						<posx>8</posx>
+						<posy>0</posy>
+						<width>40</width>
+						<height>30</height>
+						<font>font12</font>
+						<align>left</align>
+						<aligny>center</aligny>
+						<textcolor>white</textcolor>
+						<selectedcolor>grey2</selectedcolor>
+						<info>ListItem.ChannelNumber</info>
+					</control>
+					<control type="image">
+						<posx>5</posx>
+						<posy>35</posy>
+						<width>30</width>
+						<height>20</height>
+						<texture>PVR-IsRecording.png</texture>
+						<visible>ListItem.IsRecording</visible>
+					</control>
+					<control type="label">
+						<posx>50</posx>
+						<posy>0</posy>
+						<width>350</width>
+						<height>25</height>
+						<font>font13</font>
+						<textcolor>white</textcolor>
+						<selectedcolor>selected</selectedcolor>
+						<align>left</align>
+						<aligny>center</aligny>
+						<label>$INFO[ListItem.Label]</label>
+					</control>
+					<control type="label">
+						<posx>50</posx>
+						<posy>25</posy>
+						<width>350</width>
+						<height>20</height>
+						<font>font12</font>
+						<textcolor>white</textcolor>
+						<selectedcolor>grey2</selectedcolor>
+						<align>left</align>
+						<aligny>center</aligny>
+						<label>$INFO[ListItem.Title]</label>
+						<visible>IsEmpty(Listitem.Icon)</visible>
+					</control>
+					<control type="label">
+						<posx>50</posx>
+						<posy>25</posy>
+						<width>300</width>
+						<height>20</height>
+						<font>font12</font>
+						<textcolor>white</textcolor>
+						<selectedcolor>grey2</selectedcolor>
+						<align>left</align>
+						<aligny>center</aligny>
+						<label>$INFO[ListItem.Title]</label>
+						<visible>!IsEmpty(Listitem.Icon)</visible>
+					</control>
+					<control type="label">
+						<posx>50</posx>
+						<posy>44</posy>
+						<width>60</width>
+						<height>20</height>
+						<font>font10_title</font>
+						<textcolor>blue</textcolor>
+						<selectedcolor>blue</selectedcolor>
+						<aligny>center</aligny>
+						<label>$INFO[ListItem.StartTime]</label>
+						<visible>ListItem.HasEpg</visible>
+					</control>
+					<control type="progress">
+						<description>Progressbar</description>
+						<posx>110</posx>
+						<posy>53</posy>
+						<width>230</width>
+						<height>6</height>
+						<colordiffuse>88FFFFFF</colordiffuse>
+						<info>ListItem.Progress</info>
+						<visible>ListItem.HasEpg</visible>
+					</control>
+					<control type="label">
+						<posx>355</posx>
+						<posy>44</posy>
+						<width>60</width>
+						<height>20</height>
+						<font>font10_title</font>
+						<textcolor>blue</textcolor>
+						<selectedcolor>blue</selectedcolor>
+						<aligny>center</aligny>
+						<label>$INFO[ListItem.EndTime]</label>
+						<visible>ListItem.HasEpg</visible>
+					</control>
+					<control type="image">
+						<posx>360</posx>
+						<posy>4</posy>
+						<width>40</width>
+						<height>40</height>
+						<texture>$INFO[ListItem.Icon]</texture>
+					</control>
+				</itemlayout>
+				<focusedlayout height="70" width="410">
+					<!--control type="image">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>410</width>
+						<height>65</height>
+						<texture border="5">button-nofocus.png</texture>
+						<visible>!Control.HasFocus(11)</visible>
+						<include>VisibleFadeEffect</include>
+					</control-->
+					<control type="image">
+						<posx>-10</posx>
+						<posy>0</posy>
+						<width>400</width>
+						<height>65</height>
+						<aspectratio>stretch</aspectratio>
+						<texture>setting.png</texture>
+						<visible>Control.HasFocus(11)</visible>
+						<animation effect="fade" start="100" end="60" time="0" condition="true">Conditional</animation>
+					</control>
+					<control type="label">
+						<posx>8</posx>
+						<posy>0</posy>
+						<width>40</width>
+						<height>30</height>
+						<font>font12</font>
+						<align>left</align>
+						<aligny>center</aligny>
+						<textcolor>white</textcolor>
+						<selectedcolor>white</selectedcolor>
+						<info>ListItem.ChannelNumber</info>
+					</control>
+					<control type="image">
+						<posx>5</posx>
+						<posy>35</posy>
+						<width>30</width>
+						<height>20</height>
+						<texture>PVR-IsRecording.png</texture>
+						<visible>ListItem.IsRecording</visible>
+					</control>
+					<control type="label">
+						<posx>50</posx>
+						<posy>0</posy>
+						<width>350</width>
+						<height>25</height>
+						<font>font13</font>
+						<textcolor>white</textcolor>
+						<selectedcolor>white</selectedcolor>
+						<align>left</align>
+						<aligny>center</aligny>
+						<label>$INFO[ListItem.Label]</label>
+					</control>
+					<control type="label">
+						<posx>50</posx>
+						<posy>25</posy>
+						<width>350</width>
+						<height>20</height>
+						<font>font12</font>
+						<textcolor>white</textcolor>
+						<selectedcolor>white</selectedcolor>
+						<align>left</align>
+						<aligny>center</aligny>
+						<label>$INFO[ListItem.Title]</label>
+						<visible>IsEmpty(Listitem.Icon)</visible>
+					</control>
+					<control type="label">
+						<posx>50</posx>
+						<posy>25</posy>
+						<width>300</width>
+						<height>20</height>
+						<font>font12</font>
+						<textcolor>white</textcolor>
+						<selectedcolor>white</selectedcolor>
+						<align>left</align>
+						<aligny>center</aligny>
+						<label>$INFO[ListItem.Title]</label>
+						<visible>!IsEmpty(Listitem.Icon)</visible>
+					</control>
+					<control type="label">
+						<posx>50</posx>
+						<posy>44</posy>
+						<width>60</width>
+						<height>20</height>
+						<font>font10_title</font>
+						<textcolor>blue</textcolor>
+						<selectedcolor>blue</selectedcolor>
+						<aligny>center</aligny>
+						<label>$INFO[ListItem.StartTime]</label>
+						<visible>ListItem.HasEpg</visible>
+					</control>
+					<control type="progress">
+						<description>Progressbar</description>
+						<posx>110</posx>
+						<posy>53</posy>
+						<width>230</width>
+						<height>6</height>
+						<colordiffuse>88FFFFFF</colordiffuse>
+						<info>ListItem.Progress</info>
+						<visible>ListItem.HasEpg</visible>
+					</control>
+					<control type="label">
+						<posx>355</posx>
+						<posy>44</posy>
+						<width>60</width>
+						<height>20</height>
+						<font>font10_title</font>
+						<textcolor>blue</textcolor>
+						<selectedcolor>blue</selectedcolor>
+						<aligny>center</aligny>
+						<label>$INFO[ListItem.EndTime]</label>
+						<visible>ListItem.HasEpg</visible>
+					</control>
+					<control type="image">
+						<posx>360</posx>
+						<posy>4</posy>
+						<width>40</width>
+						<height>40</height>
+						<texture>$INFO[ListItem.Icon]</texture>
+					</control>
+				</focusedlayout>
+			</control>
+			<control type="scrollbar" id="60">
+				<posx>365</posx>
+				<posy>10</posy>
+				<width>70</width>
+				<height>700</height>
+				<texturesliderbackground>empty.png</texturesliderbackground>
+				<texturesliderbar>-</texturesliderbar>
+				<texturesliderbarfocus>-</texturesliderbarfocus>
+				<textureslidernib>empty.png</textureslidernib>
+				<textureslidernibfocus>empty.png</textureslidernibfocus>
+				<onleft>11</onleft>
+				<onright>11</onright>
+				<ondown>61</ondown>
+				<onup>61</onup>
+				<showonepage>false</showonepage>
+				<orientation>vertical</orientation>
+			</control>
+			<!--control type="label">
+				<description>Page Count Label</description>
+				<posx>450</posx>
+				<posy>610</posy>
+				<width>400</width>
+				<height>20</height>
+				<font>font12</font>
+				<textcolor>grey</textcolor>
+				<scroll>false</scroll>
+				<align>right</align>
+				<aligny>center</aligny>
+				<label>([COLOR=blue]$INFO[Container(11).NumItems][/COLOR]) $LOCALIZE[19019] - $LOCALIZE[31024] ([COLOR=blue]$INFO[Container(11).CurrentPage]/$INFO[Container(11).NumPages][/COLOR])</label>
+				<include>Window_OpenClose_Animation</include>
+			</control-->
+		</control>
+	</controls>
+</window>

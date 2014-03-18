@@ -58,7 +58,7 @@
 	</variable>
 	
 	<variable name="Info_Image">
-		<value condition="Container.Content(episodes)">$INFO[ListItem.Art(thumb)]</value>
+		<value condition="Container.Content(episodes) | Container.Content(musicvideos)">$INFO[ListItem.Art(thumb)]</value>
 		<value condition="SubString(Container.FolderPath,plugin,left) + IsEmpty(ListItem.Art(fanart))">$INFO[ListItem.Icon]</value>
 		<value>$INFO[ListItem.Art(fanart)]</value>
 	</variable>

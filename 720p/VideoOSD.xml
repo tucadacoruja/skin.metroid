@@ -6,11 +6,11 @@
 	<controls>
 	
 	
-		<control type="group">
+	<control type="group">
 		<posx>1390</posx>
 		<posy>350</posy>
 		<visible>system.getbool(input.enablemouse) + Skin.HasSetting(HideVolumeBar)</visible>
-		<visible>![Window.IsActive(142) | Window.IsActive(10140) | Window.IsActive(osdvideosettings) | Window.IsActive(osdaudiosettings)]</visible>
+		<visible>![Window.IsActive(142) | Window.IsActive(10140) | Window.IsActive(osdvideosettings) | Window.IsActive(osdaudiosettings) | Window.IsVisible(PVROSDChannels)]</visible>
 		<animation effect="rotate" end="90" center="auto" time="0" reversible="false" condition="true">Conditional</animation>
 		
 			<control type="image">
@@ -61,12 +61,12 @@
 				<textureslidernibfocus>osd/seek/OsdSearchNib.png</textureslidernibfocus>
 				<!-- animation effect="fade" end="100" start="30" time="500">focus</animation -->
 			</control>
-		</control>
+	</control>
 			
 		<control type="group">
 			<posx>0</posx>
 			<posy>630</posy>
-			<visible>![Window.IsActive(142) | Window.IsActive(10140) | Window.IsActive(osdvideosettings) | Window.IsActive(osdaudiosettings)]</visible>
+			<visible>![Window.IsActive(142) | Window.IsActive(10140) | Window.IsActive(osdvideosettings) | Window.IsActive(osdaudiosettings) | Window.IsVisible(PVROSDChannels)]</visible>
 		
 			<decscription>bottom bar</decscription>
 			<animation type="Visible">
@@ -346,7 +346,7 @@
 			<onright>50</onright>
 			<focusposition>2</focusposition>
 			
-			<visible>![Window.IsActive(142) | Window.IsActive(145) | Window.IsActive(10140)]</visible>
+			<visible>![Window.IsActive(142) | Window.IsActive(145) | Window.IsActive(10140) | Window.IsVisible(PVROSDChannels)]</visible>
 			
 			
 			<control type="image">
@@ -405,6 +405,7 @@
 				<texture>osd/osdbg.png</texture>
 				<aspectratio>stretch</aspectratio>
 				<animation effect="fade" start="100" end="60" time="100" condition="Control.HasFocus(208)">Conditional</animation>
+				<visible>!VideoPlayer.Content(LiveTV)</visible>
 			</control>
 			<control type="image">
 				<height>60</height>
@@ -426,6 +427,7 @@
 				<texture>osd/osdbg.png</texture>
 				<aspectratio>stretch</aspectratio>
 				<animation effect="fade" start="100" end="60" time="100" condition="Control.HasFocus(211)">Conditional</animation>
+				<visible>!VideoPlayer.Content(LiveTV)</visible>
 			</control>
 			<control type="image">
 				<height>60</height>
@@ -459,18 +461,17 @@
 				<texture>osd/osdbg.png</texture>
 				<aspectratio>stretch</aspectratio>
 				<animation effect="fade" start="100" end="60" time="100" condition="Control.HasFocus(215)">Conditional</animation>
-					
+				<visible>VideoPlayer.Content(LiveTV)</visible>
 			</control>
-			
-			<!-- control type="image">
+			<control type="image">
 				<height>60</height>
 				<width>60</width>
 				<texture>osd/osdbg.png</texture>
 				<aspectratio>stretch</aspectratio>
-				<visible>!IsEmpty(Skin.String(PluginWidgetPath1))</visible>
-				<visible>System.HasAddon(script.tvguide)</visible>
-				<animation effect="fade" start="100" end="60" time="100" condition="Control.HasFocus(14)">Conditional</animation>
-			</control -->
+				<animation effect="fade" start="100" end="60" time="100" condition="Control.HasFocus(216)">Conditional</animation>
+				<visible>Skin.HasSetting(HideGlobalBack)</visible>
+			</control>
+
 			
 		</control>
 		
@@ -488,7 +489,7 @@
 			
 			<focusposition>2</focusposition>
 			
-			<visible>![Window.IsActive(142) | Window.IsActive(145) | Window.IsActive(10140)]</visible>
+			<visible>![Window.IsActive(142) | Window.IsActive(145) | Window.IsActive(10140) | Window.IsVisible(PVROSDChannels)]</visible>
 			
 			
 			<control type="button" id="201">
@@ -595,7 +596,7 @@
 				<onclick>ActivateWindow(SubtitleSearch)</onclick>
 				<animation effect="zoom" start="100" end="120" center="auto" time="100">Focus</animation>
 				<animation effect="zoom" start="120" end="100" center="auto" time="100">UnFocus</animation>
-				
+				<visible>!VideoPlayer.Content(LiveTV)</visible>
 			</control>
 			
 			<control type="button" id="209">
@@ -634,6 +635,7 @@
 				<onclick>xbmc.activatewindow(videobookmarks)</onclick>
 				<animation effect="zoom" start="100" end="120" center="auto" time="100">Focus</animation>
 				<animation effect="zoom" start="120" end="100" center="auto" time="100">UnFocus</animation>
+				<visible>!VideoPlayer.Content(LiveTV)</visible>
 			</control>
 			
 			<control type="button" id="212">
@@ -686,6 +688,23 @@
 			</control>
 			
 			<control type="button" id="215">
+			
+				<description>live tv</description>
+				<height>60</height>
+				<width>60</width>
+				<label>19019</label>
+				<aspectratio>keep</aspectratio>
+				<texturefocus>osd/livetv.png</texturefocus>
+				<texturenofocus>osd/livetv.png</texturenofocus>
+
+				
+				<onclick>ActivateWindow(PVROSDChannels)</onclick>
+				<onclick>Dialog.Close(VideoOSD)</onclick>
+				<animation effect="zoom" start="100" end="120" center="auto" time="100">Focus</animation>
+				<animation effect="zoom" start="120" end="100" center="auto" time="100">UnFocus</animation>
+				<visible>VideoPlayer.Content(LiveTV)</visible>
+			</control>
+			<control type="button" id="216">
 				
 				<description>dvd menu</description>
 				<height>60</height>
@@ -701,26 +720,7 @@
 				<visible>Skin.HasSetting(HideGlobalBack)</visible>
 			</control>
 				
-			<!-- control type="button" id="15">
-				
-				<description>playlist</description>
-				<height>60</height>
-				<width>60</width>
-				<aspectratio>keep</aspectratio>
-				<texturefocus>osd/addon.png</texturefocus>
-				<texturenofocus>osd/addon.png</texturenofocus>
-				
-				<onclick>Dialog.Close(videoosd)</onclick>
-				<!-- onclick>ActivateWindow(9506)</onclick>
-				<onclick>RunScript(script.tvguide)</onclick>
-				
-				
-				
-				<animation effect="zoom" start="100" end="120" center="auto" time="100">Focus</animation>
-				<animation effect="zoom" start="120" end="100" center="auto" time="100">UnFocus</animation>
-				<!-- visible>!IsEmpty(Skin.String(PluginWidgetPath1))</visible>
-				<visible>System.HasAddon(script.tvguide)</visible>
-			</control -->
+			
 		</control>
 		
 	

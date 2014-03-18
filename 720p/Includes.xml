@@ -20,6 +20,8 @@
 <include file="Viewtype_PosterWrap.xml" />
 <include file="Viewtype_Songs.xml" />
 <include file="Viewtype_Icons.xml" />
+<include file="ViewsLiveTV.xml" />
+<include file="ViewsPVR.xml" />
 
 
 	
