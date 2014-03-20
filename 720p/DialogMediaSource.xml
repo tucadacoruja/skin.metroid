@@ -39,13 +39,15 @@
 		<control type="list" id="10">
 			<posx>211</posx>
 			<posy>172</posy>
-			<width>689</width>
+			<width>675</width>
 			<height>309</height>
 			<onup>12</onup>
 			<onleft>noop</onleft>
 			<onright>9000</onright>
 			<ondown>12</ondown>
 			<scrolltime>200</scrolltime>
+			<pagecontrol>69</pagecontrol>
+			
 			<itemlayout height="37">
 				<control type="image">
 					<posx>0</posx>
@@ -96,7 +98,28 @@
 				</control>
 			</focusedlayout>
 		</control>
+		
+		<control type="scrollbar" id="69">
+			<texturesliderbackground>buttons/scrollbgV.png</texturesliderbackground>
+			<texturesliderbar>-</texturesliderbar>
+			<texturesliderbarfocus>-</texturesliderbarfocus>
+			<textureslidernib>buttons/scrollnibV.png</textureslidernib>
+			<textureslidernibfocus>buttons/scrollnibV.png</textureslidernibfocus>
+			<orientation>Vertical</orientation>
+			<showonepage>true</showonepage>
+			<posx>887</posx>
+			<posy>182</posy>
+			<width>10</width>
+			<height>295</height>
 
+			<onleft>450</onleft>
+
+			<onright>9000</onright>
+
+			<animation effect="fade" start="100" end="40" time="200" reversable="false" condition="!Control.HasFocus(69)">Conditional</animation>
+
+		</control>
+		
 		<control type="button" id="12">
 			<description>Name Button</description>
 			<posx>225</posx>
