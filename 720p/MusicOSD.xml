@@ -402,6 +402,7 @@
 				<texturefocus>osd/lyrics.png</texturefocus>
 				<texturenofocus>osd/lyrics.png</texturenofocus>
 				
+				<onclick>Dialog.Close(musicosd,true)</onclick>
 				<onclick>XBMC.RunScript($INFO[Skin.String(LyricScript_Path)])</onclick>
 				<altclick>Skin.SetAddon(LyricScript_Path,xbmc.python.lyrics)</altclick>
 				<altclick>XBMC.RunScript($INFO[Skin.String(LyricScript_Path)])</altclick>
@@ -481,7 +482,19 @@
 			
 		</control>
 		
+		<control type="button">
+			<posx>90</posx>
+			<posy>90</posy>
+			<width>500</width>
+			<height>350</height>
+			<description>fullscreen back button</description>
+			<aspectratio>stretch</aspectratio>
+			<texturefocus>empty.png</texturefocus>
+			<texturenofocus>empty.png</texturenofocus>
+			
+			<onclick>back</onclick>
 		
+		</control>
 		<control type="group">
 			<posx>-60</posx>
 			<posy>488</posy>

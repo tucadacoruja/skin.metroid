@@ -128,9 +128,9 @@
 				<posy>515</posy>
 				<width>410</width>
 				<height>60</height>
-				<label>[UPPERCASE]$INFO[MusicPlayer.offset(1).Title] - $INFO[MusicPlayer.offset(1).Duration][/UPPERCASE]</label>
+				<label>$INFO[MusicPlayer.offset(1).Title] - $INFO[MusicPlayer.offset(1).Duration]</label>
 				<font>MainMenu21</font>
-				<textcolor>FF707070</textcolor>
+				<textcolor>E1707070</textcolor>
 				<align>left</align>
 				<scroll>false</scroll>
 			</control>
@@ -229,9 +229,9 @@
 				<posy>467</posy>
 				<width>410</width>
 				<height>60</height>
-				<label>[UPPERCASE]$INFO[MusicPlayer.Title][/UPPERCASE]</label>
+				<label>$INFO[MusicPlayer.Title]</label>
 				<font>MainMenu21</font>
-				<textcolor>FF707070</textcolor>
+				<textcolor>E1707070</textcolor>
 				<align>left</align>
 				<scroll>false</scroll>
 
@@ -298,7 +298,7 @@
 			<control type="slider" id="88">
 				<description>Seek Slider</description>
 				<posx>45</posx>
-				<posy>40</posy>
+				<posy>39</posy>
 				<width>630</width>
 				<height>5</height>
 				<onup>9000</onup>

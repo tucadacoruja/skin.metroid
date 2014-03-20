@@ -21,8 +21,246 @@
 			<onclick>back</onclick>
 			<animation effect="fade" start="1" end="1" time="0" condition="true">Conditional</animation>
 		</control>
-	
-		<control type="group">
+		
+		<control type="wraplist" id="11">
+			<posx>807</posx>
+			<posy>166</posy>
+			<width>390</width>
+			<height>425</height>
+			<onleft>999</onleft>
+			<onright>70</onright>
+			<onup>11</onup>
+			<ondown>11</ondown>
+			<viewtype label="535">list</viewtype>
+			<pagecontrol>70</pagecontrol>
+			<scrolltime>200</scrolltime>
+			<focusposition>2</focusposition>
+			<itemlayout height="110" width="390">
+				
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>400</width>
+					<height>108</height>
+					<texture border="22">diffuse/postershadow.png</texture>
+					<align>bottom</align>
+					<aspectratio>stretch</aspectratio>
+					<colordiffuse>ACffffff</colordiffuse>
+					
+				</control>
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>390</width>
+					<height>90</height>
+					<texture>white.png</texture>
+					<aspectratio>stretch</aspectratio>
+				</control>
+				<control type="image">
+					<posx>85</posx>
+					<posy>5</posy>
+					<width>300</width>
+					<height>80</height>
+					<texture border="12">white.png</texture>
+					<colordiffuse>FFEBEBEB</colordiffuse>
+					<aspectratio>stretch</aspectratio>
+				</control>
+				<control type="image">
+					<posx>85</posx>
+					<posy>80</posy>
+					<width>300</width>
+					<height>4</height>
+					<texture>shadow.png</texture>
+					<aspectratio>stretch</aspectratio>
+					<animation effect="fade" start="0" end="20" time="0" condition="true">Conditional</animation>
+				</control>
+				<!--control type="label">
+					<posx>5</posx>
+					<posy>-4</posy>
+					<width>40</width>
+					<height>35</height>
+					<font>font12</font>
+					<align>left</align>
+					<aligny>center</aligny>
+					<textcolor>FF707070</textcolor>
+					<selectedcolor>FF707070</selectedcolor>
+					<info>ListItem.ChannelNumber</info>
+				</control-->
+				<control type="label">
+					<posx>93</posx>
+					<posy>7</posy>
+					<width>250</width>
+					<height>25</height>
+					<font>homemenu3</font>
+					<textcolor>FF707070</textcolor>
+					<selectedcolor>FF707070</selectedcolor>
+					<align>left</align>
+					<aligny>center</aligny>
+					<label>$INFO[ListItem.Label]</label>
+				</control>
+				<control type="label">
+					<posx>93</posx>
+					<posy>33</posy>
+					<width>250</width>
+					<height>20</height>
+					<font>font12</font>
+					<textcolor>FF707070</textcolor>
+					<selectedcolor>FF707070</selectedcolor>
+					<align>left</align>
+					<aligny>center</aligny>
+					<label>$INFO[ListItem.Title]</label>
+				</control>
+				<control type="progress">
+					<description>Progressbar</description>
+					<posx>93</posx>
+					<posy>65</posy>
+					<width>282</width>
+					<height>.6</height>
+					<visible>ListItem.HasEpg</visible>
+					<info>ListItem.Progress</info>
+					<colordiffuse>FF707070</colordiffuse>
+					<texturebg>osd/seek/EmptyBar.png</texturebg>
+					<lefttexture>-</lefttexture>
+					<midtexture>white.png</midtexture>
+					<righttexture>-</righttexture>
+					<animation effect="fade" start="0" end="60" time="0" condition="true">Conditional</animation>
+				</control>
+				<control type="image">
+					<posx>3</posx>
+					<posy>5</posy>
+					<width>80</width>
+					<height>80</height>
+					<aspectratio>scale</aspectratio>
+					<texture aligny="top">$INFO[ListItem.Icon]</texture>
+				</control>
+				<control type="image">
+					<posx>350</posx>
+					<posy>1</posy>
+					<width>40</width>
+					<height>40</height>
+					<texture>osd/play.png</texture>
+					<colordiffuse>FF707070</colordiffuse>
+					<visible>ListItem.IsPlaying</visible>
+				</control>
+			</itemlayout>
+			<focusedlayout height="110" width="390">
+
+				<control type="image">
+					<posx>0</posx>
+					<posy>1</posy>
+					<width>390</width>
+					<height>88</height>
+					<texture border="12">white.png</texture>
+					<aspectratio>stretch</aspectratio>
+					<colordiffuse>hellblue</colordiffuse>
+					<visible>Control.HasFocus(11)</visible>
+					<!--animation effect="fade" end="80" time="0" condition="true">Conditional</animation-->
+					<animation type="Focus" reversible="false">
+						<effect type="zoom" end="103,113" time="400" center="auto"/>
+					</animation>
+				</control>
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>390</width>
+					<height>90</height>
+					<texture>white.png</texture>
+					<aspectratio>stretch</aspectratio>
+				</control>
+				<control type="image">
+					<posx>85</posx>
+					<posy>5</posy>
+					<width>300</width>
+					<height>80</height>
+					<texture border="12">white.png</texture>
+					<colordiffuse>FFEBEBEB</colordiffuse>
+					<aspectratio>stretch</aspectratio>
+				</control>
+				<control type="image">
+					<posx>85</posx>
+					<posy>80</posy>
+					<width>300</width>
+					<height>4</height>
+					<texture>shadow.png</texture>
+					<aspectratio>stretch</aspectratio>
+					<animation effect="fade" start="0" end="20" time="0" condition="true">Conditional</animation>
+				</control>
+				
+				<control type="label">
+					<posx>93</posx>
+					<posy>7</posy>
+					<width>250</width>
+					<height>25</height>
+					<font>homemenu3</font>
+					<textcolor>FF707070</textcolor>
+					<selectedcolor>FF707070</selectedcolor>
+					<align>left</align>
+					<aligny>center</aligny>
+					<label>$INFO[ListItem.Label]</label>
+				</control>
+				<control type="label">
+					<posx>93</posx>
+					<posy>33</posy>
+					<width>250</width>
+					<height>20</height>
+					<font>font12</font>
+					<textcolor>FF707070</textcolor>
+					<selectedcolor>FF707070</selectedcolor>
+					<align>left</align>
+					<aligny>center</aligny>
+					<label>$INFO[ListItem.Title]</label>
+				</control>
+				<control type="progress">
+					<description>Progressbar</description>
+					<posx>93</posx>
+					<posy>65</posy>
+					<width>282</width>
+					<height>.6</height>
+					<visible>ListItem.HasEpg</visible>
+					<info>ListItem.Progress</info>
+					<texturebg>osd/seek/EmptyBar.png</texturebg>
+					<lefttexture>-</lefttexture>
+					<midtexture>osd/osdbg.png</midtexture>
+					<righttexture>-</righttexture>
+					<animation effect="fade" start="0" end="60" time="0" condition="true">Conditional</animation>
+				</control>
+				<control type="image">
+					<posx>3</posx>
+					<posy>5</posy>
+					<width>80</width>
+					<height>80</height>
+					<aspectratio>scale</aspectratio>
+					<texture aligny="top">$INFO[ListItem.Icon]</texture>
+				</control>
+				<control type="image">
+					<posx>350</posx>
+					<posy>1</posy>
+					<width>40</width>
+					<height>40</height>
+					<texture>osd/play.png</texture>
+					<colordiffuse>FF707070</colordiffuse>
+					<visible>ListItem.IsPlaying</visible>
+				</control>
+			</focusedlayout>
+		</control>
+		<control type="scrollbar" id="70">
+			<posx>1222</posx>
+			<posy>165</posy>
+			<width>10</width>
+			<height>420</height>
+			<texturesliderbackground>buttons/scrollbgV.png</texturesliderbackground>
+			<texturesliderbar>-</texturesliderbar>
+			<texturesliderbarfocus>-</texturesliderbarfocus>
+			<textureslidernib>buttons/scrollnibV.png</textureslidernib>
+			<textureslidernibfocus>buttons/scrollnibV.png</textureslidernibfocus>
+			<onleft>11</onleft>
+			<onright>32</onright>
+			<showonepage>false</showonepage>
+			<orientation>vertical</orientation>
+			<animation effect="fade" start="100" end="80" time="200" reversable="false" condition="!Control.HasFocus(70)">Conditional</animation>
+		</control>
+			
+		<!--control type="group">
 			<posx>835</posx>
 			<posy>0</posy>
 			<control type="image">
@@ -162,15 +400,7 @@
 					</control>
 				</itemlayout>
 				<focusedlayout height="70" width="410">
-					<!--control type="image">
-						<posx>0</posx>
-						<posy>0</posy>
-						<width>410</width>
-						<height>65</height>
-						<texture border="5">button-nofocus.png</texture>
-						<visible>!Control.HasFocus(11)</visible>
-						<include>VisibleFadeEffect</include>
-					</control-->
+		
 					<control type="image">
 						<posx>-10</posx>
 						<posy>0</posy>
@@ -298,7 +528,7 @@
 				<onup>61</onup>
 				<showonepage>false</showonepage>
 				<orientation>vertical</orientation>
-			</control>
+			</control-->
 			<!--control type="label">
 				<description>Page Count Label</description>
 				<posx>450</posx>
@@ -312,7 +542,7 @@
 				<aligny>center</aligny>
 				<label>([COLOR=blue]$INFO[Container(11).NumItems][/COLOR]) $LOCALIZE[19019] - $LOCALIZE[31024] ([COLOR=blue]$INFO[Container(11).CurrentPage]/$INFO[Container(11).NumPages][/COLOR])</label>
 				<include>Window_OpenClose_Animation</include>
-			</control-->
-		</control>
+			</control>
+		</control-->
 	</controls>
 </window>

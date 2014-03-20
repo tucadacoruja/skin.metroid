@@ -195,7 +195,32 @@
 			
 		</control>
 		
+		<control type="button">
+			<posx>90</posx>
+			<posy>90</posy>
+			<width>500</width>
+			<height>350</height>
+			<description>fullscreen back button</description>
+			<aspectratio>stretch</aspectratio>
+			<texturefocus>empty.png</texturefocus>
+			<texturenofocus>empty.png</texturenofocus>
+			
+			<onclick>back</onclick>
 		
+		</control>
+		<control type="button">
+			<posx>1180</posx>
+			<posy>0</posy>
+			<width>100</width>
+			<height>720</height>
+			<description>fullscreen back button</description>
+			<aspectratio>stretch</aspectratio>
+			<texturefocus>empty.png</texturefocus>
+			<texturenofocus>empty.png</texturenofocus>
+			
+			<onfocus>ActivateWindow(musicosd)</onfocus>
+			<visible>!Control.IsVisible(musicosd)</visible>
+		</control>
 		<control type="group">
 			<posx>-60</posx>
 			<posy>488</posy>

@@ -1,9 +1,16 @@
 <window>
-	<defaultcontrol>32</defaultcontrol>
+	<defaultcontrol always="true">32</defaultcontrol>
+	<backgroundcolor>0</backgroundcolor>
 	<allowoverlay>no</allowoverlay>
 	<controls>
 		<control type="group">
-		
+			<control type="visualisation"><!-- id="2" -->
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1280</width>
+				<height>720</height>
+				<visible>Player.HasAudio + !Skin.HasSetting(VisLibrary)</visible>
+			</control>
 			<control type="multiimage">
 				<posx>0</posx>
 				<posy>0</posy>
@@ -93,8 +100,8 @@
 		</control>
 		<control type="group">
 			<description>Small Media Window</description>
-			<posx>530</posx>
-			<posy>155</posy>
+			<posx>60</posx>
+			<posy>159</posy>
 			<visible>Control.IsVisible(11) | Control.IsVisible(12)</visible>
 			<include>VisibleFadeEffect</include>
 			<include>Window_OpenClose_Animation</include>		
@@ -136,7 +143,7 @@
 			<control type="label">
 				<description>Current Video label</description>
 				<posx>30</posx>
-				<posy>1</posy>
+				<posy>2</posy>
 				<width>650</width>
 				<height>35</height>
 				<font>font12</font>
@@ -259,5 +266,71 @@
 		</control>
 
 		<include>BottomInfoBar</include>
+		<include>LowBattery</include>
+		<control type="image">
+			<posx>70</posx>
+			<posy>10</posy>
+			<width>55</width>
+			<height>55</height>
+			<texture>osd/GrayBackground.png</texture>
+		</control>
+		<control type="button" id="300">
+			<posx>70</posx>
+			<posy>10</posy>
+			<width>55</width>
+			<height>55</height>
+			<aspectratio>keep</aspectratio>
+			<texturefocus colordiffuse="FFACACAC">osd/back.png</texturefocus>
+			<texturenofocus>osd/back.png</texturenofocus>
+			<onclick>back</onclick>
+			<ondown>11</ondown>
+		</control>
+		
+		<!--control type="image">
+			<posx>130</posx>
+			<posy>10</posy>
+			<width>55</width>
+			<height>55</height>
+			<texture>osd/GrayBackground.png</texture>
+		</control>
+		<control type="togglebutton" id="405">
+			<description>Play</description>
+			<posx>130</posx>
+			<posy>10</posy>
+			<height>55</height>
+			<width>55</width>
+			<texturefocus colordiffuse="FFACACAC">osd/play.png</texturefocus>
+			<texturenofocus>osd/play.png</texturenofocus>
+			<usealttexture>Player.Playing</usealttexture>
+			<alttexturefocus colordiffuse="FFACACAC">osd/pause.png</alttexturefocus>
+			<alttexturenofocus>osd/pause.png</alttexturenofocus>
+			<onclick>playercontrol(play)</onclick>
+			<animation effect="zoom" start="100" end="120" center="auto" time="100">Focus</animation>
+			<animation effect="zoom" start="120" end="100" center="auto" time="100">UnFocus</animation>
+		</control-->
+		
+		<control type="image">
+			<posx>130</posx>
+			<posy>10</posy>
+			<width>55</width>
+			<height>55</height>
+			<texture>osd/GrayBackground.png</texture>
+			<!--visible>Player.HasVideo</visible-->
+		</control>
+		<control type="button" id="406">
+			<description>stop</description>
+			<posx>130</posx>
+			<posy>10</posy>
+			<height>55</height>
+			<width>55</width>
+			<aspectratio>keep</aspectratio>
+			<texturefocus colordiffuse="FFACACAC">osd/stop.png</texturefocus>
+			<texturenofocus>osd/stop.png</texturenofocus>
+			
+			<onclick>xbmc.playercontrol(stop)</onclick>
+			<animation effect="zoom" start="100" end="120" center="auto" time="100">Focus</animation>
+			<animation effect="zoom" start="120" end="100" center="auto" time="100">UnFocus</animation>
+			<!--visible>Player.HasVideo</visible-->
+		</control>
 	</controls>
 </window>

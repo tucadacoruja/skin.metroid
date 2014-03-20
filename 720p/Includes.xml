@@ -214,7 +214,7 @@
 				<align>right</align>
 				<aligny>center</aligny>
 				<textcolor>FF707070</textcolor>
-				<label>$INFO[VideoPlayer.TVShowTitle]$INFO[VideoPlayer.Year]$INFO[MusicPlayer.Artist]</label>
+				<label>$INFO[VideoPlayer.TVShowTitle]$INFO[VideoPlayer.Year]$INFO[MusicPlayer.Artist]$INFO[VideoPlayer.ChannelName]</label>
 			</control>
 		</control>
 

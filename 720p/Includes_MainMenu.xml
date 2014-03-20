@@ -53,7 +53,7 @@
 				<posx>2</posx>
 				<posy>71</posy>
 				<width>300</width>
-				<height>648</height>
+				<height>651</height>
 				<onleft condition="!Skin.HasSetting(GlobalSearch)">999</onleft>
 				
 				<onright>50</onright>

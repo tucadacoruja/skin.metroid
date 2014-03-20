@@ -692,7 +692,7 @@
 				<description>live tv</description>
 				<height>60</height>
 				<width>60</width>
-				<label>19019</label>
+	
 				<aspectratio>keep</aspectratio>
 				<texturefocus>osd/livetv.png</texturefocus>
 				<texturenofocus>osd/livetv.png</texturenofocus>
