@@ -1,4 +1,7 @@
 [B]0.1.5[/B]
+- Font change to Weblysleek
+
+[B]0.1.5[/B]
 - Live tv Channel switching added.
 - Loads of fixes
 

@@ -17,35 +17,36 @@
 	<posy>-10</posy>
 	<width>1</width>
 	<height>1</height>
-	<animation effect="fade" start="1" end="0" time="0" condition="true">Conditional</animation>
+	<visible>false</visible>
 </control>
 <control type="textbox" id="4">
 	<posx>-10</posx>
 	<posy>-10</posy>
 	<width>1</width>
 	<height>1</height>
-	<animation effect="fade" start="1" end="0" time="0" condition="true">Conditional</animation>
+	<visible>false</visible>
 </control>
 <control type="button" id="5">
 	<posx>-10</posx>
 	<posy>-10</posy>
 	<width>1</width>
 	<height>1</height>
-	<animation effect="fade" start="1" end="0" time="0" condition="true">Conditional</animation>
+	<visible>false</visible>
 </control>
 <control type="button" id="11">
 	<posx>-10</posx>
 	<posy>-10</posy>
 	<width>1</width>
 	<height>1</height>
-	<animation effect="fade" start="1" end="0" time="0" condition="true">Conditional</animation>
+	<visible>false</visible>
 </control>
 <control type="button" id="13">
 	<posx>-10</posx>
 	<posy>-10</posy>
 	<width>1</width>
 	<height>1</height>
-	<animation effect="fade" start="1" end="0" time="0" condition="true">Conditional</animation>
+	<visible>false</visible>
+	
 </control>
 
 <control type="group">
@@ -584,9 +585,9 @@
 							
 						<posx>0</posx>
 						<posy>50</posy>
-						<font>font13</font>
+			
 						<textcolor>95FFFFFF</textcolor>
-						<font>font12</font>
+						<font>font13</font>
 						<aligny>top</aligny>
 						<wrapmultiline>true</wrapmultiline>
 						<autoscroll>false</autoscroll>
@@ -666,24 +667,23 @@
 									<height>42</height>
 									<texture background="true">black.png</texture>
 									<aspectratio>stretch</aspectratio>
-									<colordiffuse>62FFFFFF</colordiffuse>
+									<colordiffuse>ACFFFFFF</colordiffuse>
 									
 								</control>
 							
 								<control type="textbox">
 								
 									<posx>10</posx>
-									<posy>8</posy>
+									<posy>0</posy>
 									<width>160</width>
-									<height>28</height>
-									<label>[UPPERCASE]$INFO[ListItem.Label][/UPPERCASE]</label>
+									<height>36</height>
+									<label>$INFO[ListItem.Label]</label>
 									<font>InfoNames</font>
 									<textcolor>FFACACAC</textcolor>
 									<aligny>top</aligny>
-									<wrapmultiline>true</wrapmultiline>
+									<wrapmultiline>false</wrapmultiline>
 									<shadowcolor>00FFFFFF</shadowcolor>
 									<autoscroll>false</autoscroll>
-									
 								</control>
 								
 							</control>
@@ -730,23 +730,23 @@
 									<height>42</height>
 									<texture background="true">black.png</texture>
 									<aspectratio>stretch</aspectratio>
-									<colordiffuse>62FFFFFF</colordiffuse>
+									<colordiffuse>ACFFFFFF</colordiffuse>
 									
 								</control>
 							
 								<control type="textbox">
 								
 									<posx>10</posx>
-									<posy>8</posy>
+									<posy>0</posy>
 									<width>160</width>
-									<height>26</height>
-									<label>[UPPERCASE]$INFO[ListItem.Label][/UPPERCASE]</label>
+									<height>36</height>
+									<label>$INFO[ListItem.Label]</label>
 									<font>InfoNames</font>
-									<textcolor>blue</textcolor>
+									<textcolor>white</textcolor>
 									<aligny>top</aligny>
-									<wrapmultiline>true</wrapmultiline>
+									<wrapmultiline>false</wrapmultiline>
 									<shadowcolor>00FFFFFF</shadowcolor>
-									<autoscroll>false</autoscroll>
+									<autoscroll delay="300" time="1000" repeat="10000">true</autoscroll>
 									
 								</control>
 								
