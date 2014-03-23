@@ -61,7 +61,7 @@
 				<ondown>301</ondown>
 				<pagecontrol>64</pagecontrol>
 				<!--  scrolltime tween="cubic" easing="inout">325</scrolltime  -->
-				<scrolltime>0</scrolltime>
+				<scrolltime>2</scrolltime>
 				<preloaditems>2</preloaditems>
 				<orientation>vertical</orientation>
 										

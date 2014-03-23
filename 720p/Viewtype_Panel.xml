@@ -34,7 +34,7 @@
 				<orientation>horizontal</orientation>
 				<pagecontrol>730</pagecontrol>
 				<focusposition>0</focusposition>
-				<scrolltime tween="Cubic" easing="in">300</scrolltime>
+				<scrolltime tween="Cubic" easing="in">240</scrolltime>
 			
 				<preloaditems>2</preloaditems>
 				<animation effect="slide" start="0,0" end="-110,0" time="400" condition="!Control.HasFocus(301) + !Skin.HasSetting(LockMainMenu)">Conditional</animation>

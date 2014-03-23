@@ -62,6 +62,7 @@
 			<texture>BlueBackground.png</texture>
 			<aspectratio>stretch</aspectratio>
 			<animation effect="zoom" start="0,30" end="1280,30" center="0,68" delay="0" time="8000" loop="true" condition="true">Conditional</animation>
+			<visible>Window.IsVisible(busydialog)</visible>
 		</control>
 				
 		  

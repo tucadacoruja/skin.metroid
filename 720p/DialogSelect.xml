@@ -68,7 +68,7 @@
 			<onright>9080</onright>
 			<ondown>3</ondown>
 			<pagecontrol>63</pagecontrol>
-			<scrolltime>0</scrolltime>		
+			<scrolltime>2</scrolltime>		
 			<itemlayout height="37">
 				<control type="label">
 					<posx>15</posx>
@@ -118,7 +118,7 @@
 			<onright>9080</onright>
 			<ondown>6</ondown>
 			<pagecontrol>63</pagecontrol>
-			<scrolltime>0</scrolltime>
+			<scrolltime>2</scrolltime>
 	
 			<itemlayout width="600" height="84">
 			

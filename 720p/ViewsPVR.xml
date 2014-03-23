@@ -5,7 +5,7 @@
 			<visible>Control.IsVisible(11)</visible>
 			<include>VisibleFadeEffect</include>
 			<control type="label">
-				<posx>61</posx>
+				<posx>64</posx>
 				<posy>124</posy>
 				<width>690</width>
 				<height>20</height>
@@ -100,11 +100,11 @@
 				</control>
 				
 			</control>
-			<control type="wraplist" id="11">
+			<control type="list" id="11">
 				<posx>807</posx>
 				<posy>166</posy>
 				<width>390</width>
-				<height>420</height>
+				<height>440</height>
 				<onleft>999</onleft>
 				<onright>70</onright>
 				<onup>11</onup>
@@ -112,7 +112,7 @@
 				<viewtype label="535">list</viewtype>
 				<pagecontrol>70</pagecontrol>
 				<scrolltime>200</scrolltime>
-				<focusposition>2</focusposition>
+			
 				<itemlayout height="110" width="390">
 				
 					<control type="image">
@@ -220,11 +220,10 @@
 						<texture border="12">white.png</texture>
 						<aspectratio>stretch</aspectratio>
 						<colordiffuse>hellblue</colordiffuse>
-						<visible>Control.HasFocus(11)</visible>
-						<!--animation effect="fade" end="80" time="0" condition="true">Conditional</animation-->
-						<animation type="Focus" reversible="false">
-							<effect type="zoom" end="103,113" time="400" center="auto"/>
-						</animation>
+						<visible>Control.HasFocus(11) | Control.HasFocus(70)</visible>
+						<animation effect="zoom" end="103,113" time="400" center="auto" condition="Control.HasFocus(11) | Control.HasFocus(70)">Conditional</animation>
+						<animation effect="fade" start="100" end="60" time="200" condition="Control.HasFocus(70)">Conditional</animation>
+					
 					</control>
 					<control type="image">
 						<posx>0</posx>

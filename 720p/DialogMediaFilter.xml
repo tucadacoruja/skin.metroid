@@ -46,7 +46,7 @@
 			<height>335</height>
 			<itemgap>0</itemgap>
 			<pagecontrol>68</pagecontrol>
-			<scrolltime>0</scrolltime>
+			<scrolltime>2</scrolltime>
 			<onup>2</onup>
 			<ondown>9</ondown>
 			<onleft>9</onleft>

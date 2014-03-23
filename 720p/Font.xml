@@ -256,9 +256,9 @@
 	</font>
 	<font>
 		<name>Clock</name>
-		<filename>SegoeWP-Semibold.ttf</filename>
+		<filename>SegoeWP-Bold.ttf</filename>
 		<size>25</size>
-		<style>bold</style>
+		<!-- style>bold</style -->
 	</font>
 	<font>
 		<name>WeatherSmall</name>

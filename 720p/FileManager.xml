@@ -135,7 +135,7 @@
       <onright>444</onright>
       <onup>20</onup>
       <ondown>20</ondown>
-	  <scrolltime>0</scrolltime>
+	  <scrolltime>2</scrolltime>
       <itemlayout height="44" width="515">
 		<control type="image">
 		  <posx>0</posx>
@@ -270,7 +270,7 @@
       <onright>20</onright>
       <onup>21</onup>
       <ondown>21</ondown>
-	  <scrolltime>0</scrolltime>
+	  <scrolltime>2</scrolltime>
       <itemlayout height="44" width="320">
 		<control type="image">
 		  <posx>0</posx>

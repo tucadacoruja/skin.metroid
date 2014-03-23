@@ -124,7 +124,7 @@
 			<onright>9001</onright>
 			<ondown>5</ondown>
 			<pagecontrol>-</pagecontrol>
-			<scrolltime>0</scrolltime>
+			<scrolltime>2</scrolltime>
 
 			<itemlayout height="40">
 				<control type="label">

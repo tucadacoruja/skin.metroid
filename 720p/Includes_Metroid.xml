@@ -210,14 +210,14 @@
 			</control>
 					
 			<control type="panel" id="8001">
-				<viewtype label="RecentEpisodes">icon</viewtype>
+				<viewtype>icon</viewtype>
 				<posx>380</posx>
 				<posy>20</posy>
 				<width>500</width>
 				<height>300</height>
 				<scrolltime>200</scrolltime>
 				<orientation>Horizontal</orientation>
-				<preloaditems>6</preloaditems>
+				<preloaditems>2</preloaditems>
 				
 				<onup condition="Control.IsVisible(8000)">8000</onup>
 				
@@ -518,7 +518,7 @@
 				<height>300</height>
 				<scrolltime>200</scrolltime>
 				<orientation>Horizontal</orientation>
-				<preloaditems>6</preloaditems>
+				<preloaditems>2</preloaditems>
 				
 				<onup condition="![Control.IsVisible(8002) | Control.IsVisible(8001)] + Control.IsVisible(8000)">8000</onup>
 				<onup condition="!Control.IsVisible(8002) + Control.IsVisible(8001)">8001</onup>
@@ -526,7 +526,7 @@
 				
 				<ondown condition="Control.IsVisible(8004)">8004</ondown>
 				<ondown condition="!Control.IsVisible(8004) + Control.IsVisible(8005)">8005</ondown>
-								
+				
 				<itemlayout width="185" height="135">
 					
 					<control type="image">
@@ -595,7 +595,8 @@
 		<control type="grouplist">
 			
 			<height>300</height>
-			<visible>!IsEmpty(Skin.String(PluginWidgetPath1))</visible>
+			<!--visible>!IsEmpty(Skin.String(PluginWidgetPath1))</visible-->
+			<visible>Control.IsVisible(8004)</visible>
 			<orientation>horizontal</orientation>
 			<usecontrolcoords>true</usecontrolcoords>
 			<align>left</align>
@@ -616,7 +617,7 @@
 			
 			<control type="group">
 				<posx>-20</posx>
-				<visible>!IsEmpty(Container(8004).ListItem(1).Art(thumb))</visible>
+				<!--visible>!IsEmpty(Container(8004).ListItem(1).Art(thumb))</visible-->
 				
 				<control type="image">
 					<description>shadow</description>
@@ -680,7 +681,7 @@
 				<height>300</height>
 				<scrolltime>200</scrolltime>
 				<orientation>Horizontal</orientation>
-				<preloaditems>6</preloaditems>
+				<preloaditems>2</preloaditems>
 				
 				<onup condition="![Control.IsVisible(8003) | Control.IsVisible(8002) | Control.IsVisible(8001)] + Control.IsVisible(8000)">8000</onup>
 				<onup condition="![Control.IsVisible(8003) | Control.IsVisible(8002)] + Control.IsVisible(8001)">8001</onup>
@@ -689,6 +690,7 @@
 				
 				<ondown condition="Control.IsVisible(8005)">8005</ondown>
 		
+				<visible>IntegerGreaterThan(Container(8004).NumItems,1)</visible>
 				<itemlayout width="185" height="135">
 					
 					<control type="image">
@@ -715,7 +717,7 @@
 						<width>170</width>
 						<height>120</height>
 						
-						<texture>$INFO[ListItem.Art(thumb)]</texture>
+						<texture fallback="DefaultAlbumCover.png">$INFO[ListItem.Art(thumb)]</texture>
 						<aspectratio scalediffuse="false">scale</aspectratio>
 						
 					</control>
@@ -762,6 +764,7 @@
 					
 				</focusedlayout>
 				<!-- content target="video">plugin://plugin.video.youtube/?login=true%26path=%2froot%2fplaylists%26playlist=PL29685DF58E70D8FD%26user_feed=playlist</content -->
+				<!-- content target="video">plugin://plugin.video.collegehumor/category/badman/1/</content -->
 				<content target="video">$INFO[Skin.String(PluginWidgetPath1)]</content>
 			</control>	
 		</control>	
@@ -773,7 +776,7 @@
 		<control type="grouplist">
 			
 			<height>300</height>
-			<visible>!IsEmpty(Skin.String(PluginWidgetPath2))</visible>
+			<visible>Control.IsVisible(8005)</visible>
 			<orientation>horizontal</orientation>
 			<usecontrolcoords>true</usecontrolcoords>
 			<align>left</align>
@@ -794,7 +797,7 @@
 			
 			<control type="group">
 				<posx>-20</posx>
-				<visible>!IsEmpty(Container(8005).ListItem(1).Art(thumb))</visible>
+				<!--visible>!IsEmpty(Container(8005).ListItem(1).Art(thumb))</visible-->
 				<control type="image">
 					<description>shadow</description>
 					<posx>0</posx>
@@ -864,7 +867,8 @@
 				<onup condition="![Control.IsVisible(8004) | Control.IsVisible(8003)] + Control.IsVisible(8002)">8002</onup>
 				<onup condition="!Control.IsVisible(8004) + Control.IsVisible(8003)">8003</onup>
 				<onup condition="Control.IsVisible(8004)">8004</onup>
-
+				
+				<visible>IntegerGreaterThan(Container(8005).NumItems,1)</visible>
 				<itemlayout width="185" height="135">
 					
 					<control type="image">

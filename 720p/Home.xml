@@ -69,8 +69,8 @@
 <include>RandomMoviePanel</include>
 <include>RandomAlbumPanel</include>
 
-<include>PluginWidget1</include>
-<include>PluginWidget2</include>
+<include condition="!Window.Previous(startup)">PluginWidget1</include>
+<include condition="!Window.Previous(startup)">PluginWidget2</include>
 
 <visible>[Control.IsVisible(8000) | Control.IsVisible(8001) | Control.IsVisible(8002) | Control.IsVisible(8003) | Control.IsVisible(8004) | Control.IsVisible(8005)] + !Skin.HasSetting(WidgetVisibility)</visible>
 <animation effect="fade" start="100" end="0" time="150" condition="Window.IsVisible(numericinput) | Window.IsVisible(virtualkeyboard)">Conditional</animation>	  

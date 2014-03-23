@@ -103,7 +103,7 @@
 			<onleft>noop</onleft>
 			<onright>9000</onright>
 			<ondown>450</ondown>
-			<scrolltime>0</scrolltime>
+			<scrolltime>2</scrolltime>
 			<pagecontrol>64</pagecontrol>
 			<animation type="Conditional" condition="Window.IsVisible(128)">
 				<effect type="fade" start="100" end="0" time="400" />

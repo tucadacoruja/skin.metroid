@@ -238,7 +238,7 @@
 				<ondown>50</ondown>
 				<viewtype label="List">list</viewtype>
 				<pagecontrol>60</pagecontrol>
-				<scrolltime>0</scrolltime>
+				<scrolltime>2</scrolltime>
 				<preloaditems>2</preloaditems>
 			    <!-- scrolltime tween="cubic" easing="out">300</scrolltime -->
 				<itemlayout height="44" width="710">

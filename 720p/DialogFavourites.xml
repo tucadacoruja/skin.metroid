@@ -71,7 +71,7 @@
 			<onright>9080</onright>
 			<ondown>6</ondown>
 			<pagecontrol>-</pagecontrol>
-			<scrolltime>0</scrolltime>
+			<scrolltime>2</scrolltime>
 			<!-- UNFOCUSED LAYOUT -->
 			<itemlayout width="600" height="84">
 			
