@@ -33,13 +33,20 @@
 		</font>
 		<font>
 			<name>font13</name>
-			<filename>Weblysleek-Semibold.ttf</filename>
+			<filename>Weblysleek.ttf</filename>
 			<size>19</size>
+			<style>bold</style>
 		</font>
 		<font>
 			<name>font14</name>
 			<filename>Weblysleek-Semibold.ttf</filename>
 			<size>21</size>
+		</font>
+		<font>
+			<name>font15</name>
+			<filename>Weblysleek.ttf</filename>
+			<size>21</size>
+			<style>bold</style>
 		</font>
 		<font>
 			<name>font16</name>
@@ -125,9 +132,9 @@
 	
 	<font>
 		<name>MainMenu21</name>
-		<filename>Weblysleek-Semibold.ttf</filename>
-		<size>22</size>
-		
+		<filename>Weblysleek.ttf</filename>
+		<size>21</size>
+		<style>bold</style>
 	</font>
 	<font>
 		<name>SubMenu20</name>
@@ -307,7 +314,7 @@
 	<font>
 		<name>DefaultButton</name>
 		<filename>Weblysleek-Semibold.ttf</filename>
-		<size>20</size>
+		<size>21</size>
 		<linespacing>0.90</linespacing>
 	</font>
 	<font>

@@ -153,7 +153,7 @@
 				<bordersize>0,3,0,0</bordersize>
 				<aspectratio>stretch</aspectratio>
 				<texture>white.png</texture>
-				<colordiffuse>FFACACAC</colordiffuse>
+				<colordiffuse>FFDBDBDB</colordiffuse>
 				<!-- animation effect="fade" start="0" end="100" time="0" reversable="false" condition="true">Conditional</animation -->
 			</control>
 			<control type="image">
@@ -191,7 +191,7 @@
 				<width>565</width>
 				<height>45</height>
 				<font>Postertitlebig</font>
-				<textcolor>ACFFFFFF</textcolor>
+				<textcolor>CFFFFFFF</textcolor>
 				<scroll>false</scroll>
 				<align>left</align>
 				<label>$INFO[ListItem.Title]</label>
@@ -256,7 +256,7 @@
 				</animation>
 			</control>
 			
-			<control type="image">
+			<!--control type="image">
 				<posx>254</posx>
 				<posy>402</posy>
 				<width>66</width>
@@ -265,7 +265,17 @@
 				<texture>$INFO[Container(501).ListItem.Overlay]</texture>
 				<visible>!Skin.HasSetting(WatchedOverlays)</visible>
 				<colordiffuse>blue</colordiffuse>
-			</control>	
+			</control-->
+			<control type="image">
+				<posx>279</posx>
+				<posy>425</posy>
+				<width>28</width>
+				<height>28</height>
+				<aspectratio align="left" aligny="center">stretch</aspectratio>
+				<texture>Watched.png</texture>
+				<visible>stringcompare(ListItem.Overlay,OverlayWatched.png)</visible>
+				<visible>!Skin.HasSetting(WatchedOverlays)</visible>
+			</control>
 			
 		</control>
 

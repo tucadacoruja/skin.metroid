@@ -73,7 +73,7 @@
 						<width>200</width>
 						<height>50</height>
 						<font>MainMenu21</font>
-						<textcolor>FFD7D7D7</textcolor>
+						<textcolor>FFDEDEDE</textcolor>
 						<aligny>center</aligny>
 						<align>left</align>
 						<scroll>false</scroll>
@@ -87,7 +87,7 @@
 						<width>240</width>
 						<height>50</height>
 						<font>SubMenu20</font>
-						<textcolor>FFD7D7D7</textcolor>
+						<textcolor>FFDEDEDE</textcolor>
 						<aligny>center</aligny>
 						<align>left</align>
 						<label>- $INFO[ListItem.Label]</label>
@@ -148,7 +148,7 @@
 						<width>200</width>
 						<height>50</height>
 						<font>MainMenu21</font>
-						<textcolor>FFD7D7D7</textcolor>
+						<textcolor>FFDEDEDE</textcolor>
 						<aligny>center</aligny>
 						<align>left</align>
 						<label>$INFO[ListItem.Label]</label>
@@ -162,7 +162,7 @@
 						<width>200</width>
 						<height>50</height>
 						<font>MainMenu21</font>
-						<textcolor>FFEBEBEB</textcolor>
+						<textcolor>FFF0F0F0</textcolor>
 						<aligny>center</aligny>
 						<align>left</align>
 						<label>$INFO[ListItem.Label]</label>

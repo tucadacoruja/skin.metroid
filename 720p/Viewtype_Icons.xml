@@ -104,7 +104,7 @@
 							<height>30</height>
 							<label>$VAR[Episode_title]</label>
 							<font>MainMenu21</font>
-							<textcolor>FFACACAC</textcolor>
+							<textcolor>FFC7C7C7</textcolor>
 							<align>left</align>
 							<scroll>false</scroll>
 						</control>
@@ -136,8 +136,8 @@
 	
 						
 						<control type="image">
-							<posx>108</posx>
-							<posy>108</posy>
+							<posx>105</posx>
+							<posy>105</posy>
 							<width>32</width>
 							<height>32</height>
 							<texture>$INFO[ListItem.Overlay]</texture>
@@ -145,6 +145,16 @@
 							<colordiffuse>FFABABAB</colordiffuse>
 							
 						</control>
+						<!--control type="image">
+							<posx>109</posx>
+							<posy>109</posy>
+							<width>23</width>
+							<height>23</height>
+							<aspectratio align="left" aligny="center">stretch</aspectratio>
+							<texture>Watched.png</texture>
+							<visible>stringcompare(ListItem.Overlay,OverlayWatched.png)</visible>
+							<visible>!Skin.HasSetting(WatchedOverlays)</visible>
+						</control-->
 						
 					</control>	
 					
@@ -198,8 +208,8 @@
 						</control>
 									
 						<control type="image">
-							<posx>108</posx>
-							<posy>108</posy>
+							<posx>105</posx>
+							<posy>105</posy>
 							<width>32</width>
 							<height>32</height>
 							<texture>$INFO[ListItem.Overlay]</texture>

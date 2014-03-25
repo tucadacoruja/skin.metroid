@@ -148,7 +148,7 @@
 							
 						</control -->
 						
-						<control type="image">
+						<!--control type="image">
 							<posx>148</posx>
 							<posy>236</posy>
 							<width>24</width>
@@ -156,6 +156,16 @@
 							<texture>$INFO[ListItem.Overlay]</texture>
 							<aspectratio>stretch</aspectratio>
 							<colordiffuse>FFABABAB</colordiffuse>
+							<visible>!Skin.HasSetting(WatchedOverlays)</visible>
+						</control-->
+						<control type="image">
+							<posx>157</posx>
+							<posy>90</posy>
+							<width>20</width>
+							<height>20</height>
+							<aspectratio align="left" aligny="center">stretch</aspectratio>
+							<texture>Watched.png</texture>
+							<visible>stringcompare(ListItem.Overlay,OverlayWatched.png)</visible>
 							<visible>!Skin.HasSetting(WatchedOverlays)</visible>
 						</control>
 						
@@ -269,7 +279,7 @@
 							
 						</control>
 						
-						<control type="image">
+						<!--control type="image">
 							
 							<posx>148</posx>
 							<posy>236</posy>
@@ -277,7 +287,16 @@
 							<height>24</height>
 							<texture>$INFO[ListItem.Overlay]</texture>
 							<aspectratio>stretch</aspectratio>
-							<!-- colordiffuse>FFABABAB</colordiffuse -->
+							<visible>!Skin.HasSetting(WatchedOverlays)</visible>
+						</control-->
+						<control type="image">
+							<posx>157</posx>
+							<posy>90</posy>
+							<width>20</width>
+							<height>20</height>
+							<aspectratio align="left" aligny="center">stretch</aspectratio>
+							<texture>Watched.png</texture>
+							<visible>stringcompare(ListItem.Overlay,OverlayWatched.png)</visible>
 							<visible>!Skin.HasSetting(WatchedOverlays)</visible>
 						</control>
 						

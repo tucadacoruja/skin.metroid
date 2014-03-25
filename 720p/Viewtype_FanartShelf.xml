@@ -231,7 +231,7 @@
 					<align>left</align>
 					<label>$LOCALIZE[31180]</label>
 					<font>plot</font>
-					<textcolor>blue</textcolor>
+					<textcolor>FFD7D7D7</textcolor>
 					<selectedcolor>taskbar</selectedcolor>
 					<visible>Container.Content(tvshows)</visible>
 				</control>
