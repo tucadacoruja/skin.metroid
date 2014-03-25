@@ -14,14 +14,14 @@
 
 				<control type="image">
 					<posx>10</posx>
-					<posy>10</posy>
+					<posy>5</posy>
 					<width>55</width>
 					<height>55</height>
 					<texture>osd/GrayBackground.png</texture>
 				</control>
 				<control type="image">
 					<posx>10</posx>
-					<posy>10</posy>
+					<posy>5</posy>
 					<width>55</width>
 					<height>55</height>
 					<texture>osd/audio.png</texture>
@@ -31,7 +31,7 @@
 				<control type="progress" id="1">
 					<description>progress control</description>
 					<posx>0</posx>
-					<posy>68</posy>
+					<posy>63</posy>
 					<width>1285</width>
 					<height>1</height>
 					<texturebg>DialogProgressBack.png</texturebg>
@@ -50,9 +50,9 @@
 				<control type="image">
 					<description>Lite Volume Logo</description>
 					<posx>70</posx>
-					<posy>4</posy>
-					<width>60</width>
-					<height>60</height>
+					<posy>5</posy>
+					<width>55</width>
+					<height>55</height>
 					<aspectratio>keep</aspectratio>
 					<colordiffuse>Red</colordiffuse>
 					<texture>osd/audio.png</texture>
@@ -61,7 +61,7 @@
 				<control type="label">
 					<description>Passthrough Label</description>
 					<posx>130</posx>
-					<posy>26</posy>
+					<posy>22</posy>
 					<width>260</width>
 					<height>42</height>
 					<font>WeatherSmall</font>

@@ -4,7 +4,7 @@
 <defaultcontrol>9000</defaultcontrol>
 <backgroundcolor>0</backgroundcolor>
 <allowoverlay>yes</allowoverlay>
-
+<onload condition="IsEmpty(Skin.String(FirstRunTouch))">ActivateWindow(9506)</onload>
 <controls>
 	
 <include>VideoWindow</include>
@@ -31,28 +31,26 @@
 	
 		<control type="image">
 			<posx>0</posx>
-			<posy>72</posy>
+			<posy>65</posy>
 			<width>250</width>
-			<height>648</height>
+			<height>660</height>
 			<aspectratio>stretch</aspectratio>
 			<texture>MetroidMenu.png</texture>
 			
 		</control>
 		<control type="image">
 			<posx>235</posx>
-			<posy>72</posy>
+			<posy>65</posy>
 			<width>15</width>
-			<height>650</height>
+			<height>660</height>
 			<aspectratio>stretch</aspectratio>
 			<texture>shadowv.png</texture>
 			<animation effect="fade" start="0" end="70" time="0" condition="true">Conditional</animation>
 		</control>
 		
-		<control type="group">
-			<posy>1</posy>
-			<include>EmptyMenu</include>
-		</control>
-		
+
+		<include>EmptyMenu</include>
+	
 
 		<control type="group">
 					
@@ -66,7 +64,7 @@
 			<control type="list" id="9000">
 				<description>Button Area</description>
 				<posx>2</posx>
-				<posy>72</posy>
+				<posy>65</posy>
 				<width>300</width>
 				<height>570</height>
 				<onleft>999</onleft>
@@ -177,6 +175,7 @@
 				</content>
 			</control>
 
+			
 			<control type="group" id="9010">
 				<posy>10</posy>
 				<animation type="Conditional" condition="Window.IsVisible(126) | Window.IsVisible(2000)">
@@ -240,18 +239,18 @@
 					</control>
 					<control type="button" id="100">
 						<posx>0</posx>
-						<posy>433</posy>
+						<posy>400</posy>
 						<height>43.5</height>
 						<width>810</width>
 						<textcolor>95FFFFFF</textcolor>
 						<focusedcolor>white</focusedcolor>
 						<disabledcolor>12ffffff</disabledcolor>
 						<texturefocus>setting.png</texturefocus>
-						<texturenofocus>-</texturenofocus>
+						<texturenofocus colordiffuse="36FFFFFF">setting.png</texturenofocus>
 						<textoffsetx>20</textoffsetx>
 						<onleft>9000</onleft>
-						<align>center</align>
-						<label>[LOWERCASE]$LOCALIZE[31021][/LOWERCASE]</label>
+						<align>left</align>
+						<label>$LOCALIZE[31021]</label>
 						<onclick>Activate.Window(Videos,Files)</onclick>
 						
 					</control>
@@ -343,25 +342,25 @@
 					</control>
 					<control type="button" id="100">
 						<posx>0</posx>
-						<posy>384</posy>
+						<posy>350</posy>
 						<height>43.5</height>
 						<width>810</width>
 						<textcolor>95FFFFFF</textcolor>
 						<focusedcolor>white</focusedcolor>
 						<disabledcolor>12ffffff</disabledcolor>
 						<texturefocus>setting.png</texturefocus>
-						<texturenofocus>-</texturenofocus>
+						<texturenofocus colordiffuse="36FFFFFF">setting.png</texturenofocus>
 						<textoffsetx>20</textoffsetx>
 						<onleft>9000</onleft>
 						<ondown>101</ondown>
-						<align>center</align>
-						<label>[LOWERCASE]$LOCALIZE[31022][/LOWERCASE]</label>
+						<align>left</align>
+						<label>$LOCALIZE[31022]</label>
 						<onclick>XBMC.ActivateWindow(videos,addons://sources/video/)</onclick>
 						
 					</control>
 					<control type="button" id="101">
 						<posx>0</posx>
-						<posy>433</posy>
+						<posy>397</posy>
 						<height>43.5</height>
 						<width>810</width>
 						<textcolor>95FFFFFF</textcolor>
@@ -372,8 +371,8 @@
 						<textoffsetx>20</textoffsetx>
 						<onleft>9000</onleft>
 						<onup>100</onup>
-						<align>center</align>
-						<label>[LOWERCASE]$LOCALIZE[31024][/LOWERCASE]</label>
+						<align>left</align>
+						<label>$LOCALIZE[31024]</label>
 						<onclick>ActivateWindow(skinsettings)</onclick>
 						
 					</control>
@@ -409,26 +408,26 @@
 					<control type="button" id="100">
 						<description>reload</description>
 						<posx>0</posx>
-						<posy>384</posy>
+						<posy>350</posy>
 						<height>43.5</height>
 						<width>810</width>
 						<textcolor>95FFFFFF</textcolor>
 						<focusedcolor>white</focusedcolor>
 						<disabledcolor>12ffffff</disabledcolor>
 						<texturefocus>setting.png</texturefocus>
-						<texturenofocus>-</texturenofocus>
+						<texturenofocus colordiffuse="36FFFFFF">setting.png</texturenofocus>
 						<textoffsetx>20</textoffsetx>
 						<onleft>9000</onleft>
 						<ondown>101</ondown>
-						<align>center</align>
-						<label>[LOWERCASE]$LOCALIZE[31023][/LOWERCASE]</label>
+						<align>left</align>
+						<label>$LOCALIZE[31023]</label>
 						<onclick>XBMC.ReloadSkin()</onclick>
 						
 					</control>
 					<control type="button" id="101">
 						<description>reset</description>
 						<posx>0</posx>
-						<posy>433</posy>
+						<posy>397</posy>
 						<height>43.5</height>
 						<width>810</width>
 						<textcolor>95FFFFFF</textcolor>
@@ -439,10 +438,10 @@
 						<textoffsetx>20</textoffsetx>
 						<onleft>9000</onleft>
 						<onup>100</onup>
-						<align>center</align>
-						<label>[LOWERCASE]$LOCALIZE[31216][/LOWERCASE]</label>
-						<onclick>RunScript(script.artwork.downloader,mode=custom,mediatype=tvshow,clearlogo)</onclick>
-						<onclick>RunScript(script.artwork.downloader,mode=custom,mediatype=movie,clearlogo)</onclick>
+						<align>left</align>
+						<label>$LOCALIZE[31216]</label>
+						<onclick>Skin.ResetSettings</onclick>
+						<onclick>ReloadSkin()</onclick>
 						
 					</control>
 				</control>
@@ -476,26 +475,26 @@
 					
 					<control type="button" id="100">
 						<posx>0</posx>
-						<posy>384</posy>
+						<posy>350</posy>
 						<height>43.5</height>
 						<width>810</width>
 						<textcolor>95FFFFFF</textcolor>
 						<focusedcolor>white</focusedcolor>
 						<disabledcolor>12ffffff</disabledcolor>
 						<texturefocus>setting.png</texturefocus>
-						<texturenofocus>-</texturenofocus>
+						<texturenofocus colordiffuse="36FFFFFF">setting.png</texturenofocus>
 						<textoffsetx>20</textoffsetx>
 						<onleft>9000</onleft>
 						<ondown>101</ondown>
-						<align>center</align>
-						<label>[LOWERCASE]$LOCALIZE[31024][/LOWERCASE]</label>
+						<align>left</align>
+						<label>$LOCALIZE[31024]</label>
 						<onclick>ActivateWindow(skinsettings)</onclick>
 						
 					</control>
 					<control type="button" id="101">
 						<description>download logos</description>
 						<posx>0</posx>
-						<posy>433</posy>
+						<posy>397</posy>
 						<height>43.5</height>
 						<width>810</width>
 						<textcolor>95FFFFFF</textcolor>
@@ -506,8 +505,8 @@
 						<textoffsetx>20</textoffsetx>
 						<onleft>9000</onleft>
 						<onup>100</onup>
-						<align>center</align>
-						<label>[LOWERCASE]$LOCALIZE[31025][/LOWERCASE]</label>
+						<align>left</align>
+						<label>$LOCALIZE[31025]</label>
 						<onclick>RunScript(script.artwork.downloader,mode=custom,mediatype=tvshow,clearlogo)</onclick>
 						<onclick>RunScript(script.artwork.downloader,mode=custom,mediatype=movie,clearlogo)</onclick>
 						
@@ -520,7 +519,7 @@
 			<control type="button" id="444">
 		
 				<posx>1</posx>
-				<posy>624</posy>
+				<posy>617</posy>
 				<description>Back Button</description>
 				<height>50</height>
 				<width>247</width>
@@ -548,9 +547,9 @@
 		<orientation>Vertical</orientation>
 		<showonepage>true</showonepage>
 		<posx>325</posx>
-		<posy>120</posy>
+		<posy>135</posy>
 		<width>10</width>
-		<height>560</height>
+		<height>450</height>
 		
 		<animation effect="fade" start="100" end="40" time="200" reversable="false" condition="!Control.HasFocus(63)">Conditional</animation>
 	

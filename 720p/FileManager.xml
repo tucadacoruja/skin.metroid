@@ -55,17 +55,17 @@
 
 </control>
 
-<include>Background</include>
 <control type="image">
 	<posx>515</posx>
-	<posy>72</posy>
+	<posy>65</posy>
 	<width>250</width>
-	<height>576</height>
+	<height>584</height>
 	<aspectratio>stretch</aspectratio>
 	<texture>black.png</texture>
 	<colordiffuse>55ffffff</colordiffuse>
 	<animation effect="fade" start="100" end="0" time="200" condition="Window.IsVisible(mediasource)">Conditional</animation>
 </control>
+<include>Background</include>
 <control type="textbox">
 	<posx>520</posx>
 	<posy>420</posy>
@@ -115,7 +115,7 @@
 	<align>left</align>
 	<label>-</label>
 	<font>griddetails</font>
-	<textcolor>white</textcolor>
+	<textcolor>FFACACAC</textcolor>
 	<animation effect="fade" start="0" end="80" time="500" delay="600">WindowOpen</animation>
 	<animation effect="fade" start="80" end="0" time="300" delay="0">WindowClose</animation>
 </control>
@@ -248,7 +248,7 @@
 	<align>left</align>
 	<label>-</label>
 	<font>griddetails</font>
-	<textcolor>white</textcolor>
+	<textcolor>FFACACAC</textcolor>
 	<animation effect="fade" start="0" end="80" time="500" delay="600">WindowOpen</animation>
 	<animation effect="fade" start="80" end="0" time="300" delay="0">WindowClose</animation>
 </control>

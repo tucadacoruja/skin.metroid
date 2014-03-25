@@ -191,9 +191,9 @@
 				</control>
 				
 				<control type="image">
-					<posx>110</posx>
-					<posy>109</posy>
-					<width>422</width>
+					<posx>113</posx>
+					<posy>113</posy>
+					<width>418</width>
 					<height>410</height>
 					<aspectratio scalediffuse="false">scale</aspectratio>
 					<texture diffuse="diffuse/albumdiffuse.png" >$INFO[MusicPlayer.Cover]</texture>

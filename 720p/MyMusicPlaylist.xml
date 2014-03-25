@@ -95,19 +95,17 @@
 
 <include>List</include>
 <include>Panel</include><!-- -603 --> 
-				
-<include>ScrollOffsetLabel</include>
 
 <control type="image">
 	<posx>10</posx>
-	<posy>10</posy>
+	<posy>5</posy>
 	<width>55</width>
 	<height>55</height>
 	<texture>osd/GrayBackground.png</texture>
 </control>
 <control type="image">
 	<posx>10</posx>
-	<posy>10</posy>
+	<posy>5</posy>
 	<width>55</width>
 	<height>55</height>
 	<texture>osd/playlist.png</texture>

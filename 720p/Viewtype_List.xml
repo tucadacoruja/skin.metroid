@@ -473,7 +473,7 @@
 				<orientation>Vertical</orientation>
 				<showonepage>true</showonepage>
 				<posx>310</posx>
-				<posy>120</posy>
+				<posy>110</posy>
 				<width>10</width>
 				<height>580</height>
 				<onleft>300</onleft>

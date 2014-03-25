@@ -17,7 +17,7 @@
 	
 	<control type="image">
 		<posx>68r</posx>
-		<posy>10</posy>
+		<posy>5</posy>
 		<width>55</width>
 		<height>55</height>
 		<aspectratio>stretch</aspectratio>
@@ -26,7 +26,7 @@
 	</control>
 	<control type="image" id="400">
 		<posx>1212</posx>
-		<posy>10</posy>
+		<posy>5</posy>
 		<height>55</height>
 		<width>55</width>
 		<aspectratio>stretch</aspectratio>
@@ -34,7 +34,7 @@
 	</control>
 	<control type="button" id="403">
 		<posx>1212</posx>
-		<posy>10</posy>
+		<posy>5</posy>
 		<height>55</height>
 		<width>55</width>
 		<aspectratio>stretch</aspectratio>
@@ -42,7 +42,7 @@
 	</control>
 	<control type="button" id="404">
 		<posx>1212</posx>
-		<posy>10</posy>
+		<posy>5</posy>
 		<height>55</height>
 		<width>55</width>
 		<aspectratio>stretch</aspectratio>
@@ -50,7 +50,7 @@
 	</control>
 	<control type="button" id="405">
 		<posx>1212</posx>
-		<posy>10</posy>
+		<posy>5</posy>
 		<height>55</height>
 		<width>55</width>
 		<aspectratio>stretch</aspectratio>
@@ -70,11 +70,11 @@
 	<control type="label" id="402">
 		<description>Heading</description>
 		<posx>1190</posx>
-		<posy>0</posy>
+		<posy>-4</posy>
 		<width>500</width>
 		<height>42</height>
 		<label>-</label>
-		<font>Clock</font>
+		<font>Clock2</font>
 		<textcolor>FF959595</textcolor>
 		<align>right</align>
 		<scroll>false</scroll>
@@ -86,7 +86,7 @@
 	<control type="label" id="401">
 		<description>line 2</description>
 		<posx>1190</posx>
-		<posy>27</posy>
+		<posy>23</posy>
 		<width>500</width>
 		<height>42</height>
 		<font>WeatherSmall</font>

@@ -273,6 +273,11 @@
 		<style>bold</style>
 	</font>
 	<font>
+		<name>Clock2</name>
+		<filename>Weblysleek-Semibold.ttf</filename>
+		<size>25</size>
+	</font>
+	<font>
 		<name>WeatherSmall</name>
 		<filename>Weblysleek.ttf</filename>
 		<size>22</size>
@@ -309,7 +314,7 @@
 		<name>HelpText</name>
 		<filename>Weblysleek-Semibold.ttf</filename>
 		<size>20</size>
-		<linespacing>1.6</linespacing>
+		<linespacing>1.5</linespacing>
 	</font>
 	<font>
 		<name>button</name>

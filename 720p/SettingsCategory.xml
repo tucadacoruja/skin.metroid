@@ -24,8 +24,6 @@
 
 <include>VideoWindow</include>
 <include>GeneralFanart</include>
-<include>Background</include>
-
 	
 	<control type="button" id="50">
 		<posx>10</posx>
@@ -45,25 +43,24 @@
 	</control>
 	<control type="image">
 		<posx>0</posx>
-		<posy>72</posy>
+		<posy>64</posy>
 		<width>250</width>
-		<height>648</height>
+		<height>660</height>
 		<aspectratio>stretch</aspectratio>
 		<texture>MetroidMenu.png</texture>
 		
 	</control>
 	<control type="image">
 		<posx>235</posx>
-		<posy>72</posy>
+		<posy>65</posy>
 		<width>15</width>
-		<height>650</height>
+		<height>660</height>
 		<aspectratio>stretch</aspectratio>
 		<texture>shadowv.png</texture>
 		<animation effect="fade" start="0" end="70" time="0" condition="true">Conditional</animation>
 	</control>
 	
 	<control type="group">
-		<posy>-2</posy>
 		<include>EmptyMenu</include>
 	</control>
 	
@@ -72,7 +69,7 @@
 	<control type="grouplist" id="3">
 		<description>Button Area</description>
 		<posx>2</posx>
-		<posy>72</posy>
+		<posy>65</posy>
 		<width>300</width>
 		<height>570</height>
 		<itemgap>0</itemgap>
@@ -109,8 +106,8 @@
 	
 		<control type="grouplist" id="5">
 			<description>Control Area</description>
-			<posx>368</posx>
-			<posy>137</posy>
+			<posx>355</posx>
+			<posy>130</posy>
 			<width>810</width>
 			<height>440</height>
 			<itemgap>.5</itemgap>
@@ -198,7 +195,7 @@
 		<control type="button" id="444">
 		
 			<posx>1</posx>
-			<posy>571</posy>
+			<posy>566</posy>
 			<description>Back Button</description>
 			<height>50</height>
 			<width>247</width>
@@ -218,7 +215,7 @@
 		<control type="button" id="20">
 		
 			<posx>1</posx>
-			<posy>621</posy>
+			<posy>616</posy>
 			<description>Settings Level Button</description>
 			<height>50</height>
 			<width>247</width>
@@ -246,9 +243,9 @@
 		<orientation>Vertical</orientation>
 		<showonepage>true</showonepage>
 		<posx>325</posx>
-		<posy>120</posy>
+		<posy>133</posy>
 		<width>10</width>
-		<height>560</height>
+		<height>450</height>
 		<onleft>3</onleft>
 		<onright>5</onright>
 		<animation effect="fade" start="100" end="40" time="200" reversable="false" condition="!Control.HasFocus(63)">Conditional</animation>
@@ -256,6 +253,7 @@
 
 	</control>
 
+<include>Background</include>
 <include>BottomInfoBar</include>
  
 </controls>

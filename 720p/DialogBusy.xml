@@ -41,7 +41,7 @@
 		<control type="progress" id="10">
 			<description>Progress Bar</description>
 			<posx>0</posx>
-			<posy>67</posy>
+			<posy>62</posy>
 			<width>1285</width>
 			<height>1</height>
 			<texturebg>DialogProgressBack.png</texturebg>
@@ -54,14 +54,14 @@
 		
 		<control type="image">
 			<posx>0</posx>
-			<posy>68</posy>
+			<posy>63</posy>
 			
 			<height>10</height>
 			<width>110</width>
 			
 			<texture>BlueBackground.png</texture>
 			<aspectratio>stretch</aspectratio>
-			<animation effect="zoom" start="0,30" end="1280,30" center="0,68" delay="0" time="8000" loop="true" condition="true">Conditional</animation>
+			<animation effect="zoom" start="0,30" end="1280,30" center="0,63" delay="0" time="8000" loop="true" condition="true">Conditional</animation>
 			<visible>Window.IsVisible(busydialog)</visible>
 		</control>
 				

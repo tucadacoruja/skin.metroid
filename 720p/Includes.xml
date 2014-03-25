@@ -158,7 +158,7 @@
 	
 	<!--  clock Group -->
 	<control type="group">
-	 
+	<posy>-4</posy>
 	<visible>![Window.IsVisible(107) | Library.IsScanningMusic | Library.IsScanningVideo | Window.IsVisible(extendedprogressdialog) | Window.IsVisible(614) | Window.IsVisible(112) | Window.IsVisible(101) | Window.IsVisible(133)]</visible>
 	
 		<control type="group">
@@ -171,7 +171,7 @@
 				<posy>0</posy>
 				<width>125</width>
 				<height>42</height>
-				<font>Clock</font>
+				<font>Clock2</font>
 				<align>right</align>
 				<aligny>center</aligny>
 				<textcolor>FF959595</textcolor>
@@ -199,7 +199,7 @@
 				<posy>0</posy>
 				<width>500</width>
 				<height>42</height>
-				<font>Clock</font>
+				<font>Clock2</font>
 				<align>right</align>
 				<aligny>center</aligny>
 				<textcolor>FF959595</textcolor>
@@ -239,7 +239,7 @@
 		
 		<control type="image">
 			<posx>70r</posx>
-			<posy>8</posy>
+			<posy>9</posy>
 			<height>55</height>
 			<width>55</width>
 			<texture>osd/GrayBackground.png</texture>
@@ -354,9 +354,9 @@
 		</control>
 		<control type="image">
 			<posx>235</posx>
-			<posy>72</posy>
+			<posy>65</posy>
 			<width>15</width>
-			<height>650</height>
+			<height>670</height>
 			<aspectratio>stretch</aspectratio>
 			<texture>shadowv.png</texture>
 			<animation effect="fade" start="0" end="70" time="0" condition="true">Conditional</animation>
@@ -388,21 +388,21 @@
 			<posx>0</posx>
 			<posy>0</posy>
 			<width>1280</width>
-			<height>72</height>
+			<height>62</height>
 			<aspectratio>stretch</aspectratio>
 			<texture background="true" >white.png</texture>
-			 
+			<colordiffuse>white</colordiffuse>
 		</control>
-		<control type="image">
+		<!--control type="image">
 			<posx>0</posx>
 			<posy>0</posy>
 			<width>1280</width>
-			<height>72</height>
+			<height>70</height>
 			<aspectratio>stretch</aspectratio>
 			<texture>shadow.png</texture>
 			 
-			<animation effect="fade" start="0" end="20" time="0" reversible="false" condition="true">Conditional</animation>
-		</control>
+			<animation effect="fade" start="0" end="10" time="0" reversible="false" condition="true">Conditional</animation>
+		</control-->
 		<!--control type="image">
 			<posx>0</posx>
 			<posy>0</posy>
@@ -414,7 +414,7 @@
 		</control-->
 		<control type="image">
 			<posx>0</posx>
-			<posy>67</posy>
+			<posy>62</posy>
 			<width>1285</width>
 			<height>5</height>
 			<aspectratio>stretch</aspectratio>
@@ -430,7 +430,7 @@
 			<animation effect="fade" start="0" end="100" time="100">Visible</animation>
 			<animation effect="fade" start="100" end="0" delay="500" time="300">Hidden</animation>
 			<posx>10</posx>
-			<posy>10</posy>
+			<posy>5</posy>
 			<control type="image">
 				<posx>0</posx>
 				<posy>0</posy>
@@ -465,7 +465,7 @@
 			<animation effect="fade" start="0" end="100" time="100">Visible</animation>
 			<animation effect="fade" start="100" end="0" delay="500" time="300">Hidden</animation>
 			<posx>10</posx>
-			<posy>10</posy>
+			<posy>5</posy>
 			<control type="image">
 				<posx>0</posx>
 				<posy>0</posy>
@@ -491,7 +491,7 @@
 	<include name="EmptyMenu">
 		<control type="list">
 			<posx>5</posx>
-			<posy>72</posy>
+			<posy>65</posy>
 			<width>300</width>
 			<height>648</height>
 			<onleft>300</onleft>
@@ -751,5 +751,5 @@
 		</item>
 	</include>
 	
-	
+
 </includes>

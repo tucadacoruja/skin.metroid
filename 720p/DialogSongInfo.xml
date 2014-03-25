@@ -10,70 +10,9 @@
 	
 <controls>
 	
-	<control type="button" id="12">
-		<posx>-10</posx>
-		<posy>-10</posy>
-		<width>1</width>
-		<height>1</height>
-		<animation effect="fade" start="1" end="0" time="0" condition="true">Conditional</animation>
-	</control>
-
-	<control type="image">
-		<posx>10</posx>
-		<posy>10</posy>
-		<height>55</height>
-		<width>55</width>
-		<texture>$INFO[ListItem.Icon]</texture>
-		<aspectratio>scale</aspectratio>
-		<animation effect="slide" start="0,-100" end="0,0" time="200" easing="out" tween="cubic" reversable="false" >WindowOpen</animation>
-		<animation effect="slide" start="0,0" end="0,-100" time="200" easing="out" tween="cubic" reversable="false" >WindowClose</animation>
-	</control>
-	<control type="button" id="13">
-		<description>art</description>
-		<posx>10</posx>
-		<posy>10</posy>
-		<height>55</height>
-		<width>55</width>
-		<aspectratio>keep</aspectratio>
-		<texturefocus>osd/art.png</texturefocus>
-		<texturenofocus>osd/art.png</texturenofocus>
-		<onright>1</onright>
-		<ondown>Dialog.Close(songinformation)</ondown>
-		<visible allowhiddenfocus="true">Control.HasFocus(13)</visible>
-		
-		<animation effect="zoom" start="100" end="120" center="auto" time="100">Focus</animation>
-		<animation effect="zoom" start="120" end="100" center="auto" time="100">UnFocus</animation>
-	</control>
-			
-	<control type="image">
-		<description>Rating value</description>
-		<posx>75</posx>
-		<posy>0</posy>
-		<height>45</height>
-		<width>110</width>
-		<aspectratio align="left">keep</aspectratio>
-		<texture>$INFO[ListItem.StarRating]</texture>
-		<animation effect="slide" start="0,-100" end="0,0" time="200" easing="out" tween="cubic" reversable="false" >WindowOpen</animation>
-		<animation effect="slide" start="0,0" end="0,-100" time="200" easing="out" tween="cubic" reversable="false" >WindowClose</animation>
-	</control>
-	<control type="label">
-		<posx>80</posx>
-		<posy>25</posy>
-		<height>45</height>
-		<width>200</width>
-		<label>$INFO[ListItem.Album]</label>
-		<font>movietitle6</font>
-		<textcolor>ff959595</textcolor>
-		<align>left</align>
-		<aligy>bottom</aligy>
-		<scroll>true</scroll>
-		<animation effect="slide" start="0,-100" end="0,0" time="200" easing="out" tween="cubic" reversable="false" >WindowOpen</animation>
-		<animation effect="slide" start="0,0" end="0,-100" time="200" easing="out" tween="cubic" reversable="false" >WindowClose</animation>
-	</control>
-			
 	<control type="grouplist">
-			<posx>290</posx>
-			<posy>10</posy>
+			<posx>10</posx>
+			<posy>5</posy>
 			<width>500</width>
 			<height>100</height>
 			<align>left</align>
@@ -105,19 +44,19 @@
 				<aspectratio>stretch</aspectratio>
 				<animation effect="fade" start="100" end="40" time="100" condition="Control.HasFocus(10)">Conditional</animation>
 			</control>
-			<control type="image">
+			<!--control type="image">
 				<height>55</height>
 				<width>55</width>
 				<texture>osd/GrayBackground.png</texture>
 				<aspectratio>stretch</aspectratio>
 				<animation effect="fade" start="100" end="40" time="100" condition="Control.HasFocus(11)">Conditional</animation>
-			</control>
+			</control-->
 
 	</control>		
 	<control type="grouplist" id="1">
 			
-			<posx>290</posx>
-			<posy>10</posy>
+			<posx>10</posx>
+			<posy>5</posy>
 			<width>500</width>
 			<height>100</height>
 			<align>left</align>
@@ -162,14 +101,14 @@
 				<height>55</height>
 				<width>55</width>
 				<aspectratio>keep</aspectratio>
-				<texturefocus colordiffuse="FFACACAC">osd/ok.png</texturefocus>
-				<texturenofocus>osd/ok.png</texturenofocus>
+				<texturefocus colordiffuse="FFACACAC">osd/cancel.png</texturefocus>
+				<texturenofocus>osd/cancel.png</texturenofocus>
 				
 				<animation effect="zoom" start="100" end="120" center="auto" time="100">Focus</animation>
 				<animation effect="zoom" start="120" end="100" center="auto" time="100">UnFocus</animation>
 			</control>
 			
-			<control type="button" id="11">
+			<!--control type="button" id="11">
 				<description>cancel</description>
 				<height>55</height>
 				<width>55</width>
@@ -179,9 +118,74 @@
 							
 				<animation effect="zoom" start="100" end="120" center="auto" time="100">Focus</animation>
 				<animation effect="zoom" start="120" end="100" center="auto" time="100">UnFocus</animation>
-			</control>
+			</control-->
 
 	</control>
-		
+	
+	<control type="group">
+	<posx>180</posx>
+	
+		<control type="button" id="12">
+			<posx>-10</posx>
+			<posy>-10</posy>
+			<width>1</width>
+			<height>1</height>
+			<visible>false</visible>
+		</control>
+
+		<control type="image">
+			<posx>10</posx>
+			<posy>5</posy>
+			<height>55</height>
+			<width>55</width>
+			<texture>$INFO[ListItem.Icon]</texture>
+			<aspectratio>scale</aspectratio>
+			<animation effect="slide" start="0,-100" end="0,0" time="200" easing="out" tween="cubic" reversable="false" >WindowOpen</animation>
+			<animation effect="slide" start="0,0" end="0,-100" time="200" easing="out" tween="cubic" reversable="false" >WindowClose</animation>
+		</control>
+		<control type="button" id="13">
+			<description>art</description>
+			<posx>10</posx>
+			<posy>5</posy>
+			<height>55</height>
+			<width>55</width>
+			<aspectratio>keep</aspectratio>
+			<texturefocus>osd/art.png</texturefocus>
+			<texturenofocus>osd/art.png</texturenofocus>
+			<onright>1</onright>
+			<ondown>Dialog.Close(songinformation)</ondown>
+			<visible allowhiddenfocus="true">Control.HasFocus(13)</visible>
+			
+			<animation effect="zoom" start="100" end="120" center="auto" time="100">Focus</animation>
+			<animation effect="zoom" start="120" end="100" center="auto" time="100">UnFocus</animation>
+		</control>
+				
+		<control type="image">
+			<description>Rating value</description>
+			<posx>75</posx>
+			<posy>-5</posy>
+			<height>45</height>
+			<width>110</width>
+			<aspectratio align="left">keep</aspectratio>
+			<texture>$INFO[ListItem.StarRating]</texture>
+			<animation effect="slide" start="0,-100" end="0,0" time="200" easing="out" tween="cubic" reversable="false" >WindowOpen</animation>
+			<animation effect="slide" start="0,0" end="0,-100" time="200" easing="out" tween="cubic" reversable="false" >WindowClose</animation>
+		</control>
+		<control type="label">
+			<posx>80</posx>
+			<posy>20</posy>
+			<height>45</height>
+			<width>200</width>
+			<label>$INFO[ListItem.Album]</label>
+			<font>WeatherSmall</font>
+			<textcolor>ff959595</textcolor>
+			<align>left</align>
+			<aligy>bottom</aligy>
+			<scroll>true</scroll>
+			<animation effect="slide" start="0,-100" end="0,0" time="200" easing="out" tween="cubic" reversable="false" >WindowOpen</animation>
+			<animation effect="slide" start="0,0" end="0,-100" time="200" easing="out" tween="cubic" reversable="false" >WindowClose</animation>
+		</control>
+	</control>
+
 </controls>
 </window>

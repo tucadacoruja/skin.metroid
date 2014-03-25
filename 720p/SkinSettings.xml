@@ -30,9 +30,9 @@
 		
 		<control type="image">
 			<posx>0</posx>
-			<posy>72</posy>
+			<posy>65</posy>
 			<width>250</width>
-			<height>648</height>
+			<height>660</height>
 			<aspectratio>stretch</aspectratio>
 			<texture>MetroidMenu.png</texture>
 			
@@ -40,158 +40,158 @@
 		
 		<control type="image">
 			<posx>235</posx>
-			<posy>72</posy>
+			<posy>65</posy>
 			<width>15</width>
-			<height>650</height>
+			<height>660</height>
 			<aspectratio>stretch</aspectratio>
 			<texture>shadowv.png</texture>
 			<animation effect="fade" start="0" end="70" time="0" condition="true">Conditional</animation>
 		</control>
 		
-		<control type="group">
-			<posy>0</posy>
-			<include>EmptyMenu</include>
-		</control>
-
-	
-		<control type="group">
-		<posy>-15</posy>
-			
-			<control type="list" id="9000">
-				<description>Button Area</description>
-				<posx>1</posx>
-				<posy>86</posy>
-				<width>300</width>
-				<height>570</height>
-				<onleft>999</onleft>
-				<onright condition="Control.IsVisible(9001)">9001</onright>
-				<onright condition="Control.IsVisible(9003)">9003</onright>
-				<onright condition="Control.IsVisible(9004)">9004</onright>
-				<onright condition="Control.IsVisible(9006)">9006</onright>
-				<onup>301</onup>
-				<ondown>444</ondown>
-				<pagecontrol>-</pagecontrol>
-				<scrolltime tween="cubic" easing="inout">325</scrolltime>
-				<orientation>vertical</orientation>
-							
-				<itemlayout height="50" width="246">
-					<control type="label">
-						<posx>25</posx>
-						<posy>-1</posy>
-						<width>246</width>
-						<height>50</height>
-						<font>MainMenu21</font>
-						<textcolor>FFD7D7D7</textcolor>
-						<aligny>center</aligny>
-						<align>left</align>
-						<scroll>false</scroll>
-						<label>$INFO[ListItem.Label]</label>
-												
-					</control>
-					
-				</itemlayout>
-				
-				<focusedlayout height="50" width="246">
-					
-					<control type="image">
-						<description>list line image</description>
-						<posx>0</posx>
-						<posy>2</posy>
-						<width>246</width>
-						<height>50</height>
-						<aspectratio>stretch</aspectratio>
-						<texture>black.png</texture>
+		<include>EmptyMenu</include>
+		
+		<control type="list" id="9000">
+			<description>Button Area</description>
+			<posx>1</posx>
+			<posy>65</posy>
+			<width>300</width>
+			<height>570</height>
+			<onleft>999</onleft>
+			<onright condition="Control.IsVisible(9001)">9001</onright>
+			<onright condition="Control.IsVisible(9003)">9003</onright>
+			<onright condition="Control.IsVisible(9004)">9004</onright>
+			<onright condition="Control.IsVisible(9006)">9006</onright>
+			<onup>301</onup>
+			<ondown>444</ondown>
+			<pagecontrol>-</pagecontrol>
+			<scrolltime tween="cubic" easing="inout">325</scrolltime>
+			<orientation>vertical</orientation>
 						
-						<animation effect="fade" start="0" end="40" time="0" condition="true">Conditional</animation>
-					</control>
-					<control type="label">
-						<posx>25</posx>
-						<posy>-1</posy>
-						<width>240</width>
-						<height>50</height>
-						<font>MainMenu21</font>
-						<textcolor>FFD7D7D7</textcolor>
-						<aligny>center</aligny>
-						<align>left</align>
-						<scroll>false</scroll>
-						<label>$INFO[ListItem.Label]</label>
+			<itemlayout height="50" width="246">
+				<control type="label">
+					<posx>25</posx>
+					<posy>-1</posy>
+					<width>246</width>
+					<height>50</height>
+					<font>MainMenu21</font>
+					<textcolor>FFD7D7D7</textcolor>
+					<aligny>center</aligny>
+					<align>left</align>
+					<scroll>false</scroll>
+					<label>$INFO[ListItem.Label]</label>
 											
-					</control>
-					<control type="image">
-						<description>focussed image</description>
-						<posx>0</posx>
-						<posy>2</posy>
-						<width>10</width>
-						<height>50</height>
-						<aspectratio>stretch</aspectratio>
-						<texture>white.png</texture>
-						<animation effect="fade" start="0" end="40" time="0" condition="true">Conditional</animation>
-						<visible>!Control.HasFocus(9000)</visible>
-						
-					</control>
-					<control type="image">
-						<description>focussed image</description>
-						<posx>0</posx>
-						<posy>2</posy>
-						<width>10</width>
-						<height>50</height>
-						<aspectratio>stretch</aspectratio>
-						<texture>white.png</texture>
-						<colordiffuse>skin.string(MainColorString)</colordiffuse>
-						<animation effect="fade" start="0" end="75" time="0" condition="true">Conditional</animation>
-						<visible>Control.HasFocus(9000)</visible>
-					</control>
+				</control>
+				
+			</itemlayout>
+			
+			<focusedlayout height="50" width="246">
+				
+				<control type="image">
+					<description>list line image</description>
+					<posx>0</posx>
+					<posy>2</posy>
+					<width>248</width>
+					<height>50</height>
+					<aspectratio>stretch</aspectratio>
+					<texture>black.png</texture>
 					
+					<animation effect="fade" start="0" end="40" time="0" condition="true">Conditional</animation>
+				</control>
+				<control type="label">
+					<posx>25</posx>
+					<posy>-1</posy>
+					<width>240</width>
+					<height>50</height>
+					<font>MainMenu21</font>
+					<textcolor>FFD7D7D7</textcolor>
+					<aligny>center</aligny>
+					<align>left</align>
+					<scroll>false</scroll>
+					<label>$INFO[ListItem.Label]</label>
+										
+				</control>
+				<control type="image">
+					<description>focussed image</description>
+					<posx>0</posx>
+					<posy>2</posy>
+					<width>10</width>
+					<height>50</height>
+					<aspectratio>stretch</aspectratio>
+					<texture>white.png</texture>
+					<animation effect="fade" start="0" end="40" time="0" condition="true">Conditional</animation>
+					<visible>!Control.HasFocus(9000)</visible>
+					
+				</control>
+				<control type="image">
+					<description>focussed image</description>
+					<posx>0</posx>
+					<posy>2</posy>
+					<width>10</width>
+					<height>50</height>
+					<aspectratio>stretch</aspectratio>
+					<texture>white.png</texture>
+					<colordiffuse>skin.string(MainColorString)</colordiffuse>
+					<animation effect="fade" start="0" end="75" time="0" condition="true">Conditional</animation>
+					<visible>Control.HasFocus(9000)</visible>
+				</control>
 				
-				</focusedlayout>
-				<content>
-					<item id="1">
-						<description>Main menu</description>
-						<label>31138</label>
-						<onclick>SetFocus(9001)</onclick>
-					</item>
-					<item id="3">
-						<description>Options</description>
-						<label>31187</label>
-						<onclick>SetFocus(9006)</onclick>
-					</item>
-					<item id="4">
-						<description>Background</description>
-						<label>31223</label>
-						<onclick>SetFocus(9004)</onclick>
-					</item>
-					<item id="5">
-						<description>Favorites</description>
-						<label>31141</label>
-						<onclick>SetFocus(9003)</onclick>
-					</item>
-									
-				</content>
-			</control>
+			
+			</focusedlayout>
+			<content>
+				<item id="1">
+					<description>Main menu</description>
+					<label>31138</label>
+					<onclick>SetFocus(9001)</onclick>
+				</item>
+				<item id="3">
+					<description>Options</description>
+					<label>31187</label>
+					<onclick>SetFocus(9006)</onclick>
+				</item>
+				<item id="4">
+					<description>Background</description>
+					<label>31223</label>
+					<onclick>SetFocus(9004)</onclick>
+				</item>
+				<item id="5">
+					<description>Favorites</description>
+					<label>31141</label>
+					<onclick>SetFocus(9003)</onclick>
+				</item>
+								
+			</content>
+		</control>
+		
+		
+		
+		<control type="group"> <!-- groups + slider -->
+			<animation effect="fade" start="0" end="100" time="0" condition="true">Visible</animation>
+			<animation effect="fade" start="100" end="0" time="0" condition="true">Hidden</animation>
+			<visible>!Window.IsVisible(selectdialog)</visible>
+			<visible>!Window.IsVisible(favourites)</visible>
+			<visible>!Window.IsVisible(filebrowser)</visible>
+			<visible>!Window.IsActive(DialogSelect.xml)</visible>
+			<visible>!Window.IsVisible(virtualkeyboard)</visible>
+			
+			<animation type="WindowClose" reversible="false">
+				<effect type="fade" start="100" end="0" time="350" delay="0" />
+			</animation> 
+		
+		
+		
+			<control type="group" id="9010"><!-- just groups -->
+			<posy>3</posy>	
 
-			<control type="group" id="9010">
-			<posy>20</posy>	
-
-				<animation effect="fade" start="0" end="100" time="0" condition="true">Visible</animation>
-				<animation effect="fade" start="100" end="0" time="0" condition="true">Hidden</animation>
-				<visible>!Window.IsVisible(selectdialog)</visible>
-				<visible>!Window.IsVisible(favourites)</visible>
-				<visible>!Window.IsVisible(filebrowser)</visible>
-				<visible>!Window.IsActive(DialogSelect.xml)</visible>
-				<visible>!Window.IsVisible(virtualkeyboard)</visible>
 				
-				<animation type="WindowClose" reversible="false">
-					<effect type="fade" start="100" end="0" time="350" delay="0" />
-				</animation> 
 				<!--  Main Items  -->
 			
 				<control type="grouplist" id="9001">
 					<description>Control Area</description>
 					<visible>Container(9000).Hasfocus(1)</visible>
-					<posx>368</posx>
+					<posx>355</posx>
 					<posy>133</posy>
 					<width>810</width>
-					<height>510</height>
+					<height>476</height>
 					<itemgap>.5</itemgap>
 					<onleft>63</onleft>
 					<onright>9000</onright>
@@ -401,10 +401,10 @@
 					<description>Control Area</description>
 					<visible>Container(9000).Hasfocus(5)</visible>
 				
-					<posx>368</posx>
+					<posx>355</posx>
 					<posy>133</posy>
 					<width>810</width>
-					<height>510</height>
+					<height>476</height>
 					<itemgap>.5</itemgap>
 					<onleft>63</onleft>
 					<onright>9000</onright>
@@ -614,10 +614,10 @@
 				<control type="grouplist" id="9004">
 					<description>Control Area</description>
 					<visible>Container(9000).Hasfocus(4)</visible>
-					<posx>368</posx>
+					<posx>355</posx>
 					<posy>133</posy>
 					<width>810</width>
-					<height>510</height>
+					<height>476</height>
 					<itemgap>.5</itemgap>
 					<onleft>63</onleft>
 					<onright>9000</onright>
@@ -718,10 +718,10 @@
 				<control type="grouplist" id="9006">
 					<description>Control Area</description>
 					<visible>Container(9000).Hasfocus(3)</visible>
-					<posx>368</posx>
+					<posx>355</posx>
 					<posy>133</posy>
 					<width>810</width>
-					<height>510</height>
+					<height>476</height>
 					<itemgap>.5</itemgap>
 					<onleft>63</onleft>
 					<onright>9000</onright>
@@ -955,10 +955,10 @@
 			<control type="button" id="444">
 		
 				<posx>1</posx>
-				<posy>638</posy>
+				<posy>616</posy>
 				<description>Back Button</description>
 				<height>50</height>
-				<width>247</width>
+				<width>249</width>
 				<align>left</align>
 				<aligny>center</aligny>
 				<textoffsetx>23</textoffsetx>
@@ -982,10 +982,11 @@
 			<textureslidernibfocus>buttons/scrollnibV.png</textureslidernibfocus>
 			<orientation>Vertical</orientation>
 			<showonepage>true</showonepage>
+			
 			<posx>325</posx>
-			<posy>120</posy>
+			<posy>140</posy>
 			<width>10</width>
-			<height>560</height>
+			<height>470</height>
 			<onleft>9000</onleft>
 			<onright condition="Control.IsVisible(9001)">9001</onright>
 			<onright condition="Control.IsVisible(9003)">9003</onright>

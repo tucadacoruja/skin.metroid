@@ -269,14 +269,14 @@
 		<include>LowBattery</include>
 		<control type="image">
 			<posx>70</posx>
-			<posy>10</posy>
+			<posy>5</posy>
 			<width>55</width>
 			<height>55</height>
 			<texture>osd/GrayBackground.png</texture>
 		</control>
 		<control type="button" id="300">
 			<posx>70</posx>
-			<posy>10</posy>
+			<posy>5</posy>
 			<width>55</width>
 			<height>55</height>
 			<aspectratio>keep</aspectratio>
@@ -311,7 +311,7 @@
 		
 		<control type="image">
 			<posx>130</posx>
-			<posy>10</posy>
+			<posy>5</posy>
 			<width>55</width>
 			<height>55</height>
 			<texture>osd/GrayBackground.png</texture>
@@ -320,7 +320,7 @@
 		<control type="button" id="406">
 			<description>stop</description>
 			<posx>130</posx>
-			<posy>10</posy>
+			<posy>5</posy>
 			<height>55</height>
 			<width>55</width>
 			<aspectratio>keep</aspectratio>

@@ -32,7 +32,7 @@
 	
 	<control type="grouplist">
 			<posx>130</posx>
-			<posy>10</posy>
+			<posy>5</posy>
 			<width>500</width>
 			<height>100</height>
 			<align>left</align>
@@ -91,7 +91,7 @@
 	<control type="grouplist" id="1">
 			
 			<posx>130</posx>
-			<posy>10</posy>
+			<posy>5</posy>
 			<width>500</width>
 			<height>100</height>
 			<align>left</align>
