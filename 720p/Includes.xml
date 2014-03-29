@@ -134,6 +134,14 @@
 	<width>1000</width>
 </include>
 
+<include name="InfoLockedPosx">
+	<posx>300</posx>
+</include>
+<include name="InfoUnLockedPosx">
+	<posx>60</posx>
+</include>
+
+
 <include name="MenuAutoClose">
 	<control type="button">
 		<onfocus condition="IsEmpty(Container(301).ListItem.Property(DropdownMenu1))">Skin.Reset(SubMenu1)</onfocus>
@@ -318,6 +326,7 @@
 			<fadetime>1000</fadetime>
 			<randomize>true</randomize>
 			<animation effect="fade" start="0" end="100" time="100">VisibleChange</animation>
+			<animation effect="fade" start="0" end="100" time="100" delay="50">WindowOpen</animation>
 			<animation effect="fade" start="10" end="74" time="100000" delay="2000" reversable="true" pulse="true" condition="Player.HasAudio + !Skin.HasSetting(VisLibrary)">Conditional</animation>
 			
 			<visible>!Player.HasVideo + IsEmpty(ListItem.Art(fanart)) + !Skin.HasSetting(BackgroundSlideshow)</visible>
@@ -339,7 +348,8 @@
 			<width>1280</width>
 			<height>720</height>
 			<aspectratio>stretch</aspectratio>
-			<texture background="true" fallback="MetroidBG.png">$INFO[Skin.String(GlobalBackground)]</texture>
+			<fadetime>60</fadetime>
+			<texture background="true" fallback="special://skin/extras/backgrounds/MetroidBG.png">$INFO[Skin.String(GlobalBackground)]</texture>
 			<animation effect="fade" start="75" end="85" time="200" reversible="true" condition="!Player.HasVideo + !Skin.HasSetting(VidWinLibrary)">Conditional</animation>
 			<animation effect="fade" start="85" end="75" time="200" reversible="true" condition="Player.HasVideo + !Skin.HasSetting(VidWinLibrary)">Conditional</animation>
 			<animation effect="fade" start="85" end="100" time="50000" reversable="true" pulse="true" condition="Player.HasAudio + !Skin.HasSetting(VisLibrary) + !Skin.HasSetting(BackgroundSlideshow)">Conditional</animation>
@@ -488,7 +498,7 @@
 		</control>
 	</include>
 	
-	<include name="EmptyMenu">
+	<!--include name="EmptyMenu">
 		<control type="list">
 			<posx>5</posx>
 			<posy>65</posy>
@@ -539,7 +549,7 @@
 				</content>	
 				
 		</control>
-	</include>
+	</include-->
 	
 	
 	<include name="Loading">
@@ -751,5 +761,48 @@
 		</item>
 	</include>
 	
-
+	<include name="MainListLine">
+		<control type="image">
+			<description>list line image</description>
+			<width>240</width>
+			<height>1.5</height>
+			<aspectratio>stretch</aspectratio>
+			<texture>white.png</texture>
+			<colordiffuse>16FFFFFF</colordiffuse>
+		</control>
+		<control type="image">
+			<width>240</width>
+			<height>48.5</height>
+			<aspectratio>stretch</aspectratio>
+			<texture> </texture>
+			<colordiffuse>46FFFFFF</colordiffuse>
+		</control>
+	</include>
+	<include name="EmptyMenu">
+		<control type="grouplist">
+			<posx>5</posx>
+			<posy>65.5</posy>
+			<width>300</width>
+			<height>648</height>
+			<itemgap>0</itemgap>
+			<include>MainListLine</include>
+			<include>MainListLine</include>
+			<include>MainListLine</include>
+			<include>MainListLine</include>
+			<include>MainListLine</include>
+			<include>MainListLine</include>
+			<include>MainListLine</include>
+			<include>MainListLine</include>
+			<include>MainListLine</include>
+			<include>MainListLine</include>
+			<include>MainListLine</include>
+			<include>MainListLine</include>
+			<include>MainListLine</include>
+			<include>MainListLine</include>
+		</control>
+	</include>
+	
+	
+	
+	
 </includes>

@@ -23,6 +23,12 @@
 		<value>$INFO[Container(677).ListItem.TVShowTitle]</value>
 	</variable>
 	
+	<variable name="MultiPlot">
+		<value condition="!IsEmpty(ListItem.Property(Addon.Description))">$INFO[ListItem.Property(Addon.Description)]</value>
+		<value condition="!IsEmpty(ListItem.Property(Album_Description))">$INFO[ListItem.Property(Album_Description)]</value>
+		<value>$INFO[ListItem.Plot]</value>
+	</variable>
+	
 	
 	
 	<variable name="Episode_title">
@@ -101,6 +107,7 @@
 	
 	<variable name="PosterThumbs">
 		<value condition="!IsEmpty(ListItem.Art(poster))">$INFO[ListItem.Art(poster)]</value>
+		<value condition="Container.Content(Episodes) + !IsEmpty(ListItem.Art(thumb))">$INFO[ListItem.Art(thumb)]</value>
 		<value condition="Container.Content(Episodes)">$INFO[ListItem.Art(tvshow.poster)]</value>
 		<value condition="Container.Content(Seasons) + !IsEmpty(ListItem.Art(season.poster))">$INFO[ListItem.Art(season.poster)]</value>
 		<value condition="Container.Content(Seasons) + IsEmpty(ListItem.Art(season.poster))">$INFO[ListItem.Art(tvshow.poster)]</value>

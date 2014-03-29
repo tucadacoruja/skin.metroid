@@ -96,7 +96,7 @@
 		<width>1280</width>
 		<height>720</height>
 		<aspectratio>stretch</aspectratio>
-		<texture background="true" fallback="MetroidBG.png">$INFO[Skin.String(GlobalBackground)]</texture>
+		<texture background="true" fallback="special://skin/extras/backgrounds/MetroidBG.png">$INFO[Skin.String(GlobalBackground)]</texture>
 		<animation effect="fade" start="75" end="90" time="200" reversible="true" condition="!Player.HasVideo">Conditional</animation>
 		<animation effect="fade" start="90" end="75" time="200" reversible="true" condition="Player.HasVideo">Conditional</animation>
 		<animation effect="fade" start="84" end="90" time="90000" reversable="true" pulse="true" condition="Player.HasAudio + !Skin.HasSetting(VisLibrary)">Conditional</animation>

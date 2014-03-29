@@ -82,7 +82,7 @@
 							<posy>0</posy>
 							<width>30</width>
 							<height>30</height>
-							<texture>bookmark.png</texture>
+							<texture background="true">bookmark.png</texture>
 							<visible>!substring(ListItem.Label,..,left) + [Stringcompare(Skin.String(BookmarkDBID1),ListItem.DBID) | Stringcompare(Skin.String(BookmarkDBID2),ListItem.DBID) | Stringcompare(Skin.String(BookmarkDBID3),ListItem.DBID)]</visible>
 							<visible>Container.Content(episodes) + substring(Container.FolderPath,videodb://tvshows)</visible>
 						</control>
@@ -105,7 +105,7 @@
 							<posy>205</posy>
 							<width>100</width>
 							<height>20</height>
-							<texture background="true">$INFO[ListItem.StarRating]</texture>
+							<texture>$INFO[ListItem.StarRating]</texture>
 							
 							<aspectratio>scale</aspectratio>
 							
@@ -164,7 +164,7 @@
 							<width>20</width>
 							<height>20</height>
 							<aspectratio align="left" aligny="center">stretch</aspectratio>
-							<texture>Watched.png</texture>
+							<texture background="true">Watched.png</texture>
 							<visible>stringcompare(ListItem.Overlay,OverlayWatched.png)</visible>
 							<visible>!Skin.HasSetting(WatchedOverlays)</visible>
 						</control>
@@ -218,7 +218,7 @@
 							<posy>0</posy>
 							<width>30</width>
 							<height>30</height>
-							<texture>bookmark.png</texture>
+							<texture background="true">bookmark.png</texture>
 							<visible>!substring(ListItem.Label,..,left) + [Stringcompare(Skin.String(BookmarkDBID1),ListItem.DBID) | Stringcompare(Skin.String(BookmarkDBID2),ListItem.DBID) | Stringcompare(Skin.String(BookmarkDBID3),ListItem.DBID)]</visible>
 							<visible>Container.Content(episodes) + substring(Container.FolderPath,videodb://tvshows)</visible>
 						</control>
@@ -295,7 +295,7 @@
 							<width>20</width>
 							<height>20</height>
 							<aspectratio align="left" aligny="center">stretch</aspectratio>
-							<texture>Watched.png</texture>
+							<texture background="true">Watched.png</texture>
 							<visible>stringcompare(ListItem.Overlay,OverlayWatched.png)</visible>
 							<visible>!Skin.HasSetting(WatchedOverlays)</visible>
 						</control>

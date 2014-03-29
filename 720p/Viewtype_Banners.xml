@@ -40,7 +40,7 @@
 					<posy>15</posy>
 					<width>590</width>
 					<height>165</height>
-					<texture border="22">diffuse/postershadow.png</texture>
+					<texture background="true" border="22">diffuse/postershadow.png</texture>
 					<align>bottom</align>
 					<aspectratio>stretch</aspectratio>
 					<colordiffuse>70ffffff</colordiffuse>
@@ -51,7 +51,7 @@
 					<posy>10</posy>
 					<width>577</width>
 					<height>149</height>
-					<texture border="12">white.png</texture>
+					<texture background="true" border="12">white.png</texture>
 					<colordiffuse>FFE1E1E1</colordiffuse>
 					<aspectratio>stretch</aspectratio>
 				</control>
@@ -60,7 +60,7 @@
 					<posy>152</posy>
 					<width>577</width>
 					<height>7</height>
-					<texture>shadow.png</texture>
+					<texture background="true">shadow.png</texture>
 					<aspectratio>stretch</aspectratio>
 					<animation effect="fade" start="0" end="20" time="0" condition="true">Conditional</animation>
 				</control>
@@ -70,7 +70,7 @@
 					<width>120</width>
 					<height>100</height>
 					<aspectratio>stretch</aspectratio>
-					<texture background="true" diffuse="poster/posterdiffusesmall.png">$VAR[Fallback_Icon]</texture>
+					<texture >$VAR[Fallback_Icon]</texture>
 					<animation effect="fade" start="0" end="80" time="0" condition="true">Conditional</animation>
 					
 					<colordiffuse>EBFFFFFF</colordiffuse>
@@ -82,7 +82,7 @@
 					<width>573</width>
 					<height>105</height>
 					<visible>!IsEmpty(ListItem.Art(banner))</visible>
-					<texture background="true" diffuse="diffuse/bannerdiff.png" fallback="DefaultAlbumCover.png">$INFO[ListItem.Art(banner)]</texture>
+					<texture diffuse="diffuse/bannerdiff.png" fallback="DefaultAlbumCover.png">$INFO[ListItem.Art(banner)]</texture>
 					<aspectratio>stretch</aspectratio>
 				</control>
 	
@@ -120,8 +120,8 @@
 					<posx>1</posx>
 					<posy>12</posy>
 					<width>575</width>
-					<height>143</height>
-					<texture border="12">white.png</texture>
+					<height>144</height>
+					<texture background="true" border="12">white.png</texture>
 					<aspectratio>stretch</aspectratio>
 					<colordiffuse>hellblue</colordiffuse>
 					<animation effect="fade" end="50" time="0" condition="true">Conditional</animation>
@@ -134,7 +134,7 @@
 					<posy>10</posy>
 					<width>578</width>
 					<height>149</height>
-					<texture border="12">white.png</texture>
+					<texture background="true" border="12">white.png</texture>
 					<aspectratio>stretch</aspectratio>
 					<colordiffuse>FFE1E1E1</colordiffuse>
 						<animation type="Focus" reversible="false">
@@ -147,7 +147,7 @@
 					<posy>152</posy>
 					<width>577</width>
 					<height>7</height>
-					<texture>shadow.png</texture>
+					<texture background="true">shadow.png</texture>
 					<aspectratio>stretch</aspectratio>
 					<animation effect="fade" start="0" end="20" time="0" condition="true">Conditional</animation>
 				</control>
@@ -157,7 +157,7 @@
 					<width>120</width>
 					<height>100</height>
 					<aspectratio>stretch</aspectratio>
-					<texture background="true" diffuse="poster/posterdiffusesmall.png">$VAR[Fallback_Icon]</texture>
+					<texture >$VAR[Fallback_Icon]</texture>
 					<animation effect="fade" start="0" end="80" time="0" condition="true">Conditional</animation>
 					
 					<colordiffuse>EBFFFFFF</colordiffuse>
@@ -168,7 +168,7 @@
 					<width>573</width>
 					<height>105</height>
 					<visible>!IsEmpty(ListItem.Art(banner))</visible>
-					<texture background="true" diffuse="diffuse/bannerdiff.png" fallback="DefaultAlbumCover.png">$INFO[ListItem.Art(banner)]</texture>
+					<texture diffuse="diffuse/bannerdiff.png" fallback="DefaultAlbumCover.png">$INFO[ListItem.Art(banner)]</texture>
 					<aspectratio>stretch</aspectratio>
 						<animation type="Focus" reversible="false">
 							<effect type="zoom" start="93" end="100" time="200" center="auto"/>
@@ -206,7 +206,7 @@
 					<bordersize>2</bordersize>
 					<aspectratio>scale</aspectratio>
 					<fadetime>350</fadetime>
-					<texture diffuse="banner/fandiff.png">$INFO[ListItem.Property(Fanart_Image)]</texture>
+					<texture background="true" diffuse="banner/fandiff.png">$INFO[ListItem.Property(Fanart_Image)]</texture>
 					<animation effect="fade" start="0" end="90" time="0" condition="true">Conditional</animation>
 				</control>
 				<!-- control type="image">

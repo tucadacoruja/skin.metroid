@@ -10,58 +10,9 @@
 		<include>Favourites</include>
 		<visible>Control.IsVisible(501)</visible>
 		
-		<control type="grouplist">
-			<description>Media Codec Flagging Images</description>
-			<posx>255</posx>
-			<posy>93</posy>
-			<width>1030</width>
-			<height>50</height>
-			<align>center</align>
-			<itemgap>0</itemgap>
-			<orientation>horizontal</orientation>
-			<include>Media_flags_big</include>
 		
-			<visible>Skin.HasSetting(LockMainMenu)</visible>
-			<visible>!Skin.HasSetting(HideFlagsInfo)</visible>
-			<animation effect="fade" start="0" end="80" time="600">Visible</animation>
-			<animation effect="fade" start="80" end="0" time="600" tween="sine">Hidden</animation>
+		<include>MediaFlags</include>	
 		
-		</control>
-		<control type="grouplist">
-			<description>Media Codec Flagging Images</description>
-			<posx>255</posx>
-			<posy>93</posy>
-			<width>1030</width>
-			<height>50</height>
-			<align>center</align>
-			<itemgap>0</itemgap>
-			<orientation>horizontal</orientation>
-			<include>Media_flags_big</include>
-		
-			<visible>Control.HasFocus(301) + !Skin.HasSetting(LockMainMenu)</visible>
-			<visible>!Skin.HasSetting(HideFlagsInfo)</visible>
-			<animation effect="fade" start="0" end="80" time="600">Visible</animation>
-			<animation effect="fade" start="80" end="0" time="600" tween="sine">Hidden</animation>
-		
-		</control>
-		<control type="grouplist">
-			<description>Media Codec Flagging Images</description>
-			<posx>5</posx>
-			<posy>93</posy>
-			<width>1280</width>
-			<height>50</height>
-			<align>center</align>
-			<itemgap>0</itemgap>
-			<orientation>horizontal</orientation>
-			<include>Media_flags_fullscreen</include>
-			<visible>Control.IsVisible(501)</visible>
-			<visible>!Control.HasFocus(301) + !Skin.HasSetting(LockMainMenu)</visible>
-			<visible>!Skin.HasSetting(HideFlagsInfo)</visible>
-			<animation effect="fade" start="0" end="80" time="600">Visible</animation>
-			<animation effect="fade" start="80" end="0" time="600" tween="sine">Hidden</animation>
-		
-		</control>
-			
 			
 		<control type="group">
 
@@ -98,8 +49,8 @@
 						<bordertexture border="3">blue3.png</bordertexture>
 						<bordersize>3</bordersize>
 						<fadetime>200</fadetime>
-						<texture background="true" fallback="DefaultAlbumCover.png">$INFO[ListItem.Art(poster)]</texture>
-						<animation effect="fade" start="0" end="76" time="0" condition="true">Conditional</animation>
+						<texture fallback="DefaultAlbumCover.png">$INFO[ListItem.Art(poster)]</texture>
+						<animation effect="fade" start="0" end="80" time="0" condition="true">Conditional</animation>
 					</control>
 					<control type="image">
 						<posx>10</posx>
@@ -107,7 +58,7 @@
 						<width>100</width>
 						<height>120</height>
 						<aspectratio>stretch</aspectratio>
-						<texture background="true" diffuse="poster/posterdiffusesmall.png" >$VAR[Fallback_Icon]</texture>
+						<texture  >$VAR[Fallback_Icon]</texture>
 						<animation effect="fade" start="0" end="80" time="0" condition="true">Conditional</animation>
 						
 						<colordiffuse>EBFFFFFF</colordiffuse>
@@ -132,7 +83,7 @@
 
 		<control type="group">	
 			<posy>50</posy>
-			<animation effect="slide" start="0,0" end="-250,0" time="600" condition="!Control.HasFocus(301) + !Skin.HasSetting(LockMainMenu)">Conditional</animation>
+			<animation effect="slide" start="0,0" end="-250,0" time="600" reversible="true" condition="!Control.HasFocus(301) + !Skin.HasSetting(LockMainMenu)">Conditional</animation>
 			
 			<control type="image">
 				<posx>250</posx>
@@ -187,7 +138,7 @@
 			
 			<control type="label">
 				<posx>460</posx>
-				<posy>423</posy>
+				<posy>433</posy>
 				<width>565</width>
 				<height>45</height>
 				<font>Postertitlebig</font>
@@ -225,7 +176,7 @@
 				<posy>24</posy>
 				<width>328</width>
 				<height>473</height>
-				<texture>diffuse/postershadow.png</texture>
+				<texture background="true">diffuse/postershadow.png</texture>
 				<align>bottom</align>
 				<aspectratio>stretch</aspectratio>
 				<colordiffuse>89ffffff</colordiffuse>

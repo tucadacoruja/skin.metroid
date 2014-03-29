@@ -30,6 +30,7 @@
 			<name>font12</name>
 			<filename>Weblysleek-Semibold.ttf</filename>
 			<size>17</size>
+			<linespacing>1.1</linespacing>
 		</font>
 		<font>
 			<name>font13</name>

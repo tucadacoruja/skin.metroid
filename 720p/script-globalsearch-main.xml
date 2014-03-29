@@ -15,7 +15,7 @@
 					<width>1280</width>
 					<height>720</height>
 					<aspectratio>stretch</aspectratio>
-					<texture background="true" fallback="MetroidBG.png">$INFO[Skin.String(GlobalBackground)]</texture>
+					<texture background="true" fallback="special://skin/extras/backgrounds/MetroidBG.png">$INFO[Skin.String(GlobalBackground)]</texture>
 					<animation effect="fade" start="100" end="85" time="600" reversible="true" >WindowOpen</animation>
 					
 				</control>
