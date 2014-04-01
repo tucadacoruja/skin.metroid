@@ -14,10 +14,10 @@
 
 		
 		<control type="group">
-		<animation effect="slide" start="0,0" end="-180,0" time="400" condition="!Control.HasFocus(301) + !Skin.HasSetting(LockMainMenu)">Conditional</animation>
+		<animation effect="slide" start="0,0" end="-190,0" time="400" condition="!Control.HasFocus(301) + !Skin.HasSetting(LockMainMenu)">Conditional</animation>
 		
 			<control type="label">
-				<posx>292</posx>
+				<posx>296</posx>
 				<posy>333</posy>
 				<width>870</width>
 				<font>Segoe28</font>
@@ -28,9 +28,9 @@
 				
 			</control>
 			<control type="textbox">
-				<posx>292</posx>
+				<posx>296</posx>
 				<posy>365</posy>
-				<width>950</width>
+				<width>940</width>
 				<height>75</height>
 				<font>recent</font>
 				<textcolor>95FFFFFF</textcolor>
@@ -41,9 +41,9 @@
 				<visible>Control.HasFocus(301)</visible>
 			</control>
 			<control type="textbox">
-				<posx>292</posx>
+				<posx>296</posx>
 				<posy>365</posy>
-				<width>950</width>
+				<width>940</width>
 				<height>75</height>
 				<font>recent</font>
 				<textcolor>95FFFFFF</textcolor>
@@ -55,7 +55,7 @@
 			</control>
 			
 			<control type="textbox">
-				<posx>292</posx>
+				<posx>296</posx>
 				<posy>368</posy>
 				<width>1085</width>
 				<height>75</height>
@@ -71,9 +71,11 @@
 			<control type="panel" id="579">
 				<visible>Container.Content(Movies) | Container.Content(TVShows) | Container.Content(seasons)</visible>
 				
-				<posx>290</posx>
+				<posx>295</posx>
 				<posy>92</posy>
-				<width>1090</width>
+				
+				<include condition="!Skin.HasSetting(LockMainMenu)">PosterViewWidth1</include>
+				<include condition="Skin.HasSetting(LockMainMenu)">PosterViewWidth2</include>
 				
 				<height>820</height>
 				
