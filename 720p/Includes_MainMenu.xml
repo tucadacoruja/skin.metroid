@@ -232,11 +232,9 @@
 						<item id="96">
 							<description>Party Mode</description>
 							<label>$LOCALIZE[589]</label>
-							<onclick condition="!Window.IsVisible(musiclibrary) + Skin.HasSetting(DirectoryUp)">ActivateWindow(musiclibrary)</onclick>
-							<onclick condition="Skin.HasSetting(DirectoryUp)">SendClick(16)</onclick>
-							<onclick condition="!Skin.HasSetting(DirectoryUp)">XBMC.PlayerControl(Partymode(special://skin/extras/library/music/Party_Mode.xsp))</onclick>
+							<onclick>PlayerControl(Partymode)</onclick>
 							<visible>[Window.IsActive(home) | Window.IsActive(musiclibrary)] + Library.HasContent(Music)</visible>
-							<visible>!Skin.HasSetting(HideGlobalMusic)</visible>
+							<visible>!Skin.HasSetting(PartyMenu)</visible>
 						</item>
 						
 						<item id="120">
@@ -375,14 +373,7 @@
 							
 						</item>
 						
-						<item id="122">
-							<description>Custom Favourite 3</description>
-							<label>$INFO[Skin.String(CustomFavName3)]</label>
-							<icon>$INFO[Skin.String(CustomFavourite3.Icon)]</icon>
-							<onclick>$INFO[Skin.String(CustomFavourite3.Path)]</onclick>
-							<visible>Skin.HasSetting(Menu_Custom3) + !IsEmpty(Skin.String(CustomFavName3))</visible>
-							<visible>Skin.HasSetting(cust_favorite)</visible>
-						</item>
+						
 						
 						<item id="115">
 							<label>31084</label>
@@ -415,23 +406,7 @@
 							<visible>!Skin.HasSetting(AddonHome)</visible>
 						</item>
 						<include condition="!Skin.HasSetting(AddonHome)">AddonSubItems</include>
-						
-						<item id="41">
-							<label>Live Tv</label>
-							<onclick>ActivateWindow(PVR)</onclick>
-							<icon>-</icon>
-							<thumb>-</thumb>
-							<visible>System.GetBool(pvrmanager.enabled)</visible>
-						</item>
-						
-						<item id="123">
-							<description>Custom Favourite 4</description>
-							<label>$INFO[Skin.String(CustomFavName4)]</label>
-							<icon>$INFO[Skin.String(CustomFavourite4.Icon)]</icon>
-							<onclick>$INFO[Skin.String(CustomFavourite4.Path)]</onclick>
-							<visible>Skin.HasSetting(Menu_Custom4) + !IsEmpty(Skin.String(CustomFavName4))</visible>
-							<visible>Skin.HasSetting(cust_favorite)</visible>
-						</item>
+									
 						
 						<item id="107">
 							<description>Settings</description>
@@ -443,7 +418,16 @@
 							<property name="DropdownMenu2">not_empty</property>
 						</item>
 						<include>SettingsWindowItems</include>
-								
+						
+						<item id="122">
+							<description>Custom Favourite 3</description>
+							<label>$INFO[Skin.String(CustomFavName3)]</label>
+							<icon>$INFO[Skin.String(CustomFavourite3.Icon)]</icon>
+							<onclick>$INFO[Skin.String(CustomFavourite3.Path)]</onclick>
+							<visible>Skin.HasSetting(Menu_Custom3) + !IsEmpty(Skin.String(CustomFavName3))</visible>
+							<visible>Skin.HasSetting(cust_favorite)</visible>
+						</item>
+						
 						<item id="108">
 							<description>Sources</description>
 							<label>31088</label>
@@ -455,6 +439,22 @@
 						</item>
 						<include condition="!Skin.HasSetting(HideGlobalSources)">SourceWindowItems</include>
 						
+						
+						<item id="123">
+							<description>Custom Favourite 4</description>
+							<label>$INFO[Skin.String(CustomFavName4)]</label>
+							<icon>$INFO[Skin.String(CustomFavourite4.Icon)]</icon>
+							<onclick>$INFO[Skin.String(CustomFavourite4.Path)]</onclick>
+							<visible>Skin.HasSetting(Menu_Custom4) + !IsEmpty(Skin.String(CustomFavName4))</visible>
+							<visible>Skin.HasSetting(cust_favorite)</visible>
+						</item>
+						<item id="41">
+							<label>Live Tv</label>
+							<onclick>ActivateWindow(PVR)</onclick>
+							<icon>-</icon>
+							<thumb>-</thumb>
+							<visible>System.GetBool(pvrmanager.enabled)</visible>
+						</item>
 						<item id="109">
 							<description>Home</description>
 							<label>31089</label>
@@ -1457,8 +1457,7 @@
 		<item id="15" description="Library">
 			<visible>!Skin.HasSetting(MoviePlaylists)</visible>
 			<label>14022</label>
-			<onclick condition="Skin.HasSetting(DirectoryUp)">ActivateWindow(VideoLibrary,movies)</onclick>
-			<onclick condition="!Skin.HasSetting(DirectoryUp)">ActivateWindow(VideoLibrary,movies,return)</onclick>
+			<onclick>ActivateWindow(VideoLibrary,Root)</onclick>
 			<visible>!IsEmpty(skin.string(SubMenu4))</visible>
 			<property name="SubMenuItem">not_empty</property>
 			<property name="DropdownMenu4">not_empty</property>
@@ -1626,8 +1625,7 @@
 		<item id="13" description="Library">
 			<visible>!Skin.HasSetting(TvShowPlaylists)</visible>
 			<label>14022</label>
-			<onclick condition="Skin.HasSetting(DirectoryUp)">ActivateWindow(VideoLibrary,tvshows)</onclick>
-			<onclick condition="!Skin.HasSetting(DirectoryUp)">ActivateWindow(VideoLibrary,tvshows,return)</onclick>
+			<onclick>ActivateWindow(VideoLibrary,Root)</onclick>
 			<visible>!IsEmpty(skin.string(SubMenu5))</visible>
 			<property name="SubMenuItem">not_empty</property>
 			<property name="DropdownMenu5">not_empty</property>

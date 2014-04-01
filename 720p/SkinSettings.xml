@@ -271,6 +271,14 @@
 							<selected>!Skin.HasSetting(MusicSubmenu)</selected>
 							<enable>!Skin.HasSetting(HideGlobalMusic)</enable>
 						</control>
+						<control type="radiobutton" id="125">
+							<include>SettingsButton</include>
+							<description>Party mode</description>
+							<label> - $LOCALIZE[589]</label>
+							<onclick>Skin.ToggleSetting(PartyMenu)</onclick>
+							<selected>!Skin.HasSetting(PartyMenu)</selected>
+							<enable>!Skin.HasSetting(HideGlobalMusic)</enable>
+						</control>
 					<control type="radiobutton" id="109">
 						<include>SettingsButton</include>
 						<description>addons in main menu</description>
@@ -817,7 +825,7 @@
 						<onclick>Skin.ToggleSetting(HideVolumeBar)</onclick>
 						<selected>Skin.HasSetting(HideVolumeBar)</selected>
 					</control>
-					
+											
 					<control type="button" id="106">
 						<include>SettingsButton</include>
 						<label2>$INFO[Skin.String(PluginWidgetName1)]</label2>

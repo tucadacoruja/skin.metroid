@@ -6,7 +6,7 @@
 			<posy>-1</posy>
 			<description>Bluray Image</description>
 			<width>73</width>
-			<height>28</height>
+			<height>27</height>
 			<aspectratio>keep</aspectratio>
 			<colordiffuse>FFFFFFFF</colordiffuse>
 			<texture>flags/video/resolution/bluray.png</texture>
@@ -16,7 +16,7 @@
 			<description>DVD Image</description>
 			<posy>2</posy>
 			<width>73</width>
-			<height>23</height>
+			<height>22</height>
 			<aspectratio>keep</aspectratio>
 			<colordiffuse>FFFFFFFF</colordiffuse>
 			<texture>flags/codec/mpeg2video.png</texture>
@@ -25,7 +25,7 @@
 		<control type="image">
 			<description>HDTV Image</description>
 			<width>73</width>
-			<height>32</height>
+			<height>31</height>
 			<aspectratio>keep</aspectratio>
 			<colordiffuse>FFFFFFFF</colordiffuse>
 			<texture>flags/video/HD/nf-HD.png</texture>
@@ -36,7 +36,7 @@
 			<posx>-5</posx>
 			<posy>0</posy>
 			<width>94</width>
-			<height>28</height>
+			<height>27</height>
 			<colordiffuse>FFFFFFFF</colordiffuse>
 			<texture>$INFO[ListItem.VideoResolution,flags/video/resolution/,.png]</texture>
 			<aspectratio>keep</aspectratio>
@@ -45,7 +45,7 @@
 		<control type="image">
 			<posy>1</posy>
 			<width>96</width>
-			<height>24</height>
+			<height>23</height>
 			<colordiffuse>FFFFFFFF</colordiffuse>
 			<texture fallback="flags/NA.png">$INFO[Listitem.VideoCodec,flags/codec/,.png]</texture>
 			<aspectratio>keep</aspectratio>
@@ -56,7 +56,7 @@
 			<posx>3</posx>
 			<posy>-3</posy>
 			<width>70</width>
-			<height>32</height>
+			<height>31</height>
 			<aligny>center</aligny>
 			<colordiffuse>FFFFFFFF</colordiffuse>
 			<aspectratio>keep</aspectratio>
@@ -67,7 +67,7 @@
 			<posx>9</posx>
 			<posy>-3</posy>
 			<width>96</width>
-			<height>33</height>
+			<height>32</height>
 			<colordiffuse>FFFFFFFF</colordiffuse>
 			<texture fallback="flags/NA.png">$INFO[Listitem.AudioCodec,flags/codec/,.png]</texture>
 			<aspectratio>keep</aspectratio>
@@ -77,7 +77,7 @@
 			<posy>0</posy>
 			<posx>8</posx>
 			<width>96</width>
-			<height>30</height>
+			<height>29</height>
 			<colordiffuse>FFFFFFFF</colordiffuse>
 			<texture fallback="flags/NA.png">$INFO[Listitem.VideoAspect,flags/video/aspectratio/,.png]</texture>
 			<aspectratio>keep</aspectratio>
@@ -87,7 +87,7 @@
 		<control type="image">
 			<description>Rated G</description>
 			<width>73</width>
-			<height>28</height>
+			<height>27</height>
 			<aspectratio>keep</aspectratio>
 			<colordiffuse>FFFFFFFF</colordiffuse>
 			<texture>flags/ratings/mpaa_general.png</texture>
@@ -97,7 +97,7 @@
 		<control type="image">
 			<description>Rated PG</description>
 			<width>73</width>
-			<height>28</height>
+			<height>27</height>
 			<aspectratio>keep</aspectratio>
 			<colordiffuse>FFFFFFFF</colordiffuse>
 			<texture>flags/ratings/mpaa_pg.png</texture>
@@ -107,7 +107,7 @@
 		<control type="image">
 			<description>Rated PG-13</description>
 			<width>73</width>
-			<height>28</height>
+			<height>27</height>
 			<aspectratio>keep</aspectratio>
 			<colordiffuse>FFFFFFFF</colordiffuse>
 			<texture>flags/ratings/mpaa_pg13.png</texture>
@@ -117,7 +117,7 @@
 		<control type="image">
 			<description>Rated R</description>
 			<width>73</width>
-			<height>28</height>
+			<height>27</height>
 			<aspectratio>keep</aspectratio>
 			<colordiffuse>FFFFFFFF</colordiffuse>
 			<texture>flags/ratings/mpaa_restricted.png</texture>
@@ -128,7 +128,7 @@
 		<control type="image">
 			<description>Rated NC-17</description>
 			<width>73</width>
-			<height>28</height>
+			<height>27</height>
 			<aspectratio>keep</aspectratio>
 			<colordiffuse>FFFFFFFF</colordiffuse>
 			<texture>flags/ratings/mpaa_nc17.png</texture>
@@ -171,7 +171,7 @@
 	
 	<include name="MediaFlags">
 		<control type="group">
-		<posy>93</posy>
+		<posy>84</posy>
 		<visible>!Window.IsVisible(movieinformation) + !Skin.HasSetting(HideFlagsInfo)</visible>
 		<visible>[Control.IsVisible(501) | Control.IsVisible(781)] + Container.Content(Movies)</visible>
 			<control type="group">

@@ -241,7 +241,7 @@
 			
 			<control type="image">
 				<posx>651</posx>
-				<posy>191</posy>
+				<posy>165</posy>
 				<width>30</width>
 				<height>40</height>
 				<texture>bookmark.png</texture>

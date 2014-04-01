@@ -6,106 +6,99 @@
 <onload></onload>
 
 
-<views>603,602,579,525,504,677,501,709,50,781</views>
+<views>603,579,504,677,501,709,50,781</views>
 <controls>
-
 
 <control type="button" id="2">
 	<posx>-10</posx>
 	<posy>-10</posy>
 	<width>1</width>
 	<height>1</height>
-	<animation effect="fade" start="1" end="0" time="0" condition="true">Conditional</animation>
+	<visible>false</visible>
 </control>
 <control type="button" id="3">
 	<posx>-10</posx>
 	<posy>-10</posy>
 	<width>1</width>
 	<height>1</height>
-	<animation effect="fade" start="1" end="0" time="0" condition="true">Conditional</animation>
+	<visible>false</visible>
 </control>
 <control type="togglebutton" id="4">
 	<posx>-10</posx>
 	<posy>-10</posy>
 	<width>1</width>
 	<height>1</height>
-	<animation effect="fade" start="1" end="0" time="0" condition="true">Conditional</animation>
+	<visible>false</visible>
 </control>
 <control type="button" id="5">
 	<posx>-10</posx>
 	<posy>-10</posy>
 	<width>1</width>
 	<height>1</height>
-	<animation effect="fade" start="1" end="0" time="0" condition="true">Conditional</animation>
+	<visible>false</visible>
 </control>
 <control type="button" id="6">
 	<posx>-10</posx>
 	<posy>-10</posy>
 	<width>1</width>
 	<height>1</height>
-	<animation effect="fade" start="1" end="0" time="0" condition="true">Conditional</animation>
+	<visible>false</visible>
 </control>
 <control type="button" id="8">
 	<posx>-10</posx>
 	<posy>-10</posy>
 	<width>1</width>
 	<height>1</height>
-	<animation effect="fade" start="1" end="0" time="0" condition="true">Conditional</animation>
+	<visible>false</visible>
 </control>
 <control type="button" id="10">
 	<posx>-10</posx>
 	<posy>-10</posy>
 	<width>1</width>
 	<height>1</height>
-	<animation effect="fade" start="1" end="0" time="0" condition="true">Conditional</animation>
+	<visible>false</visible>
 </control>
 <control type="label" id="12">
 	<posx>-10</posx>
 	<posy>-10</posy>
 	<width>1</width>
 	<height>1</height>
-	<animation effect="fade" start="1" end="0" time="0" condition="true">Conditional</animation>
+	<visible>false</visible>
 </control>
 <control type="button" id="15">
 	<posx>-10</posx>
 	<posy>-10</posy>
 	<width>1</width>
 	<height>1</height>
-	<animation effect="fade" start="1" end="0" time="0" condition="true">Conditional</animation>
+	<visible>false</visible>
 </control>
 <control type="button" id="16">
 	<posx>-10</posx>
 	<posy>-10</posy>
 	<width>1</width>
 	<height>1</height>
-	<animation effect="fade" start="1" end="0" time="0" condition="true">Conditional</animation>
+	<visible>false</visible>
 </control>
 <control type="label" id="18">
 	<posx>-10</posx>
 	<posy>-10</posy>
 	<width>1</width>
 	<height>1</height>
-	<animation effect="fade" start="1" end="0" time="0" condition="true">Conditional</animation>
+	<visible>false</visible>
 </control>
-
-
 <control type="button" id="19">
 	<posx>0</posx>
 	<posy>0</posy>
 	<width>1</width>
 	<height>1</height>
 	<description>Filter</description>
-	<label>-</label>
 </control>
-
-
 <control type="radiobutton" id="14">
 	<posx>0</posx>
 	<posy>0</posy>
 	<width>1</width>
 	<height>1</height>
 	<description>unwatched</description>
-	<label>-</label>
 </control>
 
 
@@ -117,13 +110,14 @@
 
 
 
-<include>List</include><!-- -50 -->
-<include>Banners</include><!-- -709 -->
-<include>PosterWrapView</include><!-- -501 -->
-<include>FanartShelf</include><!-- -781 -->
-<include>Episodes</include><!-- -504 -->
-<include>Panel</include><!-- -603 --> 
-<include>Icons</include><!-- -677 --> 
+<include>List</include><!-- 50 -->
+<include>Banners</include><!-- 709 -->
+<include>PosterWrapView</include><!-- 501 -->
+<include>FanartShelf</include><!-- 781 -->
+<include>Episodes</include><!-- 504 -->
+<include>Panel</include><!-- 603 --> 
+<include>Icons</include><!-- 677 --> 
+<include>PosterView</include><!-- 579 --> 
 
 
 <include>BottomInfoBar</include>

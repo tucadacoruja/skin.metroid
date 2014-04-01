@@ -22,8 +22,8 @@
 			<control type="wraplist" id="501">
 				<visible>Container.Content(Movies) | Container.Content(TVShows) | Container.Content(seasons)</visible>
 				<hitrect x="220" y="200" w="1000" h="373" />
-				<posx>640</posx>
-				<posy>200</posy>
+				<posx>643</posx>
+				<posy>189</posy>
 				<width>1600</width>
 				<height>560</height>
 				<onleft>57</onleft>
@@ -38,7 +38,7 @@
 				<orientation>horizontal</orientation>
 				
 				<animation effect="slide" start="0,0" end="-110,0" time="400" condition="!Control.HasFocus(301) + !Skin.HasSetting(LockMainMenu)">Conditional</animation>
-				<itemlayout height="310" width="134">
+				<itemlayout height="310" width="132">
 					
 					<control type="image">
 						<posx>2</posx>
@@ -46,11 +46,11 @@
 						<width>123</width>
 						<height>180</height>
 						<aspectratio>stretch</aspectratio>
-						<bordertexture border="3">blue3.png</bordertexture>
+						<bordertexture border="3">DefaultAlbumCover.png</bordertexture>
 						<bordersize>3</bordersize>
 						<fadetime>200</fadetime>
 						<texture fallback="DefaultAlbumCover.png">$INFO[ListItem.Art(poster)]</texture>
-						<animation effect="fade" start="0" end="80" time="0" condition="true">Conditional</animation>
+						<animation effect="fade" start="0" end="85" time="0" condition="true">Conditional</animation>
 					</control>
 					<control type="image">
 						<posx>10</posx>
@@ -82,9 +82,12 @@
 			
 
 		<control type="group">	
-			<posy>50</posy>
+			<posy>53</posy>
+			<!-- To counter the actual animation -->
+			<animation effect="slide" start="250,0" end="0,0" time="500" reversible="true" condition="Control.IsVisible(501)">Conditional</animation>
 			<animation effect="slide" start="0,0" end="-250,0" time="600" reversible="true" condition="!Control.HasFocus(301) + !Skin.HasSetting(LockMainMenu)">Conditional</animation>
 			
+					
 			<control type="image">
 				<posx>250</posx>
 				<posy>443</posy>
@@ -94,6 +97,7 @@
 				<texture >highlight.png</texture>
 				<colordiffuse>20FFFFFF</colordiffuse>
 			</control>
+			
 			<control type="image">
 				<posx>250</posx>
 				<posy>385</posy>
@@ -105,8 +109,9 @@
 				<aspectratio>stretch</aspectratio>
 				<texture>white.png</texture>
 				<colordiffuse>FFDBDBDB</colordiffuse>
-				<!-- animation effect="fade" start="0" end="100" time="0" reversable="false" condition="true">Conditional</animation -->
+
 			</control>
+
 			<control type="image">
 				<posx>615</posx>
 				<posy>375</posy>
@@ -131,8 +136,8 @@
 		
 		<!-- --Text--- -->
 		<control type="group">
-		<posx>185</posx>
-		<posy>80</posy>
+		<posx>190</posx>
+		<posy>93</posy>
 
 		<animation effect="slide" start="0,0" end="-110,0" time="400" condition="!Control.HasFocus(301) + !Skin.HasSetting(LockMainMenu)">Conditional</animation>
 			
@@ -142,7 +147,7 @@
 				<width>565</width>
 				<height>45</height>
 				<font>Postertitlebig</font>
-				<textcolor>CFFFFFFF</textcolor>
+				<textcolor>D7FFFFFF</textcolor>
 				<scroll>false</scroll>
 				<align>left</align>
 				<label>$INFO[ListItem.Title]</label>
@@ -155,7 +160,7 @@
 				<width>575</width>
 				<height>50</height>
 				<font>recent</font>
-				<textcolor>95FFFFFF</textcolor>
+				<textcolor>ACFFFFFF</textcolor>
 				<scroll>true</scroll>
 				<align>justify</align>
 				<autoscroll delay="922000" time="5000" repeat="10000" />
@@ -166,7 +171,7 @@
 					
 					
 		<control type="group">
-			<posx>298</posx>
+			<posx>299</posx>
 			<posy>130</posy>
 			<!-- visible>false</visible -->
 			<animation effect="slide" start="0,0" end="-110,0" time="400" condition="!Control.HasFocus(301) + !Skin.HasSetting(LockMainMenu)">Conditional</animation>
@@ -175,7 +180,7 @@
 				<posx>27</posx>
 				<posy>24</posy>
 				<width>328</width>
-				<height>473</height>
+				<height>488</height>
 				<texture background="true">diffuse/postershadow.png</texture>
 				<align>bottom</align>
 				<aspectratio>stretch</aspectratio>
@@ -184,10 +189,10 @@
 			</control>					
 
 			<control type="image">
-				<posx>15</posx>
-				<posy>18</posy>
-				<width>305</width>
-				<height>450</height>
+				<posx>-4</posx>
+				<posy>0</posy>
+				<width>325</width>
+				<height>480</height>
 				<aspectratio>stretch</aspectratio>
 				<bordertexture border="3">blue3.png</bordertexture>
 				<bordersize>3</bordersize>
@@ -195,10 +200,10 @@
 				<fadetime>400</fadetime>
 			</control>
 			<control type="image">
-				<posx>40</posx>
+				<posx>30</posx>
 				<posy>18</posy>
 				<width>256</width>
-				<height>400</height>
+				<height>440</height>
 				<aspectratio>keep</aspectratio>
 				<texture background="true" diffuse="diffuse/posterdiffuse.png" >$VAR[Fallback_Icon]</texture>
 				<colordiffuse>EBFFFFFF</colordiffuse>
@@ -218,8 +223,8 @@
 				<colordiffuse>blue</colordiffuse>
 			</control-->
 			<control type="image">
-				<posx>279</posx>
-				<posy>425</posy>
+				<posx>272</posx>
+				<posy>429</posy>
 				<width>28</width>
 				<height>28</height>
 				<aspectratio align="left" aligny="center">stretch</aspectratio>
