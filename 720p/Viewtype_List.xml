@@ -15,8 +15,8 @@
 					
 		<!--  ==== Info & Thumb Code ====  -->
 		<control type="group">
-		<posx>370</posx>
-		<posy>-30</posy>
+		<left>370</left>
+		<top>-30</top>
 		<!--animation effect="slide" start="0,0" end="-80,0" time="400" condition="!Control.HasFocus(301) + !Skin.HasSetting(LockMainMenu)">Conditional</animation-->
 		
 			<control type="group">
@@ -25,8 +25,8 @@
 				<visible>[Container.Content(Movies) | Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Sets)] + ![substring(Container.FolderPath,plugin,left) + Container.Content(Episodes)]</visible>
 			
 				<control type="image">
-					<posx>634</posx>
-					<posy>165</posy>
+					<left>634</left>
+					<top>165</top>
 					<width>204</width>
 					<height>280</height>
 					<aspectratio>stretch</aspectratio>
@@ -35,8 +35,8 @@
 					<colordiffuse>white</colordiffuse>
 				</control>
 				<control type="image">
-					<posx>634</posx>
-					<posy>165</posy>
+					<left>634</left>
+					<top>165</top>
 					<width>204</width>
 					<height>280</height>
 					<aspectratio align="center" aligny="center">stretch</aspectratio>
@@ -47,8 +47,8 @@
 				</control>
 				
 				<control type="image">
-					<posx>646</posx>
-					<posy>177</posy>
+					<left>646</left>
+					<top>177</top>
 					<width>180</width>
 					<height>250</height>
 					<aspectratio>stretch</aspectratio>
@@ -59,8 +59,8 @@
 				</control>
 				
 				<control type="grouplist">
-					<posx>635</posx>
-					<posy>470</posy>
+					<left>635</left>
+					<top>470</top>
 					<width>200</width>
 					<height>300</height>
 					<orientation>vertical</orientation>
@@ -121,8 +121,8 @@
 			<visible>![Container.Content(Movies) | Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes) | Container.Content(Sets)] | [substring(Container.FolderPath,plugin,left) + Container.Content(Episodes)]</visible>
 				
 				<control type="image">
-					<posx>614</posx>
-					<posy>165</posy>
+					<left>614</left>
+					<top>165</top>
 					<width>230</width>
 					<height>230</height>
 					<aspectratio>stretch</aspectratio>
@@ -132,8 +132,8 @@
 				</control>
 				
 				<control type="image">
-					<posx>614</posx>
-					<posy>165</posy>
+					<left>614</left>
+					<top>165</top>
 					<width>230</width>
 					<height>230</height>
 					<aspectratio align="center" aligny="center">keep</aspectratio>
@@ -143,8 +143,8 @@
 					<bordersize>3</bordersize>
 				</control>
 				<control type="grouplist">
-					<posx>615</posx>
-					<posy>425</posy>
+					<left>615</left>
+					<top>425</top>
 					<width>220</width>
 					<height>300</height>
 					<orientation>vertical</orientation>
@@ -210,15 +210,15 @@
 		</control>
 		
 		<control type="group">
-		<posx>350</posx>
-		<posy>-30</posy>
+		<left>350</left>
+		<top>-30</top>
 		<!--animation effect="slide" start="0,0" end="-80,0" time="400" condition="!Control.HasFocus(301) + !Skin.HasSetting(LockMainMenu)">Conditional</animation-->
 		<visible>Container.Content(Episodes) + ![SubString(Container.FolderPath,plugin,left) | SubString(Container.FolderPath,addons,left)]</visible>
 		<visible>!IsEmpty(ListItem.Title)</visible>
 		<include>WidgetsAnimation</include>
 			<control type="image">
-				<posx>634</posx>
-				<posy>165</posy>
+				<left>634</left>
+				<top>165</top>
 				<width>230</width>
 				<height>230</height>
 				<aspectratio>stretch</aspectratio>
@@ -228,8 +228,8 @@
 			</control>
 			
 			<control type="image">
-				<posx>634</posx>
-				<posy>165</posy>
+				<left>634</left>
+				<top>165</top>
 				<width>230</width>
 				<height>230</height>
 				<aspectratio align="center" aligny="center">scale</aspectratio>
@@ -240,8 +240,8 @@
 			</control>
 			
 			<control type="image">
-				<posx>651</posx>
-				<posy>165</posy>
+				<left>651</left>
+				<top>165</top>
 				<width>30</width>
 				<height>40</height>
 				<texture>bookmark.png</texture>
@@ -250,8 +250,8 @@
 			</control>
 			
 			<control type="grouplist">
-				<posx>635</posx>
-				<posy>425</posy>
+				<left>635</left>
+				<top>425</top>
 				<width>220</width>
 				<height>300</height>
 				<orientation>vertical</orientation>
@@ -306,8 +306,8 @@
 		</control>
 		
 		<control type="group">
-		<posx>350</posx>
-		<posy>-30</posy>
+		<left>350</left>
+		<top>-30</top>
 		<!-- animation effect="slide" start="0,0" end="-80,0" time="400" condition="!Control.HasFocus(301) + !Skin.HasSetting(LockMainMenu)">Conditional</animation -->
 		<include>WidgetsAnimation</include>
 	    <visible>![Container.Content(Movies) | Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes) | Container.Content(Sets) | Window.IsVisible(VideoPlaylist)] | [substring(Container.FolderPath,plugin,left) + Container.Content(Episodes)]</visible>
@@ -316,8 +316,8 @@
 				<visible>Container.Content(Addons) + !IsEmpty(ListItem.Property(Addon.Name))</visible>
 		
 				<control type="image">
-					<posx>634</posx>
-					<posy>165</posy>
+					<left>634</left>
+					<top>165</top>
 					<width>230</width>
 					<height>230</height>
 					<aspectratio>stretch</aspectratio>
@@ -327,8 +327,8 @@
 				</control>
 				
 				<control type="image">
-					<posx>634</posx>
-					<posy>165</posy>
+					<left>634</left>
+					<top>165</top>
 					<width>230</width>
 					<height>230</height>
 					<aspectratio align="center" aligny="center">stretch</aspectratio>
@@ -340,8 +340,8 @@
 								
 				
 				<control type="grouplist">
-					<posx>635</posx>
-					<posy>425</posy>
+					<left>635</left>
+					<top>425</top>
 					<width>220</width>
 					<height>300</height>
 					<orientation>vertical</orientation>
@@ -390,11 +390,11 @@
 		
 		<!--  ==== Main List ====  -->
 		<control type="group">
-			<animation effect="slide" start="0,0" end="-170,0" time="400" condition="!Control.HasFocus(301) + !Skin.HasSetting(LockMainMenu)">Conditional</animation>
+			<animation effect="slide" start="0,0" end="-200,0" time="400" condition="!Control.HasFocus(301) + !Skin.HasSetting(LockMainMenu)">Conditional</animation>
 			
 			<control type="list" id="50">
-				<posx>345</posx>
-				<posy>130</posy>
+				<left>345</left>
+				<top>130</top>
 				<width>1190</width>
 				<height>450</height>
 				<onleft>60</onleft>
@@ -408,8 +408,8 @@
 			    <!-- scrolltime tween="cubic" easing="out">300</scrolltime -->
 				<itemlayout height="44" width="710">
 					<control type="image">
-						<posx>0</posx>
-						<posy>43</posy>
+						<left>0</left>
+						<top>43</top>
 						<width>480</width>
 						<height>1</height>
 						<aspectratio>stretch</aspectratio>
@@ -417,8 +417,8 @@
 						<colordiffuse>16FFFFFF</colordiffuse>
 					</control>
 					<control type="label">
-						<posx>14</posx>
-						<posy>0</posy>
+						<left>14</left>
+						<top>0</top>
 						<width>100</width>
 						<height>45</height>
 						<font>font13</font>
@@ -430,8 +430,8 @@
 						<visible>Stringcompare(ListItem.Label,..)</visible>
 					</control>
 					<control type="label">
-						<posx>14</posx>
-						<posy>0</posy>
+						<left>14</left>
+						<top>0</top>
 						<width>100</width>
 						<height>45</height>
 						<font>font13</font>
@@ -443,8 +443,8 @@
 						<visible>IsEmpty(ListItem.Year) + !Stringcompare(ListItem.Label,..)</visible>
 					</control>
 					<control type="label">
-						<posx>15</posx>
-						<posy>0</posy>
+						<left>15</left>
+						<top>0</top>
 						<width>100</width>
 						<height>45</height>
 						<font>font13</font>
@@ -456,8 +456,8 @@
 						<visible>!IsEmpty(ListItem.Year) + !Stringcompare(ListItem.Label,..)</visible>
 					</control>
 					<control type="image">
-						<posx>72</posx>
-						<posy>16</posy>
+						<left>72</left>
+						<top>16</top>
 						<width>14</width>
 						<height>14</height>
 						<colordiffuse>white</colordiffuse>
@@ -467,8 +467,8 @@
 						<visible>!Skin.HasSetting(WatchedOverlays)</visible>
 					</control>
 					<control type="label">
-						<posx>95</posx>
-						<posy>0</posy>
+						<left>95</left>
+						<top>0</top>
 						<width>435</width>
 						<height>43</height>
 						<font>font14</font>
@@ -482,8 +482,8 @@
 					</control>
 					
 					<control type="label">
-						<posx>557</posx>
-						<posy>0</posy>
+						<left>557</left>
+						<top>0</top>
 						<width>50</width>
 						<height>43</height>
 						<font>font13</font>
@@ -494,8 +494,8 @@
 						<visible>stringcompare(ListItem.Overlay,OverlayUnWatched.png) + [Container.Content(TVShows) | Container.Content(Seasons)]</visible>
 					</control>
 					<control type="image">
-						<posx>550</posx>
-						<posy>11</posy>
+						<left>550</left>
+						<top>11</top>
 						<width>50</width>
 						<height>30</height>
 						<colordiffuse>55ffffff</colordiffuse>
@@ -506,8 +506,8 @@
 					</control>
 
 					<control type="label">
-						<posx>580</posx>
-						<posy>0</posy>
+						<left>580</left>
+						<top>0</top>
 						<width>300</width>
 						<height>45</height>
 						<font>font13</font>
@@ -524,8 +524,8 @@
 				<focusedlayout height="44" width="710">
 					<control type="group">
 						<control type="image">
-							<posx>0</posx>
-							<posy>43</posy>
+							<left>0</left>
+							<top>43</top>
 							<width>450</width>
 							<height>1</height>
 							<aspectratio>stretch</aspectratio>
@@ -533,8 +533,8 @@
 							<colordiffuse>22FFFFFF</colordiffuse>
 						</control>
 						<control type="image">
-							<posx>0</posx>
-							<posy>0</posy>
+							<left>0</left>
+							<top>0</top>
 							<width>710</width>
 							<height>44</height>
 							<aspectratio>stretch</aspectratio>
@@ -542,8 +542,8 @@
 							<visible>Control.HasFocus(50)</visible>
 						</control>
 						<control type="label">
-							<posx>14</posx>
-							<posy>0</posy>
+							<left>14</left>
+							<top>0</top>
 							<width>100</width>
 							<height>45</height>
 							<font>font13</font>
@@ -555,8 +555,8 @@
 							<visible>Stringcompare(ListItem.Label,..)</visible>
 						</control>
 						<control type="label">
-							<posx>14</posx>
-							<posy>0</posy>
+							<left>14</left>
+							<top>0</top>
 							<width>100</width>
 							<height>45</height>
 							<font>font13</font>
@@ -568,8 +568,8 @@
 							<visible>IsEmpty(ListItem.Year) + !Stringcompare(ListItem.Label,..)</visible>
 						</control>
 						<control type="label">
-							<posx>15</posx>
-							<posy>0</posy>
+							<left>15</left>
+							<top>0</top>
 							<width>100</width>
 							<height>45</height>
 							<font>font13</font>
@@ -581,8 +581,8 @@
 							<visible>!IsEmpty(ListItem.Year) + !Stringcompare(ListItem.Label,..)</visible>
 						</control>
 						<control type="image">
-							<posx>72</posx>
-							<posy>16</posy>
+							<left>72</left>
+							<top>16</top>
 							<width>14</width>
 							<height>14</height>
 							<aspectratio align="left" aligny="center">stretch</aspectratio>
@@ -591,8 +591,8 @@
 							<visible>!Skin.HasSetting(WatchedOverlays)</visible>
 						</control>
 						<control type="label">
-							<posx>95</posx>
-							<posy>0</posy>
+							<left>95</left>
+							<top>0</top>
 							<width>435</width>
 							<height>43</height>
 							<font>font14</font>
@@ -605,8 +605,8 @@
 						</control>
 					
 						<control type="label">
-							<posx>557</posx>
-							<posy>0</posy>
+							<left>557</left>
+							<top>0</top>
 							<width>50</width>
 							<height>43</height>
 							<font>font13</font>
@@ -617,8 +617,8 @@
 							<visible>stringcompare(ListItem.Overlay,OverlayUnWatched.png) + [Container.Content(TVShows) | Container.Content(Seasons)]</visible>
 						</control>
 						<control type="image">
-							<posx>550</posx>
-							<posy>11</posy>
+							<left>550</left>
+							<top>11</top>
 							<width>50</width>
 							<height>30</height>
 							<colordiffuse>ffcccccc</colordiffuse>
@@ -629,8 +629,8 @@
 						</control>
 		
 						<control type="label">
-							<posx>580</posx>
-							<posy>0</posy>
+							<left>580</left>
+							<top>0</top>
 							<width>300</width>
 							<height>45</height>
 							<font>font13</font>
@@ -647,8 +647,8 @@
 			</control>
 			
 			<control type="textbox">
-				<posx>345</posx>
-				<posy>610</posy>
+				<left>345</left>
+				<top>610</top>
 				<width>860</width>
 				<height>70</height>
 				<label>$VAR[MultiPlot]</label>
@@ -657,12 +657,12 @@
 				<shadowcolor>7000</shadowcolor>
 				<scrollspeed>3000</scrollspeed>
 				<align>justify</align>
-				<visible>Control.HasFocus(301)</visible>
+				<visible>Control.HasFocus(301) | Skin.HasSetting(LockMainMenu)</visible>
 			</control>
 			<control type="textbox">
-				<posx>345</posx>
-				<posy>610</posy>
-				<width>1030</width>
+				<left>345</left>
+				<top>610</top>
+				<width>1060</width>
 				<height>70</height>
 				<label>$VAR[MultiPlot]</label>
 				<font>font12</font>
@@ -670,7 +670,7 @@
 				<shadowcolor>7000</shadowcolor>
 				<scrollspeed>3000</scrollspeed>
 				<align>justify</align>
-				<visible>!Control.HasFocus(301)</visible>
+				<visible>!Control.HasFocus(301) + !Skin.HasSetting(LockMainMenu)</visible>
 			</control>
 			<control type="scrollbar" id="60">
 				<texturesliderbackground>buttons/scrollbgV.png</texturesliderbackground>
@@ -680,8 +680,8 @@
 				<textureslidernibfocus>buttons/scrollnibV.png</textureslidernibfocus>
 				<orientation>Vertical</orientation>
 				<showonepage>true</showonepage>
-				<posx>320</posx>
-				<posy>130</posy>
+				<left>320</left>
+				<top>130</top>
 				<width>10</width>
 				<height>445</height>
 				<onleft>300</onleft>

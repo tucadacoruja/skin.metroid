@@ -9,50 +9,50 @@
 <controls>
 
 <control type="button" id="2">
-	<posx>-10</posx>
-	<posy>-10</posy>
+	<left>-10</left>
+	<top>-10</top>
 	<width>1</width>
 	<height>1</height>
 	<animation effect="fade" start="1" end="0" time="0" condition="true">Conditional</animation>
 </control>
 <control type="button" id="3">
-	<posx>-10</posx>
-	<posy>-10</posy>
+	<left>-10</left>
+	<top>-10</top>
 	<width>1</width>
 	<height>1</height>
 	<animation effect="fade" start="1" end="0" time="0" condition="true">Conditional</animation>
 </control>
 <control type="togglebutton" id="4">
-	<posx>-10</posx>
-	<posy>-10</posy>
+	<left>-10</left>
+	<top>-10</top>
 	<width>1</width>
 	<height>1</height>
 	<animation effect="fade" start="1" end="0" time="0" condition="true">Conditional</animation>
 </control>
 <control type="button" id="8">
-	<posx>-10</posx>
-	<posy>-10</posy>
+	<left>-10</left>
+	<top>-10</top>
 	<width>1</width>
 	<height>1</height>
 	<animation effect="fade" start="1" end="0" time="0" condition="true">Conditional</animation>
 </control>
 <control type="label" id="12">
-	<posx>-10</posx>
-	<posy>-10</posy>
+	<left>-10</left>
+	<top>-10</top>
 	<width>1</width>
 	<height>1</height>
 	<animation effect="fade" start="1" end="0" time="0" condition="true">Conditional</animation>
 </control>
 <control type="label" id="15">
-	<posx>-10</posx>
-	<posy>-10</posy>
+	<left>-10</left>
+	<top>-10</top>
 	<width>1</width>
 	<height>1</height>
 	<animation effect="fade" start="1" end="0" time="0" condition="true">Conditional</animation>
 </control>
 <control type="label" id="18">
-	<posx>-10</posx>
-	<posy>-10</posy>
+	<left>-10</left>
+	<top>-10</top>
 	<width>1</width>
 	<height>1</height>
 	<animation effect="fade" start="1" end="0" time="0" condition="true">Conditional</animation>
@@ -60,8 +60,8 @@
 	
 <!-- -for filter sendclick 19- -->
 <control type="button" id="19">
-	<posx>0</posx>
-	<posy>0</posy>
+	<left>0</left>
+	<top>0</top>
 	<width>1</width>
 	<height>1</height>
 	<description>Filter</description>
@@ -69,8 +69,8 @@
 </control>
 <!-- -for filter sendclick 17- -->
 <control type="button" id="17">
-	<posx>0</posx>
-	<posy>0</posy>
+	<left>0</left>
+	<top>0</top>
 	<width>1</width>
 	<height>1</height>
 	<description>lookup</description>
@@ -78,8 +78,8 @@
 </control>
 <!-- -for filter sendclick 16- -->
 <control type="button" id="16">
-	<posx>0</posx>
-	<posy>0</posy>
+	<left>0</left>
+	<top>0</top>
 	<width>1</width>
 	<height>1</height>
 	<description>party</description>
@@ -95,7 +95,7 @@
 <include>List</include>
 <include>Panel</include><!-- -603 --> 
 
-<include>ScrollOffsetLabel</include>
+ 
 	
 <include>BottomInfoBar</include>
  

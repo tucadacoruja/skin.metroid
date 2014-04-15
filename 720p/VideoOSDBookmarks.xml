@@ -4,8 +4,8 @@
 		<controls>
 	
 	<control type="button" id="4">
-		<posx>-10</posx>
-		<posy>-10</posy>
+		<left>-10</left>
+		<top>-10</top>
 		<width>1</width>
 		<height>1</height>
 		<animation effect="fade" start="1" end="0" time="0" condition="true">Conditional</animation>
@@ -14,12 +14,12 @@
 	
 	
     <control type="group">
-            <posx>330</posx>
-            <posy>70</posy>
+            <left>330</left>
+            <top>70</top>
 
         <control type="image">
-            <posx>10</posx>
-            <posy>85</posy>
+            <left>10</left>
+            <top>85</top>
             <width>600</width>
             <height>340</height>
 			<aspectratio>stretch</aspectratio>
@@ -31,8 +31,8 @@
 
         </control>
         <control type="image">
-            <posx>10</posx>
-            <posy>85</posy>
+            <left>10</left>
+            <top>85</top>
             <width>600</width>
             <height>35</height>
 			<aspectratio>stretch</aspectratio>
@@ -40,8 +40,8 @@
             <colordiffuse>36FFFFFF</colordiffuse>
         </control>
 			<control type="image">
-				<posx>25</posx>
-				<posy>232</posy>
+				<left>25</left>
+				<top>232</top>
 				<width>34</width>
 				<height>34</height>
 				<aspectratio>stretch</aspectratio>
@@ -49,8 +49,8 @@
 				<colordiffuse>f8ffffff</colordiffuse>				
 			</control>
 			<control type="image">
-				<posx>550</posx>
-				<posy>232</posy>
+				<left>550</left>
+				<top>232</top>
 				<width>34</width>
 				<height>34</height>
 				<aspectratio>stretch</aspectratio>
@@ -59,8 +59,8 @@
 			</control>			
 		  <control type="label" id="2">
 			  <description>Bookmarks Label</description>
-			  <posx>10</posx>
-			  <posy>87</posy>
+			  <left>10</left>
+			  <top>87</top>
 			  
 			  <font>OSDTiming</font>
 			  <label>[B][UPPERCASE]$LOCALIZE[31176][/UPPERCASE][/B]</label>
@@ -69,8 +69,8 @@
 			  <align>center</align>
 		  </control>
 				<control type="grouplist" id="1">
-					<posx>65</posx>
-					<posy>375</posy>
+					<left>65</left>
+					<top>375</top>
 					<height>52</height>
 					<width>500</width>
 					<itemgap>10</itemgap>
@@ -110,8 +110,8 @@
 			</control>
 			
 		<control type="panel" id="11">
-			<posx>65</posx>
-			<posy>130</posy>
+			<left>65</left>
+			<top>130</top>
 			<width>485</width>
 			<height>280</height>
 			<onleft>11</onleft>
@@ -122,8 +122,8 @@
 			<orientation>horizontal</orientation>
 			<itemlayout height="80" width="160">
 				<control type="image">
-					<posx>5</posx>
-					<posy>5</posy>
+					<left>5</left>
+					<top>5</top>
 					<width>150</width>
 					<height>70</height>
 					<texture diffuse="osd/fullscreen/bookmarks-diffuse.png">$INFO[listitem.icon]</texture>
@@ -132,8 +132,8 @@
 			</itemlayout>
 			<focusedlayout height="80" width="160">
 				<control type="image">
-					<posx>2</posx>
-					<posy>2</posy>
+					<left>2</left>
+					<top>2</top>
 					<width>156</width>
 					<height>76</height>
 					<texture border="12">white.png</texture>
@@ -142,16 +142,16 @@
 										
 				</control>
 				<control type="image">
-					<posx>5</posx>
-					<posy>5</posy>
+					<left>5</left>
+					<top>5</top>
 					<width>150</width>
 					<height>70</height>
 					<texture diffuse="osd/fullscreen/bookmarks-diffuse.png">$INFO[listitem.icon]</texture>
 					<aspectratio align="center" scalediffuse="false">scale</aspectratio>
 				</control>
 				<control type="image">
-					<posx>5</posx>
-					<posy>45</posy>
+					<left>5</left>
+					<top>45</top>
 					<width>150</width>
 					<height>30</height>
 					<texture>black.png</texture>
@@ -159,8 +159,8 @@
 					<colordiffuse>99ffffff</colordiffuse>
 				</control>
 				<control type="label">
-					<posx>78</posx>
-					<posy>45</posy>
+					<left>78</left>
+					<top>45</top>
 					<width>150</width>
 					<height>30</height>
 					<info>ListItem.Label</info>

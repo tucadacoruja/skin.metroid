@@ -7,15 +7,15 @@
 	<controls>
 
 <control type="label" id="12">
-	<posx>-10</posx>
-	<posy>-10</posy>
+	<left>-10</left>
+	<top>-10</top>
 	<width>1</width>
 	<height>1</height>
 	<animation effect="fade" start="1" end="0" time="0" condition="true">Conditional</animation>
 </control>
 <control type="button" id="101">
-	<posx>-10</posx>
-	<posy>-10</posy>
+	<left>-10</left>
+	<top>-10</top>
 	<width>1</width>
 	<height>1</height>
 	<animation effect="fade" start="1" end="0" time="0" condition="true">Conditional</animation>
@@ -25,8 +25,8 @@
 <control type="group">
 		
 	<control type="multiimage">
-		<posx>0</posx>
-		<posy>0</posy>
+		<left>0</left>
+		<top>0</top>
 		<width>1280</width>
 		<height>720</height>
 		<aspectratio>stretch</aspectratio>
@@ -40,8 +40,8 @@
 		<visible>!Player.HasVideo + IsEmpty(ListItem.Art(fanart)) + !Skin.HasSetting(BackgroundSlideshow)</visible>
 	</control>
 	<control type="image">
-		<posx>0</posx>
-		<posy>0</posy>
+		<left>0</left>
+		<top>0</top>
 		<width>1280</width>
 		<height>720</height>
 		<aspectratio>stretch</aspectratio>
@@ -51,8 +51,8 @@
 		<animation effect="fade" start="40" end="95" time="100000" delay="2000" reversable="true" pulse="true" condition="Player.HasAudio + !Skin.HasSetting(VisLibrary)">Conditional</animation>
 	</control>
 	<control type="image">
-		<posx>0</posx>
-		<posy>0</posy>
+		<left>0</left>
+		<top>0</top>
 		<width>1280</width>
 		<height>720</height>
 		<aspectratio>stretch</aspectratio>
@@ -73,8 +73,8 @@
 
 
 <control type="image">
-	<posx>515</posx>
-	<posy>65</posy>
+	<left>515</left>
+	<top>65</top>
 	<width>250</width>
 	<height>584</height>
 	<aspectratio>stretch</aspectratio>
@@ -84,8 +84,8 @@
 </control>
 <include>Background</include>
 <control type="textbox">
-	<posx>520</posx>
-	<posy>350</posy>
+	<left>520</left>
+	<top>350</top>
 	<width>240</width>
 	<height>90</height>	
 	<align>center</align>
@@ -100,12 +100,12 @@
 
 
 		<control type="group">
-			<posy>30</posy>
+			<top>30</top>
 			<animation effect="fade" start="100" end="0" time="200" condition="Window.IsVisible(filebrowser) | Window.IsVisible(virtualkeyboard)">Conditional</animation>
 
 			<control type="grouplist" id="9000">
-				<posx>520</posx>
-				<posy>448</posy>
+				<left>520</left>
+				<top>448</top>
 								
 				<control type="button" id="6">
 					<description>Open Button</description>
@@ -190,26 +190,27 @@
 			</control>
 			
 			<control type="group">
-				<visible>!Control.HasFocus(100)</visible>
+				
 				<control type="image">
-					<posx>520</posx>
-					<posy>90</posy>
+					<left>520</left>
+					<top>90</top>
 					<width>240</width>
 					<height>190</height>
 					<aspectratio>keep</aspectratio>
+					<fadetime>100</fadetime>
 					<texture>$INFO[Container(50).ListItem.Icon]</texture>
+					<visible>!Control.HasFocus(100)</visible>
 				</control>
-			
-			</control>
-			<control type="group">
-				<visible>Control.HasFocus(100)</visible>
+					
 				<control type="image">
-					<posx>520</posx>
-					<posy>90</posy>
+					<left>520</left>
+					<top>90</top>
 					<width>240</width>
 					<height>190</height>
 					<aspectratio>keep</aspectratio>
+					<fadetime>100</fadetime>
 					<texture>$INFO[Container(100).ListItem.Icon]</texture>
+					<visible>Control.HasFocus(100)</visible>
 				</control>
 				
 			</control>
@@ -221,8 +222,8 @@
 			<animation effect="slide" start="-480,0" end="0,0" time="500" tween="quadratic" easing="out">WindowOpen</animation>
 			<animation effect="slide" end="-480,0" start="0,0" time="500" tween="quadratic" easing="out">WindowClose</animation>
 			<control type="label">
-				<posx>0</posx>
-				<posy>28</posy>
+				<left>0</left>
+				<top>28</top>
 				<width>515</width>
 				<height>35</height>
 				<font>EditorBig</font>
@@ -235,8 +236,8 @@
 			</control>
 
 			<control type="scrollbar" id="30">
-				<posx>505</posx>
-				<posy>100</posy>
+				<left>505</left>
+				<top>100</top>
 				<width>20</width>
 				<height>540</height>
 				
@@ -249,8 +250,8 @@
 			</control>
 			
 			<control type="list" id="50">
-				<posx>0</posx>
-				<posy>112</posy>
+				<left>0</left>
+				<top>112</top>
 				<width>515</width>
 				<height>500</height>
 				<onleft>30</onleft>
@@ -264,8 +265,8 @@
 				
 				<itemlayout height="39" width="400">
 					<control type="image">
-					  <posx>0</posx>
-					  <posy>38</posy>
+					  <left>0</left>
+					  <top>38</top>
 					  <width>515</width>
 					  <height>1</height>
 					  <texture>white.png</texture>
@@ -273,8 +274,8 @@
 					  <colordiffuse>11ffffff</colordiffuse>
 					</control>
 					<control type="label">
-						<posx>10</posx>
-						<posy>0</posy>
+						<left>10</left>
+						<top>0</top>
 						<width>380</width>
 						<height>39</height>
 						<font>ListSmall</font>
@@ -287,8 +288,8 @@
 						<info>ListItem.Label</info>
 					</control>
 					<control type="label">
-						<posx>480</posx>
-						<posy>0</posy>
+						<left>480</left>
+						<top>0</top>
 						<width>360</width>
 						<height>39</height>
 						<font>about</font>
@@ -301,8 +302,8 @@
 				</itemlayout>
 				<focusedlayout height="39" width="400">
 					<control type="image">
-					  <posx>0</posx>
-					  <posy>38</posy>
+					  <left>0</left>
+					  <top>38</top>
 					  <width>515</width>
 					  <height>1</height>
 					  <texture>black.png</texture>
@@ -311,8 +312,8 @@
 					
 					</control>
 					<control type="image">
-						<posx>0</posx>
-						<posy>1</posy>
+						<left>0</left>
+						<top>1</top>
 						<width>515</width>
 						<height>37</height>
 						<texture>black.png</texture>
@@ -321,8 +322,8 @@
 						<visible>Control.HasFocus(50)</visible>
 					</control>
 					<control type="label">
-						<posx>10</posx>
-						<posy>0</posy>
+						<left>10</left>
+						<top>0</top>
 						<width>380</width>
 						<height>39</height>
 						<font>ListSmall</font>
@@ -332,8 +333,8 @@
 						<info>ListItem.Label</info>
 					</control>
 					<control type="label">
-						<posx>480</posx>
-						<posy>0</posy>
+						<left>480</left>
+						<top>0</top>
 						<width>360</width>
 						<height>39</height>
 						<font>about</font>
@@ -349,11 +350,11 @@
 		<control type="group">
 			<animation effect="slide" start="480,0" end="0,0" time="500" tween="quadratic" easing="out">WindowOpen</animation>
 			<animation effect="slide" end="480,0" start="0,0" time="500" tween="quadratic" easing="out">WindowClose</animation>
-			<posx>765</posx>
+			<left>765</left>
 			
 			<control type="label">
-				<posx>0</posx>
-				<posy>28</posy>
+				<left>0</left>
+				<top>28</top>
 				<width>515</width>
 				<height>35</height>
 				<font>EditorBig</font>
@@ -367,8 +368,8 @@
 			</control>
 
 			<control type="scrollbar" id="31">
-				<posx>505</posx>
-				<posy>100</posy>
+				<left>505</left>
+				<top>100</top>
 				<width>20</width>
 				<height>550</height>
 				<textureslidernib>sliderbg.png</textureslidernib>
@@ -379,8 +380,8 @@
 			</control>
 			
 			<control type="list" id="100">
-				<posx>5</posx>
-				<posy>109</posy>
+				<left>5</left>
+				<top>109</top>
 				<width>515</width>
 				<height>500</height>
 				<onleft>9000</onleft>
@@ -394,8 +395,8 @@
 				
 				<itemlayout height="39" width="400">
 					<control type="image">
-					  <posx>0</posx>
-					  <posy>38</posy>
+					  <left>0</left>
+					  <top>38</top>
 					  <width>515</width>
 					  <height>1</height>
 					  <texture>white.png</texture>
@@ -403,8 +404,8 @@
 					  <colordiffuse>11ffffff</colordiffuse>
 					</control>
 					<control type="label">
-						<posx>10</posx>
-						<posy>0</posy>
+						<left>10</left>
+						<top>0</top>
 						<width>380</width>
 						<height>39</height>
 						<font>ListSmall</font>
@@ -416,8 +417,8 @@
 						<info>ListItem.Label</info>
 					</control>
 					<control type="label">
-						<posx>480</posx>
-						<posy>0</posy>
+						<left>480</left>
+						<top>0</top>
 						<width>360</width>
 						<height>39</height>
 						<font>about</font>
@@ -430,8 +431,8 @@
 				</itemlayout>
 				<focusedlayout height="39" width="400">
 					<control type="image">
-					  <posx>0</posx>
-					  <posy>38</posy>
+					  <left>0</left>
+					  <top>38</top>
 					  <width>515</width>
 					  <height>1</height>
 					  <texture>black.png</texture>
@@ -440,8 +441,8 @@
 					
 					</control>
 					<control type="image">
-						<posx>0</posx>
-						<posy>1</posy>
+						<left>0</left>
+						<top>1</top>
 						<width>515</width>
 						<height>37</height>
 						<texture>black.png</texture>
@@ -450,8 +451,8 @@
 						<visible>Control.HasFocus(100)</visible>
 					</control>
 					<control type="label">
-						<posx>10</posx>
-						<posy>0</posy>
+						<left>10</left>
+						<top>0</top>
 						<width>380</width>
 						<height>39</height>
 						<font>ListSmall</font>
@@ -461,8 +462,8 @@
 						<info>ListItem.Label</info>
 					</control>
 					<control type="label">
-						<posx>480</posx>
-						<posy>0</posy>
+						<left>480</left>
+						<top>0</top>
 						<width>360</width>
 						<height>39</height>
 						<font>about</font>

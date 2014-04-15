@@ -5,15 +5,15 @@
   
 <coordinates>
   <system>1</system>
-  <posx>0</posx>
-  <posy>0</posy>
+  <left>0</left>
+  <top>0</top>
 </coordinates>
   
 <controls>
 
 <control type="button">
-	<posx>0</posx>
-	<posy>0</posy>
+	<left>0</left>
+	<top>0</top>
 	<width>280</width>
 	<height>720</height>
 	<description>Invisible back button</description>
@@ -36,8 +36,8 @@
 	</animation>
  
   <control type="list" id="5">
-	  <posx>270</posx>
-	  <posy>90</posy>
+	  <left>270</left>
+	  <top>90</top>
 	  <width>1000</width>
 	  <height>610</height>
 	  <onleft>450</onleft>
@@ -48,7 +48,7 @@
 	  <itemlayout height="38">
 		  
 		  <control type="label">
-			  <posx>10</posx>
+			  <left>10</left>
 			  <width>320</width>
 			  <height>38</height>
 			  <info>ListItem.Label</info>
@@ -57,7 +57,7 @@
 			  <scroll>false</scroll>
 		  </control>
 		  <control type="label">
-			  <posx>990</posx>
+			  <left>990</left>
 			  <width>530</width>
 			  <height>38</height>
 			  <align>right</align>
@@ -77,7 +77,7 @@
 			  <colordiffuse>ACFFFFFF</colordiffuse>
 		  </control>
 		  <control type="label">
-			  <posx>5</posx>
+			  <left>5</left>
 			  <width>465</width>
 			  <height>38</height>
 			  <font>InfoScroll</font>
@@ -85,7 +85,7 @@
 			  <info>ListItem.Label</info>
 		  </control>
 		  <control type="label">
-			  <posx>990</posx>
+			  <left>990</left>
 			  <width>530</width>
 			  <height>38</height>
 			  <align>right</align>

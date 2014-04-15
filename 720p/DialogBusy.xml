@@ -5,8 +5,8 @@
   
 <coordinates>
   <system>1</system>
-  <posx>0</posx>
-  <posy>0</posy>
+  <left>0</left>
+  <top>0</top>
 </coordinates>
         
 <controls>
@@ -14,14 +14,14 @@
 	
 	
 	<control type="group"> 
-	<posx>0</posx>
-	<posy>0</posy>
+	<left>0</left>
+	<top>0</top>
 	<visible>Window.IsVisible(fullscreenvideo) | Window.IsVisible(visualisation) | Window.IsActive(script-tvguide-main.xml)</visible>
 		
 		<control type="image">
 			<description>vignette</description>
-			<posx>0</posx>
-			<posy>0</posy>
+			<left>0</left>
+			<top>0</top>
 			<width>1280</width>
 			<height>720</height>
 			<texture>black.png</texture>
@@ -35,13 +35,13 @@
 	</control>
 	
 	<control type="group"> 
-	<posx>0</posx>
-	<posy>0</posy>
+	<left>0</left>
+	<top>0</top>
 	<visible>![Window.IsVisible(fullscreenvideo) | Window.IsVisible(visualisation) | Window.IsActive(script-tvguide-main.xml)]</visible>
 		<control type="progress" id="10">
 			<description>Progress Bar</description>
-			<posx>0</posx>
-			<posy>62</posy>
+			<left>0</left>
+			<top>62</top>
 			<width>1285</width>
 			<height>1</height>
 			<texturebg>DialogProgressBack.png</texturebg>
@@ -53,8 +53,8 @@
 		</control>
 		
 		<control type="image">
-			<posx>0</posx>
-			<posy>63</posy>
+			<left>0</left>
+			<top>63</top>
 			
 			<height>10</height>
 			<width>110</width>

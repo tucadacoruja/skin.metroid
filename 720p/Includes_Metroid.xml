@@ -11,8 +11,8 @@
 			<usecontrolcoords>true</usecontrolcoords>
 			
 			<control type="label">
-				<posx>0</posx>
-				<posy>140</posy>
+				<left>0</left>
+				<top>140</top>
 				<width>200</width>
 				<height>30</height>
 				<font>font13</font>
@@ -25,8 +25,8 @@
 			</control>
 			
 			<control type="wraplist" id="8000">
-				<posx>0</posx>
-				<posy>20</posy>
+				<left>-10</left>
+				<top>20</top>
 				<width>900</width>
 				<height>300</height>
 				<scrolltime>200</scrolltime>
@@ -43,8 +43,8 @@
 				<itemlayout width="190" height="270">
 
 					<control type="image">
-						<posx>0</posx>
-						<posy>0</posy>
+						<left>0</left>
+						<top>0</top>
 						<width>190</width>
 						<height>265</height>
 						<texture>diffuse/postershadow.png</texture>
@@ -52,8 +52,8 @@
 						<colordiffuse>46ffffff</colordiffuse>
 					</control>
 					<control type="image">
-						<posx>0</posx>
-						<posy>0</posy>
+						<left>0</left>
+						<top>0</top>
 						<width>175</width>
 						<height>250</height>
 						<texture background="true" fallback="DefaultAlbumCover.png" diffuse="grid/posterdiffuse.png">$INFO[ListItem.Art(thumb)]</texture>
@@ -69,10 +69,10 @@
 			</control>
 
 			<control type="group">
-				<posx>-900</posx>
+				<left>-890</left>
 				<control type="image">
-					<posx>-25</posx>
-					<posy>20</posy>
+					<left>-25</left>
+					<top>20</top>
 					<width>430</width>
 					<height>265</height>
 					<texture>diffuse/postershadow.png</texture>
@@ -80,8 +80,8 @@
 					<colordiffuse>46ffffff</colordiffuse>
 				</control>
 				<control type="image">
-					<posx>-25</posx>
-					<posy>20</posy>
+					<left>-25</left>
+					<top>20</top>
 					<width>400</width>
 					<height>250</height>
 					<texture background="true" fallback="DefaultAlbumCover.png" diffuse="grid/posterdiffuse.png">$INFO[Container(8000).ListItem.Property(Fanart)]</texture>
@@ -89,8 +89,8 @@
 				</control>
 
 				<control type="image">
-					<posx>-25</posx>
-					<posy>20</posy>
+					<left>-25</left>
+					<top>20</top>
 					<width>10</width>
 					<height>100</height>
 					<texture>BlueBackground.png</texture>
@@ -99,8 +99,8 @@
 					<visible>Control.HasFocus(8000)</visible>
 				</control>
 				<control type="image">
-					<posx>-25</posx>
-					<posy>230</posy>
+					<left>-25</left>
+					<top>230</top>
 					<width>400</width>
 					<height>40</height>
 					<texture>black.png</texture>
@@ -108,9 +108,9 @@
 					<colordiffuse>95ffffff</colordiffuse>
 				</control>
 				<control type="label">
-					<posx>360</posx>
-					<posy>225</posy>
-					<width>370</width>
+					<left>0</left>
+					<top>225</top>
+					<width>360</width>
 					<height>50</height>
 					<font>font13</font>
 					<textcolor>FFFFFFFF</textcolor>
@@ -138,8 +138,8 @@
 			<align>left</align>
 				
 			<control type="label">
-				<posx>0</posx>
-				<posy>140</posy>
+				<left>0</left>
+				<top>140</top>
 				<width>200</width>
 				<height>30</height>
 				<font>font13</font>
@@ -152,12 +152,12 @@
 			</control>
 			
 			<control type="group">
-				<posx>-20</posx>
+				<left>-20</left>
 				
 				<control type="image">
 					<description>shadow</description>
-					<posx>0</posx>
-					<posy>20</posy>
+					<left>0</left>
+					<top>20</top>
 					<width>408</width>
 					<height>272</height>
 					<texture>diffuse/postershadow.png</texture>
@@ -167,8 +167,8 @@
 				</control>
 				<control type="image">
 					<description>recent tv show thumb</description>
-					<posx>0</posx>
-					<posy>20</posy>
+					<left>0</left>
+					<top>20</top>
 					<width>380</width>
 					<height>255</height>
 					<texture fallback="DefaultAlbumCover.png">$INFO[Container(8001).ListItem.Art(thumb)]</texture>
@@ -177,8 +177,8 @@
 				</control>$INFO[Container(8001).ListItem.Art(thumb)]
 				<control type="image">
 					<description>recent tv show thumb</description>
-					<posx>30</posx>
-					<posy>30</posy>
+					<left>30</left>
+					<top>30</top>
 					<width>320</width>
 					<height>235</height>
 					<texture>$INFO[Container(8001).ListItem.Property(Logo)]</texture>
@@ -187,8 +187,8 @@
 				</control>
 
 				<control type="image">
-					<posx>0</posx>
-					<posy>235</posy>
+					<left>0</left>
+					<top>235</top>
 					<width>380</width>
 					<height>40</height>
 					<texture>black.png</texture>
@@ -196,10 +196,11 @@
 					<colordiffuse>95ffffff</colordiffuse>
 				</control>
 				<control type="label">
-					<posx>360</posx>
-					<posy>230</posy>
-					<width>320</width>
+					<left>0</left>
+					<top>230</top>
+					<width>360</width>
 					<height>50</height>
+				
 					<font>font13</font>
 					<textcolor>FFFFFFFF</textcolor>
 					<aligny>center</aligny>
@@ -211,8 +212,8 @@
 					
 			<control type="panel" id="8001">
 				<viewtype>icon</viewtype>
-				<posx>380</posx>
-				<posy>20</posy>
+				<left>380</left>
+				<top>20</top>
 				<width>500</width>
 				<height>300</height>
 				<scrolltime>200</scrolltime>
@@ -229,8 +230,8 @@
 				<itemlayout width="185" height="135">
 					
 					<control type="image">
-						<posx>0</posx>
-						<posy>0</posy>
+						<left>0</left>
+						<top>0</top>
 						<width>188</width>
 						<height>130</height>
 						<texture>diffuse/postershadow.png</texture>
@@ -239,8 +240,8 @@
 						
 					</control>
 					<control type="image">
-						<posx>0</posx>
-						<posy>0</posy>
+						<left>0</left>
+						<top>0</top>
 						<width>170</width>
 						<height>120</height>
 						
@@ -249,8 +250,8 @@
 						
 					</control>
 					<control type="image">
-						<posx>15</posx>
-						<posy>5</posy>
+						<left>15</left>
+						<top>5</top>
 						<width>140</width>
 						<height>110</height>
 						<texture>$INFO[ListItem.Property(Logo)]</texture>
@@ -263,8 +264,8 @@
 				<focusedlayout width="190" height="180">
 
 					<control type="image">
-						<posx>0</posx>
-						<posy>0</posy>
+						<left>0</left>
+						<top>0</top>
 						<width>188</width>
 						<height>130</height>
 						<texture>diffuse/postershadow.png</texture>
@@ -273,16 +274,16 @@
 						
 					</control>
 					<control type="image">
-						<posx>0</posx>
-						<posy>0</posy>
+						<left>0</left>
+						<top>0</top>
 						<width>170</width>
 						<height>120</height>
 						<texture background="true" fallback="DefaultAlbumCover.png" >$INFO[ListItem.Art(thumb)]</texture>
 						<aspectratio scalediffuse="false">scale</aspectratio>
 					</control>
 					<control type="image">
-						<posx>15</posx>
-						<posy>5</posy>
+						<left>15</left>
+						<top>5</top>
 						<width>140</width>
 						<height>110</height>
 						<texture>$INFO[ListItem.Property(Logo)]</texture>
@@ -290,8 +291,8 @@
 						<visible>IsEmpty(ListItem.Art(thumb))</visible>	
 					</control>
 					<control type="image">
-						<posx>0</posx>
-						<posy>0</posy>
+						<left>0</left>
+						<top>0</top>
 						<width>8</width>
 						<height>50</height>
 						<texture>BlueBackground.png</texture>
@@ -315,8 +316,8 @@
 			<usecontrolcoords>true</usecontrolcoords>
 						
 			<control type="label">
-				<posx>0</posx>
-				<posy>140</posy>
+				<left>0</left>
+				<top>140</top>
 				<width>200</width>
 				<height>30</height>
 				<font>font13</font>
@@ -329,8 +330,8 @@
 			</control>
 
 			<control type="wraplist" id="8002">
-				<posx>0</posx>
-				<posy>20</posy>
+				<left>-10</left>
+				<top>20</top>
 				<width>900</width>
 				<height>300</height>
 				<scrolltime>200</scrolltime>
@@ -348,8 +349,8 @@
 				<itemlayout width="190" height="270">
 
 					<control type="image">
-						<posx>0</posx>
-						<posy>0</posy>
+						<left>0</left>
+						<top>0</top>
 						<width>190</width>
 						<height>265</height>
 						<texture>diffuse/postershadow.png</texture>
@@ -357,8 +358,8 @@
 						<colordiffuse>46ffffff</colordiffuse>
 					</control>
 					<control type="image">
-						<posx>0</posx>
-						<posy>0</posy>
+						<left>0</left>
+						<top>0</top>
 						<width>175</width>
 						<height>250</height>
 						<texture background="true" fallback="DefaultAlbumCover.png" diffuse="grid/posterdiffuse.png">$INFO[ListItem.Art(thumb)]</texture>
@@ -373,10 +374,10 @@
 			</control>	
 			
 			<control type="group">
-			<posx>-900</posx>
+			<left>-890</left>
 				<control type="image">
-					<posx>-25</posx>
-					<posy>20</posy>
+					<left>-25</left>
+					<top>20</top>
 					<width>430</width>
 					<height>265</height>
 					<texture>diffuse/postershadow.png</texture>
@@ -384,16 +385,16 @@
 					<colordiffuse>46ffffff</colordiffuse>
 				</control>
 				<control type="image">
-					<posx>-25</posx>
-					<posy>20</posy>
+					<left>-25</left>
+					<top>20</top>
 					<width>400</width>
 					<height>250</height>
 					<texture background="true" fallback="DefaultAlbumCover.png" diffuse="grid/posterdiffuse.png">$INFO[Container(8002).ListItem.Property(Fanart)]</texture>
 					<aspectratio scalediffuse="false">scale</aspectratio>
 				</control>
 				<control type="image">
-					<posx>-25</posx>
-					<posy>20</posy>
+					<left>-25</left>
+					<top>20</top>
 					<width>10</width>
 					<height>100</height>
 					<texture>BlueBackground.png</texture>
@@ -402,8 +403,8 @@
 					<visible>Control.HasFocus(8002)</visible>
 				</control>
 				<control type="image">
-					<posx>-25</posx>
-					<posy>230</posy>
+					<left>-25</left>
+					<top>230</top>
 					<width>400</width>
 					<height>40</height>
 					<texture>black.png</texture>
@@ -411,10 +412,11 @@
 					<colordiffuse>95ffffff</colordiffuse>
 				</control>
 				<control type="label">
-					<posx>360</posx>
-					<posy>225</posy>
-					<width>370</width>
+					<left>0</left>
+					<top>225</top>
+					<width>360</width>
 					<height>50</height>
+					
 					<font>font13</font>
 					<textcolor>FFFFFFFF</textcolor>
 					<aligny>center</aligny>
@@ -438,8 +440,8 @@
 			<align>left</align>
 				
 			<control type="label">
-				<posx>0</posx>
-				<posy>140</posy>
+				<left>0</left>
+				<top>140</top>
 				<width>200</width>
 				<height>30</height>
 				<font>font13</font>
@@ -452,12 +454,12 @@
 			</control>
 			
 			<control type="group">
-				<posx>-20</posx>
+				<left>-20</left>
 				
 				<control type="image">
 					<description>shadow</description>
-					<posx>0</posx>
-					<posy>20</posy>
+					<left>0</left>
+					<top>20</top>
 					<width>408</width>
 					<height>272</height>
 					<texture>diffuse/postershadow.png</texture>
@@ -467,8 +469,8 @@
 				</control>
 				<control type="image">
 					<description>album thumb</description>
-					<posx>0</posx>
-					<posy>20</posy>
+					<left>0</left>
+					<top>20</top>
 					<width>380</width>
 					<height>255</height>
 					<texture fallback="DefaultAlbumCover.png">$INFO[Container(8003).ListItem.Art(thumb)]</texture>
@@ -476,8 +478,8 @@
 							
 				</control>
 				<control type="image">
-					<posx>0</posx>
-					<posy>225</posy>
+					<left>0</left>
+					<top>225</top>
 					<width>380</width>
 					<height>50</height>
 					<texture>black.png</texture>
@@ -485,8 +487,8 @@
 					<colordiffuse>95ffffff</colordiffuse>
 				</control>
 				<control type="label">
-					<posx>360</posx>
-					<posy>215</posy>
+					<left>40</left>
+					<top>215</top>
 					<width>320</width>
 					<height>50</height>
 					<font>font13</font>
@@ -497,8 +499,8 @@
 					<label>$INFO[Container(8003).ListItem.Label]</label>
 				</control>
 				<control type="label">
-					<posx>360</posx>
-					<posy>237</posy>
+					<left>40</left>
+					<top>237</top>
 					<width>320</width>
 					<height>50</height>
 					<font>font12</font>
@@ -512,8 +514,8 @@
 					
 			<control type="panel" id="8003">
 				<viewtype label="RandomAlbum">icon</viewtype>
-				<posx>380</posx>
-				<posy>20</posy>
+				<left>380</left>
+				<top>20</top>
 				<width>500</width>
 				<height>300</height>
 				<scrolltime>200</scrolltime>
@@ -530,8 +532,8 @@
 				<itemlayout width="185" height="135">
 					
 					<control type="image">
-						<posx>0</posx>
-						<posy>0</posy>
+						<left>0</left>
+						<top>0</top>
 						<width>188</width>
 						<height>130</height>
 						<texture>diffuse/postershadow.png</texture>
@@ -540,8 +542,8 @@
 						
 					</control>
 					<control type="image">
-						<posx>0</posx>
-						<posy>0</posy>
+						<left>0</left>
+						<top>0</top>
 						<width>170</width>
 						<height>120</height>
 						
@@ -554,8 +556,8 @@
 				<focusedlayout width="190" height="135">
 
 					<control type="image">
-						<posx>0</posx>
-						<posy>0</posy>
+						<left>0</left>
+						<top>0</top>
 						<width>188</width>
 						<height>130</height>
 						<texture>diffuse/postershadow.png</texture>
@@ -564,16 +566,16 @@
 						
 					</control>
 					<control type="image">
-						<posx>0</posx>
-						<posy>0</posy>
+						<left>0</left>
+						<top>0</top>
 						<width>170</width>
 						<height>120</height>
 						<texture background="true" fallback="DefaultAlbumCover.png" >$INFO[ListItem.Art(thumb)]</texture>
 						<aspectratio scalediffuse="false">scale</aspectratio>
 					</control>
 					<control type="image">
-						<posx>0</posx>
-						<posy>0</posy>
+						<left>0</left>
+						<top>0</top>
 						<width>8</width>
 						<height>50</height>
 						<texture>BlueBackground.png</texture>
@@ -602,8 +604,8 @@
 			<align>left</align>
 				
 			<control type="label">
-				<posx>0</posx>
-				<posy>140</posy>
+				<left>0</left>
+				<top>140</top>
 				<width>200</width>
 				<height>30</height>
 				<font>font13</font>
@@ -616,13 +618,13 @@
 			</control>
 			
 			<control type="group">
-				<posx>-20</posx>
+				<left>-20</left>
 				<!--visible>!IsEmpty(Container(8004).ListItem(1).Art(thumb))</visible-->
 				
 				<control type="image">
 					<description>shadow</description>
-					<posx>0</posx>
-					<posy>20</posy>
+					<left>0</left>
+					<top>20</top>
 					<width>408</width>
 					<height>272</height>
 					<texture>diffuse/postershadow.png</texture>
@@ -632,8 +634,8 @@
 				</control>
 				<control type="image">
 					<description>recent tv show thumb</description>
-					<posx>0</posx>
-					<posy>20</posy>
+					<left>0</left>
+					<top>20</top>
 					<width>380</width>
 					<height>255</height>
 					<texture>DefaultAlbumCover.png</texture>
@@ -642,8 +644,8 @@
 				</control>
 				<control type="image">
 					<description>recent tv show thumb</description>
-					<posx>0</posx>
-					<posy>20</posy>
+					<left>0</left>
+					<top>20</top>
 					<width>380</width>
 					<height>255</height>
 					<texture fallback="DefaultAlbumCover.png">$INFO[Container(8004).ListItem.Art(thumb)]</texture>
@@ -651,8 +653,8 @@
 						
 				</control>
 				<control type="image">
-					<posx>0</posx>
-					<posy>235</posy>
+					<left>0</left>
+					<top>235</top>
 					<width>380</width>
 					<height>40</height>
 					<texture>black.png</texture>
@@ -660,8 +662,8 @@
 					<colordiffuse>95ffffff</colordiffuse>
 				</control>
 				<control type="label">
-					<posx>360</posx>
-					<posy>230</posy>
+					<left>40</left>
+					<top>230</top>
 					<width>320</width>
 					<height>50</height>
 					<font>font13</font>
@@ -675,8 +677,8 @@
 					
 			<control type="panel" id="8004">
 				<viewtype>icon</viewtype>
-				<posx>380</posx>
-				<posy>20</posy>
+				<left>380</left>
+				<top>20</top>
 				<width>500</width>
 				<height>300</height>
 				<scrolltime>200</scrolltime>
@@ -694,8 +696,8 @@
 				<itemlayout width="185" height="135">
 					
 					<control type="image">
-						<posx>0</posx>
-						<posy>0</posy>
+						<left>0</left>
+						<top>0</top>
 						<width>188</width>
 						<height>130</height>
 						<texture>diffuse/postershadow.png</texture>
@@ -704,16 +706,16 @@
 						
 					</control>
 					<control type="image">
-						<posx>0</posx>
-						<posy>0</posy>
+						<left>0</left>
+						<top>0</top>
 						<width>170</width>
 						<height>120</height>
 						<texture background="true">DefaultAlbumCover.png</texture>
 						<aspectratio>stretch</aspectratio>
 					</control>
 					<control type="image">
-						<posx>0</posx>
-						<posy>0</posy>
+						<left>0</left>
+						<top>0</top>
 						<width>170</width>
 						<height>120</height>
 						
@@ -726,8 +728,8 @@
 				<focusedlayout width="190" height="180">
 
 					<control type="image">
-						<posx>0</posx>
-						<posy>0</posy>
+						<left>0</left>
+						<top>0</top>
 						<width>188</width>
 						<height>130</height>
 						<texture>diffuse/postershadow.png</texture>
@@ -736,24 +738,24 @@
 						
 					</control>
 					<control type="image">
-						<posx>0</posx>
-						<posy>0</posy>
+						<left>0</left>
+						<top>0</top>
 						<width>170</width>
 						<height>120</height>
 						<texture background="true">DefaultAlbumCover.png</texture>
 						<aspectratio>stretch</aspectratio>
 					</control>
 					<control type="image">
-						<posx>0</posx>
-						<posy>0</posy>
+						<left>0</left>
+						<top>0</top>
 						<width>170</width>
 						<height>120</height>
 						<texture>$INFO[ListItem.Art(thumb)]</texture>
 						<aspectratio scalediffuse="false">scale</aspectratio>
 					</control>
 					<control type="image">
-						<posx>0</posx>
-						<posy>0</posy>
+						<left>0</left>
+						<top>0</top>
 						<width>8</width>
 						<height>50</height>
 						<texture>BlueBackground.png</texture>
@@ -782,8 +784,8 @@
 			<align>left</align>
 				
 			<control type="label">
-				<posx>0</posx>
-				<posy>140</posy>
+				<left>0</left>
+				<top>140</top>
 				<width>200</width>
 				<height>30</height>
 				<font>font13</font>
@@ -796,12 +798,12 @@
 			</control>
 			
 			<control type="group">
-				<posx>-20</posx>
+				<left>-20</left>
 				<!--visible>!IsEmpty(Container(8005).ListItem(1).Art(thumb))</visible-->
 				<control type="image">
 					<description>shadow</description>
-					<posx>0</posx>
-					<posy>20</posy>
+					<left>0</left>
+					<top>20</top>
 					<width>408</width>
 					<height>272</height>
 					<texture>diffuse/postershadow.png</texture>
@@ -811,8 +813,8 @@
 				</control>
 				<control type="image">
 					<description>recent tv show thumb</description>
-					<posx>0</posx>
-					<posy>20</posy>
+					<left>0</left>
+					<top>20</top>
 					<width>380</width>
 					<height>255</height>
 					<texture>DefaultAlbumCover.png</texture>
@@ -821,8 +823,8 @@
 				</control>
 				<control type="image">
 					<description>recent tv show thumb</description>
-					<posx>0</posx>
-					<posy>20</posy>
+					<left>0</left>
+					<top>20</top>
 					<width>380</width>
 					<height>255</height>
 					<texture>$INFO[Container(8005).ListItem.Art(thumb)]</texture>
@@ -830,8 +832,8 @@
 					
 				</control>
 				<control type="image">
-					<posx>0</posx>
-					<posy>235</posy>
+					<left>0</left>
+					<top>235</top>
 					<width>380</width>
 					<height>40</height>
 					<texture>black.png</texture>
@@ -839,8 +841,8 @@
 					<colordiffuse>95ffffff</colordiffuse>
 				</control>
 				<control type="label">
-					<posx>360</posx>
-					<posy>230</posy>
+					<left>40</left>
+					<top>230</top>
 					<width>320</width>
 					<height>50</height>
 					<font>font13</font>
@@ -854,8 +856,8 @@
 					
 			<control type="panel" id="8005">
 				<viewtype>icon</viewtype>
-				<posx>380</posx>
-				<posy>20</posy>
+				<left>380</left>
+				<top>20</top>
 				<width>500</width>
 				<height>300</height>
 				<scrolltime>200</scrolltime>
@@ -872,8 +874,8 @@
 				<itemlayout width="185" height="135">
 					
 					<control type="image">
-						<posx>0</posx>
-						<posy>0</posy>
+						<left>0</left>
+						<top>0</top>
 						<width>188</width>
 						<height>130</height>
 						<texture>diffuse/postershadow.png</texture>
@@ -882,16 +884,16 @@
 						
 					</control>
 					<control type="image">
-						<posx>0</posx>
-						<posy>0</posy>
+						<left>0</left>
+						<top>0</top>
 						<width>170</width>
 						<height>120</height>
 						<texture background="true">DefaultAlbumCover.png</texture>
 						<aspectratio>stretch</aspectratio>
 					</control>
 					<control type="image">
-						<posx>0</posx>
-						<posy>0</posy>
+						<left>0</left>
+						<top>0</top>
 						<width>170</width>
 						<height>120</height>
 						
@@ -904,8 +906,8 @@
 				<focusedlayout width="190" height="180">
 
 					<control type="image">
-						<posx>0</posx>
-						<posy>0</posy>
+						<left>0</left>
+						<top>0</top>
 						<width>188</width>
 						<height>130</height>
 						<texture>diffuse/postershadow.png</texture>
@@ -914,24 +916,24 @@
 						
 					</control>
 					<control type="image">
-						<posx>0</posx>
-						<posy>0</posy>
+						<left>0</left>
+						<top>0</top>
 						<width>170</width>
 						<height>120</height>
 						<texture background="true">DefaultAlbumCover.png</texture>
 						<aspectratio>stretch</aspectratio>
 					</control>
 					<control type="image">
-						<posx>0</posx>
-						<posy>0</posy>
+						<left>0</left>
+						<top>0</top>
 						<width>170</width>
 						<height>120</height>
 						<texture>$INFO[ListItem.Art(thumb)]</texture>
 						<aspectratio scalediffuse="false">scale</aspectratio>
 					</control>
 					<control type="image">
-						<posx>0</posx>
-						<posy>0</posy>
+						<left>0</left>
+						<top>0</top>
 						<width>8</width>
 						<height>50</height>
 						<texture>BlueBackground.png</texture>

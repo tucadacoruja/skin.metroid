@@ -5,8 +5,8 @@
   
 <coordinates>
   <system>1</system>
-  <posx>570</posx>
-  <posy>10</posy>
+  <left>570</left>
+  <top>10</top>
 </coordinates>
   
 <controls>

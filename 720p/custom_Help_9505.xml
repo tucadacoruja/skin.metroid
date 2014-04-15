@@ -13,16 +13,16 @@
 <include>Background</include>
  
 		<control type="button" id="50">
-			<posx>10</posx>
-			<posy>10</posy>
+			<left>10</left>
+			<top>10</top>
 			<width>1</width>
 			<height>1</height>
 			<texture>black.png</texture>
 			<onfocus>SetFocus(9000)</onfocus>
 		</control>
 		<control type="button" id="300">
-			<posx>10</posx>
-			<posy>10</posy>
+			<left>10</left>
+			<top>10</top>
 			<width>1</width>
 			<height>1</height>
 			<texture>black.png</texture>
@@ -30,8 +30,8 @@
 		</control>
 	
 		<control type="image">
-			<posx>0</posx>
-			<posy>65</posy>
+			<left>0</left>
+			<top>65</top>
 			<width>250</width>
 			<height>660</height>
 			<aspectratio>stretch</aspectratio>
@@ -39,8 +39,8 @@
 			
 		</control>
 		<control type="image">
-			<posx>235</posx>
-			<posy>65</posy>
+			<left>235</left>
+			<top>65</top>
 			<width>15</width>
 			<height>660</height>
 			<aspectratio>stretch</aspectratio>
@@ -63,8 +63,8 @@
 				
 			<control type="list" id="9000">
 				<description>Button Area</description>
-				<posx>2</posx>
-				<posy>65</posy>
+				<left>2</left>
+				<top>65</top>
 				<width>300</width>
 				<height>570</height>
 				<onleft>999</onleft>
@@ -78,8 +78,8 @@
 				<itemlayout height="50" width="247">
 					
 					<control type="label">
-						<posx>25</posx>
-						<posy>-1</posy>
+						<left>25</left>
+						<top>-1</top>
 						<width>247</width>
 						<height>50</height>
 						<font>MainMenu21</font>
@@ -97,8 +97,8 @@
 					
 					<control type="image">
 						<description>list line image</description>
-						<posx>0</posx>
-						<posy>2</posy>
+						<left>0</left>
+						<top>2</top>
 						<width>247</width>
 						<height>50</height>
 						<aspectratio>stretch</aspectratio>
@@ -107,8 +107,8 @@
 						<animation effect="fade" start="0" end="40" time="0" condition="true">Conditional</animation>
 					</control>
 					<control type="label">
-						<posx>25</posx>
-						<posy>-1</posy>
+						<left>25</left>
+						<top>-1</top>
 						<width>240</width>
 						<height>50</height>
 						<font>MainMenu21</font>
@@ -121,8 +121,8 @@
 					</control>
 					<control type="image">
 						<description>focussed image</description>
-						<posx>0</posx>
-						<posy>2</posy>
+						<left>0</left>
+						<top>2</top>
 						<width>10</width>
 						<height>50</height>
 						<aspectratio>stretch</aspectratio>
@@ -177,7 +177,7 @@
 
 			
 			<control type="group" id="9010">
-				<posy>10</posy>
+				<top>10</top>
 				<animation type="Conditional" condition="Window.IsVisible(126) | Window.IsVisible(2000)">
 					<effect type="fade" start="100" end="0" time="400" />
 				</animation>
@@ -185,8 +185,8 @@
 				<control type="group" id="9001">
 					<description>Control Area</description>
 					<visible>Container(9000).Hasfocus(1)</visible>
-					<posx>366</posx>
-					<posy>134</posy>
+					<left>366</left>
+					<top>134</top>
 					<width>770</width>
 					<height>480</height>
 					<itemgap>.5</itemgap>
@@ -195,8 +195,8 @@
 					<onup>9001</onup>
 					<ondown>9001</ondown>
 					<control type="label">
-						<posx>20</posx>
-						<posy>0</posy>
+						<left>20</left>
+						<top>0</top>
 						<width>770</width>
 						<height>400</height>
 						<font>HelpText</font>
@@ -214,8 +214,8 @@
 				<control type="group" id="9002">
 					<description>Control Area</description>
 					<visible>Container(9000).Hasfocus(2)</visible>
-					<posx>366</posx>
-					<posy>134</posy>
+					<left>366</left>
+					<top>134</top>
 					<width>770</width>
 					<height>580</height>
 					<itemgap>.5</itemgap>
@@ -224,8 +224,8 @@
 					<onup>9001</onup>
 					<ondown>9001</ondown>
 					<control type="label">
-						<posx>20</posx>
-						<posy>0</posy>
+						<left>20</left>
+						<top>0</top>
 						<width>770</width>
 						<height>500</height>
 						<font>HelpText</font>
@@ -238,8 +238,8 @@
 						<label>31004</label>
 					</control>
 					<control type="button" id="100">
-						<posx>0</posx>
-						<posy>400</posy>
+						<left>0</left>
+						<top>400</top>
 						<height>43.5</height>
 						<width>810</width>
 						<textcolor>95FFFFFF</textcolor>
@@ -259,8 +259,8 @@
 				<control type="group" id="9003">
 					<description>Control Area</description>
 					<visible>Container(9000).Hasfocus(3)</visible>
-					<posx>366</posx>
-					<posy>134</posy>
+					<left>366</left>
+					<top>134</top>
 					<width>770</width>
 					<height>580</height>
 					<itemgap>.5</itemgap>
@@ -269,8 +269,8 @@
 					<onup>9001</onup>
 					<ondown>9001</ondown>
 					<control type="label">
-						<posx>20</posx>
-						<posy>0</posy>
+						<left>20</left>
+						<top>0</top>
 						<width>770</width>
 						<height>500</height>
 						<font>HelpText</font>
@@ -288,8 +288,8 @@
 				<control type="group" id="9004">
 					<description>Control Area</description>
 					<visible>Container(9000).Hasfocus(7)</visible>
-					<posx>366</posx>
-					<posy>134</posy>
+					<left>366</left>
+					<top>134</top>
 					<width>770</width>
 					<height>580</height>
 					<itemgap>.5</itemgap>
@@ -298,8 +298,8 @@
 					<onup>9001</onup>
 					<ondown>9001</ondown>
 					<control type="label">
-						<posx>20</posx>
-						<posy>0</posy>
+						<left>20</left>
+						<top>0</top>
 						<width>770</width>
 						<height>500</height>
 						<font>HelpText</font>
@@ -317,8 +317,8 @@
 				<control type="group" id="9005">
 					<description>Control Area</description>
 					<visible>Container(9000).Hasfocus(4)</visible>
-					<posx>366</posx>
-					<posy>134</posy>
+					<left>366</left>
+					<top>134</top>
 					<width>770</width>
 					<height>580</height>
 					<itemgap>.5</itemgap>
@@ -327,8 +327,8 @@
 					<onup>9001</onup>
 					<ondown>9001</ondown>
 					<control type="label">
-						<posx>20</posx>
-						<posy>0</posy>
+						<left>20</left>
+						<top>0</top>
 						<width>770</width>
 						<height>500</height>
 						<font>HelpText</font>
@@ -341,8 +341,8 @@
 						<label>31007</label>
 					</control>
 					<control type="button" id="100">
-						<posx>0</posx>
-						<posy>350</posy>
+						<left>0</left>
+						<top>350</top>
 						<height>43.5</height>
 						<width>810</width>
 						<textcolor>95FFFFFF</textcolor>
@@ -359,8 +359,8 @@
 						
 					</control>
 					<control type="button" id="101">
-						<posx>0</posx>
-						<posy>397</posy>
+						<left>0</left>
+						<top>397</top>
 						<height>43.5</height>
 						<width>810</width>
 						<textcolor>95FFFFFF</textcolor>
@@ -381,8 +381,8 @@
 				<control type="group" id="9006">
 					<description>Control Area</description>
 					<visible>Container(9000).Hasfocus(5)</visible>
-					<posx>366</posx>
-					<posy>134</posy>
+					<left>366</left>
+					<top>134</top>
 					<width>770</width>
 					<height>580</height>
 					<itemgap>.5</itemgap>
@@ -391,8 +391,8 @@
 					<onup>9001</onup>
 					<ondown>9001</ondown>
 					<control type="label">
-						<posx>20</posx>
-						<posy>0</posy>
+						<left>20</left>
+						<top>0</top>
 						<width>770</width>
 						<height>500</height>
 						<font>HelpText</font>
@@ -407,8 +407,8 @@
 					
 					<control type="button" id="100">
 						<description>reload</description>
-						<posx>0</posx>
-						<posy>350</posy>
+						<left>0</left>
+						<top>350</top>
 						<height>43.5</height>
 						<width>810</width>
 						<textcolor>95FFFFFF</textcolor>
@@ -426,8 +426,8 @@
 					</control>
 					<control type="button" id="101">
 						<description>reset</description>
-						<posx>0</posx>
-						<posy>397</posy>
+						<left>0</left>
+						<top>397</top>
 						<height>43.5</height>
 						<width>810</width>
 						<textcolor>95FFFFFF</textcolor>
@@ -449,8 +449,8 @@
 				<control type="group" id="9007">
 					<description>Control Area</description>
 					<visible>Container(9000).Hasfocus(6)</visible>
-					<posx>366</posx>
-					<posy>134</posy>
+					<left>366</left>
+					<top>134</top>
 					<width>770</width>
 					<height>580</height>
 					<itemgap>.5</itemgap>
@@ -459,8 +459,8 @@
 					<onup>9001</onup>
 					<ondown>9001</ondown>
 					<control type="label">
-						<posx>20</posx>
-						<posy>0</posy>
+						<left>20</left>
+						<top>0</top>
 						<width>770</width>
 						<height>500</height>
 						<font>HelpText</font>
@@ -474,8 +474,8 @@
 					</control>
 					
 					<control type="button" id="100">
-						<posx>0</posx>
-						<posy>350</posy>
+						<left>0</left>
+						<top>350</top>
 						<height>43.5</height>
 						<width>810</width>
 						<textcolor>95FFFFFF</textcolor>
@@ -493,8 +493,8 @@
 					</control>
 					<control type="button" id="101">
 						<description>download logos</description>
-						<posx>0</posx>
-						<posy>397</posy>
+						<left>0</left>
+						<top>397</top>
 						<height>43.5</height>
 						<width>810</width>
 						<textcolor>95FFFFFF</textcolor>
@@ -518,8 +518,8 @@
 			
 			<control type="button" id="444">
 		
-				<posx>1</posx>
-				<posy>617</posy>
+				<left>1</left>
+				<top>617</top>
 				<description>Back Button</description>
 				<height>50</height>
 				<width>247</width>
@@ -546,8 +546,8 @@
 		<textureslidernibfocus>buttons/scrollnibV.png</textureslidernibfocus>
 		<orientation>Vertical</orientation>
 		<showonepage>true</showonepage>
-		<posx>325</posx>
-		<posy>135</posy>
+		<left>325</left>
+		<top>135</top>
 		<width>10</width>
 		<height>450</height>
 		

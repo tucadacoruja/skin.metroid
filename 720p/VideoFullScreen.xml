@@ -12,8 +12,8 @@
 						
 			<control type="label" id="10">
 				<description>row 1</description>
-				<posx>25</posx>
-				<posy>15</posy>
+				<left>25</left>
+				<top>15</top>
 				<width>1280</width>
 				<label>-</label>
 				<align>left</align>
@@ -23,8 +23,8 @@
 			</control>
 			<control type="label" id="11">
 				<description>row 2</description>
-				<posx>25</posx>
-				<posy>65</posy>
+				<left>25</left>
+				<top>65</top>
 				<width>1280</width>
 				<label>-</label>
 				<align>left</align>
@@ -34,8 +34,8 @@
 			</control>
 			<control type="label" id="12">
 				<description>row 3</description>
-				<posx>25</posx>
-				<posy>85</posy>
+				<left>25</left>
+				<top>85</top>
 				<width>1280</width>
 				<height>80</height>
 				<label>-</label>

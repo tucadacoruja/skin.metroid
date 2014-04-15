@@ -5,15 +5,15 @@
   
 <coordinates>
   <system>1</system>
-  <posx>330</posx>
-  <posy>100</posy>
+  <left>330</left>
+  <top>100</top>
 </coordinates>
   
 <controls>
 
 <control type="button" id="11">
-	<posx>-10</posx>
-	<posy>-10</posy>
+	<left>-10</left>
+	<top>-10</top>
 	<width>1</width>
 	<height>1</height>
 </control>
@@ -28,8 +28,8 @@
 	
 	<control type="grouplist">
 			
-		<posx>0</posx>
-		<posy>0</posy>
+		<left>0</left>
+		<top>0</top>
 		<width>1220</width>
 		<height>600</height>
 		<scrolltime tween="cubic" easing="out">600</scrolltime>
@@ -61,8 +61,8 @@
 				
 				<control type="image">
 				
-					<posx>0</posx>
-					<posy>0</posy>
+					<left>0</left>
+					<top>0</top>
 					<width>60</width>
 					<height>60</height>
 					<aspectratio>scale</aspectratio>
@@ -104,8 +104,8 @@
 				
 				<control type="image">
 				
-					<posx>0</posx>
-					<posy>0</posy>
+					<left>0</left>
+					<top>0</top>
 					<width>60</width>
 					<height>60</height>
 					<aspectratio>scale</aspectratio>
@@ -146,8 +146,8 @@
 				
 				<control type="image">
 				
-					<posx>0</posx>
-					<posy>0</posy>
+					<left>0</left>
+					<top>0</top>
 					<width>60</width>
 					<height>60</height>
 					<aspectratio>scale</aspectratio>
@@ -188,8 +188,8 @@
 				
 				<control type="image">
 				
-					<posx>0</posx>
-					<posy>0</posy>
+					<left>0</left>
+					<top>0</top>
 					<width>60</width>
 					<height>60</height>
 					<aspectratio>scale</aspectratio>
@@ -230,8 +230,8 @@
 				
 				<control type="image">
 				
-					<posx>0</posx>
-					<posy>0</posy>
+					<left>0</left>
+					<top>0</top>
 					<width>60</width>
 					<height>60</height>
 					<aspectratio>scale</aspectratio>
@@ -273,15 +273,15 @@
 			
 			<control type="group">
 			
-				<posx>0</posx>
-				<posy>60</posy>
+				<left>0</left>
+				<top>60</top>
 				<width>380</width>
 				<height>500</height>
 
 				<control type="image">
 						
-					<posx>0</posx>
-					<posy>0</posy>
+					<left>0</left>
+					<top>0</top>
 					<width>380</width>
 					<height>500</height>
 					<texture background="true">white.png</texture>
@@ -290,8 +290,8 @@
 				
 				<control type="image" id="3">
 						
-					<posx>0</posx>
-					<posy>0</posy>
+					<left>0</left>
+					<top>0</top>
 					<width>380</width>
 					<height>215</height>
 					
@@ -301,8 +301,8 @@
 			
 				<control type="grouplist">
 					
-					<posx>20</posx>
-					<posy>220</posy>
+					<left>20</left>
+					<top>220</top>
 					<width>360</width>
 					<height>130</height>
 					<itemgap>0</itemgap>
@@ -348,8 +348,8 @@
 				
 				<control type="grouplist">
 				
-					<posx>20</posx>
-					<posy>110</posy>
+					<left>20</left>
+					<top>110</top>
 					<width>340</width>
 					<height>300</height>
 					<itemgap>0</itemgap>
@@ -400,8 +400,8 @@
 			<height>560</height>
 			
 			<control type="textbox" id="4">
-				<posx>0</posx>
-				<posy>60</posy>
+				<left>0</left>
+				<top>60</top>
 				<font>PlotOnly</font>
 				<textcolor>95FFFFFF</textcolor>
 				
@@ -415,8 +415,8 @@
 					
 			<control type="list" id="50">
 							
-				<posx>0</posx>
-				<posy>60</posy>
+				<left>0</left>
+				<top>60</top>
 				<width>450</width>
 				<height>320</height>
 				<onleft>1</onleft>
@@ -432,8 +432,8 @@
 					<control type="group">
 					
 						<control type="label">
-							<posx>0</posx>
-							<posy>0</posy>
+							<left>0</left>
+							<top>0</top>
 							<width>70</width>
 							<height>30</height>
 							<label>$INFO[ListItem.Duration]</label>
@@ -443,8 +443,8 @@
 						</control>	
 						<control type="label">
 						
-							<posx>62</posx>
-							<posy>0</posy>
+							<left>62</left>
+							<top>0</top>
 							<width>300</width>
 							<height>36</height>
 							<label>$INFO[ListItem.Label]</label>
@@ -458,8 +458,8 @@
 				</itemlayout>
 				<focusedlayout width="540" height="32">
 						<control type="image">
-							<posx>0</posx>
-							<posy>0</posy>
+							<left>0</left>
+							<top>0</top>
 							<width>370</width>
 							<height>30</height>
 							<texture>setting.png</texture>
@@ -468,8 +468,8 @@
 							<animation effect="fade" start="100" end="0" time="100" condition="!Control.HasFocus(50)">Conditional</animation>
 						</control>
 						<control type="label">
-							<posx>0</posx>
-							<posy>0</posy>
+							<left>0</left>
+							<top>0</top>
 							<width>70</width>
 							<height>30</height>
 							<label>$INFO[ListItem.Duration]</label>
@@ -479,8 +479,8 @@
 						</control>	
 						<control type="label">
 						
-							<posx>62</posx>
-							<posy>0</posy>
+							<left>62</left>
+							<top>0</top>
 							<width>300</width>
 							<height>36</height>
 							<label>$INFO[ListItem.Label]</label>
@@ -499,8 +499,8 @@
 </control>
 
 <control type="button" id="5">
-	<posx>-100</posx>
-	<posy>-100</posy>
+	<left>-100</left>
+	<top>-100</top>
 	<width>1</width>
 	<height>1</height>
 	<visible allowhiddenfocus="true">true</visible>

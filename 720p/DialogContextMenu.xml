@@ -10,8 +10,8 @@
 <controls>
 	
 <control type="button">
-	<posx>0</posx>
-	<posy>0</posy>
+	<left>0</left>
+	<top>0</top>
 	<width>1280</width>
 	<height>720</height>
 	<description>Invisible back button</description>
@@ -30,8 +30,8 @@
 	<control type="image" id="997">
 		<description>top image</description>
 
-		<posx>440</posx>
-		<posy>82</posy>
+		<left>440</left>
+		<top>82</top>
 		<width>378</width>
 		<height>48</height>
 		<texture>MetroidMenu.png</texture>
@@ -40,8 +40,8 @@
 	</control>
 	<control type="image" id="999">
 		<description>background image</description>
-		<posx>440</posx>
-		<posy>130</posy>
+		<left>440</left>
+		<top>130</top>
 		<width>380</width>
 		<height>1090</height>
 		<texture>MetroidMenu.png</texture>
@@ -50,8 +50,8 @@
 	</control>
 	<control type="image">
 		<description>line</description>
-		<posx>440</posx>
-		<posy>126</posy>
+		<left>440</left>
+		<top>126</top>
 		<width>378</width>
 		<height>4</height>
 		<texture flipy="true">white.png</texture>
@@ -61,8 +61,8 @@
 	</control>
 	<control type="label">
 
-		<posx>800</posx>
-		<posy>78</posy>
+		<left>422</left>
+		<top>78</top>
 		<width>378</width>
 		<height>44</height>
 		<align>right</align>
@@ -75,15 +75,15 @@
 	
 	<control type="grouplist" id="996">
 		<width>420</width>
-		<posx>440</posx>
-		<posy>130</posy>
+		<left>440</left>
+		<top>130</top>
 		<height max="1080">auto</height>
 		
 				
 		<control type="button" id="2009">
 			<description>Custom button</description>
-			<posx>15</posx>
-			<posy>0</posy>
+			<left>15</left>
+			<top>0</top>
 			<font>context</font>
 			<textcolor>darklist</textcolor>
 			<focusedcolor>white</focusedcolor>
@@ -101,8 +101,8 @@
 		</control>
 		<control type="button" id="2010">
 			<description>Custom button</description>
-			<posx>15</posx>
-			<posy>0</posy>
+			<left>15</left>
+			<top>0</top>
 			<font>context</font>
 			<textcolor>darklist</textcolor>
 			<focusedcolor>white</focusedcolor>
@@ -131,8 +131,8 @@
 		<onload condition="IsEmpty(Window(home.Property(UseWidget)))">SetProperty(UseWidget,NumberOne,home)</onload>
 		<control type="button" id="2018">
 			<description>Custom button</description>
-			<posx>15</posx>
-			<posy>0</posy>
+			<left>15</left>
+			<top>0</top>
 			<font>context</font>
 			<textcolor>darklist</textcolor>
 			<focusedcolor>white</focusedcolor>
@@ -151,8 +151,8 @@
 		
 		<control type="button" id="2019">
 			<description>Custom button</description>
-			<posx>15</posx>
-			<posy>0</posy>
+			<left>15</left>
+			<top>0</top>
 			<font>context</font>
 			<textcolor>darklist</textcolor>
 			<focusedcolor>white</focusedcolor>
@@ -181,8 +181,8 @@
 	
 	<control type="button" id="1000">
 		<description>Buttons</description>
-		<posx>15</posx>
-		<posy>0</posy>
+		<left>15</left>
+		<top>0</top>
 		<font>context</font>
 		<aligny>top</aligny>
 		<align>left</align>

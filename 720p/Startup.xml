@@ -35,8 +35,8 @@
 	  <animation effect="fade" end="1" time="0" condition="true">Conditional</animation>
     </control>
 	<control type="image">
-		<posx>0</posx>
-		<posy>0</posy>
+		<left>0</left>
+		<top>0</top>
 		<width>1280</width>
 		<height>720</height>
 		<aspectratio>stretch</aspectratio>

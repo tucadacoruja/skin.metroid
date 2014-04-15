@@ -7,16 +7,16 @@
 <controls>
 
 	<control type="button" id="50">
-		<posx>10</posx>
-		<posy>10</posy>
+		<left>10</left>
+		<top>10</top>
 		<width>1</width>
 		<height>1</height>
 		<texture>black.png</texture>
 		<onfocus>SetFocus(9000)</onfocus>
 	</control>
 	<control type="button" id="300">
-		<posx>10</posx>
-		<posy>10</posy>
+		<left>10</left>
+		<top>10</top>
 		<width>1</width>
 		<height>1</height>
 		<texture>black.png</texture>
@@ -29,8 +29,8 @@
 	
 		
 		<control type="image">
-			<posx>0</posx>
-			<posy>65</posy>
+			<left>0</left>
+			<top>65</top>
 			<width>250</width>
 			<height>660</height>
 			<aspectratio>stretch</aspectratio>
@@ -39,8 +39,8 @@
 		</control>
 		
 		<control type="image">
-			<posx>235</posx>
-			<posy>65</posy>
+			<left>235</left>
+			<top>65</top>
 			<width>15</width>
 			<height>660</height>
 			<aspectratio>stretch</aspectratio>
@@ -52,8 +52,8 @@
 		
 		<control type="list" id="9000">
 			<description>Button Area</description>
-			<posx>1</posx>
-			<posy>65</posy>
+			<left>1</left>
+			<top>65</top>
 			<width>300</width>
 			<height>570</height>
 			<onleft>999</onleft>
@@ -69,8 +69,8 @@
 						
 			<itemlayout height="50" width="246">
 				<control type="label">
-					<posx>25</posx>
-					<posy>-1</posy>
+					<left>25</left>
+					<top>-1</top>
 					<width>246</width>
 					<height>50</height>
 					<font>MainMenu21</font>
@@ -88,8 +88,8 @@
 				
 				<control type="image">
 					<description>list line image</description>
-					<posx>0</posx>
-					<posy>2</posy>
+					<left>0</left>
+					<top>2</top>
 					<width>248</width>
 					<height>50</height>
 					<aspectratio>stretch</aspectratio>
@@ -98,8 +98,8 @@
 					<animation effect="fade" start="0" end="40" time="0" condition="true">Conditional</animation>
 				</control>
 				<control type="label">
-					<posx>25</posx>
-					<posy>-1</posy>
+					<left>25</left>
+					<top>-1</top>
 					<width>240</width>
 					<height>50</height>
 					<font>MainMenu21</font>
@@ -112,8 +112,8 @@
 				</control>
 				<control type="image">
 					<description>focussed image</description>
-					<posx>0</posx>
-					<posy>2</posy>
+					<left>0</left>
+					<top>2</top>
 					<width>10</width>
 					<height>50</height>
 					<aspectratio>stretch</aspectratio>
@@ -124,8 +124,8 @@
 				</control>
 				<control type="image">
 					<description>focussed image</description>
-					<posx>0</posx>
-					<posy>2</posy>
+					<left>0</left>
+					<top>2</top>
 					<width>10</width>
 					<height>50</height>
 					<aspectratio>stretch</aspectratio>
@@ -180,7 +180,7 @@
 		
 		
 			<control type="group" id="9010"><!-- just groups -->
-			<posy>3</posy>	
+			<top>3</top>	
 
 				
 				<!--  Main Items  -->
@@ -188,8 +188,8 @@
 				<control type="grouplist" id="9001">
 					<description>Control Area</description>
 					<visible>Container(9000).Hasfocus(1)</visible>
-					<posx>355</posx>
-					<posy>133</posy>
+					<left>355</left>
+					<top>133</top>
 					<width>810</width>
 					<height>476</height>
 					<itemgap>.5</itemgap>
@@ -409,8 +409,8 @@
 					<description>Control Area</description>
 					<visible>Container(9000).Hasfocus(5)</visible>
 				
-					<posx>355</posx>
-					<posy>133</posy>
+					<left>355</left>
+					<top>133</top>
 					<width>810</width>
 					<height>476</height>
 					<itemgap>.5</itemgap>
@@ -622,8 +622,8 @@
 				<control type="grouplist" id="9004">
 					<description>Control Area</description>
 					<visible>Container(9000).Hasfocus(4)</visible>
-					<posx>355</posx>
-					<posy>133</posy>
+					<left>355</left>
+					<top>133</top>
 					<width>810</width>
 					<height>476</height>
 					<itemgap>.5</itemgap>
@@ -726,8 +726,8 @@
 				<control type="grouplist" id="9006">
 					<description>Control Area</description>
 					<visible>Container(9000).Hasfocus(3)</visible>
-					<posx>355</posx>
-					<posy>133</posy>
+					<left>355</left>
+					<top>133</top>
 					<width>810</width>
 					<height>476</height>
 					<itemgap>.5</itemgap>
@@ -877,14 +877,14 @@
 				<!-- disabled color changer not sure if i want to keep it -->
 				
 				<!-- control type="group" id="9007"><!-- move 44 down -->
-					<!-- posx>368</posx>
-					<posy>349</posy>
+					<!-- left>368</left>
+					<top>349</top>
 					<onup>9006</onup>
 					<ondown>9006</ondown>
 					<visible>Container(9000).Hasfocus(3)</visible>
 					<control type="image">
-						<posx>0</posx>
-						<posy>0</posy>
+						<left>0</left>
+						<top>0</top>
 						<height>42.5</height>
 						<width>810</width>
 						<aspectratio>stretch</aspectratio>
@@ -894,7 +894,7 @@
 						<visible>Control.HasFocus(1260) | Control.HasFocus(1261)</visible>
 					</control> 
 					<control type="label">
-						<posx>20</posx>
+						<left>20</left>
 						<height>42.5</height>
 						<width>810</width>
 						<textcolor>ampm</textcolor>
@@ -904,8 +904,8 @@
 					</control>
 					<control type="button" id="1260">
 						<description>fake button down scroller</description>
-						<posx>700</posx>
-						<posy>6</posy>
+						<left>700</left>
+						<top>6</top>
 						<width>40</width>
 						<height>30</height>
 						<texturenofocus>buttons/spindownnf.png</texturenofocus>
@@ -931,8 +931,8 @@
 					</control>			
 					<control type="button" id="1261">
 						<description>fake button up scroller</description>
-						<posx>740</posx>
-						<posy>6</posy>
+						<left>740</left>
+						<top>6</top>
 						<width>40</width>
 						<height>30</height>
 						<texturenofocus>buttons/spinupnf.png</texturenofocus>
@@ -962,8 +962,8 @@
 			
 			<control type="button" id="444">
 		
-				<posx>1</posx>
-				<posy>616</posy>
+				<left>1</left>
+				<top>616</top>
 				<description>Back Button</description>
 				<height>50</height>
 				<width>249</width>
@@ -991,8 +991,8 @@
 			<orientation>Vertical</orientation>
 			<showonepage>true</showonepage>
 			
-			<posx>325</posx>
-			<posy>140</posy>
+			<left>325</left>
+			<top>140</top>
 			<width>10</width>
 			<height>470</height>
 			<onleft>9000</onleft>

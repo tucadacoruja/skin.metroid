@@ -49,7 +49,7 @@
 	<texturefocus>setting.png</texturefocus>
 	<texturenofocus>-</texturenofocus>
 	<textoffsetx>20</textoffsetx>
-	<radioposx>743</radioposx>
+	<radioleft>743</radioleft>
 	<align>left</align>
 </include>
 
@@ -121,6 +121,8 @@
 	<height>42</height>	
 </include>
 
+
+	
 <include name="FocusPosition1">
 	<focusposition>1</focusposition>
 </include>
@@ -136,10 +138,10 @@
 </include>
 
 <include name="InfoLockedPosx">
-	<posx>300</posx>
+	<left>300</left>
 </include>
 <include name="InfoUnLockedPosx">
-	<posx>60</posx>
+	<left>60</left>
 </include>
 
 <include name="PosterViewWidth1">
@@ -147,6 +149,35 @@
 </include>
 <include name="PosterViewWidth2">
 	<width>940</width>
+</include>
+
+<include name="SearchButton">
+	<left>1220</left>
+	<top>5</top>
+	<height>52</height>
+	<width>52</width>
+</include>
+<include name="TopLabelBig">
+	<left>700</left>
+	<top>-4</top>
+	<width>500</width>
+	<height>42</height>
+	<font>Clock2</font>
+	<align>right</align>
+	<aligny>center</aligny>
+	<textcolor>FF959595</textcolor>
+	<scroll>false</scroll>
+</include>
+<include name="TopLabelSmall">
+	<left>700</left>
+	<top>22</top>
+	<width>500</width>
+	<height>42</height>
+	<font>WeatherSmall</font>
+	<align>right</align>
+	<aligny>center</aligny>
+	<textcolor>FF707070</textcolor>
+	<scroll>false</scroll>
 </include>
 
 <include name="MenuAutoClose">
@@ -164,6 +195,16 @@
 	
 </include>
 
+<include name="MenuManualClose">
+	<onclick>Skin.Reset(SubMenu1)</onclick>
+	<onclick>Skin.Reset(SubMenu2)</onclick>
+	<onclick>Skin.Reset(SubMenu3)</onclick>
+	<onclick>Skin.Reset(SubMenu4)</onclick>
+	<onclick>Skin.Reset(SubMenu5)</onclick>
+	<onclick>Skin.Reset(SubMenu6)</onclick>
+	<onclick>Skin.Reset(SubMenu7)</onclick>
+</include>
+
 <include name="NotVisibleAllSettingsWindows">
 <visible>![Window.IsActive(settings) | Window.IsActive(profilesettings) | Window.IsActive(systeminfo) | Window.IsActive(skinsettings) | Window.IsActive(picturessettings) | Window.IsActive(programssettings) | Window.IsActive(weathersettings) | Window.IsActive(musicsettings) | Window.IsActive(systemsettings) | Window.IsActive(videossettings) | Window.IsActive(networksettings) | Window.IsActive(appearancesettings)]</visible>
 </include>
@@ -171,9 +212,10 @@
 
 <include name="BottomInfoBar">
 	
+	<include>CustomControls</include>
 	<!--  clock Group -->
 	<control type="group">
-	<posy>-4</posy>
+
 	<visible>![Window.IsVisible(107) | Library.IsScanningMusic | Library.IsScanningVideo | Window.IsVisible(extendedprogressdialog) | Window.IsVisible(614) | Window.IsVisible(112) | Window.IsVisible(101) | Window.IsVisible(133)]</visible>
 	
 		<control type="group">
@@ -181,26 +223,11 @@
 		<animation effect="fade" start="0" end="100" time="450" delay="150" >Visible</animation>
 		<animation effect="fade" start="100" end="0" time="450" delay="150" >Hidden</animation>
 			<control type="label">
-				
-				<posx>90r</posx>
-				<posy>0</posy>
-				<width>125</width>
-				<height>42</height>
-				<font>Clock2</font>
-				<align>right</align>
-				<aligny>center</aligny>
-				<textcolor>FF959595</textcolor>
+				<include>TopLabelBig</include>
 				<label>$INFO[System.Time(hh:mm)]</label>
 			</control>
 			<control type="label">
-				<posx>90r</posx>
-				<posy>26</posy>
-				<width>160</width>
-				<height>42</height>
-				<font>WeatherSmall</font>
-				<align>right</align>
-				<aligny>center</aligny>
-				<textcolor>FF707070</textcolor>
+				<include>TopLabelSmall</include>
 				<label>$INFO[System.Date(DDD)] $INFO[System.Date(dd)]</label>
 			</control>
 		</control>
@@ -210,55 +237,27 @@
 		<animation effect="fade" start="0" end="100" time="450" delay="150" >Visible</animation>
 		<animation effect="fade" start="100" end="0" time="450" delay="150" >Hidden</animation>
 			<control type="label">
-				<posx>1190</posx>
-				<posy>0</posy>
-				<width>500</width>
-				<height>42</height>
-				<font>Clock2</font>
-				<align>right</align>
-				<aligny>center</aligny>
-				<textcolor>FF959595</textcolor>
+				<include>TopLabelBig</include>
 				<label>$INFO[Player.Title]</label>
-				<scroll>false</scroll>
 			</control>
 			<control type="label">
-				<posx>1190</posx>
-				<posy>26</posy>
-				<width>500</width>
-				<height>42</height>
-				<font>WeatherSmall</font>
-				<align>right</align>
-				<aligny>center</aligny>
-				<textcolor>FF707070</textcolor>
+				<include>TopLabelSmall</include>
 				<label>$INFO[VideoPlayer.TVShowTitle]$INFO[VideoPlayer.Year]$INFO[MusicPlayer.Artist]$INFO[VideoPlayer.ChannelName]</label>
-				<scroll>false</scroll>
 			</control>
 		</control>
 
 		<control type="fadelabel" id="2121">
-			<animation effect="fade" start="1" end="0" time="0" condition="true" >Conditional</animation>
-			<posx>100</posx>
-			<posy>10</posy>
-			<width>50</width>
-			<height>50</height>
-			<font>font13</font>
-			<align>right</align>
-			<aligny>center</aligny>
-			<textcolor>FF707070</textcolor>
+			<animation effect="fade" start="0" end="0" time="0" condition="true" >Conditional</animation>
+			<include>TopLabelSmall</include>
 			<label>a</label>
 			<label>b</label>
-			<scrollout>false</scrollout>
-			<scroll>true</scroll>
 			<scrollspeed>1200</scrollspeed>
 			<pauseatend>17000</pauseatend>
 			<visible>Player.HasMedia</visible>
 		</control>
 		
 		<control type="image">
-			<posx>70r</posx>
-			<posy>9</posy>
-			<height>55</height>
-			<width>55</width>
+			<include>SearchButton</include>
 			<texture>osd/GrayBackground.png</texture>
 			<aspectratio>stretch</aspectratio>
 			<animation effect="fade" start="100" end="40" time="100" condition="Control.HasFocus(999)">Conditional</animation>
@@ -268,20 +267,14 @@
 		</control>
 		
 		<control type="image">
-			<posx>70r</posx>
-			<posy>5</posy>
-			<width>51</width>
-			<height>58</height>
+			<include>SearchButton</include>
 			<aspectratio>keep</aspectratio>
 			<texture>$INFO[Weather.Conditions]</texture>
 			<visible>![Window.IsVisible(extendedprogressdialog) | Library.IsScanningMusic | Library.IsScanningVideo | Substring(Weather.Temperature,Busy) | Window.IsVisible(infodialog) | Window.IsVisible(volumebar) | Window.IsVisible(musicscan) | Window.IsVisible(progressdialog) | Window.IsVisible(videoscan)]</visible>
 			<visible>System.HasNetwork + Weather.IsFetched + Skin.HasSetting(GlobalSearch)</visible>
 		</control>
 		<control type="button">
-			<posx>70r</posx>
-			<posy>5</posy>
-			<width>51</width>
-			<height>58</height>
+			<include>SearchButton</include>
 			<aspectratio>keep</aspectratio>
 			<texturefocus>$INFO[Weather.Conditions]</texturefocus>
 			<texturenofocus>$INFO[Weather.Conditions]</texturenofocus>
@@ -292,10 +285,7 @@
 		
 		<control type="button" id="999">
 			<description>global search</description>
-			<posx>70r</posx>
-			<posy>8</posy>
-			<height>55</height>
-			<width>55</width>
+			<include>SearchButton</include>
 			<aspectratio>keep</aspectratio>
 			<texturefocus colordiffuse="FFACACAC">osd/search.png</texturefocus>
 			<texturenofocus>osd/search.png</texturenofocus>
@@ -317,7 +307,7 @@
 	</control>
 </include>
 	
-	
+
 	
 	<include name="GeneralFanart">
 	
@@ -325,8 +315,8 @@
 		<animation effect="slide" start="0,0" end="-250,0" time="600" condition="!Control.HasFocus(301) + ![Window.IsVisible(home) | Window.IsVisible(profiles) | Window.IsVisible(weather)] + !Skin.HasSetting(LockMainMenu)">Conditional</animation>
 		
 		<control type="multiimage">
-			<posx>250</posx>
-			<posy>0</posy>
+			<left>250</left>
+			<top>0</top>
 			<width>1280</width>
 			<height>720</height>
 			<aspectratio>stretch</aspectratio>
@@ -341,8 +331,8 @@
 			<visible>!Player.HasVideo + IsEmpty(ListItem.Art(fanart)) + !Skin.HasSetting(BackgroundSlideshow)</visible>
 		</control>
 		<control type="image">
-			<posx>250</posx>
-			<posy>0</posy>
+			<left>250</left>
+			<top>0</top>
 			<width>1280</width>
 			<height>720</height>
 			<aspectratio>stretch</aspectratio>
@@ -352,8 +342,8 @@
 			<animation effect="fade" start="40" end="95" time="100000" delay="2000" reversable="true" pulse="true" condition="Player.HasAudio + !Skin.HasSetting(VisLibrary)">Conditional</animation>
 		</control>
 		<control type="image">
-			<posx>250</posx>
-			<posy>0</posy>
+			<left>250</left>
+			<top>0</top>
 			<width>1280</width>
 			<height>720</height>
 			<aspectratio>stretch</aspectratio>
@@ -372,8 +362,8 @@
 			<animation effect="fade" start="100" end="75" time="0" condition="Stringcompare(Skin.String(BackgroundPercentage),75) + !Player.HasMedia">Conditional</animation>
 		</control>
 		<control type="image">
-			<posx>235</posx>
-			<posy>65</posy>
+			<left>235</left>
+			<top>65</top>
 			<width>15</width>
 			<height>670</height>
 			<aspectratio>stretch</aspectratio>
@@ -386,15 +376,15 @@
 	
 	<include name="VideoWindow">
 		<control type="visualisation"><!-- id="2" -->
-			<posx>0</posx>
-			<posy>0</posy>
+			<left>0</left>
+			<top>0</top>
 			<width>1280</width>
 			<height>720</height>
 		    <visible>Player.HasAudio + !Skin.HasSetting(VisLibrary)</visible>
 		</control>
 		<control type="videowindow">
-			<posx>0</posx>
-			<posy>0</posy>
+			<left>0</left>
+			<top>0</top>
 			<width>1280</width>
 			<height>720</height>
 			<visible>Player.HasVideo + !Skin.HasSetting(VidWinLibrary)</visible>
@@ -404,168 +394,34 @@
 	<include name="Background">
 
 		<control type="image">
-			<posx>0</posx>
-			<posy>0</posy>
+			<left>0</left>
+			<top>0</top>
 			<width>1280</width>
 			<height>62</height>
 			<aspectratio>stretch</aspectratio>
 			<texture background="true" >white.png</texture>
 			<colordiffuse>white</colordiffuse>
 		</control>
-		<!--control type="image">
-			<posx>0</posx>
-			<posy>0</posy>
-			<width>1280</width>
-			<height>70</height>
-			<aspectratio>stretch</aspectratio>
-			<texture>shadow.png</texture>
-			 
-			<animation effect="fade" start="0" end="10" time="0" reversible="false" condition="true">Conditional</animation>
-		</control-->
-		<!--control type="image">
-			<posx>0</posx>
-			<posy>0</posy>
-			<width>1285</width>
-			<height>4</height>
-			<aspectratio>stretch</aspectratio>
-			<texture flipy="true">BackMenu.png</texture>
-			<animation effect="fade" start="100" end="60" time="0" reversible="false" condition="true">Conditional</animation>
-		</control-->
+
 		<control type="image">
-			<posx>0</posx>
-			<posy>62</posy>
+			<left>0</left>
+			<top>62</top>
 			<width>1285</width>
 			<height>5</height>
 			<aspectratio>stretch</aspectratio>
 			<texture flipy="true">BackMenu.png</texture>
 		</control>
 		
-	</include>
-	
-	<include name="ScrollOffsetLabel">
-		<control type="group">
-			<visible>Container.Scrolling</visible>
-			
-			<animation effect="fade" start="0" end="100" time="100">Visible</animation>
-			<animation effect="fade" start="100" end="0" delay="500" time="300">Hidden</animation>
-			<posx>10</posx>
-			<posy>5</posy>
-			<control type="image">
-				<posx>0</posx>
-				<posy>0</posy>
-				<width>55</width>
-				<height>55</height>
-				<texture>osd/GrayBackground.png</texture>
-				<animation effect="slide" start="0,0" end="60,0" time="200" tween="quadratic" easing="out" condition="Window.Isvisible(musicplaylist) | Window.Isvisible(videoplaylist)">Conditional</animation>
-			
-			</control>
-			<control type="label">
-				<posx>0</posx>
-				<posy>0</posy>
-				<width>53</width>
-				<height>55</height>
-				<align>center</align>
-				<aligny>center</aligny>
-				<label>$INFO[ListItem.SortLetter]</label>
-				<textcolor>white</textcolor>
-				<font>scrolloffset</font>
-				<animation effect="slide" start="0,0" end="60,0" time="200" tween="quadratic" easing="out" condition="Window.Isvisible(musicplaylist) | Window.Isvisible(videoplaylist)">Conditional</animation>
-			</control>
-						
-		</control>
-		<include>LowBattery</include>
 		
 	</include>
 	
-	<include name="LowBattery">
-		<control type="group">
-			<visible>StringCompare(System.BatteryLevel,5%) | StringCompare(System.BatteryLevel,4%) | StringCompare(System.BatteryLevel,3%) | StringCompare(System.BatteryLevel,2%) | StringCompare(System.BatteryLevel,1%)</visible>
-			
-			<animation effect="fade" start="0" end="100" time="100">Visible</animation>
-			<animation effect="fade" start="100" end="0" delay="500" time="300">Hidden</animation>
-			<posx>10</posx>
-			<posy>5</posy>
-			<control type="image">
-				<posx>0</posx>
-				<posy>0</posy>
-				<width>55</width>
-				<height>55</height>
-				<texture>osd/GrayBackground.png</texture>
-				<animation effect="slide" start="0,0" end="60,0" time="200" tween="quadratic" easing="out" condition="Window.Isvisible(musicplaylist) | Window.Isvisible(videoplaylist)">Conditional</animation>
-				<visible>![Window.IsVisible(seekbar) | Window.IsVisible(visualisation)]</visible>
-			</control>
-			<control type="image">
-				<posx>0</posx>
-				<posy>0</posy>
-				<width>55</width>
-				<height>55</height>
-				<texture>osd/battery.png</texture>
-				<animation effect="slide" start="0,0" end="60,0" time="200" tween="quadratic" easing="out" condition="Window.Isvisible(musicplaylist) | Window.Isvisible(videoplaylist)">Conditional</animation>
-				<animation effect="fade" pulse="true" start="100" end="60" time="1400" condition="true">Conditional</animation>
-			</control>
-						
-		</control>
-	</include>
-	
-	<!--include name="EmptyMenu">
-		<control type="list">
-			<posx>5</posx>
-			<posy>65</posy>
-			<width>300</width>
-			<height>648</height>
-			<onleft>300</onleft>
-			<onright>50</onright>
-			<onup>301</onup>
-			<ondown>301</ondown>
-			<pagecontrol>-</pagecontrol>
-			<scrolltime tween="cubic" easing="inout">325</scrolltime>
-			<orientation>vertical</orientation>
-			
-			
-			<itemlayout height="50" width="300">
-				
-				<control type="image">
-					<description>list line image</description>
-					<posx>0</posx>
-					<posy>0</posy>
-					<width>240</width>
-					<height>2</height>
-					<aspectratio>stretch</aspectratio>
-					<texture border="1">MenuBorder.png</texture>
-					 
-					<animation effect="fade" start="0" end="20" time="0" condition="true">Conditional</animation>
-				</control>
-			</itemlayout>
-			
-			<focusedlayout height="50" width="300">
-				
-				
-				<control type="image">
-					<description>list line image</description>
-					<posx>0</posx>
-					<posy>0</posy>
-					<width>240</width>
-					<height>2</height>
-					<aspectratio>stretch</aspectratio>
-					<texture border="1">MenuBorder.png</texture>
-					 
-					<animation effect="fade" start="0" end="20" time="0" condition="true">Conditional</animation>
-				</control>
-			</focusedlayout>
-			
-				<content>
-					<include>EmptyMenuItems</include>
-				</content>	
-				
-		</control>
-	</include-->
-	
+
 	
 	<include name="Loading">
 		<!-- control type="image">
 			<description>model</description>
-			<posx>590</posx>
-			<posy>310</posy>
+			<left>590</left>
+			<top>310</top>
 			<width>100</width>
 			<height>100</height>
 			<texture>whitedot.png</texture>
@@ -577,8 +433,8 @@
 		
 		<control type="image">
 			<description>N dot</description>
-			<posx>630</posx>
-			<posy>310</posy>
+			<left>630</left>
+			<top>310</top>
 			<width>20</width>
 			<height>20</height>
 			<texture>whitedot.png</texture>
@@ -590,8 +446,8 @@
 		</control>
 		<control type="image">
 			<description>NE dot</description>
-			<posx>660</posx>
-			<posy>320</posy>
+			<left>660</left>
+			<top>320</top>
 			<width>20</width>
 			<height>20</height>
 			<texture>whitedot.png</texture>
@@ -603,8 +459,8 @@
 		</control>
 		<control type="image">
 			<description>E dot</description>
-			<posx>670</posx>
-			<posy>350</posy>
+			<left>670</left>
+			<top>350</top>
 			<width>20</width>
 			<height>20</height>
 			<texture>whitedot.png</texture>
@@ -616,8 +472,8 @@
 		</control>
 		<control type="image">
 			<description>SE dot</description>
-			<posx>660</posx>
-			<posy>380</posy>
+			<left>660</left>
+			<top>380</top>
 			<width>20</width>
 			<height>20</height>
 			<texture>whitedot.png</texture>
@@ -629,8 +485,8 @@
 		</control>
 		<control type="image">
 			<description>S dot</description>
-			<posx>630</posx>
-			<posy>390</posy>
+			<left>630</left>
+			<top>390</top>
 			<width>20</width>
 			<height>20</height>
 			<texture>whitedot.png</texture>
@@ -642,8 +498,8 @@
 		</control>
 		<control type="image">
 			<description>SW dot</description>
-			<posx>600</posx>
-			<posy>380</posy>
+			<left>600</left>
+			<top>380</top>
 			<width>20</width>
 			<height>20</height>
 			<texture>whitedot.png</texture>
@@ -655,8 +511,8 @@
 		</control>
 		<control type="image">
 			<description>W dot</description>
-			<posx>590</posx>
-			<posy>350</posy>
+			<left>590</left>
+			<top>350</top>
 			<width>20</width>
 			<height>20</height>
 			<texture>whitedot.png</texture>
@@ -668,8 +524,8 @@
 		</control>
 		<control type="image">
 			<description>NW dot</description>
-			<posx>600</posx>
-			<posy>320</posy>
+			<left>600</left>
+			<top>320</top>
 			<width>20</width>
 			<height>20</height>
 			<texture>whitedot.png</texture>
@@ -682,93 +538,7 @@
 	</include>
 	
 	
-	<include name="EmptyMenuItems">
-		<item id="86">
-			<description>filler</description>
-			<onclick>SetFocus(300)</onclick>
-			
-		</item>
-		<item id="87">
-			<description>filler</description>
-			<onclick>SetFocus(300)</onclick>
-			
-		</item>
-		<item id="88">
-			<description>filler</description>
-			<onclick>SetFocus(300)</onclick>
-			
-		</item>
-		<item id="89">
-			<description>filler</description>
-			<onclick>SetFocus(300)</onclick>
-			
-		</item>
-		<item id="90">
-			<description>filler</description>
-			<onclick>SetFocus(300)</onclick>
-			
-		</item>
-		<item id="91">
-			<description>filler</description>
-			<onclick>SetFocus(300)</onclick>
-			
-		</item>
-		<item id="92">
-			<description>filler</description>
-			<onclick>SetFocus(300)</onclick>
-			
-		</item>
-		<item id="93">
-			<description>filler</description>
-			<onclick>SetFocus(300)</onclick>
-			
-		</item>
-		<item id="94">
-			<description>filler</description>
-			<onclick>SetFocus(300)</onclick>
-			
-		</item>
-		<item id="95">
-			<description>filler</description>
-			<onclick>SetFocus(300)</onclick>
-			
-		</item>
-		<item id="96">
-			<description>filler</description>
-			<onclick>SetFocus(300)</onclick>
-			
-		</item>
-		<item id="97">
-			<description>filler</description>
-			<onclick>SetFocus(300)</onclick>
-			
-		</item>
-		<item id="98">
-			<description>filler</description>
-			<onclick>SetFocus(300)</onclick>
-			
-		</item>
-		<item id="99">
-			<description>filler</description>
-			<onclick>SetFocus(300)</onclick>
-			
-		</item>
-		<item id="100">
-			<description>filler</description>
-			<onclick>SetFocus(300)</onclick>
-			
-		</item>
-		<item id="101">
-			<description>filler</description>
-			<onclick>SetFocus(300)</onclick>
-			
-		</item>
-		<item id="102">
-			<description>filler</description>
-			<onclick>SetFocus(300)</onclick>
-			
-		</item>
-	</include>
+
 	
 	<include name="MainListLine">
 		<control type="image">
@@ -789,8 +559,8 @@
 	</include>
 	<include name="EmptyMenu">
 		<control type="grouplist">
-			<posx>5</posx>
-			<posy>65.5</posy>
+			<left>5</left>
+			<top>65.5</top>
 			<width>300</width>
 			<height>648</height>
 			<itemgap>0</itemgap>
@@ -811,7 +581,247 @@
 		</control>
 	</include>
 	
+	<include name="CustomControls">
 	
-	
+		<control type="grouplist">
+			<left>5</left>
+			<top>5</top>
+			<width>1000</width>
+			<height>55</height>
+			<align>left</align>
+			<orientation>horizontal</orientation>
+			<itemgap>5</itemgap>
+			
+			<visible>!Window.IsVisible(songinformation)</visible>
+			<control type="image"><!-- 1 playlist window -->
+				<height>52</height>
+				<width>52</width>
+				<texture>osd/GrayBackground.png</texture>
+				<aspectratio>stretch</aspectratio>
+				<visible>Window.Isvisible(musicplaylist) | Window.Isvisible(videoplaylist)</visible>
+			</control>
+			<control type="image"> <!-- 2 battery -->
+				<width>52</width>
+				<height>52</height>
+				<texture>osd/GrayBackground.png</texture>
+				<visible>StringCompare(System.BatteryLevel,5%) | StringCompare(System.BatteryLevel,4%) | StringCompare(System.BatteryLevel,3%) | StringCompare(System.BatteryLevel,2%) | StringCompare(System.BatteryLevel,1%)</visible>
+			</control>
+			<control type="image"> <!-- 3 pvr -->
+				<width>52</width>
+				<height>52</height>
+				<texture>osd/GrayBackground.png</texture>
+				<visible>Window.IsVisible(pvr)</visible>
+			</control>
+			
+			<control type="image">
+				<height>52</height>
+				<width>52</width>
+				<texture>osd/GrayBackground.png</texture>
+				<aspectratio>stretch</aspectratio>
+				<animation effect="fade" start="100" end="40" time="100" condition="Control.HasFocus(403)">Conditional</animation>
+				<visible>Player.HasMedia</visible>
+			</control>
+			<control type="image">
+				<height>52</height>
+				<width>52</width>
+				<texture>osd/GrayBackground.png</texture>
+				<aspectratio>stretch</aspectratio>
+				<animation effect="fade" start="100" end="40" time="100" condition="Control.HasFocus(404)">Conditional</animation>
+				<visible>Player.HasMedia</visible>
+			</control>
+			<control type="image">
+				<height>52</height>
+				<width>52</width>
+				<texture>osd/GrayBackground.png</texture>
+				<aspectratio>stretch</aspectratio>
+				<animation effect="fade" start="100" end="40" time="100" condition="Control.HasFocus(405)">Conditional</animation>
+				<visible>Player.HasMedia</visible>
+			</control>
+			<control type="image">
+				<height>52</height>
+				<width>52</width>
+				<texture>osd/GrayBackground.png</texture>
+				<aspectratio>stretch</aspectratio>
+				<animation effect="fade" start="100" end="40" time="100" condition="Control.HasFocus(406)">Conditional</animation>
+				<visible>Player.HasMedia</visible>
+			</control>
+			<control type="image">
+				<height>52</height>
+				<width>52</width>
+				<texture>osd/GrayBackground.png</texture>
+				<aspectratio>stretch</aspectratio>
+				<animation effect="fade" start="100" end="40" time="100" condition="Control.HasFocus(407)">Conditional</animation>
+				<visible>Player.HasMedia</visible>
+			</control>
+			<control type="image">
+				<height>52</height>
+				<width>52</width>
+				<texture>osd/GrayBackground.png</texture>
+				<aspectratio>stretch</aspectratio>
+				<animation effect="fade" start="100" end="40" time="100" condition="Control.HasFocus(408)">Conditional</animation>
+				<visible>Player.HasMedia</visible>
+			</control>
+			<control type="image"><!-- scroll offset -->
+				<height>52</height>
+				<width>52</width>
+				<texture>osd/GrayBackground.png</texture>
+				<aspectratio>stretch</aspectratio>
+				<visible>Container.Scrolling</visible>
+			</control>
+			<control type="image"><!-- volume -->
+				<height>52</height>
+				<width>52</width>
+				<texture>osd/GrayBackground.png</texture>
+				<aspectratio>stretch</aspectratio>
+				<visible>Window.IsVisible(volumebar)</visible>
+			</control>
+		</control>	
+		
+		<control type="grouplist" id="8888">
+				
+			<left>5</left>
+			<top>5</top>
+			<width>1000</width>
+			<height>55</height>
+			<align>left</align>
+			<orientation>horizontal</orientation>
+			<itemgap>5</itemgap>
+			<focusposition>3</focusposition>
+			<ondown>300</ondown>
+			<visible>!Window.IsVisible(songinformation)</visible>
+
+			
+			<control type="image"><!-- 1 playlist window -->
+				<width>52</width>
+				<height>52</height>
+				<texture>osd/playlist.png</texture>
+				<visible>Window.Isvisible(musicplaylist) | Window.Isvisible(videoplaylist)</visible>
+			</control>
+			
+			<control type="image"> <!-- 2 battery -->
+				<width>52</width>
+				<height>52</height>
+				<texture>osd/battery.png</texture>
+				<visible>StringCompare(System.BatteryLevel,5%) | StringCompare(System.BatteryLevel,4%) | StringCompare(System.BatteryLevel,3%) | StringCompare(System.BatteryLevel,2%) | StringCompare(System.BatteryLevel,1%)</visible>
+				<animation effect="fade" pulse="true" start="100" end="60" time="1400" condition="true">Conditional</animation>
+			</control>
+			<control type="button">
+				<width>52</width>
+				<height>52</height>
+				<texturefocus colordiffuse="FFACACAC">osd/back.png</texturefocus>
+				<texturenofocus>osd/back.png</texturenofocus>
+				<onclick>back</onclick>
+				<visible>Window.IsVisible(pvr)</visible>
+			</control>
+			<control type="button" id="403">
+				<description>rewind</description>
+				<height>52</height>
+				<width>52</width>
+				<aspectratio>keep</aspectratio>
+				<texturefocus colordiffuse="FFACACAC" flipx="true">osd/ff.png</texturefocus>
+				<texturenofocus flipx="true">osd/ff.png</texturenofocus>
+			
+				<onclick>xbmc.playercontrol(rewind)</onclick>
+				<animation effect="zoom" start="100" end="120" center="auto" time="100">Focus</animation>
+				<animation effect="zoom" start="120" end="100" center="auto" time="100">UnFocus</animation>
+				<visible>Player.HasMedia</visible>
+			</control>
+			
+			<control type="button" id="404">
+				<description>previous</description>
+				<height>52</height>
+				<width>52</width>
+				<aspectratio>keep</aspectratio>
+				<texturefocus colordiffuse="FFACACAC" flipx="true">osd/skip.png</texturefocus>
+				<texturenofocus flipx="true">osd/skip.png</texturenofocus>
+				
+				<onclick>xbmc.playercontrol(previous)</onclick>
+				<animation effect="zoom" start="100" end="120" center="auto" time="100">Focus</animation>
+				<animation effect="zoom" start="120" end="100" center="auto" time="100">UnFocus</animation>
+				<visible>Player.HasMedia</visible>
+			</control>
+			
+			<control type="togglebutton" id="405">
+				<description>Play</description>
+				<height>52</height>
+				<width>52</width>
+				<texturefocus colordiffuse="FFACACAC">osd/play.png</texturefocus>
+				<texturenofocus>osd/play.png</texturenofocus>
+				<usealttexture>Player.Playing</usealttexture>
+				<alttexturefocus colordiffuse="FFACACAC">osd/pause.png</alttexturefocus>
+				<alttexturenofocus>osd/pause.png</alttexturenofocus>
+				<onclick>playercontrol(play)</onclick>
+				<animation effect="zoom" start="100" end="120" center="auto" time="100">Focus</animation>
+				<animation effect="zoom" start="120" end="100" center="auto" time="100">UnFocus</animation>
+				<visible>Player.HasMedia</visible>
+			</control>
+			
+			<control type="button" id="406">
+				<description>stop</description>
+				<height>52</height>
+				<width>52</width>
+				<aspectratio>keep</aspectratio>
+				<texturefocus colordiffuse="FFACACAC">osd/stop.png</texturefocus>
+				<texturenofocus>osd/stop.png</texturenofocus>
+				
+				<onclick>xbmc.playercontrol(stop)</onclick>
+				<animation effect="zoom" start="100" end="120" center="auto" time="100">Focus</animation>
+				<animation effect="zoom" start="120" end="100" center="auto" time="100">UnFocus</animation>
+				<visible>Player.HasMedia</visible>
+			</control>
+			
+			<control type="button" id="407">
+				<description>next</description>
+				<height>52</height>
+				<width>52</width>
+				<aspectratio>keep</aspectratio>
+				<texturefocus colordiffuse="FFACACAC">osd/skip.png</texturefocus>
+				<texturenofocus>osd/skip.png</texturenofocus>
+				
+				<onclick>xbmc.playercontrol(next)</onclick>
+				<animation effect="zoom" start="100" end="120" center="auto" time="100">Focus</animation>
+				<animation effect="zoom" start="120" end="100" center="auto" time="100">UnFocus</animation>
+				<visible>Player.HasMedia</visible>
+			</control>
+			
+			<control type="button" id="408">
+				<description>forward</description>
+				<height>52</height>
+				<width>52</width>
+				<aspectratio>keep</aspectratio>
+				<texturefocus colordiffuse="FFACACAC">osd/ff.png</texturefocus>
+				<texturenofocus>osd/ff.png</texturenofocus>
+				
+				<onclick>xbmc.playercontrol(forward)</onclick>
+				
+				<animation effect="zoom" start="100" end="120" center="auto" time="100">Focus</animation>
+				<animation effect="zoom" start="120" end="100" center="auto" time="100">UnFocus</animation>
+				<visible>Player.HasMedia</visible>
+			</control>
+			
+
+			
+			<control type="label">
+
+				<width>53</width>
+				<height>53</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<label>$INFO[ListItem.SortLetter]</label>
+				<textcolor>white</textcolor>
+				<font>scrolloffset</font>
+				<animation effect="slide" start="0,0" end="60,0" time="200" tween="quadratic" easing="out" condition="Window.Isvisible(musicplaylist) | Window.Isvisible(videoplaylist)">Conditional</animation>
+				<visible>Container.Scrolling</visible>
+			</control>
+			
+			<control type="image">
+				<width>52</width>
+				<height>52</height>
+				<texture>osd/audio.png</texture>
+				<visible>Window.IsVisible(volumebar)</visible>
+			</control>
+			
+		</control>
+	</include>
 	
 </includes>

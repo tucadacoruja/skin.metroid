@@ -5,16 +5,16 @@
 
 <coordinates>
   <system>1</system>
-  <posx>0</posx>
-  <posy>0</posy>
+  <left>0</left>
+  <top>0</top>
 </coordinates>
 
 <controls>
 
 	<control type="image">
 		<description>vignette</description>
-		<posx>0</posx>
-		<posy>0</posy>
+		<left>0</left>
+		<top>0</top>
 		<width>1280</width>
 		<height>720</height>
 		<texture>black.png</texture>
@@ -30,8 +30,8 @@
 				
 		<control type="image">
 			<description>background image</description>
-			<posx>335</posx>
-			<posy>125</posy>
+			<left>335</left>
+			<top>125</top>
 			<width>610</width>
 			<height>310</height>
 			<texture>MetroidMenu.png</texture>
@@ -41,8 +41,8 @@
 
 		<control type="image">
 			<description>line</description>
-			<posx>335</posx>
-			<posy>175</posy>
+			<left>335</left>
+			<top>175</top>
 			<width>610</width>
 			<height>4</height>
 			<texture flipy="true">white.png</texture>
@@ -52,8 +52,8 @@
   
 		<control type="label" id="1">
 			<description>Heading</description>
-			<posx>925</posx>
-			<posy>137</posy>
+			<left>315</left>
+			<top>137</top>
 			<label>$LOCALIZE[13406]</label>
 			<font>context</font>
 			<textcolor>blue</textcolor>
@@ -63,8 +63,8 @@
 	  
 		<control type="textbox" id="9">
 			<description>Line 1</description>
-			<posx>340</posx>
-			<posy>195</posy>
+			<left>340</left>
+			<top>195</top>
 			<label>-</label>
 			<font>list</font>
 			<textcolor>FFE1E1E1</textcolor>
@@ -76,8 +76,8 @@
 		 
 		<control type="button" id="10">
 			<description>OK Button</description>
-			<posx>555</posx>		
-			<posy>360</posy>
+			<left>555</left>		
+			<top>360</top>
 			<label>$LOCALIZE[186]</label>
 			<onup>11</onup>
 			<onleft>10</onleft>

@@ -10,8 +10,8 @@
 		
 			<control type="group">
 				<control type="image">
-					<posx>0</posx>
-					<posy>0</posy>
+					<left>0</left>
+					<top>0</top>
 					<width>1280</width>
 					<height>720</height>
 					<aspectratio>stretch</aspectratio>
@@ -20,8 +20,8 @@
 					
 				</control>
 				<control type="image">
-					<posx>0</posx>
-					<posy>72</posy>
+					<left>0</left>
+					<top>65</top>
 					<width>250</width>
 					<height>648</height>
 					<aspectratio>stretch</aspectratio>
@@ -30,10 +30,10 @@
 				</control>
 				
 				<control type="image">
-					<posx>235</posx>
-					<posy>72</posy>
+					<left>235</left>
+					<top>65</top>
 					<width>15</width>
-					<height>650</height>
+					<height>655</height>
 					<aspectratio>stretch</aspectratio>
 					<texture>shadowv.png</texture>
 					<animation effect="fade" start="0" end="70" time="0" condition="true">Conditional</animation>
@@ -57,8 +57,8 @@
 						<visible>!IsEmpty(Container(9000).ListItem.Property(movies))</visible>
 						<animation effect="fade" start="100" end="0" time="300" condition="Window.IsVisible(virtualkeyboard)">Conditional</animation>
 
-						<posx>300</posx>
-						<posy>110</posy>
+						<left>300</left>
+						<top>110</top>
 						<width>750</width>
 						<height>520</height>
 						<onleft>9000</onleft>
@@ -71,8 +71,8 @@
 						<scrolltime tween="Quadratic" easing="out">300</scrolltime>
 						<itemlayout width="560" height="44">
 							<control type="label">
-								<posx>40</posx>
-								<posy>5</posy>
+								<left>40</left>
+								<top>5</top>
 								<width>550</width>
 								<font>FontSize_22</font>
 								<textcolor>white</textcolor>
@@ -85,8 +85,8 @@
 						<focusedlayout width="560" height="44">
 							<control type="group">
 								<control type="image">
-									<posx>15</posx>
-									<posy>0</posy>
+									<left>15</left>
+									<top>0</top>
 									<width>710</width>
 									<height>44</height>
 									<aspectratio>stretch</aspectratio>
@@ -94,8 +94,8 @@
 									<visible>Control.HasFocus(111)</visible>
 								</control>
 								<control type="label">
-									<posx>40</posx>
-									<posy>5</posy>
+									<left>40</left>
+									<top>5</top>
 									<width>550</width>
 									<font>FontSize_22</font>
 									<textcolor>white</textcolor>
@@ -122,8 +122,8 @@
 						<visible>!IsEmpty(Container(9000).ListItem.Property(tvshows))</visible>
 						<animation effect="fade" start="100" end="0" time="300" condition="Window.IsVisible(virtualkeyboard)">Conditional</animation>
 
-						<posx>300</posx>
-						<posy>110</posy>
+						<left>300</left>
+						<top>110</top>
 						<width>750</width>
 						<height>520</height>
 						<onleft>9000</onleft>
@@ -136,8 +136,8 @@
 						<scrolltime tween="Quadratic" easing="out">300</scrolltime>
 						<itemlayout width="560" height="44">
 							<control type="label">
-								<posx>40</posx>
-								<posy>5</posy>
+								<left>40</left>
+								<top>5</top>
 								<width>550</width>
 								<font>FontSize_22</font>
 								<textcolor>white</textcolor>
@@ -150,8 +150,8 @@
 						<focusedlayout width="560" height="44">
 							<control type="group">
 								<control type="image">
-									<posx>15</posx>
-									<posy>0</posy>
+									<left>15</left>
+									<top>0</top>
 									<width>710</width>
 									<height>44</height>
 									<aspectratio>stretch</aspectratio>
@@ -159,8 +159,8 @@
 									<visible>Control.HasFocus(121)</visible>
 								</control>
 								<control type="label">
-									<posx>40</posx>
-									<posy>5</posy>
+									<left>40</left>
+									<top>5</top>
 									<width>550</width>
 									<font>FontSize_22</font>
 									<textcolor>white</textcolor>
@@ -201,8 +201,8 @@
 						<visible>!IsEmpty(Container(9000).ListItem.Property(episodes))</visible>
 						<animation effect="fade" start="100" end="0" time="300" condition="Window.IsVisible(virtualkeyboard)">Conditional</animation>
 		
-						<posx>300</posx>
-						<posy>110</posy>
+						<left>300</left>
+						<top>110</top>
 						<width>750</width>
 						<height>520</height>
 						<onleft>9000</onleft>
@@ -215,22 +215,22 @@
 						<scrolltime tween="Quadratic" easing="out">300</scrolltime>
 						<itemlayout width="560" height="44">
 							<control type="label">
-								<posx>40</posx>
-								<posy>5</posy>
+								<left>40</left>
+								<top>5</top>
 								<width>550</width>
 								<font>FontSize_22</font>
 								<textcolor>white</textcolor>
 								<shadowcolor>77000000</shadowcolor>
 								<align>left</align>
-								<label>$INFO[ListItem.Label]</label>
+								<label>$INFO[ListItem.Label] - $INFO[ListItem.Property(TvShowTitle)]</label>
 							</control>
 							
 						</itemlayout>
 						<focusedlayout width="560" height="44">
 							<control type="group">
 								<control type="image">
-									<posx>15</posx>
-									<posy>0</posy>
+									<left>15</left>
+									<top>0</top>
 									<width>710</width>
 									<height>44</height>
 									<aspectratio>stretch</aspectratio>
@@ -238,14 +238,14 @@
 									<visible>Control.HasFocus(141)</visible>
 								</control>
 								<control type="label">
-									<posx>40</posx>
-									<posy>5</posy>
+									<left>40</left>
+									<top>5</top>
 									<width>550</width>
 									<font>FontSize_22</font>
 									<textcolor>white</textcolor>
 									<shadowcolor>77000000</shadowcolor>
 									<align>left</align>
-									<label>$INFO[ListItem.Label]</label>
+									<label>$INFO[ListItem.Label] - $INFO[ListItem.Property(TvShowTitle)]</label>
 								</control>
 								
 							</control>
@@ -266,8 +266,8 @@
 						<visible>!IsEmpty(Container(9000).ListItem.Property(musicvideos))</visible>
 						<animation effect="fade" start="100" end="0" time="300" condition="Window.IsVisible(virtualkeyboard)">Conditional</animation>
 				   
-						<posx>300</posx>
-						<posy>110</posy>
+						<left>300</left>
+						<top>110</top>
 						<width>750</width>
 						<height>520</height>
 						<onleft>9000</onleft>
@@ -280,8 +280,8 @@
 						<scrolltime tween="Quadratic" easing="out">300</scrolltime>
 						<itemlayout width="560" height="44">
 							<control type="label">
-								<posx>40</posx>
-								<posy>5</posy>
+								<left>40</left>
+								<top>5</top>
 								<width>550</width>
 								<font>FontSize_22</font>
 								<textcolor>white</textcolor>
@@ -294,8 +294,8 @@
 						<focusedlayout width="560" height="44">
 							<control type="group">
 								<control type="image">
-									<posx>15</posx>
-									<posy>0</posy>
+									<left>15</left>
+									<top>0</top>
 									<width>710</width>
 									<height>44</height>
 									<aspectratio>stretch</aspectratio>
@@ -303,8 +303,8 @@
 									<visible>Control.HasFocus(151)</visible>
 								</control>
 								<control type="label">
-									<posx>40</posx>
-									<posy>5</posy>
+									<left>40</left>
+									<top>5</top>
 									<width>550</width>
 									<font>FontSize_22</font>
 									<textcolor>white</textcolor>
@@ -331,8 +331,8 @@
 						<visible>!IsEmpty(Container(9000).ListItem.Property(artists))</visible>
 						<animation effect="fade" start="100" end="0" time="300" condition="Window.IsVisible(virtualkeyboard)">Conditional</animation>
 				
-						<posx>300</posx>
-						<posy>110</posy>
+						<left>300</left>
+						<top>110</top>
 						<width>750</width>
 						<height>520</height>
 						<onleft>9000</onleft>
@@ -345,8 +345,8 @@
 						<scrolltime tween="Quadratic" easing="out">300</scrolltime>
 						<itemlayout width="560" height="44">
 							<control type="label">
-								<posx>40</posx>
-								<posy>5</posy>
+								<left>40</left>
+								<top>5</top>
 								<width>550</width>
 								<font>FontSize_22</font>
 								<textcolor>white</textcolor>
@@ -359,8 +359,8 @@
 						<focusedlayout width="560" height="44">
 							<control type="group">
 								<control type="image">
-									<posx>15</posx>
-									<posy>0</posy>
+									<left>15</left>
+									<top>0</top>
 									<width>710</width>
 									<height>44</height>
 									<aspectratio>stretch</aspectratio>
@@ -368,8 +368,8 @@
 									<visible>Control.HasFocus(161)</visible>
 								</control>
 								<control type="label">
-									<posx>40</posx>
-									<posy>5</posy>
+									<left>40</left>
+									<top>5</top>
 									<width>550</width>
 									<font>FontSize_22</font>
 									<textcolor>white</textcolor>
@@ -396,8 +396,8 @@
 						<visible>!IsEmpty(Container(9000).ListItem.Property(albums))</visible>
 						<animation effect="fade" start="100" end="0" time="300" condition="Window.IsVisible(virtualkeyboard)">Conditional</animation>
 				    
-						<posx>300</posx>
-						<posy>110</posy>
+						<left>300</left>
+						<top>110</top>
 						<width>750</width>
 						<height>520</height>
 						<onleft>9000</onleft>
@@ -410,22 +410,23 @@
 						<scrolltime tween="Quadratic" easing="out">300</scrolltime>
 						<itemlayout width="560" height="44">
 							<control type="label">
-								<posx>40</posx>
-								<posy>5</posy>
+								<left>40</left>
+								<top>5</top>
 								<width>550</width>
 								<font>FontSize_22</font>
 								<textcolor>white</textcolor>
 								<shadowcolor>77000000</shadowcolor>
 								<align>left</align>
-								<label>$INFO[ListItem.Label]</label>
+								<label>$INFO[ListItem.Label] - $INFO[ListItem.Property(Artist)]</label>
+								<scroll>false</scroll>
 							</control>
 							
 						</itemlayout>
 						<focusedlayout width="560" height="44">
 							<control type="group">
 								<control type="image">
-									<posx>15</posx>
-									<posy>0</posy>
+									<left>15</left>
+									<top>0</top>
 									<width>710</width>
 									<height>44</height>
 									<aspectratio>stretch</aspectratio>
@@ -433,14 +434,14 @@
 									<visible>Control.HasFocus(171)</visible>
 								</control>
 								<control type="label">
-									<posx>40</posx>
-									<posy>5</posy>
+									<left>40</left>
+									<top>5</top>
 									<width>550</width>
 									<font>FontSize_22</font>
 									<textcolor>white</textcolor>
 									<shadowcolor>77000000</shadowcolor>
 									<align>left</align>
-									<label>$INFO[ListItem.Label]</label>
+									<label>$INFO[ListItem.Label] - $INFO[ListItem.Property(Artist)]</label>
 								</control>
 								
 							</control>
@@ -461,8 +462,8 @@
 						<visible>!IsEmpty(Container(9000).ListItem.Property(songs))</visible>
 						<animation effect="fade" start="100" end="0" time="300" condition="Window.IsVisible(virtualkeyboard)">Conditional</animation>
 				    
-						<posx>300</posx>
-						<posy>110</posy>
+						<left>300</left>
+						<top>110</top>
 						<width>750</width>
 						<height>520</height>
 						<onleft>9000</onleft>
@@ -475,22 +476,23 @@
 						<scrolltime tween="Quadratic" easing="out">300</scrolltime>
 						<itemlayout width="560" height="44">
 							<control type="label">
-								<posx>40</posx>
-								<posy>5</posy>
+								<left>40</left>
+								<top>5</top>
 								<width>550</width>
 								<font>FontSize_22</font>
 								<textcolor>white</textcolor>
 								<shadowcolor>77000000</shadowcolor>
 								<align>left</align>
-								<label>$INFO[ListItem.Label]</label>
+								<label>$INFO[ListItem.Label] - $INFO[ListItem.Property(Artist)]</label>
+								<scroll>false</scroll>
 							</control>
 							
 						</itemlayout>
 						<focusedlayout width="560" height="44">
 							<control type="group">
 								<control type="image">
-									<posx>15</posx>
-									<posy>0</posy>
+									<left>15</left>
+									<top>0</top>
 									<width>710</width>
 									<height>44</height>
 									<aspectratio>stretch</aspectratio>
@@ -498,14 +500,14 @@
 									<visible>Control.HasFocus(181)</visible>
 								</control>
 								<control type="label">
-									<posx>40</posx>
-									<posy>5</posy>
+									<left>40</left>
+									<top>5</top>
 									<width>550</width>
 									<font>FontSize_22</font>
 									<textcolor>white</textcolor>
 									<shadowcolor>77000000</shadowcolor>
 									<align>left</align>
-									<label>$INFO[ListItem.Label]</label>
+									<label>$INFO[ListItem.Label] - $INFO[ListItem.Property(Artist)]</label>
 								</control>
 								
 							</control>
@@ -525,8 +527,8 @@
 		<control type="group">
 			
 			<control type="list" id="9000">
-				<posx>2</posx>
-				<posy>71</posy>
+				<left>2</left>
+				<top>65</top>
 				<width>250</width>
 				<height>648</height>
 				<onright condition="Control.IsVisible(111)">SetFocus(111)</onright>
@@ -546,8 +548,8 @@
 				<itemlayout height="50"  width="240">
 					
 					<control type="label">
-						<posx>25</posx>
-						<posy>-1</posy>
+						<left>25</left>
+						<top>-1</top>
 						<width>200</width>
 						<height>50</height>
 						<font>MainMenu21</font>
@@ -566,8 +568,8 @@
 					
 					<control type="image">
 						<description>list line image</description>
-						<posx>0</posx>
-						<posy>2</posy>
+						<left>0</left>
+						<top>2</top>
 						<width>247</width>
 						<height>50</height>
 						<aspectratio>stretch</aspectratio>
@@ -577,8 +579,20 @@
 					</control>
 					<control type="image">
 						<description>focussed image</description>
-						<posx>0</posx>
-						<posy>2</posy>
+						<left>0</left>
+						<top>2</top>
+						<width>10</width>
+						<height>50</height>
+						<aspectratio>stretch</aspectratio>
+						<texture>white.png</texture>
+						<animation effect="fade" start="0" end="40" time="0" condition="true">Conditional</animation>
+						<visible>!Control.HasFocus(9000)</visible>
+						
+					</control>
+					<control type="image">
+						<description>focussed image</description>
+						<left>0</left>
+						<top>2</top>
 						<width>10</width>
 						<height>50</height>
 						<aspectratio>stretch</aspectratio>
@@ -589,8 +603,8 @@
 						
 					</control>
 					<control type="label">
-						<posx>25</posx>
-						<posy>-1</posy>
+						<left>25</left>
+						<top>-1</top>
 						<width>200</width>
 						<height>50</height>
 						<font>MainMenu21</font>
@@ -603,8 +617,8 @@
 						
 					</control>
 					<control type="label">
-						<posx>25</posx>
-						<posy>-1</posy>
+						<left>25</left>
+						<top>-1</top>
 						<width>200</width>
 						<height>50</height>
 						<font>MainMenu21</font>
@@ -683,8 +697,8 @@
 
 			<control type="button" id="198">
 				<!--  Hide this Control and use the list to pass the label  -->
-				<posx>2000</posx>
-				<posy>2000</posy>
+				<left>2000</left>
+				<top>2000</top>
 				<onup>9000</onup>
 				<ondown>9000</ondown>
 				<onleft>101</onleft>
@@ -692,8 +706,8 @@
 			</control>
 			<control type="label" id="199">
 				<!--  Hide this Control and use the list to pass the label  -->
-				<posx>2000</posx>
-				<posy>2000</posy>
+				<left>2000</left>
+				<top>2000</top>
 				<width>0</width>
 				<height>0</height>
 				<label>-</label>

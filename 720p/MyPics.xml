@@ -8,50 +8,50 @@
 <controls>
  
 <control type="button" id="2">
-	<posx>-10</posx>
-	<posy>-10</posy>
+	<left>-10</left>
+	<top>-10</top>
 	<width>1</width>
 	<height>1</height>
 	<animation effect="fade" start="1" end="0" time="0" condition="true">Conditional</animation>
 </control>
 <control type="button" id="3">
-	<posx>-10</posx>
-	<posy>-10</posy>
+	<left>-10</left>
+	<top>-10</top>
 	<width>1</width>
 	<height>1</height>
 	<animation effect="fade" start="1" end="0" time="0" condition="true">Conditional</animation>
 </control>
 <control type="togglebutton" id="4">
-	<posx>-10</posx>
-	<posy>-10</posy>
+	<left>-10</left>
+	<top>-10</top>
 	<width>1</width>
 	<height>1</height>
 	<animation effect="fade" start="1" end="0" time="0" condition="true">Conditional</animation>
 </control>
 <control type="button" id="6">
-	<posx>-10</posx>
-	<posy>-10</posy>
+	<left>-10</left>
+	<top>-10</top>
 	<width>1</width>
 	<height>1</height>
 	<animation effect="fade" start="1" end="0" time="0" condition="true">Conditional</animation>
 </control>
 <control type="button" id="7">
-	<posx>-10</posx>
-	<posy>-10</posy>
+	<left>-10</left>
+	<top>-10</top>
 	<width>1</width>
 	<height>1</height>
 	<animation effect="fade" start="1" end="0" time="0" condition="true">Conditional</animation>
 </control>
 <control type="radiobutton" id="9">
-	<posx>-10</posx>
-	<posy>-10</posy>
+	<left>-10</left>
+	<top>-10</top>
 	<width>1</width>
 	<height>1</height>
 	<animation effect="fade" start="1" end="0" time="0" condition="true">Conditional</animation>
 </control>
 <control type="label" id="12">
-	<posx>-10</posx>
-	<posy>-10</posy>
+	<left>-10</left>
+	<top>-10</top>
 	<width>1</width>
 	<height>1</height>
 	<animation effect="fade" start="1" end="0" time="0" condition="true">Conditional</animation>
@@ -64,8 +64,8 @@
 <control type="group">
 	<animation effect="slide" start="0,0" end="-250,0" time="400" condition="!Control.HasFocus(301) + !Skin.HasSetting(LockMainMenu)">Conditional</animation>
 	<control type="multiimage">
-		<posx>250</posx>
-		<posy>0</posy>
+		<left>250</left>
+		<top>0</top>
 		<width>1280</width>
 		<height>720</height>
 		<aspectratio>stretch</aspectratio>
@@ -79,8 +79,8 @@
 		<visible>!Player.HasVideo + IsEmpty(ListItem.Art(thumb)) + !Skin.HasSetting(BackgroundSlideshow)</visible>
 	</control>
 	<control type="image">
-		<posx>250</posx>
-		<posy>0</posy>
+		<left>250</left>
+		<top>0</top>
 		<width>1280</width>
 		<height>720</height>
 		<aspectratio>scale</aspectratio>
@@ -91,8 +91,8 @@
 		
 	</control>
 	<control type="image">
-		<posx>250</posx>
-		<posy>0</posy>
+		<left>250</left>
+		<top>0</top>
 		<width>1280</width>
 		<height>720</height>
 		<aspectratio>stretch</aspectratio>
@@ -109,8 +109,8 @@
 		<animation effect="fade" start="100" end="75" time="0" condition="Stringcompare(Skin.String(BackgroundPercentage),75) + !Player.HasMedia">Conditional</animation>
 	</control>
 	<control type="image">
-		<posx>235</posx>
-		<posy>72</posy>
+		<left>235</left>
+		<top>72</top>
 		<width>15</width>
 		<height>650</height>
 		<aspectratio>stretch</aspectratio>

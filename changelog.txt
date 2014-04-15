@@ -1,3 +1,8 @@
+[B]0.1.7[/B]
+- Change to <left> positioning
+- Posterview made into fixedlist
+- Playercontrols and indicators moved to include
+
 [B]0.1.5[/B]
 - Font change to Weblysleek
 

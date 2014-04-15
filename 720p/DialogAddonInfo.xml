@@ -4,15 +4,15 @@
 	
 	<coordinates>
 	  <system>1</system>
-	  <posx>0</posx>
-	  <posy>0</posy>
+	  <left>0</left>
+	  <top>0</top>
 	</coordinates>
 
 <controls>
 
 	<control type="button">
-		<posx>0</posx>
-		<posy>0</posy>
+		<left>0</left>
+		<top>0</top>
 		<width>280</width>
 		<height>720</height>
 		<description>Invisible back button</description>
@@ -24,8 +24,8 @@
 		<animation effect="fade" start="1" end="1" time="0" condition="true">Conditional</animation>
 	</control>
 	<control type="button" id="50">
-		<posx>1</posx>
-		<posy>1</posy>
+		<left>1</left>
+		<top>1</top>
 		<width>1</width>
 		<height>1</height>
 		<description>nav help</description>
@@ -33,8 +33,8 @@
 		<onfocus>SetFocus(9000)</onfocus>
 	</control>
 	<control type="group">
-		<posy>10</posy>
-		<posx>180</posx>
+		<top>10</top>
+		<left>180</left>
         <animation effect="slide" start="1100,0" end="0,0" time="450" delay="0" reversible="false">WindowOpen</animation>
         <animation effect="slide" start="0,0" end="1100,0" time="450" delay="0" reversible="false">WindowClose</animation>
 		<include>Changes</include>
@@ -43,8 +43,8 @@
 			
 			<control type="label" id="20">
 				<description>Addon Title value</description>
-				<posx>150</posx>
-				<posy>110</posy>
+				<left>150</left>
+				<top>110</top>
 				<width>870</width>
 				<font>Segoe28</font>
 				<label>$INFO[ListItem.Property(Addon.Name)]</label>
@@ -53,14 +53,14 @@
 			</control>
 			
 			<control type="group">
-				<posx>360</posx>
-				<posy>175</posy>
+				<left>360</left>
+				<top>175</top>
 				<width>380</width>
 				<height>500</height>
 						
 				<control type="image">
-					<posx>0</posx>
-					<posy>0</posy>
+					<left>0</left>
+					<top>0</top>
 					<width>220</width>
 					<height>170</height>
 					<info>ListItem.Icon</info>
@@ -68,8 +68,8 @@
 				</control>
 				
 				<control type="image">
-					<posx>0</posx>
-					<posy>0</posy>
+					<left>0</left>
+					<top>0</top>
 					<width>220</width>
 					<height>557</height>
 					<texture background="true">white.png</texture>
@@ -79,8 +79,8 @@
 			</control>
 
 			<control type="grouplist">
-				<posx>380</posx>
-				<posy>360</posy>
+				<left>380</left>
+				<top>360</top>
 				<width>500</width>
 				<height>500</height>	
 				<align>left</align>
@@ -88,8 +88,8 @@
 
 				<control type="label">
 					<description>author</description>
-					<posx>0</posx>
-					<posy>0</posy>
+					<left>0</left>
+					<top>0</top>
 					<width min="29" max="170">auto</width>
 					<height>25</height>	
 					<font>font12</font>
@@ -102,8 +102,8 @@
 			
 				<control type="textbox">
 					<description>Creator</description>
-					<posx>0</posx>
-					<posy>0</posy>
+					<left>0</left>
+					<top>0</top>
 					<width>170</width>
 					<height>60</height>	
 					<font>font14</font>
@@ -116,8 +116,8 @@
 				
 				<control type="label">
 					<description>version</description>
-					<posx>0</posx>
-					<posy>0</posy>
+					<left>0</left>
+					<top>0</top>
 					<width min="29" max="600">auto</width>
 					<height>25</height>	
 					<font>font12</font>
@@ -130,8 +130,8 @@
 
 				<control type="label">
 					<description>version number</description>
-					<posx>0</posx>
-					<posy>0</posy>
+					<left>0</left>
+					<top>0</top>
 					<width min="29" max="600">auto</width>
 					<height>30</height>	
 					<font>font14</font>
@@ -147,8 +147,8 @@
 			<!-- Buttons -->
   
 			<control type="grouplist" id="9000">
-				<posx>145</posx>
-				<posy>175</posy>
+				<left>145</left>
+				<top>175</top>
 				<width>300</width>
 				<height>500</height>
 				<itemgap>4</itemgap>
@@ -399,13 +399,13 @@
 
 
 			<control type="group">
-				<posx>620</posx>
-				<posy>170</posy>
+				<left>620</left>
+				<top>170</top>
 		
 				<control type="textbox" id="400">
 					<description>Description</description>
-					<posx>0</posx>
-					<posy>0</posy>
+					<left>0</left>
+					<top>0</top>
 					<width>350</width>
 					<height>240</height>
 					<font>plot</font>
@@ -418,8 +418,8 @@
 
 				<control type="label">
 					<description>header label</description>
-					<posx>0</posx>
-					<posy>250</posy>
+					<left>0</left>
+					<top>250</top>
 					<width>970</width>
 					<height>30</height>
 					<font>plot</font>
@@ -431,8 +431,8 @@
 				</control>
 				<control type="textbox">
 					<description>Reason label</description>
-					<posx>0</posx>
-					<posy>290</posy>
+					<left>0</left>
+					<top>290</top>
 					<width>800</width>
 					<height>58</height>
 					<font>plot</font>
@@ -446,8 +446,8 @@
 				
 				<control type="textbox">
 					<description>Disclaimer</description>
-					<posx>150</posx>
-					<posy>650</posy>
+					<left>150</left>
+					<top>650</top>
 					<width>870</width>
 					<height>30</height>
 					<font>plot</font>

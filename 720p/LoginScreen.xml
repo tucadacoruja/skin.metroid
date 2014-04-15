@@ -6,15 +6,15 @@
 <controls>
 
 	<control type="label" id="2">
-		<posx>-10</posx>
-		<posy>-10</posy>
+		<left>-10</left>
+		<top>-10</top>
 		<width>1</width>
 		<height>1</height>
 		<animation effect="fade" start="1" end="0" time="0" condition="true">Conditional</animation>
 	</control>
 	<control type="label" id="3">
-		<posx>-10</posx>
-		<posy>-10</posy>
+		<left>-10</left>
+		<top>-10</top>
 		<width>1</width>
 		<height>1</height>
 		<animation effect="fade" start="1" end="0" time="0" condition="true">Conditional</animation>
@@ -22,8 +22,8 @@
 	
 	
   	<control type="image">
-		<posx>0</posx>
-		<posy>0</posy>
+		<left>0</left>
+		<top>0</top>
 		<width>1280</width>
 		<height>720</height>
 		<aspectratio>stretch</aspectratio>
@@ -37,8 +37,8 @@
 	</animation>
 	<control type="image">
 		<description>logo</description>
-		<posx>450</posx>
-		<posy>65</posy>
+		<left>450</left>
+		<top>65</top>
 		<width>380</width>
 		<height>400</height>
 		<aspectratio>keep</aspectratio>
@@ -48,8 +48,8 @@
 		<animation effect="rotatey" end="360" center="640,360" time="60000" loop="true" condition="true">Conditional</animation>
 	</control>
 	<control type="label">
-		<posx>0</posx>
-		<posy>670</posy>
+		<left>0</left>
+		<top>670</top>
 		<width>1280</width>
 		<height>35</height>
 		<font>LoginSmall</font>
@@ -75,8 +75,8 @@
 			 
 			<control type="list" id="52">
 				<description>Login Wraplist</description>
-				<posx>450</posx>
-				<posy>465</posy>
+				<left>450</left>
+				<top>465</top>
 				<width>380</width>
 				<height>147</height>
 				<onup>52</onup>
@@ -90,8 +90,8 @@
 				
 				<itemlayout height="45" width="380">
 					<control type="label">
-						<posx>190</posx>
-						<posy>0</posy>
+						<left>190</left>
+						<top>0</top>
 						<width>380</width>
 						<height>45</height>
 						<font>LoginList</font>
@@ -102,7 +102,7 @@
 				</itemlayout>
 				<focusedlayout height="45" width="380">
 					<control type="image">
-						<posy>42</posy>
+						<top>42</top>
 						<width>380</width>
 						<height>3</height>
 						<aspectratio>stretch</aspectratio>
@@ -110,7 +110,7 @@
 						<animation effect="fade" start="0" end="30" time="0" condition="true">Conditional</animation>
 					</control>	
 					<control type="label">
-						<posx>190</posx>
+						<left>190</left>
 						<width>380</width>
 						<height>45</height>
 						<font>LoginList</font>

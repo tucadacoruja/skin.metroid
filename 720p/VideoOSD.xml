@@ -7,15 +7,15 @@
 	
 	
 	<control type="group">
-		<posx>1390</posx>
-		<posy>350</posy>
+		<left>1390</left>
+		<top>350</top>
 		<visible>system.getbool(input.enablemouse) + Skin.HasSetting(HideVolumeBar)</visible>
 		<visible>![Window.IsActive(142) | Window.IsActive(10140) | Window.IsActive(osdvideosettings) | Window.IsActive(osdaudiosettings) | Window.IsVisible(PVROSDChannels)]</visible>
 		<animation effect="rotate" end="90" center="auto" time="0" reversible="false" condition="true">Conditional</animation>
 		
 			<control type="image">
-				<posx>5</posx>
-				<posy>24</posy>
+				<left>5</left>
+				<top>24</top>
 				<width>380</width>
 				<height>8</height>
 				<texture>white.png</texture>
@@ -24,8 +24,8 @@
 			</control>
 			<control type="progress" id="2">
 				<description>Volume</description>
-				<posx>5</posx>
-				<posy>23</posy>
+				<left>5</left>
+				<top>23</top>
 				<width>380</width>
 				<height>4</height>
 				<info>Player.Volume</info>
@@ -37,8 +37,8 @@
 			</control>
 			<control type="slider">
 				<description>Volume Slider</description>
-				<posx>0</posx>
-				<posy>0</posy>
+				<left>0</left>
+				<top>0</top>
 				<width>380</width>
 				<height>60</height>
 				<info>Player.Volume</info>
@@ -50,8 +50,8 @@
 			</control>
 			<control type="slider" id="1">
 				<description>Volume Slider</description>
-				<posx>0</posx>
-				<posy>17</posy>
+				<left>0</left>
+				<top>17</top>
 				<width>390</width>
 				<height>4</height>
 				<info>Player.Volume</info>
@@ -64,8 +64,8 @@
 	</control>
 			
 		<control type="group">
-			<posx>0</posx>
-			<posy>630</posy>
+			<left>0</left>
+			<top>630</top>
 			<visible>![Window.IsActive(142) | Window.IsActive(10140) | Window.IsActive(osdvideosettings) | Window.IsActive(osdaudiosettings) | Window.IsVisible(PVROSDChannels)]</visible>
 		
 			<decscription>bottom bar</decscription>
@@ -86,16 +86,16 @@
 				<effect type="slide" time="200" start="0,0" end="0,150" easing="in" tween="cubic" />
 			</animation>
 			<control type="image">
-				<posx>0</posx>
-				<posy>-100</posy>
+				<left>0</left>
+				<top>-100</top>
 				<width>1280</width>
 				<height>200</height>
 				<texture>shadow.png</texture>
 				<aspectratio>stretch</aspectratio>
 			</control>
 			<control type="image">
-				<posx>323</posx>
-				<posy>49</posy>
+				<left>323</left>
+				<top>49</top>
 				<width>633</width>
 				<height>8</height>
 				<texture>white.png</texture>
@@ -103,8 +103,8 @@
 				<animation effect="fade" start="0" end="5" time="0" condition="true">Conditional</animation>
 			</control>
 			<control type="progress" id="21">
-				<posx>323</posx>
-				<posy>49</posy>
+				<left>323</left>
+				<top>49</top>
 				<width>633</width>
 				<height>6</height>
 				<texturebg>osd/seek/progresscache_back.png</texturebg>
@@ -115,8 +115,8 @@
 				<animation effect="fade" start="0" end="14" time="0" condition="true">Conditional</animation>
 			</control>
 			<control type="progress" id="20">
-				<posx>323</posx>
-				<posy>48</posy>
+				<left>323</left>
+				<top>48</top>
 				<width>633</width>
 				<height>4</height>
 				<texturebg>osd/seek/progresscache_back.png</texturebg>
@@ -131,8 +131,8 @@
 			
 			<control type="slider" id="87">
 				<description>Seek Slider</description>
-				<posx>318</posx>
-				<posy>7</posy>
+				<left>318</left>
+				<top>7</top>
 				<width>643</width>
 				<height>80</height>
 				<onup>1</onup>
@@ -145,8 +145,8 @@
 			</control>
 			<control type="slider" id="88">
 				<description>Seek Slider</description>
-				<posx>319</posx>
-				<posy>42</posy>
+				<left>319</left>
+				<top>42</top>
 				<width>643</width>
 				<height>4</height>
 				<onup>9000</onup>
@@ -162,8 +162,8 @@
 			
 			
 			<control type="label">
-				<posx>205</posx>
-				<posy>30</posy>
+				<left>205</left>
+				<top>30</top>
 				<width>300</width>
 				<height>42</height>
 				<font>OSDTiming</font>
@@ -173,8 +173,8 @@
 				
 			</control>
 			<control type="label">
-				<posx>1065</posx>
-				<posy>30</posy>
+				<left>765</left>
+				<top>30</top>
 				<width>300</width>
 				<height>42</height>
 				<font>OSDTiming</font>
@@ -186,8 +186,8 @@
 			
 			
 			<control type="label" id="5334">
-				<posx>20</posx>
-				<posy>30</posy>
+				<left>20</left>
+				<top>30</top>
 				<height>42</height>
 				<width min="5" max="250">auto</width>
 				<label>[B]$LOCALIZE[31175] $INFO[Player.SeekOffset][/B]</label>
@@ -202,12 +202,12 @@
 			<control type="group">
 				<!--  REWIND  -->
 				<control type="group">
-                    <posx>1050</posx>
-					<posy>30</posy>
+                    <left>1050</left>
+					<top>30</top>
 					
 					<control type="label">
-						<posx>0</posx>
-						<posy>0</posy>
+						<left>0</left>
+						<top>0</top>
 						<height>42</height>
 						<width>300</width>
 						<label>[B][UPPERCASE]REW 2x[/UPPERCASE][/B]</label>
@@ -218,8 +218,8 @@
 					</control>
 				
 					<control type="label">
-						<posx>0</posx>
-						<posy>0</posy>
+						<left>0</left>
+						<top>0</top>
 						<height>42</height>
 						<width>300</width>
 						<label>[B][UPPERCASE]REW 4x[/UPPERCASE][/B]</label>
@@ -230,8 +230,8 @@
 					</control>
 				
 					<control type="label">
-						<posx>0</posx>
-						<posy>0</posy>
+						<left>0</left>
+						<top>0</top>
 						<height>42</height>
 						<width>300</width>
 						<label>[B][UPPERCASE]REW 8x[/UPPERCASE][/B]</label>
@@ -242,8 +242,8 @@
 					</control>
 				
 					<control type="label">
-						<posx>0</posx>
-						<posy>0</posy>
+						<left>0</left>
+						<top>0</top>
 						<height>42</height>
 						<width>300</width>
 						<label>[B][UPPERCASE]REW 16x[/UPPERCASE][/B]</label>
@@ -254,8 +254,8 @@
 					</control>
 				
 					<control type="label">
-						<posx>0</posx>
-						<posy>0</posy>
+						<left>0</left>
+						<top>0</top>
 						<height>42</height>
 						<width>300</width>
 						<label>[B][UPPERCASE]REW 32x[/UPPERCASE][/B]</label>
@@ -268,11 +268,11 @@
 
 				<!--  FORWARD  -->
 				<control type="group">
-					<posx>1050</posx>
-					<posy>30</posy>
+					<left>1050</left>
+					<top>30</top>
 					<control type="label">
-						<posx>0</posx>
-						<posy>0</posy>
+						<left>0</left>
+						<top>0</top>
 						<height>42</height>
 						<width>300</width>
 						<label>[B][UPPERCASE]FF 2x[/UPPERCASE][/B]</label>
@@ -283,8 +283,8 @@
 					</control>
 				
 					<control type="label">
-						<posx>0</posx>
-						<posy>0</posy>
+						<left>0</left>
+						<top>0</top>
 						<height>42</height>
 						<width>300</width>
 						<label>[B][UPPERCASE]FF 4x[/UPPERCASE][/B]</label>
@@ -295,8 +295,8 @@
 					</control>
 				
 					<control type="label">
-						<posx>0</posx>
-						<posy>0</posy>
+						<left>0</left>
+						<top>0</top>
 						<height>42</height>
 						<width>300</width>
 						<label>[B][UPPERCASE]FF 8x[/UPPERCASE][/B]</label>
@@ -307,8 +307,8 @@
 					</control>
 				
 					<control type="label">
-						<posx>0</posx>
-						<posy>0</posy>
+						<left>0</left>
+						<top>0</top>
 						<height>42</height>
 						<width>300</width>
 						<label>[B][UPPERCASE]FF 16x[/UPPERCASE][/B]</label>
@@ -319,8 +319,8 @@
 					</control>
 				
 					<control type="label">
-						<posx>0</posx>
-						<posy>0</posy>
+						<left>0</left>
+						<top>0</top>
 						<height>42</height>
 						<width>300</width>
 						<label>[B][UPPERCASE]FF 32x[/UPPERCASE][/B]</label>
@@ -336,8 +336,8 @@
 	
 		<control type="grouplist">
 			
-			<posx>0</posx>
-			<posy>10</posy>
+			<left>0</left>
+			<top>10</top>
 			<width>1280</width>
 			<height>200</height>
 			<align>center</align>
@@ -478,8 +478,8 @@
 		
 		<control type="grouplist" id="9000">
 			
-			<posx>0</posx>
-			<posy>10</posy>
+			<left>0</left>
+			<top>10</top>
 			<width>1280</width>
 			<height>200</height>
 			<align>center</align>

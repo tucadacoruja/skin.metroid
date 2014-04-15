@@ -7,15 +7,15 @@
 <controls>
 
 <control type="label" id="2">
-	<posx>-10</posx>
-	<posy>-10</posy>
+	<left>-10</left>
+	<top>-10</top>
 	<width>1</width>
 	<height>1</height>
 	<animation effect="fade" start="1" end="0" time="0" condition="true">Conditional</animation>
 </control>
 <control type="image" id="11">
-	<posx>-10</posx>
-	<posy>-10</posy>
+	<left>-10</left>
+	<top>-10</top>
 	<width>1</width>
 	<height>1</height>
 	<animation effect="fade" start="1" end="0" time="0" condition="true">Conditional</animation>
@@ -26,24 +26,24 @@
 <include>GeneralFanart</include>
 	
 	<control type="button" id="50">
-		<posx>10</posx>
-		<posy>10</posy>
+		<left>10</left>
+		<top>10</top>
 		<width>1</width>
 		<height>1</height>
 		<texture>black.png</texture>
 		<onfocus>SetFocus(3)</onfocus>
 	</control>
 	<control type="button" id="300">
-		<posx>10</posx>
-		<posy>10</posy>
+		<left>10</left>
+		<top>10</top>
 		<width>1</width>
 		<height>1</height>
 		<texture>black.png</texture>
 		<onfocus>SetFocus(3)</onfocus>
 	</control>
 	<control type="image">
-		<posx>0</posx>
-		<posy>64</posy>
+		<left>0</left>
+		<top>64</top>
 		<width>250</width>
 		<height>660</height>
 		<aspectratio>stretch</aspectratio>
@@ -51,8 +51,8 @@
 		
 	</control>
 	<control type="image">
-		<posx>235</posx>
-		<posy>65</posy>
+		<left>235</left>
+		<top>65</top>
 		<width>15</width>
 		<height>660</height>
 		<aspectratio>stretch</aspectratio>
@@ -68,8 +68,8 @@
 			
 	<control type="grouplist" id="3">
 		<description>Button Area</description>
-		<posx>2</posx>
-		<posy>65</posy>
+		<left>2</left>
+		<top>65</top>
 		<width>300</width>
 		<height>570</height>
 		<itemgap>0</itemgap>
@@ -83,7 +83,7 @@
 	
 
 	<control type="group">
-	<posy>0</posy>
+	<top>0</top>
 		<animation type="Conditional" condition="Window.IsVisible(filebrowser) | Window.IsVisible(addonsettings) | Window.IsVisible(selectdialog) | Window.IsVisible(peripherals)">
 			<effect type="fade" start="100" end="0" time="200" />
 		</animation>
@@ -92,8 +92,8 @@
 		</animation> 
 		
 		<control type="textbox" id="6">
-			<posx>388</posx>
-			<posy>620</posy>
+			<left>388</left>
+			<top>620</top>
 			<width>760</width>
 			<height>60</height>
 			<align>justify</align>
@@ -106,8 +106,8 @@
 	
 		<control type="grouplist" id="5">
 			<description>Control Area</description>
-			<posx>355</posx>
-			<posy>130</posy>
+			<left>355</left>
+			<top>130</top>
 			<width>810</width>
 			<height>440</height>
 			<itemgap>.5</itemgap>
@@ -144,7 +144,7 @@
 			<texturefocus>setting.png</texturefocus>
 			<texturenofocus>-</texturenofocus>
 			<textoffsetx>20</textoffsetx>
-			<radioposx>743</radioposx>
+			<radioleft>743</radioleft>
 			<align>left</align>
 		</control>
 		
@@ -194,8 +194,8 @@
 		
 		<control type="button" id="444">
 		
-			<posx>1</posx>
-			<posy>566</posy>
+			<left>1</left>
+			<top>566</top>
 			<description>Back Button</description>
 			<height>50</height>
 			<width>247</width>
@@ -214,8 +214,8 @@
 		</control>
 		<control type="button" id="20">
 		
-			<posx>1</posx>
-			<posy>616</posy>
+			<left>1</left>
+			<top>616</top>
 			<description>Settings Level Button</description>
 			<height>50</height>
 			<width>247</width>
@@ -242,8 +242,8 @@
 		<textureslidernibfocus>buttons/scrollnibV.png</textureslidernibfocus>
 		<orientation>Vertical</orientation>
 		<showonepage>true</showonepage>
-		<posx>325</posx>
-		<posy>133</posy>
+		<left>325</left>
+		<top>133</top>
 		<width>10</width>
 		<height>450</height>
 		<onleft>3</onleft>

@@ -4,8 +4,8 @@
 	<allowoverlay>no</allowoverlay>
 	<coordinates>
 		<system>1</system>
-		<posx>370</posx>
-		<posy>190</posy>
+		<left>370</left>
+		<top>190</top>
 	</coordinates>
 	
 <controls>
@@ -16,8 +16,8 @@
 		
 		<control type="image">
 			<description>back white</description>
-			<posx>12</posx>
-			<posy>96</posy>
+			<left>12</left>
+			<top>96</top>
 			<width>776</width>
 			<height>100</height>
 			<texture>white.png</texture>
@@ -26,8 +26,8 @@
 		</control>
 		<control type="image">
 			<description>background image</description>
-			<posx>-15</posx>
-			<posy>-10</posy>
+			<left>-15</left>
+			<top>-10</top>
 			<width>830</width>
 			<height>290</height>
 			<texture border="62">dialog/contentbg2.png</texture>
@@ -36,8 +36,8 @@
 		</control>
 		<control type="label">
 			<description>header label</description>
-			<posx>20</posx>
-			<posy>18</posy>
+			<left>20</left>
+			<top>18</top>
 			<width>760</width>
 			<height>30</height>
 			<font>heading</font>
@@ -48,8 +48,8 @@
 		</control>
 		<control type="label">
 			<description>Rule match label</description>
-			<posx>40</posx>
-			<posy>60</posy>
+			<left>40</left>
+			<top>60</top>
 			<width>720</width>
 			<height>35</height>
 			<align>left</align>
@@ -61,8 +61,8 @@
 		<control type="group" id="9001">
 			<control type="spincontrolex" id="15">
 				<description>Rule Field</description>
-				<posx>20</posx>
-				<posy>100</posy>
+				<left>20</left>
+				<top>100</top>
 				<width>375</width>
 				<height>40</height>
 				<font>-</font>
@@ -75,8 +75,8 @@
 			</control>
 			<control type="label">
 				<description>Rule Field label</description>
-				<posx>25</posx>
-				<posy>100</posy>
+				<left>25</left>
+				<top>100</top>
 				<width>300</width>
 				<height>40</height>
 				<font>about</font>
@@ -87,8 +87,8 @@
 			</control>
 			<control type="spincontrolex" id="16">
 				<description>Rule operator</description>
-				<posx>405</posx>
-				<posy>100</posy>
+				<left>405</left>
+				<top>100</top>
 				<width>375</width>
 				<height>40</height>
 				<font>-</font>
@@ -101,8 +101,8 @@
 			</control>
 			<control type="label">
 				<description>Rule Field label</description>
-				<posx>410</posx>
-				<posy>100</posy>
+				<left>410</left>
+				<top>100</top>
 				<width>300</width>
 				<height>40</height>
 				<font>about</font>
@@ -114,8 +114,8 @@
 		</control>
 		<control type="button" id="17">
 			<description>Value Button</description>
-			<posx>20</posx>
-			<posy>143</posy>
+			<left>20</left>
+			<top>143</top>
 			<width>585</width>
 			<height>46</height>
 			<font>font13</font>
@@ -133,8 +133,8 @@
 		</control>
 		<control type="button" id="20">
 			<description>Browse Button</description>
-			<posx>611</posx>
-			<posy>147</posy>
+			<left>611</left>
+			<top>147</top>
 			<width>165</width>
 			<height>38</height>
 			<align>center</align>
@@ -154,8 +154,8 @@
 		<control type="group" id="9000">
 			<control type="button" id="18">
 				<description>Ok Button</description>
-				<posx>210</posx>
-				<posy>203</posy>
+				<left>210</left>
+				<top>203</top>
 				<label>$LOCALIZE[186]</label>
 				<onup>17</onup>
 				<onleft>19</onleft>
@@ -166,8 +166,8 @@
 			</control>
 			<control type="button" id="19">
 				<description>Cancel Button</description>
-				<posx>425</posx>
-				<posy>203</posy>
+				<left>425</left>
+				<top>203</top>
 				<label>$LOCALIZE[222]</label>
 				<onup>17</onup>
 				<onleft>18</onleft>

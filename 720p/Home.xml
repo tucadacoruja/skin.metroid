@@ -14,22 +14,22 @@
 <onload condition="IsEmpty(Skin.String(DarknessPercentage))">Skin.SetString(DarknessPercentage,60)</onload>
 <onload condition="IsEmpty(Skin.String(BackgroundDarkness))">Skin.SetString(BackgroundDarkness,FFFFFFFF)</onload>
 
-<onload condition="IsEmpty(Skin.String(FirstRunTouch))">ActivateWindow(9506)</onload>
-
 <onload condition="Window.Previous(startup)">AlarmClock(WidgetDelay,Skin.Reset(WidgetVisibility),00:02,silent)</onload>
+
+<onload condition="IsEmpty(Skin.String(FirstRunTouch))">ActivateWindow(9506)</onload>
 
 <allowoverlay>yes</allowoverlay>
 	<coordinates>
 		<system>1</system>
-		<posx>0</posx>
-		<posy>0</posy>
+		<left>0</left>
+		<top>0</top>
 	</coordinates>
 
 <controls>
 
 <control type="button" id="50">
-	<posx>0</posx>
-	<posy>0</posy>
+	<left>0</left>
+	<top>0</top>
 	<width>1</width>
 	<height>1</height>
 	<description>hack</description>
@@ -41,8 +41,8 @@
 
 <include>MainMenu</include>
 <control type="image">
-	<posx>235</posx>
-	<posy>65</posy>
+	<left>235</left>
+	<top>65</top>
 	<width>15</width>
 	<height>660</height>
 	<aspectratio>stretch</aspectratio>
@@ -52,8 +52,8 @@
 
 
 <control type="grouplist" id="4000">
-<posy>98</posy>
-<posx>186</posx>
+<top>98</top>
+<left>186</left>
 <width>1130</width>
 <height>607</height>
 <orientation>vertical</orientation>
@@ -89,8 +89,8 @@
 	<textureslidernibfocus>buttons/scrollnibV.png</textureslidernibfocus>
 	<orientation>Vertical</orientation>
 	<showonepage>true</showonepage>
-	<posx>325</posx>
-	<posy>118</posy>
+	<left>325</left>
+	<top>118</top>
 	<width>10</width>
 	<height>560</height>
 	<onleft>300</onleft>
@@ -104,8 +104,8 @@
 
 
 <control type="image">
-	<posx>0</posx>
-	<posy>0</posy>
+	<left>0</left>
+	<top>0</top>
 	<width>1280</width>
 	<height>62</height>
 	<aspectratio>stretch</aspectratio>
@@ -113,8 +113,8 @@
 	<colordiffuse>white</colordiffuse>
 </control>
 <!--control type="image">
-	<posx>0</posx>
-	<posy>0</posy>
+	<left>0</left>
+	<top>0</top>
 	<width>1280</width>
 	<height>65</height>
 	<aspectratio>stretch</aspectratio>
@@ -122,15 +122,15 @@
 	<animation effect="fade" start="0" end="30" time="0" reversible="false" condition="true">Conditional</animation>
 </control-->
 <control type="image">
-	<posx>0</posx>
-	<posy>62</posy>
+	<left>0</left>
+	<top>62</top>
 	<width>1285</width>
 	<height>5</height>
 	<aspectratio>stretch</aspectratio>
 	<texture flipy="true">BackMenu.png</texture>
 </control>
 <include>BottomInfoBar</include>
-<include>ScrollOffsetLabel</include>
+ 
 
 <include>Holiday</include>
  

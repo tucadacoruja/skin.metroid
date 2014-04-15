@@ -3,16 +3,16 @@
 	<defaultcontrol always="true">1</defaultcontrol>
 	<coordinates>
 		<system>1</system>
-		<posx>0</posx>
-		<posy>0</posy>
+		<left>0</left>
+		<top>0</top>
 	</coordinates>
 
 	
 <controls>
 	
 	<control type="grouplist">
-			<posx>10</posx>
-			<posy>5</posy>
+			<left>10</left>
+			<top>5</top>
 			<width>500</width>
 			<height>100</height>
 			<align>left</align>
@@ -55,8 +55,8 @@
 	</control>		
 	<control type="grouplist" id="1">
 			
-			<posx>10</posx>
-			<posy>5</posy>
+			<left>10</left>
+			<top>5</top>
 			<width>500</width>
 			<height>100</height>
 			<align>left</align>
@@ -123,19 +123,19 @@
 	</control>
 	
 	<control type="group">
-	<posx>180</posx>
+	<left>180</left>
 	
 		<control type="button" id="12">
-			<posx>-10</posx>
-			<posy>-10</posy>
+			<left>-10</left>
+			<top>-10</top>
 			<width>1</width>
 			<height>1</height>
 			<visible>false</visible>
 		</control>
 
 		<control type="image">
-			<posx>10</posx>
-			<posy>5</posy>
+			<left>10</left>
+			<top>5</top>
 			<height>55</height>
 			<width>55</width>
 			<texture>$INFO[ListItem.Icon]</texture>
@@ -145,8 +145,8 @@
 		</control>
 		<control type="button" id="13">
 			<description>art</description>
-			<posx>10</posx>
-			<posy>5</posy>
+			<left>10</left>
+			<top>5</top>
 			<height>55</height>
 			<width>55</width>
 			<aspectratio>keep</aspectratio>
@@ -162,8 +162,8 @@
 				
 		<control type="image">
 			<description>Rating value</description>
-			<posx>75</posx>
-			<posy>-5</posy>
+			<left>75</left>
+			<top>-5</top>
 			<height>45</height>
 			<width>110</width>
 			<aspectratio align="left">keep</aspectratio>
@@ -172,8 +172,8 @@
 			<animation effect="slide" start="0,0" end="0,-100" time="200" easing="out" tween="cubic" reversable="false" >WindowClose</animation>
 		</control>
 		<control type="label">
-			<posx>80</posx>
-			<posy>20</posy>
+			<left>80</left>
+			<top>20</top>
 			<height>45</height>
 			<width>200</width>
 			<label>$INFO[ListItem.Album]</label>

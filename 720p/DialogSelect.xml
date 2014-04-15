@@ -5,8 +5,8 @@
   
 	<coordinates>
 		<system>1</system>
-		<posx>110</posx>
-		<posy>-20</posy>
+		<left>110</left>
+		<top>-20</top>
 	</coordinates>
 	
 	
@@ -16,8 +16,8 @@
 	<include>DialogEffect</include>
 	
 		<control type="image">
-			<posx>180</posx>
-			<posy>111</posy>			
+			<left>180</left>
+			<top>111</top>			
 			<width>942</width>
 			<height>482</height>
 			<aspectratio>stretch</aspectratio>
@@ -25,8 +25,8 @@
 			<!-- colordiffuse>FF707070</colordiffuse -->
 		</control>
 		<control type="image">
-			<posx>928</posx>
-			<posy>382</posy>		
+			<left>928</left>
+			<top>382</top>		
 			<width>161</width>
 			<height>161</height>
 			<aspectratio>stretch</aspectratio>
@@ -36,8 +36,8 @@
 		</control>
 		<control type="image">
 			<description>Large Icon Image</description>
-			<posx>939</posx>
-			<posy>393</posy>
+			<left>939</left>
+			<top>393</top>
 			<width>140</width>
 			<height>140</height>
 			<info>Container(6).ListItem.Icon</info>
@@ -49,8 +49,8 @@
 	
 		<control type="label" id="1">
 			<description>Heading</description>
-			<posx>222</posx>
-			<posy>140</posy>
+			<left>222</left>
+			<top>140</top>
 			<width>679</width>
 			<height>37</height>
 			<font>homemenu3</font>
@@ -59,8 +59,8 @@
 			<textcolor>babyblue</textcolor>
 		</control>
   		<control type="list" id="3">
-			<posx>211</posx>
-			<posy>183</posy>
+			<left>211</left>
+			<top>183</top>
 			<width>689</width>
 			<height>337</height>
 			<onup>3</onup>
@@ -71,7 +71,7 @@
 			<scrolltime>2</scrolltime>		
 			<itemlayout height="37">
 				<control type="label">
-					<posx>15</posx>
+					<left>15</left>
 					<width>689</width>
 					<height>37</height>
 					<font>tags</font>
@@ -95,7 +95,7 @@
 					<animation effect="fade" start="0" end="60" time="150" condition="![Control.HasFocus(5) | Control.HasFocus(9080)]">Conditional</animation>
 				</control>
 				<control type="label">
-					<posx>15</posx>
+					<left>15</left>
 					<width>689</width>
 					<height>37</height>
 					<font>tags</font>
@@ -109,8 +109,8 @@
   		</control>
  
 		<control type="list" id="6">
-			<posx>211</posx>
-			<posy>183</posy>
+			<left>211</left>
+			<top>183</top>
 			<width>689</width>
 			<height>340</height>
 			<onup>6</onup>
@@ -123,7 +123,7 @@
 			<itemlayout width="600" height="84">
 			
 				<control type="image">
-					<posy>84</posy>
+					<top>84</top>
 					<width>689</width>
 					<height>1</height>
 					<aspectratio>stretch</aspectratio>
@@ -131,8 +131,8 @@
 					<colordiffuse>26FFFFFF</colordiffuse>
 				</control>
 				<control type="image">
-					<posx>5</posx>
-					<posy>5</posy>
+					<left>5</left>
+					<top>5</top>
 					<width>74</width>
 					<height>74</height>
 					<aspectratio align="center">keep</aspectratio>
@@ -140,16 +140,16 @@
 					<visible>IsEmpty(ListItem.Icon)</visible>
 				</control>
 				<control type="image">
-					<posx>5</posx>
-					<posy>5</posy>
+					<left>5</left>
+					<top>5</top>
 					<width>74</width>
 					<height>74</height>
 					<aspectratio align="left">keep</aspectratio>
 					<texture>$INFO[ListItem.Icon]</texture>
 				</control>
 				<control type="label">
-					<posx>90</posx>
-					<posy>3</posy>
+					<left>90</left>
+					<top>3</top>
 					<width>650</width>
 					<height>32</height>
 					<label>[B]$INFO[ListItem.Label][/B]</label>
@@ -159,8 +159,8 @@
 					<textcolor>ACFFFFFF</textcolor>
 				</control>
 				<control type="label">
-					<posx>90</posx>
-					<posy>31</posy>
+					<left>90</left>
+					<top>31</top>
 					<width>590</width>
 					<height>100</height>
 					<label>$INFO[ListItem.Label2]</label>
@@ -171,8 +171,8 @@
 					<textcolor>ACFFFFFF</textcolor>
 				</control>
 				<control type="label">
-					<posx>90</posx>
-					<posy>54</posy>
+					<left>90</left>
+					<top>54</top>
 					<width>590</width>
 					<height>50</height>
 					<label>$INFO[ListItem.Property(Addon.Summary)]</label>
@@ -196,8 +196,8 @@
 					<animation effect="fade" start="0" end="60" time="150" condition="![Control.HasFocus(5) | Control.HasFocus(9080)]">Conditional</animation>
 				</control>
 				<control type="image">
-					<posx>5</posx>
-					<posy>5</posy>
+					<left>5</left>
+					<top>5</top>
 					<width>74</width>
 					<height>74</height>
 					<aspectratio align="center">keep</aspectratio>
@@ -205,8 +205,8 @@
 					<visible>IsEmpty(ListItem.Icon)</visible>
 				</control>
 				<control type="image">
-					<posx>5</posx>
-					<posy>5</posy>
+					<left>5</left>
+					<top>5</top>
 					<width>74</width>
 					<height>74</height>
 					<aspectratio align="left">keep</aspectratio>
@@ -214,8 +214,8 @@
 				</control>
 
 				<control type="label">
-					<posx>90</posx>
-					<posy>3</posy>
+					<left>90</left>
+					<top>3</top>
 					<width>650</width>
 					<height>32</height>
 					<label>[B]$INFO[ListItem.Label][/B]</label>
@@ -224,8 +224,8 @@
 					<textcolor>FFFFFFFF</textcolor>
 				</control>
 				<control type="label">
-					<posx>90</posx>
-					<posy>31</posy>
+					<left>90</left>
+					<top>31</top>
 					<width>590</width>
 					<height>100</height>
 					<label>$INFO[ListItem.Label2]</label>
@@ -235,8 +235,8 @@
 					<textcolor>ACFFFFFF</textcolor>
 				</control>
 				<control type="label">
-					<posx>90</posx>
-					<posy>54</posy>
+					<left>90</left>
+					<top>54</top>
 					<width>590</width>
 					<height>100</height>
 					<label>$INFO[ListItem.Property(Addon.Summary)]</label>
@@ -257,8 +257,8 @@
 			<textureslidernibfocus>buttons/scrollnibV.png</textureslidernibfocus>
 			<orientation>Vertical</orientation>
 			<showonepage>true</showonepage>
-			<posx>886</posx>
-			<posy>185</posy>
+			<left>886</left>
+			<top>185</top>
 			<width>10</width>
 			<height>335</height>
 
@@ -274,17 +274,17 @@
   
 		<control type="label" id="2">
 			<description>Number Of Files</description>
-			<posx>885</posx>
-			<posy>525</posy>
+			<left>785</left>
+			<top>525</top>
 			<width>100</width>
-			<label>-</label>
+			<visible>false</visible>
 			<align>right</align>
 		</control>
   
 		<control type="button" id="5">
 			<description>Get More</description>
-			<posx>921</posx>
-			<posy>220</posy>
+			<left>921</left>
+			<top>220</top>
 			<label>$LOCALIZE[368]</label>
 							
 			<onup>9080</onup>
@@ -296,8 +296,8 @@
 		</control>
 		<control type="button" id="9080">
 			<description>Close Window button</description>
-			<posx>921</posx>
-			<posy>170</posy>
+			<left>921</left>
+			<top>170</top>
 					
 			<label>31056</label>
 			<onclick>PreviousMenu</onclick>

@@ -7,15 +7,15 @@
 	<controls>
 
 		<control type="button" id="500">
-		<posx>-10</posx>
-		<posy>-10</posy>
+		<left>-10</left>
+		<top>-10</top>
 		<width>1</width>
 		<height>1</height>
 		<animation effect="fade" start="1" end="0" time="0" condition="true">Conditional</animation>
 		</control>
 		<control type="button" id="501">
-			<posx>-10</posx>
-			<posy>-10</posy>
+			<left>-10</left>
+			<top>-10</top>
 			<width>1</width>
 			<height>1</height>
 			<animation effect="fade" start="1" end="0" time="0" condition="true">Conditional</animation>
@@ -23,13 +23,13 @@
 		
 		
 		<control type="group">
-		<posx>100</posx>
-		<posy>660</posy>
+		<left>100</left>
+		<top>660</top>
 		<visible>system.getbool(input.enablemouse) + Skin.HasSetting(HideVolumeBar)</visible>
 				
 			<control type="image">
-				<posx>5</posx>
-				<posy>24</posy>
+				<left>5</left>
+				<top>24</top>
 				<width>380</width>
 				<height>5</height>
 				<texture>white.png</texture>
@@ -38,8 +38,8 @@
 			</control>
 			<control type="progress" id="2">
 				<description>Volume</description>
-				<posx>5</posx>
-				<posy>23</posy>
+				<left>5</left>
+				<top>23</top>
 				<width>380</width>
 				<height>2.9</height>
 				<info>Player.Volume</info>
@@ -51,8 +51,8 @@
 			</control>
 			<control type="slider" id="1">
 				<description>Volume Slider</description>
-				<posx>0</posx>
-				<posy>0</posy>
+				<left>0</left>
+				<top>0</top>
 				<width>380</width>
 				<height>60</height>
 				<info>Player.Volume</info>
@@ -64,8 +64,8 @@
 			</control>
 			<control type="slider" id="1">
 				<description>Volume Slider</description>
-				<posx>0</posx>
-				<posy>16.5</posy>
+				<left>0</left>
+				<top>16.5</top>
 				<width>390</width>
 				<height>3.5</height>
 				<info>Player.Volume</info>
@@ -80,11 +80,11 @@
 		
 		<control type="group">
 			
-			<posx>60r</posx>
-			<posy>-2</posy>
+			<left>1220</left>
+			<top>-2</top>
 			<width>200</width>
 			<height>720</height>
-			<align>center</align>
+			
 			<orientation>vertical</orientation>
 			<animation type="WindowOpen">
 				<effect type="fade" start="0" end="100" time="300"/>
@@ -98,7 +98,7 @@
 			
 			
 			<control type="image">
-				<posy>5</posy>
+				<top>5</top>
 				<height>55</height>
 				<width>55</width>
 				<texture>osd/osdbg.png</texture>
@@ -106,7 +106,7 @@
 				<animation effect="fade" start="100" end="60" time="100" condition="Control.HasFocus(301)">Conditional</animation>
 			</control>
 			<control type="button" id="301">
-				<posy>5</posy>
+				<top>5</top>
 				<height>55</height>
 				<width>55</width>
 				<aspectratio>keep</aspectratio>
@@ -124,7 +124,7 @@
 			
 			
 			<control type="image">
-				<posy>65</posy>
+				<top>65</top>
 				<height>55</height>
 				<width>55</width>
 				<texture>osd/osdbg.png</texture>
@@ -133,7 +133,7 @@
 			</control>
 			<control type="togglebutton" id="302">
 				<description>Play</description>
-				<posy>65</posy>
+				<top>65</top>
 				<height>55</height>
 				<width>55</width>
 				<texturefocus>osd/play.png</texturefocus>
@@ -151,7 +151,7 @@
 			
 			
 			<control type="image">
-				<posy>125</posy>
+				<top>125</top>
 				<height>55</height>
 				<width>55</width>
 				<texture>osd/osdbg.png</texture>
@@ -160,7 +160,7 @@
 			</control>
 			<control type="button" id="303">
 				<description>Rewind</description>
-				<posy>125</posy>
+				<top>125</top>
 				<height>55</height>
 				<width>55</width>
 				<aspectratio>keep</aspectratio>
@@ -178,7 +178,7 @@
 			
 			
 			<control type="image">
-				<posy>185</posy>
+				<top>185</top>
 				<height>55</height>
 				<width>55</width>
 				<texture>osd/osdbg.png</texture>
@@ -187,7 +187,7 @@
 			</control>
 			<control type="button" id="304">
 				<description>skip</description>
-				<posy>185</posy>
+				<top>185</top>
 				<height>55</height>
 				<width>55</width>
 				<aspectratio>keep</aspectratio>
@@ -204,7 +204,7 @@
 			
 			
 			<control type="image">
-				<posy>245</posy>
+				<top>245</top>
 				<height>55</height>
 				<width>55</width>
 				<texture>osd/osdbg.png</texture>
@@ -213,7 +213,7 @@
 			</control>
 			<control type="button" id="305">
 				<description>Stop</description>
-				<posy>245</posy>
+				<top>245</top>
 				<height>55</height>
 				<width>55</width>
 				<aspectratio>keep</aspectratio>
@@ -230,7 +230,7 @@
 			
 			
 			<control type="image">
-				<posy>305</posy>
+				<top>305</top>
 				<height>55</height>
 				<width>55</width>
 				<texture>osd/osdbg.png</texture>
@@ -239,7 +239,7 @@
 			</control>
 			<control type="button" id="306">
 				<description>skip</description>
-				<posy>305</posy>
+				<top>305</top>
 				<height>55</height>
 				<width>55</width>
 				<aspectratio>keep</aspectratio>
@@ -256,7 +256,7 @@
 			
 			
 			<control type="image">
-				<posy>365</posy>
+				<top>365</top>
 				<height>55</height>
 				<width>55</width>
 				<texture>osd/osdbg.png</texture>
@@ -265,7 +265,7 @@
 				<visible>Visualisation.Enabled</visible>
 			</control>
 			<control type="image">
-				<posy>365</posy>
+				<top>365</top>
 				<height>55</height>
 				<width>55</width>
 				<texture>osd/GrayBackground.png</texture>
@@ -275,7 +275,7 @@
 			</control>
 			<control type="button" id="307">
 				<description>settings</description>
-				<posy>365</posy>
+				<top>365</top>
 				<height>55</height>
 				<width>55</width>
 				<aspectratio>keep</aspectratio>
@@ -293,7 +293,7 @@
 			
 			
 			<control type="image">
-				<posy>425</posy>
+				<top>425</top>
 				<height>55</height>
 				<width>55</width>
 				<texture>osd/osdbg.png</texture>
@@ -302,7 +302,7 @@
 			</control>
 			<control type="togglebutton" id="308">
 				<description>random</description>
-				<posy>425</posy>
+				<top>425</top>
 				<height>55</height>
 				<width>55</width>
 				<aspectratio>keep</aspectratio>
@@ -324,7 +324,7 @@
 			
 			
 			<control type="image">
-				<posy>485</posy>
+				<top>485</top>
 				<height>55</height>
 				<width>55</width>
 				<texture>osd/osdbg.png</texture>
@@ -332,7 +332,7 @@
 				<animation effect="fade" start="100" end="60" time="100" condition="Control.HasFocus(309)">Conditional</animation>
 			</control>
 			<control type="button" id="309">
-				<posy>485</posy>
+				<top>485</top>
 				<description>repeat one</description>
 				<height>55</height>
 				<width>55</width>
@@ -349,7 +349,7 @@
 				<visible>Playlist.IsRepeatOne</visible>
 			</control>
 			<control type="button" id="309">
-				<posy>485</posy>
+				<top>485</top>
 				<description>repeat</description>
 				<height>55</height>
 				<width>55</width>
@@ -366,7 +366,7 @@
 				<visible>Playlist.IsRepeat</visible>
 			</control>
 			<control type="button" id="309">
-				<posy>485</posy>
+				<top>485</top>
 				<description>no repeat</description>
 				<height>55</height>
 				<width>55</width>
@@ -386,7 +386,7 @@
 			
 			
 			<control type="image">
-				<posy>545</posy>
+				<top>545</top>
 				<height>55</height>
 				<width>55</width>
 				<texture>osd/osdbg.png</texture>
@@ -394,7 +394,7 @@
 				<animation effect="fade" start="100" end="60" time="100" condition="Control.HasFocus(310)">Conditional</animation>
 			</control>
 			<control type="togglebutton" id="310">
-				<posy>545</posy>
+				<top>545</top>
 				<description>lyrics</description>
 				<height>55</height>
 				<width>55</width>
@@ -420,7 +420,7 @@
 			
 			
 			<control type="image">
-				<posy>605</posy>
+				<top>605</top>
 				<height>55</height>
 				<width>55</width>
 				<texture>osd/osdbg.png</texture>
@@ -429,7 +429,7 @@
 				<visible>Visualisation.Enabled + [System.HasAddon(visualization.milkdrop) | System.HasAddon(visualization.vortex)]</visible>
 			</control>
 			<control type="image">
-				<posy>605</posy>
+				<top>605</top>
 				<height>55</height>
 				<width>55</width>
 				<texture>osd/GrayBackground.png</texture>
@@ -438,7 +438,7 @@
 				<visible>!Visualisation.Enabled + ![System.HasAddon(visualization.milkdrop) | System.HasAddon(visualization.vortex)]</visible>
 			</control>
 			<control type="button" id="311">
-				<posy>605</posy>
+				<top>605</top>
 				<description>playlist</description>
 				<height>55</height>
 				<width>55</width>
@@ -456,7 +456,7 @@
 			
 			
 			<control type="image">
-				<posy>665</posy>
+				<top>665</top>
 				<height>55</height>
 				<width>55</width>
 				<texture>osd/osdbg.png</texture>
@@ -464,7 +464,7 @@
 				<animation effect="fade" start="100" end="60" time="100" condition="Control.HasFocus(312)">Conditional</animation>
 			</control>
 			<control type="button" id="312">
-				<posy>665</posy>
+				<top>665</top>
 				<description>playlist</description>
 				<height>55</height>
 				<width>55</width>
@@ -483,8 +483,8 @@
 		</control>
 		
 		<control type="button">
-			<posx>90</posx>
-			<posy>90</posy>
+			<left>90</left>
+			<top>90</top>
 			<width>500</width>
 			<height>350</height>
 			<description>fullscreen back button</description>
@@ -496,13 +496,13 @@
 		
 		</control>
 		<control type="group">
-			<posx>-60</posx>
-			<posy>488</posy>
+			<left>-60</left>
+			<top>488</top>
 			<animation effect="zoom" end="65" center="auto" time="0" condition="true">Conditional</animation>
 			<control type="slider" id="87">
 				<description>Seek Slider</description>
-				<posx>45</posx>
-				<posy>37</posy>
+				<left>45</left>
+				<top>37</top>
 				<width>630</width>
 				<height>50</height>
 				<onup>1</onup>

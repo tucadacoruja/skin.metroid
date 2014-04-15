@@ -6,15 +6,15 @@
   
 <coordinates>
   <system>1</system>
-  <posx>0</posx>
-  <posy>0</posy>
+  <left>0</left>
+  <top>0</top>
 </coordinates>
   
 <controls>
 
 <control type="label" id="3">
-	<posx>-10</posx>
-	<posy>-10</posy>
+	<left>-10</left>
+	<top>-10</top>
 	<width>1</width>
 	<height>1</height>
 	<animation effect="fade" start="1" end="0" time="0" condition="true">Conditional</animation>
@@ -26,15 +26,15 @@
 <include>Background</include>
 
 <control type="group">
-	<posy>20</posy>
-	<posx>120</posx>
+	<top>20</top>
+	<left>120</left>
 	<include>DialogEffect</include>
 	<visible>![Window.IsVisible(selectdialog) | Window.IsVisible(filebrowser) | Window.IsVisible(virtualkeyboard) | Window.IsVisible(profilesettings)]</visible>
 	
 	
 	<control type="button" id="50">
-		<posx>10</posx>
-		<posy>10</posy>
+		<left>10</left>
+		<top>10</top>
 		<width>1</width>
 		<height>1</height>
 		<texture>black.png</texture>
@@ -44,8 +44,8 @@
 	
 	
 	<control type="image">
-		<posx>286</posx>
-		<posy>85</posy>
+		<left>286</left>
+		<top>85</top>
 		<width>725</width>
 		<height>528</height>
 		<aspectratio>stretch</aspectratio>
@@ -55,8 +55,8 @@
 	</control>
 	<control type="label">
 		<description>header label</description>
-		<posx>276</posx>
-		<posy>118</posy>
+		<left>276</left>
+		<top>118</top>
 		<width>725</width>
 		<height>30</height>
 		<font>heading</font>
@@ -68,13 +68,13 @@
 		
 		
 <control type="group"> 
-<posx>300</posx>
-<posy>120</posy>
+<left>300</left>
+<top>120</top>
   
 	<control type="radiobutton" id="4">
 		<description>Enable Login Screen</description>
-		<posx>20</posx>
-		<posy>40</posy>
+		<left>20</left>
+		<top>40</top>
 		<width>660</width>
 		<label>Use $LOCALIZE[20096]?</label>
 		<align>left</align>
@@ -92,8 +92,8 @@
 	</control>
 	<control type="button" id="5">
 		<description>auto login</description>
-		<posx>20</posx>
-		<posy>81</posy>
+		<left>20</left>
+		<top>81</top>
 		<width>660</width>
 		<height>41</height>
 		<align>left</align>
@@ -114,9 +114,9 @@
 	</control>
 	<control type="label">
 		<description>auto login</description>
-		<posx>680</posx>
-		<posy>81</posy>
-		<width>660</width>
+		<left>280</left>
+		<top>81</top>
+		<width>400</width>
 		<height>41</height>
 		<align>right</align>
 		<textoffsetx>20</textoffsetx>
@@ -135,8 +135,8 @@
 
 	</control>
 	<control type="image">
-		<posx>20</posx>
-		<posy>79</posy>
+		<left>20</left>
+		<top>79</top>
 		<width>660</width>
 		<height>1</height>
 		<texture>white.png</texture>
@@ -144,8 +144,8 @@
 		<aspectratio>stretch</aspectratio>
 	</control>
 	<control type="image">
-		<posx>20</posx>
-		<posy>122</posy>
+		<left>20</left>
+		<top>122</top>
 		<width>660</width>
 		<height>1</height>
 		<texture>white.png</texture>
@@ -155,8 +155,8 @@
 	
   
   <control type="list" id="2">
-	  <posx>11</posx>
-	  <posy>122</posy>
+	  <left>11</left>
+	  <top>122</top>
 	  <width>670</width>
 	  <height>382</height>
 	  <onleft>300</onleft>
@@ -166,8 +166,8 @@
 	  
 	  <itemlayout height="39" width="660">
 		<control type="image">
-			<posx>6</posx>
-			<posy>1</posy>
+			<left>6</left>
+			<top>1</top>
 			<width>660</width>
 			<height>1</height>
 			<texture>white.png</texture>
@@ -175,7 +175,7 @@
 			<aspectratio>stretch</aspectratio>
 		</control>
 		<control type="label">
-			<posx>30</posx>
+			<left>30</left>
 			<width>650</width>
 			<height>39</height>
 			<font>list</font>
@@ -187,8 +187,8 @@
 	  
 	  <focusedlayout height="39" width="660">
 		<control type="image">
-			<posx>5</posx>
-			<posy>0</posy>
+			<left>5</left>
+			<top>0</top>
 			<width>660</width>
 			<height>39</height>
 			<texture>setting.png</texture>
@@ -197,7 +197,7 @@
 			<colordiffuse>ACFFFFFF</colordiffuse>
 		</control>
 		<control type="label">
-			<posx>30</posx>
+			<left>30</left>
 			<width>650</width>
 			<height>39</height>
 			<font>list</font>
@@ -208,7 +208,7 @@
 		 </control>
 
 		<control type="label">
-			<posx>30</posx>
+			<left>30</left>
 			<width>650</width>
 			<height>39</height>
 			<font>list</font>

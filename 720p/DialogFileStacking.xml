@@ -5,16 +5,16 @@
   
 <coordinates>
   <system>1</system>
-  <posx>370</posx>
-  <posy>100</posy>
+  <left>370</left>
+  <top>100</top>
 </coordinates>
 
 <controls>
     
 <control type="image">
 	<description>background image</description>
-	<posx>-15</posx>
-	<posy>8</posy>
+	<left>-15</left>
+	<top>8</top>
 	<width>570</width>
 	<height>505</height>
 	
@@ -25,8 +25,8 @@
 
 	<control type="button" id="444">
 		<description>close</description>
-		<posx>340</posx>
-	    <posy>435</posy>
+		<left>340</left>
+	    <top>435</top>
 		<height>42</height>
 		<width>140</width>
 		<label>31056</label>
@@ -39,8 +39,8 @@
 	</control>
 	
   <control type="list" id="450">
-	  <posx>20</posx>
-	  <posy>78</posy>
+	  <left>20</left>
+	  <top>78</top>
 	  <width>520</width>
 	  <height>350</height>
 	  <onleft>450</onleft>
@@ -50,15 +50,15 @@
 
 	  <itemlayout height="32">
 			<control type="image">
-				<posy>2</posy>
+				<top>2</top>
 				<width>500</width>
 				<height>32</height>
 				<texture>list/listline.png</texture>
 				<aspectratio>stretch</aspectratio>
 			</control>
 			<control type="image">
-				<posx>5</posx>
-				<posy>3</posy>
+				<left>5</left>
+				<top>3</top>
 				<width>26</width>
 				<height>26</height>
 				<texture fallback="DefaultAudio.png">$INFO[ListItem.Icon]</texture>
@@ -66,7 +66,7 @@
 				<animation effect="fade" end="60" time="0" condition="true">Conditional</animation>
 			</control>
 			<control type="label">
-				<posx>40</posx>
+				<left>40</left>
 				<width>465</width>
 				<height>30</height>
 				<textcolor>list</textcolor>
@@ -77,15 +77,15 @@
 	  </itemlayout>
 	  <focusedlayout height="32">
 			<control type="image">
-				<posy>2</posy>
+				<top>2</top>
 				<width>500</width>
 				<height>32</height>
 				<texture>setting.png</texture>
 				<aspectratio>stretch</aspectratio>
 			</control>
 			<control type="image">
-				<posx>5</posx>
-				<posy>3</posy>
+				<left>5</left>
+				<top>3</top>
 				<width>26</width>
 				<height>26</height>
 				<info>ListItem.Icon</info>
@@ -93,7 +93,7 @@
 				<aspectratio>keep</aspectratio>
 			</control>
 			<control type="label">
-				<posx>40</posx>
+				<left>40</left>
 				<width>465</width>
 				<height>30</height>
 				<textcolor>white</textcolor>

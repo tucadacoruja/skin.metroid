@@ -11,8 +11,8 @@
 	
 				
 		<control type="group">
-		<posx>0</posx>
-		<posy>0</posy>
+		<left>0</left>
+		<top>0</top>
 		<animation type="WindowOpen">
 			<effect type="slide" start="600,0" end="0,0" time="500" delay="400" tween="quadratic" easing="out" />
 		</animation>
@@ -24,8 +24,8 @@
 		</animation>
 
 			<control type="image">
-				<posx>880</posx>
-				<posy>0</posy>
+				<left>880</left>
+				<top>0</top>
 				<width>600</width>
 				<height>71</height>
 				<aspectratio>stretch</aspectratio>
@@ -33,8 +33,8 @@
 			</control>
 			
 			<control type="image">
-				<posx>1280</posx>
-				<posy>32</posy>
+				<left>1280</left>
+				<top>32</top>
 				<width>200</width>
 				<height>690</height>
 				<aspectratio>stretch</aspectratio>
@@ -42,8 +42,8 @@
 			</control>
 		
 			<control type="image">
-				<posx>880</posx>
-				<posy>71</posy>
+				<left>880</left>
+				<top>71</top>
 				<width>400</width>
 				<height>649</height>
 				<aspectratio>stretch</aspectratio>
@@ -55,8 +55,8 @@
 				<visible>Stringcompare(Skin.String(ChatMenuColorString),gray)</visible>
 			</control>
 			<control type="image">
-				<posx>880</posx>
-				<posy>71</posy>
+				<left>880</left>
+				<top>71</top>
 				<width>400</width>
 				<height>649</height>
 				<aspectratio>stretch</aspectratio>
@@ -67,8 +67,8 @@
 							
 			<control type="button" id="1240">
 				<description>close button</description>
-				<posx>1250</posx>
-				<posy>1</posy>
+				<left>1250</left>
+				<top>1</top>
 				<width>30</width>
 				<height>30</height>
 				<label>[B]x[/B]</label>
@@ -89,8 +89,8 @@
 			
 			<control type="button" id="1241">
 				<description>color edit button</description>
-				<posx>882</posx>
-				<posy>1</posy>
+				<left>882</left>
+				<top>1</top>
 				<width>30</width>
 				<height>30</height>
 				<label>[B]c[/B]</label>
@@ -113,8 +113,8 @@
 			
 			<control type="togglebutton" id="1242">
 				<description>list open/close button</description>
-				<posx>1220</posx>
-				<posy>1</posy>
+				<left>1220</left>
+				<top>1</top>
 				<width>30</width>
 				<height>30</height>
 				<label>[B]&lt;[/B]</label>
@@ -139,8 +139,8 @@
 			</control>
 							
 			<control type="scrollbar" id="60">
-				<posx>1265</posx>
-				<posy>83</posy>
+				<left>1265</left>
+				<top>83</top>
 				<width>15</width>
 				<height>526</height>
 				<visible>Control.IsVisible(1331)</visible>
@@ -154,8 +154,8 @@
 			
 			<control type="button" id="1239">
 				<description>chat button</description>
-				<posx>1149</posx>
-				<posy>630</posy>
+				<left>1149</left>
+				<top>630</top>
 				<width>110</width>
 				<height>70</height>
 				<label>[B]Chat[/B]</label>
@@ -178,8 +178,8 @@
 			
 			<control type="button" id="1263">
 				<description>Connect / disconnect</description>
-				<posx>910</posx>
-				<posy>660</posy>
+				<left>910</left>
+				<top>660</top>
 				<width>199</width>
 				<height>43</height>
 				<texturefocus border="10">IrcChat/ChatConnectFO.png</texturefocus>
@@ -197,8 +197,8 @@
 		
 			<control type="label" id="1270">
 				<description>channel name</description>
-				<posx>910</posx>
-				<posy>35</posy>
+				<left>910</left>
+				<top>35</top>
 				<width>340</width>
 				<height>30</height>
 				<align>center</align>
@@ -212,8 +212,8 @@
 			</control>
 			
 			<control type="image">
-				<posx>1245</posx>
-				<posy>37</posy>
+				<left>1245</left>
+				<top>37</top>
 				<width>30</width>
 				<height>30</height>
 				<texture>IrcChat/ChatBusy.png</texture>
@@ -225,8 +225,8 @@
 			
 			<control type="label" id="1238">
 				<description>color label</description>
-				<posx>875</posx>
-				<posy>36</posy>
+				<left>875</left>
+				<top>36</top>
 				<width>400</width>
 				<height>30</height>
 				<font>font13</font>
@@ -241,8 +241,8 @@
 			
 			<control type="button" id="1260">
 				<description>fake button down scroller</description>
-				<posx>1190</posx>
-				<posy>36</posy>
+				<left>1190</left>
+				<top>36</top>
 				<width>40</width>
 				<height>30</height>
 				<texturenofocus>IrcChat/ChatArrowNF.png</texturenofocus>
@@ -271,8 +271,8 @@
 			</control>			
 			<control type="button" id="1261">
 				<description>fake button up scroller</description>
-				<posx>1230</posx>
-				<posy>36</posy>
+				<left>1230</left>
+				<top>36</top>
 				<width>40</width>
 				<height>30</height>
 				<texturenofocus flipy="true">IrcChat/ChatArrowNF.png</texturenofocus>
@@ -303,8 +303,8 @@
 			
 			<control type="list" id="1300">
 				<description>Names List</description>
-				<posx>1285</posx>
-				<posy>34</posy>
+				<left>1285</left>
+				<top>34</top>
 				<width>300</width>
 				<height>690</height>
 				<onleft>60</onleft>
@@ -319,16 +319,16 @@
 					
 					<control type="image">
 						<description>list line image</description>
-						<posx>0</posx>
-						<posy>0</posy>
+						<left>0</left>
+						<top>0</top>
 						<width>190</width>
 						<height>38</height>
 						<aspectratio>stretch</aspectratio>
 						<texture>IrcChat/ChatListline.png</texture>
 					</control>
 					<control type="label">
-						<posx>10</posx>
-						<posy>-1</posy>
+						<left>10</left>
+						<top>-1</top>
 						<width>400</width>
 						<height>38</height>
 						<font>font13</font>
@@ -343,8 +343,8 @@
 					
 					<control type="image">
 						<description>list line image</description>
-						<posx>0</posx>
-						<posy>0</posy>
+						<left>0</left>
+						<top>0</top>
 						<width>190</width>
 						<height>38</height>
 						<aspectratio>stretch</aspectratio>
@@ -353,8 +353,8 @@
 					</control>
 					<control type="image">
 						<description>focussed image</description>
-						<posx>0</posx>
-						<posy>0</posy>
+						<left>0</left>
+						<top>0</top>
 						<width>190</width>
 						<height>38</height>
 						<aspectratio>stretch</aspectratio>
@@ -363,8 +363,8 @@
 						<visible>[Control.HasFocus(1300) | Control.HasFocus(1333)]</visible>
 					</control>
 					<control type="label">
-						<posx>10</posx>
-						<posy>-1</posy>
+						<left>10</left>
+						<top>-1</top>
 						<width>400</width>
 						<height>38</height>
 						<font>font13</font>
@@ -375,8 +375,8 @@
 						<visible>![Control.HasFocus(1300) | Control.HasFocus(1333)]</visible>
 					</control>
 					<control type="label">
-						<posx>10</posx>
-						<posy>-1</posy>
+						<left>10</left>
+						<top>-1</top>
 						<width>400</width>
 						<height>38</height>
 						<font>font13</font>
@@ -395,8 +395,8 @@
 	
 			<control type="list" id="1331">
 				<description>Chat messages list</description>
-				<posx>895</posx>
-				<posy>100</posy>
+				<left>895</left>
+				<top>100</top>
 				<width>350</width>
 				<height>523</height>
 				<onleft>60</onleft>
@@ -410,8 +410,8 @@
 				<itemlayout height="25" width="350">
 					
 					<control type="label">
-						<posx>10</posx>
-						<posy>0</posy>
+						<left>10</left>
+						<top>0</top>
 						<width min="350" max="9999">auto</width>
 						<height>20</height>
 						<font>font13</font>
@@ -422,8 +422,8 @@
 						<scroll>false</scroll>
 					</control>
 					<control type="label">
-						<posx>10</posx>
-						<posy>0</posy>
+						<left>10</left>
+						<top>0</top>
 						<width min="350" max="9999">auto</width>
 						<height>20</height>
 						<font>fontContextMenu</font>
@@ -438,8 +438,8 @@
 				<focusedlayout height="25" width="350">
 					
 					<control type="label">
-						<posx>10</posx>
-						<posy>0</posy>
+						<left>10</left>
+						<top>0</top>
 						<width>350</width>
 						<height>20</height>
 						<font>font13</font>
@@ -450,8 +450,8 @@
 						<scroll>false</scroll>
 					</control>
 					<control type="label">
-						<posx>10</posx>
-						<posy>0</posy>
+						<left>10</left>
+						<top>0</top>
 						<width>350</width>
 						<height>20</height>
 						<font>fontContextMenu</font>
@@ -468,8 +468,8 @@
 			
 			<control type="button" id="1332">
 				<description>protects list from mouse selection</description>
-				<posx>895</posx>
-				<posy>100</posy>
+				<left>895</left>
+				<top>100</top>
 				<width>350</width>
 				<height>523</height>
 				<label>-</label>	
@@ -488,8 +488,8 @@
 		
 		<control type="button">
 			<description>Fake window background context menu</description>
-			<posx>0</posx>
-			<posy>0</posy>
+			<left>0</left>
+			<top>0</top>
 			<width>1280</width>
 			<height>720</height>
 			<label>-</label>	
@@ -513,16 +513,16 @@
 			</animation>
 			
 			<control type="image">
-				<posx>489</posx>
-				<posy>256</posy>
+				<left>489</left>
+				<top>256</top>
 				<width>320</width>
 				<height>230</height>
 				<aspectratio>stretch</aspectratio>
 				<texture>IrcChat/ChatContextBg18.png</texture>
 			</control>
 			<control type="label">
-				<posx>767</posx>
-				<posy>271</posy>
+				<left>417</left>
+				<top>271</top>
 				<width>350</width>
 				<height>20</height>
 				<font>font13</font>
@@ -534,16 +534,16 @@
 				<animation effect="fade" start="0" end="90" time="0" condition="true">Conditional</animation>
 			</control>
 			<control type="image">
-				<posx>510</posx>
-				<posy>300</posy>
+				<left>510</left>
+				<top>300</top>
 				<width>260</width>
 				<height>156</height>
 				<aspectratio>stretch</aspectratio>
 				<texture border="20">IrcChat/ChatListbg.png</texture>
 			</control>
 			<control type="image"><!--  double texture, animation fails to reach 100% visible  -->
-				<posx>510</posx>
-				<posy>300</posy>
+				<left>510</left>
+				<top>300</top>
 				<width>260</width>
 				<height>156</height>
 				<aspectratio>stretch</aspectratio>
@@ -552,8 +552,8 @@
 			
 			<control type="list" id="1333">
 				<description>Context Menu</description>
-				<posx>516</posx>
-				<posy>301</posy>
+				<left>516</left>
+				<top>301</top>
 				<width>248</width>
 				<height>152</height>
 				<onleft>Skin.ToggleSetting(ChatContextMenu)</onleft>
@@ -570,16 +570,16 @@
 					
 					<control type="image">
 						<description>list line image</description>
-						<posx>0</posx>
-						<posy>0</posy>
+						<left>0</left>
+						<top>0</top>
 						<width>248</width>
 						<height>38</height>
 						<aspectratio>stretch</aspectratio>
 						<texture>IrcChat/ChatListline.png</texture>
 					</control>
 					<control type="label">
-						<posx>120</posx>
-						<posy>-1</posy>
+						<left>120</left>
+						<top>-1</top>
 						<width>248</width>
 						<height>38</height>
 						<font>font13</font>
@@ -594,8 +594,8 @@
 					
 					<control type="image">
 						<description>list line image</description>
-						<posx>0</posx>
-						<posy>0</posy>
+						<left>0</left>
+						<top>0</top>
 						<width>248</width>
 						<height>38</height>
 						<aspectratio>stretch</aspectratio>
@@ -604,8 +604,8 @@
 					</control>
 					<control type="image">
 						<description>focussed image</description>
-						<posx>0</posx>
-						<posy>0</posy>
+						<left>0</left>
+						<top>0</top>
 						<width>248</width>
 						<height>38</height>
 						<aspectratio>stretch</aspectratio>
@@ -614,8 +614,8 @@
 						<visible>Control.HasFocus(1333)</visible>
 					</control>
 					<control type="label">
-						<posx>120</posx>
-						<posy>-1</posy>
+						<left>120</left>
+						<top>-1</top>
 						<width>248</width>
 						<height>38</height>
 						<font>font13</font>
@@ -626,8 +626,8 @@
 						<visible>!Control.HasFocus(1333)</visible>
 					</control>
 					<control type="label">
-						<posx>120</posx>
-						<posy>-1</posy>
+						<left>120</left>
+						<top>-1</top>
 						<width>248</width>
 						<height>38</height>
 						<font>font13</font>

@@ -14,53 +14,38 @@
 		<animation effect="slide" start="-250,0" end="0,0" time="400" delay="20" reversible="false" tween="cubic" easing="out" condition="Control.HasFocus(301) + ![Window.IsVisible(home) | Window.IsVisible(profiles) | Window.IsVisible(weather)] + !Skin.HasSetting(LockMainMenu)">Conditional</animation>
 		
 		<control type="button" id="300">
-			<posx>1</posx>
-			<posy>1</posy>
+			<left>1</left>
+			<top>1</top>
 			<width>1</width>
 			<height>1</height>
 			<aspectratio>stretch</aspectratio>
 			<texture>blank.png</texture>
-			<!--  onfocus condition="Skin.HasSetting(DisableAnimation)">Skin.reset(DisableAnimation)</onfocus  -->
 			<onfocus>SetFocus(301)</onfocus>
-			
 		</control>
 
 	
 		<control type="image">
-			<posx>-20</posx>
-			<posy>65</posy>
+			<left>-20</left>
+			<top>65</top>
 			<width>270</width>
 			<height>658</height>
 			<aspectratio>stretch</aspectratio>
 			<texture>MetroidMenu.png</texture>
-			
 		</control>
-		
-		<!--  control type="image">
-			<posx>235</posx>
-			<posy>72</posy>
-			<width>15</width>
-			<height>650</height>
-			<aspectratio>stretch</aspectratio>
-			<texture>shadowv.png</texture>
-			<animation effect="fade" start="0" end="70" time="0" condition="true">Conditional</animation>
-		</control  -->
 
 		<include>EmptyMenu</include>
 	
 		<control type="list" id="301">
 
-				<posx>2</posx>
-				<posy>65</posy>
+				<left>2</left>
+				<top>65</top>
 				<width>300</width>
 				<height>651</height>
 				<onleft condition="!Skin.HasSetting(GlobalSearch)">999</onleft>
-				
 				<onright>50</onright>
 				<onup>noop</onup>
 				<ondown>301</ondown>
 				<pagecontrol>64</pagecontrol>
-				<!--  scrolltime tween="cubic" easing="inout">325</scrolltime  -->
 				<scrolltime>2</scrolltime>
 				<preloaditems>2</preloaditems>
 				<orientation>vertical</orientation>
@@ -68,8 +53,8 @@
 				<itemlayout height="50"  width="240">
 					
 					<control type="label">
-						<posx>25</posx>
-						<posy>-1</posy>
+						<left>25</left>
+						<top>-1</top>
 						<width>200</width>
 						<height>50</height>
 						<font>MainMenu21</font>
@@ -82,8 +67,8 @@
 						
 					</control>
 					<control type="label">
-						<posx>30</posx>
-						<posy>-1</posy>
+						<left>30</left>
+						<top>-1</top>
 						<width>240</width>
 						<height>50</height>
 						<font>SubMenu20</font>
@@ -108,8 +93,8 @@
 					
 					<control type="image">
 						<description>list line image</description>
-						<posx>0</posx>
-						<posy>2</posy>
+						<left>0</left>
+						<top>2</top>
 						<width>247</width>
 						<height>50</height>
 						<aspectratio>stretch</aspectratio>
@@ -119,8 +104,8 @@
 					</control>
 					<control type="image">
 						<description>focussed image</description>
-						<posx>0</posx>
-						<posy>2</posy>
+						<left>0</left>
+						<top>2</top>
 						<width>10</width>
 						<height>50</height>
 						<aspectratio>stretch</aspectratio>
@@ -131,8 +116,8 @@
 					</control>
 					<control type="image">
 						<description>focussed image</description>
-						<posx>0</posx>
-						<posy>2</posy>
+						<left>0</left>
+						<top>2</top>
 						<width>10</width>
 						<height>50</height>
 						<aspectratio>stretch</aspectratio>
@@ -143,8 +128,8 @@
 						
 					</control>
 					<control type="label">
-						<posx>25</posx>
-						<posy>-1</posy>
+						<left>25</left>
+						<top>-1</top>
 						<width>200</width>
 						<height>50</height>
 						<font>MainMenu21</font>
@@ -157,8 +142,8 @@
 						
 					</control>
 					<control type="label">
-						<posx>25</posx>
-						<posy>-1</posy>
+						<left>25</left>
+						<top>-1</top>
 						<width>200</width>
 						<height>50</height>
 						<font>MainMenu21</font>
@@ -171,8 +156,8 @@
 						
 					</control>
 					<control type="label">
-						<posx>30</posx>
-						<posy>-1</posy>
+						<left>30</left>
+						<top>-1</top>
 						<width>240</width>
 						<height>50</height>
 						<font>SubMenu20</font>
@@ -191,21 +176,17 @@
 						<item id="126">
 							<label>31073</label>
 							<onclick>ActivateWindow(playercontrols)</onclick>
-							<icon>-</icon>
-							<thumb>-</thumb>
 							<visible>Player.HasMedia</visible>
 						</item>
+						
 						<item id="128">
 							<description>Now Playing...</description>
 							<label>31074</label>
 							<onclick condition="Player.HasVideo">ActivateWindow(videoplaylist)</onclick>
 							<onclick  condition="Player.HasAudio">ActivateWindow(musicplaylist)</onclick>
 							<visible>Player.HasVideo | Player.HasAudio</visible>
-							
 						</item>
-						
-						
-			
+		
 						<item id="99">
 							<description>Update Library</description>
 							<label>31075</label>
@@ -222,13 +203,7 @@
 							<visible>Window.IsActive(Home) + !Skin.HasSetting(HideDownloadLogos)</visible>
 							<visible>Library.HasContent(movies) | Library.HasContent(TVShows)</visible>
 						</item>
-						
-						<!--  item id="98">
-							<description>party Mode</description>
-							<label>$LOCALIZE[589]</label>
-							<onclick>SendClick(16)</onclick>
-							<visible>Window.IsActive(musiclibrary)</visible>
-						</item  -->
+
 						<item id="96">
 							<description>Party Mode</description>
 							<label>$LOCALIZE[589]</label>
@@ -249,24 +224,23 @@
 						<item id="103">
 							<description>My Music</description>
 							<label>31078</label>
-							<icon>Home/icons/music.png</icon>
 							<visible>!Skin.HasSetting(HideGlobalMusic)</visible>
+							<visible>Library.HasContent(Music)</visible>
+							
+							<include  condition="Skin.HasSetting(MenuAutoClose)">MenuManualClose</include>
 							<onclick condition="IsEmpty(skin.string(SubMenu7)) + !Skin.HasSetting(MusicSubmenu)">Skin.Setstring(SubMenu7,open)</onclick>
 							<onclick condition="!IsEmpty(skin.string(SubMenu7)) + !Skin.HasSetting(MusicSubmenu)">Skin.Reset(SubMenu7)</onclick>
 							<onclick condition="IsEmpty(skin.string(SubMenu7)) + !Skin.HasSetting(MusicSubmenu)">Skin.Setstring(SubMenu7,open)</onclick>
 							<onclick condition="Skin.HasSetting(MusicSubmenu) + Skin.HasSetting(DirectoryUp)">ActivateWindow(musiclibrary,songs)</onclick>
 							<onclick condition="Skin.HasSetting(MusicSubmenu) + !Skin.HasSetting(DirectoryUp)">ActivateWindow(musiclibrary,songs,return)</onclick>
-							
 							<property name="DropdownMenu7">not_empty</property>
-
-							<visible>Library.HasContent(Music)</visible>
 						</item>
+						
 						<include condition="!Skin.HasSetting(MusicSubmenu)">MusicSubItems</include>
 						
 						<item id="126">
 							<description>My Music Videos</description>
 							<label>31218</label>
-							<icon>Home/icons/music.png</icon>
 							<visible>!Skin.HasSetting(HideMyMusicVideos)</visible>
 							<onclick condition="Skin.HasSetting(DirectoryUp)">ActivateWindow(Videos,MusicVideoTitles)</onclick>
 							<onclick condition="!Skin.HasSetting(DirectoryUp)">ActivateWindow(Videos,MusicVideoTitles,return)</onclick>
@@ -276,34 +250,33 @@
 						<item id="101">
 							<description>My movies</description>
 							<label>31079</label>
-							<icon>-</icon>						  
 							<visible>Library.HasContent(movies)</visible>
 							<visible>!Skin.HasSetting(HideGlobalMovies)</visible>
+							<include  condition="Skin.HasSetting(MenuAutoClose)">MenuManualClose</include>
 							<onclick condition="IsEmpty(skin.string(SubMenu4)) + !Skin.HasSetting(MovieSubmenu)">Skin.Setstring(SubMenu4,open)</onclick>
 							<onclick condition="!IsEmpty(skin.string(SubMenu4)) + !Skin.HasSetting(MovieSubmenu)">Skin.Reset(SubMenu4)</onclick>
 							<onclick condition="IsEmpty(skin.string(SubMenu4)) + !Skin.HasSetting(MovieSubmenu)">Skin.Setstring(SubMenu4,open)</onclick>
 							<onclick condition="Skin.HasSetting(MovieSubmenu) + Skin.HasSetting(DirectoryUp)">ActivateWindow(Videos,MovieTitles)</onclick>
 							<onclick condition="Skin.HasSetting(MovieSubmenu) + !Skin.HasSetting(DirectoryUp)">ActivateWindow(Videos,MovieTitles,return)</onclick>
-							
 							<property name="DropdownMenu4">not_empty</property>
 						</item>
+						
 						<include condition="!Skin.HasSetting(MovieSubmenu)">MovieSortItems</include>
 					  
 						<item id="102">
 							<description>My TV Shows</description>
 							<label>31080</label>
-							<label2></label2>
-							<icon>Home/icons/tv.png</icon>
 							<visible>!Skin.HasSetting(HideGlobalTvshows)</visible>
 							<visible>Library.HasContent(TVShows)</visible>
+							<include  condition="Skin.HasSetting(MenuAutoClose)">MenuManualClose</include>
 							<onclick condition="IsEmpty(skin.string(SubMenu5)) + !Skin.HasSetting(TvShowSubmenu)">Skin.Setstring(SubMenu5,open)</onclick>
 							<onclick condition="!IsEmpty(skin.string(SubMenu5)) + !Skin.HasSetting(TvShowSubmenu)">Skin.Setstring(SubMenu5,)</onclick>
 							<onclick condition="IsEmpty(skin.string(SubMenu5)) + !Skin.HasSetting(TvShowSubmenu)">Skin.Setstring(SubMenu5,open)</onclick>
 							<onclick condition="Skin.HasSetting(TvShowSubmenu) + Skin.HasSetting(DirectoryUp)">ActivateWindow(Videos,TvShowTitles)</onclick>
 							<onclick condition="Skin.HasSetting(TvShowSubmenu) + !Skin.HasSetting(DirectoryUp)">ActivateWindow(Videos,TvShowTitles,return)</onclick>
-							
 							<property name="DropdownMenu5">not_empty</property>
 						</item>
+						
 						<include condition="!Skin.HasSetting(TvShowSubmenu)">TvshowSortItems</include>
 					  	
 						<item id="129">
@@ -313,10 +286,10 @@
 							<visible>!Skin.HasSetting(FullScreenHome)</visible>
 							<onclick>FullScreen</onclick>
 						</item>
+						
 						<item id="121">
 							<description>Custom Favourite 2</description>
 							<label>$INFO[Skin.String(CustomFavName2)]</label>
-							<icon>$INFO[Skin.String(CustomFavourite2.Icon)]</icon>
 							<onclick>$INFO[Skin.String(CustomFavourite2.Path)]</onclick>
 							<visible>Skin.HasSetting(Menu_Custom2) + !IsEmpty(Skin.String(CustomFavName2))</visible>
 							<visible>Skin.HasSetting(cust_favorite)</visible>
@@ -328,11 +301,11 @@
 							<onclick>ActivateWindow(Favourites)</onclick>
 							<visible>!Skin.HasSetting(FavoritesHome)</visible>
 						</item>
+						
 						<item id="127">
 							<description>Video Library</description>
 							<label>31219</label>
 							<visible>Skin.HasSetting(HideVideoLibrary)</visible>
-							<!--  onclick>ActivateWindow(Video,library://video/)</onclick  -->
 							<onclick>ActivateWindow(Videos,root)</onclick>
 						</item>	
 						
@@ -340,19 +313,21 @@
 							<description>Music Library</description>
 							<label>31220</label>
 							<visible>Skin.HasSetting(HideMusicLibrary)</visible>
-							<!--  onclick>ActivateWindow(Music,library://music/)</onclick  -->
 							<onclick>ActivateWindow(MusicLibrary,root)</onclick>
 						</item>
+						
 						<item id="105">
 							<description>Sort</description>
 							<label>31082</label>
 							<include>NotVisibleAllSettingsWindows</include>
 							<visible>![Window.IsActive(Home) | Window.IsActive(weather)]</visible>
 							<visible>Skin.HasSetting(HideGlobalSort)</visible>
+							<include  condition="Skin.HasSetting(MenuAutoClose)">MenuManualClose</include>
 							<onclick condition="IsEmpty(skin.string(SubMenu1))">Skin.Setstring(SubMenu1,open)</onclick>
 							<onclick condition="!IsEmpty(skin.string(SubMenu1))">Skin.Setstring(SubMenu1,)</onclick>
 							<property name="DropdownMenu1">not_empty</property>
 						</item>
+						
 						<include condition="Window.IsActive(musicplaylist) + Skin.HasSetting(HideGlobalSort)">MusicPlaylistItems</include>
 						<include condition="Window.IsActive(videoplaylist) + Skin.HasSetting(HideGlobalSort)">VideoPlaylistItems</include>
 						<include condition="[Window.IsActive(programs) | Window.IsActive(40)] + Skin.HasSetting(HideGlobalSort)">ProgramsItems</include>
@@ -365,64 +340,47 @@
 						<item id="114">
 							<description>viewtype</description>
 							<label>$INFO[Container.ViewMode] $LOCALIZE[31083]</label>
-							
 							<onclick>Container.NextViewMode</onclick>
-													
 							<visible>Window.IsActive(musiclibrary) | Window.IsActive(musicfiles) | Window.IsActive(videolibrary) | Window.IsActive(videofiles) | Window.IsActive(pictures) | Window.IsActive(programs) | Window.IsActive(40) | Window.IsActive(videoplaylist) | Window.IsActive(musicplaylist)</visible>
 							<visible>!Skin.HasSetting(HideGlobalViews)</visible>
-							
 						</item>
-						
-						
-						
+											
 						<item id="115">
 							<label>31084</label>
 							<onclick condition="Skin.HasSetting(DirectoryUp)">back</onclick>
 							<onclick condition="!Skin.HasSetting(DirectoryUp)">PreviousMenu</onclick>
-							<icon>-</icon>
-							<thumb>-</thumb>
 							<visible>!Window.IsActive(Home)</visible>
 							<visible>Skin.HasSetting(HideGlobalBack)</visible>
 						</item>
 						
-						<!--item id="116">
-							<label>31085</label>
-							<onclick>PreviousMenu</onclick>
-							<icon>-</icon>
-							<thumb>-</thumb>
-							<visible>!Window.IsActive(Home)</visible>
-							<visible>Skin.HasSetting(HideGlobalPrevious)</visible>
-						</item-->
-						
 						<item id="106">
 							<description>Addons</description>
-							<!--  label>31086</label  -->
 							<label>$LOCALIZE[24001]</label>
-							<!--  onclick>ActivateWindow(Videos, addons://sources/video)</onclick  -->
+							<include  condition="Skin.HasSetting(MenuAutoClose)">MenuManualClose</include>
 							<onclick condition="IsEmpty(Skin.String(SubMenu6))">Skin.SetString(SubMenu6,open)</onclick>
 							<onclick condition="!IsEmpty(Skin.String(SubMenu6))">Skin.Reset(SubMenu6)</onclick>
 							<onclick condition="IsEmpty(Skin.String(SubMenu6))">Skin.SetString(SubMenu6,open)</onclick> 
 							<property name="DropdownMenu6">not_empty</property>
 							<visible>!Skin.HasSetting(AddonHome)</visible>
 						</item>
-						<include condition="!Skin.HasSetting(AddonHome)">AddonSubItems</include>
-									
 						
+						<include condition="!Skin.HasSetting(AddonHome)">AddonSubItems</include>
+											
 						<item id="107">
 							<description>Settings</description>
 							<label>31087</label>
-							<icon>-</icon>
+							<include  condition="Skin.HasSetting(MenuAutoClose)">MenuManualClose</include>
 							<onclick condition="IsEmpty(Skin.String(SubMenu2))">Skin.SetString(SubMenu2,open)</onclick>
 							<onclick condition="!IsEmpty(Skin.String(SubMenu2))">Skin.Reset(SubMenu2)</onclick>
 							<onclick condition="IsEmpty(Skin.String(SubMenu2))">Skin.SetString(SubMenu2,open)</onclick> 
 							<property name="DropdownMenu2">not_empty</property>
 						</item>
+						
 						<include>SettingsWindowItems</include>
 						
 						<item id="122">
 							<description>Custom Favourite 3</description>
 							<label>$INFO[Skin.String(CustomFavName3)]</label>
-							<icon>$INFO[Skin.String(CustomFavourite3.Icon)]</icon>
 							<onclick>$INFO[Skin.String(CustomFavourite3.Path)]</onclick>
 							<visible>Skin.HasSetting(Menu_Custom3) + !IsEmpty(Skin.String(CustomFavName3))</visible>
 							<visible>Skin.HasSetting(cust_favorite)</visible>
@@ -431,30 +389,30 @@
 						<item id="108">
 							<description>Sources</description>
 							<label>31088</label>
+							<include  condition="Skin.HasSetting(MenuAutoClose)">MenuManualClose</include>
 							<onclick condition="IsEmpty(skin.string(SubMenu3))">Skin.Setstring(SubMenu3,open)</onclick>
 							<onclick condition="!IsEmpty(skin.string(SubMenu3))">Skin.Reset(SubMenu3)</onclick>
 							<onclick condition="IsEmpty(skin.string(SubMenu3))">Skin.Setstring(SubMenu3,open)</onclick>
 							<property name="DropdownMenu3">not_empty</property>
 							<visible>!Skin.HasSetting(HideGlobalSources)</visible>
 						</item>
+						
 						<include condition="!Skin.HasSetting(HideGlobalSources)">SourceWindowItems</include>
-						
-						
+											
 						<item id="123">
 							<description>Custom Favourite 4</description>
 							<label>$INFO[Skin.String(CustomFavName4)]</label>
-							<icon>$INFO[Skin.String(CustomFavourite4.Icon)]</icon>
 							<onclick>$INFO[Skin.String(CustomFavourite4.Path)]</onclick>
 							<visible>Skin.HasSetting(Menu_Custom4) + !IsEmpty(Skin.String(CustomFavName4))</visible>
 							<visible>Skin.HasSetting(cust_favorite)</visible>
 						</item>
+						
 						<item id="41">
 							<label>Live Tv</label>
 							<onclick>ActivateWindow(PVR)</onclick>
-							<icon>-</icon>
-							<thumb>-</thumb>
 							<visible>System.GetBool(pvrmanager.enabled)</visible>
 						</item>
+						
 						<item id="109">
 							<description>Home</description>
 							<label>31089</label>
@@ -466,7 +424,6 @@
 						<item id="124">
 							<description>Custom Favourite 5</description>
 							<label>$INFO[Skin.String(CustomFavName5)]</label>
-							<icon>$INFO[Skin.String(CustomFavourite5.Icon)]</icon>
 							<onclick>$INFO[Skin.String(CustomFavourite5.Path)]</onclick>
 							<visible>Skin.HasSetting(Menu_Custom5) + !IsEmpty(Skin.String(CustomFavName5))</visible>
 							<visible>Skin.HasSetting(cust_favorite)</visible>
@@ -474,23 +431,13 @@
 						
 						<item id="110">
 							<label>31090</label>
-							<icon>-</icon>
 							<onclick>xbmc.activatewindow(111)</onclick>
 							<visible>!Skin.HasSetting(PowerHome)</visible>
 						</item>
-									  
-						<!--  item id="111">
-							<description>Programs</description>
-							<label>31091</label>
-							<label2></label2>
-							<onclick>xbmc.activatewindow(programs)</onclick>
-							<visible>Skin.HasSetting(ProgramsHome)</visible>
-						</item  -->
 							  
 						<item id="112">
 							<description>Play Disk</description>
 							<label>31092</label>
-							<icon>Home/icons/dvd.png</icon>
 							<onclick>XBMC.PlayDVD</onclick>
 							<visible>System.HasMediaDVD</visible>
 							<visible>Window.IsVisible(home) | ![Library.HasContent(movies) | Library.HasContent(movies) | Library.HasContent(movies)]</visible>
@@ -499,17 +446,14 @@
 						<item id="113">
 							<description>Weather</description>
 							<label>31093</label>
-							<icon>Home/icons/weather.png</icon>
 							<onclick>xbmc.activatewindow(weather)</onclick>
 							<visible>System.HasNetwork</visible>
 							<visible>Skin.HasSetting(WeatherHome)</visible>
 						</item>
-					  
 
 						<item id="125">
 							<description>Custom Favourite 6</description>
 							<label>$INFO[Skin.String(CustomFavName6)]</label>
-							<icon>$INFO[Skin.String(CustomFavourite6.Icon)]</icon>
 							<onclick>$INFO[Skin.String(CustomFavourite6.Path)]</onclick>
 							<visible>Skin.HasSetting(Menu_Custom6) + !IsEmpty(Skin.String(CustomFavName6))</visible>
 							<visible>Skin.HasSetting(cust_favorite)</visible>
@@ -529,8 +473,8 @@
 		<textureslidernibfocus>empty.png</textureslidernibfocus>
 		<orientation>Vertical</orientation>
 		<showonepage>true</showonepage>
-		<posx>205</posx>
-		<posy>73</posy>
+		<left>205</left>
+		<top>73</top>
 		<width>90</width>
 		<height>640</height>
 		<visible>Skin.HasSetting(LockMainMenu)</visible>
@@ -1648,7 +1592,7 @@
 		<item id="2">
 			<description>Program addons</description>
 			<label>$LOCALIZE[0]</label>
-			<onclick>XBMC.ActivateWindow(Programs,Addons,return)</onclick>
+			<onclick>XBMC.ActivateWindow(Programs,return)</onclick>
 			<visible>!IsEmpty(skin.string(SubMenu6))</visible>
 			<property name="SubMenuItem">not_empty</property>
 			<property name="DropdownMenu6">not_empty</property>

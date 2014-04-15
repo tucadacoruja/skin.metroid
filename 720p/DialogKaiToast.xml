@@ -5,98 +5,64 @@
  
 <controls>
 
-<control type="group"> 
-	<visible>!Window.IsVisible(musicosd)</visible>
-	<visible>![Window.IsActive(script-XBMC_Lyrics-main.xml) + Window.IsVisible(playercontrols) + Window.IsVisible(visualisation)]</visible>
-	<animation type="WindowOpen" reversible="false">
-	  <effect type="fade" start="0" end="100" time="350" delay="800" />
-	</animation>
-	<animation type="WindowClose" reversible="false">
-	  <effect type="fade" start="100" end="0" time="350" delay="0" />
-	</animation>
-	
-	<control type="image">
-		<posx>68r</posx>
-		<posy>5</posy>
-		<width>55</width>
-		<height>55</height>
-		<aspectratio>stretch</aspectratio>
-		<texture>osd/GrayBackground.png</texture>
+	<control type="group"> 
+		<visible>!Window.IsVisible(musicosd)</visible>
+		
+		<animation type="WindowOpen" reversible="false">
+		  <effect type="fade" start="0" end="100" time="350" delay="800" />
+		</animation>
+		<animation type="WindowClose" reversible="false">
+		  <effect type="fade" start="100" end="0" time="350" delay="0" />
+		</animation>
+		
+		<control type="image">
+			<include>SearchButton</include>
+			<aspectratio>stretch</aspectratio>
+			<texture>osd/GrayBackground.png</texture>
+			<visible>![Window.IsVisible(startup) | Window.IsVisible(fullscreenvideo)]</visible>
+		</control>
+		
+		<control type="image" id="400">
+			<include>SearchButton</include>
+			<aspectratio>stretch</aspectratio>
+			<texture>DefaultIconWarning.png</texture>
+		</control>
+		<control type="button" id="403">
+			<include>SearchButton</include>
+			<aspectratio>stretch</aspectratio>
+			<texture>DefaultIconInfo.png</texture>
+		</control>
+		<control type="button" id="404">
+			<include>SearchButton</include>
+			<aspectratio>stretch</aspectratio>
+			<texture>DefaultIconWarning.png</texture>
+		</control>
+		<control type="button" id="405">
+			<include>SearchButton</include>
+			<aspectratio>stretch</aspectratio>
+			<texture>DefaultIconError.png</texture>
+		</control>
+	</control>
 
-	</control>
-	<control type="image" id="400">
-		<posx>1212</posx>
-		<posy>5</posy>
-		<height>55</height>
-		<width>55</width>
-		<aspectratio>stretch</aspectratio>
-		<texture>DefaultIconWarning.png</texture>
-	</control>
-	<control type="button" id="403">
-		<posx>1212</posx>
-		<posy>5</posy>
-		<height>55</height>
-		<width>55</width>
-		<aspectratio>stretch</aspectratio>
-		<texture>DefaultIconInfo.png</texture>
-	</control>
-	<control type="button" id="404">
-		<posx>1212</posx>
-		<posy>5</posy>
-		<height>55</height>
-		<width>55</width>
-		<aspectratio>stretch</aspectratio>
-		<texture>DefaultIconWarning.png</texture>
-	</control>
-	<control type="button" id="405">
-		<posx>1212</posx>
-		<posy>5</posy>
-		<height>55</height>
-		<width>55</width>
-		<aspectratio>stretch</aspectratio>
-		<texture>DefaultIconError.png</texture>
-	</control>
-</control>
+	<control type="group"> 
+		<animation type="WindowOpen" reversible="false">
+		  <effect type="fade" start="0" end="100" time="350" delay="800" />
+		</animation>
+		<animation type="WindowClose" reversible="false">
+		  <effect type="fade" start="100" end="0" time="350" delay="0" />
+		</animation>
 
-<control type="group"> 
-	<animation type="WindowOpen" reversible="false">
-	  <effect type="fade" start="0" end="100" time="350" delay="800" />
-	</animation>
-	<animation type="WindowClose" reversible="false">
-	  <effect type="fade" start="100" end="0" time="350" delay="0" />
-	</animation>
+		
+		<control type="label" id="402">
+			<include>TopLabelBig</include>
+			<scrollspeed>9999999999</scrollspeed>
+		</control> 
 
-	
-	<control type="label" id="402">
-		<description>Heading</description>
-		<posx>1190</posx>
-		<posy>-4</posy>
-		<width>500</width>
-		<height>42</height>
-		<label>-</label>
-		<font>Clock2</font>
-		<textcolor>FF959595</textcolor>
-		<align>right</align>
-		<scroll>false</scroll>
-		<scrollspeed>9999999999</scrollspeed>
-
-	</control> 
-	
-	
-	<control type="label" id="401">
-		<description>line 2</description>
-		<posx>1190</posx>
-		<posy>23</posy>
-		<width>500</width>
-		<height>42</height>
-		<font>WeatherSmall</font>
-		<textcolor>FF707070</textcolor>
-		<align>right</align>
-		<label>-</label>
-
+		<control type="label" id="401">
+			<include>TopLabelSmall</include>
+		</control>
+		
 	</control>
-	
-</control>
   
 
 </controls>

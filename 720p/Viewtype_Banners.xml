@@ -3,7 +3,7 @@
 	
 <include name="Banners">
 	<control type="group">
-		<posy>8</posy>
+		<top>8</top>
 		<include>InfoOpenClose</include>
 		<include>ContextFade</include>
 		<include>Keyboard</include>
@@ -14,8 +14,8 @@
 				
 		<control type="fixedlist" id="709">
 			<viewtype label="Banners">list</viewtype>
-			<posx>347</posx>
-			<posy>112</posy>
+			<left>347</left>
+			<top>112</top>
 			<width>950</width>
 			<height>550</height>
 			
@@ -36,8 +36,8 @@
 			<itemlayout width="585" height="190">
 			
 				<control type="image">
-					<posx>7</posx>
-					<posy>15</posy>
+					<left>7</left>
+					<top>15</top>
 					<width>590</width>
 					<height>165</height>
 					<texture background="true" border="22">diffuse/postershadow.png</texture>
@@ -47,8 +47,8 @@
 					
 				</control>
 				<control type="image">
-					<posx>0</posx>
-					<posy>10</posy>
+					<left>0</left>
+					<top>10</top>
 					<width>577</width>
 					<height>149</height>
 					<texture background="true" border="12">white.png</texture>
@@ -56,8 +56,8 @@
 					<aspectratio>stretch</aspectratio>
 				</control>
 				<control type="image">
-					<posx>0</posx>
-					<posy>152</posy>
+					<left>0</left>
+					<top>152</top>
 					<width>577</width>
 					<height>7</height>
 					<texture background="true">shadow.png</texture>
@@ -65,8 +65,8 @@
 					<animation effect="fade" start="0" end="20" time="0" condition="true">Conditional</animation>
 				</control>
 				<control type="image">
-					<posx>20</posx>
-					<posy>10</posy>
+					<left>20</left>
+					<top>10</top>
 					<width>120</width>
 					<height>100</height>
 					<aspectratio>stretch</aspectratio>
@@ -77,8 +77,8 @@
 				</control>
 				
 				<control type="image">
-					<posx>2</posx>
-					<posy>13</posy>
+					<left>2</left>
+					<top>13</top>
 					<width>573</width>
 					<height>105</height>
 					<visible>!IsEmpty(ListItem.Art(banner))</visible>
@@ -87,8 +87,8 @@
 				</control>
 	
 				<control type="label">
-					<posx>10</posx>
-					<posy>107</posy>
+					<left>10</left>
+					<top>107</top>
 					<width>633</width>
 					<height>60</height>
 					<align>left</align>
@@ -106,8 +106,8 @@
 							
 				
 				<!-- control type="image">
-					<posx>5</posx>
-					<posy>3</posy>
+					<left>5</left>
+					<top>3</top>
 					<width>590</width>
 					<height>165</height>
 					<texture border="22">diffuse/postershadow.png</texture>
@@ -117,8 +117,8 @@
 					
 				</control -->
 				<control type="image">
-					<posx>1</posx>
-					<posy>12</posy>
+					<left>1</left>
+					<top>12</top>
 					<width>575</width>
 					<height>144</height>
 					<texture background="true" border="12">white.png</texture>
@@ -130,8 +130,8 @@
 						</animation>
 				</control>			
 				<control type="image">
-					<posx>0</posx>
-					<posy>10</posy>
+					<left>0</left>
+					<top>10</top>
 					<width>578</width>
 					<height>149</height>
 					<texture background="true" border="12">white.png</texture>
@@ -143,8 +143,8 @@
 						</animation>
 				</control>
 				<control type="image">
-					<posx>0</posx>
-					<posy>152</posy>
+					<left>0</left>
+					<top>152</top>
 					<width>577</width>
 					<height>7</height>
 					<texture background="true">shadow.png</texture>
@@ -152,8 +152,8 @@
 					<animation effect="fade" start="0" end="20" time="0" condition="true">Conditional</animation>
 				</control>
 				<control type="image">
-					<posx>20</posx>
-					<posy>10</posy>
+					<left>20</left>
+					<top>10</top>
 					<width>120</width>
 					<height>100</height>
 					<aspectratio>stretch</aspectratio>
@@ -163,8 +163,8 @@
 					<colordiffuse>EBFFFFFF</colordiffuse>
 				</control>
 				<control type="image">
-					<posx>2</posx>
-					<posy>13</posy>
+					<left>2</left>
+					<top>13</top>
 					<width>573</width>
 					<height>105</height>
 					<visible>!IsEmpty(ListItem.Art(banner))</visible>
@@ -176,8 +176,8 @@
 				</control>
 	
 				<control type="label">
-					<posx>10</posx>
-					<posy>107</posy>
+					<left>10</left>
+					<top>107</top>
 					<width>633</width>
 					<height>60</height>
 					<align>left</align>
@@ -191,15 +191,15 @@
 		</control>
 		
 		<control type="group">
-		<posy>9</posy>
+		<top>9</top>
 		<animation effect="slide" start="800,0" end="50,0" time="600" condition="!Control.HasFocus(301) + !Skin.HasSetting(LockMainMenu)">Conditional</animation>
 		<visible>![substring(Listitem.Label,..,left) | Skin.HasSetting(LockMainMenu)]</visible>
 
 
 				
 				<control type="image">
-					<posx>654</posx>
-					<posy>114</posy>
+					<left>654</left>
+					<top>114</top>
 					<width>520</width>
 					<height>319</height>
 					<bordertexture border="2">blue.png</bordertexture>
@@ -210,8 +210,8 @@
 					<animation effect="fade" start="0" end="90" time="0" condition="true">Conditional</animation>
 				</control>
 				<!-- control type="image">
-					<posx>654</posx>
-					<posy>114</posy>
+					<left>654</left>
+					<top>114</top>
 					<width>520</width>
 					<height>30</height>
 					<aspectratio>stretch</aspectratio>
@@ -219,8 +219,8 @@
 					<colordiffuse>FFEBEBEB</colordiffuse>
 				</control -->
 				<control type="label">
-					<posx>670</posx>
-					<posy>448</posy>
+					<left>670</left>
+					<top>448</top>
 					<width>470</width>
 					<height>35</height>
 					<font>about</font>
@@ -232,8 +232,8 @@
 				   <visible>!IsEmpty(ListItem.foldername) + !substring(Container.Listitem.Label,..,left)</visible>
 				</control>
 				<control type="label">
-					<posx>670</posx>
-					<posy>475</posy>
+					<left>670</left>
+					<top>475</top>
 					<width>365</width>
 					<height>35</height>
 					<font>about</font>
@@ -246,8 +246,8 @@
 				</control>
 				<!-- control type="image">
 					<description>Rating Info</description>
-					<posx>998</posx>
-					<posy>351</posy>
+					<left>998</left>
+					<top>351</top>
 					<width>165</width>
 					<height>100</height>
 					<info>ListItem.StarRating</info>
@@ -255,8 +255,8 @@
 					<visible>![IsEmpty(ListItem.foldername) + substring(Container.Listitem.Label,..,left)] | IsEmpty(Container(709).Listitem.Art(fanart))</visible>
 				</control -->
 				<control type="textbox">
-					<posx>670</posx>
-					<posy>525</posy>
+					<left>670</left>
+					<top>525</top>
 					<width>485</width>
 					<height>119</height>
 					<align>justify</align>
@@ -272,8 +272,8 @@
 		<visible>!substring(Listitem.Label,..,left)</visible>
 					
 			<control type="textbox">
-				<posx>990</posx>
-				<posy>140</posy>
+				<left>990</left>
+				<top>140</top>
 				<width>230</width>
 				<height>340</height>
 				<align>justify</align>
@@ -284,8 +284,8 @@
 			</control>
 			<control type="image">
 				<description>Rating Info</description>
-				<posx>990</posx>
-				<posy>510</posy>
+				<left>990</left>
+				<top>510</top>
 				<width>230</width>
 				<height>40</height>
 				<info>ListItem.StarRating</info>
@@ -293,8 +293,8 @@
 				<visible>!IsEmpty(ListItem.foldername) + !substring(Container.Listitem.Label,..,left)</visible>
 			</control>
 			<control type="label">
-				<posx>990</posx>
-				<posy>555</posy>
+				<left>990</left>
+				<top>555</top>
 				<width>633</width>
 				<height>60</height>
 				<align>left</align>
@@ -304,9 +304,9 @@
 				<selectedcolor>taskbar</selectedcolor>
 			</control>
 			<control type="label">
-				<posx>1210</posx>
-				<posy>555</posy>
-				<width>633</width>
+				<left>1010</left>
+				<top>555</top>
+				<width>200</width>
 				<height>60</height>
 				<align>right</align>
 				<label>$INFO[ListItem.Property(TotalEpisodes)]</label>
@@ -316,8 +316,8 @@
 			</control>
 			
 			<control type="label">
-				<posx>990</posx>
-				<posy>580</posy>
+				<left>990</left>
+				<top>580</top>
 				<width>633</width>
 				<height>60</height>
 				<align>left</align>
@@ -327,9 +327,9 @@
 				<selectedcolor>taskbar</selectedcolor>
 			</control>
 			<control type="label">
-				<posx>1210</posx>
-				<posy>580</posy>
-				<width>633</width>
+				<left>1010</left>
+				<top>580</top>
+				<width>200</width>
 				<height>60</height>
 				<align>right</align>
 				<label>$INFO[ListItem.Property(UnWatchedEpisodes)]</label>
@@ -350,8 +350,8 @@
 			<textureslidernibfocus>buttons/scrollnibV.png</textureslidernibfocus>
 			<orientation>Vertical</orientation>
 			<showonepage>true</showonepage>
-			<posx>295</posx>
-			<posy>120</posy>
+			<left>295</left>
+			<top>120</top>
 			<width>10</width>
 			<height>535</height>
 			<onleft>300</onleft>

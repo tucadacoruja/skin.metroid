@@ -3,12 +3,12 @@
 	<defaultcontrol>2</defaultcontrol>
 	<controls>
 		<control type="group" id="13">
-			<posx>130r</posx>
-			<posy>10</posy>
+			<left>1150</left>
+			<top>10</top>
 			<visible>!Skin.HasSetting(Show_SlideShow_Paused)</visible>
 			<control type="image">
-				<posx>0</posx>
-				<posy>0</posy>
+				<left>0</left>
+				<top>0</top>
 				<width>120</width>
 				<height>55</height>
 				<texture>osd/pause.png</texture>
@@ -18,16 +18,16 @@
 		</control>
 		<!--  media infos  -->
 		<control type="group">
-			<posx>20</posx>
-			<posy>180r</posy>
+			<left>20</left>
+			<top>540</top>
 			<visible>Player.ShowInfo + Player.HasMedia</visible>
 			<include>VisibleFadeEffect</include>
 				
 				
 			<control type="image">
 				<description>gradient</description>
-				<posx>150</posx>
-				<posy>17</posy>
+				<left>150</left>
+				<top>17</top>
 				<width>230</width>
 				<height>130</height>
 				<colordiffuse>DDFFFFFF</colordiffuse>
@@ -36,16 +36,16 @@
 			</control>
 			<control type="image">
 				<description>Cover image</description>
-				<posx>20</posx>
-				<posy>17</posy>
+				<left>20</left>
+				<top>17</top>
 				<width>130</width>
 				<height>130</height>
 				<texture>$INFO[MusicPlayer.Cover]</texture>
 			</control>
 			<control type="label">
 				<description>Artist label</description>
-				<posx>160</posx>
-				<posy>20</posy>
+				<left>160</left>
+				<top>20</top>
 				<height>30</height>
 				<width>325</width>
 				<label>$INFO[MusicPlayer.Artist]</label>
@@ -57,8 +57,8 @@
 			</control>
 			<control type="fadelabel">
 				<description>Title label</description>
-				<posx>160</posx>
-				<posy>43</posy>
+				<left>160</left>
+				<top>43</top>
 				<height>30</height>
 				<width>325</width>
 				<label>$INFO[MusicPlayer.Title]</label>
@@ -72,8 +72,8 @@
 			</control>
 			<control type="label">
 				<description>Album Label</description>
-				<posx>160</posx>
-				<posy>70</posy>
+				<left>160</left>
+				<top>70</top>
 				<height>30</height>
 				<width>325</width>
 				<label>$INFO[MusicPlayer.Album]$INFO[musicplayer.discnumber, - $LOCALIZE[427]:]</label>
@@ -85,8 +85,8 @@
 			</control>
 			<control type="label">
 				<description>Time Label</description>
-				<posx>160</posx>
-				<posy>95</posy>
+				<left>160</left>
+				<top>95</top>
 				<height>30</height>
 				<width>325</width>
 				<label>$INFO[MusicPlayer.Time]$INFO[MusicPlayer.Duration, / ]</label>

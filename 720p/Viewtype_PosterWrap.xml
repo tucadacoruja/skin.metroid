@@ -16,21 +16,21 @@
 			
 		<control type="group">
 
-			<posx>0</posx>
-			<posy>35</posy>
+			<left>0</left>
+			<top>35</top>
 
-			<control type="wraplist" id="501">
+			<control type="fixedlist" id="501">
 				<visible>Container.Content(Movies) | Container.Content(TVShows) | Container.Content(seasons)</visible>
 				<hitrect x="220" y="200" w="1000" h="373" />
-				<posx>643</posx>
-				<posy>189</posy>
+				<left>643</left>
+				<top>189</top>
 				<width>1600</width>
 				<height>560</height>
 				<onleft>57</onleft>
 				<onright>57</onright>
 				<onup>300</onup>
 				<ondown>63</ondown>
-				<viewtype label="PosterWrap">bigwrap</viewtype>
+				<viewtype label="PosterFix">list</viewtype>
 				<pagecontrol>63</pagecontrol>
 				<scrolltime>150</scrolltime>
 				<preloaditems>2</preloaditems>
@@ -41,8 +41,8 @@
 				<itemlayout height="310" width="132">
 					
 					<control type="image">
-						<posx>2</posx>
-						<posy>100</posy>
+						<left>2</left>
+						<top>100</top>
 						<width>123</width>
 						<height>180</height>
 						<aspectratio>stretch</aspectratio>
@@ -53,26 +53,17 @@
 						<animation effect="fade" start="0" end="85" time="0" condition="true">Conditional</animation>
 					</control>
 					<control type="image">
-						<posx>10</posx>
-						<posy>120</posy>
+						<left>10</left>
+						<top>120</top>
 						<width>100</width>
 						<height>120</height>
 						<aspectratio>stretch</aspectratio>
-						<texture  >$VAR[Fallback_Icon]</texture>
+						<texture>$VAR[Fallback_Icon]</texture>
 						<animation effect="fade" start="0" end="80" time="0" condition="true">Conditional</animation>
 						
 						<colordiffuse>EBFFFFFF</colordiffuse>
 					</control>
-					<!-- control type="image">
-						<posx>101</posx>
-						<posy>257</posy>
-						<width>20</width>
-						<height>20</height>
-						<aspectratio>keep</aspectratio>
-						<texture>$INFO[ListItem.Overlay]</texture>
-						<visible>Skin.HasSetting(WatchedOverlays)</visible>
-						<animation effect="fade" start="0" end="50" time="0" condition="true">Conditional</animation>
-					</control -->						
+					
 				</itemlayout>
 						
 				<focusedlayout height="310" width="0" />
@@ -82,15 +73,15 @@
 			
 
 		<control type="group">	
-			<posy>53</posy>
+			<top>53</top>
 			<!-- To counter the actual animation -->
 			<animation effect="slide" start="250,0" end="0,0" time="500" reversible="true" condition="Control.IsVisible(501)">Conditional</animation>
 			<animation effect="slide" start="0,0" end="-250,0" time="600" reversible="true" condition="!Control.HasFocus(301) + !Skin.HasSetting(LockMainMenu)">Conditional</animation>
 			
 					
 			<control type="image">
-				<posx>250</posx>
-				<posy>443</posy>
+				<left>250</left>
+				<top>443</top>
 				<width>1400</width>
 				<height>6</height>
 				<aspectratio>stretch</aspectratio>
@@ -99,8 +90,8 @@
 			</control>
 			
 			<control type="image">
-				<posx>250</posx>
-				<posy>385</posy>
+				<left>250</left>
+				<top>385</top>
 				<width>1400</width>
 				<height>58</height>
 				<aspectratio>stretch</aspectratio>
@@ -113,8 +104,8 @@
 			</control>
 
 			<control type="image">
-				<posx>615</posx>
-				<posy>375</posy>
+				<left>615</left>
+				<top>375</top>
 				<width>450</width>
 				<height>4</height>
 			
@@ -122,28 +113,19 @@
 				<texture diffuse="SelectDiff.png">BlueBackground.png</texture>
 				<colordiffuse>44FFFFFF</colordiffuse>
 			</control>
-			<!-- control type="image">
-				<posx>250</posx>
-				<posy>385</posy>
-				<width>1400</width>
-				<height>6</height>
-				<aspectratio>stretch</aspectratio>
-				<texture>highlight.png</texture>
-				<colordiffuse>40FFFFFF</colordiffuse>
-			</control -->
 			
 		</control>
 		
 		<!-- --Text--- -->
 		<control type="group">
-		<posx>190</posx>
-		<posy>93</posy>
+		<left>190</left>
+		<top>93</top>
 
 		<animation effect="slide" start="0,0" end="-110,0" time="400" condition="!Control.HasFocus(301) + !Skin.HasSetting(LockMainMenu)">Conditional</animation>
 			
 			<control type="label">
-				<posx>460</posx>
-				<posy>433</posy>
+				<left>460</left>
+				<top>433</top>
 				<width>565</width>
 				<height>45</height>
 				<font>Postertitlebig</font>
@@ -155,8 +137,8 @@
 			</control>
 
 			<control type="textbox">
-				<posx>460</posx>
-				<posy>485</posy>
+				<left>460</left>
+				<top>485</top>
 				<width>575</width>
 				<height>50</height>
 				<font>recent</font>
@@ -171,14 +153,14 @@
 					
 					
 		<control type="group">
-			<posx>299</posx>
-			<posy>130</posy>
+			<left>299</left>
+			<top>130</top>
 			<!-- visible>false</visible -->
 			<animation effect="slide" start="0,0" end="-110,0" time="400" condition="!Control.HasFocus(301) + !Skin.HasSetting(LockMainMenu)">Conditional</animation>
 			
 			<control type="image">
-				<posx>27</posx>
-				<posy>24</posy>
+				<left>27</left>
+				<top>24</top>
 				<width>328</width>
 				<height>488</height>
 				<texture background="true">diffuse/postershadow.png</texture>
@@ -189,8 +171,8 @@
 			</control>					
 
 			<control type="image">
-				<posx>-4</posx>
-				<posy>0</posy>
+				<left>-4</left>
+				<top>0</top>
 				<width>325</width>
 				<height>480</height>
 				<aspectratio>stretch</aspectratio>
@@ -200,8 +182,8 @@
 				<fadetime>400</fadetime>
 			</control>
 			<control type="image">
-				<posx>30</posx>
-				<posy>18</posy>
+				<left>30</left>
+				<top>18</top>
 				<width>256</width>
 				<height>440</height>
 				<aspectratio>keep</aspectratio>
@@ -211,20 +193,10 @@
 					<effect type="zoom" start="90" end="100" time="200" />
 				</animation>
 			</control>
-			
-			<!--control type="image">
-				<posx>254</posx>
-				<posy>402</posy>
-				<width>66</width>
-				<height>66</height>
-				<aspectratio>keep</aspectratio>
-				<texture>$INFO[Container(501).ListItem.Overlay]</texture>
-				<visible>!Skin.HasSetting(WatchedOverlays)</visible>
-				<colordiffuse>blue</colordiffuse>
-			</control-->
+
 			<control type="image">
-				<posx>272</posx>
-				<posy>429</posy>
+				<left>272</left>
+				<top>429</top>
 				<width>28</width>
 				<height>28</height>
 				<aspectratio align="left" aligny="center">stretch</aspectratio>
@@ -248,8 +220,8 @@
 			<textureslidernibfocus>buttons/scrollnibH.png</textureslidernibfocus>
 			<orientation>horizontal</orientation>
 			<showonepage>true</showonepage>
-			<posx>315</posx>
-			<posy>700</posy>
+			<left>315</left>
+			<top>700</top>
 			<width>920</width>
 			<height>10</height>
 			<onup>501</onup>

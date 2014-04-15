@@ -3,8 +3,8 @@
 	<defaultcontrol always="true">2</defaultcontrol>
 	<coordinates>
 		<system>1</system>
-		<posx>110</posx>
-		<posy>0</posy>
+		<left>110</left>
+		<top>0</top>
 	</coordinates>
 	
 		<include>DialogEffect</include>
@@ -16,8 +16,8 @@
 		<include>DialogEffect</include>
 		
 		<control type="image">
-			<posx>180</posx>
-			<posy>88</posy>			
+			<left>180</left>
+			<top>88</top>			
 			<width>942</width>
 			<height>482</height>
 			<aspectratio>stretch</aspectratio>
@@ -26,8 +26,8 @@
 		</control>
 		<control type="label" id="20">
 			<description>header label</description>
-			<posx>220</posx>
-			<posy>115</posy>
+			<left>220</left>
+			<top>115</top>
 			<width>679</width>
 			<height>37</height>
 			<font>homemenu3</font>
@@ -50,8 +50,8 @@
 			
 		<control type="grouplist" id="9"><!-- category group- -->
 			<description>Button area</description>
-			<posx>210</posx>
-			<posy>677</posy>
+			<left>210</left>
+			<top>677</top>
 			<width>870</width>
 			<height>50</height>
 			<align>center</align>
@@ -76,8 +76,8 @@
 		
 		<control type="grouplist" id="2">
 			<description>control area</description>
-			<posx>211</posx>
-			<posy>160</posy>
+			<left>211</left>
+			<top>160</top>
 			<width>674</width>
 			<height>335</height>
 			<itemgap>0</itemgap>
@@ -97,8 +97,8 @@
 			<textureslidernibfocus>buttons/scrollnibV.png</textureslidernibfocus>
 			<orientation>Vertical</orientation>
 			<showonepage>true</showonepage>
-			<posx>887</posx>
-			<posy>163</posy>
+			<left>887</left>
+			<top>163</top>
 			<width>10</width>
 			<height>335</height>
 
@@ -111,8 +111,8 @@
 		</control>
 		
 		<control type="group" id="9001">
-			<posx>922</posx>
-			<posy>150</posy>
+			<left>922</left>
+			<top>150</top>
 			<control type="button" id="12">
 				<description>Defaults Button</description>
 				<label>409</label>
@@ -125,7 +125,7 @@
 			</control>
 			<control type="button" id="10">
 				<description>OK Button</description>
-				<posy>55</posy>
+				<top>55</top>
 				<label>186</label>
 									
 				<onup>12</onup>
@@ -136,7 +136,7 @@
 			</control>
 			<control type="button" id="11">
 				<description>Cancel Button</description>
-				<posy>110</posy>
+				<top>110</top>
 				<label>222</label>
 								
 				<onup>10</onup>
@@ -178,7 +178,7 @@
 		
 		<control type="spincontrolex" id="5">
 			<description>Default spincontrolex</description>
-			<posx></posx>
+			<left></left>
 			<height>37</height>
 			<width>250</width>
 			<font>recent</font>

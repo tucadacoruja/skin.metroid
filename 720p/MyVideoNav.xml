@@ -10,92 +10,92 @@
 <controls>
 
 <control type="button" id="2">
-	<posx>-10</posx>
-	<posy>-10</posy>
+	<left>-10</left>
+	<top>-10</top>
 	<width>1</width>
 	<height>1</height>
 	<visible>false</visible>
 </control>
 <control type="button" id="3">
-	<posx>-10</posx>
-	<posy>-10</posy>
+	<left>-10</left>
+	<top>-10</top>
 	<width>1</width>
 	<height>1</height>
 	<visible>false</visible>
 </control>
 <control type="togglebutton" id="4">
-	<posx>-10</posx>
-	<posy>-10</posy>
+	<left>-10</left>
+	<top>-10</top>
 	<width>1</width>
 	<height>1</height>
 	<visible>false</visible>
 </control>
 <control type="button" id="5">
-	<posx>-10</posx>
-	<posy>-10</posy>
+	<left>-10</left>
+	<top>-10</top>
 	<width>1</width>
 	<height>1</height>
 	<visible>false</visible>
 </control>
 <control type="button" id="6">
-	<posx>-10</posx>
-	<posy>-10</posy>
+	<left>-10</left>
+	<top>-10</top>
 	<width>1</width>
 	<height>1</height>
 	<visible>false</visible>
 </control>
 <control type="button" id="8">
-	<posx>-10</posx>
-	<posy>-10</posy>
+	<left>-10</left>
+	<top>-10</top>
 	<width>1</width>
 	<height>1</height>
 	<visible>false</visible>
 </control>
 <control type="button" id="10">
-	<posx>-10</posx>
-	<posy>-10</posy>
+	<left>-10</left>
+	<top>-10</top>
 	<width>1</width>
 	<height>1</height>
 	<visible>false</visible>
 </control>
 <control type="label" id="12">
-	<posx>-10</posx>
-	<posy>-10</posy>
+	<left>-10</left>
+	<top>-10</top>
 	<width>1</width>
 	<height>1</height>
 	<visible>false</visible>
 </control>
 <control type="button" id="15">
-	<posx>-10</posx>
-	<posy>-10</posy>
+	<left>-10</left>
+	<top>-10</top>
 	<width>1</width>
 	<height>1</height>
 	<visible>false</visible>
 </control>
 <control type="button" id="16">
-	<posx>-10</posx>
-	<posy>-10</posy>
+	<left>-10</left>
+	<top>-10</top>
 	<width>1</width>
 	<height>1</height>
 	<visible>false</visible>
 </control>
 <control type="label" id="18">
-	<posx>-10</posx>
-	<posy>-10</posy>
+	<left>-10</left>
+	<top>-10</top>
 	<width>1</width>
 	<height>1</height>
 	<visible>false</visible>
 </control>
 <control type="button" id="19">
-	<posx>0</posx>
-	<posy>0</posy>
+	<left>0</left>
+	<top>0</top>
 	<width>1</width>
 	<height>1</height>
 	<description>Filter</description>
 </control>
 <control type="radiobutton" id="14">
-	<posx>0</posx>
-	<posy>0</posy>
+	<left>0</left>
+	<top>0</top>
 	<width>1</width>
 	<height>1</height>
 	<description>unwatched</description>
@@ -121,7 +121,7 @@
 
 
 <include>BottomInfoBar</include>
-<include>ScrollOffsetLabel</include>
+ 
  
 
 </controls>

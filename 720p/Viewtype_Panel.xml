@@ -5,8 +5,8 @@
     <include name="Panel">
         <control type="group">
 			
-			<posx>60</posx>
-			<posy>10</posy>
+			<left>60</left>
+			<top>10</top>
 			
 			<include>InfoOpenClose</include>
 			<include>MusicInfoOpenClose</include>
@@ -22,8 +22,8 @@
 			
 			<control type="panel" id="603">
 					
-				<posx>230</posx>
-				<posy>75</posy>
+				<left>230</left>
+				<top>75</top>
 				<width>960</width>
 				<height>610</height>
 				<onup>300</onup>
@@ -41,14 +41,14 @@
 								
 				<itemlayout width="192" height="288">
 					<control type="group">
-						<posx>0</posx>
-						<posy>24</posy>
+						<left>0</left>
+						<top>24</top>
 						<width>180</width>
 						<height>264</height>
 						
 						<control type="image">
-							<posx>0</posx>
-							<posy>0</posy>
+							<left>0</left>
+							<top>0</top>
 							<width>180</width>
 							<height>102</height>
 							<texture background="true" >white.png</texture>
@@ -57,8 +57,8 @@
 						</control>
 																							
 						<control type="image">
-							<posx>0</posx>
-							<posy>0</posy>
+							<left>0</left>
+							<top>0</top>
 							<width>180</width>
 							<height>102</height>
 							<texture>$VAR[Landscape_Image]</texture>
@@ -67,8 +67,8 @@
 						
 						
 						<control type="image">
-							<posx>0</posx>
-							<posy>100</posy>
+							<left>0</left>
+							<top>100</top>
 							<width>180</width>
 							<height>170</height>
 							<texture background="true">white.png</texture>
@@ -78,8 +78,8 @@
 						</control>
 						
 						<control type="image">
-							<posx>10</posx>
-							<posy>0</posy>
+							<left>10</left>
+							<top>0</top>
 							<width>30</width>
 							<height>30</height>
 							<texture background="true">bookmark.png</texture>
@@ -88,8 +88,8 @@
 						</control>
 						
 						<control type="textbox">
-							<posx>6</posx>
-							<posy>102</posy>
+							<left>6</left>
+							<top>102</top>
 							<width>156</width>
 							<height>85</height>
 							<label>$VAR[Landscape_Header]</label>
@@ -101,8 +101,8 @@
 						</control>
 						
 						<control type="image">
-							<posx>35</posx>
-							<posy>205</posy>
+							<left>35</left>
+							<top>205</top>
 							<width>100</width>
 							<height>20</height>
 							<texture>$INFO[ListItem.StarRating]</texture>
@@ -112,8 +112,8 @@
 						</control>
 										
 						<control type="label">
-							<posx>6</posx>
-							<posy>240</posy>
+							<left>6</left>
+							<top>240</top>
 							<width>156</width>
 							<height>15</height>
 							<label>$VAR[Landscape_Detail]</label>
@@ -124,8 +124,8 @@
 						</control>
 						
 						<control type="label">
-							<posx>160</posx>
-							<posy>240</posy>
+							<left>160</left>
+							<top>240</top>
 							<width>156</width>
 							<height>15</height>
 							<label>$INFO[ListItem.Property(UnWatchedEpisodes)]</label>
@@ -138,8 +138,8 @@
 						</control>
 						
 						<!-- control type="image">
-							<posx>150</posx>
-							<posy>236</posy>
+							<left>150</left>
+							<top>236</top>
 							<width>24</width>
 							<height>24</height>
 							<texture>$VAR[Menu_Overlay_Image]</texture>
@@ -149,8 +149,8 @@
 						</control -->
 						
 						<!--control type="image">
-							<posx>148</posx>
-							<posy>236</posy>
+							<left>148</left>
+							<top>236</top>
 							<width>24</width>
 							<height>24</height>
 							<texture>$INFO[ListItem.Overlay]</texture>
@@ -159,8 +159,8 @@
 							<visible>!Skin.HasSetting(WatchedOverlays)</visible>
 						</control-->
 						<control type="image">
-							<posx>157</posx>
-							<posy>90</posy>
+							<left>157</left>
+							<top>90</top>
 							<width>20</width>
 							<height>20</height>
 							<aspectratio align="left" aligny="center">stretch</aspectratio>
@@ -177,14 +177,14 @@
 				
 					<control type="group">
 					
-						<posx>0</posx>
-						<posy>24</posy>
+						<left>0</left>
+						<top>24</top>
 						<width>180</width>
 						<height>264</height>
 																										
 						<control type="image">
-							<posx>0</posx>
-							<posy>0</posy>
+							<left>0</left>
+							<top>0</top>
 							<width>180</width>
 							<height>102</height>
 							<texture background="true" >white.png</texture>
@@ -193,8 +193,8 @@
 						</control>
 																							
 						<control type="image">
-							<posx>0</posx>
-							<posy>0</posy>
+							<left>0</left>
+							<top>0</top>
 							<width>180</width>
 							<height>102</height>
 							<texture>$VAR[Landscape_Image]</texture>
@@ -202,8 +202,8 @@
 						</control>
 												
 						<control type="image">
-							<posx>0</posx>
-							<posy>100</posy>
+							<left>0</left>
+							<top>100</top>
 							<width>180</width>
 							<height>170</height>
 							<texture background="true">white.png</texture>
@@ -214,8 +214,8 @@
 						
 						<control type="image">
 						
-							<posx>10</posx>
-							<posy>0</posy>
+							<left>10</left>
+							<top>0</top>
 							<width>30</width>
 							<height>30</height>
 							<texture background="true">bookmark.png</texture>
@@ -225,8 +225,8 @@
 						
 						<control type="textbox">
 						
-							<posx>6</posx>
-							<posy>102</posy>
+							<left>6</left>
+							<top>102</top>
 							<width>156</width>
 							<height>85</height>
 							<label>$VAR[Landscape_Header]</label>
@@ -240,8 +240,8 @@
 						
 						<control type="image">
 						
-							<posx>35</posx>
-							<posy>205</posy>
+							<left>35</left>
+							<top>205</top>
 							<width>100</width>
 							<height>20</height>
 							<texture background="true">$INFO[ListItem.StarRating]</texture>
@@ -252,8 +252,8 @@
 						
 						<control type="label">
 						
-							<posx>6</posx>
-							<posy>240</posy>
+							<left>6</left>
+							<top>240</top>
 							<width>156</width>
 							<height>15</height>
 							<label>$VAR[Landscape_Detail]</label>
@@ -265,8 +265,8 @@
 						
 						<control type="label">
 						
-							<posx>160</posx>
-							<posy>240</posy>
+							<left>160</left>
+							<top>240</top>
 							<width>156</width>
 							<height>15</height>
 							<label>$INFO[ListItem.Property(UnWatchedEpisodes)]</label>
@@ -281,8 +281,8 @@
 						
 						<!--control type="image">
 							
-							<posx>148</posx>
-							<posy>236</posy>
+							<left>148</left>
+							<top>236</top>
 							<width>24</width>
 							<height>24</height>
 							<texture>$INFO[ListItem.Overlay]</texture>
@@ -290,8 +290,8 @@
 							<visible>!Skin.HasSetting(WatchedOverlays)</visible>
 						</control-->
 						<control type="image">
-							<posx>157</posx>
-							<posy>90</posy>
+							<left>157</left>
+							<top>90</top>
 							<width>20</width>
 							<height>20</height>
 							<aspectratio align="left" aligny="center">stretch</aspectratio>
@@ -315,8 +315,8 @@
 				<textureslidernibfocus>buttons/scrollnibH.png</textureslidernibfocus>
 				<orientation>horizontal</orientation>
 				<showonepage>true</showonepage>
-				<posx>240</posx>
-				<posy>690</posy>
+				<left>240</left>
+				<top>690</top>
 				<width>950</width>
 				<height>10</height>
 				<onup>603</onup>

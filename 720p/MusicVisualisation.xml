@@ -7,15 +7,15 @@
 	<controls>
 		
 		<control type="visualisation"><!-- id="2" -->
-			<posx>0</posx>
-			<posy>0</posy>
+			<left>0</left>
+			<top>0</top>
 			<width>1280</width>
 			<height>720</height>
 		  
 		</control>
 		<control type="image">
-			<posx>0</posx>
-			<posy>0</posy>
+			<left>0</left>
+			<top>0</top>
 			<width>1280</width>
 			<height>730</height>
 			<aspectratio>stretch</aspectratio>
@@ -25,8 +25,8 @@
 			<animation effect="fade" start="80" end="90" time="90000" reversable="true" pulse="true" condition="true">Conditional</animation>
 		</control> 
 		<control type="multiimage">
-			<posx>0</posx>
-			<posy>0</posy>
+			<left>0</left>
+			<top>0</top>
 			<width>1280</width>
 			<height>720</height>
 			<aspectratio>stretch</aspectratio>
@@ -41,8 +41,8 @@
 		</control>
 
 		<control type="label">
-			<posx>70</posx>
-			<posy>55</posy>
+			<left>70</left>
+			<top>55</top>
 			<width>500</width>
 			<height>30</height>
 			<label>Next: $INFO[MusicPlayer.offset(1).Title] - $INFO[MusicPlayer.offset(1).Artist]</label>
@@ -62,13 +62,13 @@
 		
 		
 		<control type="group">
-		<posx>-160</posx>
-		<posy>0</posy>
+		<left>-160</left>
+		<top>0</top>
 		<animation effect="zoom" end="80" center="auto" time="0" condition="true">Conditional</animation>
 		
 			<control type="image">
-				<posx>70</posx>
-				<posy>105</posy>
+				<left>70</left>
+				<top>105</top>
 				<width>446</width>
 				<height>500</height>
 				<aspectratio>stretch</aspectratio>
@@ -78,8 +78,8 @@
 			</control>
 			
 			<control type="image">
-				<posx>108</posx>
-				<posy>108</posy>
+				<left>108</left>
+				<top>108</top>
 				<width>428</width>
 				<height>494</height>
 				<aspectratio>stretch</aspectratio>
@@ -90,8 +90,8 @@
 			</control>
 			
 			<control type="image">
-				<posx>112</posx>
-				<posy>109</posy>
+				<left>112</left>
+				<top>109</top>
 				<width>422</width>
 				<height>410</height>
 				<aspectratio scalediffuse="false">scale</aspectratio>
@@ -101,8 +101,8 @@
 
 			<control type="image">
 				<description>white image</description>
-				<posx>112</posx>
-				<posy>479</posy>
+				<left>112</left>
+				<top>479</top>
 				<width>420</width>
 				<height>120</height>
 				
@@ -111,8 +111,8 @@
 				<colordiffuse>FFEBEBEB</colordiffuse>
 			</control>
 			<control type="label">
-				<posx>125</posx>
-				<posy>480</posy>
+				<left>125</left>
+				<top>480</top>
 				<width>410</width>
 				<height>60</height>
 				<align>left</align>
@@ -124,8 +124,8 @@
 			</control>
 
 			<control type="label">
-				<posx>125</posx>
-				<posy>515</posy>
+				<left>125</left>
+				<top>515</top>
 				<width>410</width>
 				<height>60</height>
 				<label>$INFO[MusicPlayer.offset(1).Title] - $INFO[MusicPlayer.offset(1).Duration]</label>
@@ -138,12 +138,12 @@
 		
 	
 		<control type="group">
-			<posx>87</posx>
-			<posy>1</posy>
+			<left>87</left>
+			<top>1</top>
 
 			<control type="image">
-				<posx>60</posx>
-				<posy>105</posy>
+				<left>60</left>
+				<top>105</top>
 				<width>446</width>
 				<height>500</height>
 				<aspectratio>stretch</aspectratio>
@@ -155,8 +155,8 @@
 			<control type="group">
 			<visible>substring(MusicPlayer.Cover,DefaultAlbumCover.png)</visible>
 				<control type="image">
-					<posx>108</posx>
-					<posy>108</posy>
+					<left>108</left>
+					<top>108</top>
 					<width>428</width>
 					<height>494</height>
 					<aspectratio>stretch</aspectratio>
@@ -166,8 +166,8 @@
 					<colordiffuse>FFD7D7D7</colordiffuse>
 				</control>
 				<control type="image">
-					<posx>140</posx>
-					<posy>139</posy>
+					<left>140</left>
+					<top>139</top>
 					<width>122</width>
 					<height>110</height>
 					<aspectratio>keep</aspectratio>
@@ -179,8 +179,8 @@
 			<control type="group">
 			<visible>!substring(MusicPlayer.Cover,DefaultAlbumCover.png)</visible>
 				<control type="image">
-					<posx>108</posx>
-					<posy>108</posy>
+					<left>108</left>
+					<top>108</top>
 					<width>428</width>
 					<height>494</height>
 					<aspectratio>stretch</aspectratio>
@@ -191,8 +191,8 @@
 				</control>
 				
 				<control type="image">
-					<posx>113</posx>
-					<posy>113</posy>
+					<left>113</left>
+					<top>113</top>
 					<width>418</width>
 					<height>410</height>
 					<aspectratio scalediffuse="false">scale</aspectratio>
@@ -202,8 +202,8 @@
 			
 			<control type="image">
 				<description>white image</description>
-				<posx>112</posx>
-				<posy>436</posy>
+				<left>112</left>
+				<top>436</top>
 				<width>420</width>
 				<height>160</height>
 				
@@ -212,8 +212,8 @@
 				<colordiffuse>FFEBEBEB</colordiffuse>
 			</control>
 			<control type="label">
-				<posx>125</posx>
-				<posy>432</posy>
+				<left>125</left>
+				<top>432</top>
 				<width>410</width>
 				<height>60</height>
 				<align>left</align>
@@ -225,8 +225,8 @@
 			</control>
 
 			<control type="label">
-				<posx>125</posx>
-				<posy>467</posy>
+				<left>125</left>
+				<top>467</top>
 				<width>410</width>
 				<height>60</height>
 				<label>$INFO[MusicPlayer.Title]</label>
@@ -237,8 +237,8 @@
 
 			</control>
 			<control type="label">
-				<posx>125</posx>
-				<posy>523</posy>
+				<left>125</left>
+				<top>523</top>
 				<width min="29" max="200">auto</width>
 				<height>30</height>
 				<label>[UPPERCASE]$INFO[MusicPlayer.Time][/UPPERCASE]</label>
@@ -249,9 +249,9 @@
 				<animation effect="fade" start="0" end="57" time="0" reversable="false" condition="true">Conditional</animation>
 			</control>
 			<control type="label">
-				<posx>664</posx>
-				<posy>523</posy>
-				<width min="29" max="200">auto</width>
+				<left>315</left>
+				<top>523</top>
+				<width>200</width>
 				<height>30</height>
 				<label>[UPPERCASE]$INFO[MusicPlayer.Duration][/UPPERCASE]</label>
 				<font>MainMenu21</font>
@@ -266,12 +266,12 @@
 		
 		
 		<control type="group">
-			<posx>-57</posx>
-			<posy>496</posy>
+			<left>-57</left>
+			<top>496</top>
 			<animation effect="zoom" end="65" center="auto" time="0" condition="true">Conditional</animation>
 			<control type="image">
-				<posx>48</posx>
-				<posy>50</posy>
+				<left>48</left>
+				<top>50</top>
 				<width>605</width>
 				<height>7</height>
 				<texture>white.png</texture>
@@ -281,8 +281,8 @@
 			</control>
 			
 			<control type="progress" id="20">
-				<posx>48</posx>
-				<posy>48</posy>
+				<left>48</left>
+				<top>48</top>
 				<width>623</width>
 				<height>4</height>
 				<texturebg>osd/seek/progresscache_back.png</texturebg>
@@ -297,8 +297,8 @@
 					
 			<control type="slider" id="88">
 				<description>Seek Slider</description>
-				<posx>45</posx>
-				<posy>39</posy>
+				<left>45</left>
+				<top>39</top>
 				<width>630</width>
 				<height>5</height>
 				<onup>9000</onup>
@@ -312,7 +312,7 @@
 		</control>
 	</control>
 	
-	<include>LowBattery</include>
+	 
 </controls>
   
 </window>

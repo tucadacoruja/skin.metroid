@@ -5,8 +5,8 @@
 
 <coordinates>
   <system>1</system>
-  <posx>0</posx>
-  <posy>0</posy>
+  <left>0</left>
+  <top>0</top>
 </coordinates>
 
 <controls>
@@ -14,15 +14,15 @@
 
   
 	<control type="group"> 
-	  <posx>400</posx>
-	  <posy>95</posy>
+	  <left>400</left>
+	  <top>95</top>
 	  <animation effect="fade" start="100" end="0" time="150" condition="Window.IsVisible(locksettings) | Window.IsVisible(filebrowser) | Window.IsVisible(virtualkeyboard)">Conditional</animation>	  
 	  <animation effect="fade" start="10" end="100" time="150">WindowOpen</animation>	  
 		
 		<!-- control type="image">
 			<description>background image</description>
-			<posx>15</posx>
-			<posy>20</posy>
+			<left>15</left>
+			<top>20</top>
 			<width>662</width>
 			<height>545</height>
 			<aspectratio>stretch</aspectratio>
@@ -31,8 +31,8 @@
 		</control -->	
 		<control type="image">
 			<description>background image</description>
-			<posx>-16</posx>
-			<posy>-20</posy>
+			<left>-16</left>
+			<top>-20</top>
 			<width>722</width>
 			<height>615</height>
 			<aspectratio>stretch</aspectratio>
@@ -42,8 +42,8 @@
 			
 	
 		<control type="image">
-			<posx>17</posx>
-			<posy>55</posy>
+			<left>17</left>
+			<top>55</top>
 			<width>660</width>
 			<height>1</height>
 			<aspectratio>stretch</aspectratio>
@@ -54,8 +54,8 @@
 		
 		<control type="label">
 			<description>header label</description>
-			<posx>20</posx>
-			<posy>14</posy>
+			<left>20</left>
+			<top>14</top>
 			<width>660</width>
 			<height>30</height>
 			<font>heading</font>
@@ -66,8 +66,8 @@
 		</control>
 		<control type="image" id="2">
 			<description>profile image</description>
-			<posx>30</posx>
-			<posy>70</posy>
+			<left>30</left>
+			<top>70</top>
 			<width>150</width>
 			<height>150</height>
 			<align>left</align>
@@ -77,8 +77,8 @@
 		</control>
 		<control type="label">
 			<description>profile name label</description>
-			<posx>200</posx>
-			<posy>70</posy>
+			<left>200</left>
+			<top>70</top>
 			<width>460</width>
 			<align>left</align>
 			<font>DefaultButton</font>
@@ -87,8 +87,8 @@
 		</control>
 		<control type="label" id="1000">
 			<description>profile name Value</description>
-			<posx>200</posx>
-			<posy>95</posy>
+			<left>200</left>
+			<top>95</top>
 			<width>460</width>
 			<align>left</align>
 			<font>DefaultButton</font>
@@ -97,8 +97,8 @@
 		</control>
 		<control type="label">
 			<description>profile directory label</description>
-			<posx>200</posx>
-			<posy>155</posy>
+			<left>200</left>
+			<top>155</top>
 			<width>460</width>
 			<align>left</align>
 			<font>recent</font>
@@ -107,8 +107,8 @@
 		</control>
 		<control type="label" id="1001">
 			<description>profile directory Value</description>
-			<posx>200</posx>
-			<posy>180</posy>
+			<left>200</left>
+			<top>180</top>
 			<width>460</width>
 			<align>left</align>
 			<font>recent</font>
@@ -116,8 +116,8 @@
 			<colordiffuse>95FFFFFF</colordiffuse>
 		</control>
 		<control type="image">
-			<posx>9</posx>
-			<posy>243</posy>
+			<left>9</left>
+			<top>243</top>
 			<width>671</width>
 			<height>267</height>
 			<aspectratio>stretch</aspectratio>
@@ -125,8 +125,8 @@
 			<colordiffuse>11FFFFFF</colordiffuse>
 		</control>
 		<control type="image">
-			<posx>9</posx>
-			<posy>243</posy>
+			<left>9</left>
+			<top>243</top>
 			<width>671</width>
 			<height>1</height>
 			<aspectratio>stretch</aspectratio>
@@ -134,8 +134,8 @@
 			<colordiffuse>26FFFFFF</colordiffuse>
 		</control>
 		<control type="image">
-			<posx>9</posx>
-			<posy>510</posy>
+			<left>9</left>
+			<top>510</top>
 			<width>671</width>
 			<height>1</height>
 			<aspectratio>stretch</aspectratio>
@@ -144,8 +144,8 @@
 		</control>
 		<control type="grouplist" id="5">
 			<description>control area</description>
-			<posx>20</posx>
-			<posy>245</posy>
+			<left>20</left>
+			<top>245</top>
 			<width>660</width>
 			<height>240</height>
 			<itemgap>-1</itemgap>
@@ -158,8 +158,8 @@
 
 		<control type="button" id="7">
 			<description>Default Button</description>
-			<posx>0</posx>
-			<posy>0</posy>
+			<left>0</left>
+			<top>0</top>
 			<height>40</height>
 			<font>DefaultButton</font>
 			<align>left</align>
@@ -179,13 +179,13 @@
 			<texturefocus>setting.png</texturefocus>
 			<texturenofocus>-</texturenofocus>
 			<textoffsetx>20</textoffsetx>
-			<radioposx>743</radioposx>
+			<radioleft>743</radioleft>
 			<align>left</align>
 		</control>
 		<control type="spincontrolex" id="9">
 			<description>Default SpinControlex</description>
-			<posx>0</posx>
-			<posy>0</posy>
+			<left>0</left>
+			<top>0</top>
 			<height>40</height>
 			<font>DefaultButton</font>
 			<textoffsetx>20</textoffsetx>
@@ -204,8 +204,8 @@
 		
 		<control type="button" id="28">
 			<description>Ok Button</description>
-			<posx>145</posx>
-			<posy>517</posy>
+			<left>145</left>
+			<top>517</top>
 			<label>$LOCALIZE[186]</label>
 			<onleft>29</onleft>
 			<onright>29</onright>
@@ -216,8 +216,8 @@
 		</control>
 		<control type="button" id="29">
 			<description>Close Button</description>
-			<posx>355</posx>
-			<posy>517</posy>
+			<left>355</left>
+			<top>517</top>
 			<label>$LOCALIZE[222]</label>
 			<onleft>28</onleft>
 			<onright>28</onright>

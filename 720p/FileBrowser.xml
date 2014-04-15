@@ -5,8 +5,8 @@
   
 	<coordinates>
 		<system>1</system>
-		<posx>120</posx>
-		<posy>0</posy>
+		<left>120</left>
+		<top>0</top>
 	</coordinates>
 	
 
@@ -18,16 +18,16 @@
 	
 	<control type="list" id="451">
 		<description>List of available thumbnails</description>
-		<posx>-10</posx>
-		<posy>-10</posy>
+		<left>-10</left>
+		<top>-10</top>
 		<width>1</width>
 		<height>1</height>
 		<animation effect="fade" start="1" end="0" time="0" condition="true">Conditional</animation>
 	</control>
 	<control type="radiobutton" id="416">
 		<description>Flip Image horizontally</description>
-		<posx>-10</posx>
-		<posy>-10</posy>
+		<left>-10</left>
+		<top>-10</top>
 		<width>1</width>
 		<height>1</height>
 		<animation effect="fade" start="1" end="0" time="0" condition="true">Conditional</animation>
@@ -38,8 +38,8 @@
 	<visible>!Window.IsVisible(networksetup)</visible>
 	
 	<control type="image">
-		<posx>180</posx>
-		<posy>111</posy>			
+		<left>180</left>
+		<top>111</top>			
 		<width>942</width>
 		<height>482</height>
 		<aspectratio>stretch</aspectratio>
@@ -48,8 +48,8 @@
 	</control>
   	<control type="label" id="411">
 		<description>Heading</description>
-		<posx>222</posx>
-		<posy>140</posy>
+		<left>222</left>
+		<top>140</top>
 		<width>679</width>
 		<height>37</height>
 		<font>homemenu3</font>
@@ -61,8 +61,8 @@
 
 	<control type="label" id="412">
 		<description>Path</description>
-		<posx>222</posx>
-		<posy>520</posy>
+		<left>222</left>
+		<top>520</top>
 		<width>530</width>
 		<height>37</height>
 		<font>recent</font>
@@ -72,8 +72,8 @@
 		<haspath>true</haspath>
 	</control>
 	<control type="image">
-		<posx>927</posx>
-		<posy>382</posy>			
+		<left>927</left>
+		<top>382</top>			
 		<width>161</width>
 		<height>161</height>
 		<aspectratio>stretch</aspectratio>
@@ -82,8 +82,8 @@
 	</control>
 	<control type="image">
 		<description>Large Icon Image</description>
-		<posx>938</posx>
-		<posy>393</posy>
+		<left>938</left>
+		<top>393</top>
 		<width>140</width>
 		<height>140</height>
 		<info>ListItem.Icon</info>
@@ -95,8 +95,8 @@
 
 		
 		<control type="list" id="450">
-			<posx>221</posx>
-			<posy>172</posy>
+			<left>221</left>
+			<top>172</top>
 			<width>663</width>
 			<height>345</height>
 			<onup>450</onup>
@@ -112,8 +112,8 @@
 			<itemlayout height="37">
 			
 				<control type="image">
-					<posx>0</posx>
-					<posy>46</posy>
+					<left>0</left>
+					<top>46</top>
 					<width>689</width>
 					<height>1</height>
 					<aspectratio>stretch</aspectratio>
@@ -121,16 +121,16 @@
 					<colordiffuse>26FFFFFF</colordiffuse>
 				</control>
 				<control type="image">
-					<posx>3</posx>
-					<posy>12</posy>
+					<left>3</left>
+					<top>12</top>
 					<width>32</width>
 					<height>32</height>
 					<texture>$INFO[ListItem.Icon]</texture>
 					
 				</control>
 				<control type="label">
-					<posx>45</posx>
-					<posy>7</posy>
+					<left>45</left>
+					<top>7</top>
 					<width>530</width>
 					<height>37</height>
 					<font>recent</font>
@@ -145,8 +145,8 @@
 			
 			<focusedlayout height="37">
 				<control type="image">
-					<posx>0</posx>
-					<posy>10</posy>
+					<left>0</left>
+					<top>10</top>
 					<width>689</width>
 					<height>37</height>
 					<texture>setting.png</texture>
@@ -156,16 +156,16 @@
 					<animation effect="fade" start="0" end="40" time="0" condition="true">Conditional</animation>
 				</control>
 				<control type="image">
-					<posx>3</posx>
-					<posy>12</posy>
+					<left>3</left>
+					<top>12</top>
 					<width>32</width>
 					<height>32</height>
 					<texture>$INFO[ListItem.Icon]</texture>
 					
 				</control>
 				<control type="label">
-					<posx>45</posx>
-					<posy>7</posy>
+					<left>45</left>
+					<top>7</top>
 					<width>530</width>
 					<height>37</height>
 					<font>recent</font>
@@ -185,8 +185,8 @@
 			<textureslidernibfocus>buttons/scrollnibV.png</textureslidernibfocus>
 			<orientation>Vertical</orientation>
 			<showonepage>true</showonepage>
-			<posx>887</posx>
-			<posy>181</posy>
+			<left>887</left>
+			<top>181</top>
 			<width>10</width>
 			<height>335</height>
 
@@ -199,8 +199,8 @@
 		</control>
 		
  		<control type="group" id="9000">
-			<posx>921</posx>
-			<posy>170</posy>
+			<left>921</left>
+			<top>170</top>
 			<animation type="Conditional" condition="Window.IsVisible(128)">
 				<effect type="fade" start="100" end="0" time="400" />
 				<effect type="zoom" start="100" end="80" center="auto" time="300" />
@@ -217,7 +217,7 @@
 			</control>
 			<control type="button" id="414">
 				<description>cancel Button</description>
-				<posy>55</posy>
+				<top>55</top>
 				<label>$LOCALIZE[222]</label>
 				<onup>413</onup>
 				<onleft>450</onleft>
@@ -228,7 +228,7 @@
 			</control>
 			<control type="button" id="415">
 				<description>new folder Button</description>
-				<posy>110</posy>
+				<top>110</top>
 				<label>$LOCALIZE[119]</label>
 			
 					

@@ -4,15 +4,15 @@
 	<allowoverlay>no</allowoverlay>
 	<coordinates>
 		<system>1</system>
-		<posx>360</posx>
-		<posy>55</posy>
+		<left>360</left>
+		<top>55</top>
 	</coordinates>
 	<controls>
 	
 	<control type="label" id="2">
 		<description>Heading</description>
-		<posx>222</posx>
-		<posy>140</posy>
+		<left>222</left>
+		<top>140</top>
 		<width>679</width>
 		<height>37</height>
 		<font>homemenu3</font>
@@ -31,8 +31,8 @@
 				
 			<control type="image">
 				<description>name bg image</description>
-				<posx>15</posx>
-				<posy>65</posy>
+				<left>15</left>
+				<top>65</top>
 				<width>770</width>
 				<height>136</height>
 				<texture border="12">white.png</texture>
@@ -41,8 +41,8 @@
 			</control>
 			<control type="image">
 				<description>rules bg image</description>
-				<posx>15</posx>
-				<posy>240</posy>
+				<left>15</left>
+				<top>240</top>
 				<width>770</width>
 				<height>131</height>
 				<texture border="12">white.png</texture>
@@ -51,8 +51,8 @@
 			</control>
 			<control type="image">
 				<description>rules bg image</description>
-				<posx>20</posx>
-				<posy>245</posy>
+				<left>20</left>
+				<top>245</top>
 				<width>560</width>
 				<height>121</height>
 				<texture border="12">white.png</texture>
@@ -62,8 +62,8 @@
 			
 			<control type="image">
 				<description>exceptions bg image</description>
-				<posx>15</posx>
-				<posy>409</posy>
+				<left>15</left>
+				<top>409</top>
 				<width>770</width>
 				<height>175</height>
 				<texture border="12">white.png</texture>
@@ -73,8 +73,8 @@
 			
 			<control type="image">
 				<description>background image</description>
-				<posx>-14</posx>
-				<posy>-4</posy>
+				<left>-14</left>
+				<top>-4</top>
 				<width>826</width>
 				<height>680</height>
 				<texture border="62">dialog/contentbg2.png</texture>
@@ -85,8 +85,8 @@
 			
 			<control type="label" id="2">
 				<description>Heading</description>
-				<posx>30</posx>
-				<posy>25</posy>
+				<left>30</left>
+				<top>25</top>
 				<width>740</width>
 				<height>37</height>
 				<font>homemenu3</font>
@@ -98,8 +98,8 @@
 	
 			<!--  control type="label">
 				<description>rules label</description>
-				<posx>30</posx>
-				<posy>33</posy>
+				<left>30</left>
+				<top>33</top>
 				<width>740</width>
 				<align>left</align>
 				<label>31173</label>
@@ -108,8 +108,8 @@
 			</control>
 			<!--  control type="label">
 				<description>rules label</description>
-				<posx>30</posx>
-				<posy>375</posy>
+				<left>30</left>
+				<top>375</top>
 				<width>740</width>
 				<align>left</align>
 				<label>31174</label>
@@ -118,8 +118,8 @@
 			</control -->
 			<control type="spincontrolex" id="22">
 				<description>Set Playlist type</description>
-				<posx>20</posx>
-				<posy>74</posy>
+				<left>20</left>
+				<top>74</top>
 				<width>760</width>
 				<height>40</height>
 				<label>467</label>
@@ -136,8 +136,8 @@
 			</control>
 			<control type="label">
 				<description>Name Label</description>
-				<posx>30</posx>
-				<posy>125</posy>
+				<left>30</left>
+				<top>125</top>
 				<width>740</width>
 				<label>21433</label>
 				<font>about</font>
@@ -145,8 +145,8 @@
 			</control>
 			<control type="edit" id="12">
 				<description>Name Button</description>
-				<posx>20</posx>
-				<posy>155</posy>
+				<left>20</left>
+				<top>155</top>
 				<width>760</width>
 				<height>40</height>
 				<textoffsetx>10</textoffsetx>
@@ -167,8 +167,8 @@
 			</control>
 			<control type="label">
 				<description>rules label</description>
-				<posx>30</posx>
-				<posy>210</posy>
+				<left>30</left>
+				<top>210</top>
 				<width>740</width>
 				<align>left</align>
 				<label>21434</label>
@@ -177,8 +177,8 @@
 			</control>
 			<control type="list" id="10">
 				<description>Rules List Control</description>
-				<posx>20</posx>
-				<posy>245</posy>
+				<left>20</left>
+				<top>245</top>
 				<width>560</width>
 				<height>121</height>
 				<onup>12</onup>
@@ -187,8 +187,8 @@
 				<ondown>16</ondown>
 				<itemlayout width="560" height="40">
 					<control type="label">
-						<posx>10</posx>
-						<posy>0</posy>
+						<left>10</left>
+						<top>0</top>
 						<width>545</width>
 						<height>40</height>
 						<aligny>center</aligny>
@@ -200,8 +200,8 @@
 				</itemlayout>
 				<focusedlayout width="560" height="40">
 					<control type="image">
-						<posx>0</posx>
-						<posy>0</posy>
+						<left>0</left>
+						<top>0</top>
 						<width>560</width>
 						<height>41</height>
 						<texture>setting.png</texture>
@@ -210,8 +210,8 @@
 					</control>
 								
 					<control type="label">
-						<posx>10</posx>
-						<posy>0</posy>
+						<left>10</left>
+						<top>0</top>
 						<width>540</width>
 						<height>40</height>
 						<aligny>center</aligny>
@@ -225,8 +225,8 @@
 			<control type="group" id="9000">
 				<control type="button" id="13">
 					<description>Add Rule Button</description>
-					<posx>593</posx>
-					<posy>245</posy>
+					<left>593</left>
+					<top>245</top>
 					<width>180</width>
 					<height>41</height>
 					<label>15019</label>
@@ -242,8 +242,8 @@
 				</control>
 				<control type="button" id="14">
 					<description>Remove Rule Button</description>
-					<posx>593</posx>
-					<posy>285</posy>
+					<left>593</left>
+					<top>285</top>
 					<height>41</height>
 					<width>180</width>
 					<label>1210</label>
@@ -259,8 +259,8 @@
 				</control>
 				<control type="button" id="15">
 					<description>Edit Rule Button</description>
-					<posx>593</posx>
-					<posy>325</posy>
+					<left>593</left>
+					<top>325</top>
 					<height>41</height>
 					<width>180</width>
 					<label>21435</label>
@@ -278,8 +278,8 @@
 
 			<control type="label">
 				<description>Name Label</description>
-				<posx>30</posx>
-				<posy>380</posy>
+				<left>30</left>
+				<top>380</top>
 				<width>740</width>
 				<label>31325</label>
 				<font>about</font>
@@ -287,8 +287,8 @@
 				<shadowcolor>list</shadowcolor>
 			</control>
 			<control type="spincontrolex" id="16">
-				<posx>20</posx>
-				<posy>415</posy>
+				<left>20</left>
+				<top>415</top>
 				<width>760</width>
 				<height>41</height>
 				<label>21424</label>
@@ -305,8 +305,8 @@
 			</control>
 
 			<control type="spincontrolex" id="17">
-				<posx>20</posx>
-				<posy>455</posy>
+				<left>20</left>
+				<top>455</top>
 				<width>760</width>
 				<height>41</height>
 				<label>21427</label>
@@ -323,8 +323,8 @@
 			</control>
 
 			<control type="spincontrolex" id="18">
-				<posx>20</posx>
-				<posy>495</posy>
+				<left>20</left>
+				<top>495</top>
 				<width>560</width>
 				<height>41</height>
 				<label>21429</label>
@@ -341,8 +341,8 @@
 			</control>
 			
 			<control type="togglebutton" id="19">
-				<posx>595</posx>
-				<posy>495</posy>
+				<left>595</left>
+				<top>495</top>
 				<width>180</width>
 				<height>40</height>
 				<font>about</font>
@@ -363,8 +363,8 @@
 			</control>
 			
 			<control type="spincontrolex" id="23">
-				<posx>20</posx>
-				<posy>537</posy>
+				<left>20</left>
+				<top>537</top>
 				<width>460</width>
 				<height>41</height>
 				<description>Group by</description>
@@ -382,8 +382,8 @@
 				
 			</control>
 			<control type="radiobutton" id="24">
-				<posx>500</posx>
-				<posy>537</posy>
+				<left>500</left>
+				<top>537</top>
 				<width>280</width>
 				<height>40</height>
 				<font>about</font>
@@ -404,8 +404,8 @@
 			<control type="group" id="9001">
 				<control type="button" id="20">
 					<description>Ok Button</description>
-					<posx>195</posx>
-					<posy>593</posy>
+					<left>195</left>
+					<top>593</top>
 					<label>$LOCALIZE[186]</label>
 					<onup>18</onup>
 					<onleft>21</onleft>
@@ -416,8 +416,8 @@
 				</control>
 				<control type="button" id="21">
 					<description>Cancel Button</description>
-					<posx>405</posx>
-					<posy>593</posy>
+					<left>405</left>
+					<top>593</top>
 					<label>$LOCALIZE[222]</label>
 					<onup>18</onup>
 					<onleft>20</onleft>

@@ -3,8 +3,8 @@
 	
 <include name="Polaroid">
 	<control type="group">
-		<posx>-43</posx>
-		<posy>15</posy>
+		<left>-43</left>
+		<top>15</top>
 
 		<include>InfoOpenClose</include>
 		<include>MusicInfoOpenClose</include>
@@ -18,8 +18,8 @@
 		
 		<control type="list" id="602">
 			<viewtype label="Polaroid">list</viewtype>
-			<posx>670</posx>
-			<posy>75</posy>
+			<left>670</left>
+			<top>75</top>
 			<width>700</width>
 			<height>613</height><!-- -438 -->
 			<scrolltime>2</scrolltime>
@@ -35,8 +35,8 @@
 
 			<itemlayout width="633" height="45">
 					<control type="label">
-						<posy>0</posy>
-						<posx>580</posx>
+						<top>0</top>
+						<left>580</left>
 						<width>652</width>
 						<height>40</height>
 						<textcolor>9bffffff</textcolor>
@@ -50,8 +50,8 @@
 				
 					<control type="label">
 					
-						  <posy>0</posy>
-						  <posx>600</posx>
+						  <top>0</top>
+						  <left>600</left>
 						  <width>652</width>
 						  <height>40</height>
 						  <textcolor>9bffffff</textcolor>
@@ -64,8 +64,8 @@
 					
 					
 					<control type="label">
-						<posx>580</posx>
-						<posy>-2</posy>
+						<left>580</left>
+						<top>-2</top>
 						<width>433</width>
 						<height>40</height>
 						<align>right</align>
@@ -77,8 +77,8 @@
 						<visible>Container.Content(songs)</visible>
 					</control>
 					<control type="label">
-						<posx>580</posx>
-						<posy>-2</posy>
+						<left>580</left>
+						<top>-2</top>
 						<width>433</width>
 						<height>40</height>
 						<align>right</align>
@@ -95,8 +95,8 @@
 			<focusedlayout width="633" height="64">
 			
 					<control type="image">
-						<posx>169</posx>
-						<posy>-5</posy>
+						<left>169</left>
+						<top>-5</top>
 						<width>480</width>
 						<height>65</height>
 						<aspectratio scalediffuse="false">stretch</aspectratio>
@@ -105,8 +105,8 @@
 						<visible>Control.HasFocus(602)</visible>
 					</control>	
 					<control type="label">
-						<posy>3</posy>
-						<posx>580</posx>
+						<top>3</top>
+						<left>580</left>
 						<width>552</width>
 						<height>40</height>
 						<textcolor>9bffffff</textcolor>
@@ -119,8 +119,8 @@
 					</control>		
 					<control type="label">
 					
-						  <posy>4</posy>
-						  <posx>600</posx>
+						  <top>4</top>
+						  <left>600</left>
 						  <width>652</width>
 						  <height>40</height>
 						  <textcolor>ffffffff</textcolor>
@@ -134,8 +134,8 @@
 					
 					
 					<control type="label">
-						<posx>580</posx>
-						<posy>-8</posy>
+						<left>580</left>
+						<top>-8</top>
 						<width>433</width>
 						<height>40</height>
 						<align>right</align>
@@ -146,8 +146,8 @@
 						<visible>Container.Content(songs) + Control.HasFocus(602)</visible>
 					</control>
 					<control type="label">
-						<posx>580</posx>
-						<posy>-8</posy>
+						<left>580</left>
+						<top>-8</top>
 						<width>433</width>
 						<height>40</height>
 						<align>right</align>
@@ -158,8 +158,8 @@
 						<visible>Container.Content(songs) + !Control.HasFocus(602)</visible>
 					</control>
 					<control type="label">
-						<posx>580</posx>
-						<posy>-8</posy>
+						<left>580</left>
+						<top>-8</top>
 						<width>433</width>
 						<height>40</height>
 						<align>right</align>
@@ -170,8 +170,8 @@
 						<visible>Window.IsVisible(pictures)</visible>
 					</control>
 					<control type="label">
-						<posx>580</posx>
-						<posy>20</posy>
+						<left>580</left>
+						<top>20</top>
 						<width>633</width>
 						<height>40</height>
 						<align>right</align>
@@ -181,8 +181,8 @@
 						<selectedcolor>lightblue</selectedcolor>
 					</control>
 					<control type="label">
-						<posx>580</posx>
-						<posy>20</posy>
+						<left>580</left>
+						<top>20</top>
 						<width>633</width>
 						<height>40</height>
 						<align>right</align>
@@ -197,21 +197,21 @@
 		
 		
 		<control type="group">
-		<posx>270</posx>
+		<left>270</left>
 		<animation effect="zoom" end="92" center="auto" time="0" condition="true">Conditional</animation>
 		<animation effect="slide" start="0,0" end="-140,0" time="400" condition="!Control.HasFocus(301) + !Skin.HasSetting(LockMainMenu)">Conditional</animation>
 		
 				<control type="group">
-				<posy>-45</posy>
-				<posx>-5</posx>
+				<top>-45</top>
+				<left>-5</left>
 					
 					<animation effect="rotate" end="10" center="auto" time="0" condition="true">Conditional</animation>
 					<animation effect="slide" start="0,0" end="-80,0" time="600" condition="!Control.HasFocus(301) + !Skin.HasSetting(LockMainMenu)">Conditional</animation>
 		
 	
 					<control type="image">
-						<posx>70</posx>
-						<posy>105</posy>
+						<left>70</left>
+						<top>105</top>
 						<width>446</width>
 						<height>500</height>
 						<aspectratio>stretch</aspectratio>
@@ -221,8 +221,8 @@
 					</control>
 					
 					<control type="image">
-						<posx>108</posx>
-						<posy>108</posy>
+						<left>108</left>
+						<top>108</top>
 						<width>428</width>
 						<height>494</height>
 						<aspectratio>stretch</aspectratio>
@@ -233,8 +233,8 @@
 					</control>
 					
 					<control type="image">
-						<posx>112</posx>
-						<posy>109</posy>
+						<left>112</left>
+						<top>109</top>
 						<width>420</width>
 						<height>410</height>
 						<aspectratio scalediffuse="false">scale</aspectratio>
@@ -244,8 +244,8 @@
 
 					<control type="image">
 						<description>white image</description>
-						<posx>112</posx>
-						<posy>479</posy>
+						<left>112</left>
+						<top>479</top>
 						<width>420</width>
 						<height>120</height>
 						
@@ -259,8 +259,8 @@
 				
 				
 			<control type="image">
-				<posx>70</posx>
-				<posy>105</posy>
+				<left>70</left>
+				<top>105</top>
 				<width>446</width>
 				<height>520</height>
 				<aspectratio>stretch</aspectratio>
@@ -270,8 +270,8 @@
 			</control>
 			
 			<control type="image">
-				<posx>108</posx>
-				<posy>108</posy>
+				<left>108</left>
+				<top>108</top>
 				<width>428</width>
 				<height>494</height>
 				<aspectratio>stretch</aspectratio>
@@ -283,8 +283,8 @@
 				<colordiffuse>FFD7D7D7</colordiffuse>
 			</control>
 			<control type="image">
-				<posx>140</posx>
-				<posy>139</posy>
+				<left>140</left>
+				<top>139</top>
 				<width>122</width>
 				<height>110</height>
 				<aspectratio>keep</aspectratio>
@@ -294,8 +294,8 @@
 			</control>
 			
 			<control type="image">
-				<posx>108</posx>
-				<posy>108</posy>
+				<left>108</left>
+				<top>108</top>
 				<width>428</width>
 				<height>494</height>
 				<aspectratio>stretch</aspectratio>
@@ -307,8 +307,8 @@
 				<animation effect="fade" start="0" end="80" time="0" condition="true">Conditional</animation>
 			</control>
 			<control type="image">
-				<posx>113</posx>
-				<posy>113</posy>
+				<left>113</left>
+				<top>113</top>
 				<width>418</width>
 				<height>410</height>
 				<aspectratio scalediffuse="false">scale</aspectratio>
@@ -318,8 +318,8 @@
 			
 			<control type="image">
 				<description>white image</description>
-				<posx>113</posx>
-				<posy>479</posy>
+				<left>113</left>
+				<top>479</top>
 				<width>418</width>
 				<height>120</height>
 				
@@ -328,8 +328,8 @@
 				<colordiffuse>FFEBEBEB</colordiffuse>
 			</control>
 			<control type="label">
-				<posx>125</posx>
-				<posy>485</posy>
+				<left>125</left>
+				<top>485</top>
 				<width>410</width>
 				<height>60</height>
 				<align>left</align>
@@ -342,8 +342,8 @@
 			</control>
 
 			<control type="label">
-				<posx>125</posx>
-				<posy>525</posy>
+				<left>125</left>
+				<top>525</top>
 				<width>410</width>
 				<height>60</height>
 				<label>[UPPERCASE]$INFO[ListItem.Title] - $INFO[ListItem.Duration][/UPPERCASE]</label>
@@ -368,8 +368,8 @@
 			<textureslidernibfocus>buttons/scrollnibV.png</textureslidernibfocus>
 			<orientation>Vertical</orientation>
 			<showonepage>true</showonepage>
-			<posx>325</posx>
-			<posy>80</posy>
+			<left>325</left>
+			<top>80</top>
 			<width>10</width>
 			<height>600</height>
 			<onleft>300</onleft>

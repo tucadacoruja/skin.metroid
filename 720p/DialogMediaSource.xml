@@ -4,8 +4,8 @@
 	
 	<coordinates>
 		<system>1</system>
-		<posx>120</posx>
-		<posy>0</posy>
+		<left>120</left>
+		<top>0</top>
 	</coordinates>
 	
 
@@ -15,8 +15,8 @@
 		<include>DialogEffect</include>
 		
 		<control type="image">
-			<posx>180</posx>
-			<posy>111</posy>			
+			<left>180</left>
+			<top>111</top>			
 			<width>942</width>
 			<height>482</height>
 			<aspectratio>stretch</aspectratio>
@@ -25,8 +25,8 @@
 		</control>
 
 		<control type="label"><!-- id="2" -->
-			<posx>222</posx>
-			<posy>137</posy>
+			<left>222</left>
+			<top>137</top>
 			<width>679</width>
 			<height>37</height>
 			<font>homemenu3</font>
@@ -37,8 +37,8 @@
 		</control>
 
 		<control type="list" id="10">
-			<posx>211</posx>
-			<posy>172</posy>
+			<left>211</left>
+			<top>172</top>
 			<width>675</width>
 			<height>309</height>
 			<onup>12</onup>
@@ -50,8 +50,8 @@
 			
 			<itemlayout height="37">
 				<control type="image">
-					<posx>0</posx>
-					<posy>10</posy>
+					<left>0</left>
+					<top>10</top>
 					<width>689</width>
 					<height>37</height>
 					<texture>list/listline.png</texture>
@@ -59,8 +59,8 @@
 					<colordiffuse>FFFFFFFF</colordiffuse>
 				</control>
 				<control type="label">
-					<posx>15</posx>
-					<posy>10</posy>
+					<left>15</left>
+					<top>10</top>
 					<width>530</width>
 					<height>37</height>
 					<font>recent</font>
@@ -74,8 +74,8 @@
 			</itemlayout>
 			<focusedlayout height="37">
 				<control type="image">
-					<posx>0</posx>
-					<posy>10</posy>
+					<left>0</left>
+					<top>10</top>
 					<width>689</width>
 					<height>37</height>
 					<texture>setting.png</texture>
@@ -84,8 +84,8 @@
 					<animation effect="fade" start="0" end="70" time="0" condition="true">Conditional</animation>
 				</control>
 				<control type="label">
-					<posx>15</posx>
-					<posy>10</posy>
+					<left>15</left>
+					<top>10</top>
 					<width>530</width>
 					<height>37</height>
 					<font>recent</font>
@@ -107,8 +107,8 @@
 			<textureslidernibfocus>buttons/scrollnibV.png</textureslidernibfocus>
 			<orientation>Vertical</orientation>
 			<showonepage>true</showonepage>
-			<posx>887</posx>
-			<posy>182</posy>
+			<left>887</left>
+			<top>182</top>
 			<width>10</width>
 			<height>295</height>
 
@@ -122,8 +122,8 @@
 		
 		<control type="button" id="12">
 			<description>Name Button</description>
-			<posx>225</posx>
-			<posy>512</posy>
+			<left>225</left>
+			<top>512</top>
 			<height>38</height>
 			<width>665</width>		
 			<onup>10</onup>
@@ -137,8 +137,8 @@
 		</control>
 		<control type="label">
 			<description>Name label</description>
-			<posx>222</posx>
-			<posy>480</posy>
+			<left>222</left>
+			<top>480</top>
 			<width>679</width>
 			<height>28</height>
 			<align>center</align>
@@ -150,8 +150,8 @@
 
 	
 		<control type="group" id="9000">
-			<posx>921</posx>
-			<posy>170</posy>
+			<left>921</left>
+			<top>170</top>
 			<control type="button" id="11">
 				<description>Browse Button</description>
 				<label>1024</label>
@@ -164,7 +164,7 @@
 			</control>
 			<control type="button" id="13">
 				<description>Add Path Button</description>
-				<posy>55</posy>
+				<top>55</top>
 				<label>15019</label>
 				<onup>11</onup>
 				<onleft>10</onleft>
@@ -175,7 +175,7 @@
 			</control>
 			<control type="button" id="14">
 				<description>Remove Path Button</description>
-				<posy>110</posy>
+				<top>110</top>
 				<label>1210</label>
 				<onup>13</onup>
 				<onleft>10</onleft>
@@ -187,8 +187,8 @@
 		</control>
 		
 		<control type="group" id="9001">
-			<posx>921</posx>
-			<posy>370</posy>
+			<left>921</left>
+			<top>370</top>
 			<control type="button" id="20">
 				<description>Set Content Button</description>
 				<label>20333</label>
@@ -201,7 +201,7 @@
 			</control>
 			<control type="button" id="18">
 				<description>Ok Button</description>
-				<posy>55</posy>
+				<top>55</top>
 				<label>186</label>
 				<onup>20</onup>
 				<onleft>10</onleft>
@@ -212,7 +212,7 @@
 			</control>
 			<control type="button" id="19">
 				<description>Cancel Button</description>
-				<posy>110</posy>
+				<top>110</top>
 				<label>222</label>
 				<onup>18</onup>
 				<onleft>10</onleft>

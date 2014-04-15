@@ -6,8 +6,8 @@
 <controls>
 
 <control type="label" id="40">
-	<posx>-10</posx>
-	<posy>-10</posy>
+	<left>-10</left>
+	<top>-10</top>
 	<width>1</width>
 	<height>1</height>
 	<visible>false</visible>
@@ -20,16 +20,16 @@
 
 
 	<control type="button" id="50">
-		<posx>10</posx>
-		<posy>10</posy>
+		<left>10</left>
+		<top>10</top>
 		<width>1</width>
 		<height>1</height>
 		<texture>black.png</texture>
 		<onfocus>SetFocus(9000)</onfocus>
 	</control>
 	<control type="button" id="300">
-		<posx>10</posx>
-		<posy>10</posy>
+		<left>10</left>
+		<top>10</top>
 		<width>1</width>
 		<height>1</height>
 		<texture>black.png</texture>
@@ -37,16 +37,16 @@
 	</control>
 
 	<control type="image">
-		<posx>0</posx>
-		<posy>65</posy>
+		<left>0</left>
+		<top>65</top>
 		<width>250</width>
 		<height>660</height>
 		<aspectratio>stretch</aspectratio>
 		<texture>MetroidMenu.png</texture>
 	</control>
 	<control type="image">
-		<posx>235</posx>
-		<posy>65</posy>
+		<left>235</left>
+		<top>65</top>
 		<width>15</width>
 		<height>660</height>
 		<aspectratio>stretch</aspectratio>
@@ -66,8 +66,8 @@
 	</animation>   
 		
 	<control type="grouplist" id="9000">
-		<posx>2</posx>
-		<posy>66</posy>
+		<left>2</left>
+		<top>66</top>
 		<width>240</width>
 		<height>570</height>
 		<itemgap>0</itemgap>
@@ -166,8 +166,8 @@
 	</control>
 		
 	<control type="grouplist">
-		<posx>355</posx>
-		<posy>125</posy>
+		<left>355</left>
+		<top>125</top>
 		<width>810</width>
 		<height>480</height>
 		<itemgap>0</itemgap>
@@ -175,7 +175,7 @@
 	
 		<control type="label" id="2">
 			<description>2</description>
-			<posy>55</posy>
+			<top>55</top>
 			<label>-</label>
 			<align>left</align>
 			<textoffsetx>20</textoffsetx>
@@ -188,7 +188,7 @@
 		</control>
 		<control type="label" id="3">
 			<description>3</description>
-			<posy>55</posy>
+			<top>55</top>
 			<label>-</label>
 			<align>left</align>
 			<textoffsetx>20</textoffsetx>
@@ -199,7 +199,7 @@
 		</control>
 		<control type="label" id="4">
 			<description>4</description>
-			<posy>55</posy>
+			<top>55</top>
 			<label>-</label>
 			<align>left</align>
 			<textoffsetx>20</textoffsetx>
@@ -210,7 +210,7 @@
 		</control>
 		<control type="label" id="5">
 			<description>5</description>
-			<posy>55</posy>
+			<top>55</top>
 			<label>-</label>
 			<align>left</align>
 			<textoffsetx>20</textoffsetx>
@@ -221,7 +221,7 @@
 		</control>
 		<control type="label" id="6">
 			<description>6</description>
-			<posy>55</posy>
+			<top>55</top>
 			<label>-</label>
 			<align>left</align>
 			<textoffsetx>20</textoffsetx>
@@ -232,7 +232,7 @@
 		</control>
 		<control type="label" id="7">
 			<description>7</description>
-			<posy>55</posy>
+			<top>55</top>
 			<label>-</label>
 			<align>left</align>
 			<textoffsetx>20</textoffsetx>
@@ -243,7 +243,7 @@
 		</control>
 		<control type="label" id="8">
 			<description>8</description>
-			<posy>55</posy>
+			<top>55</top>
 			<label>-</label>
 			<align>left</align>
 			<textoffsetx>20</textoffsetx>
@@ -254,7 +254,7 @@
 		</control>
 		<control type="label" id="9">
 			<description>9</description>
-			<posy>55</posy>
+			<top>55</top>
 			<label>-</label>
 			<align>left</align>
 			<textoffsetx>20</textoffsetx>
@@ -265,7 +265,7 @@
 		</control>
 		<control type="label" id="10">
 			<description>10</description>
-			<posy>55</posy>
+			<top>55</top>
 			<label>-</label>
 			<align>left</align>
 			<textoffsetx>20</textoffsetx>
@@ -276,7 +276,7 @@
 		</control>
 		<control type="label" id="11">
 			<description>11</description>
-			<posy>55</posy>
+			<top>55</top>
 			<label>-</label>
 			<align>left</align>
 			<textoffsetx>20</textoffsetx>
@@ -293,8 +293,8 @@
 
 	<control type="label" id="52">
 		<description>XBMC BUILD Version</description>
-		<posx>355</posx>
-		<posy>540</posy>
+		<left>355</left>
+		<top>540</top>
 
 		<align>left</align>
 		<textoffsetx>20</textoffsetx>
@@ -307,8 +307,8 @@
 	
 	<control type="button" id="444">
 	
-		<posx>1</posx>
-		<posy>617</posy>
+		<left>1</left>
+		<top>617</top>
 		<description>Back Button</description>
 		<height>50</height>
 		<width>247</width>
@@ -335,8 +335,8 @@
 	<textureslidernibfocus>buttons/scrollnibV.png</textureslidernibfocus>
 	<orientation>Vertical</orientation>
 	<showonepage>true</showonepage>
-	<posx>325</posx>
-	<posy>133</posy>
+	<left>325</left>
+	<top>133</top>
 	<width>10</width>
 	<height>450</height>
 	

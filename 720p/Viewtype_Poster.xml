@@ -17,8 +17,8 @@
 		<animation effect="slide" start="0,0" end="-190,0" time="400" condition="!Control.HasFocus(301) + !Skin.HasSetting(LockMainMenu)">Conditional</animation>
 		
 			<control type="label">
-				<posx>296</posx>
-				<posy>333</posy>
+				<left>296</left>
+				<top>333</top>
 				<width>870</width>
 				<font>Segoe28</font>
 				<textcolor>E1FFFFFF</textcolor>
@@ -28,8 +28,8 @@
 				
 			</control>
 			<control type="textbox">
-				<posx>296</posx>
-				<posy>365</posy>
+				<left>296</left>
+				<top>365</top>
 				<width>940</width>
 				<height>75</height>
 				<font>recent</font>
@@ -41,8 +41,8 @@
 				<visible>Control.HasFocus(301)</visible>
 			</control>
 			<control type="textbox">
-				<posx>296</posx>
-				<posy>365</posy>
+				<left>296</left>
+				<top>365</top>
 				<width>940</width>
 				<height>75</height>
 				<font>recent</font>
@@ -55,8 +55,8 @@
 			</control>
 			
 			<control type="textbox">
-				<posx>296</posx>
-				<posy>368</posy>
+				<left>296</left>
+				<top>368</top>
 				<width>1085</width>
 				<height>75</height>
 				<font>recent</font>
@@ -71,8 +71,8 @@
 			<control type="panel" id="579">
 				<visible>Container.Content(Movies) | Container.Content(TVShows) | Container.Content(seasons)</visible>
 				
-				<posx>295</posx>
-				<posy>92</posy>
+				<left>295</left>
+				<top>92</top>
 				
 				<include condition="!Skin.HasSetting(LockMainMenu)">PosterViewWidth1</include>
 				<include condition="Skin.HasSetting(LockMainMenu)">PosterViewWidth2</include>
@@ -98,8 +98,8 @@
 				<itemlayout height="368" width="157">
 					
 					<control type="image">
-						<posx>0</posx>
-						<posy>0</posy>
+						<left>0</left>
+						<top>0</top>
 						<width>150</width>
 						<height>220</height>
 						<aspectratio>stretch</aspectratio>
@@ -111,8 +111,8 @@
 				
 					</control>
 					<control type="image">
-						<posx>10</posx>
-						<posy>10</posy>
+						<left>10</left>
+						<top>10</top>
 						<width>120</width>
 						<height>190</height>
 						<aspectratio>stretch</aspectratio>
@@ -124,8 +124,8 @@
 						
 				<focusedlayout height="368" width="157">
 					<control type="image">
-						<posx>0</posx>
-						<posy>0</posy>
+						<left>0</left>
+						<top>0</top>
 						<width>150</width>
 						<height>220</height>
 						<aspectratio>stretch</aspectratio>
@@ -136,8 +136,8 @@
 		
 					</control>
 					<control type="image">
-						<posx>10</posx>
-						<posy>10</posy>
+						<left>10</left>
+						<top>10</top>
 						<width>120</width>
 						<height>190</height>
 						<aspectratio>stretch</aspectratio>
@@ -162,8 +162,8 @@
 			<textureslidernibfocus>buttons/scrollnibH.png</textureslidernibfocus>
 			<orientation>horizontal</orientation>
 			<showonepage>true</showonepage>
-			<posx>315</posx>
-			<posy>700</posy>
+			<left>315</left>
+			<top>700</top>
 			<width>920</width>
 			<height>10</height>
 			<onup>579</onup>

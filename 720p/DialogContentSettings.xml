@@ -3,8 +3,8 @@
 	<defaultcontrol always="true">3</defaultcontrol>
 	<coordinates>
 		<system>1</system>
-		<posx>120</posx>
-		<posy>0</posy>
+		<left>120</left>
+		<top>0</top>
 	</coordinates>
 		<include>DialogEffect</include>
 		
@@ -15,8 +15,8 @@
 	<include>DialogEffect</include>
 
 		<control type="image">
-			<posx>180</posx>
-			<posy>111</posy>			
+			<left>180</left>
+			<top>111</top>			
 			<width>942</width>
 			<height>482</height>
 			<aspectratio>stretch</aspectratio>
@@ -24,8 +24,8 @@
 			<!-- colordiffuse>FF707070</colordiffuse -->
 		</control>
 			<control type="label">
-			<posx>254</posx>
-			<posy>136</posy>
+			<left>254</left>
+			<top>136</top>
 			<width>556</width>
 			<height>40</height>
 			<font>homemenu3</font>
@@ -36,8 +36,8 @@
 		</control>
 		
 		<control type="image">
-			<posx>211</posx>
-			<posy>375</posy>
+			<left>211</left>
+			<top>375</top>
 			<width>689</width>
 			<height>1</height>
 			<aspectratio>stretch</aspectratio>
@@ -45,8 +45,8 @@
 			<colordiffuse>36FFFFFF</colordiffuse>
 		</control>
 		<control type="label">
-			<posx>229</posx>
-			<posy>375</posy>
+			<left>229</left>
+			<top>375</top>
 			<width>556</width>
 			<height>40</height>
 			<align>left</align>
@@ -55,8 +55,8 @@
 			<label>[B][UPPERCASE]$LOCALIZE[31187][/UPPERCASE][/B]</label>
 		</control>
 		<control type="image">
-			<posx>211</posx>
-			<posy>412S</posy>
+			<left>211</left>
+			<top>412S</top>
 			<width>689</width>
 			<height>1</height>
 			<aspectratio>stretch</aspectratio>
@@ -65,8 +65,8 @@
 		</control>
 			
 		<control type="image">
-			<posx>927</posx>
-			<posy>382</posy>			
+			<left>927</left>
+			<top>382</top>			
 			<width>161</width>
 			<height>161</height>
 			<aspectratio>stretch</aspectratio>
@@ -75,8 +75,8 @@
 		</control>
 		<control type="image">
 			<description>Large Icon Image</description>
-			<posx>938</posx>
-			<posy>393</posy>
+			<left>938</left>
+			<top>393</top>
 			<width>140</width>
 			<height>140</height>
 			<info>ListItem.Icon</info>
@@ -87,11 +87,11 @@
 		
 		
 	<control type="group" id="9002">
-		<posy>37</posy>
+		<top>37</top>
 		<control type="spincontrolex" id="3">
 			<description>Content Picker</description>
-			<posx>211</posx>
-			<posy>145</posy>
+			<left>211</left>
+			<top>145</top>
 			<width>688</width>
 			<height>37</height>
 			<onup>5</onup>
@@ -115,8 +115,8 @@
 	
 		
 		<control type="list" id="4">
-			<posx>211</posx>
-			<posy>183</posy>
+			<left>211</left>
+			<top>183</top>
 			<width>689</width>
 			<height>148</height>
 			<onup>3</onup>
@@ -128,7 +128,7 @@
 
 			<itemlayout height="40">
 				<control type="label">
-					<posx>15</posx>
+					<left>15</left>
 					<width>556</width>
 					<height>35</height>
 					<font>recent</font>
@@ -141,8 +141,8 @@
 			</itemlayout>
 			<focusedlayout height="40">
 				<control type="image">
-					<posx>0</posx>
-					<posy>0</posy>
+					<left>0</left>
+					<top>0</top>
 					<width>689</width>
 					<height>37</height>
 					<texture>setting.png</texture>
@@ -152,7 +152,7 @@
 					<animation effect="fade" start="100" end="50" time="0" condition="Control.HasFocus(4)">Conditional</animation>
 				</control>
 				<control type="label">
-					<posx>15</posx>
+					<left>15</left>
 					<width>556</width>
 					<height>35</height>
 					<font>recent</font>
@@ -167,8 +167,8 @@
 
 		<control type="grouplist" id="5">
 			<description>control area</description>
-			<posx>211</posx>
-			<posy>375</posy>
+			<left>211</left>
+			<top>375</top>
 			<width>690</width>
 			<height>220</height>
 			<itemgap>0</itemgap>
@@ -205,8 +205,8 @@
 	</control>	
 		
  		<control type="group" id="9001">
-			<posx>921</posx>
-			<posy>170</posy>
+			<left>921</left>
+			<top>170</top>
 			<control type="button" id="6">
 				<description>Settings Button</description>
    				<label>$LOCALIZE[5]</label>
@@ -219,7 +219,7 @@
 			</control>
 			<control type="button" id="28">
 				<description>OK Button</description>
-				<posy>55</posy>
+				<top>55</top>
 				<label>$LOCALIZE[186]</label>
 				<onup>6</onup>
 				<onleft>3</onleft>
@@ -230,7 +230,7 @@
 			</control>
 			<control type="button" id="29">
 				<description>Cancel Button</description>
-				<posy>110</posy>
+				<top>110</top>
 				<label>$LOCALIZE[222]</label>
 				<onup>28</onup>
 				<onleft>3</onleft>

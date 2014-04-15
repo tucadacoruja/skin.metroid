@@ -6,8 +6,8 @@
 	
 	<coordinates>
 		<system>1</system>
-		<posx>0</posx>
-		<posy>0</posy>
+		<left>0</left>
+		<top>0</top>
 	</coordinates>
 	
 	<animation type="WindowOpen">
@@ -25,8 +25,8 @@
 		<control type="group">
 
 			<animation effect="fade" start="100" end="0" time="10" condition="Window.IsVisible(visualisationpresetlist) | Window.IsVisible(addonsettings)">Conditional</animation>
-			<posx>620</posx>
-			<posy>60</posy>
+			<left>620</left>
+			<top>60</top>
 			<width>500</width>
 			<height>720</height>
 	
@@ -40,8 +40,8 @@
 			<control type="textbox" id="100">
 				
 				<description>textarea</description>
-				<posx>47</posx>
-				<posy>32</posy>
+				<left>47</left>
+				<top>32</top>
 				<width>360</width>
 				<height>440</height>
 				<onup>101</onup>
@@ -65,8 +65,8 @@
 			<control type="list" id="110">
 				
 				<pagecontrol>111</pagecontrol>
-				<posx>16</posx>
-				<posy>82</posy>
+				<left>16</left>
+				<top>82</top>
 				<width>536</width>
 				<height>400</height>
 				<viewtype label="535">list</viewtype>
@@ -75,8 +75,8 @@
 				<itemlayout height="40">
 					
 					<control type="label">
-						<posx>15</posx>
-						<posy>0</posy>
+						<left>15</left>
+						<top>0</top>
 						<width>536</width>
 						<height>32</height>
 						<info>ListItem.Label</info>
@@ -93,8 +93,8 @@
 					
 					<control type="image">
 					
-						<posx>0</posx>
-						<posy>0</posy>
+						<left>0</left>
+						<top>0</top>
 						<width>536</width>
 						<height>36</height>
 						<texture>setting.png</texture>
@@ -104,8 +104,8 @@
 				
 					<control type="label">
 					
-						<posx>15</posx>
-						<posy>0</posy>
+						<left>15</left>
+						<top>0</top>
 						<width>536</width>
 						<height>32</height>
 						<info>ListItem.Label</info>
@@ -131,8 +131,8 @@
 			<control type="list" id="120">
 
 				<pagecontrol>121</pagecontrol>
-				<posx>16</posx>
-				<posy>82</posy>
+				<left>16</left>
+				<top>82</top>
 				<width>536</width>
 				<height>400</height>
 				<viewtype label="535">list</viewtype>
@@ -141,8 +141,8 @@
 				<itemlayout height="40">
 					
 					<control type="label">
-						<posx>15</posx>
-						<posy>0</posy>
+						<left>15</left>
+						<top>0</top>
 						<width>536</width>
 						<height>32</height>
 						<info>ListItem.Label</info>
@@ -159,8 +159,8 @@
 				
 					<control type="image">
 					
-						<posx>0</posx>
-						<posy>0</posy>
+						<left>0</left>
+						<top>0</top>
 						<width>536</width>
 						<height>36</height>
 						<texture>setting.png</texture>
@@ -170,8 +170,8 @@
 					
 					<control type="label">
 					
-						<posx>15</posx>
-						<posy>0</posy>
+						<left>15</left>
+						<top>0</top>
 						<width>536</width>
 						<height>32</height>
 						<info>ListItem.Label</info>
@@ -196,8 +196,8 @@
 		</control>
 		
 		<control type="button">
-			<posx>90</posx>
-			<posy>90</posy>
+			<left>90</left>
+			<top>90</top>
 			<width>500</width>
 			<height>350</height>
 			<description>fullscreen back button</description>
@@ -209,8 +209,8 @@
 		
 		</control>
 		<control type="button">
-			<posx>1180</posx>
-			<posy>0</posy>
+			<left>1180</left>
+			<top>0</top>
 			<width>100</width>
 			<height>720</height>
 			<description>fullscreen back button</description>
@@ -222,14 +222,14 @@
 			<visible>!Control.IsVisible(musicosd)</visible>
 		</control>
 		<control type="group">
-			<posx>-60</posx>
-			<posy>488</posy>
+			<left>-60</left>
+			<top>488</top>
 			<visible>Window.IsActive(script-XBMC_Lyrics-main.xml)</visible>
 			<animation effect="zoom" end="65" center="auto" time="0" condition="true">Conditional</animation>
 			<control type="slider" id="187">
 				<description>Seek Slider</description>
-				<posx>45</posx>
-				<posy>37</posy>
+				<left>45</left>
+				<top>37</top>
 				<width>630</width>
 				<height>50</height>
 				<onup>1</onup>

@@ -5,8 +5,8 @@
   
 <coordinates>
   <system>1</system>
-  <posx>0</posx>
-  <posy>0</posy>
+  <left>0</left>
+  <top>0</top>
 </coordinates>
 
 <controls>
@@ -24,62 +24,31 @@
 <animation effect="fade" start="100" end="0" time="150">Hidden</animation>
 <animation effect="fade" start="0" end="100" time="150">Visible</animation>
 
-
-  
 	<control type="image">
-		<posx>68r</posx>
-		<posy>5</posy>
-		<height>55</height>
-		<width>55</width>
+		<include>SearchButton</include>
 		<texture>osd/GrayBackground.png</texture>
 		<aspectratio>stretch</aspectratio>
-		
 	</control>
+	
 	<control type="image">
-		<posx>68r</posx>
-		<posy>5</posy>
-		<width>55</width>
-		<height>55</height>
+		<include>SearchButton</include>
 		<aspectratio>stretch</aspectratio>
 		<texture>osd/getsub.png</texture>
-		
 	</control>
-  
-	
+  	
 	<control type="label" id="31">
-		<description>Header</description>
-		<posx>90r</posx>
-		<posy>-4</posy>
-		<width>500</width>
-		<height>42</height>
-		<label>-</label>
-		<font>Clock2</font>
-		<textcolor>FF959595</textcolor>
-		<align>right</align>
+		<include>TopLabelBig</include>
 		<haspath>yes</haspath>
-		<scroll>false</scroll>
-		  
 	</control>
-  
 	
 	<control type="label" id="30">
-		<description>line 2</description>
-		<posx>90r</posx>
-		<posy>23</posy>
-		<width>500</width>
-		<height>42</height>
-		<font>WeatherSmall</font>
-		<textcolor>FF707070</textcolor>
-		<align>right</align>
-		<label>-</label>
-		<scroll>false</scroll>
-		
+		<include>TopLabelSmall</include>
 	</control>
 		
 	<control type="progress" id="32">
 		<description>Progress Bar</description>
-		<posx>-55</posx>
-		<posy>62</posy>
+		<left>-55</left>
+		<top>62</top>
 		<width>1335</width>
 		<height>1</height>
 		<texturebg>DialogProgressBack.png</texturebg>
@@ -90,8 +59,8 @@
 		<visible>![Window.IsVisible(fullscreenvideo) | Window.IsVisible(visualisation)]</visible>
 	</control>
 	<control type="image">
-		<posx>0</posx>
-		<posy>63</posy><!-- animation coordinates have to match -->
+		<left>0</left>
+		<top>63</top><!-- animation coordinates have to match -->
 		
 		<height>10</height>
 		<width>110</width>

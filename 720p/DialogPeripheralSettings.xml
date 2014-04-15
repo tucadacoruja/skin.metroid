@@ -3,8 +3,8 @@
 	<defaultcontrol>5</defaultcontrol>
 	<coordinates>
 		<system>1</system>
-		<posx>400</posx>
-		<posy>90</posy>
+		<left>400</left>
+		<top>90</top>
 	</coordinates>
 	
 	<controls>
@@ -14,8 +14,8 @@
 		
 		<control type="image">
 			<description>background image</description>
-			<posx>-12</posx>
-			<posy>-11</posy>
+			<left>-12</left>
+			<top>-11</top>
 			<width>724</width>
 			<height>600</height>
 			<aspectratio>stretch</aspectratio>
@@ -25,8 +25,8 @@
 
 		<control type="label"><!-- id="1" -->
 			<description>header label</description>
-			<posx>40</posx>
-			<posy>23</posy>
+			<left>40</left>
+			<top>23</top>
 			<width>620</width>
 			<height>30</height>
 			<font>heading</font>
@@ -38,8 +38,8 @@
 		
 		<control type="label" id="3">
 			<description>No Settings Label</description>
-			<posx>20</posx>
-			<posy>180</posy>
+			<left>20</left>
+			<top>180</top>
 			<width>640</width>
 			<align>center</align>
 			<label>35004</label>
@@ -48,8 +48,8 @@
 		<control type="grouplist" id="5">
 			<animation effect="slide" start="0,0" end="5,0" time="0" condition="!Control.IsVisible(60)">Conditional</animation>
 			<description>control area</description>
-			<posx>30</posx>
-			<posy>70</posy>
+			<left>30</left>
+			<top>70</top>
 			<width>630</width>
 			<height>410</height>
 			<itemgap>5</itemgap>
@@ -60,8 +60,8 @@
 			<ondown>28</ondown>
 		</control>
 		<control type="scrollbar" id="60">
-			<posx>658</posx>
-			<posy>70</posy>
+			<left>658</left>
+			<top>70</top>
 			<width>25</width>
 			<height>410</height>
 			<colordiffuse>skin.string(MainColorString)</colordiffuse>
@@ -76,24 +76,24 @@
 		</control>
 		<control type="button" id="7">
 			<description>Default Button</description>
-			<posx>0</posx>
-			<posy>0</posy>
+			<left>0</left>
+			<top>0</top>
 			<texturefocus>setting.png</texturefocus>
 			<textoffsetx>3</textoffsetx>
 			<align>left</align>
 		</control>
 		<control type="radiobutton" id="8">
 			<description>Default RadioButton</description>
-			<posx>0</posx>
-			<posy>0</posy>
+			<left>0</left>
+			<top>0</top>
 			<texturefocus>setting.png</texturefocus>
 			<textoffsetx>3</textoffsetx>
 			<align>left</align>
 		</control>
 		<control type="spincontrolex" id="9">
 			<description>Default SpinControlex</description>
-			<posx>0</posx>
-			<posy>0</posy>
+			<left>0</left>
+			<top>0</top>
 			<texturefocus>setting.png</texturefocus>
 			<textoffsetx>3</textoffsetx>
 			<align>left</align>
@@ -112,12 +112,12 @@
 		</control>
 
 		<control type="group" id="9000">
-			<posx>40</posx>
-			<posy>505</posy>
+			<left>40</left>
+			<top>505</top>
 			<control type="button" id="29">
 				<description>Cancel Button</description>
-				<posy>0</posy>
-				<posx>0</posx>
+				<top>0</top>
+				<left>0</left>
 				<width>200</width>
 				<height>40</height>
 				<label>222</label>
@@ -129,8 +129,8 @@
 			</control>
 			<control type="button" id="28">
 				<description>OK Button</description>
-				<posy>0</posy>
-				<posx>210</posx>
+				<top>0</top>
+				<left>210</left>
 				<width>200</width>
 				<height>40</height>
 				<label>186</label>
@@ -142,8 +142,8 @@
 			</control>
 			<control type="button" id="50">
 				<description>Defaults Button</description>
-				<posy>0</posy>
-				<posx>420</posx>
+				<top>0</top>
+				<left>420</left>
 				<width>200</width>
 				<height>40</height>
 				<label>409</label>

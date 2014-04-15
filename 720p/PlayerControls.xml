@@ -3,19 +3,21 @@
 <defaultcontrol always="true">407</defaultcontrol>
 <allowoverlay>yes</allowoverlay>
 
-<onload condition="!Player.HasMedia | [Window.IsVisible(fullscreenvideo) | Window.IsVisible(visualisation)]">Dialog.Close(playercontrols)</onload>
+<onload>Dialog.Close(playercontrols)</onload>
+<onload condition="Player.HasMedia + ![Window.IsVisible(fullscreenvideo) | Window.IsVisible(visualisation)]">SetFocus(8888)</onload>
+
 
 <coordinates>
   <system>1</system>
-  <posx>0</posx>
-  <posy>0</posy>
+  <left>0</left>
+  <top>0</top>
 </coordinates>
   
 <controls>
 
 	<control type="button">
-		<posx>0</posx>
-		<posy>0</posy>
+		<left>0</left>
+		<top>0</top>
 		<width>1280</width>
 		<height>720</height>
 		<description>Invisible back button</description>
@@ -26,13 +28,14 @@
 		<onclick>back</onclick>
 		<animation effect="fade" start="1" end="1" time="0" condition="true">Conditional</animation>
 	</control>
-	<control type="group">
-	<visible>![Window.IsVisible(visualisation) | Window.IsVisible(fullscreenvideo)] | Window.IsVisible(volumebar)]</visible>
+	
+<!--control type="group">
+<visible>![Window.IsVisible(visualisation) | Window.IsVisible(fullscreenvideo)] | Window.IsVisible(volumebar)]</visible>
 	
 	
 	<control type="grouplist">
-			<posx>130</posx>
-			<posy>5</posy>
+			<left>130</left>
+			<top>5</top>
 			<width>500</width>
 			<height>100</height>
 			<align>left</align>
@@ -90,8 +93,8 @@
 	</control>		
 	<control type="grouplist" id="1">
 			
-			<posx>130</posx>
-			<posy>5</posy>
+			<left>130</left>
+			<top>5</top>
 			<width>500</width>
 			<height>100</height>
 			<align>left</align>
@@ -190,418 +193,10 @@
 			
 			
 				
-		</control>
+	</control>
 		
-	</control>
+</control>
 	
-	
-	
-	
-	<!-- fake musicOSD -->
-	<!-- control type="group">
-			<visible>Window.IsActive(script-XBMC_Lyrics-main.xml)</visible>
-			<posx>60r</posx>
-			<posy>-2</posy>
-			<width>200</width>
-			<height>720</height>
-			<align>center</align>
-			<orientation>vertical</orientation>
-			<animation type="WindowOpen">
-				<effect type="fade" start="0" end="100" time="300"/>
-				<effect type="slide" start="1400,0" end="0,0" time="300" tween="cubic" easing="out" />
-			</animation>
-			<animation type="WindowClose">
-				<effect type="fade" start="100" end="0" time="300"/>
-				<effect type="slide" start="0,0" end="1400,0" time="300" tween="cubic" easing="out" />
-			</animation>
-			
-			
-			
-			<control type="image">
-				<posy>5</posy>
-				<height>55</height>
-				<width>55</width>
-				<texture>osd/osdbg.png</texture>
-				<aspectratio>stretch</aspectratio>
-				<animation effect="fade" start="100" end="60" time="100" condition="Control.HasFocus(301)">Conditional</animation>
-			</control>
-			<control type="button" id="301">
-				<posy>5</posy>
-				<height>55</height>
-				<width>55</width>
-				<aspectratio>keep</aspectratio>
-				<texturefocus flipx="true">osd/ff.png</texturefocus>
-				<texturenofocus flipx="true">osd/ff.png</texturenofocus>
-				
-				<onclick>xbmc.playercontrol(rewind)</onclick>
-				<animation effect="zoom" start="100" end="120" center="auto" time="100">Focus</animation>
-				<animation effect="zoom" start="120" end="100" center="auto" time="100">UnFocus</animation>
-				
-				<onup>312</onup>
-				<ondown>302</ondown>
-			</control>
-			
-			
-			
-			<control type="image">
-				<posy>65</posy>
-				<height>55</height>
-				<width>55</width>
-				<texture>osd/osdbg.png</texture>
-				<aspectratio>stretch</aspectratio>
-				<animation effect="fade" start="100" end="60" time="100" condition="Control.HasFocus(302)">Conditional</animation>
-			</control>
-			<control type="togglebutton" id="302">
-				<description>Play</description>
-				<posy>65</posy>
-				<height>55</height>
-				<width>55</width>
-				<texturefocus>osd/play.png</texturefocus>
-				<texturenofocus>osd/play.png</texturenofocus>
-				<usealttexture>Player.Playing</usealttexture>
-				<alttexturefocus>osd/pause.png</alttexturefocus>
-				<alttexturenofocus>osd/pause.png</alttexturenofocus>
-				<onclick>playercontrol(play)</onclick>
-				<animation effect="zoom" start="100" end="120" center="auto" time="100">Focus</animation>
-				<animation effect="zoom" start="120" end="100" center="auto" time="100">UnFocus</animation>
-				
-				<onup>301</onup>
-				<ondown>303</ondown>
-			</control>
-			
-			
-			<control type="image">
-				<posy>125</posy>
-				<height>55</height>
-				<width>55</width>
-				<texture>osd/osdbg.png</texture>
-				<aspectratio>stretch</aspectratio>
-				<animation effect="fade" start="100" end="60" time="100" condition="Control.HasFocus(303)">Conditional</animation>
-			</control>
-			<control type="button" id="303">
-				<description>Rewind</description>
-				<posy>125</posy>
-				<height>55</height>
-				<width>55</width>
-				<aspectratio>keep</aspectratio>
-				<texturefocus>osd/ff.png</texturefocus>
-				<texturenofocus>osd/ff.png</texturenofocus>
-				
-				<onclick>xbmc.playercontrol(forward)</onclick>
-				
-				<animation effect="zoom" start="100" end="120" center="auto" time="100">Focus</animation>
-				<animation effect="zoom" start="120" end="100" center="auto" time="100">UnFocus</animation>
-				
-				<onup>302</onup>
-				<ondown>304</ondown>
-			</control>
-			
-			
-			<control type="image">
-				<posy>185</posy>
-				<height>55</height>
-				<width>55</width>
-				<texture>osd/osdbg.png</texture>
-				<aspectratio>stretch</aspectratio>
-				<animation effect="fade" start="100" end="60" time="100" condition="Control.HasFocus(304)">Conditional</animation>
-			</control>
-			<control type="button" id="304">
-				<description>skip</description>
-				<posy>185</posy>
-				<height>55</height>
-				<width>55</width>
-				<aspectratio>keep</aspectratio>
-				<texturefocus flipx="true">osd/skip.png</texturefocus>
-				<texturenofocus flipx="true">osd/skip.png</texturenofocus>
-				
-				<onclick>xbmc.playercontrol(previous)</onclick>
-				<animation effect="zoom" start="100" end="120" center="auto" time="100">Focus</animation>
-				<animation effect="zoom" start="120" end="100" center="auto" time="100">UnFocus</animation>
-				
-				<onup>303</onup>
-				<ondown>305</ondown>
-			</control>
-			
-			
-			<control type="image">
-				<posy>245</posy>
-				<height>55</height>
-				<width>55</width>
-				<texture>osd/osdbg.png</texture>
-				<aspectratio>stretch</aspectratio>
-				<animation effect="fade" start="100" end="60" time="100" condition="Control.HasFocus(305)">Conditional</animation>
-			</control>
-			<control type="button" id="305">
-				<description>Stop</description>
-				<posy>245</posy>
-				<height>55</height>
-				<width>55</width>
-				<aspectratio>keep</aspectratio>
-				<texturefocus>osd/stop.png</texturefocus>
-				<texturenofocus>osd/stop.png</texturenofocus>
-				
-				<onclick>xbmc.playercontrol(stop)</onclick>
-				<animation effect="zoom" start="100" end="120" center="auto" time="100">Focus</animation>
-				<animation effect="zoom" start="120" end="100" center="auto" time="100">UnFocus</animation>
-				
-				<onup>304</onup>
-				<ondown>306</ondown>
-			</control>
-			
-			
-			<control type="image">
-				<posy>305</posy>
-				<height>55</height>
-				<width>55</width>
-				<texture>osd/osdbg.png</texture>
-				<aspectratio>stretch</aspectratio>
-				<animation effect="fade" start="100" end="60" time="100" condition="Control.HasFocus(306)">Conditional</animation>
-			</control>
-			<control type="button" id="306">
-				<description>skip</description>
-				<posy>305</posy>
-				<height>55</height>
-				<width>55</width>
-				<aspectratio>keep</aspectratio>
-				<texturefocus>osd/skip.png</texturefocus>
-				<texturenofocus>osd/skip.png</texturenofocus>
-				
-				<onclick>xbmc.playercontrol(next)</onclick>
-				<animation effect="zoom" start="100" end="120" center="auto" time="100">Focus</animation>
-				<animation effect="zoom" start="120" end="100" center="auto" time="100">UnFocus</animation>
-				
-				<onup>305</onup>
-				<ondown>307</ondown>
-			</control>
-			
-			
-			<control type="image">
-				<posy>365</posy>
-				<height>55</height>
-				<width>55</width>
-				<texture>osd/osdbg.png</texture>
-				<aspectratio>stretch</aspectratio>
-				<animation effect="fade" start="100" end="60" time="100" condition="Control.HasFocus(307)">Conditional</animation>
-			</control>
-			<control type="button" id="307">
-				<description>settings</description>
-				<posy>365</posy>
-				<height>55</height>
-				<width>55</width>
-				<aspectratio>keep</aspectratio>
-				<texturefocus flipx="true">osd/settings.png</texturefocus>
-				<texturenofocus flipx="true">osd/settings.png</texturenofocus>
-				
-				
-				<onclick>Addon.Default.OpenSettings(xbmc.player.musicviz)</onclick>
-				<animation effect="zoom" start="100" end="120" center="auto" time="100">Focus</animation>
-				<animation effect="zoom" start="120" end="100" center="auto" time="100">UnFocus</animation>
-				
-				<onup>306</onup>
-				<ondown>308</ondown>
-			</control>
-			
-			
-			<control type="image">
-				<posy>425</posy>
-				<height>55</height>
-				<width>55</width>
-				<texture>osd/osdbg.png</texture>
-				<aspectratio>stretch</aspectratio>
-				<animation effect="fade" start="100" end="60" time="100" condition="Control.HasFocus(308)">Conditional</animation>
-			</control>
-			<control type="togglebutton" id="308">
-				<description>random</description>
-				<posy>425</posy>
-				<height>55</height>
-				<width>55</width>
-				<aspectratio>keep</aspectratio>
-				<texturefocus>osd/order.png</texturefocus>
-				<texturenofocus>osd/order.png</texturenofocus>
-				
-				<onclick>Playercontrol(random)</onclick>
-				<altclick>Playercontrol(random)</altclick>
-				<usealttexture>Playlist.IsRandom</usealttexture>
-							
-				<alttexturefocus>osd/random.png</alttexturefocus>
-				<alttexturenofocus>osd/random.png</alttexturenofocus>
-				<animation effect="zoom" start="100" end="120" center="auto" time="100">Focus</animation>
-				<animation effect="zoom" start="120" end="100" center="auto" time="100">UnFocus</animation>
-				
-				<onup>307</onup>
-				<ondown>309</ondown>
-			</control>
-			
-			
-			<control type="image">
-				<posy>485</posy>
-				<height>55</height>
-				<width>55</width>
-				<texture>osd/osdbg.png</texture>
-				<aspectratio>stretch</aspectratio>
-				<animation effect="fade" start="100" end="60" time="100" condition="Control.HasFocus(309)">Conditional</animation>
-			</control>
-			<control type="button" id="309">
-				<posy>485</posy>
-				<description>repeat one</description>
-				<height>55</height>
-				<width>55</width>
-				<aspectratio>keep</aspectratio>
-				<texturefocus>osd/repeatone.png</texturefocus>
-				<texturenofocus>osd/repeatone.png</texturenofocus>
-				
-				<onclick>XBMC.PlayerControl(Repeat)</onclick>
-				<animation effect="zoom" start="100" end="120" center="auto" time="100">Focus</animation>
-				<animation effect="zoom" start="120" end="100" center="auto" time="100">UnFocus</animation>
-				
-				<onup>308</onup>
-				<ondown>310</ondown>
-				<visible>Playlist.IsRepeatOne</visible>
-			</control>
-			<control type="button" id="309">
-				<posy>485</posy>
-				<description>repeat</description>
-				<height>55</height>
-				<width>55</width>
-				<aspectratio>keep</aspectratio>
-				<texturefocus>osd/repeat.png</texturefocus>
-				<texturenofocus>osd/repeat.png</texturenofocus>
-				
-				<onclick>XBMC.PlayerControl(Repeat)</onclick>
-				<animation effect="zoom" start="100" end="120" center="auto" time="100">Focus</animation>
-				<animation effect="zoom" start="120" end="100" center="auto" time="100">UnFocus</animation>
-				
-				<onup>308</onup>
-				<ondown>310</ondown>
-				<visible>Playlist.IsRepeat</visible>
-			</control>
-			<control type="button" id="309">
-				<posy>485</posy>
-				<description>no repeat</description>
-				<height>55</height>
-				<width>55</width>
-				<aspectratio>keep</aspectratio>
-				<texturefocus>osd/norepeat.png</texturefocus>
-				<texturenofocus>osd/norepeat.png</texturenofocus>
-				
-				<onclick>XBMC.PlayerControl(Repeat)</onclick>
-				<animation effect="zoom" start="100" end="120" center="auto" time="100">Focus</animation>
-				<animation effect="zoom" start="120" end="100" center="auto" time="100">UnFocus</animation>
-				
-				<onup>308</onup>
-				<ondown>310</ondown>
-				<visible>!Playlist.IsRepeat + !Playlist.IsRepeatOne</visible>
-			</control>
-			
-			
-			
-			<control type="image">
-				<posy>545</posy>
-				<height>55</height>
-				<width>55</width>
-				<texture>osd/osdbg.png</texture>
-				<aspectratio>stretch</aspectratio>
-				<animation effect="fade" start="100" end="60" time="100" condition="Control.HasFocus(310)">Conditional</animation>
-			</control>
-			<control type="togglebutton" id="310">
-				<posy>545</posy>
-				<description>lyrics</description>
-				<height>55</height>
-				<width>55</width>
-				<aspectratio>keep</aspectratio>
-				<texturefocus>osd/lyrics.png</texturefocus>
-				<texturenofocus>osd/lyrics.png</texturenofocus>
-				
-				<onclick>XBMC.RunScript($INFO[Skin.String(LyricScript_Path)])</onclick>
-				<altclick>Skin.SetAddon(LyricScript_Path,xbmc.python.lyrics)</altclick>
-				<altclick>XBMC.RunScript($INFO[Skin.String(LyricScript_Path)])</altclick>
-				<usealttexture>IsEmpty(Skin.String(LyricScript_Path))</usealttexture>
-				
-				
-				<alttexturefocus>osd/lyrics.png</alttexturefocus>
-				<alttexturenofocus>osd/lyrics.png</alttexturenofocus>
-				<animation effect="zoom" start="100" end="120" center="auto" time="100">Focus</animation>
-				<animation effect="zoom" start="120" end="100" center="auto" time="100">UnFocus</animation>
-				
-				<onup>309</onup>
-				<ondown>311</ondown>
-			</control>
-			
-			
-			<control type="image">
-				<posy>605</posy>
-				<height>55</height>
-				<width>55</width>
-				<texture>osd/osdbg.png</texture>
-				<aspectratio>stretch</aspectratio>
-				<animation effect="fade" start="100" end="60" time="100" condition="Control.HasFocus(311)">Conditional</animation>
-			</control>
-			<control type="button" id="311">
-				<posy>605</posy>
-				<description>playlist</description>
-				<height>55</height>
-				<width>55</width>
-				<aspectratio>keep</aspectratio>
-				<texturefocus>osd/visual.png</texturefocus>
-				<texturenofocus>osd/visual.png</texturenofocus>
-				
-				<onclick>ActivateWindow(visualisationpresetlist)</onclick>
-				<animation effect="zoom" start="100" end="120" center="auto" time="100">Focus</animation>
-				<animation effect="zoom" start="120" end="100" center="auto" time="100">UnFocus</animation>
-				
-				<onup>310</onup>
-				<ondown>312</ondown>
-			</control>
-			
-			
-			<control type="image">
-				<posy>665</posy>
-				<height>55</height>
-				<width>55</width>
-				<texture>osd/osdbg.png</texture>
-				<aspectratio>stretch</aspectratio>
-				<animation effect="fade" start="100" end="60" time="100" condition="Control.HasFocus(312)">Conditional</animation>
-			</control>
-			<control type="button" id="312">
-				<posy>665</posy>
-				<description>playlist</description>
-				<height>55</height>
-				<width>55</width>
-				<aspectratio>keep</aspectratio>
-				<texturefocus>osd/playlist.png</texturefocus>
-				<texturenofocus>osd/playlist.png</texturenofocus>
-				
-				<onclick>ActivateWindow(500)</onclick>
-				<animation effect="zoom" start="100" end="120" center="auto" time="100">Focus</animation>
-				<animation effect="zoom" start="120" end="100" center="auto" time="100">UnFocus</animation>
-				
-				<onup>311</onup>
-				<ondown>301</ondown>
-			</control>
-			
-	</control>
-	
-	<control type="group">
-		<posx>-60</posx>
-		<posy>488</posy>
-		<visible>Window.IsActive(script-XBMC_Lyrics-main.xml)</visible>
-		<animation effect="zoom" end="65" center="auto" time="0" condition="true">Conditional</animation>
-		<control type="slider" id="87">
-			<description>Seek Slider</description>
-			<posx>45</posx>
-			<posy>37</posy>
-			<width>630</width>
-			<height>50</height>
-			<onup>1</onup>
-			<ondown>1</ondown>
-			<action>seek</action>
-			<texturesliderbar>empty.png</texturesliderbar>
-			<textureslidernib>empty.png</textureslidernib>
-			<textureslidernibfocus>empty.png</textureslidernibfocus>
-			<animation effect="fade" start="0" end="50" time="0" reversible="false" condition="true">Conditional</animation>
-		</control>
-	</control -->	
-	
-</controls>
+</controls-->
   
 </window>
