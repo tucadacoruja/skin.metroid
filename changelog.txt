@@ -1,3 +1,9 @@
+[B]0.1.8[/B]
+- Change to Gotham widget loading
+- Improved startup time
+- Improved settings for widgets
+- Fixed window close and fade glitch
+
 [B]0.1.7[/B]
 - Change to <left> positioning
 - Posterview made into fixedlist

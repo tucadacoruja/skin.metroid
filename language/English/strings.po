@@ -782,7 +782,7 @@ msgid "Random Movies"
 msgstr ""
 
 msgctxt "#31213"
-msgid "Random Album"
+msgid "Random Songs"
 msgstr ""
 
 msgctxt "#31214"
@@ -912,4 +912,29 @@ msgstr ""
 msgctxt "#31245"
 msgid "Refresh skin"
 msgstr ""
+
+msgctxt "#31246"
+msgid "Widgets"
+msgstr ""
+
+msgctxt "#31247"
+msgid "Enable widgets on home screen"
+msgstr ""
+
+msgctxt "#31248"
+msgid "widget"
+msgstr ""
+
+msgctxt "#31249"
+msgid "Custom"
+msgstr ""
+
+
+
+
+
+
+
+
+
 

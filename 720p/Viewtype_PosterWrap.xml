@@ -10,7 +10,6 @@
 		<include>Favourites</include>
 		<visible>Control.IsVisible(501)</visible>
 		
-		
 		<include>MediaFlags</include>	
 		
 			
@@ -22,7 +21,7 @@
 			<control type="fixedlist" id="501">
 				<visible>Container.Content(Movies) | Container.Content(TVShows) | Container.Content(seasons)</visible>
 				<hitrect x="220" y="200" w="1000" h="373" />
-				<left>643</left>
+				<left>640</left>
 				<top>189</top>
 				<width>1600</width>
 				<height>560</height>
@@ -48,9 +47,10 @@
 						<aspectratio>stretch</aspectratio>
 						<bordertexture border="3">DefaultAlbumCover.png</bordertexture>
 						<bordersize>3</bordersize>
-						<fadetime>200</fadetime>
+						<!-- fadetime>200</fadetime -->
 						<texture fallback="DefaultAlbumCover.png">$INFO[ListItem.Art(poster)]</texture>
-						<animation effect="fade" start="0" end="85" time="0" condition="true">Conditional</animation>
+						<!-- animation effect="fade" start="0" end="85" time="0" condition="true">Conditional</animation -->
+						<colordiffuse>D7FFFFFF</colordiffuse>
 					</control>
 					<control type="image">
 						<left>10</left>
@@ -59,9 +59,8 @@
 						<height>120</height>
 						<aspectratio>stretch</aspectratio>
 						<texture>$VAR[Fallback_Icon]</texture>
-						<animation effect="fade" start="0" end="80" time="0" condition="true">Conditional</animation>
-						
-						<colordiffuse>EBFFFFFF</colordiffuse>
+						<!-- animation effect="fade" start="0" end="80" time="0" condition="true">Conditional</animation -->
+						<colordiffuse>C2FFFFFF</colordiffuse>
 					</control>
 					
 				</itemlayout>
@@ -85,7 +84,7 @@
 				<width>1400</width>
 				<height>6</height>
 				<aspectratio>stretch</aspectratio>
-				<texture >highlight.png</texture>
+				<texture>highlight.png</texture>
 				<colordiffuse>20FFFFFF</colordiffuse>
 			</control>
 			
@@ -99,7 +98,8 @@
 				<bordersize>0,3,0,0</bordersize>
 				<aspectratio>stretch</aspectratio>
 				<texture>white.png</texture>
-				<colordiffuse>FFDBDBDB</colordiffuse>
+				<colordiffuse>FFEDEDED</colordiffuse>
+				
 
 			</control>
 
@@ -179,7 +179,7 @@
 				<bordertexture border="3">blue3.png</bordertexture>
 				<bordersize>3</bordersize>
 				<texture background="true" diffuse="diffuse/posterdiffuse.png" fallback="DefaultAlbumCover.png">$INFO[ListItem.Art(poster)]</texture>
-				<fadetime>400</fadetime>
+				<!--fadetime>400</fadetime-->
 			</control>
 			<control type="image">
 				<left>30</left>

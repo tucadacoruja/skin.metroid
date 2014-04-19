@@ -4,7 +4,7 @@
   <default type="label">
     <left>0</left>
     <top>0</top>
-    <label>-</label>
+ 
     <height>30</height>
     <align>left</align>
     <aligny>center</aligny>
@@ -35,7 +35,7 @@
     <align>center</align>
     <aligny>center</aligny>
     <font>DefaultButton</font>
-    <label>-</label>
+
     <textcolor>ACFFFFFF</textcolor>
     <focusedcolor>FFE1E1E1</focusedcolor>
     <disabledcolor>FF464646</disabledcolor>
@@ -50,7 +50,7 @@
     <top>0</top>
     <width>150</width>
     <height>48</height>
-    <label>-</label>
+
     <font>DefaultButton</font>
     <textcolor>ACFFFFFF</textcolor>
     <focusedcolor>White</focusedcolor>
@@ -72,7 +72,7 @@
     <align>left</align>
     <aligny>center</aligny>
     <font>DefaultButton</font>
-    <label>-</label>
+
     <textcolor>ACFFFFFF</textcolor>
     <focusedcolor>FFE1E1E1</focusedcolor>
     <disabledcolor>FF464646</disabledcolor>
@@ -92,7 +92,7 @@
     <top>0</top>
     <width>150</width>
     <height>48</height>
-    <label>-</label>
+
     <font>DefaultButton</font>
     <texturenofocus>-</texturenofocus>
     <texturefocus>White35p.png</texturefocus>
@@ -157,7 +157,7 @@
     <top>0</top>
     <width>280</width>
     <height>15</height>
-    <info>-</info>
+
     <texturebg>osd/seek/progress_back.png</texturebg>
 	<lefttexture>osd/seek/progresscache_left.png</lefttexture>
 	<midtexture>osd/seek/progresscache_mid.png</midtexture>

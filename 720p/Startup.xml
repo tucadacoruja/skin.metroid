@@ -6,47 +6,54 @@
 	<backgroundcolor>0</backgroundcolor>
 	
 	<onload condition="!Skin.HasSetting(WidgetVisibility)">Skin.ToggleSetting(WidgetVisibility)</onload>
-	
+	<onload>Skin.SetString(MainColorString,blue)</onload>
+	<onload condition="IsEmpty(Skin.String(BackgroundPercentage))">Skin.SetString(BackgroundPercentage,100)</onload>
+	<onload condition="IsEmpty(Skin.String(DarknessPercentage))">Skin.SetString(DarknessPercentage,60)</onload>
+	<onload condition="IsEmpty(Skin.String(BackgroundDarkness))">Skin.SetString(BackgroundDarkness,FFFFFFFF)</onload>
 <controls>
 
-	<animation effect="fade" start="0" end="100" time="800">WindowOpen</animation>
-    <animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
-	
     <control type="button" id="10">
         <description>trigger</description>
         <onfocus>SetFocus(11)</onfocus>
-        <animation effect="fade" end="1" time="0" condition="true">Conditional</animation>
+        <animation effect="fade" start="0" end="0" time="0" condition="true">Conditional</animation>
     </control>
 
     <!--  Show home if skin widgets loading is finished  -->
     <control type="button" id="11">
-	  <onfocus condition="!System.HasAddon(service.skin.widgets)">SetFocus(12)</onfocus>
-      <onfocus condition="System.HasAddon(service.skin.widgets)">SetFocus(11)</onfocus>
-      <visible>IsEmpty(Window(Home).Property(SkinWidgets_Running))</visible>
-	  <animation effect="fade" end="1" time="0" condition="true">Conditional</animation>
+	  <onfocus condition="!System.HasAddon(service.library.data.provider)">SetFocus(12)</onfocus>
+      <onfocus condition="System.HasAddon(service.library.data.provider)">SetFocus(11)</onfocus>
+      <!-- visible>IsEmpty(Window(Home).Property(SkinWidgets_Running))</visible -->
+      <visible>!Substring(Skin.String(MainColorString),blue)</visible>
+	  <animation effect="fade" start="0" end="0" time="0" condition="true">Conditional</animation>
     </control>
     <control type="button" id="11">
-      <onfocus>ReplaceWindow($INFO[System.StartupWindow])</onfocus>
-      <visible>!IsEmpty(Window(Home).Property(SkinWidgets_Running))</visible>
-	  <animation effect="fade" end="1" time="0" condition="true">Conditional</animation>
+      <onfocus>AlarmClock(StartupDelay,ReplaceWindow($INFO[System.StartupWindow]),00:02,silent)</onfocus>
+      <visible>Substring(Skin.String(MainColorString),blue)</visible>
+	  <animation effect="fade" start="0" end="0" time="0" condition="true">Conditional</animation>
     </control>
     <control type="button" id="12">
       <onfocus>ReplaceWindow($INFO[System.StartupWindow])</onfocus>
-	  <animation effect="fade" end="1" time="0" condition="true">Conditional</animation>
+	  <visible>Substring(Skin.String(MainColorString),blue)</visible>
+	  <animation effect="fade" start="0" end="0" time="0" condition="true">Conditional</animation>
     </control>
-	<control type="image">
-		<left>0</left>
-		<top>0</top>
-		<width>1280</width>
-		<height>720</height>
-		<aspectratio>stretch</aspectratio>
-		<texture background="true">MetroidBG.png</texture>
-	</control>
 	
-	<control type="group">
-		<animation effect="fade" start="0" end="100" time="300" delay="700" >WindowOpen</animation>
-		<include>Loading</include>
-	</control>
-	
+
+		
+		<control type="image">
+			<left>0</left>
+			<top>0</top>
+			<width>1280</width>
+			<height>720</height>
+			<aspectratio>stretch</aspectratio>
+			<texture background="true">MetroidBG.png</texture>
+			<animation effect="fade" start="0" end="100" time="200">WindowOpen</animation>
+			<animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
+		</control>
+		
+		<control type="group">
+			<animation effect="fade" start="0" end="100" time="300" delay="700" >WindowOpen</animation>
+			<include>Loading</include>
+		</control>
+
   </controls>
 </window>

@@ -6,7 +6,7 @@
         <system>1</system>
         <origin x="0" y="0"></origin>
     </coordinates>
-  
+	<onload condition="IsEmpty(Window(home.Property(UseWidget)))">SetProperty(UseWidget,NumberOne,home)</onload>
 <controls>
 	
 <control type="button">
@@ -115,21 +115,29 @@
 			<align>left</align>
 			<label>31211</label>
 			<colordiffuse>skin.string(MainColorString)</colordiffuse>
-			<visible>ListItem.IsFolder + [Container.Content(video) | substring(Container.FolderPath,addons://sources/video) | substring(Container.FolderPath,plugin://plugin.video)]</visible>
+			<visible>[ListItem.IsFolder | Stringcompare(ListItem.FileExtension,xsp) | Stringcompare(ListItem.FileExtension,m3u)] + [Substring(ListItem.Path,library://) | Substring(ListItem.Path,musicdb://) | Substring(Container.FolderPath,videodb://) | Substring(ListItem.Path,special://profile/playlists/) | substring(Container.FolderPath,addons://sources/video) | substring(Container.FolderPath,plugin://plugin.video) | substring(Container.FolderPath,addons://sources/audio) | substring(Container.FolderPath,plugin://plugin.audio)]</visible>
+						
 			<visible>IsEmpty(Skin.String(PluginWidgetPath1)) | IsEmpty(Skin.String(PluginWidgetPath2))</visible>
-			<!-- visible>Substring(Container.FolderPath,plugin://,left) | Substring(Container.FolderPath,addons://,left)</visible -->
-			<!-- visible>Substring(Container.FolderPath,user_feed=playlists) | Substring(Container.FolderPath,feed=feed_categories) | Substring(Container.FolderPath,user_feed=subscriptions)</visible -->
-			<onclick condition="IsEmpty(Skin.String(PluginWidgetPath1))">Skin.SetString(PluginWidgetPath1,$INFO[ListItem.FolderPath])</onclick>
-			<onclick condition="IsEmpty(Skin.String(PluginWidgetPath1))">Skin.SetString(PluginWidgetName1,$INFO[ListItem.Label])</onclick>
 			
-			<onclick condition="!IsEmpty(Skin.String(PluginWidgetPath1)) + IsEmpty(Skin.String(PluginWidgetPath2))">Skin.SetString(PluginWidgetPath2,$INFO[ListItem.FolderPath])</onclick>
+			<onclick condition="IsEmpty(Skin.String(PluginWidgetPath1)) + ![Stringcompare(ListItem.FileExtension,xsp) | Stringcompare(ListItem.FileExtension,m3u)]">Skin.SetString(PluginWidgetPath1,$INFO[ListItem.FolderPath])</onclick>
+			<onclick condition="IsEmpty(Skin.String(PluginWidgetPath1)) + [Stringcompare(ListItem.FileExtension,xsp) | Stringcompare(ListItem.FileExtension,m3u)]">Skin.SetString(PluginWidgetPath1,$INFO[ListItem.FileNameAndPath])</onclick>
+			<onclick condition="IsEmpty(Skin.String(PluginWidgetPath1))">Skin.SetString(PluginWidgetName1,$INFO[ListItem.Label])</onclick>
+			<onclick condition="IsEmpty(Skin.String(PluginWidgetPath1)) + [Substring(ListItem.Path,musicdb://) | Substring(ListItem.Path,special://profile/playlists/music) | substring(Container.FolderPath,addons://sources/audio) | substring(Container.FolderPath,plugin://plugin.audio)]">Skin.SetString(PluginWidgetTarget1,audio)</onclick>
+			<onclick condition="IsEmpty(Skin.String(PluginWidgetPath1)) + ![Substring(ListItem.Path,musicdb://) | Substring(ListItem.Path,special://profile/playlists/music) | substring(Container.FolderPath,addons://sources/audio) | substring(Container.FolderPath,plugin://plugin.audio)]">Skin.SetString(PluginWidgetTarget1,video)</onclick>
+			<onclick condition="!Skin.HasSetting(CustomWidget1Toggle)">Skin.ToggleSetting(CustomWidget1Toggle)</onclick>
+			
+			<onclick condition="!IsEmpty(Skin.String(PluginWidgetPath1)) + IsEmpty(Skin.String(PluginWidgetPath2)) + ![Stringcompare(ListItem.FileExtension,xsp) | Stringcompare(ListItem.FileExtension,m3u)]">Skin.SetString(PluginWidgetPath2,$INFO[ListItem.FolderPath])</onclick>
+			<onclick condition="!IsEmpty(Skin.String(PluginWidgetPath1)) + IsEmpty(Skin.String(PluginWidgetPath2)) + [Stringcompare(ListItem.FileExtension,xsp) | Stringcompare(ListItem.FileExtension,m3u)]">Skin.SetString(PluginWidgetPath2,$INFO[ListItem.FileNameAndPath])</onclick>
 			<onclick condition="!IsEmpty(Skin.String(PluginWidgetPath1)) + IsEmpty(Skin.String(PluginWidgetPath2))">Skin.SetString(PluginWidgetName2,$INFO[ListItem.Label])</onclick>
+			<onclick condition="!IsEmpty(Skin.String(PluginWidgetPath1)) + IsEmpty(Skin.String(PluginWidgetPath2)) + [Substring(ListItem.Path,musicdb://) | Substring(ListItem.Path,special://profile/playlists/music) | substring(Container.FolderPath,addons://sources/audio) | substring(Container.FolderPath,plugin://plugin.audio)]">Skin.SetString(PluginWidgetTarget2,audio)</onclick>
+			<onclick condition="!IsEmpty(Skin.String(PluginWidgetPath1)) + IsEmpty(Skin.String(PluginWidgetPath2)) + ![Substring(ListItem.Path,musicdb://) | Substring(ListItem.Path,special://profile/playlists/music) | substring(Container.FolderPath,addons://sources/audio) | substring(Container.FolderPath,plugin://plugin.audio)]">Skin.SetString(PluginWidgetTarget2,video)</onclick>
+			<onclick condition="!Skin.HasSetting(CustomWidget2Toggle)">Skin.ToggleSetting(CustomWidget2Toggle)</onclick>
 			
 			<onclick>notification(created, New widget)</onclick>
 		</control>
 		
-		<onload condition="IsEmpty(Window(home.Property(UseWidget)))">SetProperty(UseWidget,NumberOne,home)</onload>
-		<control type="button" id="2018">
+		
+		<!-- control type="button" id="2018">
 			<description>Custom button</description>
 			<left>15</left>
 			<top>0</top>
@@ -147,7 +155,7 @@
 			<colordiffuse>skin.string(MainColorString)</colordiffuse>
 			<visible>System.HasAddon(plugin.video.youtube) + Container.Content(movies)</visible>
 			<onclick>ActivateWindow(videos,plugin://plugin.video.youtube/?path=/root/search&amp;feed=search&amp;search=$INFO[ListItem.Title] Trailer,return)</onclick>
-		</control>
+		</control -->
 		
 		<control type="button" id="2019">
 			<description>Custom button</description>

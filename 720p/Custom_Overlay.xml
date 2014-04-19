@@ -910,7 +910,7 @@
 
 		<control type="label">
 			<left>485</left>
-			<top>15</top>
+			<top>45</top>
 			<width>780</width>
 			<height>21</height>
 			<textcolor>blue</textcolor>

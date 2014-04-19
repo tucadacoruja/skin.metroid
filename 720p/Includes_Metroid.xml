@@ -1,71 +1,193 @@
 
 <includes>
 	
+	<include name="RotatedLabel">
+		<left>0</left>
+		<top>140</top>
+		<width>200</width>
+		<height>30</height>
+		<font>font13</font>
+		<textcolor>FFFFFFFF</textcolor>
+		<aligny>center</aligny>
+		<align>center</align>
+		<scroll>false</scroll>
+		<animation effect="rotate" end="90" center="auto" time="0" reversible="false" condition="true">Conditional</animation>
+	</include>
+	
+	<include name="TvshowShadow">
+		<control type="image">
+			<description>shadow</description>
+			<left>0</left>
+			<top>20</top>
+			<width>408</width>
+			<height>272</height>
+			<texture>diffuse/postershadow.png</texture>
+			<aspectratio>stretch</aspectratio>
+			<colordiffuse>46ffffff</colordiffuse>
+		</control>
+		<control type="image">
+			<description>recent tv show thumb</description>
+			<left>0</left>
+			<top>20</top>
+			<width>380</width>
+			<height>255</height>
+			<texture>DefaultAlbumCover.png</texture>
+			<aspectratio>stretch</aspectratio>
+		</control>
+	</include>
+	
+	<include name="ShowTextBackground">
+		<control type="image">
+			<left>0</left>
+			<top>235</top>
+			<width>380</width>
+			<height>40</height>
+			<texture>black.png</texture>
+			<aspectratio>stretch</aspectratio>
+			<colordiffuse>95ffffff</colordiffuse>
+		</control>
+	</include>
+	
+	<include name="ShowPanelLayout">
+		<viewtype>icon</viewtype>
+		<left>380</left>
+		<top>20</top>
+		<width>500</width>
+		<height>300</height>
+		<scrolltime>200</scrolltime>
+		<orientation>Horizontal</orientation>
+		<preloaditems>2</preloaditems>
+		<itemlayout width="185" height="135">
+			
+			<control type="image">
+				<left>0</left>
+				<top>0</top>
+				<width>188</width>
+				<height>130</height>
+				<texture>diffuse/postershadow.png</texture>
+				<aspectratio>stretch</aspectratio>
+				<colordiffuse>46ffffff</colordiffuse>
+				
+			</control>
+			<control type="image">
+				<left>0</left>
+				<top>0</top>
+				<width>170</width>
+				<height>120</height>
+				<texture background="true" fallback="DefaultAlbumCover.png" >$INFO[ListItem.Art(thumb)]</texture>
+				<aspectratio scalediffuse="false">scale</aspectratio>
+			</control>
+			<control type="image">
+				<left>15</left>
+				<top>5</top>
+				<width>140</width>
+				<height>110</height>
+				<texture>$INFO[ListItem.Property(Logo)]</texture>
+				<aspectratio>keep</aspectratio>
+				<visible>IsEmpty(ListItem.Art(thumb))</visible>	
+			</control>
+			
+		</itemlayout>
+		<focusedlayout width="190" height="180">
+
+			<control type="image">
+				<left>0</left>
+				<top>0</top>
+				<width>188</width>
+				<height>130</height>
+				<texture>diffuse/postershadow.png</texture>
+				<aspectratio>stretch</aspectratio>
+				<colordiffuse>46ffffff</colordiffuse>
+			</control>
+			<control type="image">
+				<left>0</left>
+				<top>0</top>
+				<width>170</width>
+				<height>120</height>
+				<texture background="true" fallback="DefaultAlbumCover.png" >$INFO[ListItem.Art(thumb)]</texture>
+				<aspectratio scalediffuse="false">scale</aspectratio>
+			</control>
+			<control type="image">
+				<left>15</left>
+				<top>5</top>
+				<width>140</width>
+				<height>110</height>
+				<texture>$INFO[ListItem.Property(Logo)]</texture>
+				<aspectratio>keep</aspectratio>
+				<visible>IsEmpty(ListItem.Art(thumb))</visible>	
+			</control>
+			<control type="image">
+				<left>0</left>
+				<top>0</top>
+				<width>8</width>
+				<height>50</height>
+				<texture>BlueBackground.png</texture>
+				<aspectratio>stretch</aspectratio>
+			</control>
+			
+		</focusedlayout>
+	</include>
+	
+	<include name="MoviePanelLayout">
+		<left>-10</left>
+		<top>20</top>
+		<width>900</width>
+		<height>300</height>
+		<scrolltime>200</scrolltime>
+		<orientation>horizontal</orientation>
+		<aligny>top</aligny>
+		<preloaditems>2</preloaditems>
+		<itemlayout width="190" height="270">
+
+			<control type="image">
+				<left>0</left>
+				<top>0</top>
+				<width>190</width>
+				<height>265</height>
+				<texture>diffuse/postershadow.png</texture>
+				<aspectratio>stretch</aspectratio>
+				<colordiffuse>46ffffff</colordiffuse>
+			</control>
+			<control type="image">
+				<left>0</left>
+				<top>0</top>
+				<width>175</width>
+				<height>250</height>
+				<texture background="true" fallback="DefaultAlbumCover.png" diffuse="grid/posterdiffuse.png">$INFO[ListItem.Art(thumb)]</texture>
+				<aspectratio scalediffuse="false">stretch</aspectratio>
+				<colordiffuse>D7ffffff</colordiffuse>
+			</control>
 		
+			
+		</itemlayout>
+		<focusedlayout width="415" height="270" />
+
+	</include>
+	
+	<!-- ---------------------------------------------------------------------------------------------------------------------- -->
 	
 	<include name="RecentMoviePanel"> 
 		<control type="grouplist">
 			<height>300</height>
-			<visible>Library.HasContent(movies) + substring(Window(Home).Property(SkinWidgets_RecentItems),true)</visible>
 			<orientation>horizontal</orientation>
 			<usecontrolcoords>true</usecontrolcoords>
 			
 			<control type="label">
-				<left>0</left>
-				<top>140</top>
-				<width>200</width>
-				<height>30</height>
-				<font>font13</font>
-				<textcolor>FFFFFFFF</textcolor>
-				<aligny>center</aligny>
-				<align>center</align>
-				<scroll>false</scroll>
+				<include>RotatedLabel</include>
 				<label>31131</label>
-				<animation effect="rotate" end="90" center="auto" time="0" reversible="false" condition="true">Conditional</animation>
 			</control>
 			
 			<control type="wraplist" id="8000">
-				<left>-10</left>
-				<top>20</top>
-				<width>900</width>
-				<height>300</height>
-				<scrolltime>200</scrolltime>
-				<orientation>horizontal</orientation>
-				<aligny>top</aligny>
-				
 				<ondown condition="Control.IsVisible(8001)">8001</ondown>
 				<ondown condition="!Control.IsVisible(8001) + Control.IsVisible(8002)">8002</ondown>
 				<ondown condition="![Control.IsVisible(8001) | Control.IsVisible(8002)] + Control.IsVisible(8003)">8003</ondown>
 				<ondown condition="![Control.IsVisible(8001) | Control.IsVisible(8002) | Control.IsVisible(8003)] + Control.IsVisible(8004)">8004</ondown>
 				<ondown condition="![Control.IsVisible(8001) | Control.IsVisible(8002) | Control.IsVisible(8003) | Control.IsVisible(8004)] + Control.IsVisible(8005)">8005</ondown>
 
-				<preloaditems>2</preloaditems>
-				<itemlayout width="190" height="270">
-
-					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>190</width>
-						<height>265</height>
-						<texture>diffuse/postershadow.png</texture>
-						<aspectratio>stretch</aspectratio>
-						<colordiffuse>46ffffff</colordiffuse>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>175</width>
-						<height>250</height>
-						<texture background="true" fallback="DefaultAlbumCover.png" diffuse="grid/posterdiffuse.png">$INFO[ListItem.Art(thumb)]</texture>
-						<aspectratio scalediffuse="false">stretch</aspectratio>
-						<colordiffuse>D7ffffff</colordiffuse>
-					</control>
-				
-					
-				</itemlayout>
-				<focusedlayout width="415" height="270" />
+				<include>MoviePanelLayout</include>
 			
-				<include>HomeContentRecentMovies</include>	
+				<!-- include>HomeContentRecentMovies</include -->
+				<content target="video">plugin://service.library.data.provider?type=recentmovies</content>				
 			</control>
 
 			<control type="group">
@@ -84,7 +206,7 @@
 					<top>20</top>
 					<width>400</width>
 					<height>250</height>
-					<texture background="true" fallback="DefaultAlbumCover.png" diffuse="grid/posterdiffuse.png">$INFO[Container(8000).ListItem.Property(Fanart)]</texture>
+					<texture background="true" fallback="DefaultAlbumCover.png" diffuse="grid/posterdiffuse.png">$INFO[Container(8000).ListItem.Art(fanart)]</texture>
 					<aspectratio scalediffuse="false">scale</aspectratio>
 				</control>
 
@@ -129,74 +251,44 @@
 		
 	<include name="RecentTVShowPanel"> 
 		<control type="grouplist">
-			
 			<height>300</height>
-			<visible>Library.HasContent(tvshows) + substring(Window(Home).Property(SkinWidgets_RecentItems),true)</visible>
-		
 			<orientation>horizontal</orientation>
 			<usecontrolcoords>true</usecontrolcoords>
 			<align>left</align>
-				
+			
 			<control type="label">
-				<left>0</left>
-				<top>140</top>
-				<width>200</width>
-				<height>30</height>
-				<font>font13</font>
-				<textcolor>FFFFFFFF</textcolor>
-				<aligny>center</aligny>
-				<align>center</align>
-				<scroll>false</scroll>
+				<include>RotatedLabel</include>
 				<label>31132</label>
-				<animation effect="rotate" end="90" center="auto" time="0" reversible="false" condition="true">Conditional</animation>
 			</control>
 			
 			<control type="group">
 				<left>-20</left>
 				
-				<control type="image">
-					<description>shadow</description>
-					<left>0</left>
-					<top>20</top>
-					<width>408</width>
-					<height>272</height>
-					<texture>diffuse/postershadow.png</texture>
-					<aspectratio>stretch</aspectratio>
-					<colordiffuse>46ffffff</colordiffuse>
-								
-				</control>
+				<include>TvshowShadow</include>
 				<control type="image">
 					<description>recent tv show thumb</description>
 					<left>0</left>
 					<top>20</top>
 					<width>380</width>
 					<height>255</height>
-					<texture fallback="DefaultAlbumCover.png">$INFO[Container(8001).ListItem.Art(thumb)]</texture>
+					<texture>$INFO[Container(8001).ListItem.Art(thumb)]</texture>
 					<aspectratio aligny="top" scalediffuse="false">scale</aspectratio>
 							
-				</control>$INFO[Container(8001).ListItem.Art(thumb)]
+				</control>
 				<control type="image">
 					<description>recent tv show thumb</description>
 					<left>30</left>
 					<top>30</top>
 					<width>320</width>
 					<height>235</height>
-					<texture>$INFO[Container(8001).ListItem.Property(Logo)]</texture>
 					<aspectratio>keep</aspectratio>
+					<texture>$INFO[Container(8001).ListItem.Property(Logo)]</texture>
 					<visible>IsEmpty(Container(8001).ListItem.Art(thumb))</visible>	
 				</control>
 
-				<control type="image">
-					<left>0</left>
-					<top>235</top>
-					<width>380</width>
-					<height>40</height>
-					<texture>black.png</texture>
-					<aspectratio>stretch</aspectratio>
-					<colordiffuse>95ffffff</colordiffuse>
-				</control>
+				<include>ShowTextBackground</include>
 				<control type="label">
-					<left>0</left>
+					<left>10</left>
 					<top>230</top>
 					<width>360</width>
 					<height>50</height>
@@ -211,98 +303,17 @@
 			</control>
 					
 			<control type="panel" id="8001">
-				<viewtype>icon</viewtype>
-				<left>380</left>
-				<top>20</top>
-				<width>500</width>
-				<height>300</height>
-				<scrolltime>200</scrolltime>
-				<orientation>Horizontal</orientation>
-				<preloaditems>2</preloaditems>
-				
 				<onup condition="Control.IsVisible(8000)">8000</onup>
 				
 				<ondown condition="Control.IsVisible(8002)">8002</ondown>
 				<ondown condition="!Control.IsVisible(8002) + Control.IsVisible(8003)">8003</ondown>
 				<ondown condition="![Control.IsVisible(8002) | Control.IsVisible(8003)] + Control.IsVisible(8004)">8004</ondown>
 				<ondown condition="![Control.IsVisible(8002) | Control.IsVisible(8003) | Control.IsVisible(8004)] + Control.IsVisible(8005)">8005</ondown>
-								
-				<itemlayout width="185" height="135">
-					
-					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>188</width>
-						<height>130</height>
-						<texture>diffuse/postershadow.png</texture>
-						<aspectratio>stretch</aspectratio>
-						<colordiffuse>46ffffff</colordiffuse>
-						
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>170</width>
-						<height>120</height>
-						
-						<texture background="true" fallback="DefaultAlbumCover.png" >$INFO[ListItem.Art(thumb)]</texture>
-						<aspectratio scalediffuse="false">scale</aspectratio>
-						
-					</control>
-					<control type="image">
-						<left>15</left>
-						<top>5</top>
-						<width>140</width>
-						<height>110</height>
-						<texture>$INFO[ListItem.Property(Logo)]</texture>
-						<aspectratio>keep</aspectratio>
-						<visible>IsEmpty(ListItem.Art(thumb))</visible>	
-					</control>
-					
-					
-				</itemlayout>
-				<focusedlayout width="190" height="180">
-
-					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>188</width>
-						<height>130</height>
-						<texture>diffuse/postershadow.png</texture>
-						<aspectratio>stretch</aspectratio>
-						<colordiffuse>46ffffff</colordiffuse>
-						
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>170</width>
-						<height>120</height>
-						<texture background="true" fallback="DefaultAlbumCover.png" >$INFO[ListItem.Art(thumb)]</texture>
-						<aspectratio scalediffuse="false">scale</aspectratio>
-					</control>
-					<control type="image">
-						<left>15</left>
-						<top>5</top>
-						<width>140</width>
-						<height>110</height>
-						<texture>$INFO[ListItem.Property(Logo)]</texture>
-						<aspectratio>keep</aspectratio>
-						<visible>IsEmpty(ListItem.Art(thumb))</visible>	
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>8</width>
-						<height>50</height>
-						<texture>BlueBackground.png</texture>
-						<aspectratio>stretch</aspectratio>
-						
-						<visible>Control.HasFocus(8001)</visible>
-					</control>
-					
-				</focusedlayout>
-				<include>HomeContentRecentTVShows</include>	
+							
+				<include>ShowPanelLayout</include>
+				
+				<!-- include>HomeContentRecentTVShows</include -->
+				<content target="video">plugin://service.library.data.provider?type=recentepisodes</content>					
 			</control>	
 		</control>	
 	</include>
@@ -311,34 +322,15 @@
 	<include name="RandomMoviePanel"> 
 		<control type="grouplist">
 			<height>300</height>
-			<visible>Library.HasContent(movies) + substring(Window(Home).Property(SkinWidgets_RandomItems),true)</visible>
 			<orientation>horizontal</orientation>
 			<usecontrolcoords>true</usecontrolcoords>
 						
 			<control type="label">
-				<left>0</left>
-				<top>140</top>
-				<width>200</width>
-				<height>30</height>
-				<font>font13</font>
-				<textcolor>FFFFFFFF</textcolor>
-				<aligny>center</aligny>
-				<align>center</align>
-				<scroll>false</scroll>
+				<include>RotatedLabel</include>
 				<label>31212</label>
-				<animation effect="rotate" end="90" center="auto" time="0" reversible="false" condition="true">Conditional</animation>
 			</control>
 
 			<control type="wraplist" id="8002">
-				<left>-10</left>
-				<top>20</top>
-				<width>900</width>
-				<height>300</height>
-				<scrolltime>200</scrolltime>
-				<orientation>horizontal</orientation>
-				<aligny>top</aligny>
-				<preloaditems>2</preloaditems>
-				
 				<onup condition="!Control.IsVisible(8001) + Control.IsVisible(8000)">8000</onup>
 				<onup condition="Control.IsVisible(8001)">8001</onup>
 				
@@ -346,31 +338,10 @@
 				<ondown condition="!Control.IsVisible(8003) + Control.IsVisible(8004)">8004</ondown>
 				<ondown condition="![Control.IsVisible(8003) | Control.IsVisible(8004)] + Control.IsVisible(8005)">8005</ondown>
 								
-				<itemlayout width="190" height="270">
-
-					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>190</width>
-						<height>265</height>
-						<texture>diffuse/postershadow.png</texture>
-						<aspectratio>stretch</aspectratio>
-						<colordiffuse>46ffffff</colordiffuse>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>175</width>
-						<height>250</height>
-						<texture background="true" fallback="DefaultAlbumCover.png" diffuse="grid/posterdiffuse.png">$INFO[ListItem.Art(thumb)]</texture>
-						<aspectratio scalediffuse="false">stretch</aspectratio>
-						<colordiffuse>D7ffffff</colordiffuse>
-					</control>
-
-					
-				</itemlayout>
-				<focusedlayout width="415" height="270" />
-				<include>HomeContentRandomMovies</include>	
+				<include>MoviePanelLayout</include>
+				
+				<!-- include>HomeContentRandomMovies</include -->
+				<content target="video">plugin://service.library.data.provider?type=randommovies</content>				
 			</control>	
 			
 			<control type="group">
@@ -389,7 +360,7 @@
 					<top>20</top>
 					<width>400</width>
 					<height>250</height>
-					<texture background="true" fallback="DefaultAlbumCover.png" diffuse="grid/posterdiffuse.png">$INFO[Container(8002).ListItem.Property(Fanart)]</texture>
+					<texture background="true" fallback="DefaultAlbumCover.png" diffuse="grid/posterdiffuse.png">$INFO[Container(8002).ListItem.Art(fanart)]</texture>
 					<aspectratio scalediffuse="false">scale</aspectratio>
 				</control>
 				<control type="image">
@@ -430,50 +401,29 @@
 		</control>
 	</include>	
 	
-	<include name="RandomAlbumPanel"> 
+	<include name="RandomSongsPanel"> 
 		<control type="grouplist">
-			
 			<height>300</height>
-			<visible>Library.HasContent(music) + substring(Window(Home).Property(SkinWidgets_RandomItems),true)</visible>
 			<orientation>horizontal</orientation>
 			<usecontrolcoords>true</usecontrolcoords>
 			<align>left</align>
 				
 			<control type="label">
-				<left>0</left>
-				<top>140</top>
-				<width>200</width>
-				<height>30</height>
-				<font>font13</font>
-				<textcolor>FFFFFFFF</textcolor>
-				<aligny>center</aligny>
-				<align>center</align>
-				<scroll>false</scroll>
+				<include>RotatedLabel</include>
 				<label>31213</label>
-				<animation effect="rotate" end="90" center="auto" time="0" reversible="false" condition="true">Conditional</animation>
 			</control>
 			
 			<control type="group">
 				<left>-20</left>
 				
-				<control type="image">
-					<description>shadow</description>
-					<left>0</left>
-					<top>20</top>
-					<width>408</width>
-					<height>272</height>
-					<texture>diffuse/postershadow.png</texture>
-					<aspectratio>stretch</aspectratio>
-					<colordiffuse>46ffffff</colordiffuse>
-						
-				</control>
+				<include>TvshowShadow</include>
 				<control type="image">
 					<description>album thumb</description>
 					<left>0</left>
 					<top>20</top>
 					<width>380</width>
 					<height>255</height>
-					<texture fallback="DefaultAlbumCover.png">$INFO[Container(8003).ListItem.Art(thumb)]</texture>
+					<texture>$INFO[Container(8003).ListItem.Art(thumb)]</texture>
 					<aspectratio aligny="top" scalediffuse="false">scale</aspectratio>
 							
 				</control>
@@ -508,84 +458,22 @@
 					<aligny>center</aligny>
 					<align>right</align>
 					<scroll>false</scroll>
-					<label>$INFO[Container(8003).ListItem.Label2]</label>
+					<label>$INFO[Container(8003).ListItem.Artist]</label>
 				</control>
 			</control>
 					
 			<control type="panel" id="8003">
-				<viewtype label="RandomAlbum">icon</viewtype>
-				<left>380</left>
-				<top>20</top>
-				<width>500</width>
-				<height>300</height>
-				<scrolltime>200</scrolltime>
-				<orientation>Horizontal</orientation>
-				<preloaditems>2</preloaditems>
-				
 				<onup condition="![Control.IsVisible(8002) | Control.IsVisible(8001)] + Control.IsVisible(8000)">8000</onup>
 				<onup condition="!Control.IsVisible(8002) + Control.IsVisible(8001)">8001</onup>
 				<onup condition="Control.IsVisible(8002)">8002</onup>
 				
 				<ondown condition="Control.IsVisible(8004)">8004</ondown>
 				<ondown condition="!Control.IsVisible(8004) + Control.IsVisible(8005)">8005</ondown>
+								
+				<include>ShowPanelLayout</include>
 				
-				<itemlayout width="185" height="135">
-					
-					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>188</width>
-						<height>130</height>
-						<texture>diffuse/postershadow.png</texture>
-						<aspectratio>stretch</aspectratio>
-						<colordiffuse>46ffffff</colordiffuse>
-						
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>170</width>
-						<height>120</height>
-						
-						<texture background="true" fallback="DefaultAlbumCover.png" >$INFO[ListItem.Art(thumb)]</texture>
-						<aspectratio scalediffuse="false">scale</aspectratio>
-						
-					</control>
-					
-				</itemlayout>
-				<focusedlayout width="190" height="135">
-
-					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>188</width>
-						<height>130</height>
-						<texture>diffuse/postershadow.png</texture>
-						<aspectratio>stretch</aspectratio>
-						<colordiffuse>46ffffff</colordiffuse>
-						
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>170</width>
-						<height>120</height>
-						<texture background="true" fallback="DefaultAlbumCover.png" >$INFO[ListItem.Art(thumb)]</texture>
-						<aspectratio scalediffuse="false">scale</aspectratio>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>8</width>
-						<height>50</height>
-						<texture>BlueBackground.png</texture>
-						<aspectratio>stretch</aspectratio>
-						
-						<visible>Control.HasFocus(8003)</visible>
-					</control>
-					
-				</focusedlayout>
-				<include>HomeContentRandomAlbum</include>	
+				<!-- include>HomeContentRandomAlbum</include -->
+				<content target="video">plugin://service.library.data.provider?type=randomsongs</content>				
 			</control>	
 		</control>	
 	</include>
@@ -595,72 +483,31 @@
 	
 	<include name="PluginWidget1"> 
 		<control type="grouplist">
-			
 			<height>300</height>
-			<!--visible>!IsEmpty(Skin.String(PluginWidgetPath1))</visible-->
-			<visible>Control.IsVisible(8004)</visible>
 			<orientation>horizontal</orientation>
 			<usecontrolcoords>true</usecontrolcoords>
 			<align>left</align>
 				
 			<control type="label">
-				<left>0</left>
-				<top>140</top>
-				<width>200</width>
-				<height>30</height>
-				<font>font13</font>
-				<textcolor>FFFFFFFF</textcolor>
-				<aligny>center</aligny>
-				<align>center</align>
-				<scroll>false</scroll>
+				<include>RotatedLabel</include>
 				<label>$INFO[Skin.String(PluginWidgetName1)]</label>
-				<animation effect="rotate" end="90" center="auto" time="0" reversible="false" condition="true">Conditional</animation>
 			</control>
 			
 			<control type="group">
 				<left>-20</left>
-				<!--visible>!IsEmpty(Container(8004).ListItem(1).Art(thumb))</visible-->
-				
-				<control type="image">
-					<description>shadow</description>
-					<left>0</left>
-					<top>20</top>
-					<width>408</width>
-					<height>272</height>
-					<texture>diffuse/postershadow.png</texture>
-					<aspectratio>stretch</aspectratio>
-					<colordiffuse>46ffffff</colordiffuse>
-					
-				</control>
+				<include>TvshowShadow</include>
+
 				<control type="image">
 					<description>recent tv show thumb</description>
 					<left>0</left>
 					<top>20</top>
 					<width>380</width>
 					<height>255</height>
-					<texture>DefaultAlbumCover.png</texture>
-					<aspectratio>stretch</aspectratio>
-						
-				</control>
-				<control type="image">
-					<description>recent tv show thumb</description>
-					<left>0</left>
-					<top>20</top>
-					<width>380</width>
-					<height>255</height>
-					<texture fallback="DefaultAlbumCover.png">$INFO[Container(8004).ListItem.Art(thumb)]</texture>
+					<texture>$VAR[PluginWidget1Art]</texture>
 					<aspectratio aligny="center" scalediffuse="false">scale</aspectratio>
 						
 				</control>
-				<control type="image">
-					<left>0</left>
-					<top>235</top>
-					<width>380</width>
-					<height>40</height>
-					<texture>black.png</texture>
-					<aspectratio>stretch</aspectratio>
-					<colordiffuse>95ffffff</colordiffuse>
-				</control>
+				<include>ShowTextBackground</include>
 				<control type="label">
 					<left>40</left>
 					<top>230</top>
@@ -676,15 +523,6 @@
 			</control>
 					
 			<control type="panel" id="8004">
-				<viewtype>icon</viewtype>
-				<left>380</left>
-				<top>20</top>
-				<width>500</width>
-				<height>300</height>
-				<scrolltime>200</scrolltime>
-				<orientation>Horizontal</orientation>
-				<preloaditems>2</preloaditems>
-				
 				<onup condition="![Control.IsVisible(8003) | Control.IsVisible(8002) | Control.IsVisible(8001)] + Control.IsVisible(8000)">8000</onup>
 				<onup condition="![Control.IsVisible(8003) | Control.IsVisible(8002)] + Control.IsVisible(8001)">8001</onup>
 				<onup condition="!Control.IsVisible(8003) + Control.IsVisible(8002)">8002</onup>
@@ -692,82 +530,13 @@
 				
 				<ondown condition="Control.IsVisible(8005)">8005</ondown>
 		
-				<visible>IntegerGreaterThan(Container(8004).NumItems,1)</visible>
-				<itemlayout width="185" height="135">
-					
-					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>188</width>
-						<height>130</height>
-						<texture>diffuse/postershadow.png</texture>
-						<aspectratio>stretch</aspectratio>
-						<colordiffuse>46ffffff</colordiffuse>
-						
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>170</width>
-						<height>120</height>
-						<texture background="true">DefaultAlbumCover.png</texture>
-						<aspectratio>stretch</aspectratio>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>170</width>
-						<height>120</height>
-						
-						<texture fallback="DefaultAlbumCover.png">$INFO[ListItem.Art(thumb)]</texture>
-						<aspectratio scalediffuse="false">scale</aspectratio>
-						
-					</control>
-					
-				</itemlayout>
-				<focusedlayout width="190" height="180">
-
-					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>188</width>
-						<height>130</height>
-						<texture>diffuse/postershadow.png</texture>
-						<aspectratio>stretch</aspectratio>
-						<colordiffuse>46ffffff</colordiffuse>
-						
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>170</width>
-						<height>120</height>
-						<texture background="true">DefaultAlbumCover.png</texture>
-						<aspectratio>stretch</aspectratio>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>170</width>
-						<height>120</height>
-						<texture>$INFO[ListItem.Art(thumb)]</texture>
-						<aspectratio scalediffuse="false">scale</aspectratio>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>8</width>
-						<height>50</height>
-						<texture>BlueBackground.png</texture>
-						<aspectratio>stretch</aspectratio>
-						
-						<visible>Control.HasFocus(8004)</visible>
-					</control>
-					
-				</focusedlayout>
+				<!-- visible>IntegerGreaterThan(Container(8004).NumItems,1)</visible -->
+				<include>ShowPanelLayout</include>
 				<!-- content target="video">plugin://plugin.video.youtube/?login=true%26path=%2froot%2fplaylists%26playlist=PL29685DF58E70D8FD%26user_feed=playlist</content -->
 				<!-- content target="video">plugin://plugin.video.collegehumor/category/badman/1/</content -->
-				<content target="video">$INFO[Skin.String(PluginWidgetPath1)]</content>
+				<!-- content>special://profile/playlists/video/test-playlist.xsp</content -->
+				<!-- content>special://profile/playlists/music/relax.xps</content -->
+				<content target="$INFO[Skin.String(PluginWidgetTarget1)]">$INFO[Skin.String(PluginWidgetPath1)]</content>
 			</control>	
 		</control>	
 	</include>
@@ -776,70 +545,30 @@
 	
 	<include name="PluginWidget2"> 
 		<control type="grouplist">
-			
 			<height>300</height>
-			<visible>Control.IsVisible(8005)</visible>
 			<orientation>horizontal</orientation>
 			<usecontrolcoords>true</usecontrolcoords>
 			<align>left</align>
 				
 			<control type="label">
-				<left>0</left>
-				<top>140</top>
-				<width>200</width>
-				<height>30</height>
-				<font>font13</font>
-				<textcolor>FFFFFFFF</textcolor>
-				<aligny>center</aligny>
-				<align>center</align>
-				<scroll>false</scroll>
+				<include>RotatedLabel</include>
 				<label>$INFO[Skin.String(PluginWidgetName2)]</label>
-				<animation effect="rotate" end="90" center="auto" time="0" reversible="false" condition="true">Conditional</animation>
 			</control>
 			
 			<control type="group">
 				<left>-20</left>
-				<!--visible>!IsEmpty(Container(8005).ListItem(1).Art(thumb))</visible-->
-				<control type="image">
-					<description>shadow</description>
-					<left>0</left>
-					<top>20</top>
-					<width>408</width>
-					<height>272</height>
-					<texture>diffuse/postershadow.png</texture>
-					<aspectratio>stretch</aspectratio>
-					<colordiffuse>46ffffff</colordiffuse>
-					
-				</control>
+				<include>TvshowShadow</include>
+	
 				<control type="image">
 					<description>recent tv show thumb</description>
 					<left>0</left>
 					<top>20</top>
 					<width>380</width>
 					<height>255</height>
-					<texture>DefaultAlbumCover.png</texture>
-					<aspectratio>stretch</aspectratio>
-						
-				</control>
-				<control type="image">
-					<description>recent tv show thumb</description>
-					<left>0</left>
-					<top>20</top>
-					<width>380</width>
-					<height>255</height>
-					<texture>$INFO[Container(8005).ListItem.Art(thumb)]</texture>
+					<texture>$VAR[PluginWidget2Art]</texture>
 					<aspectratio aligny="center" scalediffuse="false">scale</aspectratio>
-					
 				</control>
-				<control type="image">
-					<left>0</left>
-					<top>235</top>
-					<width>380</width>
-					<height>40</height>
-					<texture>black.png</texture>
-					<aspectratio>stretch</aspectratio>
-					<colordiffuse>95ffffff</colordiffuse>
-				</control>
+				<include>ShowTextBackground</include>
 				<control type="label">
 					<left>40</left>
 					<top>230</top>
@@ -853,98 +582,20 @@
 					<label>$INFO[Container(8005).ListItem.Label] $INFO[Container(8005).ListItem.Property(episodenumber)]</label>
 				</control>
 			</control>
-					
+			
+		
 			<control type="panel" id="8005">
-				<viewtype>icon</viewtype>
-				<left>380</left>
-				<top>20</top>
-				<width>500</width>
-				<height>300</height>
-				<scrolltime>200</scrolltime>
-				<orientation>Horizontal</orientation>
-				<preloaditems>2</preloaditems>
-				
 				<onup condition="![Control.IsVisible(8004) | Control.IsVisible(8003) | Control.IsVisible(8002) | Control.IsVisible(8001)] + Control.IsVisible(8000)">8000</onup>
 				<onup condition="![Control.IsVisible(8004) | Control.IsVisible(8003) | Control.IsVisible(8002)] + Control.IsVisible(8001)">8001</onup>
 				<onup condition="![Control.IsVisible(8004) | Control.IsVisible(8003)] + Control.IsVisible(8002)">8002</onup>
 				<onup condition="!Control.IsVisible(8004) + Control.IsVisible(8003)">8003</onup>
 				<onup condition="Control.IsVisible(8004)">8004</onup>
 				
-				<visible>IntegerGreaterThan(Container(8005).NumItems,1)</visible>
-				<itemlayout width="185" height="135">
-					
-					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>188</width>
-						<height>130</height>
-						<texture>diffuse/postershadow.png</texture>
-						<aspectratio>stretch</aspectratio>
-						<colordiffuse>46ffffff</colordiffuse>
-						
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>170</width>
-						<height>120</height>
-						<texture background="true">DefaultAlbumCover.png</texture>
-						<aspectratio>stretch</aspectratio>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>170</width>
-						<height>120</height>
-						
-						<texture>$INFO[ListItem.Art(thumb)]</texture>
-						<aspectratio scalediffuse="false">scale</aspectratio>
-						
-					</control>
-					
-				</itemlayout>
-				<focusedlayout width="190" height="180">
-
-					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>188</width>
-						<height>130</height>
-						<texture>diffuse/postershadow.png</texture>
-						<aspectratio>stretch</aspectratio>
-						<colordiffuse>46ffffff</colordiffuse>
-						
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>170</width>
-						<height>120</height>
-						<texture background="true">DefaultAlbumCover.png</texture>
-						<aspectratio>stretch</aspectratio>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>170</width>
-						<height>120</height>
-						<texture>$INFO[ListItem.Art(thumb)]</texture>
-						<aspectratio scalediffuse="false">scale</aspectratio>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>8</width>
-						<height>50</height>
-						<texture>BlueBackground.png</texture>
-						<aspectratio>stretch</aspectratio>
-						
-						<visible>Control.HasFocus(8005)</visible>
-					</control>
-					
-				</focusedlayout>
+				<!-- visible>IntegerGreaterThan(Container(8005).NumItems,1)</visible -->
+				<include>ShowPanelLayout</include>
+				
 				<!-- content target="video">plugin://plugin.video.youtube/?contact=trailers&amp;external=true&amp;feed=uploads&amp;login=false&amp;path=%2froot%2fexplore%2ftrailers</content -->
-				<content target="video">$INFO[Skin.String(PluginWidgetPath2)]</content>
+				<content target="$INFO[Skin.String(PluginWidgetTarget2)]">$INFO[Skin.String(PluginWidgetPath2)]</content>
 			</control>	
 		</control>	
 	</include>

@@ -21,7 +21,7 @@
 <include file="Viewtype_Poster.xml" />
 <include file="Viewtype_Songs.xml" />
 <include file="Viewtype_Icons.xml" />
-<include file="ViewsLiveTV.xml" />
+<!-- include file="ViewsLiveTV.xml" / -->
 <include file="ViewsPVR.xml" />
 
 
@@ -135,6 +135,13 @@
 </include>
 <include name="IconsViewWidth2">
 	<width>1000</width>
+</include>
+
+<include name="PanelViewWidth1">
+	<width>1140</width>
+</include>
+<include name="PanelViewWidth2">
+	<width>960</width>
 </include>
 
 <include name="InfoLockedPosx">
@@ -407,9 +414,11 @@
 			<left>0</left>
 			<top>62</top>
 			<width>1285</width>
-			<height>5</height>
+			<height>6</height>
 			<aspectratio>stretch</aspectratio>
-			<texture flipy="true">BackMenu.png</texture>
+			<!-- texture flipy="true">BackMenu.png</texture -->
+			<texture flipy="true">shadow.png</texture>
+			<colordiffuse>C7FFFFFF</colordiffuse>
 		</control>
 		
 		
@@ -599,18 +608,21 @@
 				<texture>osd/GrayBackground.png</texture>
 				<aspectratio>stretch</aspectratio>
 				<visible>Window.Isvisible(musicplaylist) | Window.Isvisible(videoplaylist)</visible>
+				<animation effect="fade" start="0" end="100" time="300" delay="50">VisibleChange</animation>
 			</control>
 			<control type="image"> <!-- 2 battery -->
 				<width>52</width>
 				<height>52</height>
 				<texture>osd/GrayBackground.png</texture>
 				<visible>StringCompare(System.BatteryLevel,5%) | StringCompare(System.BatteryLevel,4%) | StringCompare(System.BatteryLevel,3%) | StringCompare(System.BatteryLevel,2%) | StringCompare(System.BatteryLevel,1%)</visible>
+				<animation effect="fade" start="0" end="100" time="300" delay="50">VisibleChange</animation>
 			</control>
 			<control type="image"> <!-- 3 pvr -->
 				<width>52</width>
 				<height>52</height>
 				<texture>osd/GrayBackground.png</texture>
 				<visible>Window.IsVisible(pvr)</visible>
+				<animation effect="fade" start="0" end="100" time="300" delay="50">VisibleChange</animation>
 			</control>
 			
 			<control type="image">
@@ -619,6 +631,7 @@
 				<texture>osd/GrayBackground.png</texture>
 				<aspectratio>stretch</aspectratio>
 				<animation effect="fade" start="100" end="40" time="100" condition="Control.HasFocus(403)">Conditional</animation>
+				<animation effect="fade" start="0" end="100" time="300" delay="50">VisibleChange</animation>
 				<visible>Player.HasMedia</visible>
 			</control>
 			<control type="image">
@@ -627,6 +640,7 @@
 				<texture>osd/GrayBackground.png</texture>
 				<aspectratio>stretch</aspectratio>
 				<animation effect="fade" start="100" end="40" time="100" condition="Control.HasFocus(404)">Conditional</animation>
+				<animation effect="fade" start="0" end="100" time="300" delay="50">VisibleChange</animation>
 				<visible>Player.HasMedia</visible>
 			</control>
 			<control type="image">
@@ -635,6 +649,7 @@
 				<texture>osd/GrayBackground.png</texture>
 				<aspectratio>stretch</aspectratio>
 				<animation effect="fade" start="100" end="40" time="100" condition="Control.HasFocus(405)">Conditional</animation>
+				<animation effect="fade" start="0" end="100" time="300" delay="50">VisibleChange</animation>
 				<visible>Player.HasMedia</visible>
 			</control>
 			<control type="image">
@@ -643,6 +658,7 @@
 				<texture>osd/GrayBackground.png</texture>
 				<aspectratio>stretch</aspectratio>
 				<animation effect="fade" start="100" end="40" time="100" condition="Control.HasFocus(406)">Conditional</animation>
+				<animation effect="fade" start="0" end="100" time="300" delay="50">VisibleChange</animation>
 				<visible>Player.HasMedia</visible>
 			</control>
 			<control type="image">
@@ -651,6 +667,7 @@
 				<texture>osd/GrayBackground.png</texture>
 				<aspectratio>stretch</aspectratio>
 				<animation effect="fade" start="100" end="40" time="100" condition="Control.HasFocus(407)">Conditional</animation>
+				<animation effect="fade" start="0" end="100" time="300" delay="50">VisibleChange</animation>
 				<visible>Player.HasMedia</visible>
 			</control>
 			<control type="image">
@@ -659,6 +676,7 @@
 				<texture>osd/GrayBackground.png</texture>
 				<aspectratio>stretch</aspectratio>
 				<animation effect="fade" start="100" end="40" time="100" condition="Control.HasFocus(408)">Conditional</animation>
+				<animation effect="fade" start="0" end="100" time="300" delay="50">VisibleChange</animation>
 				<visible>Player.HasMedia</visible>
 			</control>
 			<control type="image"><!-- scroll offset -->
@@ -667,6 +685,7 @@
 				<texture>osd/GrayBackground.png</texture>
 				<aspectratio>stretch</aspectratio>
 				<visible>Container.Scrolling</visible>
+				<animation effect="fade" start="0" end="100" time="300" delay="50">VisibleChange</animation>
 			</control>
 			<control type="image"><!-- volume -->
 				<height>52</height>
@@ -674,6 +693,7 @@
 				<texture>osd/GrayBackground.png</texture>
 				<aspectratio>stretch</aspectratio>
 				<visible>Window.IsVisible(volumebar)</visible>
+				<animation effect="fade" start="0" end="100" time="300" delay="50">VisibleChange</animation>
 			</control>
 		</control>	
 		

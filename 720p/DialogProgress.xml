@@ -43,6 +43,9 @@
 		<texturefocus>osd/kai.png</texturefocus>
 		<texturenofocus>osd/kai.png</texturenofocus>
 		<onclick>Sendclick(10)</onclick>
+		<textcolor>03FFFFFF</textcolor>
+		<focusedcolor>03FFFFFF</focusedcolor>
+		<disabledcolor>03FFFFFF</disabledcolor>
 	</control>
   
 	<control type="progress" id="20">

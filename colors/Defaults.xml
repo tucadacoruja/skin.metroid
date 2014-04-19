@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <colors>
 	<color name="Black">FF000000</color>
-	<color name="White">FFFDFDFC</color>
+	<color name="White">FFFCFCFC</color>
 	<color name="grey2">FFACACAC</color>
 	<color name="Red">FFFF0000</color>
 	<color name="Orange">FFB88A00</color>

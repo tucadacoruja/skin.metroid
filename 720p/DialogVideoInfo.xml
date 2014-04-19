@@ -152,7 +152,7 @@
 							<textcolor>00FFFFFF</textcolor>
 							<visible allowhiddenfocus="true">true</visible>
 							<onup>10</onup>
-							<ondown>9</ondown>
+							<ondown>97</ondown>
 							<onright>9001</onright>
 							<animation effect="zoom" start="100" end="120" center="auto" time="100">Focus</animation>
 							<animation effect="zoom" start="120" end="100" center="auto" time="100">UnFocus</animation>
@@ -162,7 +162,7 @@
 					</control>
 
 					<!-- Resume Button -->
-					<control type="group">
+					<!-- control type="group">
 					
 						<width>70</width>
 						<height>60</height>
@@ -203,7 +203,7 @@
 						</control>
 						
 						
-					</control>
+					</control -->
 					
 					<!-- Trailer Button -->
 					<control type="group">
@@ -236,7 +236,7 @@
 							<disabledcolor>-</disabledcolor>
 							<textcolor>00FFFFFF</textcolor>
 							<visible allowhiddenfocus="true">true</visible>
-							<onup>9</onup>
+							<onup>8</onup>
 							<ondown>6</ondown>
 							<onright>50</onright>
 							<onclick>PlayMedia($INFO[ListItem.Trailer],1)</onclick>
@@ -279,7 +279,8 @@
 							<disabledcolor>-</disabledcolor>
 							<textcolor>00FFFFFF</textcolor>
 							<visible allowhiddenfocus="true">true</visible>
-							<onup>97</onup>
+							<onup condition="!IsEmpty(ListItem.Trailer)">97</onup>
+							<onup condition="IsEmpty(ListItem.Trailer)">8</onup>
 							<ondown>10</ondown>
 							<onright>50</onright>
 							
@@ -360,7 +361,7 @@
 							<disabledcolor>-</disabledcolor>
 							<textcolor>00FFFFFF</textcolor>
 							<visible allowhiddenfocus="true">true</visible>
-							<onup>6</onup>
+							<onup>10</onup>
 							<ondown>8</ondown>
 							<onright>50</onright>
 							<onclick>back</onclick>

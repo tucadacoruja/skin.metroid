@@ -61,6 +61,7 @@
 			<onright condition="Control.IsVisible(9003)">9003</onright>
 			<onright condition="Control.IsVisible(9004)">9004</onright>
 			<onright condition="Control.IsVisible(9006)">9006</onright>
+			<onright condition="Control.IsVisible(9007)">9007</onright>
 			<onup>301</onup>
 			<ondown>444</ondown>
 			<pagecontrol>-</pagecontrol>
@@ -158,7 +159,11 @@
 					<label>31141</label>
 					<onclick>SetFocus(9003)</onclick>
 				</item>
-								
+				<item id="6">
+					<description>Widgets</description>
+					<label>31246</label>
+					<onclick>SetFocus(9007)</onclick>
+				</item>				
 			</content>
 		</control>
 		
@@ -645,8 +650,8 @@
 						<label2>$INFO[Skin.String(GlobalBackground)]</label2>
 						<label>$LOCALIZE[31161]</label>
 						<onclick>Skin.Reset(GlobalBackground)</onclick>
-						<onclick>Skin.SetString(GlobalBackground,special://skin/extras/backgrounds/)</onclick>
-						<onclick>Skin.SetImage(GlobalBackground)</onclick>
+						<onclick>Skin.SetString(GlobalBackground,special://skin/extras/backgrounds/MetroidBG.png)</onclick>
+						<onclick>Skin.SetLargeImage(GlobalBackground)</onclick>
 					</control>
 					
 					<control type="button" id="121">
@@ -826,25 +831,7 @@
 						<selected>Skin.HasSetting(HideVolumeBar)</selected>
 					</control>
 											
-					<control type="button" id="106">
-						<include>SettingsButton</include>
-						<label2>$INFO[Skin.String(PluginWidgetName1)]</label2>
-						<label>- $LOCALIZE[31228] 1</label>
-						<onclick>up</onclick>
-						<onclick>Skin.Reset(PluginWidgetPath1)</onclick>
-						<onclick>Skin.Reset(PluginWidgetName1)</onclick>
-						<enable>!IsEmpty(Skin.String(PluginWidgetPath1))</enable>
-					</control>
-					<control type="button" id="107">
-						<include>SettingsButton</include>
-						<label2>$INFO[Skin.String(PluginWidgetName2)]</label2>
-						<label>- $LOCALIZE[31228] 2</label>
-						<onclick>up</onclick>
-						<onclick>Skin.Reset(PluginWidgetPath2)</onclick>
-						<onclick>Skin.Reset(PluginWidgetName2)</onclick>
-						<enable>!IsEmpty(Skin.String(PluginWidgetPath2))</enable>
-					</control>
-					
+										
 					<control type="button" id="108">
 						<include>SettingsButton</include>
 						<label2>$INFO[Skin.String(BookmarkName1)]</label2>
@@ -873,6 +860,146 @@
 						<enable>!IsEmpty(Skin.String(BookmarkDBID3))</enable>
 					</control>
 				</control>
+				
+				<!-- widgets -->
+				
+				<control type="grouplist" id="9007">
+					<description>Control Area</description>
+					<visible>Container(9000).Hasfocus(6)</visible>
+				
+					<left>355</left>
+					<top>133</top>
+					<width>810</width>
+					<height>476</height>
+					<itemgap>.5</itemgap>
+					<onleft>63</onleft>
+					<onright>9000</onright>
+					<onup>9007</onup>
+					<ondown>9007</ondown>
+					<pagecontrol>63</pagecontrol>
+					
+					 <!--  Enable Widgets  -->
+					
+					<control type="radiobutton" id="400">
+						<include>SettingsButton</include>
+						<description>Enable widgets on home screen</description>
+						<label>31247</label>
+						<onclick>Skin.ToggleSetting(HomeWidgetToggle)</onclick>
+						<selected>!Skin.HasSetting(HomeWidgetToggle)</selected>
+					</control>
+					
+					 <!-- widget 1  -->
+					
+					<control type="radiobutton" id="401">
+						<include>SettingsButton</include>
+						<description>Recent movies widgets</description>
+						<label>$LOCALIZE[31131] $LOCALIZE[31248]</label>
+						<onclick>Skin.ToggleSetting(RecentMoviesToggle)</onclick>
+						<selected>!Skin.HasSetting(RecentMoviesToggle)</selected>
+						<enable>!Skin.HasSetting(HomeWidgetToggle)</enable>
+					</control>
+								
+					 <!--  widget 2  -->
+					
+					<control type="radiobutton" id="402">
+						<include>SettingsButton</include>
+						<description>Recent episodes widgets</description>
+						<label>$LOCALIZE[31132] $LOCALIZE[31248]</label>
+						<onclick>Skin.ToggleSetting(RecentTVShowToggle)</onclick>
+						<selected>!Skin.HasSetting(RecentTVShowToggle)</selected>
+						<enable>!Skin.HasSetting(HomeWidgetToggle)</enable>
+					</control>
+										
+					<!--  Widget 3  -->
+					
+					<control type="radiobutton" id="403">
+						<include>SettingsButton</include>
+						<description>Random movie widgets</description>
+						<label>$LOCALIZE[31212] $LOCALIZE[31248]</label>
+						<onclick>Skin.ToggleSetting(RandomMovieToggle)</onclick>
+						<selected>Skin.HasSetting(RandomMovieToggle)</selected>
+						<enable>!Skin.HasSetting(HomeWidgetToggle)</enable>
+					</control>
+					
+					<!--  Widget 4  -->
+					
+					<control type="radiobutton" id="404">
+						<include>SettingsButton</include>
+						<description>Random songs widget</description>
+						<label>$LOCALIZE[31213] $LOCALIZE[31248]</label>
+						<onclick>Skin.ToggleSetting(RandomSongsToggle)</onclick>
+						<selected>Skin.HasSetting(RandomSongsToggle)</selected>
+						<enable>!Skin.HasSetting(HomeWidgetToggle)</enable>
+					</control>
+					
+					<!--  custom widget 5  -->
+					
+					<control type="radiobutton" id="405">
+						<include>SettingsButton</include>
+						<description>Custom widget 1</description>31249
+						<label>$LOCALIZE[31249] $LOCALIZE[31248] 1</label>
+						<onclick>Skin.ToggleSetting(CustomWidget1Toggle)</onclick>
+						<selected>Skin.HasSetting(CustomWidget1Toggle)</selected>
+						<enable>!Skin.HasSetting(HomeWidgetToggle)</enable>
+					</control>
+					<control type="button" id="406">
+						<include>SettingsButton</include>
+						<description>Set Name</description>
+						<label> - $LOCALIZE[31232]</label>
+						<label2>$INFO[Skin.String(PluginWidgetName1)]</label2>
+						<onclick>Skin.SetString(PluginWidgetName1,$INFO[Skin.String(PluginWidgetName1)])</onclick>
+						<onclick>Skin.SetString(PluginWidgetName1)</onclick>
+
+						<enable>!IsEmpty(Skin.String(PluginWidgetPath1)) + !Skin.HasSetting(HomeWidgetToggle) + Skin.HasSetting(CustomWidget1Toggle)</enable>
+					</control>
+					<control type="button" id="407">
+						<include>SettingsButton</include>
+						<label2>$INFO[Skin.String(PluginWidgetName1)]</label2>
+						<label>- $LOCALIZE[31228] 1</label>
+						<onclick>Skin.ToggleSetting(CustomWidget1Toggle)</onclick><!-- the order is relevant -->
+						<onclick>up</onclick>
+						<onclick>up</onclick>
+						<onclick>Skin.Reset(PluginWidgetPath1)</onclick>
+						<onclick>Skin.Reset(PluginWidgetName1)</onclick>
+						<onclick>Skin.Reset(PluginWidgetTarget1)</onclick>
+						<enable>!IsEmpty(Skin.String(PluginWidgetPath1)) + !Skin.HasSetting(HomeWidgetToggle) + Skin.HasSetting(CustomWidget1Toggle)</enable>
+					</control>
+					
+					
+					<!--  custom widget 6  -->
+					
+					<control type="radiobutton" id="408">
+						<include>SettingsButton</include>
+						<description>Custom widget 2</description>
+						<label>$LOCALIZE[31249] $LOCALIZE[31248] 2</label>
+						<onclick>Skin.ToggleSetting(CustomWidget2Toggle)</onclick>
+						<selected>Skin.HasSetting(CustomWidget2Toggle)</selected>
+						<enable>!Skin.HasSetting(HomeWidgetToggle)</enable>
+					</control>
+					<control type="button" id="409">
+						<include>SettingsButton</include>
+						<description>Set Name</description>
+						<label> - $LOCALIZE[31232]</label>
+						<label2>$INFO[Skin.String(PluginWidgetName2)]</label2>
+						<onclick>Skin.SetString(PluginWidgetName2,$INFO[Skin.String(PluginWidgetName2)])</onclick>
+						<onclick>Skin.SetString(PluginWidgetName2)</onclick>
+
+						<enable>!IsEmpty(Skin.String(PluginWidgetPath2)) + !Skin.HasSetting(HomeWidgetToggle) + Skin.HasSetting(CustomWidget2Toggle)</enable>
+					</control>
+					<control type="button" id="410">
+						<include>SettingsButton</include>
+						<label2>$INFO[Skin.String(PluginWidgetName2)]</label2>
+						<label>- $LOCALIZE[31228] 2</label>
+						<onclick>Skin.ToggleSetting(CustomWidget2Toggle)</onclick><!-- the order is relevant -->
+						<onclick>up</onclick>
+						<onclick>up</onclick>
+						<onclick>Skin.Reset(PluginWidgetPath2)</onclick>
+						<onclick>Skin.Reset(PluginWidgetName2)</onclick>
+						<onclick>Skin.Reset(PluginWidgetTarget2)</onclick>
+						<enable>!IsEmpty(Skin.String(PluginWidgetPath2)) + !Skin.HasSetting(HomeWidgetToggle) + Skin.HasSetting(CustomWidget2Toggle)</enable>
+					</control>
+					
+				</control>	
 				
 				<!-- disabled color changer not sure if i want to keep it -->
 				

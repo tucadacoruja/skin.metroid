@@ -25,7 +25,16 @@
 					<info>Player.Volume</info>
 					<visible>![Window.IsVisible(fullscreenvideo) | Window.IsVisible(visualisation)]</visible>
 				</control>
-
+				
+				<control type="image">
+					<left>10</left>
+					<top>5</top>
+					<width>52</width>
+					<height>52</height>
+					<texture>osd/audio.png</texture>
+					<visible>Window.IsVisible(volumebar) + [Window.IsVisible(fullscreenvideo) | Window.IsVisible(visualisation)]</visible>
+				</control>
+			
 			</control>
 
 			<!-- control type="group">

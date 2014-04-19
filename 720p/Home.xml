@@ -8,13 +8,7 @@
 <onload condition="System.HasAddon(script.extendedinfo)">RunScript(script.extendedinfo,info=TrendingShows)</onload>
 <onload condition="System.HasAddon(script.extendedinfo)">RunScript(script.extendedinfo,info=AiringShows)</onload -->
 
-<onload>Skin.SetString(MainColorString,blue)</onload>
-
-<onload condition="IsEmpty(Skin.String(BackgroundPercentage))">Skin.SetString(BackgroundPercentage,100)</onload>
-<onload condition="IsEmpty(Skin.String(DarknessPercentage))">Skin.SetString(DarknessPercentage,60)</onload>
-<onload condition="IsEmpty(Skin.String(BackgroundDarkness))">Skin.SetString(BackgroundDarkness,FFFFFFFF)</onload>
-
-<onload condition="Window.Previous(startup)">AlarmClock(WidgetDelay,Skin.Reset(WidgetVisibility),00:02,silent)</onload>
+<onload condition="Window.Previous(startup)">AlarmClock(WidgetDelay,Skin.Reset(WidgetVisibility),00:01,silent)</onload>
 
 <onload condition="IsEmpty(Skin.String(FirstRunTouch))">ActivateWindow(9506)</onload>
 
@@ -63,18 +57,18 @@
 <itemgap>0</itemgap>
 <include>WidgetsAnimation</include>
 
-<include>RecentMoviePanel</include>
-<include>RecentTVShowPanel</include>
+<include condition="Library.HasContent(movies)+ !Skin.HasSetting(RecentMoviesToggle)">RecentMoviePanel</include>
+<include condition="Library.HasContent(tvshows) + !Skin.HasSetting(RecentTVShowToggle)">RecentTVShowPanel</include>
 
-<include>RandomMoviePanel</include>
-<include>RandomAlbumPanel</include>
+<include condition="Library.HasContent(movies) + Skin.HasSetting(RandomMovieToggle)">RandomMoviePanel</include>
+<include condition="Library.HasContent(music) + Skin.HasSetting(RandomSongsToggle)">RandomSongsPanel</include>
 
-<include condition="!Window.Previous(startup)">PluginWidget1</include>
-<include condition="!Window.Previous(startup)">PluginWidget2</include>
+<include condition="!IsEmpty(Skin.String(PluginWidgetPath1)) + Skin.HasSetting(CustomWidget1Toggle)">PluginWidget1</include>
+<include condition="!IsEmpty(Skin.String(PluginWidgetPath2)) + Skin.HasSetting(CustomWidget2Toggle)">PluginWidget2</include>
 
-<visible>[Control.IsVisible(8000) | Control.IsVisible(8001) | Control.IsVisible(8002) | Control.IsVisible(8003) | Control.IsVisible(8004) | Control.IsVisible(8005)] + !Skin.HasSetting(WidgetVisibility)</visible>
+<visible>!Skin.HasSetting(HomeWidgetToggle) + [Control.IsVisible(8000) | Control.IsVisible(8001) | Control.IsVisible(8002) | Control.IsVisible(8003) | Control.IsVisible(8004) | Control.IsVisible(8005)] + !Skin.HasSetting(WidgetVisibility)</visible>
 <animation effect="fade" start="100" end="0" time="150" condition="Window.IsVisible(numericinput) | Window.IsVisible(virtualkeyboard)">Conditional</animation>	  
-<animation effect="fade" start="100" end="0" time="1" >WindowClose</animation>	  
+	  
 <animation effect="fade" start="100" end="0" time="1" >Hidden</animation>	  
 <animation effect="fade" start="0" end="100" time="100" >Visible</animation>	  
 <include>Favourites</include>
@@ -103,32 +97,8 @@
 </control>
 
 
-<control type="image">
-	<left>0</left>
-	<top>0</top>
-	<width>1280</width>
-	<height>62</height>
-	<aspectratio>stretch</aspectratio>
-	<texture background="true" >white.png</texture>
-	<colordiffuse>white</colordiffuse>
-</control>
-<!--control type="image">
-	<left>0</left>
-	<top>0</top>
-	<width>1280</width>
-	<height>65</height>
-	<aspectratio>stretch</aspectratio>
-	<texture>shadow.png</texture>
-	<animation effect="fade" start="0" end="30" time="0" reversible="false" condition="true">Conditional</animation>
-</control-->
-<control type="image">
-	<left>0</left>
-	<top>62</top>
-	<width>1285</width>
-	<height>5</height>
-	<aspectratio>stretch</aspectratio>
-	<texture flipy="true">BackMenu.png</texture>
-</control>
+
+<include>Background</include>
 <include>BottomInfoBar</include>
  
 

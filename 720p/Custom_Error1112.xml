@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<window id="1112" type="dialog">
+	<onload>Dialog.Close(1112)</onload>
+</window>

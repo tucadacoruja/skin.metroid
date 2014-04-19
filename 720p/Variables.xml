@@ -18,6 +18,16 @@
 		<value condition="VideoPlayer.Content(episodes)">$INFO[Player.Art(tvshow.clearlogo)]</value>
 	</variable>
 	
+	<variable name="PluginWidget1Art">
+		<value condition="!IsEmpty(Container(8004).ListItem.Art(fanart))">$INFO[Container(8004).ListItem.Art(fanart)]</value>
+		<value>$INFO[Container(8004).ListItem.Art(thumb)]</value>
+	</variable>
+	
+	<variable name="PluginWidget2Art">
+		<value condition="!IsEmpty(Container(8005).ListItem.Art(fanart))">$INFO[Container(8005).ListItem.Art(fanart)]</value>
+		<value>$INFO[Container(8005).ListItem.Art(thumb)]</value>
+	</variable>
+	
 	<variable name="IconShowTitle">
 		<value condition="IsEmpty(Container(677).ListItem.TVShowTitle)">$INFO[Container(677).ListItem(1).TVShowTitle]</value>
 		<value>$INFO[Container(677).ListItem.TVShowTitle]</value>
@@ -25,7 +35,7 @@
 	
 	<variable name="MultiPlot">
 		<value condition="!IsEmpty(ListItem.Property(Addon.Description))">$INFO[ListItem.Property(Addon.Description)]</value>
-		<!--value condition="!IsEmpty(ListItem.Property(Album_Description))">$INFO[ListItem.Property(Album_Description)]</value-->
+		<value condition="!IsEmpty(ListItem.Property(Album_Description))">$INFO[ListItem.Property(Album_Description)]</value>
 		<value condition="!IsEmpty(ListItem.Property(Artist_Description))">$INFO[ListItem.Property(Artist_Description)]</value>
 		<value>$INFO[ListItem.Plot]</value>
 	</variable>

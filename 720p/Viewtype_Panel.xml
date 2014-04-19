@@ -24,7 +24,10 @@
 					
 				<left>230</left>
 				<top>75</top>
-				<width>960</width>
+				<!--width>960</width-->
+				
+				<include condition="!Skin.HasSetting(LockMainMenu)">PanelViewWidth1</include>
+				<include condition="Skin.HasSetting(LockMainMenu)">PanelViewWidth2</include>
 				<height>610</height>
 				<onup>300</onup>
 				<ondown>730</ondown>
@@ -37,7 +40,7 @@
 				<scrolltime tween="Cubic" easing="in">240</scrolltime>
 			
 				<preloaditems>2</preloaditems>
-				<animation effect="slide" start="0,0" end="-110,0" time="400" condition="!Control.HasFocus(301) + !Skin.HasSetting(LockMainMenu)">Conditional</animation>
+				<animation effect="slide" start="0,0" end="-215,0" time="600" condition="!Control.HasFocus(301) + !Skin.HasSetting(LockMainMenu)">Conditional</animation>
 								
 				<itemlayout width="192" height="288">
 					<control type="group">
@@ -53,7 +56,7 @@
 							<height>102</height>
 							<texture background="true" >white.png</texture>
 							<aspectratio>stretch</aspectratio>
-							<colordiffuse>FF898989</colordiffuse>
+							<colordiffuse>FFBDBDBD</colordiffuse>
 						</control>
 																							
 						<control type="image">
@@ -189,7 +192,7 @@
 							<height>102</height>
 							<texture background="true" >white.png</texture>
 							<aspectratio>stretch</aspectratio>
-							<colordiffuse>FF898989</colordiffuse>
+							<colordiffuse>FFBDBDBD</colordiffuse>
 						</control>
 																							
 						<control type="image">
