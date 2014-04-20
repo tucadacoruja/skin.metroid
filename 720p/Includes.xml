@@ -43,7 +43,7 @@
 	<description>Default Radio Button</description>
 	<height>42.5</height>
 	<width>810</width>
-	<textcolor>95FFFFFF</textcolor>
+	<textcolor>CCFFFFFF</textcolor>
 	<focusedcolor>white</focusedcolor>
 	<disabledcolor>46ffffff</disabledcolor>
 	<texturefocus>setting.png</texturefocus>
@@ -231,7 +231,7 @@
 		<animation effect="fade" start="100" end="0" time="450" delay="150" >Hidden</animation>
 			<control type="label">
 				<include>TopLabelBig</include>
-				<label>$INFO[System.Time(hh:mm)]</label>
+				<label>$INFO[System.time(hh:mm)]</label>
 			</control>
 			<control type="label">
 				<include>TopLabelSmall</include>
