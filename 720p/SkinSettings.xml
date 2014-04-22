@@ -67,6 +67,7 @@
 			<pagecontrol>-</pagecontrol>
 			<scrolltime tween="cubic" easing="inout">325</scrolltime>
 			<orientation>vertical</orientation>
+			
 						
 			<itemlayout height="50" width="246">
 				<control type="label">
@@ -927,7 +928,7 @@
 						<label>$LOCALIZE[31212] $LOCALIZE[31248]</label>
 						<onclick>Skin.ToggleSetting(RandomMovieToggle)</onclick>
 						<selected>Skin.HasSetting(RandomMovieToggle)</selected>
-						<enable>!Skin.HasSetting(HomeWidgetToggle)</enable>
+						<enable>!Skin.HasSetting(HomeWidgetToggle) + System.HasAddon(service.library.data.provider)</enable>
 					</control>
 					
 					<!--  Widget 4  -->
@@ -938,7 +939,8 @@
 						<label>$LOCALIZE[31213] $LOCALIZE[31248]</label>
 						<onclick>Skin.ToggleSetting(RandomSongsToggle)</onclick>
 						<selected>Skin.HasSetting(RandomSongsToggle)</selected>
-						<enable>!Skin.HasSetting(HomeWidgetToggle)</enable>
+						<enable>!Skin.HasSetting(HomeWidgetToggle) + System.HasAddon(service.library.data.provider)</enable>
+						
 					</control>
 					
 					<!--  custom widget 5  -->
