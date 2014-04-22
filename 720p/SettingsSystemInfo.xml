@@ -182,7 +182,7 @@
 			<height>43.5</height>
 			<width>810</width>
 			<font>DefaultButton</font>
-			<textcolor>95FFFFFF</textcolor>
+			<textcolor>settings</textcolor>
 			<focusedcolor>white</focusedcolor>
 			<disabledcolor>46ffffff</disabledcolor>
 		</control>
@@ -195,7 +195,7 @@
 			<height>43.5</height>
 			<width>810</width>
 			<font>DefaultButton</font>
-			<textcolor>95FFFFFF</textcolor>
+			<textcolor>settings</textcolor>
 		</control>
 		<control type="label" id="4">
 			<description>4</description>
@@ -206,7 +206,7 @@
 			<height>43.5</height>
 			<width>810</width>
 			<font>DefaultButton</font>
-			<textcolor>95FFFFFF</textcolor>
+			<textcolor>settings</textcolor>
 		</control>
 		<control type="label" id="5">
 			<description>5</description>
@@ -217,7 +217,7 @@
 			<height>43.5</height>
 			<width>810</width>
 			<font>DefaultButton</font>
-			<textcolor>95FFFFFF</textcolor>
+			<textcolor>settings</textcolor>
 		</control>
 		<control type="label" id="6">
 			<description>6</description>
@@ -228,7 +228,7 @@
 			<height>43.5</height>
 			<width>810</width>
 			<font>DefaultButton</font>
-			<textcolor>95FFFFFF</textcolor>
+			<textcolor>settings</textcolor>
 		</control>
 		<control type="label" id="7">
 			<description>7</description>
@@ -239,7 +239,7 @@
 			<height>43.5</height>
 			<width>810</width>
 			<font>DefaultButton</font>
-			<textcolor>95FFFFFF</textcolor>
+			<textcolor>settings</textcolor>
 		</control>
 		<control type="label" id="8">
 			<description>8</description>
@@ -250,7 +250,7 @@
 			<height>43.5</height>
 			<width>810</width>
 			<font>DefaultButton</font>
-			<textcolor>95FFFFFF</textcolor>
+			<textcolor>settings</textcolor>
 		</control>
 		<control type="label" id="9">
 			<description>9</description>
@@ -261,7 +261,7 @@
 			<height>43.5</height>
 			<width>810</width>
 			<font>DefaultButton</font>
-			<textcolor>95FFFFFF</textcolor>
+			<textcolor>settings</textcolor>
 		</control>
 		<control type="label" id="10">
 			<description>10</description>
@@ -272,7 +272,7 @@
 			<height>43.5</height>
 			<width>810</width>
 			<font>DefaultButton</font>
-			<textcolor>95FFFFFF</textcolor>
+			<textcolor>settings</textcolor>
 		</control>
 		<control type="label" id="11">
 			<description>11</description>
@@ -283,7 +283,7 @@
 			<height>43.5</height>
 			<width>810</width>
 			<font>DefaultButton</font>
-			<textcolor>95FFFFFF</textcolor>
+			<textcolor>settings</textcolor>
 		</control>
 		
 	</control>

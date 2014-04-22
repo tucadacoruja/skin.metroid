@@ -5,7 +5,7 @@
 	<visible>![Window.IsVisible(pictureinfo) | Window.IsVisible(smartplaylisteditor)]</visible>
 	<visible>Control.IsVisible(50)</visible>
 	<include>InfoOpenClose</include>
-	<include>MusicInfoOpenClose</include>	
+	<include>InfoOpenClose</include>	
 	<include>AddSource</include>
 	<include>Favourites</include>
 	<include>ContextFade</include>

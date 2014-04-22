@@ -98,7 +98,7 @@
 				<bordersize>0,3,0,0</bordersize>
 				<aspectratio>stretch</aspectratio>
 				<texture>white.png</texture>
-				<colordiffuse>FFEDEDED</colordiffuse>
+				<colordiffuse>FFE1E1E1</colordiffuse>
 				
 
 			</control>
@@ -154,7 +154,7 @@
 					
 		<control type="group">
 			<left>299</left>
-			<top>130</top>
+			<top>127</top>
 			<!-- visible>false</visible -->
 			<animation effect="slide" start="0,0" end="-110,0" time="400" condition="!Control.HasFocus(301) + !Skin.HasSetting(LockMainMenu)">Conditional</animation>
 			
@@ -179,7 +179,7 @@
 				<bordertexture border="3">blue3.png</bordertexture>
 				<bordersize>3</bordersize>
 				<texture background="true" diffuse="diffuse/posterdiffuse.png" fallback="DefaultAlbumCover.png">$INFO[ListItem.Art(poster)]</texture>
-				<!--fadetime>400</fadetime-->
+				<fadetime>250</fadetime>
 			</control>
 			<control type="image">
 				<left>30</left>

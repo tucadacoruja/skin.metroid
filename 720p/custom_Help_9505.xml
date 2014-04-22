@@ -200,7 +200,7 @@
 						<width>770</width>
 						<height>400</height>
 						<font>HelpText</font>
-						<textcolor>95FFFFFF</textcolor>
+						<textcolor>settings</textcolor>
 						<scroll>-</scroll>
 						<aligny>top</aligny>
 						<wrapmultiline>true</wrapmultiline>
@@ -229,7 +229,7 @@
 						<width>770</width>
 						<height>500</height>
 						<font>HelpText</font>
-						<textcolor>95FFFFFF</textcolor>
+						<textcolor>settings</textcolor>
 						<scroll>-</scroll>
 						<aligny>top</aligny>
 						<wrapmultiline>true</wrapmultiline>
@@ -242,7 +242,7 @@
 						<top>400</top>
 						<height>43.5</height>
 						<width>810</width>
-						<textcolor>95FFFFFF</textcolor>
+						<textcolor>settings</textcolor>
 						<focusedcolor>white</focusedcolor>
 						<disabledcolor>12ffffff</disabledcolor>
 						<texturefocus>setting.png</texturefocus>
@@ -274,7 +274,7 @@
 						<width>770</width>
 						<height>500</height>
 						<font>HelpText</font>
-						<textcolor>95FFFFFF</textcolor>
+						<textcolor>settings</textcolor>
 						<scroll>-</scroll>
 						<aligny>top</aligny>
 						<wrapmultiline>true</wrapmultiline>
@@ -303,7 +303,7 @@
 						<width>770</width>
 						<height>500</height>
 						<font>HelpText</font>
-						<textcolor>95FFFFFF</textcolor>
+						<textcolor>settings</textcolor>
 						<scroll>-</scroll>
 						<aligny>top</aligny>
 						<wrapmultiline>true</wrapmultiline>
@@ -332,7 +332,7 @@
 						<width>770</width>
 						<height>500</height>
 						<font>HelpText</font>
-						<textcolor>95FFFFFF</textcolor>
+						<textcolor>settings</textcolor>
 						<scroll>-</scroll>
 						<aligny>top</aligny>
 						<wrapmultiline>true</wrapmultiline>
@@ -345,7 +345,7 @@
 						<top>350</top>
 						<height>43.5</height>
 						<width>810</width>
-						<textcolor>95FFFFFF</textcolor>
+						<textcolor>settings</textcolor>
 						<focusedcolor>white</focusedcolor>
 						<disabledcolor>12ffffff</disabledcolor>
 						<texturefocus>setting.png</texturefocus>
@@ -363,7 +363,7 @@
 						<top>397</top>
 						<height>43.5</height>
 						<width>810</width>
-						<textcolor>95FFFFFF</textcolor>
+						<textcolor>settings</textcolor>
 						<focusedcolor>white</focusedcolor>
 						<disabledcolor>12ffffff</disabledcolor>
 						<texturefocus>setting.png</texturefocus>
@@ -396,7 +396,7 @@
 						<width>770</width>
 						<height>500</height>
 						<font>HelpText</font>
-						<textcolor>95FFFFFF</textcolor>
+						<textcolor>settings</textcolor>
 						<scroll>-</scroll>
 						<aligny>top</aligny>
 						<wrapmultiline>true</wrapmultiline>
@@ -411,7 +411,7 @@
 						<top>350</top>
 						<height>43.5</height>
 						<width>810</width>
-						<textcolor>95FFFFFF</textcolor>
+						<textcolor>settings</textcolor>
 						<focusedcolor>white</focusedcolor>
 						<disabledcolor>12ffffff</disabledcolor>
 						<texturefocus>setting.png</texturefocus>
@@ -430,7 +430,7 @@
 						<top>397</top>
 						<height>43.5</height>
 						<width>810</width>
-						<textcolor>95FFFFFF</textcolor>
+						<textcolor>settings</textcolor>
 						<focusedcolor>white</focusedcolor>
 						<disabledcolor>12ffffff</disabledcolor>
 						<texturefocus>setting.png</texturefocus>
@@ -464,7 +464,7 @@
 						<width>770</width>
 						<height>500</height>
 						<font>HelpText</font>
-						<textcolor>95FFFFFF</textcolor>
+						<textcolor>settings</textcolor>
 						<scroll>-</scroll>
 						<aligny>top</aligny>
 						<wrapmultiline>true</wrapmultiline>
@@ -478,7 +478,7 @@
 						<top>350</top>
 						<height>43.5</height>
 						<width>810</width>
-						<textcolor>95FFFFFF</textcolor>
+						<textcolor>settings</textcolor>
 						<focusedcolor>white</focusedcolor>
 						<disabledcolor>12ffffff</disabledcolor>
 						<texturefocus>setting.png</texturefocus>
@@ -497,7 +497,7 @@
 						<top>397</top>
 						<height>43.5</height>
 						<width>810</width>
-						<textcolor>95FFFFFF</textcolor>
+						<textcolor>settings</textcolor>
 						<focusedcolor>white</focusedcolor>
 						<disabledcolor>12ffffff</disabledcolor>
 						<texturefocus>setting.png</texturefocus>

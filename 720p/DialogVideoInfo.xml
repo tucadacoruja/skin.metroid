@@ -52,7 +52,7 @@
 <control type="group">
 		
 	<animation effect="slide" start="1600,0" end="0,0" time="450" delay="0" reversible="false">WindowOpen</animation>
-	<animation effect="slide" start="0,0" end="1600,0" time="450" delay="0" reversible="false">WindowClose</animation>
+	<animation effect="fade" start="100" end="0" time="200" reversible="false">WindowClose</animation>
 	<animation effect="fade" start="100" end="0" time="200" >Visible</animation>
 	<animation effect="fade" start="0" end="100" time="200" >Hidden</animation>
 	<!--visible>![Window.IsVisible(addonsettings) | Window.IsVisible(virtualkeyboard) | Window.IsVisible(filebrowser) | Window.IsVisible(selectdialog) | Window.IsActive(DialogSelect.xml)]</visible-->

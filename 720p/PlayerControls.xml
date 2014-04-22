@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window type="dialog">
-<defaultcontrol always="true">407</defaultcontrol>
+<defaultcontrol always="true">50</defaultcontrol>
 <allowoverlay>yes</allowoverlay>
 
-<onload>Dialog.Close(playercontrols)</onload>
-<onload condition="Player.HasMedia + ![Window.IsVisible(fullscreenvideo) | Window.IsVisible(visualisation)]">SetFocus(8888)</onload>
 
+<onload condition="Player.HasMedia + ![Window.IsVisible(fullscreenvideo) | Window.IsVisible(visualisation)]">SetFocus(407)</onload>
+<onload>Dialog.Close(playercontrols)</onload>
 
 <coordinates>
   <system>1</system>
@@ -195,8 +195,8 @@
 				
 	</control>
 		
-</control>
+</control-->
 	
-</controls-->
+</controls>
   
 </window>

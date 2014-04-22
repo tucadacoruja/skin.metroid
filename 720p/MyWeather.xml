@@ -122,7 +122,7 @@
 	
 	<control type="label">
 		<description>current date</description>
-		<left>200</left>
+		<left>220</left>
 		<top>103</top>
 		<width>446</width>
 		<height>30</height>
@@ -134,11 +134,11 @@
 	</control>
 	<control type="image">
 		<description>current weather icon</description>
-		<left>250</left>
+		<left>242</left>
 		<top>140</top>
 		<height>164</height>
 		<width>164</width>
-		<texture>$INFO[Window.Property(Current.ConditionIcon)]</texture>
+		<texture>$INFO[Window(weather).Property(Current.FanartCode),weather/,.png]</texture>
 		<visible>!Skin.HasSetting(weatherwindowanimated)</visible>
 	</control>
 	<control type="button" id="50">
@@ -163,7 +163,7 @@
 	
 	<control type="label">
 		<description>current temp value</description>
-		<left>415</left>
+		<left>395</left>
 		<top>195</top>
 		<width>300</width>
 		<height>30</height>
@@ -172,14 +172,14 @@
 		<align>left</align>
 		<aligny>center</aligny>
 		
-		<label>[COLOR=EBFFFFFF]$INFO[Window.Property(Current.Temperature)][/COLOR][COLOR=BBE0E0E0]$INFO[System.TemperatureUnits][/COLOR]</label>
+		<label>[COLOR=FAFFFFFF]$INFO[Window.Property(Current.Temperature)][/COLOR][COLOR=36FFFFFF]$INFO[System.TemperatureUnits][/COLOR]</label>
 		<textcolor>ffffffff</textcolor>
 		
 	</control>	
 	
 	<control type="label">
 		<description>conditions label</description>
-		<left>415</left>
+		<left>395</left>
 		<top>260</top>
 		<width>250</width>
 		<info>Window.Property(Day0.Outlook)</info>
@@ -189,10 +189,10 @@
 	</control>	
 	
 <control type="group">
-	<left>65</left>	
+	<left>70</left>	
 	<control type="label">
 		<description>current feels like label</description>
-		<left>300</left>
+		<left>0</left>
 		<top>330</top>
 		<width>300</width>
 		<height>30</height>
@@ -216,7 +216,7 @@
 	</control>
 	<control type="label">
 		<description>current dew label</description>
-		<left>300</left>
+		<left>0</left>
 		<top>370</top>
 		<width>300</width>
 		<height>30</height>
@@ -240,7 +240,7 @@
 	</control>
 	<control type="label">
 		<description>current humidity label</description>
-		<left>300</left>
+		<left>0</left>
 		<top>410</top>
 		<width>300</width>
 		<height>30</height>
@@ -264,7 +264,7 @@
 	</control>
 	<control type="label">
 		<description>current uv label</description>
-		<left>300</left>
+		<left>0</left>
 		<top>450</top>
 		<width>300</width>
 		<height>30</height>
@@ -288,7 +288,7 @@
 	</control>
 	<control type="label">
 		<description>current wind label</description>
-		<left>300</left>
+		<left>0</left>
 		<top>490</top>
 		<width>300</width>
 		<height>30</height>
@@ -328,10 +328,11 @@
 								<control type="image">
 										<description>current weather icon</description>
 										<left>135</left>
-										<top>110</top>
+										<top>120</top>
 										<height>100</height>
 										<width>100</width>
-										<texture>$INFO[Window.Property(Day0.OutlookIcon)]</texture>
+										<texture>$INFO[Window(weather).Property(Day0.FanartCode),weather/,.png]</texture>
+										
 										<aspectratio align="center">keep</aspectratio>
 										<visible>!Skin.HasSetting(weatherwindowanimated)</visible>
 								</control>
@@ -390,10 +391,10 @@
 								<control type="image">
 										<description>current weather icon</description>
 										<left>135</left>
-										<top>110</top>
+										<top>120</top>
 										<height>100</height>
 										<width>100</width>
-										<texture>$INFO[Window.Property(Day1.OutlookIcon)]</texture>
+										<texture>$INFO[Window(weather).Property(Day1.FanartCode),weather/,.png]</texture>
 										<aspectratio align="center">keep</aspectratio>
 										<visible>!Skin.HasSetting(weatherwindowanimated)</visible>
 								</control>
@@ -452,10 +453,10 @@
 								<control type="image">
 										<description>current weather icon</description>
 										<left>135</left>
-										<top>105</top>
+										<top>115</top>
 										<height>100</height>
 										<width>100</width>
-										<texture>$INFO[Window.Property(Day2.OutlookIcon)]</texture>
+										<texture>$INFO[Window(weather).Property(Day2.FanartCode),weather/,.png]</texture>
 										<aspectratio align="center">keep</aspectratio>
 										<visible>!Skin.HasSetting(weatherwindowanimated)</visible>
 								</control>
@@ -513,10 +514,10 @@
 								<control type="image">
 										<description>current weather icon</description>
 										<left>135</left>
-										<top>105</top>
+										<top>115</top>
 										<height>100</height>
 										<width>100</width>
-										<texture>$INFO[Window.Property(Day3.OutlookIcon)]</texture>
+										<texture>$INFO[Window(weather).Property(Day3.FanartCode),weather/,.png]</texture>
 										<aspectratio align="center">keep</aspectratio>
 										<visible>!Skin.HasSetting(weatherwindowanimated)</visible>
 								</control>

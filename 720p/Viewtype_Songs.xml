@@ -7,7 +7,7 @@
 		<top>15</top>
 
 		<include>InfoOpenClose</include>
-		<include>MusicInfoOpenClose</include>
+		<include>InfoOpenClose</include>
 		<include>AddSource</include>
 		<include>Favourites</include>
 		<include>ContextFade</include>	

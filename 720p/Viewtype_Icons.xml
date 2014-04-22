@@ -9,7 +9,7 @@
 			<top>10</top>
 			
 			<include>InfoOpenClose</include>
-			<include>MusicInfoOpenClose</include>
+			<include>InfoOpenClose</include>
 			<include>WidgetsAnimation</include>
 			<include>ContextFade</include>	
 			<include>Keyboard</include>

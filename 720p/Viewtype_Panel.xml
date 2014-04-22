@@ -9,7 +9,7 @@
 			<top>10</top>
 			
 			<include>InfoOpenClose</include>
-			<include>MusicInfoOpenClose</include>
+			<include>InfoOpenClose</include>
 			<include>WidgetsAnimation</include>
 			<include>ContextFade</include>	
 			<include>Keyboard</include>
@@ -162,7 +162,7 @@
 							<visible>!Skin.HasSetting(WatchedOverlays)</visible>
 						</control-->
 						<control type="image">
-							<left>157</left>
+							<left>151</left>
 							<top>90</top>
 							<width>20</width>
 							<height>20</height>
@@ -293,7 +293,7 @@
 							<visible>!Skin.HasSetting(WatchedOverlays)</visible>
 						</control-->
 						<control type="image">
-							<left>157</left>
+							<left>151</left>
 							<top>90</top>
 							<width>20</width>
 							<height>20</height>

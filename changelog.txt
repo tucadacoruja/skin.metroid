@@ -1,4 +1,10 @@
-[B]0.1.8[/B]
+[B]0.1.9[/B]
+- Custom weather icons
+- qwerty keyboard
+- UserIcon
+- Bug fixes
+
+B]0.1.8[/B]
 - Change to Gotham widget loading
 - Improved startup time
 - Improved settings for widgets

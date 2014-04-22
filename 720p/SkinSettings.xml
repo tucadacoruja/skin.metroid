@@ -749,21 +749,21 @@
 						<onclick>Skin.ToggleSetting(LockMainMenu)</onclick>
 						<selected>Skin.HasSetting(LockMainMenu)</selected>
 					</control>
-					<control type="radiobutton" id="113">
+					<control type="radiobutton" id="100">
 						<include>SettingsButton</include>
 						<description>Sub menu's auto close</description>
 						<label> - $LOCALIZE[31241]</label>
 						<onclick>Skin.ToggleSetting(MenuAutoClose)</onclick>
 						<selected>!Skin.HasSetting(MenuAutoClose)</selected>
 					</control>
-					<control type="radiobutton" id="112">
+					<control type="radiobutton" id="101">
 						<include>SettingsButton</include>
 						<description>Global back button</description>
 						<label>$LOCALIZE[31233]</label>
 						<onclick>Skin.ToggleSetting(HideGlobalBack)</onclick>
 						<selected>Skin.HasSetting(HideGlobalBack)</selected>
 					</control> condition="Skin.HasSetting(DirectoryUp)"
-						<control type="radiobutton" id="114">
+						<control type="radiobutton" id="102">
 							<include>SettingsButton</include>
 							<description>Back button goes back by directory</description>
 							<label> - $LOCALIZE[31243]</label>
@@ -771,7 +771,7 @@
 							<selected>Skin.HasSetting(DirectoryUp)</selected>
 						</control>
 						
-					<control type="radiobutton" id="100">
+					<control type="radiobutton" id="103">
 						<include>SettingsButton</include>
 						<description>Show Globalsearch</description>
 						<label>$LOCALIZE[31185]</label>
@@ -779,14 +779,14 @@
 						<selected>!Skin.HasSetting(GlobalSearch)</selected>
 					</control>
 										
-					<control type="radiobutton" id="101">
+					<control type="radiobutton" id="104">
 						<include>SettingsButton</include>
 						<description>Show watched overlays</description>
 						<label>$LOCALIZE[31167]</label>
 						<onclick>Skin.ToggleSetting(WatchedOverlays)</onclick>
 						<selected>!Skin.HasSetting(WatchedOverlays)</selected>
 					</control>
-					<control type="radiobutton" id="102">
+					<control type="radiobutton" id="105">
 						<include>SettingsButton</include>
 						<description>Now Playing Popup During Video</description>
 						<label>$LOCALIZE[31168]</label>
@@ -794,7 +794,7 @@
 						<selected>!Skin.HasSetting(FullScreenNowPlaying)</selected>
 					</control>
 					
-					<control type="radiobutton" id="103">
+					<control type="radiobutton" id="106">
 						<include>SettingsButton</include>
 						<description>Show flags</description>
 						<label>$LOCALIZE[31227]</label>
@@ -803,7 +803,7 @@
 					</control>
 					
 					
-					<control type="radiobutton" id="104">
+					<control type="radiobutton" id="107">
 						<include>SettingsButton</include>
 						<description>Download logos on startup</description>
 						<label>$LOCALIZE[31170]</label>
@@ -813,7 +813,7 @@
 					
 					
 					
-					<control type="radiobutton" id="105">
+					<control type="radiobutton" id="108">
 						<include>SettingsButton</include>
 						<description>Show skin help</description>
 						<label>$LOCALIZE[31200]</label>
@@ -822,7 +822,7 @@
 						<selected>!Skin.HasSetting(ShowSkinHelp)</selected>
 					</control>
 					
-					<control type="radiobutton" id="111">
+					<control type="radiobutton" id="109">
 						<include>SettingsButton</include>
 						<description>Show volume bar</description>
 						<label>$LOCALIZE[31236]</label>
@@ -830,9 +830,18 @@
 						<onclick>Skin.ToggleSetting(HideVolumeBar)</onclick>
 						<selected>Skin.HasSetting(HideVolumeBar)</selected>
 					</control>
+					
+					<control type="radiobutton" id="110">
+						<include>SettingsButton</include>
+						<description>Alphabetical keyboard</description>
+						<label>$LOCALIZE[31250]</label>
+						
+						<onclick>Skin.ToggleSetting(AlphabeticalKeyboard)</onclick>
+						<selected>Skin.HasSetting(AlphabeticalKeyboard)</selected>
+					</control>
 											
 										
-					<control type="button" id="108">
+					<control type="button" id="111">
 						<include>SettingsButton</include>
 						<label2>$INFO[Skin.String(BookmarkName1)]</label2>
 						<label>- $LOCALIZE[31229] 1</label>
@@ -841,7 +850,7 @@
 						<onclick>Skin.Reset(BookmarkName1)</onclick>
 						<enable>!IsEmpty(Skin.String(BookmarkDBID1))</enable>
 					</control>
-					<control type="button" id="109">
+					<control type="button" id="112">
 						<include>SettingsButton</include>
 						<label2>$INFO[Skin.String(BookmarkName2)]</label2>
 						<label>- $LOCALIZE[31229] 2</label>
@@ -850,7 +859,7 @@
 						<onclick>Skin.Reset(BookmarkName2)</onclick>
 						<enable>!IsEmpty(Skin.String(BookmarkDBID2))</enable>
 					</control>
-					<control type="button" id="110">
+					<control type="button" id="113">
 						<include>SettingsButton</include>
 						<label2>$INFO[Skin.String(BookmarkName3)]</label2>
 						<label>- $LOCALIZE[31229] 3</label>
@@ -1129,6 +1138,11 @@
 			<onright condition="Control.IsVisible(9006)">9006</onright>
 			<animation effect="fade" start="100" end="40" time="200" reversable="false" condition="!Control.HasFocus(63)">Conditional</animation>
 			<visible>Control.IsVisible(9010)</visible>
+			<visible>!Window.IsVisible(selectdialog)</visible>
+			<visible>!Window.IsVisible(favourites)</visible>
+			<visible>!Window.IsVisible(filebrowser)</visible>
+			<visible>!Window.IsActive(DialogSelect.xml)</visible>
+			<visible>!Window.IsVisible(virtualkeyboard)</visible>
 		</control>
 		
 		

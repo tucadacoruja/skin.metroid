@@ -270,21 +270,24 @@
 			<animation effect="fade" start="100" end="40" time="100" condition="Control.HasFocus(999)">Conditional</animation>
 			<aspectratio>stretch</aspectratio>
 			
-			<visible>!Skin.HasSetting(GlobalSearch)</visible>
+			<!-- visible>!Skin.HasSetting(GlobalSearch)</visible -->
 		</control>
 		
 		<control type="image">
-			<include>SearchButton</include>
-			<aspectratio>keep</aspectratio>
-			<texture>$INFO[Weather.Conditions]</texture>
+			<left>1216</left>
+			<top>0</top>
+			<height>61</height>
+			<width>61</width>
+			<aspectratio>stretch</aspectratio>
+			<texture>$INFO[Window(weather).Property(Current.FanartCode),weather/,.png]</texture>
 			<visible>![Window.IsVisible(extendedprogressdialog) | Library.IsScanningMusic | Library.IsScanningVideo | Substring(Weather.Temperature,Busy) | Window.IsVisible(infodialog) | Window.IsVisible(volumebar) | Window.IsVisible(musicscan) | Window.IsVisible(progressdialog) | Window.IsVisible(videoscan)]</visible>
 			<visible>System.HasNetwork + Weather.IsFetched + Skin.HasSetting(GlobalSearch)</visible>
 		</control>
 		<control type="button">
-			<include>SearchButton</include>
+			<include>weather Button</include>
 			<aspectratio>keep</aspectratio>
-			<texturefocus>$INFO[Weather.Conditions]</texturefocus>
-			<texturenofocus>$INFO[Weather.Conditions]</texturenofocus>
+			<texturefocus>$INFO[Window(weather).Property(Current.FanartCode),weather/,.png]</texturefocus>
+			<texturenofocus>$INFO[Window(weather).Property(Current.FanartCode),weather/,.png]</texturenofocus>
 			<onclick>xbmc.activatewindow(weather)</onclick>
 			<visible>![Window.IsVisible(extendedprogressdialog) | Library.IsScanningMusic | Library.IsScanningVideo | Substring(Weather.Temperature,Busy) | Window.IsVisible(infodialog) | Window.IsVisible(volumebar) | Window.IsVisible(musicscan) | Window.IsVisible(progressdialog) | Window.IsVisible(videoscan)]</visible>
 			<visible>System.HasNetwork + Weather.IsFetched + Skin.HasSetting(GlobalSearch)</visible>
@@ -296,6 +299,7 @@
 			<aspectratio>keep</aspectratio>
 			<texturefocus colordiffuse="FFACACAC">osd/search.png</texturefocus>
 			<texturenofocus>osd/search.png</texturenofocus>
+			<onleft condition="!Window.IsActive(script-globalsearch-main.xml) + Player.HasMedia">8888</onleft>
 			<onleft condition="!Window.IsActive(script-globalsearch-main.xml)">300</onleft>
 			<onleft condition="Window.IsActive(script-globalsearch-main.xml)">9000</onleft>
 			<onright condition="!Window.IsActive(script-globalsearch-main.xml)">300</onright>
@@ -600,29 +604,37 @@
 			<align>left</align>
 			<orientation>horizontal</orientation>
 			<itemgap>5</itemgap>
-			
 			<visible>!Window.IsVisible(songinformation)</visible>
+			
+			<control type="image"><!-- 0 profile thumb -->
+				<width>52</width>
+				<height>52</height>
+				<texture>osd/GrayBackground.png</texture>
+				<aspectratio>stretch</aspectratio>
+				<visible>!Skin.HasSetting(ProfileThumbVisible)</visible>
+				<animation effect="fade" start="0" end="100" time="300" delay="60">VisibleChange</animation>
+			</control>
 			<control type="image"><!-- 1 playlist window -->
 				<height>52</height>
 				<width>52</width>
 				<texture>osd/GrayBackground.png</texture>
 				<aspectratio>stretch</aspectratio>
 				<visible>Window.Isvisible(musicplaylist) | Window.Isvisible(videoplaylist)</visible>
-				<animation effect="fade" start="0" end="100" time="300" delay="50">VisibleChange</animation>
+				<animation effect="fade" start="0" end="100" time="300" delay="120">VisibleChange</animation>
 			</control>
 			<control type="image"> <!-- 2 battery -->
 				<width>52</width>
 				<height>52</height>
 				<texture>osd/GrayBackground.png</texture>
 				<visible>StringCompare(System.BatteryLevel,5%) | StringCompare(System.BatteryLevel,4%) | StringCompare(System.BatteryLevel,3%) | StringCompare(System.BatteryLevel,2%) | StringCompare(System.BatteryLevel,1%)</visible>
-				<animation effect="fade" start="0" end="100" time="300" delay="50">VisibleChange</animation>
+				<animation effect="fade" start="0" end="100" time="300" delay="180">VisibleChange</animation>
 			</control>
 			<control type="image"> <!-- 3 pvr -->
 				<width>52</width>
 				<height>52</height>
 				<texture>osd/GrayBackground.png</texture>
 				<visible>Window.IsVisible(pvr)</visible>
-				<animation effect="fade" start="0" end="100" time="300" delay="50">VisibleChange</animation>
+				<animation effect="fade" start="0" end="100" time="300" delay="240">VisibleChange</animation>
 			</control>
 			
 			<control type="image">
@@ -631,7 +643,7 @@
 				<texture>osd/GrayBackground.png</texture>
 				<aspectratio>stretch</aspectratio>
 				<animation effect="fade" start="100" end="40" time="100" condition="Control.HasFocus(403)">Conditional</animation>
-				<animation effect="fade" start="0" end="100" time="300" delay="50">VisibleChange</animation>
+				<animation effect="fade" start="0" end="100" time="300" delay="300">VisibleChange</animation>
 				<visible>Player.HasMedia</visible>
 			</control>
 			<control type="image">
@@ -640,7 +652,7 @@
 				<texture>osd/GrayBackground.png</texture>
 				<aspectratio>stretch</aspectratio>
 				<animation effect="fade" start="100" end="40" time="100" condition="Control.HasFocus(404)">Conditional</animation>
-				<animation effect="fade" start="0" end="100" time="300" delay="50">VisibleChange</animation>
+				<animation effect="fade" start="0" end="100" time="300" delay="360">VisibleChange</animation>
 				<visible>Player.HasMedia</visible>
 			</control>
 			<control type="image">
@@ -649,7 +661,7 @@
 				<texture>osd/GrayBackground.png</texture>
 				<aspectratio>stretch</aspectratio>
 				<animation effect="fade" start="100" end="40" time="100" condition="Control.HasFocus(405)">Conditional</animation>
-				<animation effect="fade" start="0" end="100" time="300" delay="50">VisibleChange</animation>
+				<animation effect="fade" start="0" end="100" time="300" delay="420">VisibleChange</animation>
 				<visible>Player.HasMedia</visible>
 			</control>
 			<control type="image">
@@ -658,7 +670,7 @@
 				<texture>osd/GrayBackground.png</texture>
 				<aspectratio>stretch</aspectratio>
 				<animation effect="fade" start="100" end="40" time="100" condition="Control.HasFocus(406)">Conditional</animation>
-				<animation effect="fade" start="0" end="100" time="300" delay="50">VisibleChange</animation>
+				<animation effect="fade" start="0" end="100" time="300" delay="480">VisibleChange</animation>
 				<visible>Player.HasMedia</visible>
 			</control>
 			<control type="image">
@@ -667,7 +679,7 @@
 				<texture>osd/GrayBackground.png</texture>
 				<aspectratio>stretch</aspectratio>
 				<animation effect="fade" start="100" end="40" time="100" condition="Control.HasFocus(407)">Conditional</animation>
-				<animation effect="fade" start="0" end="100" time="300" delay="50">VisibleChange</animation>
+				<animation effect="fade" start="0" end="100" time="300" delay="540">VisibleChange</animation>
 				<visible>Player.HasMedia</visible>
 			</control>
 			<control type="image">
@@ -676,7 +688,7 @@
 				<texture>osd/GrayBackground.png</texture>
 				<aspectratio>stretch</aspectratio>
 				<animation effect="fade" start="100" end="40" time="100" condition="Control.HasFocus(408)">Conditional</animation>
-				<animation effect="fade" start="0" end="100" time="300" delay="50">VisibleChange</animation>
+				<animation effect="fade" start="0" end="100" time="300" delay="600">VisibleChange</animation>
 				<visible>Player.HasMedia</visible>
 			</control>
 			<control type="image"><!-- scroll offset -->
@@ -685,7 +697,7 @@
 				<texture>osd/GrayBackground.png</texture>
 				<aspectratio>stretch</aspectratio>
 				<visible>Container.Scrolling</visible>
-				<animation effect="fade" start="0" end="100" time="300" delay="50">VisibleChange</animation>
+				<animation effect="fade" start="0" end="100" time="300" delay="40">VisibleChange</animation>
 			</control>
 			<control type="image"><!-- volume -->
 				<height>52</height>
@@ -693,7 +705,7 @@
 				<texture>osd/GrayBackground.png</texture>
 				<aspectratio>stretch</aspectratio>
 				<visible>Window.IsVisible(volumebar)</visible>
-				<animation effect="fade" start="0" end="100" time="300" delay="50">VisibleChange</animation>
+				<animation effect="fade" start="0" end="100" time="300" delay="40">VisibleChange</animation>
 			</control>
 		</control>	
 		
@@ -710,6 +722,14 @@
 			<ondown>300</ondown>
 			<visible>!Window.IsVisible(songinformation)</visible>
 
+			
+			<control type="image"><!-- 0 profile thumb -->
+				<width>52</width>
+				<height>52</height>
+				<aspectratio>stretch</aspectratio>
+				<texture>$INFO[System.ProfileThumb]</texture>
+				<visible>!Skin.HasSetting(ProfileThumbVisible)</visible>
+			</control>
 			
 			<control type="image"><!-- 1 playlist window -->
 				<width>52</width>

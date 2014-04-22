@@ -9,7 +9,8 @@
     <align>left</align>
     <aligny>center</aligny>
     <font>list</font>
-    <textcolor>ACFFFFFF</textcolor>
+    <!-- textcolor>ACFFFFFF</textcolor -->
+    <textcolor>settings</textcolor>
     <focusedcolor>FFE1E1E1</focusedcolor>
     <selectedcolor>ff7acafe</selectedcolor>
     <disabledcolor>FF464646</disabledcolor>
@@ -36,7 +37,7 @@
     <aligny>center</aligny>
     <font>DefaultButton</font>
 
-    <textcolor>ACFFFFFF</textcolor>
+    <textcolor>settings</textcolor>
     <focusedcolor>FFE1E1E1</focusedcolor>
     <disabledcolor>FF464646</disabledcolor>
     <texturefocus>White35p.png</texturefocus>
@@ -52,7 +53,7 @@
     <height>48</height>
 
     <font>DefaultButton</font>
-    <textcolor>ACFFFFFF</textcolor>
+    <textcolor>settings</textcolor>
     <focusedcolor>White</focusedcolor>
     <disabledcolor>FF464646</disabledcolor>
     <texturenofocus>-</texturenofocus>
@@ -73,7 +74,7 @@
     <aligny>center</aligny>
     <font>DefaultButton</font>
 
-    <textcolor>ACFFFFFF</textcolor>
+    <textcolor>settings</textcolor>
     <focusedcolor>FFE1E1E1</focusedcolor>
     <disabledcolor>FF464646</disabledcolor>
     <texturenofocus>-</texturenofocus>
@@ -100,7 +101,7 @@
     <texturedown>buttons/spindownnf.png</texturedown>
     <textureupfocus>buttons/spinupfo.png</textureupfocus>
     <texturedownfocus>buttons/spindownfo.png</texturedownfocus>
-    <textcolor>ACFFFFFF</textcolor>
+    <textcolor>settings</textcolor>
     <focusedcolor>FFE1E1E1</focusedcolor>
     <disabledcolor>FF464646</disabledcolor>
     <textoffsetx>5</textoffsetx>
@@ -122,7 +123,7 @@
     <textureupfocus>ArrowUpFo.png</textureupfocus>
     <texturedownfocus>ArrowDownFo.png</texturedownfocus>
     <font>Small</font>
-    <textcolor>ACFFFFFF</textcolor>
+    <textcolor>settings</textcolor>
     <focusedcolor>FFE1E1E1</focusedcolor>
     <disabledcolor>FF464646</disabledcolor>
     <textoffsetx>5</textoffsetx>
@@ -145,7 +146,7 @@
     <textureslidernib>OSDSliderNibNF.png</textureslidernib>
     <textureslidernibfocus>OSDSliderNibFO.png</textureslidernibfocus>
     <font>list</font>
-    <textcolor>ACFFFFFF</textcolor>
+    <textcolor>settings</textcolor>
     <focusedcolor>FFE1E1E1</focusedcolor>
     <disabledcolor>FF464646</disabledcolor>
     <textoffsetx>5</textoffsetx>
