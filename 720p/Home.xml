@@ -60,8 +60,8 @@
 <include condition="Library.HasContent(movies)+ !Skin.HasSetting(RecentMoviesToggle)">RecentMoviePanel</include>
 <include condition="Library.HasContent(tvshows) + !Skin.HasSetting(RecentTVShowToggle)">RecentTVShowPanel</include>
 
-<include condition="Library.HasContent(movies) + Skin.HasSetting(RandomMovieToggle)">RandomMoviePanel</include>
-<include condition="Library.HasContent(music) + Skin.HasSetting(RandomSongsToggle)">RandomSongsPanel</include>
+<include condition="Library.HasContent(movies) + Skin.HasSetting(RandomMovieToggle) + System.HasAddon(service.library.data.provider)">RandomMoviePanel</include>
+<include condition="Library.HasContent(music) + Skin.HasSetting(RandomSongsToggle) + System.HasAddon(service.library.data.provider)">RandomSongsPanel</include>
 
 <include condition="!IsEmpty(Skin.String(PluginWidgetPath1)) + Skin.HasSetting(CustomWidget1Toggle)">PluginWidget1</include>
 <include condition="!IsEmpty(Skin.String(PluginWidgetPath2)) + Skin.HasSetting(CustomWidget2Toggle)">PluginWidget2</include>

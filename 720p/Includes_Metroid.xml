@@ -187,7 +187,8 @@
 				<include>MoviePanelLayout</include>
 			
 				<!-- include>HomeContentRecentMovies</include -->
-				<content target="video">plugin://service.library.data.provider?type=recentmovies</content>				
+				<!-- content target="video">plugin://service.library.data.provider?type=recentmovies</content -->				
+				<content target="video">library://video/recentlyaddedmovies.xml</content>				
 			</control>
 
 			<control type="group">
@@ -298,7 +299,7 @@
 					<aligny>center</aligny>
 					<align>right</align>
 					<scroll>false</scroll>
-					<label>$INFO[Container(8001).ListItem.Label2] $INFO[Container(8001).ListItem.Property(episodenumber)]</label>
+					<label>$INFO[Container(8001).ListItem.Title] $VAR[Padded_season]$VAR[Padded_episodes]</label>
 				</control>
 			</control>
 					
@@ -313,7 +314,8 @@
 				<include>ShowPanelLayout</include>
 				
 				<!-- include>HomeContentRecentTVShows</include -->
-				<content target="video">plugin://service.library.data.provider?type=recentepisodes</content>					
+				<!-- content target="video">plugin://service.library.data.provider?type=recentepisodes</content -->					
+				<content target="video">library://video/recentlyaddedepisodes.xml</content>					
 			</control>	
 		</control>	
 	</include>

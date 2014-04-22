@@ -67,11 +67,15 @@
 	</variable>
 	
 	<variable name="Padded_episodes">
+		<value condition="IntegerGreaterThan(Container(8001).ListItem.Episode,9) + Window.IsVisible(home)">$INFO[Container(8001).ListItem.Episode,E]</value>
+		<value condition="!IntegerGreaterThan(Container(8001).ListItem.Episode,9) + Window.IsVisible(home)">$INFO[Container(8001).ListItem.Episode,E0]</value>
 		<value condition="IntegerGreaterThan(ListItem.Episode,9)">$INFO[ListItem.Episode]</value>
 		<value condition="!IntegerGreaterThan(ListItem.Episode,9)">$INFO[ListItem.Episode,0]</value>
 	</variable>
 	
 	<variable name="Padded_season">
+		<value condition="IntegerGreaterThan(Container(8001).ListItem.Season,9) + Window.IsVisible(home)">$INFO[Container(8001).ListItem.Season,S]</value>
+		<value condition="!IntegerGreaterThan(Container(8001).ListItem.Season,9) + Window.IsVisible(home)">$INFO[Container(8001).ListItem.Season,S0]</value>
 		<value condition="IntegerGreaterThan(ListItem.Season,9)">$INFO[ListItem.Season]</value>
 		<value condition="!IntegerGreaterThan(ListItem.Season,9)">$INFO[ListItem.Season,0]</value>
 	</variable>
