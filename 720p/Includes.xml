@@ -232,6 +232,7 @@
 			<control type="label">
 				<include>TopLabelBig</include>
 				<label>$INFO[System.time(hh:mm)]</label>
+				
 			</control>
 			<control type="label">
 				<include>TopLabelSmall</include>

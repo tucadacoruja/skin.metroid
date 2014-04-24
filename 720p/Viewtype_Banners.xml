@@ -273,7 +273,7 @@
 					
 			<control type="textbox">
 				<left>990</left>
-				<top>140</top>
+				<top>115</top>
 				<width>230</width>
 				<height>340</height>
 				<align>justify</align>

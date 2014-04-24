@@ -11,7 +11,7 @@
 <controls>
 	<control type="group">
 		<include>DialogEffect</include>
-		<visible>!Window.IsVisible(virtualkeyboard)</visible>
+		<visible>![Window.IsVisible(virtualkeyboard) | Window.IsVisible(selectdialog) | Window.IsVisible(filebrowser)]</visible>
 				
 		
 		<control type="image">

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
-  <defaultcontrol>101</defaultcontrol>
+  <defaultcontrol>120</defaultcontrol>
 
   <allowoverlay>yes</allowoverlay>
-   <onload condition="!Skin.HasSetting(FirstTimeSubs)">ActivateWindow(1112)</onload>
+
   <zorder>1</zorder>
   <controls>
   
@@ -105,6 +105,7 @@
         <ondown>150</ondown>
         <viewtype label="535">list</viewtype>
         <pagecontrol>121</pagecontrol>
+		<visible>!IsEmpty(Container(120).ListItem.Label)</visible>
         <scrolltime>200</scrolltime>
 		
         <itemlayout height="38">

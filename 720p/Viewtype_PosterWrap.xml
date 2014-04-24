@@ -11,8 +11,7 @@
 		<visible>Control.IsVisible(501)</visible>
 		
 		<include>MediaFlags</include>	
-		
-			
+				
 		<control type="group">
 
 			<left>0</left>
@@ -20,11 +19,11 @@
 
 			<control type="fixedlist" id="501">
 				<visible>Container.Content(Movies) | Container.Content(TVShows) | Container.Content(seasons)</visible>
-				<hitrect x="220" y="200" w="1000" h="373" />
-				<left>640</left>
-				<top>189</top>
+				<!-- hitrect x="350" y="130" w="725" h="480" / -->
+				<left>320</left>
+				<top>128</top>
 				<width>1600</width>
-				<height>560</height>
+				<height>380</height>
 				<onleft>57</onleft>
 				<onright>57</onright>
 				<onup>300</onup>
@@ -33,7 +32,7 @@
 				<pagecontrol>63</pagecontrol>
 				<scrolltime>200</scrolltime>
 				<preloaditems>2</preloaditems>
-				<focusposition>0</focusposition>
+				<focusposition>2</focusposition>
 				<orientation>horizontal</orientation>
 				
 				<animation effect="slide" start="0,0" end="-110,0" time="400" condition="!Control.HasFocus(301) + !Skin.HasSetting(LockMainMenu)">Conditional</animation>
@@ -41,7 +40,7 @@
 					
 					<control type="image">
 						<left>2</left>
-						<top>100</top>
+						<top>160</top>
 						<width>123</width>
 						<height>180</height>
 						<aspectratio>stretch</aspectratio>
@@ -51,10 +50,11 @@
 						<texture fallback="DefaultAlbumCover.png">$INFO[ListItem.Art(poster)]</texture>
 						<!-- animation effect="fade" start="0" end="85" time="0" condition="true">Conditional</animation -->
 						<colordiffuse>D7FFFFFF</colordiffuse>
+						<visible>![stringcompare(ListItem(-1).Label,ListItem.Label) | stringcompare(ListItem(-2).Label,ListItem.Label)]</visible>
 					</control>
 					<control type="image">
 						<left>10</left>
-						<top>120</top>
+						<top>190</top>
 						<width>100</width>
 						<height>120</height>
 						<aspectratio>stretch</aspectratio>
@@ -64,10 +64,8 @@
 					</control>
 					
 				</itemlayout>
-						
-				<focusedlayout height="310" width="0" />
-					
-
+				<focusedlayout height="490" width="40"/>
+				
 			</control>	
 			
 
@@ -155,6 +153,7 @@
 		<control type="group">
 			<left>299</left>
 			<top>127</top>
+			
 			<!-- visible>false</visible -->
 			<animation effect="slide" start="0,0" end="-110,0" time="400" condition="!Control.HasFocus(301) + !Skin.HasSetting(LockMainMenu)">Conditional</animation>
 			
@@ -208,7 +207,21 @@
 		</control>
 
 		</control>
+		
 
+		<!-- control type="button">
+			<description>hitrectangle test</description>
+			<left>210</left>
+			<top>470</top>
+			<width>300</width>
+			<height>160</height>
+			<aspectratio>stretch</aspectratio>
+			<texturefocus>BlueBackground.png</texturefocus>
+			<texturenofocus>BlueBackground.png</texturenofocus>
+			<onclick>PlayMedia($INFO[ListItem.FileNameAndPath])</onclick>
+			<animation effect="fade" start="0" end="50" time="0" condition="true">Conditional</animation>
+		</control -->
+		
 		
 		
 		<control type="scrollbar" id="63">

@@ -175,7 +175,7 @@
 						
 						<item id="126">
 							<label>31073</label>
-							<onclick>ActivateWindow(playercontrols)</onclick>
+							<onclick>SetFocus(407)</onclick>
 							<visible>Player.HasMedia</visible>
 						</item>
 						
