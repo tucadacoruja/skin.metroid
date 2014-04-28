@@ -24,14 +24,7 @@
 		</control>
 
 	
-		<control type="image">
-			<left>-20</left>
-			<top>65</top>
-			<width>270</width>
-			<height>658</height>
-			<aspectratio>stretch</aspectratio>
-			<texture>MetroidMenu.png</texture>
-		</control>
+		<include>MenuBackground</include>
 
 		<include>EmptyMenu</include>
 	

@@ -8,18 +8,18 @@
 			<effect type="rotatey" start="16" end="0" time="600" center="1280,330" tween="Cubic" easing="in" delay="1" />
 			
 		</animation>
-		<!--animation type="Hidden" reversible="false">
+		<animation type="Hidden" reversible="false">
 			<effect type="fade" start="100" end="0" time="100" />
-		</animation-->
+		</animation>
 		<animation type="WindowOpen" reversible="false">
 			<effect type="fade" start="1" end="100" time="680" />
 			<effect type="zoom" start="75" end="100" time="600" center="1280,330" tween="Cubic" easing="in" delay="1" />
 			<effect type="rotatey" start="16" end="0" time="600" center="1280,330" tween="Cubic" easing="in" delay="1" />
 			
 		</animation>
-		<!--animation type="WindowClose" reversible="false">
+		<animation type="WindowClose" reversible="false">
 			<effect type="fade" start="100" end="0" time="100" />
-		</animation-->
+		</animation>
 	</include>		
 	
 	<include name="VisibleFadeEffect">

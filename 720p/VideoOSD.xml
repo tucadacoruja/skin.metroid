@@ -114,7 +114,7 @@
 				<info>Player.Progress</info>
 				<colordiffuse>skin.string(MainColorString)</colordiffuse>
 				<!-- animation effect="fade" start="0" end="60" time="0" condition="true">Conditional</animation -->
-
+				
 			</control>
 			
 			<control type="slider" id="87">

@@ -62,14 +62,14 @@
 					<bordertexture border="3">-</bordertexture>
 					<bordersize>3</bordersize>
 					<fadetime>200</fadetime>
-					<texture background="true" fallback="DefaultAlbumCover.png">$INFO[ListItem.Art(poster)]</texture>
+					<texture background="true" fallback="DefaultCatch.png">$INFO[ListItem.Art(poster)]</texture>
 					<animation effect="fade" start="0" end="60" time="0" condition="true">Conditional</animation>
 				</control>
 				<control type="image">
 					<left>10</left>
-					<top>120</top>
+					<top>125</top>
 					<width>100</width>
-					<height>120</height>
+					<height>110</height>
 					<aspectratio>stretch</aspectratio>
 					<texture background="true"  >$VAR[Fallback_Icon]</texture>
 					<animation effect="fade" start="0" end="80" time="0" condition="true">Conditional</animation>
@@ -117,13 +117,13 @@
 						<bordertexture border="6">-</bordertexture>
 						<bordersize>6</bordersize>
 						<fadetime>200</fadetime>
-						<texture background="true" fallback="DefaultAlbumCover.png">$INFO[ListItem.Art(poster)]</texture>
+						<texture background="true" fallback="DefaultCatch.png">$INFO[ListItem.Art(poster)]</texture>
 					</control>
 					<control type="image">
 						<left>20</left>
-						<top>30</top>
+						<top>33</top>
 						<width>150</width>
-						<height>190</height>
+						<height>180</height>
 						<aspectratio>stretch</aspectratio>
 						<texture background="true"  >$VAR[Fallback_Icon]</texture>
 						<animation effect="fade" start="0" end="80" time="0" condition="true">Conditional</animation>
@@ -166,7 +166,7 @@
 						<bordertexture border="6">-</bordertexture>
 						<bordersize>6</bordersize>
 						<fadetime>200</fadetime>
-						<texture background="true" fallback="DefaultAlbumCover.png">$INFO[ListItem.Art(poster)]</texture>
+						<texture background="true" fallback="DefaultCatch.png">$INFO[ListItem.Art(poster)]</texture>
 					</control>
 					<control type="image">
 						<left>25</left>

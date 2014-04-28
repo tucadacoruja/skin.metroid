@@ -27,7 +27,7 @@
 		<width>1280</width>
 		<height>720</height>
 		<aspectratio>stretch</aspectratio>
-		<texture>MetroidBG.png</texture>
+		<texture background="true" fallback="special://skin/extras/backgrounds/MetroidBG.png">$INFO[Skin.String(GlobalBackground)]</texture>
 		<!-- colordiffuse>70FFFFFF</colordiffuse -->
 	</control>
 		
@@ -43,8 +43,8 @@
 		<height>400</height>
 		<aspectratio>keep</aspectratio>
 		<texture>DefaultFallback.png</texture>
-		<!-- colordiffuse>ddffffff</colordiffuse -->
-		<!-- animation effect="zoom" end="50" center="auto" time="0" condition="true">Conditional</animation -->
+		<animation effect="fade" start="100" end="50" time="30000" pulse="true" condition="true">Conditional</animation>
+		<animation effect="fade" start="100" end="0" time="200" >WindowClose</animation>
 		<animation effect="rotatey" end="360" center="640,360" time="60000" loop="true" condition="true">Conditional</animation>
 	</control>
 	<control type="label">
@@ -95,7 +95,7 @@
 						<width>380</width>
 						<height>45</height>
 						<font>LoginList</font>
-						<textcolor>95FFFFFF</textcolor>
+						<textcolor>CCFFFFFF</textcolor>
 						<label>$INFO[ListItem.Label]</label>
 						<align>center</align>
 					</control>
@@ -107,7 +107,7 @@
 						<height>3</height>
 						<aspectratio>stretch</aspectratio>
 						<texture>blue3.png</texture>
-						<animation effect="fade" start="0" end="30" time="0" condition="true">Conditional</animation>
+						<animation effect="fade" start="0" end="60" time="0" condition="true">Conditional</animation>
 					</control>	
 					<control type="label">
 						<left>190</left>
@@ -115,6 +115,7 @@
 						<height>45</height>
 						<font>LoginList</font>
 						<textcolor>White</textcolor>
+						<shadowcolor>46000000</shadowcolor>
 						<label>$INFO[ListItem.Label]</label>
 						<align>center</align>
 					</control>

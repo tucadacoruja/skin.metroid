@@ -47,7 +47,8 @@
 	
 	<variable name="PosterTitle">
 		<value condition="substring(ListItem.Label,..,left)">Back</value>
-		<value>$INFO[ListItem.Title]</value>
+		<value condition="!IsEmpty(ListItem.Title)">$INFO[ListItem.Title]</value>
+		<value>$INFO[ListItem.Label]</value>
 	</variable>
 	
 	<variable name="Episode_title">
@@ -62,8 +63,31 @@
 	</variable>
 	
 	<variable name="Padded_string">
+		
 		<value condition="IntegerGreaterThan(ListItem.TrackNumber,9)">$INFO[ListItem.TrackNumber]</value>
 		<value condition="!IntegerGreaterThan(ListItem.TrackNumber,9)">$INFO[ListItem.TrackNumber,0]</value>
+		
+	</variable>
+	
+	<variable name="FanOrThumb">
+		
+		<value condition="Container.Content(songs)">$INFO[ListItem.Art(thumb)]</value>
+		<value condition="!IsEmpty(ListItem.Art(landscape))">$INFO[ListItem.Art(landscape)]</value>
+		<value>$INFO[ListItem.Art(fanart)]</value>
+		
+	</variable>
+	<variable name="FanOrThumbMinus">
+		
+		<value condition="Container.Content(songs)">$INFO[ListItem(-1).Art(thumb)]</value>
+		<value condition="!IsEmpty(ListItem.Art(landscape))">$INFO[ListItem(-1).Art(landscape)]</value>
+		<value>$INFO[ListItem(-1).Art(fanart)]</value>
+		
+	</variable>
+	<variable name="WatchedCheckmark">
+		
+		<value condition="stringcompare(ListItem.Overlay,OverlayWatched.png)">✔</value>
+		<value>•</value>
+		
 	</variable>
 	
 	<variable name="Padded_episodes">
@@ -135,7 +159,7 @@
 		<value condition="Container.Content(Seasons) + !IsEmpty(ListItem.Art(season.poster))">$INFO[ListItem.Art(season.poster)]</value>
 		<value condition="Container.Content(Seasons) + IsEmpty(ListItem.Art(season.poster))">$INFO[ListItem.Art(tvshow.poster)]</value>
 		<value condition="IsEmpty(ListItem.Art(poster)) | IsEmpty(ListItem.Art(season.poster)) | IsEmpty(ListItem.Art(tvshow.poster))">$INFO[ListItem.Art(thumb)]</value>
-		<value>DefaultAlbumCover.png</value>
+		<value>DefaultCatch.png</value>
 	</variable>
 	
 	<variable name="EpisodeThumb">
@@ -181,6 +205,12 @@
 		<value condition="substring(Listitem.Label,..,left)">$INFO[ListItem.Icon]</value>
 		<value condition="[IsEmpty(ListItem.Art(fanart)) + IsEmpty(ListItem.Art(poster)) + IsEmpty(ListItem.Art(banner))]">DefaultFallback.png</value>
 		
+	</variable>
+	<variable name="Fallback_Thumb">
+		<value condition="substring(Listitem.Label,..,left)">$INFO[ListItem.Icon]</value>
+		<value condition="IsEmpty(ListItem.Art(thumb))">$INFO[ListItem.Icon]</value>
+		<value condition="!IsEmpty(ListItem.Art(thumb))">$INFO[ListItem.Art(thumb)]</value>
+		<value>DefaultFallback.png</value>
 	</variable>
 	
 	<variable name="Landscape_SubHeader">

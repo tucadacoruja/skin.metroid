@@ -43,11 +43,12 @@
 	<description>Default Radio Button</description>
 	<height>42.5</height>
 	<width>810</width>
-	<textcolor>CCFFFFFF</textcolor>
+	<textcolor>settings</textcolor>
 	<focusedcolor>white</focusedcolor>
 	<disabledcolor>46ffffff</disabledcolor>
 	<texturefocus>setting.png</texturefocus>
 	<texturenofocus>-</texturenofocus>
+	<shadowcolor>46000000</shadowcolor>
 	<textoffsetx>20</textoffsetx>
 	<radioleft>743</radioleft>
 	<align>left</align>
@@ -187,6 +188,16 @@
 	<scroll>false</scroll>
 </include>
 
+<include name="ListExtraInfo">
+	<height>22</height>
+	<width>200</width>
+	<font>font12</font>
+	<align>right</align>
+	<textcolor>white</textcolor>
+	<shadowcolor>00FFFFFF</shadowcolor>
+	<scroll>false</scroll>
+</include>
+
 <include name="MenuAutoClose">
 	<control type="button">
 		<onfocus condition="IsEmpty(Container(301).ListItem.Property(DropdownMenu1))">Skin.Reset(SubMenu1)</onfocus>
@@ -275,11 +286,7 @@
 		</control>
 		
 		<control type="image">
-			<left>1216</left>
-			<top>0</top>
-			<height>61</height>
-			<width>61</width>
-			<aspectratio>stretch</aspectratio>
+			<include>SearchButton</include>
 			<texture>$INFO[Window(weather).Property(Current.FanartCode),weather/,.png]</texture>
 			<visible>![Window.IsVisible(extendedprogressdialog) | Library.IsScanningMusic | Library.IsScanningVideo | Substring(Weather.Temperature,Busy) | Window.IsVisible(infodialog) | Window.IsVisible(volumebar) | Window.IsVisible(musicscan) | Window.IsVisible(progressdialog) | Window.IsVisible(videoscan)]</visible>
 			<visible>System.HasNetwork + Weather.IsFetched + Skin.HasSetting(GlobalSearch)</visible>
@@ -287,8 +294,8 @@
 		<control type="button">
 			<include>weather Button</include>
 			<aspectratio>keep</aspectratio>
-			<texturefocus>$INFO[Window(weather).Property(Current.FanartCode),weather/,.png]</texturefocus>
-			<texturenofocus>$INFO[Window(weather).Property(Current.FanartCode),weather/,.png]</texturenofocus>
+			<texturefocus>empty.png</texturefocus>
+			<texturenofocus>empty.png</texturenofocus>
 			<onclick>xbmc.activatewindow(weather)</onclick>
 			<visible>![Window.IsVisible(extendedprogressdialog) | Library.IsScanningMusic | Library.IsScanningVideo | Substring(Weather.Temperature,Busy) | Window.IsVisible(infodialog) | Window.IsVisible(volumebar) | Window.IsVisible(musicscan) | Window.IsVisible(progressdialog) | Window.IsVisible(videoscan)]</visible>
 			<visible>System.HasNetwork + Weather.IsFetched + Skin.HasSetting(GlobalSearch)</visible>
@@ -322,19 +329,41 @@
 
 	
 	<include name="GeneralFanart">
+		<control type="group">
+			<!-- Setup for slide with shadow used in most windows -->
+			<animation effect="slide" start="0,0" end="-250,0" time="600" condition="!Control.HasFocus(301) + ![Window.IsVisible(home) | Window.IsVisible(profiles) | Window.IsVisible(weather)] + !Skin.HasSetting(LockMainMenu)">Conditional</animation>
+			
+			<include>ActualFanart</include>
+			<control type="image">
+				<left>235</left>
+				<top>65</top>
+				<width>15</width>
+				<height>670</height>
+				<aspectratio>stretch</aspectratio>
+				<texture>shadowv.png</texture>
+				<animation effect="fade" start="0" end="70" time="0" condition="true">Conditional</animation>
+			</control>
+		</control>
+	</include>
+	<include name="DefaultMenuPosition">
+		<left>250</left>
+	</include>
+	<include name="ExceptionsMenuPosition">
+		<left>0</left>
+	</include>
 	
-	<control type="group">
-		<animation effect="slide" start="0,0" end="-250,0" time="600" condition="!Control.HasFocus(301) + ![Window.IsVisible(home) | Window.IsVisible(profiles) | Window.IsVisible(weather)] + !Skin.HasSetting(LockMainMenu)">Conditional</animation>
-		
+	<include name="ActualFanart"><include>ExceptionsMenuPosition</include>
+		<!-- some windows use just the images -->
 		<control type="multiimage">
-			<left>250</left>
+			<include condition="Window.IsVisible(pvr) | Window.IsVisible(filemanager) | Window.IsVisible(musicplaylisteditor)">ExceptionsMenuPosition</include>
+			<include condition="![Window.IsVisible(pvr) | Window.IsVisible(filemanager) | Window.IsVisible(musicplaylisteditor)]">DefaultMenuPosition</include>
 			<top>0</top>
 			<width>1280</width>
 			<height>720</height>
 			<aspectratio>stretch</aspectratio>
 			<imagepath background="true">$VAR[MultiSlide]</imagepath>
-			<timeperimage>51000</timeperimage>
-			<fadetime>1000</fadetime>
+			<timeperimage>15000</timeperimage>
+			<fadetime>300</fadetime>
 			<randomize>true</randomize>
 			<animation effect="fade" start="0" end="100" time="100">VisibleChange</animation>
 			<animation effect="fade" start="0" end="100" time="100" delay="50">WindowOpen</animation>
@@ -343,18 +372,20 @@
 			<visible>!Player.HasVideo + IsEmpty(ListItem.Art(fanart)) + !Skin.HasSetting(BackgroundSlideshow)</visible>
 		</control>
 		<control type="image">
-			<left>250</left>
+			<include condition="Window.IsVisible(pvr) | Window.IsVisible(filemanager) | Window.IsVisible(musicplaylisteditor)">ExceptionsMenuPosition</include>
+			<include condition="![Window.IsVisible(pvr) | Window.IsVisible(filemanager) | Window.IsVisible(musicplaylisteditor)]">DefaultMenuPosition</include>
 			<top>0</top>
 			<width>1280</width>
 			<height>720</height>
 			<aspectratio>stretch</aspectratio>
 			<texture background="true">$INFO[ListItem.Art(fanart)]</texture>
-			<fadetime>400</fadetime>
+			<fadetime>210</fadetime>
 			<visible>![Player.HasVideo | Skin.HasSetting(LibraryFanart)]</visible>
 			<animation effect="fade" start="40" end="95" time="100000" delay="2000" reversable="true" pulse="true" condition="Player.HasAudio + !Skin.HasSetting(VisLibrary)">Conditional</animation>
 		</control>
 		<control type="image">
-			<left>250</left>
+			<include condition="Window.IsVisible(pvr) | Window.IsVisible(filemanager) | Window.IsVisible(musicplaylisteditor)">ExceptionsMenuPosition</include>
+			<include condition="![Window.IsVisible(pvr) | Window.IsVisible(filemanager) | Window.IsVisible(musicplaylisteditor)]">DefaultMenuPosition</include>
 			<top>0</top>
 			<width>1280</width>
 			<height>720</height>
@@ -373,18 +404,20 @@
 			<animation effect="fade" start="100" end="80" time="0" condition="Stringcompare(Skin.String(BackgroundPercentage),80) + !Player.HasMedia">Conditional</animation>
 			<animation effect="fade" start="100" end="75" time="0" condition="Stringcompare(Skin.String(BackgroundPercentage),75) + !Player.HasMedia">Conditional</animation>
 		</control>
-		<control type="image">
-			<left>235</left>
-			<top>65</top>
-			<width>15</width>
-			<height>670</height>
-			<aspectratio>stretch</aspectratio>
-			<texture>shadowv.png</texture>
-			<animation effect="fade" start="0" end="70" time="0" condition="true">Conditional</animation>
-		</control>
-	</control>
 	</include>
 	
+	<include name="MenuBackground">
+		<control type="image">
+			<left>-1</left>
+			<top>65</top>
+			<width>251</width>
+			<height>658</height>
+			<aspectratio>stretch</aspectratio>
+			<texture fallback="osd/GrayBackground.png">$INFO[Skin.String(MenuBGImage)]</texture>
+			<!-- texture  fallback="osd/GrayBackground.png">special://skin/extras/backgrounds/MenuBG4.jpg</texture -->
+			<colordiffuse>$INFO[Skin.String(MenuCstring)]</colordiffuse>
+		</control>
+	</include>
 	
 	<include name="VideoWindow">
 		<control type="visualisation"><!-- id="2" -->

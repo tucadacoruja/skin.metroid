@@ -41,15 +41,11 @@
 		<texture>black.png</texture>
 		<onfocus>SetFocus(3)</onfocus>
 	</control>
-	<control type="image">
-		<left>0</left>
-		<top>64</top>
-		<width>250</width>
-		<height>660</height>
-		<aspectratio>stretch</aspectratio>
-		<texture>MetroidMenu.png</texture>
-		
-	</control>
+	
+	
+	<include>MenuBackground</include>
+	<include>EmptyMenu</include>
+	
 	<control type="image">
 		<left>235</left>
 		<top>65</top>
@@ -59,12 +55,7 @@
 		<texture>shadowv.png</texture>
 		<animation effect="fade" start="0" end="70" time="0" condition="true">Conditional</animation>
 	</control>
-	
-	<control type="group">
-		<include>EmptyMenu</include>
-	</control>
-	
-	
+
 			
 	<control type="grouplist" id="3">
 		<description>Button Area</description>
@@ -91,6 +82,17 @@
 			<effect type="fade" start="100" end="0" time="200" delay="0" />
 		</animation> 
 		
+		<!--control type="image">
+			<left>355</left>
+			<top>130</top>
+			<width>845</width>
+			<height>450</height>
+			<aspectratio>stretch</aspectratio>
+			<texture>white.png</texture>
+			<colordiffuse>22FFFFFF</colordiffuse>
+			<colordiffuse>white</colordiffuse>
+		</control-->
+				
 		<control type="textbox" id="6">
 			<left>388</left>
 			<top>620</top>
@@ -99,7 +101,7 @@
 			<align>justify</align>
 			<label>-</label>
 			<font>SubMenu20</font>
-			<textcolor>blue</textcolor>
+			<textcolor>settings</textcolor>
 			<autoscroll delay="3000" time="1000" repeat="10000">true</autoscroll>
 			<!-- animation effect="fade" start="100" end="80" time="0" condition="true">Conditional</animation -->
 		</control>
@@ -131,6 +133,7 @@
 			<focusedcolor>white</focusedcolor>
 			<disabledcolor>46FFFFFF</disabledcolor>
 			<texturefocus>setting.png</texturefocus>
+			<shadowcolor>46000000</shadowcolor>
 			<texturenofocus>-</texturenofocus>
 		</control>
 		
@@ -142,6 +145,7 @@
 			<focusedcolor>white</focusedcolor>
 			<disabledcolor>46FFFFFF</disabledcolor>
 			<texturefocus>setting.png</texturefocus>
+			<shadowcolor>46000000</shadowcolor>
 			<texturenofocus>-</texturenofocus>
 			<textoffsetx>20</textoffsetx>
 			<radioleft>743</radioleft>
@@ -158,6 +162,7 @@
 			<focusedcolor>white</focusedcolor>
 			<disabledcolor>46FFFFFF</disabledcolor>
 			<texturefocus>setting.png</texturefocus>
+			<shadowcolor>46000000</shadowcolor>
 			<texturenofocus>-</texturenofocus>
 			<align>left</align>
 		</control>
@@ -186,6 +191,7 @@
 			<focusedcolor>white</focusedcolor>
 			<disabledcolor>46FFFFFF</disabledcolor>
 			<texturefocus>setting.png</texturefocus>
+			<shadowcolor>46000000</shadowcolor>
 			<texturenofocus>-</texturenofocus>
 			<align>left</align>
 			<aligny>center</aligny>

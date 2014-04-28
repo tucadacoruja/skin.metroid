@@ -20,7 +20,7 @@
 			<control type="fixedlist" id="501">
 				<visible>Container.Content(Movies) | Container.Content(TVShows) | Container.Content(seasons)</visible>
 				<!-- hitrect x="350" y="130" w="725" h="480" / -->
-				<left>320</left>
+				<left>325</left>
 				<top>128</top>
 				<width>1600</width>
 				<height>380</height>
@@ -30,7 +30,7 @@
 				<ondown>63</ondown>
 				<viewtype label="PosterFix">list</viewtype>
 				<pagecontrol>63</pagecontrol>
-				<scrolltime>200</scrolltime>
+				<scrolltime>150</scrolltime>
 				<preloaditems>2</preloaditems>
 				<focusposition>2</focusposition>
 				<orientation>horizontal</orientation>
@@ -44,10 +44,10 @@
 						<width>123</width>
 						<height>180</height>
 						<aspectratio>stretch</aspectratio>
-						<bordertexture border="3">DefaultAlbumCover.png</bordertexture>
+						<bordertexture border="3">DefaultCatch.png</bordertexture>
 						<bordersize>3</bordersize>
 						<!-- fadetime>200</fadetime -->
-						<texture fallback="DefaultAlbumCover.png">$INFO[ListItem.Art(poster)]</texture>
+						<texture fallback="DefaultCatch.png">$INFO[ListItem.Art(poster)]</texture>
 						<!-- animation effect="fade" start="0" end="85" time="0" condition="true">Conditional</animation -->
 						<colordiffuse>D7FFFFFF</colordiffuse>
 						<visible>![stringcompare(ListItem(-1).Label,ListItem.Label) | stringcompare(ListItem(-2).Label,ListItem.Label)]</visible>
@@ -101,17 +101,6 @@
 
 			</control>
 
-			<control type="image">
-				<left>615</left>
-				<top>375</top>
-				<width>450</width>
-				<height>4</height>
-			
-				<aspectratio>stretch</aspectratio>
-				<texture diffuse="SelectDiff.png">BlueBackground.png</texture>
-				<colordiffuse>44FFFFFF</colordiffuse>
-			</control>
-			
 		</control>
 		
 		<!-- --Text--- -->
@@ -120,6 +109,17 @@
 		<top>93</top>
 
 		<animation effect="slide" start="0,0" end="-110,0" time="400" condition="!Control.HasFocus(301) + !Skin.HasSetting(LockMainMenu)">Conditional</animation>
+			
+			<control type="image">
+				<left>460</left>
+				<top>477</top>
+				<width>450</width>
+				<height>4</height>
+			
+				<aspectratio>stretch</aspectratio>
+				<texture diffuse="SelectDiff.png">BlueBackground.png</texture>
+				<colordiffuse>44FFFFFF</colordiffuse>
+			</control>
 			
 			<control type="label">
 				<left>460</left>
@@ -158,14 +158,14 @@
 			<animation effect="slide" start="0,0" end="-110,0" time="400" condition="!Control.HasFocus(301) + !Skin.HasSetting(LockMainMenu)">Conditional</animation>
 			
 			<control type="image">
-				<left>27</left>
-				<top>24</top>
+				<left>23</left>
+				<top>10</top>
 				<width>328</width>
-				<height>488</height>
+				<height>500</height>
 				<texture background="true">diffuse/postershadow.png</texture>
 				<align>bottom</align>
 				<aspectratio>stretch</aspectratio>
-				<colordiffuse>89ffffff</colordiffuse>
+				<colordiffuse>70FFFFFF</colordiffuse>
 				
 			</control>					
 
@@ -177,8 +177,8 @@
 				<aspectratio>stretch</aspectratio>
 				<bordertexture border="3">blue3.png</bordertexture>
 				<bordersize>3</bordersize>
-				<texture background="true" diffuse="diffuse/posterdiffuse.png" fallback="DefaultAlbumCover.png">$INFO[ListItem.Art(poster)]</texture>
-				<fadetime>250</fadetime>
+				<texture background="true" diffuse="diffuse/posterdiffuse.png" fallback="DefaultCatch.png">$INFO[ListItem.Art(poster)]</texture>
+				<fadetime>200</fadetime>
 			</control>
 			<control type="image">
 				<left>30</left>

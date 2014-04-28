@@ -36,14 +36,9 @@
 		<onfocus>SetFocus(9000)</onfocus>
 	</control>
 
-	<control type="image">
-		<left>0</left>
-		<top>65</top>
-		<width>250</width>
-		<height>660</height>
-		<aspectratio>stretch</aspectratio>
-		<texture>MetroidMenu.png</texture>
-	</control>
+	<include>MenuBackground</include>
+	<include>EmptyMenu</include>
+	
 	<control type="image">
 		<left>235</left>
 		<top>65</top>
@@ -53,8 +48,6 @@
 		<texture>shadowv.png</texture>
 		<animation effect="fade" start="0" end="70" time="0" condition="true">Conditional</animation>
 	</control>
-	
-	<include>EmptyMenu</include>
 
 	
 <control type="group">

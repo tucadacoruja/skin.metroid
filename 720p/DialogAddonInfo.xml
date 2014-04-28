@@ -54,13 +54,23 @@
 			
 			<control type="group">
 				<left>360</left>
-				<top>175</top>
+				<top>0</top>
 				<width>380</width>
 				<height>500</height>
-						
+					
+				
 				<control type="image">
 					<left>0</left>
 					<top>0</top>
+					<width>220</width>
+					<height>557</height>
+					<texture background="true">white.png</texture>
+					<colordiffuse>FFBDBDBD</colordiffuse>
+				</control>
+				
+				<control type="image">
+					<left>0</left>
+					<top>175</top>
 					<width>220</width>
 					<height>170</height>
 					<info>ListItem.Icon</info>
@@ -69,7 +79,7 @@
 				
 				<control type="image">
 					<left>0</left>
-					<top>0</top>
+					<top>175</top>
 					<width>220</width>
 					<height>557</height>
 					<texture background="true">white.png</texture>

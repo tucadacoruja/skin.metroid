@@ -28,15 +28,7 @@
 		<include>Background</include>
 	
 		
-		<control type="image">
-			<left>0</left>
-			<top>65</top>
-			<width>250</width>
-			<height>660</height>
-			<aspectratio>stretch</aspectratio>
-			<texture>MetroidMenu.png</texture>
-			
-		</control>
+		<include>MenuBackground</include>
 		
 		<control type="image">
 			<left>235</left>
@@ -45,7 +37,7 @@
 			<height>660</height>
 			<aspectratio>stretch</aspectratio>
 			<texture>shadowv.png</texture>
-			<animation effect="fade" start="0" end="70" time="0" condition="true">Conditional</animation>
+			<animation effect="fade" start="0" end="60" time="0" condition="true">Conditional</animation>
 		</control>
 		
 		<include>EmptyMenu</include>
@@ -635,8 +627,8 @@
 					<itemgap>.5</itemgap>
 					<onleft>63</onleft>
 					<onright>9000</onright>
-					<onup>9004</onup>
-					<ondown>9004</ondown>
+					<onup>9007</onup>
+					<ondown>9007</ondown>
 					<pagecontrol>63</pagecontrol>
 					
 					<control type="button" id="108">
@@ -651,7 +643,7 @@
 						<label2>$INFO[Skin.String(GlobalBackground)]</label2>
 						<label>$LOCALIZE[31161]</label>
 						<onclick>Skin.Reset(GlobalBackground)</onclick>
-						<onclick>Skin.SetString(GlobalBackground,special://skin/extras/backgrounds/MetroidBG.png)</onclick>
+						<onclick>Skin.SetString(GlobalBackground,special://home/addons/skin.metroid/extras/backgrounds/MetroidBG.png)</onclick>
 						<onclick>Skin.SetLargeImage(GlobalBackground)</onclick>
 					</control>
 					
@@ -719,15 +711,95 @@
 						<onclick>Skin.ToggleSetting(LibraryFanart)</onclick>
 						<selected>!Skin.HasSetting(LibraryFanart)</selected>
 					</control>
-					<control type="radiobutton" id="119">
+					<control type="button" id="119">
 						<include>SettingsButton</include>
-						<description>Snow on Home screen</description>
-						<label>$LOCALIZE[31169]</label>
-						<onclick>Skin.ToggleSetting(HolidayEffects)</onclick>
-						<selected>Skin.HasSetting(HolidayEffects)</selected>
+						<label2>$INFO[Skin.String(MenuBGImage)]</label2>
+						<label>$LOCALIZE[31251]</label>
+						<onclick>Skin.Reset(MenuBGImage)</onclick>
+						<onclick>Skin.SetString(MenuBGImage,special://home/addons/skin.metroid/extras/backgrounds/)</onclick>
+						<onclick>Skin.SetLargeImage(MenuBGImage)</onclick>
 					</control>
 				</control>
-
+				<control type="group" id="9007"><!-- move 44 down -->
+					<left>355</left>
+					<top>520</top>
+					<onup>9004</onup>
+					<ondown>9004</ondown>
+					<visible>Container(9000).Hasfocus(4)</visible>
+					<control type="image">
+						<left>0</left>
+						<top>0</top>
+						<height>42.5</height>
+						<width>810</width>
+						<aspectratio>stretch</aspectratio>
+						<texture>setting.png</texture>
+						<animation effect="fade" start="0" end="50" time="0"condition="true">Conditional</animation>
+						<visible>Control.HasFocus(1260) | Control.HasFocus(1261)</visible>
+					</control> 
+					<control type="label">
+						<include>SettingsButton</include>
+						<font>DefaultButton</font>
+						<label>Menu background color                                               $INFO[Skin.String(MenuCstring)]</label>
+					</control>
+					<control type="button" id="1260">
+						<description>fake button down scroller</description>
+						<left>700</left>
+						<top>6</top>
+						<width>40</width>
+						<height>30</height>
+						<texturenofocus>buttons/spindownnf.png</texturenofocus>
+						<texturefocus>buttons/spindownfo.png</texturefocus>
+						<onleft>9000</onleft>
+						<onright>1261</onright>
+						<onup>9004</onup>
+						<ondown>9004</ondown>
+						<onclick condition="Stringcompare(Skin.String(MenuCstring),happygray) | IsEmpty(Skin.String(MenuCstring))">Skin.SetString(MenuCstring,defaultgray)</onclick>
+						<onclick condition="Stringcompare(Skin.String(MenuCstring),dimgray)">Skin.SetString(MenuCstring,happygray)</onclick>
+						<onclick condition="Stringcompare(Skin.String(MenuCstring),rosybrown)">Skin.SetString(MenuCstring,dimgray)</onclick>
+						<onclick condition="Stringcompare(Skin.String(MenuCstring),blanchedalmond)">Skin.SetString(MenuCstring,rosybrown)</onclick>
+						<onclick condition="Stringcompare(Skin.String(MenuCstring),lemonchiffon)">Skin.SetString(MenuCstring,blanchedalmond)</onclick>
+						<onclick condition="Stringcompare(Skin.String(MenuCstring),darkseagreen)">Skin.SetString(MenuCstring,lemonchiffon)</onclick>
+						<onclick condition="Stringcompare(Skin.String(MenuCstring),honeydew)">Skin.SetString(MenuCstring,darkseagreen)</onclick>
+						<onclick condition="Stringcompare(Skin.String(MenuCstring),lightskyblue)">Skin.SetString(MenuCstring,honeydew)</onclick>
+						<onclick condition="Stringcompare(Skin.String(MenuCstring),lightsteelblue)">Skin.SetString(MenuCstring,lightskyblue)</onclick>
+						<onclick condition="Stringcompare(Skin.String(MenuCstring),mediumpurple)">Skin.SetString(MenuCstring,lightsteelblue)</onclick>
+						<onclick condition="Stringcompare(Skin.String(MenuCstring),plum)">Skin.SetString(MenuCstring,mediumpurple)</onclick>
+						<onclick condition="Stringcompare(Skin.String(MenuCstring),defaultgray)">Skin.SetString(MenuCstring,plum)</onclick>
+						<onclick condition="Stringcompare(Skin.String(MenuCstring),happygray)">Skin.SetString(MenuCstring,defaultgray)</onclick>
+						
+					</control>	
+				
+					<control type="button" id="1261">
+						<description>fake button up scroller</description>
+						<left>740</left>
+						<top>6</top>
+						<width>40</width>
+						<height>30</height>
+						<texturenofocus>buttons/spinupnf.png</texturenofocus>
+						<texturefocus>buttons/spinupfo.png</texturefocus>
+						<onleft>1260</onleft>
+						<onright>1260</onright>
+						<onup>9004</onup>
+						<ondown>9004</ondown>
+						<onclick condition="Stringcompare(Skin.String(MenuCstring),defaultgray) | IsEmpty(Skin.String(MenuCstring))">Skin.SetString(MenuCstring,happygray)</onclick>
+						<onclick condition="Stringcompare(Skin.String(MenuCstring),plum)">Skin.SetString(MenuCstring,defaultgray)</onclick>
+						<onclick condition="Stringcompare(Skin.String(MenuCstring),mediumpurple)">Skin.SetString(MenuCstring,plum)</onclick>
+						<onclick condition="Stringcompare(Skin.String(MenuCstring),lightsteelblue)">Skin.SetString(MenuCstring,mediumpurple)</onclick>
+						<onclick condition="Stringcompare(Skin.String(MenuCstring),lightskyblue)">Skin.SetString(MenuCstring,lightsteelblue)</onclick>
+						<onclick condition="Stringcompare(Skin.String(MenuCstring),honeydew)">Skin.SetString(MenuCstring,lightskyblue)</onclick>
+						<onclick condition="Stringcompare(Skin.String(MenuCstring),darkseagreen)">Skin.SetString(MenuCstring,honeydew)</onclick>
+						<onclick condition="Stringcompare(Skin.String(MenuCstring),lemonchiffon)">Skin.SetString(MenuCstring,darkseagreen)</onclick>
+						<onclick condition="Stringcompare(Skin.String(MenuCstring),blanchedalmond)">Skin.SetString(MenuCstring,lemonchiffon)</onclick>
+						<onclick condition="Stringcompare(Skin.String(MenuCstring),rosybrown)">Skin.SetString(MenuCstring,blanchedalmond)</onclick>
+						<onclick condition="Stringcompare(Skin.String(MenuCstring),dimgray)">Skin.SetString(MenuCstring,rosybrown)</onclick>
+						<onclick condition="Stringcompare(Skin.String(MenuCstring),happygray)">Skin.SetString(MenuCstring,dimgray)</onclick>
+						<onclick condition="Stringcompare(Skin.String(MenuCstring),defaultgray)">Skin.SetString(MenuCstring,happygray)</onclick>
+						
+					</control>
+				</control><!-- end color changer -->
+				
+				
+				
 				
 				<control type="grouplist" id="9006">
 					<description>Control Area</description>
@@ -840,9 +912,16 @@
 						<onclick>Skin.ToggleSetting(AlphabeticalKeyboard)</onclick>
 						<selected>Skin.HasSetting(AlphabeticalKeyboard)</selected>
 					</control>
-											
+					
+					<control type="radiobutton" id="111">
+						<include>SettingsButton</include>
+						<description>Snow on Home screen</description>
+						<label>$LOCALIZE[31169]</label>
+						<onclick>Skin.ToggleSetting(HolidayEffects)</onclick>
+						<selected>Skin.HasSetting(HolidayEffects)</selected>
+					</control>
 										
-					<control type="button" id="111">
+					<control type="button" id="112">
 						<include>SettingsButton</include>
 						<label2>$INFO[Skin.String(BookmarkName1)]</label2>
 						<label>- $LOCALIZE[31229] 1</label>
@@ -851,7 +930,7 @@
 						<onclick>Skin.Reset(BookmarkName1)</onclick>
 						<enable>!IsEmpty(Skin.String(BookmarkDBID1))</enable>
 					</control>
-					<control type="button" id="112">
+					<control type="button" id="113">
 						<include>SettingsButton</include>
 						<label2>$INFO[Skin.String(BookmarkName2)]</label2>
 						<label>- $LOCALIZE[31229] 2</label>
@@ -860,7 +939,7 @@
 						<onclick>Skin.Reset(BookmarkName2)</onclick>
 						<enable>!IsEmpty(Skin.String(BookmarkDBID2))</enable>
 					</control>
-					<control type="button" id="113">
+					<control type="button" id="114">
 						<include>SettingsButton</include>
 						<label2>$INFO[Skin.String(BookmarkName3)]</label2>
 						<label>- $LOCALIZE[31229] 3</label>
@@ -1012,112 +1091,32 @@
 					
 				</control>	
 				
-				<!-- disabled color changer not sure if i want to keep it -->
 				
-				<!-- control type="group" id="9007"><!-- move 44 down -->
-					<!-- left>368</left>
-					<top>349</top>
-					<onup>9006</onup>
-					<ondown>9006</ondown>
-					<visible>Container(9000).Hasfocus(3)</visible>
-					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<height>42.5</height>
-						<width>810</width>
-						<aspectratio>stretch</aspectratio>
-						<texture>setting.png</texture>
-						<colordiffuse>$INFO[skin.string(MainColorString)]</colordiffuse>
-						<animation effect="fade" start="0" end="50" time="0"condition="true">Conditional</animation>
-						<visible>Control.HasFocus(1260) | Control.HasFocus(1261)</visible>
-					</control> 
-					<control type="label">
-						<left>20</left>
-						<height>42.5</height>
-						<width>810</width>
-						<textcolor>ampm</textcolor>
-						<font>DefaultButton</font>
-						<align>left</align>
-						<label>focus color</label>
-					</control>
-					<control type="button" id="1260">
-						<description>fake button down scroller</description>
-						<left>700</left>
-						<top>6</top>
-						<width>40</width>
-						<height>30</height>
-						<texturenofocus>buttons/spindownnf.png</texturenofocus>
-						<texturefocus>buttons/spindownfo.png</texturefocus>
-						<onleft>9000</onleft>
-						<onright>1261</onright>
-						<onup>9006</onup>
-						<ondown>9006</ondown>
-						<onclick condition="Stringcompare(Skin.String(MainColorString),darkorchid) | IsEmpty(Skin.String(MainColorString))">Skin.SetString(MainColorString,blue)</onclick>
-						<onclick condition="Stringcompare(Skin.String(MainColorString),gray)">Skin.SetString(MainColorString,darkorchid)</onclick>
-						<onclick condition="Stringcompare(Skin.String(MainColorString),goldenrod)">Skin.SetString(MainColorString,gray)</onclick>
-						<onclick condition="Stringcompare(Skin.String(MainColorString),darkslateblue)">Skin.SetString(MainColorString,goldenrod)</onclick>
-						<onclick condition="Stringcompare(Skin.String(MainColorString),deeppink)">Skin.SetString(MainColorString,darkslateblue)</onclick>
-						<onclick condition="Stringcompare(Skin.String(MainColorString),maroon)">Skin.SetString(MainColorString,deeppink)</onclick>
-						<onclick condition="Stringcompare(Skin.String(MainColorString),sienna)">Skin.SetString(MainColorString,maroon)</onclick>
-						<onclick condition="Stringcompare(Skin.String(MainColorString),silver)">Skin.SetString(MainColorString,sienna)</onclick>
-						<onclick condition="Stringcompare(Skin.String(MainColorString),teal)">Skin.SetString(MainColorString,silver)</onclick>
-						<onclick condition="Stringcompare(Skin.String(MainColorString),crimson)">Skin.SetString(MainColorString,teal)</onclick>
-						<onclick condition="Stringcompare(Skin.String(MainColorString),forestgreen)">Skin.SetString(MainColorString,crimson)</onclick>
-						<onclick condition="Stringcompare(Skin.String(MainColorString),blue)">Skin.SetString(MainColorString,forestgreen)</onclick>
-						<onclick condition="Stringcompare(Skin.String(MainColorString),darkorchid)">Skin.SetString(MainColorString,blue)</onclick>
-						
-					</control>			
-					<control type="button" id="1261">
-						<description>fake button up scroller</description>
-						<left>740</left>
-						<top>6</top>
-						<width>40</width>
-						<height>30</height>
-						<texturenofocus>buttons/spinupnf.png</texturenofocus>
-						<texturefocus>buttons/spinupfo.png</texturefocus>
-						<onleft>1260</onleft>
-						<onright>1260</onright>
-						<onup>9006</onup>
-						<ondown>9006</ondown>
-						<onclick condition="Stringcompare(Skin.String(MainColorString),blue) | IsEmpty(Skin.String(MainColorString))">Skin.SetString(MainColorString,darkorchid)</onclick>
-						<onclick condition="Stringcompare(Skin.String(MainColorString),forestgreen)">Skin.SetString(MainColorString,blue)</onclick>
-						<onclick condition="Stringcompare(Skin.String(MainColorString),crimson)">Skin.SetString(MainColorString,forestgreen)</onclick>
-						<onclick condition="Stringcompare(Skin.String(MainColorString),teal)">Skin.SetString(MainColorString,crimson)</onclick>
-						<onclick condition="Stringcompare(Skin.String(MainColorString),silver)">Skin.SetString(MainColorString,teal)</onclick>
-						<onclick condition="Stringcompare(Skin.String(MainColorString),sienna)">Skin.SetString(MainColorString,silver)</onclick>
-						<onclick condition="Stringcompare(Skin.String(MainColorString),maroon)">Skin.SetString(MainColorString,sienna)</onclick>
-						<onclick condition="Stringcompare(Skin.String(MainColorString),deeppink)">Skin.SetString(MainColorString,maroon)</onclick>
-						<onclick condition="Stringcompare(Skin.String(MainColorString),darkslateblue)">Skin.SetString(MainColorString,deeppink)</onclick>
-						<onclick condition="Stringcompare(Skin.String(MainColorString),goldenrod)">Skin.SetString(MainColorString,darkslateblue)</onclick>
-						<onclick condition="Stringcompare(Skin.String(MainColorString),gray)">Skin.SetString(MainColorString,goldenrod)</onclick>
-						<onclick condition="Stringcompare(Skin.String(MainColorString),darkorchid)">Skin.SetString(MainColorString,gray)</onclick>
-						<onclick condition="Stringcompare(Skin.String(MainColorString),blue)">Skin.SetString(MainColorString,darkorchid)</onclick>
-						
-					</control>
-				</control -->
+				
 				
 			</control>
 			
-			<control type="button" id="444">
+			
+		</control>
 		
-				<left>1</left>
-				<top>616</top>
-				<description>Back Button</description>
-				<height>50</height>
-				<width>249</width>
-				<align>left</align>
-				<aligny>center</aligny>
-				<textoffsetx>23</textoffsetx>
-				<font>MainMenu21</font>
-				<label>31084</label>
-				<focusedcolor>white</focusedcolor>
-				<texturefocus>category.png</texturefocus>
-				<texturenofocus>-</texturenofocus>
-				<onclick>back</onclick>
-				<onup>9000</onup>
-				
-				<visible>Skin.HasSetting(HideGlobalBack)</visible>
-			</control>
+		<control type="button" id="444">
+			<left>1</left>
+			<top>616</top>
+			<description>Back Button</description>
+			<height>50</height>
+			<width>249</width>
+			<align>left</align>
+			<aligny>center</aligny>
+			<textoffsetx>23</textoffsetx>
+			<font>MainMenu21</font>
+			<label>31084</label>
+			<focusedcolor>white</focusedcolor>
+			<texturefocus>category.png</texturefocus>
+			<texturenofocus>-</texturenofocus>
+			<onclick>back</onclick>
+			<onup>9000</onup>
+			
+			<visible>Skin.HasSetting(HideGlobalBack)</visible>
 		</control>
 
 		<control type="scrollbar" id="63">

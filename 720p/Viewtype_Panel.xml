@@ -40,7 +40,7 @@
 				<scrolltime tween="Cubic" easing="in">240</scrolltime>
 			
 				<preloaditems>2</preloaditems>
-				<animation effect="slide" start="0,0" end="-215,0" time="600" condition="!Control.HasFocus(301) + !Skin.HasSetting(LockMainMenu)">Conditional</animation>
+				<animation effect="slide" start="0,0" end="-215,0" time="400" condition="!Control.HasFocus(301) + !Skin.HasSetting(LockMainMenu)">Conditional</animation>
 								
 				<itemlayout width="192" height="288">
 					<control type="group">
@@ -54,7 +54,7 @@
 							<top>0</top>
 							<width>180</width>
 							<height>102</height>
-							<texture background="true" >white.png</texture>
+							<texture>white.png</texture>
 							<aspectratio>stretch</aspectratio>
 							<colordiffuse>FFBDBDBD</colordiffuse>
 						</control>
@@ -64,8 +64,19 @@
 							<top>0</top>
 							<width>180</width>
 							<height>102</height>
+							<texture>$INFO[ListItem.Icon]</texture>
+							<aspectratio aligny="top">keep</aspectratio>
+							<visible>IsEmpty(ListItem.Art(thumb))</visible>
+						</control>
+						
+						<control type="image">
+							<left>0</left>
+							<top>0</top>
+							<width>180</width>
+							<height>102</height>
 							<texture>$VAR[Landscape_Image]</texture>
 							<aspectratio aligny="center">scale</aspectratio>
+							<visible>!IsEmpty(ListItem.Art(thumb))</visible>
 						</control>
 						
 						
@@ -200,8 +211,19 @@
 							<top>0</top>
 							<width>180</width>
 							<height>102</height>
+							<texture>$INFO[ListItem.Icon]</texture>
+							<aspectratio aligny="top">keep</aspectratio>
+							<visible>IsEmpty(ListItem.Art(thumb))</visible>
+						</control>
+						
+						<control type="image">
+							<left>0</left>
+							<top>0</top>
+							<width>180</width>
+							<height>102</height>
 							<texture>$VAR[Landscape_Image]</texture>
 							<aspectratio aligny="center">scale</aspectratio>
+							<visible>!IsEmpty(ListItem.Art(thumb))</visible>
 						</control>
 												
 						<control type="image">

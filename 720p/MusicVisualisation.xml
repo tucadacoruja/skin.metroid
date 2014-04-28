@@ -20,7 +20,7 @@
 			<width>1280</width>
 			<height>730</height>
 			<aspectratio>stretch</aspectratio>
-			<texture fallback="special://skin/extras/backgrounds/MetroidBG.png">$INFO[Skin.String(GlassForeground)]</texture>
+			<texture fallback="special://skin/extras/backgrounds/MetroidBG.png">$INFO[Skin.String(GlobalBackground)]</texture>
 			<colordiffuse>FFCCCCCF</colordiffuse>
 			<visible>!Skin.HasSetting(VisualisationFilter)</visible>
 			<animation effect="fade" start="80" end="90" time="90000" reversable="true" pulse="true" condition="true">Conditional</animation>
@@ -80,9 +80,9 @@
 			
 			<control type="image">
 				<left>108</left>
-				<top>108</top>
+				<top>103</top>
 				<width>428</width>
-				<height>494</height>
+				<height>499</height>
 				<aspectratio>stretch</aspectratio>
 				<texture border="5">BlueBackground.png</texture>
 				<bordertexture border="5">whiteborder.png</bordertexture>

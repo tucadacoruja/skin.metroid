@@ -6,7 +6,7 @@
 <onload></onload>
 
 
-<views>603,579,504,677,501,709,50,781</views>
+<views>603,579,504,677,501,709,50,781,602</views>
 <controls>
 
 <control type="button" id="2">
@@ -117,8 +117,8 @@
 <include>Episodes</include><!-- 504 -->
 <include>Panel</include><!-- 603 --> 
 <include>Icons</include><!-- 677 --> 
-<include>PosterView</include><!-- 579 --> 
-
+<include>PosterView</include><!-- 579 -->
+<include>Polaroid</include><!-- 602 -->
 
 <include>BottomInfoBar</include>
  

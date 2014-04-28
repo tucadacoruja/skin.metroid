@@ -119,6 +119,7 @@
 				
 				<onup>312</onup>
 				<ondown>302</ondown>
+				<onleft>Dialog.Close(musicosd)</onleft>
 			</control>
 			
 			
@@ -147,6 +148,7 @@
 				
 				<onup>301</onup>
 				<ondown>303</ondown>
+				<onleft>Dialog.Close(musicosd)</onleft>
 			</control>
 			
 			
@@ -174,6 +176,7 @@
 				
 				<onup>302</onup>
 				<ondown>304</ondown>
+				<onleft>Dialog.Close(musicosd)</onleft>
 			</control>
 			
 			
@@ -200,6 +203,7 @@
 				
 				<onup>303</onup>
 				<ondown>305</ondown>
+				<onleft>Dialog.Close(musicosd)</onleft>
 			</control>
 			
 			
@@ -226,6 +230,7 @@
 				
 				<onup>304</onup>
 				<ondown>306</ondown>
+				<onleft>Dialog.Close(musicosd)</onleft>
 			</control>
 			
 			
@@ -252,6 +257,7 @@
 				
 				<onup>305</onup>
 				<ondown>307</ondown>
+				<onleft>Dialog.Close(musicosd)</onleft>
 			</control>
 			
 			
@@ -289,6 +295,7 @@
 				<enable>Visualisation.Enabled</enable>
 				<onup>306</onup>
 				<ondown>308</ondown>
+				<onleft>Dialog.Close(musicosd)</onleft>
 			</control>
 			
 			
@@ -320,6 +327,7 @@
 				
 				<onup>307</onup>
 				<ondown>309</ondown>
+				<onleft>Dialog.Close(musicosd)</onleft>
 			</control>
 			
 			
@@ -346,6 +354,7 @@
 				
 				<onup>308</onup>
 				<ondown>310</ondown>
+				<onleft>Dialog.Close(musicosd)</onleft>
 				<visible>Playlist.IsRepeatOne</visible>
 			</control>
 			<control type="button" id="309">
@@ -363,6 +372,7 @@
 				
 				<onup>308</onup>
 				<ondown>310</ondown>
+				<onleft>Dialog.Close(musicosd)</onleft>
 				<visible>Playlist.IsRepeat</visible>
 			</control>
 			<control type="button" id="309">
@@ -416,6 +426,7 @@
 				
 				<onup>309</onup>
 				<ondown>311</ondown>
+				<onleft>Dialog.Close(musicosd)</onleft>
 			</control>
 			
 			
@@ -452,6 +463,7 @@
 				<enable>Visualisation.Enabled + [System.HasAddon(visualization.milkdrop) | System.HasAddon(visualization.vortex)]</enable>
 				<onup>310</onup>
 				<ondown>312</ondown>
+				<onleft>Dialog.Close(musicosd)</onleft>
 			</control>
 			
 			
@@ -478,6 +490,7 @@
 				
 				<onup>311</onup>
 				<ondown>301</ondown>
+				<onleft>Dialog.Close(musicosd)</onleft>
 			</control>
 			
 		</control>

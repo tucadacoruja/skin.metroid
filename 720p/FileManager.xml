@@ -6,54 +6,7 @@
 <controls>
 
 <include>VideoWindow</include>
-<control type="group">
-		
-	<control type="multiimage">
-		<left>0</left>
-		<top>0</top>
-		<width>1280</width>
-		<height>720</height>
-		<aspectratio>stretch</aspectratio>
-		<imagepath background="true">$VAR[MultiSlide]</imagepath>
-		<timeperimage>31000</timeperimage>
-		<fadetime>1000</fadetime>
-		<randomize>true</randomize>
-		<animation effect="fade" start="0" end="100" time="100">VisibleChange</animation>
-		<animation effect="fade" start="10" end="74" time="100000" delay="2000" reversable="true" pulse="true" condition="Player.HasAudio + !Skin.HasSetting(VisLibrary)">Conditional</animation>
-		
-		<visible>!Player.HasVideo + IsEmpty(ListItem.Art(fanart)) + !Skin.HasSetting(BackgroundSlideshow)</visible>
-	</control>
-	<control type="image">
-		<left>0</left>
-		<top>0</top>
-		<width>1280</width>
-		<height>720</height>
-		<aspectratio>stretch</aspectratio>
-		<texture background="true">$INFO[ListItem.Art(fanart)]</texture>
-		<fadetime>400</fadetime>
-		<visible>![Player.HasVideo | Skin.HasSetting(LibraryFanart)]</visible>
-		<animation effect="fade" start="40" end="95" time="100000" delay="2000" reversable="true" pulse="true" condition="Player.HasAudio + !Skin.HasSetting(VisLibrary)">Conditional</animation>
-	</control>
-	<control type="image">
-		<left>0</left>
-		<top>0</top>
-		<width>1280</width>
-		<height>720</height>
-		<aspectratio>stretch</aspectratio>
-		<texture background="true" fallback="special://skin/extras/backgrounds/MetroidBG.png">$INFO[Skin.String(GlobalBackground)]</texture>
-		<animation effect="fade" start="75" end="85" time="200" reversible="true" condition="!Player.HasVideo + !Skin.HasSetting(VidWinLibrary)">Conditional</animation>
-		<animation effect="fade" start="85" end="75" time="200" reversible="true" condition="Player.HasVideo + !Skin.HasSetting(VidWinLibrary)">Conditional</animation>
-		<animation effect="fade" start="85" end="100" time="50000" reversable="true" pulse="true" condition="Player.HasAudio + !Skin.HasSetting(VisLibrary) + !Skin.HasSetting(BackgroundSlideshow)">Conditional</animation>
-	
-		<animation effect="fade" start="100" end="100" time="0" condition="Stringcompare(Skin.String(BackgroundPercentage),100) + !Player.HasMedia">Conditional</animation>
-		<animation effect="fade" start="100" end="95" time="0" condition="Stringcompare(Skin.String(BackgroundPercentage),95) + !Player.HasMedia">Conditional</animation>
-		<animation effect="fade" start="100" end="90" time="0" condition="Stringcompare(Skin.String(BackgroundPercentage),90) + !Player.HasMedia">Conditional</animation>
-		<animation effect="fade" start="100" end="85" time="0" condition="Stringcompare(Skin.String(BackgroundPercentage),85) + !Player.HasMedia">Conditional</animation>
-		<animation effect="fade" start="100" end="80" time="0" condition="Stringcompare(Skin.String(BackgroundPercentage),80) + !Player.HasMedia">Conditional</animation>
-		<animation effect="fade" start="100" end="75" time="0" condition="Stringcompare(Skin.String(BackgroundPercentage),75) + !Player.HasMedia">Conditional</animation>
-	</control>
-
-</control>
+<include>ActualFanart</include>
 
 <control type="image">
 	<left>515</left>
@@ -120,107 +73,104 @@
 	<animation effect="fade" start="80" end="0" time="300" delay="0">WindowClose</animation>
 </control>
 
-  <control type="group">
-  <animation effect="fade" start="100" end="0" time="200" condition="Window.IsVisible(mediasource)">Conditional</animation>
-    <left>0</left>
-    <top>74</top>
     	
     <control type="list" id="20">
-      <description>Left File List</description>
-      <left>0</left>
-      <top>0</top>
-      <width>515</width>
-      <height>570</height>
-      <onleft>21</onleft>
-      <onright>444</onright>
-      <onup>20</onup>
-      <ondown>20</ondown>
-	  <scrolltime>2</scrolltime>
-      <itemlayout height="44" width="515">
-		<control type="image">
-		  <left>0</left>
-		  <top>43</top>
-		  <width>515</width>
-		  <height>1</height>
-		  <texture>white.png</texture>
-		  <aspectratio>stretch</aspectratio>
-		  <colordiffuse>11ffffff</colordiffuse>
-		</control>
-        <control type="image">
-          <left>8</left>
-          <top>5</top>
-          <width>32</width>
-          <height>32</height>
-          <info>ListItem.Icon</info>
-          <aspectratio aligny="left">keep</aspectratio>
-        </control>
-        <control type="label">
-          <left>50</left>
-		  <top>-1</top>
-          <width>280</width>
-          <height>44</height>
-          <align>left</align>
-	 	  <font>ListSmall</font>
-          <textcolor>95FFFFFF</textcolor>
-		  <selectedcolor>white</selectedcolor>
-          <info>ListItem.Label</info>
-          <scroll>false</scroll>
-        </control>
-        <control type="label">
-          <left>488</left>
-		  <top>-1</top>
-          <width>280</width>
-          <height>44</height>
-          <align>right</align>
-	 	  <font>recent</font>
-          <textcolor>95FFFFFF</textcolor>
-		  <selectedcolor>white</selectedcolor>
-          <info>ListItem.Label2</info>
-          <scroll>false</scroll>
-        </control>
-      </itemlayout>
-      <focusedlayout height="44" width="515">
-        <control type="image">
-          <width>515</width>
-          <height>44</height>
-          <texture>black.png</texture>
-		  <colordiffuse>62ffffff</colordiffuse>
-          <aspectratio>stretch</aspectratio>
-          <visible>Control.HasFocus(20)</visible>
-        </control>
-        <control type="image">
-          <left>8</left>
-          <top>5</top>
-          <width>32</width>
-          <height>32</height>
-          <info>ListItem.Icon</info>
-          <aspectratio aligny="left">keep</aspectratio>
-        </control>
-        <control type="label">
-          <left>50</left>
-		  <top>-1</top>
-          <width>280</width>
-          <height>44</height>
-          <align>left</align>
-	 	  <font>ListSmall</font>
-          <textcolor>white</textcolor>
-          <info>ListItem.Label</info>
-          <scroll>false</scroll>
-        </control>
-        <control type="label">
-          <left>488</left>
-		  <top>-1</top>
-          <width>280</width>
-          <height>44</height>
-          <align>right</align>
-	 	  <font>recent</font>
-          <textcolor>white</textcolor>
-          <info>ListItem.Label2</info>
-          <scroll>false</scroll>
-        </control>
-      </focusedlayout>
+		<description>Left File List</description>
+		<left>0</left>
+		<top>65</top>
+		<width>515</width>
+		<height>570</height>
+		<onleft>21</onleft>
+		<onright>444</onright>
+		<onup>20</onup>
+		<ondown>20</ondown>
+		<scrolltime>2</scrolltime>
+		<animation effect="fade" start="100" end="0" time="200" condition="Window.IsVisible(mediasource)">Conditional</animation>
+			<itemlayout height="44" width="515">
+			<control type="image">
+			  <left>0</left>
+			  <top>43</top>
+			  <width>515</width>
+			  <height>1</height>
+			  <texture>white.png</texture>
+			  <aspectratio>stretch</aspectratio>
+			  <colordiffuse>11ffffff</colordiffuse>
+			</control>
+			<control type="image">
+			  <left>8</left>
+			  <top>5</top>
+			  <width>32</width>
+			  <height>32</height>
+			  <info>ListItem.Icon</info>
+			  <aspectratio aligny="left">keep</aspectratio>
+			</control>
+			<control type="label">
+			  <left>50</left>
+			  <top>-1</top>
+			  <width>280</width>
+			  <height>44</height>
+			  <align>left</align>
+			  <font>ListSmall</font>
+			  <textcolor>95FFFFFF</textcolor>
+			  <selectedcolor>white</selectedcolor>
+			  <info>ListItem.Label</info>
+			  <scroll>false</scroll>
+			</control>
+			<control type="label">
+			  <left>488</left>
+			  <top>-1</top>
+			  <width>280</width>
+			  <height>44</height>
+			  <align>right</align>
+			  <font>recent</font>
+			  <textcolor>95FFFFFF</textcolor>
+			  <selectedcolor>white</selectedcolor>
+			  <info>ListItem.Label2</info>
+			  <scroll>false</scroll>
+			</control>
+		</itemlayout>
+		<focusedlayout height="44" width="515">
+			<control type="image">
+			  <width>515</width>
+			  <height>44</height>
+			  <texture>black.png</texture>
+			  <colordiffuse>62ffffff</colordiffuse>
+			  <aspectratio>stretch</aspectratio>
+			  <visible>Control.HasFocus(20)</visible>
+			</control>
+			<control type="image">
+			  <left>8</left>
+			  <top>5</top>
+			  <width>32</width>
+			  <height>32</height>
+			  <info>ListItem.Icon</info>
+			  <aspectratio aligny="left">keep</aspectratio>
+			</control>
+			<control type="label">
+			  <left>50</left>
+			  <top>-1</top>
+			  <width>280</width>
+			  <height>44</height>
+			  <align>left</align>
+			  <font>ListSmall</font>
+			  <textcolor>white</textcolor>
+			  <info>ListItem.Label</info>
+			  <scroll>false</scroll>
+			</control>
+			<control type="label">
+			  <left>488</left>
+			  <top>-1</top>
+			  <width>280</width>
+			  <height>44</height>
+			  <align>right</align>
+			  <font>recent</font>
+			  <textcolor>white</textcolor>
+			  <info>ListItem.Label2</info>
+			  <scroll>false</scroll>
+			</control>
+		</focusedlayout>
     </control>
-  </control>
+
 
 	<control type="group">
 		<left>580</left>
@@ -254,109 +204,104 @@
 </control>
 	
 
-  <control type="group">
-  <animation effect="fade" start="100" end="0" time="200" condition="Window.IsVisible(mediasource)">Conditional</animation>
-    <left>765</left>
-    <top>74</top>
-    
-	
-    <control type="list" id="21">
-      <description>right File List</description>
-      <left>0</left>
-      <top>0</top>
-      <width>515</width>
-      <height>570</height>
-      <onleft>444</onleft>
-      <onright>20</onright>
-      <onup>21</onup>
-      <ondown>21</ondown>
-	  <scrolltime>2</scrolltime>
-      <itemlayout height="44" width="320">
-		<control type="image">
-		  <left>0</left>
-		  <top>43</top>
-		  <width>515</width>
-		  <height>1</height>
-		  <texture>white.png</texture>
-		  <aspectratio>stretch</aspectratio>
-		  <colordiffuse>11ffffff</colordiffuse>
-		</control>
-        <control type="image">
-          <left>8</left>
-          <top>5</top>
-          <width>32</width>
-          <height>32</height>
-          <info>ListItem.Icon</info>
-          <aspectratio aligny="left">keep</aspectratio>
-        </control>
-        <control type="label">
-          <left>50</left>
-		  <top>-1</top>
-          <width>280</width>
-          <height>44</height>
-          <align>left</align>
-	 	  <font>ListSmall</font>
-          <textcolor>95FFFFFF</textcolor>
-		  <selectedcolor>white</selectedcolor>
-          <info>ListItem.Label</info>
-          <scroll>false</scroll>
-        </control>
-        <control type="label">
-          <left>488</left>
-		  <top>-1</top>
-          <width>280</width>
-          <height>44</height>
-          <align>right</align>
-	 	  <font>recent</font>
-          <textcolor>95FFFFFF</textcolor>
-		  <selectedcolor>white</selectedcolor>
-          <info>ListItem.Label2</info>
-          <scroll>false</scroll>
-        </control>
-      </itemlayout>
-      <focusedlayout height="44" width="320">
-        <control type="image">
-          <width>499</width>
-          <height>44</height>
-          <texture>black.png</texture>
-		  <colordiffuse>62ffffff</colordiffuse>
-          <aspectratio>stretch</aspectratio>
-          <visible>Control.HasFocus(21)</visible>
-        </control>
-        <control type="image">
-          <left>8</left>
-          <top>5</top>
-          <width>32</width>
-          <height>32</height>
-          <info>ListItem.Icon</info>
-          <aspectratio aligny="left">keep</aspectratio>
-        </control>
-        <control type="label">
-          <left>50</left>
-		  <top>-1</top>
-          <width>280</width>
-          <height>44</height>
-          <align>left</align>
-	 	  <font>ListSmall</font>
-          <textcolor>white</textcolor>
-          <info>ListItem.Label</info>
-          <scroll>false</scroll>
-        </control>
-        <control type="label">
-          <left>488</left>
-		  <top>-1</top>
-          <width>280</width>
-          <height>44</height>
-          <align>right</align>
-	 	  <font>recent</font>
-          <textcolor>white</textcolor>
-		
-          <info>ListItem.Label2</info>
-          <scroll>false</scroll>
-        </control>
-      </focusedlayout>
+	<control type="list" id="21">
+		<description>right File List</description>
+		<left>765</left>
+		<top>65</top>
+		<width>515</width>
+		<height>570</height>
+		<onleft>444</onleft>
+		<onright>20</onright>
+		<onup>21</onup>
+		<ondown>21</ondown>
+		<scrolltime>2</scrolltime>
+		<animation effect="fade" start="100" end="0" time="200" condition="Window.IsVisible(mediasource)">Conditional</animation>
+			<itemlayout height="44" width="320">
+				<control type="image">
+				  <left>0</left>
+				  <top>43</top>
+				  <width>515</width>
+				  <height>1</height>
+				  <texture>white.png</texture>
+				  <aspectratio>stretch</aspectratio>
+				  <colordiffuse>11ffffff</colordiffuse>
+				</control>
+				<control type="image">
+				  <left>8</left>
+				  <top>5</top>
+				  <width>32</width>
+				  <height>32</height>
+				  <info>ListItem.Icon</info>
+				  <aspectratio aligny="left">keep</aspectratio>
+				</control>
+				<control type="label">
+				  <left>50</left>
+				  <top>-1</top>
+				  <width>280</width>
+				  <height>44</height>
+				  <align>left</align>
+				  <font>ListSmall</font>
+				  <textcolor>95FFFFFF</textcolor>
+				  <selectedcolor>white</selectedcolor>
+				  <info>ListItem.Label</info>
+				  <scroll>false</scroll>
+				</control>
+				<control type="label">
+				  <left>488</left>
+				  <top>-1</top>
+				  <width>280</width>
+				  <height>44</height>
+				  <align>right</align>
+				  <font>recent</font>
+				  <textcolor>95FFFFFF</textcolor>
+				  <selectedcolor>white</selectedcolor>
+				  <info>ListItem.Label2</info>
+				  <scroll>false</scroll>
+				</control>
+			</itemlayout>
+			<focusedlayout height="44" width="320">
+				<control type="image">
+				  <width>499</width>
+				  <height>44</height>
+				  <texture>black.png</texture>
+				  <colordiffuse>62ffffff</colordiffuse>
+				  <aspectratio>stretch</aspectratio>
+				  <visible>Control.HasFocus(21)</visible>
+				</control>
+				<control type="image">
+				  <left>8</left>
+				  <top>5</top>
+				  <width>32</width>
+				  <height>32</height>
+				  <info>ListItem.Icon</info>
+				  <aspectratio aligny="left">keep</aspectratio>
+				</control>
+				<control type="label">
+				  <left>50</left>
+				  <top>-1</top>
+				  <width>280</width>
+				  <height>44</height>
+				  <align>left</align>
+				  <font>ListSmall</font>
+				  <textcolor>white</textcolor>
+				  <info>ListItem.Label</info>
+				  <scroll>false</scroll>
+				</control>
+				<control type="label">
+				  <left>488</left>
+				  <top>-1</top>
+				  <width>280</width>
+				  <height>44</height>
+				  <align>right</align>
+				  <font>recent</font>
+				  <textcolor>white</textcolor>
+
+				  <info>ListItem.Label2</info>
+				  <scroll>false</scroll>
+				</control>
+			</focusedlayout>
     </control>
-  </control>
+
 
     
 	<control type="group">

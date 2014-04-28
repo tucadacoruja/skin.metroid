@@ -106,15 +106,15 @@
 						<bordertexture colordiffuse="B7FFFFFF" border="3">white.png</bordertexture>
 						<bordersize>3</bordersize>
 						<fadetime>200</fadetime>
-						<texture fallback="DefaultAlbumCover.png">$INFO[ListItem.Art(poster)]</texture>
+						<texture fallback="DefaultCatch.png">$INFO[ListItem.Art(poster)]</texture>
 						
 				
 					</control>
 					<control type="image">
 						<left>10</left>
-						<top>10</top>
+						<top>15</top>
 						<width>120</width>
-						<height>190</height>
+						<height>140</height>
 						<aspectratio>stretch</aspectratio>
 						<texture  >$VAR[Fallback_Icon]</texture>
 						<colordiffuse>E1FFFFFF</colordiffuse>
@@ -132,14 +132,14 @@
 						<bordertexture border="4">BlueBackground.png</bordertexture>
 						<bordersize>4</bordersize>
 						<fadetime>200</fadetime>
-						<texture fallback="DefaultAlbumCover.png">$INFO[ListItem.Art(poster)]</texture>
+						<texture fallback="DefaultCatch.png">$INFO[ListItem.Art(poster)]</texture>
 		
 					</control>
 					<control type="image">
 						<left>10</left>
-						<top>10</top>
+						<top>15</top>
 						<width>120</width>
-						<height>190</height>
+						<height>140</height>
 						<aspectratio>stretch</aspectratio>
 						<texture  >$VAR[Fallback_Icon]</texture>
 						<colordiffuse>E1FFFFFF</colordiffuse>

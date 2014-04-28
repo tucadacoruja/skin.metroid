@@ -3,6 +3,7 @@
 	<backgroundcolor>0</backgroundcolor>
 	<allowoverlay>no</allowoverlay>
 	<controls>
+	
 		<control type="group">
 			<control type="visualisation"><!-- id="2" -->
 				<left>0</left>
@@ -11,54 +12,11 @@
 				<height>720</height>
 				<visible>Player.HasAudio + !Skin.HasSetting(VisLibrary)</visible>
 			</control>
-			<control type="multiimage">
-				<left>0</left>
-				<top>0</top>
-				<width>1280</width>
-				<height>720</height>
-				<aspectratio>stretch</aspectratio>
-				<imagepath background="true">$VAR[MultiSlide]</imagepath>
-				<timeperimage>31000</timeperimage>
-				<fadetime>1000</fadetime>
-				<randomize>true</randomize>
-				<animation effect="fade" start="0" end="100" time="100">VisibleChange</animation>
-				<animation effect="fade" start="10" end="74" time="100000" delay="2000" reversable="true" pulse="true" condition="Player.HasAudio + !Skin.HasSetting(VisLibrary)">Conditional</animation>
-				
-				<visible>!Player.HasVideo + IsEmpty(ListItem.Art(fanart)) + !Skin.HasSetting(BackgroundSlideshow)</visible>
-			</control>
-			<control type="image">
-				<left>0</left>
-				<top>0</top>
-				<width>1280</width>
-				<height>720</height>
-				<aspectratio>stretch</aspectratio>
-				<texture background="true">$INFO[ListItem.Art(fanart)]</texture>
-				<fadetime>400</fadetime>
-				<visible>![Player.HasVideo | Skin.HasSetting(LibraryFanart)]</visible>
-				<animation effect="fade" start="40" end="95" time="100000" delay="2000" reversable="true" pulse="true" condition="Player.HasAudio + !Skin.HasSetting(VisLibrary)">Conditional</animation>
-			</control>
-			<control type="image">
-				<left>0</left>
-				<top>0</top>
-				<width>1280</width>
-				<height>720</height>
-				<aspectratio>stretch</aspectratio>
-				<texture background="true" fallback="special://skin/extras/backgrounds/MetroidBG.png">$INFO[Skin.String(GlobalBackground)]</texture>
-				<animation effect="fade" start="75" end="85" time="200" reversible="true" condition="!Player.HasVideo + !Skin.HasSetting(VidWinLibrary)">Conditional</animation>
-				<animation effect="fade" start="85" end="75" time="200" reversible="true" condition="Player.HasVideo + !Skin.HasSetting(VidWinLibrary)">Conditional</animation>
-				<animation effect="fade" start="85" end="100" time="50000" reversable="true" pulse="true" condition="Player.HasAudio + !Skin.HasSetting(VisLibrary) + !Skin.HasSetting(BackgroundSlideshow)">Conditional</animation>
 			
-				<animation effect="fade" start="100" end="100" time="0" condition="Stringcompare(Skin.String(BackgroundPercentage),100) + !Player.HasMedia">Conditional</animation>
-				<animation effect="fade" start="100" end="95" time="0" condition="Stringcompare(Skin.String(BackgroundPercentage),95) + !Player.HasMedia">Conditional</animation>
-				<animation effect="fade" start="100" end="90" time="0" condition="Stringcompare(Skin.String(BackgroundPercentage),90) + !Player.HasMedia">Conditional</animation>
-				<animation effect="fade" start="100" end="85" time="0" condition="Stringcompare(Skin.String(BackgroundPercentage),85) + !Player.HasMedia">Conditional</animation>
-				<animation effect="fade" start="100" end="80" time="0" condition="Stringcompare(Skin.String(BackgroundPercentage),80) + !Player.HasMedia">Conditional</animation>
-				<animation effect="fade" start="100" end="75" time="0" condition="Stringcompare(Skin.String(BackgroundPercentage),75) + !Player.HasMedia">Conditional</animation>
-			</control>
-
+			<include>ActualFanart</include>
 		</control>
 
-		<include>Background</include>
+		
 		
 		<control type="image">
 			<description>Section header image</description>
@@ -265,6 +223,7 @@
 			</control>
 		</control>
 
+		<include>Background</include>
 		<include>BottomInfoBar</include>
 		 
 	

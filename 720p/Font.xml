@@ -54,6 +54,11 @@
 			<filename>Weblysleek-Semibold.ttf</filename>
 			<size>26</size>
 		</font>
+		<font>
+			<name>font27</name>
+			<filename>arial.ttf</filename>
+			<size>27</size>
+		</font>
 	 	<font>
 			<name>font30</name>
 			<filename>Weblysleek-Semibold.ttf</filename>
@@ -184,7 +189,7 @@
 		<name>EditorBig</name>
 		<filename>Weblysleek-Semibold.ttf</filename>
 		<size>37</size>
-		<style>bold</style>
+		
 	</font>
 	<font>
 		<name>BigFat</name>
@@ -221,6 +226,12 @@
 		<name>Favourites</name>
 		<filename>Weblysleek-Semibold.ttf</filename>
 		<size>34</size>
+		
+	</font>
+	<font>
+		<name>WeblySemi28</name>
+		<filename>Weblysleek-Semibold.ttf</filename>
+		<size>28</size>
 		
 	</font>
 	<font>

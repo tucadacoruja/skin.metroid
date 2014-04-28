@@ -72,7 +72,7 @@
 							<bordertexture border="3">White35p.png</bordertexture>
 							<bordersize>3</bordersize>
 							<aspectratio scalediffuse="false">scale</aspectratio>
-							<texture fallback="DefaultAlbumCover.png">$INFO[ListItem.Art(thumb)]</texture>
+							<texture fallback="DefaultCatch.png">$INFO[ListItem.Art(thumb)]</texture>
 							<fadetime>400</fadetime>
 						</control>
 						
@@ -183,7 +183,7 @@
 							<aspectratio scalediffuse="false">scale</aspectratio>
 							<bordertexture border="3">blue3.png</bordertexture>
 							<bordersize>3</bordersize>
-							<texture fallback="DefaultAlbumCover.png">$INFO[ListItem.Art(thumb)]</texture>
+							<texture fallback="DefaultCatch.png">$INFO[ListItem.Art(thumb)]</texture>
 							<fadetime>400</fadetime>
 							
 						</control>

@@ -621,7 +621,8 @@
 				<label>$INFO[Window(Home).Property(TrendingShows.1.Title)]</label>
 				<thumb>$INFO[Window(Home).Property(TrendingShows.1.Art(poster))]</thumb>
 				<property name="Fanart">$INFO[Window(Home).Property(TrendingShows.1.Art(fanart))]</property>
-				<onclick>noop</onclick>
+				<!-- request scraping of trailer url (is available on trakt) -->
+				<onclick>PlayMedia($INFO[Window(Home).Property(TrendingShows.1.???????)])</onclick>
 			</item>
 			
 			<item id="2">

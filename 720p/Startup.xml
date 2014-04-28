@@ -5,12 +5,15 @@
     <allowoverlay>no</allowoverlay>
 	<backgroundcolor>0</backgroundcolor>
 	
+	<!-- onload condition="System.HasAddon(script.tv.show.next.aired)">XBMC.RunScript(script.tv.show.next.aired,silent=True)</onload -->
 	<onload condition="!Skin.HasSetting(WidgetVisibility)">Skin.ToggleSetting(WidgetVisibility)</onload>
 	<onload>Skin.SetString(MainColorString,blue)</onload>
+	<onload condition="IsEmpty(Skin.String(MenuCstring))">Skin.SetString(MenuCstring,defaultgray)</onload>
 	<onload>Skin.SetString(StartuptestString,start)</onload>
 	<onload condition="IsEmpty(Skin.String(BackgroundPercentage))">Skin.SetString(BackgroundPercentage,100)</onload>
 	<onload condition="IsEmpty(Skin.String(DarknessPercentage))">Skin.SetString(DarknessPercentage,60)</onload>
 	<onload condition="IsEmpty(Skin.String(BackgroundDarkness))">Skin.SetString(BackgroundDarkness,FFFFFFFF)</onload>
+	<onload condition="System.HasAddon(script.grab.fanart)">RunScript(script.grab.fanart,mode=random,refresh=30)</onload>
 <controls>
 
     <control type="button" id="10">
@@ -46,7 +49,7 @@
 			<width>1280</width>
 			<height>720</height>
 			<aspectratio>stretch</aspectratio>
-			<texture background="true">MetroidBG.png</texture>
+			<texture background="true" fallback="special://skin/extras/backgrounds/MetroidBG.png">$INFO[Skin.String(GlobalBackground)]</texture>
 			<animation effect="fade" start="0" end="100" time="200">WindowOpen</animation>
 			<animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
 		</control>

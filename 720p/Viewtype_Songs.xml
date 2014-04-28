@@ -31,22 +31,22 @@
 			<onleft>63</onleft>
 			<onright>noop</onright>
 			<pagecontrol>63</pagecontrol>
-			<visible>Container.Content(songs) | Window.IsVisible(pictures)</visible>
+			<visible>Container.Content(songs) | Window.IsVisible(pictures) | Container.Content(movies) | Container.Content(tvshows)</visible>
 
 			<itemlayout width="633" height="45">
-					<control type="label">
+					<!-- control type="label">
 						<top>0</top>
 						<left>580</left>
 						<width>652</width>
 						<height>40</height>
-						<textcolor>9bffffff</textcolor>
+						<textcolor>FFD7D7D7</textcolor>
 						<selectedcolor>lightblue</selectedcolor>
 						<font>MusicFO</font>
 						<align>right</align>
 						<label>..</label>
 						<scroll>false</scroll>
 						<visible>IsEmpty(ListItem.Title) + Container.Content(songs)</visible>
-					</control>
+					</control -->
 				
 					<control type="label">
 					
@@ -54,14 +54,27 @@
 						  <left>600</left>
 						  <width>652</width>
 						  <height>40</height>
-						  <textcolor>9bffffff</textcolor>
+						  <textcolor>FFD7D7D7</textcolor>
 						  <selectedcolor>lightblue</selectedcolor>
 						  <font>MusicNF</font>
 						  <align>left</align>
 						  <label>$VAR[Padded_string]</label>
-						  
+						  <visible>Container.Content(songs) + !substring(ListItem.Label,..,left)</visible>
 					</control>
+					<control type="label">
 					
+						  <top>0</top>
+						  <left>600</left>
+						  <width>652</width>
+						  <height>40</height>
+						  <textcolor>FFD7D7D7</textcolor>
+						  <selectedcolor>lightblue</selectedcolor>
+						  <font>font27</font>
+						  <align>left</align>
+						  <label fallback="•">$VAR[WatchedCheckmark]</label>
+						  <visible>![substring(ListItem.Label,..,left) | Container.Content(songs)]</visible>
+					</control>
+			
 					
 					<control type="label">
 						<left>580</left>
@@ -69,27 +82,14 @@
 						<width>433</width>
 						<height>40</height>
 						<align>right</align>
-						<label>$INFO[ListItem.Title]</label>
+						<label>$VAR[PosterTitle]</label>
 						<scroll>false</scroll>
 						<font>MusicNF2</font>
-						<textcolor>B7ffffff</textcolor>
+						<textcolor>FFF3F3F3</textcolor>
 						<selectedcolor>lightblue</selectedcolor>
-						<visible>Container.Content(songs)</visible>
-					</control>
-					<control type="label">
-						<left>580</left>
-						<top>-2</top>
-						<width>433</width>
-						<height>40</height>
-						<align>right</align>
-						<label>$INFO[ListItem.Label]</label>
-						<scroll>false</scroll>
-						<font>MusicNF</font>
-						<textcolor>B7ffffff</textcolor>
-						<selectedcolor>lightblue</selectedcolor>
-						<visible>Window.IsVisible(pictures)</visible>
-					</control>
 						
+					</control>
+											
 			</itemlayout>
 			
 			<focusedlayout width="633" height="64">
@@ -104,7 +104,7 @@
 						
 						<visible>Control.HasFocus(602)</visible>
 					</control>	
-					<control type="label">
+					<!-- control type="label">
 						<top>3</top>
 						<left>580</left>
 						<width>552</width>
@@ -116,7 +116,8 @@
 						<label>..</label>
 						<scroll>false</scroll>
 						<visible>IsEmpty(ListItem.Title) + Container.Content(songs)</visible>
-					</control>		
+					</control -->		
+
 					<control type="label">
 					
 						  <top>4</top>
@@ -125,12 +126,24 @@
 						  <height>40</height>
 						  <textcolor>ffffffff</textcolor>
 						  <selectedcolor>lightblue</selectedcolor>
-						  <font>MusicFO</font>
+						  <font>MusicNF</font>
 						  <align>left</align>
 						  <label>$VAR[Padded_string]</label>
-						  
+						  <visible>Container.Content(songs) + !substring(ListItem.Label,..,left)</visible>
 					</control>
+					<control type="label">
 					
+						  <top>0</top>
+						  <left>600</left>
+						  <width>652</width>
+						  <height>40</height>
+						  <textcolor>FFD7D7D7</textcolor>
+						  <selectedcolor>lightblue</selectedcolor>
+						  <font>font27</font>
+						  <align>left</align>
+						  <label fallback="•">$VAR[WatchedCheckmark]</label>
+						  <visible>![substring(ListItem.Label,..,left) | Container.Content(songs)]</visible>
+					</control>
 					
 					
 					<control type="label">
@@ -139,46 +152,25 @@
 						<width>433</width>
 						<height>40</height>
 						<align>right</align>
-						<label>$INFO[ListItem.Title]</label>
+						<label>$VAR[PosterTitle]</label>
 						<font>MusicFO</font>
-						<textcolor>ffffffff</textcolor>
-						<selectedcolor>lightblue</selectedcolor>
-						<visible>Container.Content(songs) + Control.HasFocus(602)</visible>
+						<textcolor>FFFFFFFF</textcolor>
+						<selectedcolor>957EA7D8</selectedcolor>
+						<shadowcolor>ACFFFFFF</shadowcolor>
+
 					</control>
-					<control type="label">
-						<left>580</left>
-						<top>-8</top>
-						<width>433</width>
-						<height>40</height>
-						<align>right</align>
-						<label>$INFO[ListItem.Title]</label>
-						<font>MusicNF2</font>
-						<textcolor>ffffffff</textcolor>
-						<selectedcolor>lightblue</selectedcolor>
-						<visible>Container.Content(songs) + !Control.HasFocus(602)</visible>
-					</control>
-					<control type="label">
-						<left>580</left>
-						<top>-8</top>
-						<width>433</width>
-						<height>40</height>
-						<align>right</align>
-						<label>$INFO[ListItem.Label]</label>
-						<font>MusicFO</font>
-						<textcolor>ffffffff</textcolor>
-						<selectedcolor>lightblue</selectedcolor>
-						<visible>Window.IsVisible(pictures)</visible>
-					</control>
+
 					<control type="label">
 						<left>580</left>
 						<top>20</top>
 						<width>633</width>
 						<height>40</height>
 						<align>right</align>
-						<label>$INFO[ListItem.Artist]</label>
+						<label>$INFO[ListItem.Artist] $INFO[ListItem.Studio]</label>
 						<font>MusicSFO</font>
 						<textcolor>ffffffff</textcolor>
-						<selectedcolor>lightblue</selectedcolor>
+						<selectedcolor>FFFFFFFF</selectedcolor>
+						
 					</control>
 					<control type="label">
 						<left>580</left>
@@ -206,7 +198,7 @@
 				<left>-5</left>
 					
 					<animation effect="rotate" end="10" center="auto" time="0" condition="true">Conditional</animation>
-					<animation effect="slide" start="0,0" end="-80,0" time="600" condition="!Control.HasFocus(301) + !Skin.HasSetting(LockMainMenu)">Conditional</animation>
+					<animation effect="slide" start="0,0" end="-100,0" time="600" condition="!Control.HasFocus(301) + !Skin.HasSetting(LockMainMenu)">Conditional</animation>
 		
 	
 					<control type="image">
@@ -222,14 +214,14 @@
 					
 					<control type="image">
 						<left>108</left>
-						<top>108</top>
+						<top>104</top>
 						<width>428</width>
-						<height>494</height>
+						<height>499</height>
 						<aspectratio>stretch</aspectratio>
-						<texture border="5">BlueBackground.png</texture>
+						<texture background="true" border="5">white.png</texture>
 						<bordertexture border="5">whiteborder.png</bordertexture>
 						<bordersize>5</bordersize>
-						<animation effect="fade" start="0" end="80" time="0" condition="true">Conditional</animation>
+						<colordiffuse>FFD7D7D7</colordiffuse>
 					</control>
 					
 					<control type="image">
@@ -238,10 +230,24 @@
 						<width>420</width>
 						<height>410</height>
 						<aspectratio scalediffuse="false">scale</aspectratio>
-						<texture >$INFO[ListItem(-1).Art(thumb)]</texture>
-						<fadetime>300</fadetime>
+						<texture>$VAR[FanOrThumbMinus]</texture>
+						<fadetime>200</fadetime>
+						<colordiffuse>C2FFFFFF</colordiffuse>
+						<visible>!Skin.HasSetting(LockMainMenu)</visible>
 					</control>
-
+					
+					<control type="image">
+						<description>white image</description>
+						<left>112</left>
+						<top>108</top>
+						<width>420</width>
+						<height>65</height>
+						
+						<aspectratio>stretch</aspectratio>
+						<texture border="12">white.png</texture>
+						<colordiffuse>FFe9e7e9</colordiffuse>
+						<visible>![Container.Content(movies) | Container.Content(tvshows)]</visible>
+					</control>
 					<control type="image">
 						<description>white image</description>
 						<left>112</left>
@@ -278,22 +284,20 @@
 				<texture background="true" border="5">white.png</texture>
 				<bordertexture border="5">whiteborder.png</bordertexture>
 				<bordersize>5</bordersize>
-				<visible>IsEmpty(ListItem.Art(thumb)) | Window.IsVisible(pictures)</visible>
-			
 				<colordiffuse>FFD7D7D7</colordiffuse>
 			</control>
 			<control type="image">
 				<left>140</left>
-				<top>139</top>
+				<top>205</top>
 				<width>122</width>
-				<height>110</height>
+				<height>105</height>
 				<aspectratio>keep</aspectratio>
-				<texture>DefaultFallback.png</texture>
+				<texture>$VAR[Fallback_Thumb]</texture>
 				<visible>IsEmpty(ListItem.Art(thumb))</visible>
 				<animation effect="fade" start="0" end="30" time="0" condition="true">Conditional</animation>
 			</control>
 			
-			<control type="image">
+			<!-- control type="image">
 				<left>108</left>
 				<top>108</top>
 				<width>428</width>
@@ -305,17 +309,29 @@
 				<visible>!IsEmpty(ListItem.Art(thumb))</visible>
 				<visible>!Window.IsVisible(pictures)</visible>
 				<animation effect="fade" start="0" end="80" time="0" condition="true">Conditional</animation>
-			</control>
+			</control -->
 			<control type="image">
 				<left>113</left>
 				<top>113</top>
 				<width>418</width>
 				<height>410</height>
-				<aspectratio scalediffuse="false">scale</aspectratio>
-				<texture diffuse="diffuse/albumdiffuse.png">$INFO[ListItem.Art(thumb)]</texture>
-				<fadetime>400</fadetime>
+				<aspectratio>scale</aspectratio>
+				<texture aligny="top">$VAR[FanOrThumb]</texture>
+				<fadetime>250</fadetime>
+				<colordiffuse>D7FFFFFF</colordiffuse>
 			</control>
-			
+			<control type="image">
+				<description>white image</description>
+				<left>113</left>
+				<top>108</top>
+				<width>418</width>
+				<height>62</height>
+				
+				<aspectratio>stretch</aspectratio>
+				<texture border="12">white.png</texture>
+				<colordiffuse>FFF3F3F3</colordiffuse>
+				<visible>![Container.Content(movies) | Container.Content(tvshows)]</visible>
+			</control>
 			<control type="image">
 				<description>white image</description>
 				<left>113</left>
@@ -327,26 +343,27 @@
 				<texture border="12">white.png</texture>
 				<colordiffuse>FFEBEBEB</colordiffuse>
 			</control>
+
 			<control type="label">
-				<left>125</left>
+				<left>130</left>
 				<top>485</top>
-				<width>410</width>
+				<width>380</width>
 				<height>60</height>
 				<align>left</align>
-				<label>$INFO[ListItem.Artist]</label>
+				<label>$INFO[ListItem.Title]</label>
 				<visible>true</visible>
 				<scroll>false</scroll>
-				<font>Favourites</font>
-				<textcolor>FF707070</textcolor>
+				<font>WeblySemi28</font>
+				<textcolor>FF7D7D7D</textcolor>
 				<!-- animation effect="fade" start="0" end="6" time="0" reversable="false" condition="true">Conditional</animation -->
 			</control>
 
 			<control type="label">
-				<left>125</left>
-				<top>525</top>
-				<width>410</width>
+				<left>130</left>
+				<top>520</top>
+				<width>380</width>
 				<height>60</height>
-				<label>[UPPERCASE]$INFO[ListItem.Title] - $INFO[ListItem.Duration][/UPPERCASE]</label>
+				<label>$INFO[ListItem.Duration,,m][UPPERCASE]$INFO[ListItem.Genre, - ][/UPPERCASE]</label>
 				<font>MainMenu21</font>
 				<textcolor>FF898989</textcolor>
 				<!-- shadowcolor>skin.string(MainColorString)</shadowcolor -->

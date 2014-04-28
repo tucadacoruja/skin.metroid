@@ -933,6 +933,10 @@ msgctxt "#31250"
 msgid "Alphabetical keyboard (ipv qwerty)"
 msgstr ""
 
+msgctxt "#31251"
+msgid "Menu background image"
+msgstr ""
+
 
 
 
