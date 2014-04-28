@@ -8,7 +8,7 @@
 	<!-- onload condition="System.HasAddon(script.tv.show.next.aired)">XBMC.RunScript(script.tv.show.next.aired,silent=True)</onload -->
 	<onload condition="!Skin.HasSetting(WidgetVisibility)">Skin.ToggleSetting(WidgetVisibility)</onload>
 	<onload>Skin.SetString(MainColorString,blue)</onload>
-	<onload condition="IsEmpty(Skin.String(MenuCstring))">Skin.SetString(MenuCstring,defaultgray)</onload>
+	<onload condition="IsEmpty(Skin.String(MenuCstring))">Skin.SetString(MenuCstring,happygray)</onload>
 	<onload>Skin.SetString(StartuptestString,start)</onload>
 	<onload condition="IsEmpty(Skin.String(BackgroundPercentage))">Skin.SetString(BackgroundPercentage,100)</onload>
 	<onload condition="IsEmpty(Skin.String(DarknessPercentage))">Skin.SetString(DarknessPercentage,60)</onload>
