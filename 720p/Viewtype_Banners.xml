@@ -276,7 +276,7 @@
 				<left>990</left>
 				<top>115</top>
 				<width>230</width>
-				<height>340</height>
+				<height>380</height>
 				<align>justify</align>
 				<info>ListItem.Plot</info>
 				<font>plot</font>
@@ -286,7 +286,7 @@
 			<control type="image">
 				<description>Rating Info</description>
 				<left>990</left>
-				<top>510</top>
+				<top>535</top>
 				<width>230</width>
 				<height>40</height>
 				<info>ListItem.StarRating</info>
@@ -295,46 +295,46 @@
 			</control>
 			<control type="label">
 				<left>990</left>
-				<top>555</top>
+				<top>580</top>
 				<width>633</width>
 				<height>60</height>
 				<align>left</align>
 				<label>$LOCALIZE[31179]</label>
-				<font>homemenu3</font>
+				<font>plot</font>
 				<textcolor>FFD7D7D7</textcolor>
 				<selectedcolor>taskbar</selectedcolor>
 			</control>
 			<control type="label">
 				<left>1010</left>
-				<top>555</top>
+				<top>580</top>
 				<width>200</width>
 				<height>60</height>
 				<align>right</align>
 				<label>$INFO[ListItem.Property(TotalEpisodes)]</label>
-				<font>homemenu3</font>
+				<font>plot</font>
 				<textcolor>FFD7D7D7</textcolor>
 				<selectedcolor>taskbar</selectedcolor>
 			</control>
 			
 			<control type="label">
 				<left>990</left>
-				<top>580</top>
+				<top>605</top>
 				<width>633</width>
 				<height>60</height>
 				<align>left</align>
 				<label>$LOCALIZE[31180]</label>
-				<font>plot</font>
+				<font>homemenu3</font>
 				<textcolor>FFD7D7D7</textcolor>
 				<selectedcolor>taskbar</selectedcolor>
 			</control>
 			<control type="label">
 				<left>1010</left>
-				<top>580</top>
+				<top>605</top>
 				<width>200</width>
 				<height>60</height>
 				<align>right</align>
 				<label>$INFO[ListItem.Property(UnWatchedEpisodes)]</label>
-				<font>plot</font>
+				<font>homemenu3</font>
 				<textcolor>FFD7D7D7</textcolor>
 				<selectedcolor>taskbar</selectedcolor>
 			</control>

@@ -413,7 +413,7 @@
 			<width>251</width>
 			<height>658</height>
 			<aspectratio>stretch</aspectratio>
-			<texture fallback="osd/GrayBackground.png">$INFO[Skin.String(MenuBGImage)]</texture>
+			<texture background="true" fallback="osd/GrayBackground.png">$INFO[Skin.String(MenuBGImage)]</texture>
 			<!-- texture  fallback="osd/GrayBackground.png">special://skin/extras/backgrounds/MenuBG4.jpg</texture -->
 			<colordiffuse>$INFO[Skin.String(MenuCstring)]</colordiffuse>
 		</control>
@@ -656,7 +656,15 @@
 				<visible>Window.Isvisible(musicplaylist) | Window.Isvisible(videoplaylist)</visible>
 				<animation effect="fade" start="0" end="100" time="300" delay="120">VisibleChange</animation>
 			</control>
-			<control type="image"> <!-- 2 battery -->
+			<control type="image"><!-- 2 files window -->
+				<height>52</height>
+				<width>52</width>
+				<texture>osd/GrayBackground.png</texture>
+				<aspectratio>stretch</aspectratio>
+				<visible>[Window.IsVisible(videolibrary) | Window.IsVisible(musicplaylist) | Window.IsVisible(videoplaylist) | Window.IsVisible(musiclibrary) | Window.IsVisible(musicfiles)] + ![SubString(Container.FolderPath,videodb://) | SubString(Container.FolderPath,musicdb://) | SubString(Container.FolderPath,addons://) | SubString(Container.FolderPath,special://) | SubString(Container.FolderPath,plugin://)]</visible>
+				<animation effect="fade" start="0" end="100" time="300" delay="120">VisibleChange</animation>
+			</control>
+			<control type="image"> <!-- 3 battery -->
 				<width>52</width>
 				<height>52</height>
 				<texture>osd/GrayBackground.png</texture>
@@ -772,7 +780,14 @@
 				<visible>Window.Isvisible(musicplaylist) | Window.Isvisible(videoplaylist)</visible>
 			</control>
 			
-			<control type="image"> <!-- 2 battery -->
+			<control type="image"><!-- 2 files window -->
+				<width>52</width>
+				<height>52</height>
+				<texture>DefaultHardDisk.png</texture>
+				<visible>[Window.IsVisible(videolibrary) | Window.IsVisible(musicplaylist) | Window.IsVisible(videoplaylist) | Window.IsVisible(musiclibrary) | Window.IsVisible(musicfiles)] + ![SubString(Container.FolderPath,videodb://) | SubString(Container.FolderPath,musicdb://) | SubString(Container.FolderPath,addons://) | SubString(Container.FolderPath,special://) | SubString(Container.FolderPath,plugin://)]</visible>
+			</control>
+			
+			<control type="image"> <!-- 3 battery -->
 				<width>52</width>
 				<height>52</height>
 				<texture>osd/battery.png</texture>
