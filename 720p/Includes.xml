@@ -242,7 +242,7 @@
 		<animation effect="fade" start="100" end="0" time="450" delay="150" >Hidden</animation>
 			<control type="label">
 				<include>TopLabelBig</include>
-				<label>$INFO[Container.FolderPath]</label>
+				<label>$INFO[System.time(hh:mm)]</label>
 				
 			</control>
 			<control type="label">
