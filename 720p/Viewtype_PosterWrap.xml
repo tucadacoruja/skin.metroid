@@ -50,7 +50,9 @@
 						<texture fallback="DefaultCatch.png">$INFO[ListItem.Art(poster)]</texture>
 						<!-- animation effect="fade" start="0" end="85" time="0" condition="true">Conditional</animation -->
 						<colordiffuse>D7FFFFFF</colordiffuse>
-						<visible>![stringcompare(ListItem(-1).Label,ListItem.Label) | stringcompare(ListItem(-2).Label,ListItem.Label)]</visible>
+						<!-- visible>![stringcompare(ListItem(-1).Label,ListItem.Label) + Substring(Container.FolderPath,videodb://movies/sets/)]</visible>
+						<visible>!stringcompare(ListItem(-2).Label,ListItem.Label) + Substring(Container.FolderPath,videodb://movies/sets/)</visible -->
+
 					</control>
 					<control type="image">
 						<left>10</left>
@@ -179,6 +181,7 @@
 				<bordersize>3</bordersize>
 				<texture background="true" diffuse="diffuse/posterdiffuse.png" fallback="DefaultCatch.png">$INFO[ListItem.Art(poster)]</texture>
 				<fadetime>200</fadetime>
+				<!-- animation effect="fade" start="0" end="50" time="200" reversable="false" condition="true">Conditional</animation -->
 			</control>
 			<control type="image">
 				<left>30</left>
