@@ -131,7 +131,7 @@
 					<item id="1">
 						<description>About XBMC</description>
 						<label>31015</label>
-						<onclick>SetFocus(9001)</onclick>
+						<onclick>noop</onclick>
 					</item>
 					<item id="2">
 						<description>Setup Sources</description>
@@ -141,7 +141,7 @@
 					<item id="3">
 						<description>Music Fanart</description>
 						<label>31017</label>
-						<onclick>SetFocus(9003)</onclick>
+						<onclick>noop</onclick>
 					</item>
 					<item id="4">
 						<description>Fav. Video Add-on</description>
@@ -159,9 +159,14 @@
 						<onclick>SetFocus(9007)</onclick>
 					</item>
 					<item id="7">
+						<description>Widgets</description>
+						<label>31246</label>
+						<onclick>noop</onclick>
+					</item>
+					<item id="8">
 						<description>Additional</description>
 						<label>31020</label>
-						<onclick>SetFocus(9004)</onclick>
+						<onclick>noop</onclick>
 					</item>
 					
 					
@@ -179,7 +184,7 @@
 					<description>Control Area</description>
 					<visible>Container(9000).Hasfocus(1)</visible>
 					<left>366</left>
-					<top>134</top>
+					<top>124</top>
 					<width>770</width>
 					<height>480</height>
 					<itemgap>.5</itemgap>
@@ -208,7 +213,7 @@
 					<description>Control Area</description>
 					<visible>Container(9000).Hasfocus(2)</visible>
 					<left>366</left>
-					<top>134</top>
+					<top>124</top>
 					<width>770</width>
 					<height>580</height>
 					<itemgap>.5</itemgap>
@@ -253,7 +258,7 @@
 					<description>Control Area</description>
 					<visible>Container(9000).Hasfocus(3)</visible>
 					<left>366</left>
-					<top>134</top>
+					<top>124</top>
 					<width>770</width>
 					<height>580</height>
 					<itemgap>.5</itemgap>
@@ -280,9 +285,9 @@
 				
 				<control type="group" id="9004">
 					<description>Control Area</description>
-					<visible>Container(9000).Hasfocus(7)</visible>
+					<visible>Container(9000).Hasfocus(8)</visible>
 					<left>366</left>
-					<top>134</top>
+					<top>124</top>
 					<width>770</width>
 					<height>580</height>
 					<itemgap>.5</itemgap>
@@ -311,7 +316,7 @@
 					<description>Control Area</description>
 					<visible>Container(9000).Hasfocus(4)</visible>
 					<left>366</left>
-					<top>134</top>
+					<top>124</top>
 					<width>770</width>
 					<height>580</height>
 					<itemgap>.5</itemgap>
@@ -375,7 +380,7 @@
 					<description>Control Area</description>
 					<visible>Container(9000).Hasfocus(5)</visible>
 					<left>366</left>
-					<top>134</top>
+					<top>124</top>
 					<width>770</width>
 					<height>580</height>
 					<itemgap>.5</itemgap>
@@ -443,7 +448,7 @@
 					<description>Control Area</description>
 					<visible>Container(9000).Hasfocus(6)</visible>
 					<left>366</left>
-					<top>134</top>
+					<top>124</top>
 					<width>770</width>
 					<height>580</height>
 					<itemgap>.5</itemgap>
@@ -506,6 +511,34 @@
 					</control>
 					
 					
+				</control>
+				<control type="group" id="9008">
+					<description>Control Area</description>
+					<visible>Container(9000).Hasfocus(7)</visible>
+					<left>366</left>
+					<top>124</top>
+					<width>770</width>
+					<height>580</height>
+					<itemgap>.5</itemgap>
+					<onleft>9000</onleft>
+					<onright>9000</onright>
+					<onup>9001</onup>
+					<ondown>9001</ondown>
+					<control type="label">
+						<left>20</left>
+						<top>0</top>
+						<width>770</width>
+						<height>500</height>
+						<font>HelpText</font>
+						<textcolor>settings</textcolor>
+						<scroll>-</scroll>
+						<aligny>top</aligny>
+						<wrapmultiline>true</wrapmultiline>
+						<scrollspeed>50</scrollspeed>
+						
+						<label>31002</label>
+					</control>
+	
 				</control>
 			</control>
 			

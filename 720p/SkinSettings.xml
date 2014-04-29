@@ -50,10 +50,12 @@
 			<height>570</height>
 			<onleft>999</onleft>
 			<onright condition="Control.IsVisible(9001)">9001</onright>
+			<onright condition="Control.IsVisible(9002)">9002</onright>
 			<onright condition="Control.IsVisible(9003)">9003</onright>
 			<onright condition="Control.IsVisible(9004)">9004</onright>
 			<onright condition="Control.IsVisible(9006)">9006</onright>
-			<onright condition="Control.IsVisible(9007)">9007</onright>
+			<onright condition="Control.IsVisible(9008)">9008</onright>
+			
 			<onup>301</onup>
 			<ondown>444</ondown>
 			<pagecontrol>-</pagecontrol>
@@ -155,8 +157,13 @@
 				<item id="6">
 					<description>Widgets</description>
 					<label>31246</label>
-					<onclick>SetFocus(9007)</onclick>
-				</item>				
+					<onclick>SetFocus(9008)</onclick>
+				</item>
+				<item id="7">
+					<description>Bookmarks</description>
+					<label>31176</label>
+					<onclick>SetFocus(9002)</onclick>
+				</item>
 			</content>
 		</control>
 		
@@ -400,6 +407,59 @@
 					
 				</control>
 				
+				<!-- bookmarks -->
+				
+				<control type="grouplist" id="9002">
+					<description>Control Area</description>
+					<visible>Container(9000).Hasfocus(7)</visible>
+					<left>355</left>
+					<top>133</top>
+					<width>810</width>
+					<height>476</height>
+					<itemgap>.5</itemgap>
+					<onleft>63</onleft>
+					<onright>9000</onright>
+					<onup>9002</onup>
+					<ondown>9002</ondown>
+					<pagecontrol>63</pagecontrol>
+					<!-- animation effect="fade" start="100" end="70" time="0" condition="true">Conditional</animation -->
+
+					<control type="label">
+						<include>SettingsButton</include>
+						<label>31252</label>
+
+					</control>
+					<control type="button" id="112">
+						<include>SettingsButton</include>
+						<label2>$INFO[Skin.String(BookmarkName1)]</label2>
+						<label>- $LOCALIZE[31229] 1</label>
+						<onclick>up</onclick>
+						<onclick>Skin.Reset(BookmarkDBID1)</onclick>
+						<onclick>Skin.Reset(BookmarkName1)</onclick>
+						<enable>!IsEmpty(Skin.String(BookmarkDBID1))</enable>
+					</control>
+					<control type="button" id="113">
+						<include>SettingsButton</include>
+						<label2>$INFO[Skin.String(BookmarkName2)]</label2>
+						<label>- $LOCALIZE[31229] 2</label>
+						<onclick>up</onclick>
+						<onclick>Skin.Reset(BookmarkDBID2)</onclick>
+						<onclick>Skin.Reset(BookmarkName2)</onclick>
+						<enable>!IsEmpty(Skin.String(BookmarkDBID2))</enable>
+					</control>
+					<control type="button" id="114">
+						<include>SettingsButton</include>
+						<label2>$INFO[Skin.String(BookmarkName3)]</label2>
+						<label>- $LOCALIZE[31229] 3</label>
+						<onclick>up</onclick>
+						<onclick>Skin.Reset(BookmarkDBID3)</onclick>
+						<onclick>Skin.Reset(BookmarkName3)</onclick>
+						<enable>!IsEmpty(Skin.String(BookmarkDBID3))</enable>
+					</control>
+					
+					
+				</control>
+				
 						
 				<!--  FAVORITES  -->
 				
@@ -637,6 +697,7 @@
 						<label2>$INFO[Skin.String(Wallpaper_Folder_Path)]</label2>
 						<onclick>Skin.Reset(Wallpaper_Folder_Path)</onclick>
 				    	<onclick>Skin.SetPath(Wallpaper_Folder_Path)</onclick>
+						<textwidth>450</textwidth>
 					</control>
 					<control type="button" id="109">
 						<include>SettingsButton</include>
@@ -645,6 +706,7 @@
 						<onclick>Skin.Reset(GlobalBackground)</onclick>
 						<onclick>Skin.SetString(GlobalBackground,special://home/addons/skin.metroid/extras/backgrounds/MetroidBG.png)</onclick>
 						<onclick>Skin.SetLargeImage(GlobalBackground)</onclick>
+						<textwidth>450</textwidth>
 					</control>
 					
 					<control type="button" id="121">
@@ -718,6 +780,7 @@
 						<onclick>Skin.Reset(MenuBGImage)</onclick>
 						<onclick>Skin.SetString(MenuBGImage,special://home/addons/skin.metroid/extras/backgrounds/)</onclick>
 						<onclick>Skin.SetLargeImage(MenuBGImage)</onclick>
+						<textwidth>450</textwidth>
 					</control>
 				</control>
 				<control type="group" id="9007"><!-- move 44 down -->
@@ -921,38 +984,12 @@
 						<selected>Skin.HasSetting(HolidayEffects)</selected>
 					</control>
 										
-					<control type="button" id="112">
-						<include>SettingsButton</include>
-						<label2>$INFO[Skin.String(BookmarkName1)]</label2>
-						<label>- $LOCALIZE[31229] 1</label>
-						<onclick>up</onclick>
-						<onclick>Skin.Reset(BookmarkDBID1)</onclick>
-						<onclick>Skin.Reset(BookmarkName1)</onclick>
-						<enable>!IsEmpty(Skin.String(BookmarkDBID1))</enable>
-					</control>
-					<control type="button" id="113">
-						<include>SettingsButton</include>
-						<label2>$INFO[Skin.String(BookmarkName2)]</label2>
-						<label>- $LOCALIZE[31229] 2</label>
-						<onclick>up</onclick>
-						<onclick>Skin.Reset(BookmarkDBID2)</onclick>
-						<onclick>Skin.Reset(BookmarkName2)</onclick>
-						<enable>!IsEmpty(Skin.String(BookmarkDBID2))</enable>
-					</control>
-					<control type="button" id="114">
-						<include>SettingsButton</include>
-						<label2>$INFO[Skin.String(BookmarkName3)]</label2>
-						<label>- $LOCALIZE[31229] 3</label>
-						<onclick>up</onclick>
-						<onclick>Skin.Reset(BookmarkDBID3)</onclick>
-						<onclick>Skin.Reset(BookmarkName3)</onclick>
-						<enable>!IsEmpty(Skin.String(BookmarkDBID3))</enable>
-					</control>
+					
 				</control>
 				
 				<!-- widgets -->
 				
-				<control type="grouplist" id="9007">
+				<control type="grouplist" id="9008">
 					<description>Control Area</description>
 					<visible>Container(9000).Hasfocus(6)</visible>
 				
@@ -1007,7 +1044,7 @@
 						<label>$LOCALIZE[31212] $LOCALIZE[31248]</label>
 						<onclick>Skin.ToggleSetting(RandomMovieToggle)</onclick>
 						<selected>Skin.HasSetting(RandomMovieToggle)</selected>
-						<enable>!Skin.HasSetting(HomeWidgetToggle) + System.HasAddon(service.library.data.provider)</enable>
+						<enable>!Skin.HasSetting(HomeWidgetToggle)</enable>
 					</control>
 					
 					<!--  Widget 4  -->
@@ -1018,7 +1055,7 @@
 						<label>$LOCALIZE[31213] $LOCALIZE[31248]</label>
 						<onclick>Skin.ToggleSetting(RandomSongsToggle)</onclick>
 						<selected>Skin.HasSetting(RandomSongsToggle)</selected>
-						<enable>!Skin.HasSetting(HomeWidgetToggle) + System.HasAddon(service.library.data.provider)</enable>
+						<enable>!Skin.HasSetting(HomeWidgetToggle)</enable>
 						
 					</control>
 					
@@ -1027,10 +1064,10 @@
 					<control type="radiobutton" id="405">
 						<include>SettingsButton</include>
 						<description>Custom widget 1</description>31249
-						<label>$LOCALIZE[31249] $LOCALIZE[31248] 1</label>
+						<label>$LOCALIZE[31249] $LOCALIZE[31248] 1 $LOCALIZE[31253]</label>
 						<onclick>Skin.ToggleSetting(CustomWidget1Toggle)</onclick>
 						<selected>Skin.HasSetting(CustomWidget1Toggle)</selected>
-						<enable>!Skin.HasSetting(HomeWidgetToggle)</enable>
+						<enable>!IsEmpty(Skin.String(PluginWidgetPath1)) + !Skin.HasSetting(HomeWidgetToggle)</enable>
 					</control>
 					<control type="button" id="406">
 						<include>SettingsButton</include>
@@ -1049,6 +1086,7 @@
 						<onclick>Skin.ToggleSetting(CustomWidget1Toggle)</onclick><!-- the order is relevant -->
 						<onclick>up</onclick>
 						<onclick>up</onclick>
+						<onclick>up</onclick>
 						<onclick>Skin.Reset(PluginWidgetPath1)</onclick>
 						<onclick>Skin.Reset(PluginWidgetName1)</onclick>
 						<onclick>Skin.Reset(PluginWidgetTarget1)</onclick>
@@ -1061,10 +1099,10 @@
 					<control type="radiobutton" id="408">
 						<include>SettingsButton</include>
 						<description>Custom widget 2</description>
-						<label>$LOCALIZE[31249] $LOCALIZE[31248] 2</label>
+						<label>$LOCALIZE[31249] $LOCALIZE[31248] 2 $LOCALIZE[31253]</label>
 						<onclick>Skin.ToggleSetting(CustomWidget2Toggle)</onclick>
 						<selected>Skin.HasSetting(CustomWidget2Toggle)</selected>
-						<enable>!Skin.HasSetting(HomeWidgetToggle)</enable>
+						<enable>!IsEmpty(Skin.String(PluginWidgetPath2)) + !Skin.HasSetting(HomeWidgetToggle)</enable>
 					</control>
 					<control type="button" id="409">
 						<include>SettingsButton</include>
@@ -1081,6 +1119,7 @@
 						<label2>$INFO[Skin.String(PluginWidgetName2)]</label2>
 						<label>- $LOCALIZE[31228] 2</label>
 						<onclick>Skin.ToggleSetting(CustomWidget2Toggle)</onclick><!-- the order is relevant -->
+						<onclick>up</onclick>
 						<onclick>up</onclick>
 						<onclick>up</onclick>
 						<onclick>Skin.Reset(PluginWidgetPath2)</onclick>

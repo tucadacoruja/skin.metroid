@@ -17,6 +17,10 @@ msgstr ""
 "Language: en\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
+msgctxt "#31002"
+msgid "The context menu also allows you to set the 2 custom widgets for the Home screen. Just browse your addons, library structure, or playlists and bring up the context menu (c). If it is possible to make your current item into a widget (and you have an empty widget slot) you will see the button there.[CR][CR]In Settings -> Skin Settings you can adjust the name for a better fit or to make it more decriptive. As wel as reset it to make the slot available."
+msgstr ""
+
 msgctxt "#31003"
 msgid "XBMC is a media library, with an integrated player.[CR]XBMC can retrieve information about your media from the internet. [CR]Like posters, cast info, album covers, ect. [CR]To do this XBMC needs a couple of things. [CR]Like knowing where your media is saved (be it on a NAS, WebDav or HDD). [CR]And the media folders containing tvshows or movies need the correct names. [CR]Names like they are used on websites like IMDB, MovieDB, TVdb, ect. [CR]So that the scrapers can download this information from these websites."
 msgstr ""
@@ -30,11 +34,11 @@ msgid "Getting fanart for music. Make sure of the following before you scrape. [
 msgstr ""
 
 msgctxt "#31006"
-msgid "For more information.[CR]XBMC has a very extensive wiki page, that can answer many questions. [CR]WIKI.XBMC.ORG [CR]As well as a forum full of enthousiasts that are more then willing to answer any additional questions or provide extra help.[CR]FORUM.XBMC.ORG [CR]Make sure to read the sticky posts on HOW to ask for help. The people helping you can not see into your computer, so they will need a log. [CR]http://wiki.xbmc.org/index.php?title=Log_file/Easy"
+msgid "For more information.[CR]XBMC has a very extensive wiki page, that can answer many questions. [CR]WIKI.XBMC.ORG [CR]As well as a forum full of enthousiasts that are more then willing to answer any additional questions or provide extra help.[CR]FORUM.XBMC.ORG [CR]Make sure to read the sticky posts on HOW to ask for help. The people helping you can not see into your computer, so they will need a log. [CR]http://wiki.xbmc.org/index.php?title=Log_file/Easy [CR]Forum thread for this skin: [CR]http://forum.xbmc.org/showthread.php?tid=178956"
 msgstr ""
 
 msgctxt "#31007"
-msgid "Adding a custom Video Add-on to the main menu. First add the Video Add-on to your favorites. Go to Video-Add-ons, bring up the context menu (press c on the keyboard) on the item you want to favorite. Next, go to:[CR]Settings -> Appearance -> Skin Settings -> Favorites.[CR]Now enable and set your Favorite into the main menu. [CR]The context menu also allows you to set 2 Video Add-on folders as widgets on the Home screen. Note: These widgets are loaded on returning to Home. Not direct on startup ivm load time."
+msgid "Adding a custom Video Add-on to the main menu. First add the Video Add-on to your favorites. Go to Video-Add-ons, bring up the context menu (press c on the keyboard) on the item you want to favorite. Next, go to:[CR]Settings -> Skin Settings -> Favorites.[CR]Now enable and set your Favorite into the main menu."
 msgstr ""
 
 msgctxt "#31008"
@@ -937,7 +941,9 @@ msgctxt "#31251"
 msgid "Menu background image"
 msgstr ""
 
-
+msgctxt "#31252"
+msgid "These bookmarks can be set on episodes with the context menu."
+msgstr ""
 
 
 

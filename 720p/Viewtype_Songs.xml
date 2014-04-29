@@ -393,7 +393,7 @@
 			<onright>602</onright>
 			<visible>Control.IsVisible(602)</visible>
 			<animation effect="fade" start="100" end="40" time="200" reversable="false" condition="!Control.HasFocus(63)">Conditional</animation>
-			<animation effect="slide" start="0,0" end="-250,0" time="400" condition="!Control.HasFocus(301) + !Skin.HasSetting(LockMainMenu)">Conditional</animation>
+			<animation effect="slide" start="0,0" end="-250,0" time="600" condition="!Control.HasFocus(301) + !Skin.HasSetting(LockMainMenu)">Conditional</animation>
 		</control>
 		
 	</control>

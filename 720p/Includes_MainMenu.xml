@@ -36,7 +36,7 @@
 				<height>651</height>
 				<onleft condition="!Skin.HasSetting(GlobalSearch)">999</onleft>
 				<onright>50</onright>
-				<onup>noop</onup>
+				<onup condition="Player.HasMedia">407</onup>
 				<ondown>301</ondown>
 				<pagecontrol>64</pagecontrol>
 				<scrolltime>2</scrolltime>

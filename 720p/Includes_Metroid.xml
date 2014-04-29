@@ -345,7 +345,8 @@
 				<include>MoviePanelLayout</include>
 				
 				<!-- include>HomeContentRandomMovies</include -->
-				<content target="video">plugin://service.library.data.provider?type=randommovies</content>				
+				<!-- content target="video">plugin://service.library.data.provider?type=randommovies</content -->	
+				<content target="video">special://skin/extras/library/movies/randommovies.xsp</content>
 			</control>	
 			
 			<control type="group">
@@ -477,7 +478,8 @@
 				<include>ShowPanelLayout</include>
 				
 				<!-- include>HomeContentRandomAlbum</include -->
-				<content target="video">plugin://service.library.data.provider?type=randomsongs</content>				
+				<!-- content target="video">plugin://service.library.data.provider?type=randomsongs</content -->	
+				<content target="video">special://skin/extras/library/music/randomsong.xsp</content>
 			</control>	
 		</control>	
 	</include>

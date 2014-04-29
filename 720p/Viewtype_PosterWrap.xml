@@ -19,20 +19,20 @@
 
 			<control type="fixedlist" id="501">
 				<visible>Container.Content(Movies) | Container.Content(TVShows) | Container.Content(seasons)</visible>
-				<!-- hitrect x="350" y="130" w="725" h="480" / -->
-				<left>325</left>
+				<hitrect x="170" y="170" w="1000" h="400" />
+				<left>328</left>
 				<top>128</top>
-				<width>1600</width>
+				<width>1100</width>
 				<height>380</height>
-				<onleft>57</onleft>
-				<onright>57</onright>
+				<onleft>501</onleft>
+				<onright>501</onright>
 				<onup>300</onup>
 				<ondown>63</ondown>
 				<viewtype label="PosterFix">list</viewtype>
 				<pagecontrol>63</pagecontrol>
 				<scrolltime>150</scrolltime>
 				<preloaditems>2</preloaditems>
-				<focusposition>2</focusposition>
+				<focusposition>0</focusposition>
 				<orientation>horizontal</orientation>
 				
 				<animation effect="slide" start="0,0" end="-110,0" time="400" condition="!Control.HasFocus(301) + !Skin.HasSetting(LockMainMenu)">Conditional</animation>
@@ -66,7 +66,7 @@
 					</control>
 					
 				</itemlayout>
-				<focusedlayout height="490" width="40"/>
+				<focusedlayout height="490" width="300"/>
 				
 			</control>	
 			
@@ -98,7 +98,7 @@
 				<bordersize>0,3,0,0</bordersize>
 				<aspectratio>stretch</aspectratio>
 				<texture>white.png</texture>
-				<colordiffuse>FFE1E1E1</colordiffuse>
+				<colordiffuse>FFF2F2F2</colordiffuse>
 				
 
 			</control>
@@ -121,6 +121,7 @@
 				<aspectratio>stretch</aspectratio>
 				<texture diffuse="SelectDiff.png">BlueBackground.png</texture>
 				<colordiffuse>44FFFFFF</colordiffuse>
+				<animation effect="fade" start="100" end="0" time="200" reversable="true" condition="Substring(ListItem.Label,..,left)">Conditional</animation>
 			</control>
 			
 			<control type="label">
@@ -129,10 +130,10 @@
 				<width>565</width>
 				<height>45</height>
 				<font>Postertitlebig</font>
-				<textcolor>D7FFFFFF</textcolor>
+				<textcolor>EDFFFFFF</textcolor>
 				<scroll>false</scroll>
 				<align>left</align>
-				<label>$INFO[ListItem.Title]</label>
+				<label>$VAR[Title]</label>
 
 			</control>
 
@@ -142,7 +143,7 @@
 				<width>575</width>
 				<height>50</height>
 				<font>recent</font>
-				<textcolor>ACFFFFFF</textcolor>
+				<textcolor>BFFFFFFF</textcolor>
 				<scroll>true</scroll>
 				<align>justify</align>
 				<autoscroll delay="922000" time="5000" repeat="10000" />

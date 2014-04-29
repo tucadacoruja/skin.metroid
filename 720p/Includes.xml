@@ -35,8 +35,8 @@
 	<!-- colordiffuse>skin.string(MainColorString)</colordiffuse -->
 	<shadowcolor>70464646</shadowcolor>
 	<textoffsetx>-2</textoffsetx>
-	<texturenofocus>Keyboard/light.png</texturenofocus>
-	<texturefocus>Keyboard/lightblue.png</texturefocus>
+	<texturenofocus colordiffuse="FF636363">osd/GrayBackground.png</texturenofocus>
+	<texturefocus colordiffuse="blue">osd/GrayBackground.png</texturefocus>
 </include>
 
 <include name="SettingsButton">
@@ -45,7 +45,7 @@
 	<width>810</width>
 	<textcolor>settings</textcolor>
 	<focusedcolor>white</focusedcolor>
-	<disabledcolor>46ffffff</disabledcolor>
+	<disabledcolor>70ffffff</disabledcolor>
 	<texturefocus>setting.png</texturefocus>
 	<texturenofocus>-</texturenofocus>
 	<shadowcolor>46000000</shadowcolor>
@@ -213,6 +213,19 @@
 	
 </include>
 
+<include name="FakeProgress">
+	<control type="image">
+		<left>0</left>
+		<top>63</top><!-- animation coordinates have to match -->
+		<height>10</height>
+		<width>110</width>
+		<texture>BlueBackground.png</texture>
+		<aspectratio>stretch</aspectratio>
+		<animation effect="zoom" start="0,30" end="1280,30" center="0,63" delay="0" time="8000" loop="true" condition="true">Conditional</animation>
+		<visible>![Window.IsVisible(fullscreenvideo) | Window.IsVisible(visualisation)]</visible>
+	</control>
+</include>
+
 <include name="MenuManualClose">
 	<onclick>Skin.Reset(SubMenu1)</onclick>
 	<onclick>Skin.Reset(SubMenu2)</onclick>
@@ -292,7 +305,7 @@
 			<visible>System.HasNetwork + Weather.IsFetched + Skin.HasSetting(GlobalSearch)</visible>
 		</control>
 		<control type="button">
-			<include>weather Button</include>
+			<include>SearchButton</include>
 			<aspectratio>keep</aspectratio>
 			<texturefocus>empty.png</texturefocus>
 			<texturenofocus>empty.png</texturenofocus>
@@ -368,7 +381,7 @@
 		
 			<animation effect="fade" start="0" end="100" time="100">VisibleChange</animation>
 			<animation effect="fade" start="0" end="100" time="100" delay="50">WindowOpen</animation>
-			<animation effect="fade" start="10" end="74" time="100000" delay="2000" reversable="true" pulse="true" condition="Player.HasAudio + !Skin.HasSetting(VisLibrary)">Conditional</animation>
+			<animation effect="fade" start="10" end="74" time="70000" delay="2000" reversable="true" pulse="true" condition="Player.HasAudio + !Skin.HasSetting(VisLibrary)">Conditional</animation>
 			
 			<visible>!Player.HasVideo + IsEmpty(ListItem.Art(fanart)) + !Skin.HasSetting(BackgroundSlideshow)</visible>
 		</control>
@@ -383,7 +396,7 @@
 			<fadetime>210</fadetime>
 			
 			<visible>![Player.HasVideo | Skin.HasSetting(LibraryFanart)]</visible>
-			<animation effect="fade" start="40" end="95" time="100000" delay="2000" reversable="true" pulse="true" condition="Player.HasAudio + !Skin.HasSetting(VisLibrary)">Conditional</animation>
+			<animation effect="fade" start="20" end="95" time="70000" delay="2000" reversable="true" pulse="true" condition="Player.HasAudio + !Skin.HasSetting(VisLibrary)">Conditional</animation>
 		</control>
 		<control type="image">
 			<include condition="Window.IsVisible(pvr) | Window.IsVisible(filemanager) | Window.IsVisible(musicplaylisteditor)">ExceptionsMenuPosition</include>
@@ -416,6 +429,7 @@
 			<height>658</height>
 			<aspectratio>stretch</aspectratio>
 			<texture background="true" fallback="osd/GrayBackground.png">$INFO[Skin.String(MenuBGImage)]</texture>
+			
 			<!-- texture  fallback="osd/GrayBackground.png">special://skin/extras/backgrounds/MenuBG4.jpg</texture -->
 			<colordiffuse>$INFO[Skin.String(MenuCstring)]</colordiffuse>
 		</control>

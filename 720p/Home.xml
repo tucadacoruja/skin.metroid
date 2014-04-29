@@ -13,6 +13,8 @@
 <onload condition="Window.Previous(startup)">AlarmClock(WidgetDelay,Skin.Reset(WidgetVisibility),00:01,silent)</onload>
 
 <onload condition="IsEmpty(Skin.String(FirstRunTouch))">ActivateWindow(9506)</onload>
+<onload condition="!Window.Previous(startup)">Container(8000).Refresh</onload>
+<onload condition="!Window.Previous(startup)">Container(8001).Refresh</onload>
 
 
 <allowoverlay>yes</allowoverlay>

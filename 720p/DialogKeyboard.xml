@@ -508,11 +508,21 @@
 					<onright>303</onright>
 					<onup>80</onup>
 					<ondown>32</ondown>
-					<include>keybutton</include>
+					
 					
 					<label>$</label>
 					<onclick>SendClick(304)</onclick>
-					<colordiffuse>$VAR[KeyboardSymbol]</colordiffuse>
+					
+					<align>center</align>
+					<aligny>center</aligny>
+					<font>keyboard</font>
+					<focusedcolor>FFD7D7D7</focusedcolor>
+					<textcolor>white</textcolor>
+					<!-- colordiffuse>skin.string(MainColorString)</colordiffuse -->
+					<shadowcolor>70464646</shadowcolor>
+					<textoffsetx>-2</textoffsetx>
+					<texturenofocus colordiffuse="$VAR[KeyboardSymbol]">osd/GrayBackground.png</texturenofocus>
+					<texturefocus colordiffuse="blue">osd/GrayBackground.png</texturefocus>
 				</control>
 				
 				<control type="radiobutton" id="303">
@@ -554,8 +564,8 @@
 					<onright>90</onright>
 					<onup>65</onup>
 					<ondown>307</ondown>
-					<texturenofocus>Keyboard/dark.png</texturenofocus>
-					<texturefocus>Keyboard/darkblue.png</texturefocus>
+					<texturenofocus colordiffuse="FF363636">osd/GrayBackground.png</texturenofocus>
+					<texturefocus colordiffuse="blue">osd/GrayBackground.png</texturefocus>
 					<include>keybutton</include>
 				</control>			
 				<control type="button" id="90">
@@ -678,8 +688,8 @@
 					<onright>305</onright>
 					<onup>303</onup>
 					<ondown>307</ondown>
-					<texturenofocus>Keyboard/dark.png</texturenofocus>
-					<texturefocus>Keyboard/darkblue.png</texturefocus>
+					<texturenofocus colordiffuse="FF363636">osd/GrayBackground.png</texturenofocus>
+					<texturefocus colordiffuse="blue">osd/GrayBackground.png</texturefocus>
 					<include>keybutton</include>
 				</control>
 			</control>	
@@ -744,6 +754,7 @@
 				<texturenofocus>-</texturenofocus>
 				<texturefocus>-</texturefocus>
 				<visible>false</visible>
+				
 			</control>	
 			
 		</control>
@@ -1275,8 +1286,8 @@
 					<onright>85</onright>
 					<onup>75</onup>
 					<ondown>307</ondown>
-					<texturenofocus>Keyboard/dark.png</texturenofocus>
-					<texturefocus>Keyboard/darkblue.png</texturefocus>
+					<texturenofocus colordiffuse="FF363636">osd/GrayBackground.png</texturenofocus>
+					<texturefocus colordiffuse="blue">osd/GrayBackground.png</texturefocus>
 					<include>keybutton</include>
 				</control>			
 				<control type="button" id="85">
@@ -1384,8 +1395,8 @@
 					<onright>305</onright>
 					<onup>8</onup>
 					<ondown>304</ondown>
-					<texturenofocus>Keyboard/dark.png</texturenofocus>
-					<texturefocus>Keyboard/darkblue.png</texturefocus>
+					<texturenofocus colordiffuse="FF363636">osd/GrayBackground.png</texturenofocus>
+					<texturefocus colordiffuse="blue">osd/GrayBackground.png</texturefocus>
 					<include>keybutton</include>
 				</control>
 			</control>	

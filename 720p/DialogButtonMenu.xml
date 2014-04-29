@@ -46,7 +46,8 @@
 				<top>-48</top>
 				<width>376</width>
 				<height>48</height>
-				<texture>MetroidMenu.png</texture>
+				<texture>white.png</texture>
+				<colordiffuse>FF333333</colordiffuse>
 				<aspectratio>stretch</aspectratio>
 			</control>
 			<control type="label">
@@ -76,7 +77,8 @@
 				<top>0</top>
 				<width>376</width>
 				<height>245</height>
-				<texture>MetroidMenu.png</texture>
+				<texture>white.png</texture>
+				<colordiffuse>FF333333</colordiffuse>
 				<aspectratio>stretch</aspectratio>
 			</control>
 			<control type="image" id="3">
@@ -85,7 +87,8 @@
 				<top>195</top>
 				<width>376</width>
 				<height>15</height>
-				<texture>MetroidMenu.png</texture>
+				<texture>white.png</texture>
+				<colordiffuse>FF333333</colordiffuse>
 				<aspectratio>stretch</aspectratio>
 			</control>
 		</control>

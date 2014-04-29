@@ -34,7 +34,8 @@
 			<top>125</top>
 			<width>610</width>
 			<height>310</height>
-			<texture>MetroidMenu.png</texture>
+			<texture>white.png</texture>
+			<colordiffuse>FF333333</colordiffuse>
 			<aspectratio>stretch</aspectratio>
 			
 		</control>

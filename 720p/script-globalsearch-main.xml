@@ -19,15 +19,7 @@
 					<animation effect="fade" start="100" end="85" time="600" reversible="true" >WindowOpen</animation>
 					
 				</control>
-				<control type="image">
-					<left>0</left>
-					<top>65</top>
-					<width>250</width>
-					<height>648</height>
-					<aspectratio>stretch</aspectratio>
-					<texture>MetroidMenu.png</texture>
-					
-				</control>
+				<include>MenuBackground</include>
 				
 				<control type="image">
 					<left>235</left>

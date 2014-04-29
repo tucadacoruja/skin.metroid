@@ -19,8 +19,8 @@
 	</variable>
 	
 	<variable name="KeyboardSymbol">
-		<value condition="SubString(Control.GetLabel(304),*)">FF00FFFF</value>
-		<value>FFFFFFFF</value>
+		<value condition="SubString(Control.GetLabel(304),*)">FF324a76</value>
+		<value>FF5E5E5E</value>
 	</variable>
 				
 	<variable name="PluginWidget1Art">
@@ -169,7 +169,7 @@
 	
 	<variable name="Title">
 		<value condition="!IsEmpty(ListItem.Title)">$INFO[ListItem.Title]</value>
-		<value condition="IsEmpty(ListItem.Title)">$INFO[ListItem.Label]</value>
+		<value>$INFO[ListItem.Label]</value>
 	</variable>
 
 	<variable name="Landscape_Header">

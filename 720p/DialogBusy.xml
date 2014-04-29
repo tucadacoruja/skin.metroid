@@ -30,7 +30,7 @@
 			<animation effect="fade" start="90" end="0" time="350" reversable="false" >WindowClose</animation>
 		</control>
 		
-		<include>Loading</include>
+		<include condition="Window.IsVisible(fullscreenvideo) | Window.IsVisible(visualisation) | Window.IsActive(script-tvguide-main.xml)">Loading</include>
 	
 	</control>
 	
@@ -52,19 +52,7 @@
 			
 		</control>
 		
-		<control type="image">
-			<left>0</left>
-			<top>63</top>
-			
-			<height>10</height>
-			<width>110</width>
-			
-			<texture>BlueBackground.png</texture>
-			<aspectratio>stretch</aspectratio>
-			<animation effect="zoom" start="0,30" end="1280,30" center="0,63" delay="0" time="8000" loop="true" condition="true">Conditional</animation>
-			<visible>Window.IsVisible(busydialog)</visible>
-		</control>
-				
+		<include condition="Window.IsVisible(busydialog)">FakeProgress</include>
 		  
 	</control>
 </controls>
