@@ -42,7 +42,7 @@ msgid "Adding a custom Video Add-on to the main menu. First add the Video Add-on
 msgstr ""
 
 msgctxt "#31008"
-msgid "Reloading the skin will not change any of your settings.[CR]Reloading the skin can sometimes releave glitch.[CR][CR]Resetting will bring the skin back to the defaults.[CR]Resetting can NOT be undone."
+msgid "Reloading the skin will not change any of your settings.[CR]Reloading the skin can sometimes releave glitch.[CR]Reloading the skin can be done from the shutdown menu anywhere in the skin.[CR][CR]Resetting will delete all skin settings (restart xbmc to load defaults).[CR]Resetting can NOT be undone."
 msgstr ""
 
 msgctxt "#31009"
@@ -945,6 +945,9 @@ msgctxt "#31252"
 msgid "These bookmarks can be set on episodes with the context menu."
 msgstr ""
 
+msgctxt "#31253"
+msgid "(see help section)"
+msgstr ""
 
 
 

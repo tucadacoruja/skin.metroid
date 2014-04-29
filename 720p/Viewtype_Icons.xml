@@ -104,7 +104,7 @@
 							<height>30</height>
 							<label>$VAR[Episode_title]</label>
 							<font>MainMenu21</font>
-							<textcolor>FFC7C7C7</textcolor>
+							<textcolor>E0FFFFFF</textcolor>
 							<align>left</align>
 							<scroll>false</scroll>
 						</control>
@@ -118,7 +118,7 @@
 							<visible>true</visible>
 							<scroll>false</scroll>
 							<font>SubMenu20</font>
-							<textcolor>FF959595</textcolor>
+							<textcolor>B5FFFFFF</textcolor>
 							<visible>!IsEmpty(ListItem.Title) | !substring(ListItem.Label,..,left)</visible>
 						</control>
 						<control type="textbox">
@@ -128,9 +128,9 @@
 							<height>55</height>
 							<label>$INFO[ListItem.plot]</label>
 							<font>PlotOnly</font>
-							<textcolor>FF898989</textcolor>
+							<textcolor>B5FFFFFF</textcolor>
 							<aligny>top</aligny>
-							<shadowcolor>00FFFFFF</shadowcolor>
+
 							<autoscroll>false</autoscroll>
 						</control>
 	
@@ -142,7 +142,7 @@
 							<height>32</height>
 							<texture>$INFO[ListItem.Overlay]</texture>
 							<aspectratio>stretch</aspectratio>
-							<colordiffuse>FFABABAB</colordiffuse>
+							<!-- colordiffuse>FFABABAB</colordiffuse -->
 							
 						</control>
 						<!--control type="image">
@@ -239,7 +239,7 @@
 							<visible>true</visible>
 							<scroll>false</scroll>
 							<font>SubMenu20</font>
-							<textcolor>FFACACAC</textcolor>
+							<textcolor>D6FFFFFF</textcolor>
 							<visible>!IsEmpty(ListItem.Title) | !substring(ListItem.Label,..,left)</visible>
 						</control>
 						<control type="textbox">
@@ -249,7 +249,7 @@
 							<height>55</height>
 							<label>$INFO[ListItem.plot]</label>
 							<font>PlotOnly</font>
-							<textcolor>FFACACAC</textcolor>
+							<textcolor>D6FFFFFF</textcolor>
 							<aligny>top</aligny>
 						
 							<autoscroll>false</autoscroll>
