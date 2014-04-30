@@ -3,18 +3,18 @@
 
 	<include name="WidgetsAnimation">
 		<animation type="Visible" reversible="false">
-			<effect type="fade" start="1" end="100" time="680" /> <!-- delay="350" -->
-			<effect type="zoom" start="75" end="100" time="600" center="1280,330" tween="Cubic" easing="in" delay="1" />
-			<effect type="rotatey" start="16" end="0" time="600" center="1280,330" tween="Cubic" easing="in" delay="1" />
+			<effect type="fade" start="1" end="100" time="580" /> <!-- delay="350" -->
+			<effect type="zoom" start="75" end="100" time="500" center="auto" tween="Cubic" easing="in" delay="1" />
+			<effect type="rotatey" start="13" end="0" time="500" center="1280,330" tween="Cubic" easing="in" delay="1" />
 			
 		</animation>
 		<!-- animation type="Hidden" reversible="false">
 			<effect type="fade" start="100" end="0" time="100" />
 		</animation -->
 		<animation type="WindowOpen" reversible="false">
-			<effect type="fade" start="1" end="100" time="680" />
-			<effect type="zoom" start="75" end="100" time="600" center="1280,330" tween="Cubic" easing="in" delay="1" />
-			<effect type="rotatey" start="16" end="0" time="600" center="1280,330" tween="Cubic" easing="in" delay="1" />
+			<effect type="fade" start="1" end="100" time="580" />
+			<effect type="zoom" start="75" end="100" time="500" center="auto" tween="Cubic" easing="in" delay="1" />
+			<effect type="rotatey" start="13" end="0" time="500" center="1280,330" tween="Cubic" easing="in" delay="1" />
 			
 		</animation>
 		<!-- animation type="WindowClose" reversible="false">
@@ -55,9 +55,9 @@
 		<animation effect="fade" start="100" end="0" time="300" reversible="false" condition="Window.IsVisible(movieinformation) | Window.IsVisible(addoninformation) | Window.IsVisible(musicinformation) | Window.IsVisible(addoninformation)">Conditional</animation>
 		
 		<animation type="Conditional" reversible="false" condition="!Window.IsVisible(movieinformation) + !Window.IsVisible(addoninformation) + !Window.IsVisible(musicinformation) + !Window.IsVisible(addoninformation)">
-			<effect type="fade" start="1" end="100" time="680" />
-			<effect type="zoom" start="75" end="100" time="600" center="1280,330" tween="Cubic" easing="in" delay="1" />
-			<effect type="rotatey" start="16" end="0" time="600" center="1280,330" tween="Cubic" easing="in" delay="1" />
+			<effect type="fade" start="1" end="100" time="580" />
+			<effect type="zoom" start="75" end="100" time="500" center="auto" tween="Cubic" easing="in" delay="1" />
+			<effect type="rotatey" start="13" end="0" time="500" center="1280,330" tween="Cubic" easing="in" delay="1" />
 			
 		</animation>
 	</include>

@@ -208,7 +208,6 @@
 						<item id="120">
 							<description>Custom Favourite 1</description>
 							<label>$INFO[Skin.String(CustomFavName1)]</label>
-							<icon>$INFO[Skin.String(CustomFavourite1.Icon)]</icon>
 							<onclick>$INFO[Skin.String(CustomFavourite1.Path)]</onclick>
 							<visible>Skin.HasSetting(Menu_Custom1) + !IsEmpty(Skin.String(CustomFavName1))</visible>
 							<visible>Skin.HasSetting(cust_favorite)</visible>
@@ -468,7 +467,7 @@
 		<showonepage>true</showonepage>
 		<left>205</left>
 		<top>73</top>
-		<width>90</width>
+		<width>70</width>
 		<height>640</height>
 		<visible>Skin.HasSetting(LockMainMenu)</visible>
 	</control>
@@ -1107,7 +1106,6 @@
 		<item id="13">
 			<description>skin settings</description>
 			<label>31112</label>
-			<icon>-</icon>
 			<property name="focused">-</property>
 			<onclick>ActivateWindow(skinsettings)</onclick>
 			<visible>!IsEmpty(skin.string(SubMenu2))</visible>
@@ -1117,7 +1115,6 @@
 		<item id="7">
 			<description>Appearance</description>
 			<label>31113</label>
-			<icon>settings/appearance2.png</icon>
 			<property name="focused">settings/appearance2FO.png</property>
 			<onclick>ActivateWindow(appearancesettings)</onclick>
 			<visible>!IsEmpty(skin.string(SubMenu2))</visible>
@@ -1128,7 +1125,6 @@
 		<item id="1">
 			<description>Video</description>
 			<label>31116</label>
-			<icon>settings/video.png</icon>
 			<property name="focused">settings/videoFO.png</property>
 			<onclick>ActivateWindow(videossettings)</onclick>
 			<visible>!IsEmpty(skin.string(SubMenu2))</visible>
@@ -1138,7 +1134,6 @@
 		<item id="2">
 			<description>Audio</description>
 			<label>31117</label>
-			<icon>settings/audio.png</icon>
 			<property name="focused">settings/audioFO.png</property>
 			<onclick>ActivateWindow(musicsettings)</onclick>
 			<visible>!IsEmpty(skin.string(SubMenu2))</visible>
@@ -1148,7 +1143,6 @@
 		<item id="11">
 			<description>System</description>
 			<label>31124</label>
-			<icon>settings/system.png</icon>
 			<property name="focused">settings/systemFO.png</property>
 			<onclick>ActivateWindow(systemsettings)</onclick>
 			<visible>!IsEmpty(skin.string(SubMenu2))</visible>
@@ -1158,7 +1152,6 @@
 		<item id="3">
 			<description>Pics</description>
 			<label>31118</label>
-			<icon>settings/pics.png</icon>
 			<property name="focused">settings/picsFO.png</property>
 			<onclick>ActivateWindow(picturessettings)</onclick>
 			<visible>!IsEmpty(skin.string(SubMenu2))</visible>
@@ -1168,7 +1161,6 @@
 		<item id="4">
 			<description>Weather</description>
 			<label>31119</label>
-			<icon>settings/weather.png</icon>
 			<property name="focused">settings/weatherFO.png</property>
 			<onclick>ActivateWindow(weathersettings)</onclick>
 			<visible>!IsEmpty(skin.string(SubMenu2))</visible>
@@ -1176,9 +1168,8 @@
 			<property name="DropdownMenu2">not_empty</property>
 		</item>
 		<item id="5">
-			<description>Network</description>
+			<description>network</description>
 			<label>31120</label>
-			<icon>settings/network.png</icon>
 			<property name="focused">settings/networkFO.png</property>
 			<onclick>ActivateWindow(servicesettings)</onclick>
 			<visible>!IsEmpty(skin.string(SubMenu2))</visible>
@@ -1190,7 +1181,6 @@
 		<item id="8">
 			<description>Profiles</description>
 			<label>31121</label>
-			<icon>settings/profiles.png</icon>
 			<property name="focused">settings/profilesFO.png</property>
 			<onclick>xbmc.activatewindow(34)</onclick>
 			<visible>!IsEmpty(skin.string(SubMenu2))</visible>
@@ -1200,7 +1190,6 @@
 		<item id="9">
 			<description>Info</description>
 			<label>31122</label>
-			<icon>settings/info2.png</icon>
 			<property name="focused">settings/info2FO.png</property>
 			<onclick>activatewindow(7)</onclick>
 			<visible>!IsEmpty(skin.string(SubMenu2))</visible>
@@ -1210,7 +1199,6 @@
 		<item id="10">
 			<description>help</description>
 			<label>31123</label>
-			<icon>settings/about.png</icon>
 			<property name="focused">settings/aboutFO.png</property>
 			<onclick>activatewindow(9505)</onclick>
 			<visible>!IsEmpty(skin.string(SubMenu2)) + !Skin.HasSetting(ShowSkinHelp)</visible>
@@ -1221,7 +1209,6 @@
 		<!--  item id="12">
 			<description>Live TV settings</description>
 			<label>31125</label>
-			<icon>settings/LiveTV.png</icon>
 			<property name="focused">settings/LiveTVFO.png</property>
 			<onclick>ActivateWindow(PVRSettings)</onclick>
 			<visible>!IsEmpty(skin.string(SubMenu2))</visible>
@@ -1236,7 +1223,7 @@
 		<item id="1">
 			<description>Video</description>
 			<label>31116</label>
-			<icon>-</icon>
+			
 			<!--  onclick>ActivateWindow(Videos,Files,return)</onclick  -->
 			<onclick>ActivateWindow(VideoLibrary,Files,return)</onclick>
 			<visible>!IsEmpty(skin.string(SubMenu3))</visible>
@@ -1246,7 +1233,7 @@
 		<item id="2">
 			<description>Music</description>
 			<label>31126</label>
-			<icon>-</icon>
+			
 			<onclick>ActivateWindow(501)</onclick><!--  use number  -->
 			<visible>!IsEmpty(skin.string(SubMenu3))</visible>
 			<property name="SubMenuItem">not_empty</property>
@@ -1255,7 +1242,7 @@
 		<item id="3">
 			<description>Pictures</description>
 			<label>31118</label>
-			<icon>-</icon>
+			
 			<onclick>ActivateWindow(pictures)</onclick>
 			<visible>!IsEmpty(skin.string(SubMenu3))</visible>
 			<property name="SubMenuItem">not_empty</property>
@@ -1265,7 +1252,7 @@
 		<item id="4">
 			<description>filemanager</description>
 			<label>31127</label>
-			<icon>-</icon>
+			
 			<onclick>ActivateWindow(filemanager)</onclick>
 			<visible>!IsEmpty(skin.string(SubMenu3))</visible>
 			<property name="SubMenuItem">not_empty</property>
@@ -1277,7 +1264,7 @@
 		<item id="1">
 			<description>All Movies</description>
 			<label>*$LOCALIZE[31129]</label>
-			<icon>-</icon>
+			
 			<onclick>ActivateWindow(Videos,MovieTitles,return)</onclick>
 			<visible>Skin.HasSetting(MoviePlaylists)</visible>
 			<visible>!IsEmpty(skin.string(SubMenu4))</visible>
@@ -1296,7 +1283,7 @@
 		<item id="3">
 			<description>A-E Playlists</description>
 			<label>a b c d e</label>
-			<icon>-</icon>
+			
 			<onclick>ActivateWindow(Videos,special://skin/extras/library/movies/AE_Playlist.xsp,return)</onclick>
 			<visible>Skin.HasSetting(MoviePlaylists)</visible>
 			<visible>!IsEmpty(skin.string(SubMenu4))</visible>
@@ -1306,7 +1293,7 @@
 		<item id="4">
 			<description>F-J Playlists</description>
 			<label>f g h i j</label>
-			<icon>-</icon>
+			
 			<onclick>ActivateWindow(Videos,special://skin/extras/library/movies/FJ_Playlist.xsp,return)</onclick>
 			<visible>Skin.HasSetting(MoviePlaylists)</visible>
 			<visible>!IsEmpty(skin.string(SubMenu4))</visible>
@@ -1316,7 +1303,7 @@
 		<item id="5">
 			<description>K-O Playlists</description>
 			<label>k l m n o</label>
-			<icon>-</icon>
+			
 			<onclick>ActivateWindow(Videos,special://skin/extras/library/movies/KO_Playlist.xsp,return)</onclick>
 			<visible>Skin.HasSetting(MoviePlaylists)</visible>
 			<visible>!IsEmpty(skin.string(SubMenu4))</visible>
@@ -1326,7 +1313,7 @@
 		<item id="6">
 			<description>P-T Playlists</description>
 			<label>p q r s t</label>
-			<icon>-</icon>
+			
 			<onclick>ActivateWindow(Videos,special://skin/extras/library/movies/PT_Playlist.xsp,return)</onclick>
 			<visible>Skin.HasSetting(MoviePlaylists)</visible>
 			<visible>!IsEmpty(skin.string(SubMenu4))</visible>
@@ -1336,7 +1323,7 @@
 		<item id="7">
 			<description>U-Z Playlists</description>
 			<label>u v w x y z</label>
-			<icon>-</icon>
+			
 			<onclick>ActivateWindow(Videos,special://skin/extras/library/movies/UZ_Playlist.xsp,return)</onclick>
 			<visible>Skin.HasSetting(MoviePlaylists)</visible>
 			<visible>!IsEmpty(skin.string(SubMenu4))</visible>
@@ -1475,7 +1462,7 @@
 		<item id="3">
 			<description>A-E Playlists</description>
 			<label>a b c d e</label>
-			<icon>-</icon>
+			
 			<onclick>ActivateWindow(Videos,special://skin/extras/library/tvshows/AE_Playlist.xsp,return)</onclick>
 			<visible>Skin.HasSetting(TvShowPlaylists)</visible>
 			<visible>!IsEmpty(skin.string(SubMenu5))</visible>
@@ -1485,7 +1472,7 @@
 		<item id="4">
 			<description>F-J Playlists</description>
 			<label>f g h i j</label>
-			<icon>-</icon>
+			
 			<onclick>ActivateWindow(Videos,special://skin/extras/library/tvshows/FJ_Playlist.xsp,return)</onclick>
 			<visible>Skin.HasSetting(TvShowPlaylists)</visible>
 			<visible>!IsEmpty(skin.string(SubMenu5))</visible>
@@ -1495,7 +1482,7 @@
 		<item id="5">
 			<description>K-O Playlists</description>
 			<label>k l m n o</label>
-			<icon>-</icon>
+			
 			<onclick>ActivateWindow(Videos,special://skin/extras/library/tvshows/KO_Playlist.xsp,return)</onclick>
 			<visible>Skin.HasSetting(TvShowPlaylists)</visible>
 			<visible>!IsEmpty(skin.string(SubMenu5))</visible>
@@ -1505,7 +1492,7 @@
 		<item id="6">
 			<description>P-T Playlists</description>
 			<label>p q r s t</label>
-			<icon>-</icon>
+			
 			<onclick>ActivateWindow(Videos,special://skin/extras/library/tvshows/PT_Playlist.xsp,return)</onclick>
 			<visible>Skin.HasSetting(TvShowPlaylists)</visible>
 			<visible>!IsEmpty(skin.string(SubMenu5))</visible>
@@ -1515,7 +1502,7 @@
 		<item id="7">
 			<description>U-Z Playlists</description>
 			<label>u v w x y z</label>
-			<icon>-</icon>
+			
 			<onclick>ActivateWindow(Videos,special://skin/extras/library/tvshows/UZ_Playlist.xsp,return)</onclick>
 			<visible>Skin.HasSetting(TvShowPlaylists)</visible>
 			<visible>!IsEmpty(skin.string(SubMenu5))</visible>

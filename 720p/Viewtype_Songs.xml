@@ -231,7 +231,7 @@
 						<height>410</height>
 						<aspectratio scalediffuse="false">scale</aspectratio>
 						<texture>$VAR[FanOrThumbMinus]</texture>
-						<fadetime>200</fadetime>
+						<fadetime>100</fadetime>
 						<colordiffuse>C2FFFFFF</colordiffuse>
 						<visible>!Skin.HasSetting(LockMainMenu)</visible>
 					</control>
@@ -317,7 +317,7 @@
 				<height>410</height>
 				<aspectratio>scale</aspectratio>
 				<texture aligny="top">$VAR[FanOrThumb]</texture>
-				<fadetime>250</fadetime>
+				<fadetime>50</fadetime>
 				<colordiffuse>D7FFFFFF</colordiffuse>
 			</control>
 			<control type="image">

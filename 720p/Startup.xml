@@ -50,14 +50,14 @@
 			<height>720</height>
 			<aspectratio>stretch</aspectratio>
 			<texture background="true" fallback="special://skin/extras/backgrounds/MetroidBG.png">$INFO[Skin.String(GlobalBackground)]</texture>
-			<animation effect="fade" start="0" end="100" time="200">WindowOpen</animation>
-			<animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
+			<animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
+			<animation effect="fade" start="100" end="0" time="400">WindowClose</animation>
 		</control>
 		
-		<control type="group">
+		<!-- control type="group">
 			<animation effect="fade" start="0" end="100" time="300" delay="700" >WindowOpen</animation>
 			<include>Loading</include>
-		</control>
+		</control -->
 
   </controls>
 </window>

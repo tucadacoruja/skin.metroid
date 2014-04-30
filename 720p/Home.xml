@@ -10,11 +10,13 @@
 <onload condition="System.HasAddon(script.extendedinfo)">RunScript(script.extendedinfo,info=TrendingShows)</onload>
 <onload condition="System.HasAddon(script.extendedinfo)">RunScript(script.extendedinfo,info=AiringShows)</onload -->
 
-<onload condition="Window.Previous(startup)">AlarmClock(WidgetDelay,Skin.Reset(WidgetVisibility),00:01,silent)</onload>
+<onload condition="Window.Previous(startup)">AlarmClock(WidgetDelay,Skin.Reset(WidgetVisibility),00:02,silent)</onload>
 
 <onload condition="IsEmpty(Skin.String(FirstRunTouch))">ActivateWindow(9506)</onload>
 <onload condition="!Window.Previous(startup)">Container(8000).Refresh</onload>
 <onload condition="!Window.Previous(startup)">Container(8001).Refresh</onload>
+<onload condition="!Window.Previous(startup)">Container(8002).Refresh</onload>
+<onload condition="!Window.Previous(startup)">Container(8003).Refresh</onload>
 
 
 <allowoverlay>yes</allowoverlay>
@@ -58,15 +60,15 @@
 <orientation>vertical</orientation>
 <usecontrolcoords>false</usecontrolcoords>
 <onup>63</onup>
-
+<onback>SetFocus(300)</onback>
 <itemgap>0</itemgap>
 <include>WidgetsAnimation</include>
 
 <include condition="Library.HasContent(movies)+ !Skin.HasSetting(RecentMoviesToggle)">RecentMoviePanel</include>
 <include condition="Library.HasContent(tvshows) + !Skin.HasSetting(RecentTVShowToggle)">RecentTVShowPanel</include>
 
-<include condition="Library.HasContent(movies) + Skin.HasSetting(RandomMovieToggle) + System.HasAddon(service.library.data.provider)">RandomMoviePanel</include>
-<include condition="Library.HasContent(music) + Skin.HasSetting(RandomSongsToggle) + System.HasAddon(service.library.data.provider)">RandomSongsPanel</include>
+<include condition="Library.HasContent(movies) + Skin.HasSetting(RandomMovieToggle)">RandomMoviePanel</include>
+<include condition="Library.HasContent(music) + Skin.HasSetting(RandomSongsToggle)">RandomSongsPanel</include>
 
 <include condition="!IsEmpty(Skin.String(PluginWidgetPath1)) + Skin.HasSetting(CustomWidget1Toggle)">PluginWidget1</include>
 <include condition="!IsEmpty(Skin.String(PluginWidgetPath2)) + Skin.HasSetting(CustomWidget2Toggle)">PluginWidget2</include>

@@ -677,7 +677,7 @@
 				<width>52</width>
 				<texture>osd/GrayBackground.png</texture>
 				<aspectratio>stretch</aspectratio>
-				<visible>[Window.IsVisible(videolibrary) | Window.IsVisible(musicplaylist) | Window.IsVisible(videoplaylist) | Window.IsVisible(musiclibrary) | Window.IsVisible(musicfiles)] + ![SubString(Container.FolderPath,videodb://) | SubString(Container.FolderPath,musicdb://) | SubString(Container.FolderPath,addons://) | SubString(Container.FolderPath,special://) | SubString(Container.FolderPath,plugin://)]</visible>
+				<visible>[Window.IsVisible(videolibrary) | Window.IsVisible(musicplaylist) | Window.IsVisible(videoplaylist) | Window.IsVisible(musiclibrary) | Window.IsVisible(musicfiles)] + ![IsEmpty(Container.FolderPath) | SubString(Container.FolderPath,videodb://) | SubString(Container.FolderPath,library://) | SubString(Container.FolderPath,musicdb://) | SubString(Container.FolderPath,addons://) | SubString(Container.FolderPath,special://) | SubString(Container.FolderPath,plugin://)]</visible>
 				<animation effect="fade" start="0" end="100" time="300" delay="120">VisibleChange</animation>
 			</control>
 			<control type="image"> <!-- 3 battery -->
@@ -800,7 +800,7 @@
 				<width>52</width>
 				<height>52</height>
 				<texture>DefaultHardDisk.png</texture>
-				<visible>[Window.IsVisible(videolibrary) | Window.IsVisible(musicplaylist) | Window.IsVisible(videoplaylist) | Window.IsVisible(musiclibrary) | Window.IsVisible(musicfiles)] + ![SubString(Container.FolderPath,videodb://) | SubString(Container.FolderPath,musicdb://) | SubString(Container.FolderPath,addons://) | SubString(Container.FolderPath,special://) | SubString(Container.FolderPath,plugin://)]</visible>
+				<visible>[Window.IsVisible(videolibrary) | Window.IsVisible(musicplaylist) | Window.IsVisible(videoplaylist) | Window.IsVisible(musiclibrary) | Window.IsVisible(musicfiles)] + ![IsEmpty(Container.FolderPath) | SubString(Container.FolderPath,videodb://) | SubString(Container.FolderPath,library://) | SubString(Container.FolderPath,musicdb://) | SubString(Container.FolderPath,addons://) | SubString(Container.FolderPath,special://) | SubString(Container.FolderPath,plugin://)]</visible>
 			</control>
 			
 			<control type="image"> <!-- 3 battery -->
