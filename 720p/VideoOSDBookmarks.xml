@@ -23,12 +23,11 @@
             <width>600</width>
             <height>340</height>
 			<aspectratio>stretch</aspectratio>
-			<texture background="true">BlueBackground.png</texture>
+			<texture background="true">white.png</texture>
 			<bordertexture border="1">whiteborder.png</bordertexture>
 			<bordersize>4</bordersize>
-            <colordiffuse>CC555555</colordiffuse>
-			
-
+            <colordiffuse>$INFO[Skin.String(OSDDialogsBGColor)]</colordiffuse>
+		<animation effect="fade" start="0" end="60" time="300" condition="true">Conditional</animation>
         </control>
         <control type="image">
             <left>10</left>

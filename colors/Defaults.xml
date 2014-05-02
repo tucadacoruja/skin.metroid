@@ -30,8 +30,11 @@
 	<color name="lightblue">FF7EA7D8</color>
 	<color name="blue">ff438CCA</color>
 	<color name="hellblue">ff00d8ff</color>
+	<color name="brightblue">ff357ed6</color>
 	<color name="babyblue">FF95b2d0</color>
 	<color name="darkblue">AC6082a7</color>
+	
+	<color name="osdblue">FF7EA7D8</color>
 	<color name="keyboard">FFDEF5FA</color>
 	<color name="settings">FFFCFCFC</color>
 	

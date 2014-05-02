@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
-<include name="PosterWrapView">
+<include name="PosterFixView">
 
 	<control type="group">
 		<include>InfoOpenClose</include>
@@ -20,20 +20,22 @@
 			<control type="fixedlist" id="501">
 				<visible>Container.Content(Movies) | Container.Content(TVShows) | Container.Content(seasons)</visible>
 				<hitrect x="170" y="170" w="1000" h="400" />
-				<left>328</left>
+				<left>364</left>
 				<top>128</top>
 				<width>1100</width>
-				<height>380</height>
+				<height>430</height>
 				<onleft>501</onleft>
 				<onright>501</onright>
 				<onup>300</onup>
 				<ondown>63</ondown>
-				<viewtype label="PosterFix">list</viewtype>
+				<viewtype label="PosterFix">wrap</viewtype>
 				<pagecontrol>63</pagecontrol>
 				<scrolltime>200</scrolltime>
-				<preloaditems>2</preloaditems>
+							
 				<focusposition>0</focusposition>
+				
 				<orientation>horizontal</orientation>
+				<preloaditems>2</preloaditems>
 				
 				<animation effect="slide" start="0,0" end="-110,0" time="400" condition="!Control.HasFocus(301) + !Skin.HasSetting(LockMainMenu)">Conditional</animation>
 				<itemlayout height="310" width="132">
@@ -66,7 +68,7 @@
 					</control>
 					
 				</itemlayout>
-				<focusedlayout height="490" width="300"/>
+				<focusedlayout height="430" width="264"/>
 				
 			</control>	
 			
@@ -225,8 +227,7 @@
 			<onclick>PlayMedia($INFO[ListItem.FileNameAndPath])</onclick>
 			<animation effect="fade" start="0" end="50" time="0" condition="true">Conditional</animation>
 		</control -->
-		
-		
+
 		
 		<control type="scrollbar" id="63">
 			
@@ -237,14 +238,14 @@
 			<textureslidernibfocus>buttons/scrollnibH.png</textureslidernibfocus>
 			<orientation>horizontal</orientation>
 			<showonepage>true</showonepage>
-			<left>315</left>
-			<top>700</top>
-			<width>920</width>
+			<left>295</left>
+			<top>687</top>
+			<width>935</width>
 			<height>10</height>
 			<onup>501</onup>
 
 			<animation effect="fade" start="100" end="50" time="200" reversable="false" condition="!Control.HasFocus(63)">Conditional</animation>
-			<animation effect="slide" start="0,0" end="-150,0" time="600" condition="!Control.HasFocus(301) + !Skin.HasSetting(LockMainMenu)">Conditional</animation>
+			<animation effect="slide" start="0,0" end="-110,0" time="400" condition="!Control.HasFocus(301) + !Skin.HasSetting(LockMainMenu)">Conditional</animation>
 		</control>
 		
 		

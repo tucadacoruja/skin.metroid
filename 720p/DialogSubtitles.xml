@@ -33,10 +33,12 @@
 			<top>44</top>
 			<width>1280</width>
 			<height>400</height>
-			<texture background="true">bluebackground.png</texture>
-			<colordiffuse>CC555555</colordiffuse>
+			<texture background="true">white.png</texture>
+			
 			<aspectratio>stretch</aspectratio>
 			<animation effect="zoom" start="100,100" end="100,130" time="300" condition="Window.IsVisible(virtualkeyboard)">Conditional</animation>
+			<colordiffuse>$INFO[Skin.String(OSDDialogsBGColor)]</colordiffuse>
+			<animation effect="fade" start="0" end="50" time="300" condition="true">Conditional</animation>
 		</control>
 		
 		<control type="image" id="110">
@@ -177,8 +179,8 @@
 				<width>240</width>
 				<height>48</height>
 				<font>font13</font>
-				<textcolor>white</textcolor>
-
+				<textcolor>EBFFFFFF</textcolor>
+				<selectedcolor>white</selectedcolor>
 				<align>left</align>
 				<info>ListItem.Label</info>
 			</control>

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window type="dialog" id="142">
-    <defaultcontrol always="true">9000</defaultcontrol>
+    <defaultcontrol always="true">9090</defaultcontrol>
 <controls>
 
 <control type="group">
 
-	<control type="button" id="9000">
+	<control type="button" id="9090">
 		<left>0</left>
 		<top>0</top>
 		<width>1280</width>
@@ -15,7 +15,10 @@
 		<texturefocus>empty.png</texturefocus>
 		<texturenofocus>empty.png</texturenofocus>
 		
-		<onclick>back</onclick>
+		<onclick>Dialog.Close(142)</onclick>
+		<onleft>Dialog.Close(142)</onleft>
+		<onright>Dialog.Close(142)</onright>
+		<onback>Dialog.Close(142)</onback>
 		<animation effect="fade" start="1" end="1" time="0" condition="true">Conditional</animation>
 	</control>
 	
@@ -37,9 +40,10 @@
 			<top>0</top>
 			<width>500</width>
 			<height>720</height>
-			<texture background="true">BlueBackground.png</texture>
-			<colordiffuse>70555555</colordiffuse>
+			<texture background="true">white.png</texture>
 			<aspectratio>stretch</aspectratio>
+			<colordiffuse>$INFO[Skin.String(OSDDialogsBGColor)]</colordiffuse>
+			<animation effect="fade" start="0" end="50" time="300" condition="true">Conditional</animation>
 		</control>
 		
 		<control type="grouplist">

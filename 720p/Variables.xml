@@ -71,15 +71,15 @@
 	
 	<variable name="FanOrThumb">
 		
-		<value condition="Container.Content(songs)">$INFO[ListItem.Art(thumb)]</value>
+		<value condition="!IsEmpty(ListItem.Art(thumb))">$INFO[ListItem.Art(thumb)]</value>
 		<value condition="!IsEmpty(ListItem.Art(landscape))">$INFO[ListItem.Art(landscape)]</value>
 		<value>$INFO[ListItem.Art(fanart)]</value>
 		
 	</variable>
 	<variable name="FanOrThumbMinus">
 		
-		<value condition="Container.Content(songs)">$INFO[ListItem(-1).Art(thumb)]</value>
-		<value condition="!IsEmpty(ListItem.Art(landscape))">$INFO[ListItem(-1).Art(landscape)]</value>
+		<value condition="!IsEmpty(ListItem(-1).Art(thumb))">$INFO[ListItem(-1).Art(thumb)]</value>
+		<value condition="!IsEmpty(ListItem(-1).Art(landscape))">$INFO[ListItem(-1).Art(landscape)]</value>
 		<value>$INFO[ListItem(-1).Art(fanart)]</value>
 		
 	</variable>
@@ -153,6 +153,7 @@
 	</variable>
 	
 	<variable name="PosterThumbs">
+		<value condition="substring(Listitem.Label,..,left)">$INFO[ListItem.Icon]</value>
 		<value condition="!IsEmpty(ListItem.Art(poster))">$INFO[ListItem.Art(poster)]</value>
 		<value condition="Container.Content(Episodes) + !IsEmpty(ListItem.Art(thumb))">$INFO[ListItem.Art(thumb)]</value>
 		<value condition="Container.Content(Episodes)">$INFO[ListItem.Art(tvshow.poster)]</value>

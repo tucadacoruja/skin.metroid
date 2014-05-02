@@ -442,7 +442,7 @@ msgid "weather"
 msgstr ""
 
 msgctxt "#31120"
-msgid "network"
+msgid "services"
 msgstr ""
 
 msgctxt "#31121"
@@ -949,9 +949,21 @@ msgctxt "#31253"
 msgid "(see help section)"
 msgstr ""
 
+msgctxt "#31254"
+msgid "Show CPU and FPS"
+msgstr ""
 
+msgctxt "#31255"
+msgid "(Skin takes over when playing media)"
+msgstr ""
 
+msgctxt "#31256"
+msgid "Opacity percentage"
+msgstr "
 
+msgctxt "#31257"
+msgid "Darkness percentage"
+msgstr "
 
 
 

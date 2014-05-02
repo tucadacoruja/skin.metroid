@@ -262,7 +262,7 @@
 					<align>justify</align>
 					<info>ListItem.Plot</info>
 					<font>about</font>
-					<textcolor>ACFFFFFF</textcolor>
+					<textcolor>FFF3F3F3</textcolor>
 					<autoscroll delay="35500" time="5000" repeat="10000" />
 				</control>
 		</control>
@@ -274,13 +274,13 @@
 					
 			<control type="textbox">
 				<left>990</left>
-				<top>115</top>
+				<top>119</top>
 				<width>230</width>
 				<height>380</height>
 				<align>justify</align>
 				<info>ListItem.Plot</info>
 				<font>plot</font>
-				<textcolor>FFD7D7D7</textcolor>
+				<textcolor>FFF3F3F3</textcolor>
 				<autoscroll delay="35000" time="4000" repeat="10000" />
 			</control>
 			<control type="image">
@@ -324,7 +324,7 @@
 				<align>left</align>
 				<label>$LOCALIZE[31180]</label>
 				<font>homemenu3</font>
-				<textcolor>FFD7D7D7</textcolor>
+				<textcolor>EBFFFFFF</textcolor>
 				<selectedcolor>taskbar</selectedcolor>
 			</control>
 			<control type="label">
@@ -335,7 +335,7 @@
 				<align>right</align>
 				<label>$INFO[ListItem.Property(UnWatchedEpisodes)]</label>
 				<font>homemenu3</font>
-				<textcolor>FFD7D7D7</textcolor>
+				<textcolor>EBFFFFFF</textcolor>
 				<selectedcolor>taskbar</selectedcolor>
 			</control>
 		</control>

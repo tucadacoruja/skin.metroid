@@ -53,7 +53,7 @@
 	<height>35</height>
 	<align>left</align>
 	<font>DefaultButton</font>
-	<textcolor>FF9F9F9F</textcolor>
+	<textcolor>D7FFFFFF</textcolor>
 	<focusedcolor>FFFFFFFF</focusedcolor>
 	<disabledcolor>33FFFFFF</disabledcolor>
 	<textoffsetx>10</textoffsetx>
@@ -65,7 +65,7 @@
 	<height>35</height>
 	<align>left</align>
 	<font>DefaultButton</font>
-	<textcolor>FF9F9F9F</textcolor>
+	<textcolor>D7FFFFFF</textcolor>
 	<focusedcolor>FFFFFFFF</focusedcolor>
 	<disabledcolor>33FFFFFF</disabledcolor>
 	<textoffsetx>10</textoffsetx>
@@ -77,7 +77,7 @@
 	<height>35</height>
 	<align>left</align>
 	<font>DefaultButton</font>
-	<textcolor>FF9F9F9F</textcolor>
+	<textcolor>D7FFFFFF</textcolor>
 	<focusedcolor>FFFFFFFF</focusedcolor>
 	<disabledcolor>33FFFFFF</disabledcolor>
 	<textoffsetx>10</textoffsetx>
@@ -89,7 +89,7 @@
 	<height>35</height>
 	<align>left</align>
 	<font>DefaultButton</font>
-	<textcolor>FF9F9F9F</textcolor>
+	<textcolor>D7FFFFFF</textcolor>
 	<focusedcolor>FFFFFFFF</focusedcolor>
 	<disabledcolor>33FFFFFF</disabledcolor>
 	<textoffsetx>10</textoffsetx>
@@ -110,11 +110,10 @@
 		<top>100</top>
 		<width>650</width>
 		<height>505</height>
-		<texture background="true">BlueBackground.png</texture>
-		<colordiffuse>CC555555</colordiffuse>
+		<texture background="true">white.png</texture>
 		<aspectratio>stretch</aspectratio>
-		<visible>true</visible>
-	
+		<colordiffuse>$INFO[Skin.String(OSDDialogsBGColor)]</colordiffuse>
+		<animation effect="fade" start="0" end="60" time="300" condition="true">Conditional</animation>
 	</control>
 	
 	

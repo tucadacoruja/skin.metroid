@@ -21,7 +21,7 @@
 				<top>333</top>
 				<width>870</width>
 				<font>Segoe28</font>
-				<textcolor>E1FFFFFF</textcolor>
+				<textcolor>F3FFFFFF</textcolor>
 				<scroll>false</scroll>
 				<align>left</align>
 				<label>$VAR[PosterTitle]</label>
@@ -30,41 +30,41 @@
 			<control type="textbox">
 				<left>296</left>
 				<top>365</top>
-				<width>940</width>
+				<width>930</width>
 				<height>75</height>
 				<font>recent</font>
-				<textcolor>95FFFFFF</textcolor>
+				<textcolor>EBFFFFFF</textcolor>
 				<scroll>true</scroll>
 				<align>justify</align>
-				<autoscroll delay="922000" time="5000" repeat="10000" />
-				<label>$INFO[ListItem.Plot][CR]$INFO[ListItem.Genre,$LOCALIZE[31051]: ]</label>
+				<autoscroll delay="92000" time="5000" repeat="10000" />
+				<label>$INFO[ListItem.Genre,$LOCALIZE[31051]: ][CR]$INFO[ListItem.Plot]</label>
 				<visible>Control.HasFocus(301)</visible>
 			</control>
 			<control type="textbox">
 				<left>296</left>
 				<top>365</top>
-				<width>940</width>
+				<width>930</width>
 				<height>75</height>
 				<font>recent</font>
-				<textcolor>95FFFFFF</textcolor>
+				<textcolor>EBFFFFFF</textcolor>
 				<scroll>true</scroll>
 				<align>justify</align>
-				<autoscroll delay="922000" time="5000" repeat="10000" />
-				<label>$INFO[ListItem.Plot][CR]$INFO[ListItem.Genre,$LOCALIZE[31051]: ]</label>
+				<autoscroll delay="92000" time="5000" repeat="10000" />
+				<label>$INFO[ListItem.Genre,$LOCALIZE[31051]: ][CR]$INFO[ListItem.Plot]</label>
 				<visible>!Control.HasFocus(301) + Skin.HasSetting(LockMainMenu)</visible>
 			</control>
 			
 			<control type="textbox">
 				<left>296</left>
 				<top>368</top>
-				<width>1085</width>
+				<width>1080</width>
 				<height>75</height>
 				<font>recent</font>
-				<textcolor>95FFFFFF</textcolor>
+				<textcolor>EBFFFFFF</textcolor>
 				<scroll>true</scroll>
 				<align>justify</align>
-				<autoscroll delay="922000" time="5000" repeat="10000" />
-				<label>$INFO[ListItem.Plot][CR]$INFO[ListItem.Genre,$LOCALIZE[31051]: ]</label>
+				<autoscroll delay="92000" time="5000" repeat="10000" />
+				<label>$INFO[ListItem.Genre,$LOCALIZE[31051]: ][CR]$INFO[ListItem.Plot]</label>
 				<visible>!Control.HasFocus(301) + !Skin.HasSetting(LockMainMenu)</visible>
 			</control>
 			

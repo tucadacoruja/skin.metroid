@@ -41,6 +41,13 @@
 				<aspectratio>stretch</aspectratio>
 				<animation effect="fade" start="0" end="100" time="300" delay="180">WindowOpen</animation>
 			</control>
+			<control type="image">
+				<height>52</height>
+				<width>52</width>
+				<texture>osd/GrayBackground.png</texture>
+				<aspectratio>stretch</aspectratio>
+				<animation effect="fade" start="0" end="100" time="300" delay="240">WindowOpen</animation>
+			</control>
 	</control>	
 
 	
@@ -89,14 +96,14 @@
 				<height>52</height>
 				<width>52</width>
 				<aspectratio>keep</aspectratio>
-				<texturefocus colordiffuse="FFACACAC">osd/cancel.png</texturefocus>
-				<texturenofocus>osd/cancel.png</texturenofocus>
+				<texturefocus colordiffuse="FFACACAC">osd/ok.png</texturefocus>
+				<texturenofocus>osd/ok.png</texturenofocus>
 				
 				<animation effect="zoom" start="100" end="120" center="auto" time="100">Focus</animation>
 				<animation effect="zoom" start="120" end="100" center="auto" time="100">UnFocus</animation>
 			</control>
 			
-			<!--control type="button" id="11">
+			<control type="button" id="11">
 				<description>cancel</description>
 				<height>55</height>
 				<width>55</width>
@@ -106,12 +113,12 @@
 							
 				<animation effect="zoom" start="100" end="120" center="auto" time="100">Focus</animation>
 				<animation effect="zoom" start="120" end="100" center="auto" time="100">UnFocus</animation>
-			</control-->
+			</control>
 
 	</control>
 	
 	<control type="group">
-	<left>173</left>
+	<left>230</left>
 	<animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
 	
 		<control type="button" id="12">

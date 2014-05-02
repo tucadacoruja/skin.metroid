@@ -10,7 +10,7 @@
 <onload condition="System.HasAddon(script.extendedinfo)">RunScript(script.extendedinfo,info=TrendingShows)</onload>
 <onload condition="System.HasAddon(script.extendedinfo)">RunScript(script.extendedinfo,info=AiringShows)</onload -->
 
-<onload condition="Window.Previous(startup)">AlarmClock(WidgetDelay,Skin.Reset(WidgetVisibility),00:02,silent)</onload>
+<onload condition="Window.Previous(startup)">AlarmClock(WidgetDelay,Skin.Reset(WidgetVisibility),00:03,silent)</onload>
 
 <onload condition="IsEmpty(Skin.String(FirstRunTouch))">ActivateWindow(9506)</onload>
 <onload condition="!Window.Previous(startup)">Container(8000).Refresh</onload>

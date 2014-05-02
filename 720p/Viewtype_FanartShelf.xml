@@ -52,7 +52,19 @@
 			<animation effect="slide" start="0,0" end="-300,0" time="600" condition="!Control.HasFocus(301) + !Skin.HasSetting(LockMainMenu)">Conditional</animation>
 		
 			<itemlayout height="200" width="130">
-
+				
+				<control type="image">
+					<left>0</left>
+					<top>100</top>
+					<width>123</width>
+					<height>180</height>
+					<aspectratio>stretch</aspectratio>
+				
+					<fadetime>200</fadetime>
+					<texture background="true">white.png</texture>
+					<colordiffuse>FFEBEBEB</colordiffuse>
+					<animation reversible="false" effect="fade" start="100" end="0" time="200">unfocus</animation>
+				</control>
 				<control type="image">
 					<left>0</left>
 					<top>100</top>
@@ -63,7 +75,7 @@
 					<bordersize>3</bordersize>
 					<fadetime>200</fadetime>
 					<texture background="true" fallback="DefaultCatch.png">$INFO[ListItem.Art(poster)]</texture>
-					<animation effect="fade" start="0" end="60" time="0" condition="true">Conditional</animation>
+					<animation effect="fade" start="0" end="80" time="0" condition="true">Conditional</animation>
 				</control>
 				<control type="image">
 					<left>10</left>
@@ -209,7 +221,7 @@
 					<align>justify</align>
 					<info>ListItem.Plot</info>
 					<font>plot</font>
-					<textcolor>FFD7D7D7</textcolor>
+					<textcolor>EBFFFFFF</textcolor>
 					<autoscroll delay="600000" time="4000" repeat="10000" />
 				</control>
 				<control type="image">
@@ -253,16 +265,16 @@
 			</control>
 			
 			<control type="textbox">
-				<left>350</left>
+				<left>345</left>
 				<top>175</top>
 				<width>230</width>
 				<height>190</height>
 				<label>$INFO[ListItem.Title]</label>
 				<scroll>false</scroll>
-				<textcolor>E1d2e0fe</textcolor>
-				<shadowcolor>ff464646</shadowcolor>
+				<textcolor>FFEBEBEB</textcolor>
+				<shadowcolor>ff959595</shadowcolor>
 				<font>ThinTitle</font>
-				<align>left</align>
+				<align>center</align>
 				<visible>Control.IsVisible(781) + IsEmpty(ListItem.Art(clearlogo))</visible>
 				<animation effect="fade" start="0" end="1000" time="150" >Visible</animation>
 				<animation effect="fade" start="100" end="0" time="150" >Hidden</animation>

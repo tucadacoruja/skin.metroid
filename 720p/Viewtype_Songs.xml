@@ -31,7 +31,7 @@
 			<onleft>63</onleft>
 			<onright>noop</onright>
 			<pagecontrol>63</pagecontrol>
-			<visible>Container.Content(songs) | Window.IsVisible(pictures) | Container.Content(movies) | Container.Content(tvshows)</visible>
+			<visible>Container.Content(songs) | Window.IsVisible(pictures) | Container.Content(episodes) | Container.Content(albums) | Container.Content(artists)</visible>
 
 			<itemlayout width="633" height="45">
 					<!-- control type="label">
@@ -156,7 +156,7 @@
 						<font>MusicFO</font>
 						<textcolor>FFFFFFFF</textcolor>
 						<selectedcolor>957EA7D8</selectedcolor>
-						<shadowcolor>ACFFFFFF</shadowcolor>
+						<shadowcolor>55FFFFFF</shadowcolor>
 
 					</control>
 
@@ -246,7 +246,7 @@
 						<aspectratio>stretch</aspectratio>
 						<texture border="12">white.png</texture>
 						<colordiffuse>FFe9e7e9</colordiffuse>
-						<visible>![Container.Content(movies) | Container.Content(tvshows)]</visible>
+						<!-- visible>![Container.Content(movies) | Container.Content(tvshows)]</visible -->
 					</control>
 					<control type="image">
 						<description>white image</description>
@@ -320,7 +320,7 @@
 				<fadetime>50</fadetime>
 				<colordiffuse>D7FFFFFF</colordiffuse>
 			</control>
-			<control type="image">
+			<!-- control type="image">
 				<description>white image</description>
 				<left>113</left>
 				<top>108</top>
@@ -331,7 +331,7 @@
 				<texture border="12">white.png</texture>
 				<colordiffuse>FFF3F3F3</colordiffuse>
 				<visible>![Container.Content(movies) | Container.Content(tvshows)]</visible>
-			</control>
+			</control -->
 			<control type="image">
 				<description>white image</description>
 				<left>113</left>
@@ -366,10 +366,23 @@
 				<label>$INFO[ListItem.Duration,,m]$INFO[ListItem.Property(UnWatchedEpisodes),, $LOCALIZE[31180]][UPPERCASE]$INFO[ListItem.Genre, - ][/UPPERCASE]</label>
 				<font>MainMenu21</font>
 				<textcolor>FF898989</textcolor>
-				<!-- shadowcolor>skin.string(MainColorString)</shadowcolor -->
+				
 				<align>left</align>
 				<scroll>false</scroll>
-				<!-- animation effect="fade" start="0" end="60" time="00" reversable="false" condition="true">Conditional</animation -->
+				<visible>!Container.Content(Episodes)</visible>
+			</control>
+			<control type="label">
+				<left>130</left>
+				<top>520</top>
+				<width>380</width>
+				<height>60</height>
+				<label>$VAR[Padded_season,S]$VAR[Padded_episodes,E, - ]$INFO[ListItem.Duration,,m]</label>
+				<font>MainMenu21</font>
+				<textcolor>FF898989</textcolor>
+				
+				<align>left</align>
+				<scroll>false</scroll>
+				<visible>Container.Content(Episodes)</visible>
 			</control>
 		</control>	
 

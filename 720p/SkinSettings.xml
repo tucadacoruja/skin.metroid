@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
 <defaultcontrol>9000</defaultcontrol>
-
+<backgroundcolor>0</backgroundcolor>
 <allowoverlay>yes</allowoverlay>
 
 <controls>
@@ -25,9 +25,7 @@
 	
 		<include>VideoWindow</include>
 		<include>GeneralFanart</include>
-		<include>Background</include>
-	
-		
+			
 		<include>MenuBackground</include>
 		
 		<control type="image">
@@ -683,7 +681,7 @@
 					<left>355</left>
 					<top>133</top>
 					<width>810</width>
-					<height>476</height>
+					<height>520</height>
 					<itemgap>.5</itemgap>
 					<onleft>63</onleft>
 					<onright>9000</onright>
@@ -709,10 +707,10 @@
 						<textwidth>450</textwidth>
 					</control>
 					
-					<control type="button" id="121">
+					<control type="button" id="110">
 						<include>SettingsButton</include>
 						<label2>$INFO[Skin.String(BackgroundPercentage),,%]</label2>
-						<label> - Opacity percentage</label>
+						<label> - $LOCALIZE[31256] $LOCALIZE[31255]</label>
 						<onclick condition="Stringcompare(Skin.String(BackgroundPercentage),100) | IsEmpty(Skin.String(BackgroundPercentage))">Skin.SetString(BackgroundPercentage,95)</onclick>
 						<onclick condition="Stringcompare(Skin.String(BackgroundPercentage),95)">Skin.SetString(BackgroundPercentage,90)</onclick>
 						<onclick condition="Stringcompare(Skin.String(BackgroundPercentage),90)">Skin.SetString(BackgroundPercentage,85)</onclick>
@@ -721,10 +719,10 @@
 						<onclick condition="Stringcompare(Skin.String(BackgroundPercentage),75)">Skin.SetString(BackgroundPercentage,100)</onclick>
 					</control>
 					
-					<control type="button" id="122">
+					<control type="button" id="111">
 						<include>SettingsButton</include>
 						<label2>$INFO[Skin.String(DarknessPercentage),,%]</label2>
-						<label> - Darkness percentage</label>
+						<label> - $LOCALIZE[31257]</label>
 						<onclick condition="Stringcompare(Skin.String(BackgroundDarkness),FFFFFFFF) | IsEmpty(Skin.String(BackgroundDarkness))">Skin.SetString(BackgroundDarkness,FFEBEBEB)</onclick>
 						<onclick condition="Stringcompare(Skin.String(BackgroundDarkness),FFEBEBEB)">Skin.SetString(BackgroundDarkness,FFD7D7D7)</onclick>
 						<onclick condition="Stringcompare(Skin.String(BackgroundDarkness),FFD7D7D7)">Skin.SetString(BackgroundDarkness,FFC2C2C2)</onclick>
@@ -742,14 +740,14 @@
 					
 					
 		
-					<control type="radiobutton" id="110">
+					<control type="radiobutton" id="112">
 						<include>SettingsButton</include>
 						<description>Music Visualisation in library</description>
 						<label>$LOCALIZE[31196]</label>
 						<onclick>Skin.ToggleSetting(VisLibrary)</onclick>
 						<selected>!Skin.HasSetting(VisLibrary)</selected>
 					</control>
-					<control type="radiobutton" id="120">
+					<control type="radiobutton" id="113">
 						<include>SettingsButton</include>
 						<description>Background video in library</description>
 						<label>$LOCALIZE[31231]</label>
@@ -757,7 +755,7 @@
 						<selected>!Skin.HasSetting(VidWinLibrary)</selected>
 					</control>
 
-					<control type="radiobutton" id="117">
+					<control type="radiobutton" id="114">
 						<include>SettingsButton</include>
 						<description>Background Slideshow</description>
 						<label>$LOCALIZE[31223] $LOCALIZE[31105]</label>31105
@@ -765,7 +763,7 @@
 						<onclick>Skin.ToggleSetting(BackgroundSlideshow)</onclick>
 						<selected>!Skin.HasSetting(BackgroundSlideshow)</selected>
 					</control>
-					<control type="radiobutton" id="118">
+					<control type="radiobutton" id="115">
 						<include>SettingsButton</include>
 						<description>Library Fanart</description>
 						<label>31224</label>
@@ -773,7 +771,14 @@
 						<onclick>Skin.ToggleSetting(LibraryFanart)</onclick>
 						<selected>!Skin.HasSetting(LibraryFanart)</selected>
 					</control>
-					<control type="button" id="119">
+					<control type="radiobutton" id="116">
+						<include>SettingsButton</include>
+						<description>Snow on Home screen</description>
+						<label>$LOCALIZE[31169]</label>
+						<onclick>Skin.ToggleSetting(HolidayEffects)</onclick>
+						<selected>Skin.HasSetting(HolidayEffects)</selected>
+					</control>
+					<control type="button" id="117">
 						<include>SettingsButton</include>
 						<label2>$INFO[Skin.String(MenuBGImage)]</label2>
 						<label>$LOCALIZE[31251]</label>
@@ -782,10 +787,11 @@
 						<onclick>Skin.SetLargeImage(MenuBGImage)</onclick>
 						<textwidth>450</textwidth>
 					</control>
+					
 				</control>
 				<control type="group" id="9007"><!-- move 44 down -->
 					<left>355</left>
-					<top>520</top>
+					<top>564</top>
 					<onup>9004</onup>
 					<ondown>9004</ondown>
 					<visible>Container(9000).Hasfocus(4)</visible>
@@ -975,13 +981,13 @@
 						<onclick>Skin.ToggleSetting(AlphabeticalKeyboard)</onclick>
 						<selected>Skin.HasSetting(AlphabeticalKeyboard)</selected>
 					</control>
-					
+										
 					<control type="radiobutton" id="111">
 						<include>SettingsButton</include>
-						<description>Snow on Home screen</description>
-						<label>$LOCALIZE[31169]</label>
-						<onclick>Skin.ToggleSetting(HolidayEffects)</onclick>
-						<selected>Skin.HasSetting(HolidayEffects)</selected>
+						<description>Show CPU and FPS</description>
+						<label>$LOCALIZE[31254]</label>
+						<onclick>Skin.ToggleSetting(TopSysInfo)</onclick>
+						<selected>Skin.HasSetting(TopSysInfo)</selected>
 					</control>
 										
 					
@@ -1186,7 +1192,7 @@
 		</control>
 		
 		
-
+<include>Background</include>
 <include>BottomInfoBar</include>
 <include>Holiday</include>
  	

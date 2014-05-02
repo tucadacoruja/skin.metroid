@@ -1597,7 +1597,7 @@
 		<item id="5">
 			<description>Picture addons</description>
 			<label>$LOCALIZE[1]</label>
-			<onclick>XBMC.ActivateWindow(Pictures,Addons,return)</onclick>
+			<onclick>ActivateWindow(Pictures,Addons,return)</onclick>
 			<visible>!IsEmpty(skin.string(SubMenu6))</visible>
 			<property name="SubMenuItem">not_empty</property>
 			<property name="DropdownMenu6">not_empty</property>

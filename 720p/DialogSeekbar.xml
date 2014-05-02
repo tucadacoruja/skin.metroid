@@ -68,19 +68,20 @@
 				<info>Player.ProgressCache</info>
 				<animation effect="fade" start="0" end="14" time="0" condition="true">Conditional</animation>
 			</control>
+		
 			<control type="progress" id="20">
 				<left>323</left>
 				<top>48</top>
 				<width>633</width>
-				<height>4</height>
+				<height>6</height>
 				<texturebg>osd/seek/progresscache_back.png</texturebg>
 				<lefttexture>-</lefttexture>
-				<midtexture>osd/osdbg.png</midtexture>
+				<midtexture colordifuse="F3FFFFFF" >white.png</midtexture>
 				<righttexture>-</righttexture>
 				<info>Player.Progress</info>
-				<colordiffuse>skin.string(MainColorString)</colordiffuse>
-				<!-- animation effect="fade" start="0" end="60" time="0" condition="true">Conditional</animation -->
-
+				<!-- colordiffuse>skin.string(MainColorString)</colordiffuse -->
+				<animation effect="fade" start="0" end="70" time="0" condition="true">Conditional</animation>
+				
 			</control>
 			
 			<control type="slider" id="87">
@@ -99,17 +100,18 @@
 			</control>
 			<control type="slider" id="401">
 				<description>Seek Slider</description>
-				<left>318</left>
-				<top>42</top>
+				<left>319</left>
+				<top>39</top>
 				<width>643</width>
-				<height>4</height>
+				<height>4.3</height>
 				<onup>9000</onup>
 				
 				<action>seek</action>
 				<texturesliderbar>osd/seek/EmptyBar.png</texturesliderbar>
-				<textureslidernib>osd/seek/OsdSearchNib.png</textureslidernib>
-				<textureslidernibfocus>osd/seek/OsdSearchNib.png</textureslidernibfocus>
-				<!-- animation effect="fade" start="0" end="50" time="0" reversible="false" condition="true">Conditional</animation -->
+				<textureslidernib>osd/seek/OsdSearchNib2.png</textureslidernib>
+				<textureslidernibfocus>osd/seek/OsdSearchNib2.png</textureslidernibfocus>
+				<colordiffuse>$INFO[Skin.String(OSDNibColor)]</colordiffuse>
+				<animation effect="fade" end="100" start="50" time="500">focus</animation>
 			</control>
 			
 			<control type="label">
@@ -118,7 +120,7 @@
 				<width>300</width>
 				<height>42</height>
 				<font>OSDTiming</font>
-				<textcolor>blue</textcolor>
+				<textcolor>$INFO[Skin.String(OSDTextColor)]</textcolor>
 				<label>[B]$INFO[Player.Time][/B]</label>
 				<align>left</align>
 				
@@ -129,7 +131,7 @@
 				<width>300</width>
 				<height>42</height>
 				<font>OSDTiming</font>
-				<textcolor>blue</textcolor>
+				<textcolor>$INFO[Skin.String(OSDTextColor)]</textcolor>
 				<label>[B]$INFO[Player.Duration][/B]</label>
 				<align>right</align>
 				
@@ -142,7 +144,7 @@
 				<height>42</height>
 				<width min="5" max="250">auto</width>
 				<label>[B]$LOCALIZE[31072] $INFO[Player.SeekOffset][/B]</label>
-				<textcolor>blue</textcolor>
+				<textcolor>$INFO[Skin.String(OSDTextColor)]</textcolor>
 				<font>OSDTiming</font>
 				<align>left</align>
 				<visible>Player.Seeking | Player.DisplayAfterSeek</visible>
@@ -162,7 +164,7 @@
 						<height>42</height>
 						<width>300</width>
 						<label>[B][UPPERCASE]REW 2x[/UPPERCASE][/B]</label>
-						<textcolor>blue</textcolor>
+						<textcolor>$INFO[Skin.String(OSDTextColor)]</textcolor>
 						<font>OSDTiming</font>
 						<align>center</align>
 						<visible>Player.Rewinding2x</visible>
@@ -174,7 +176,7 @@
 						<height>42</height>
 						<width>300</width>
 						<label>[B][UPPERCASE]REW 4x[/UPPERCASE][/B]</label>
-						<textcolor>blue</textcolor>
+						<textcolor>$INFO[Skin.String(OSDTextColor)]</textcolor>
 						<font>OSDTiming</font>
 						<align>center</align>
 						<visible>Player.Rewinding4x</visible>
@@ -186,7 +188,7 @@
 						<height>42</height>
 						<width>300</width>
 						<label>[B][UPPERCASE]REW 8x[/UPPERCASE][/B]</label>
-						<textcolor>blue</textcolor>
+						<textcolor>$INFO[Skin.String(OSDTextColor)]</textcolor>
 						<font>OSDTiming</font>
 						<align>center</align>
 						<visible>Player.Rewinding8x</visible>
@@ -198,7 +200,7 @@
 						<height>42</height>
 						<width>300</width>
 						<label>[B][UPPERCASE]REW 16x[/UPPERCASE][/B]</label>
-						<textcolor>blue</textcolor>
+						<textcolor>$INFO[Skin.String(OSDTextColor)]</textcolor>
 						<font>OSDTiming</font>
 						<align>center</align>
 						<visible>Player.Rewinding16x</visible>
@@ -210,7 +212,7 @@
 						<height>42</height>
 						<width>300</width>
 						<label>[B][UPPERCASE]REW 32x[/UPPERCASE][/B]</label>
-						<textcolor>blue</textcolor>
+						<textcolor>$INFO[Skin.String(OSDTextColor)]</textcolor>
 						<font>OSDTiming</font>
 						<align>center</align>
 						<visible>Player.Rewinding32x</visible>
@@ -227,7 +229,7 @@
 						<height>42</height>
 						<width>300</width>
 						<label>[B][UPPERCASE]FF 2x[/UPPERCASE][/B]</label>
-						<textcolor>blue</textcolor>
+						<textcolor>$INFO[Skin.String(OSDTextColor)]</textcolor>
 						<font>OSDTiming</font>
 						<align>center</align>
 						<visible>Player.Forwarding2x</visible>
@@ -239,7 +241,7 @@
 						<height>42</height>
 						<width>300</width>
 						<label>[B][UPPERCASE]FF 4x[/UPPERCASE][/B]</label>
-						<textcolor>blue</textcolor>
+						<textcolor>$INFO[Skin.String(OSDTextColor)]</textcolor>
 						<font>OSDTiming</font>
 						<align>center</align>
 						<visible>Player.Forwarding4x</visible>
@@ -251,7 +253,7 @@
 						<height>42</height>
 						<width>300</width>
 						<label>[B][UPPERCASE]FF 8x[/UPPERCASE][/B]</label>
-						<textcolor>blue</textcolor>
+						<textcolor>$INFO[Skin.String(OSDTextColor)]</textcolor>
 						<font>OSDTiming</font>
 						<align>center</align>
 						<visible>Player.Forwarding8x</visible>
@@ -263,7 +265,7 @@
 						<height>42</height>
 						<width>300</width>
 						<label>[B][UPPERCASE]FF 16x[/UPPERCASE][/B]</label>
-						<textcolor>blue</textcolor>
+						<textcolor>$INFO[Skin.String(OSDTextColor)]</textcolor>
 						<font>OSDTiming</font>
 						<align>center</align>
 						<visible>Player.Forwarding16x</visible>
@@ -275,7 +277,7 @@
 						<height>42</height>
 						<width>300</width>
 						<label>[B][UPPERCASE]FF 32x[/UPPERCASE][/B]</label>
-						<textcolor>blue</textcolor>
+						<textcolor>$INFO[Skin.String(OSDTextColor)]</textcolor>
 						<font>OSDTiming</font>
 						<align>center</align>
 						<visible>Player.Forwarding32x</visible>

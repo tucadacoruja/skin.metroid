@@ -8,7 +8,9 @@
   <left>330</left>
   <top>100</top>
 </coordinates>
-  
+
+<onload condition="Container.Content(albums)">SendClick(2001,5)</onload>
+
 <controls>
 
 <control type="button" id="11">
@@ -237,7 +239,7 @@
 					<aspectratio>scale</aspectratio>
 					<texture>osd/osdbg.png</texture>
 					<aspectratio>stretch</aspectratio>
-					<animation effect="fade" start="100" end="60" time="100" condition="Control.HasFocus(97)">Conditional</animation>
+					<animation effect="fade" start="100" end="60" time="100" condition="Control.HasFocus(444)">Conditional</animation>
 				</control>
 				<control type="button" id="444">
 					
@@ -317,7 +319,7 @@
 					
 						<width>340</width>
 						<height>40</height>
-						<label>$VAR[Info_Album_Title]</label>
+						<label>$INFO[ListItem.Album]</label>
 						<font>font16</font>
 						<textcolor>FF959595</textcolor>
 						<aligny>top</aligny>
@@ -437,7 +439,7 @@
 							<width>70</width>
 							<height>30</height>
 							<label>$INFO[ListItem.Duration]</label>
-							<font>PlotOnly</font>
+							<font>Plot</font>
 							<textcolor>95FFFFFF</textcolor>
 							<aligny>top</aligny>
 						</control>	

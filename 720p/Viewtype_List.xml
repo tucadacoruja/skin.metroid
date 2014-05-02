@@ -19,8 +19,7 @@
 		<top>-30</top>
 		
 			<control type="group">
-			<include>WidgetsAnimation</include>
-				<!-- visible>!Stringcompare(ListItem.Label,..)</visible -->
+
 				<visible>[Container.Content(Movies) | Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Sets)] + ![substring(Container.FolderPath,plugin,left) + Container.Content(Episodes)]</visible>
 
 				<control type="image">
@@ -91,7 +90,6 @@
 			</control>
 			
 			<control type="group">
-			<include>WidgetsAnimation</include>
 			
 			<visible>IsEmpty(ListItem.Property(Addon.Name))</visible>
 			<visible>![Container.Content(Movies) | Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes) | Container.Content(Sets)] | [substring(Container.FolderPath,plugin,left) + Container.Content(Episodes)]</visible>
@@ -168,10 +166,10 @@
 		<control type="group">
 		<left>340</left>
 		<top>-30</top>
-		<!--animation effect="slide" start="0,0" end="-80,0" time="400" condition="!Control.HasFocus(301) + !Skin.HasSetting(LockMainMenu)">Conditional</animation-->
+		
 		<visible>Container.Content(Episodes) + ![SubString(Container.FolderPath,plugin,left) | SubString(Container.FolderPath,addons,left)]</visible>
-		<!-- visible>!IsEmpty(ListItem.Title)</visible -->
-		<include>WidgetsAnimation</include>
+
+
 			<control type="image">
 				<left>604</left>
 				<top>160</top>
@@ -241,8 +239,7 @@
 		<control type="group">
 		<left>340</left>
 		<top>-30</top>
-		<!-- animation effect="slide" start="0,0" end="-80,0" time="400" condition="!Control.HasFocus(301) + !Skin.HasSetting(LockMainMenu)">Conditional</animation -->
-		<include>WidgetsAnimation</include>
+		
 	    <visible>![Container.Content(Movies) | Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes) | Container.Content(Sets) | Window.IsVisible(VideoPlaylist)] | [substring(Container.FolderPath,plugin,left) + Container.Content(Episodes)]</visible>
 			<control type="group">
 
