@@ -35,7 +35,7 @@
 			<width>610</width>
 			<height>310</height>
 			<texture>white.png</texture>
-			<colordiffuse>FF333333</colordiffuse>
+			<colordiffuse>$VAR[DialogBGColor]</colordiffuse>
 			<aspectratio>stretch</aspectratio>
 			
 		</control>

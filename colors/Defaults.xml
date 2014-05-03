@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <colors>
 	<color name="Black">FF000000</color>
-	<color name="White">FFFCFCFC</color>
+	<color name="white">FFFCFCFC</color>
+	<color name="white2">FFF3F3F3</color>
 	<color name="grey2">FFACACAC</color>
 	<color name="Red">FFFF0000</color>
 	<color name="Orange">FFB88A00</color>
@@ -26,15 +27,17 @@
 	<color name="itemdetail3">BFAFAFAF</color>
 	<color name="infoplot">D0D0D0D0</color>
 	<color name="list">FFC2C2C2</color>
+	<color name="whitelist">FFEDEDED</color>
 	<color name="darklist">D7858585</color>
 	<color name="lightblue">FF7EA7D8</color>
 	<color name="blue">ff438CCA</color>
 	<color name="hellblue">ff00d8ff</color>
 	<color name="brightblue">ff357ed6</color>
+	<color name="happyblue">FF62c8f7</color>
 	<color name="babyblue">FF95b2d0</color>
 	<color name="darkblue">AC6082a7</color>
 	
-	<color name="osdblue">FF7EA7D8</color>
+	<color name="osdblue">FF70B8E8</color>
 	<color name="keyboard">FFDEF5FA</color>
 	<color name="settings">FFFCFCFC</color>
 	

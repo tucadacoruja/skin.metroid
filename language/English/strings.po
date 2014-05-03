@@ -965,5 +965,9 @@ msgctxt "#31257"
 msgid "Darkness percentage"
 msgstr "
 
+msgctxt "#31258"
+msgid "Use Posters"
+msgstr "
+
 
 

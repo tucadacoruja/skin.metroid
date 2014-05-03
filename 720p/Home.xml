@@ -13,10 +13,7 @@
 <onload condition="Window.Previous(startup)">AlarmClock(WidgetDelay,Skin.Reset(WidgetVisibility),00:03,silent)</onload>
 
 <onload condition="IsEmpty(Skin.String(FirstRunTouch))">ActivateWindow(9506)</onload>
-<onload condition="!Window.Previous(startup)">Container(8000).Refresh</onload>
-<onload condition="!Window.Previous(startup)">Container(8001).Refresh</onload>
-<onload condition="!Window.Previous(startup)">Container(8002).Refresh</onload>
-<onload condition="!Window.Previous(startup)">Container(8003).Refresh</onload>
+<onload condition="!Window.Previous(startup)">SetProperty(RefreshList,1,Home)</onload>
 
 
 <allowoverlay>yes</allowoverlay>
@@ -70,8 +67,11 @@
 <include condition="Library.HasContent(movies) + Skin.HasSetting(RandomMovieToggle)">RandomMoviePanel</include>
 <include condition="Library.HasContent(music) + Skin.HasSetting(RandomSongsToggle)">RandomSongsPanel</include>
 
-<include condition="!IsEmpty(Skin.String(PluginWidgetPath1)) + Skin.HasSetting(CustomWidget1Toggle)">PluginWidget1</include>
-<include condition="!IsEmpty(Skin.String(PluginWidgetPath2)) + Skin.HasSetting(CustomWidget2Toggle)">PluginWidget2</include>
+<include condition="!IsEmpty(Skin.String(PluginWidgetPath1)) + Skin.HasSetting(CustomWidget1Toggle) + !Skin.HasSetting(CWidgetUsePoster1)">PluginWidget1</include>
+<include condition="!IsEmpty(Skin.String(PluginWidgetPath1)) + Skin.HasSetting(CustomWidget1Toggle) + Skin.HasSetting(CWidgetUsePoster1)">PosterWidget1</include>
+
+<include condition="!IsEmpty(Skin.String(PluginWidgetPath2)) + Skin.HasSetting(CustomWidget2Toggle) + !Skin.HasSetting(CWidgetUsePoster2)">PluginWidget2</include>
+<include condition="!IsEmpty(Skin.String(PluginWidgetPath2)) + Skin.HasSetting(CustomWidget2Toggle) + Skin.HasSetting(CWidgetUsePoster2)">PosterWidget2</include>
 
 <visible>!Skin.HasSetting(HomeWidgetToggle) + [Control.IsVisible(8000) | Control.IsVisible(8001) | Control.IsVisible(8002) | Control.IsVisible(8003) | Control.IsVisible(8004) | Control.IsVisible(8005)] + !Skin.HasSetting(WidgetVisibility)</visible>
 <animation effect="fade" start="100" end="0" time="150" condition="Window.IsVisible(numericinput) | Window.IsVisible(virtualkeyboard)">Conditional</animation>	  

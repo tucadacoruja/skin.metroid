@@ -74,7 +74,15 @@
 				<top>0</top>
 				<width>170</width>
 				<height>120</height>
-				<texture fallback="DefaultCatch.png" >$INFO[ListItem.Art(thumb)]</texture>
+				<texture>DefaultCatch.png</texture>
+				<aspectratio>stretch</aspectratio>
+			</control>
+			<control type="image">
+				<left>0</left>
+				<top>0</top>
+				<width>170</width>
+				<height>120</height>
+				<texture>$INFO[ListItem.Art(thumb)]</texture>
 				<aspectratio scalediffuse="false">scale</aspectratio>
 			</control>
 			<control type="image">
@@ -104,7 +112,15 @@
 				<top>0</top>
 				<width>170</width>
 				<height>120</height>
-				<texture fallback="DefaultCatch.png" >$INFO[ListItem.Art(thumb)]</texture>
+				<texture>DefaultCatch.png</texture>
+				<aspectratio>stretch</aspectratio>
+			</control>
+			<control type="image">
+				<left>0</left>
+				<top>0</top>
+				<width>170</width>
+				<height>120</height>
+				<texture>$INFO[ListItem.Art(thumb)]</texture>
 				<aspectratio scalediffuse="false">scale</aspectratio>
 			</control>
 			<control type="image">
@@ -153,7 +169,16 @@
 				<top>0</top>
 				<width>175</width>
 				<height>250</height>
-				<texture fallback="DefaultCatch.png" >$INFO[ListItem.Art(thumb)]</texture>
+				<texture>DefaultCatch.png</texture>
+				<aspectratio scalediffuse="false">stretch</aspectratio>
+				<colordiffuse>D7ffffff</colordiffuse>
+			</control>
+			<control type="image">
+				<left>0</left>
+				<top>0</top>
+				<width>175</width>
+				<height>250</height>
+				<texture>$INFO[ListItem.Art(thumb)]</texture>
 				<aspectratio scalediffuse="false">stretch</aspectratio>
 				<colordiffuse>D7ffffff</colordiffuse>
 			</control>
@@ -163,6 +188,25 @@
 		<focusedlayout width="415" height="270" />
 
 	</include>
+	
+	<variable name="Widget8000Path">
+		<value condition="!Window.IsVisible(3050)">special://skin/extras/library/movies/recentmovies.xsp</value>
+	</variable>
+	<variable name="Widget8001Path">
+		<value condition="!Window.IsVisible(3050)">special://skin/extras/library/tvshows/recentepisodes.xsp</value>
+	</variable>
+	<variable name="Widget8002Path">
+		<value condition="!Window.IsVisible(3050)">special://skin/extras/library/movies/randommovies.xsp</value>
+	</variable>
+	<variable name="Widget8003Path">
+		<value condition="!Window.IsVisible(3050)">special://skin/extras/library/music/randomsong.xsp</value>
+	</variable>
+	<variable name="Widget8004Path">
+		<value condition="!Window.IsVisible(3050)">$INFO[Skin.String(PluginWidgetPath1)]</value>
+	</variable>
+	<variable name="Widget8005Path">
+		<value condition="!Window.IsVisible(3050)">$INFO[Skin.String(PluginWidgetPath2)]</value>
+	</variable>
 	
 	<!-- ---------------------------------------------------------------------------------------------------------------------- -->
 	
@@ -190,7 +234,7 @@
 				<!-- include>HomeTrendingTvshows</include -->
 				<!-- content target="video">plugin://service.library.data.provider?type=recentmovies</content -->				
 				<!-- content target="video">library://video/recentlyaddedmovies.xml</content -->				
-				<content target="video">special://skin/extras/library/movies/recentmovies.xsp</content>				
+				<content target="video">$VAR[Widget8000Path]</content>				
 			</control>
 
 			<control type="group">
@@ -306,6 +350,7 @@
 			</control>
 					
 			<control type="panel" id="8001">
+				<onup condition="!Control.IsVisible(8000)">63</onup>
 				<onup condition="Control.IsVisible(8000)">8000</onup>
 				
 				<ondown condition="Control.IsVisible(8002)">8002</ondown>
@@ -317,7 +362,7 @@
 				
 				<!-- include>HomeContentRecentTVShows</include -->
 				<!-- content target="video">plugin://service.library.data.provider?type=recentepisodes</content -->					
-				<content target="video">special://skin/extras/library/tvshows/recentepisodes.xsp</content>					
+				<content target="video">$VAR[Widget8001Path]</content>					
 			</control>	
 		</control>	
 	</include>
@@ -335,6 +380,7 @@
 			</control>
 
 			<control type="wraplist" id="8002">
+				<onup condition="![Control.IsVisible(8001) | Control.IsVisible(8000)]">63</onup>
 				<onup condition="!Control.IsVisible(8001) + Control.IsVisible(8000)">8000</onup>
 				<onup condition="Control.IsVisible(8001)">8001</onup>
 				
@@ -346,7 +392,7 @@
 				
 				<!-- include>HomeContentRandomMovies</include -->
 				<!-- content target="video">plugin://service.library.data.provider?type=randommovies</content -->	
-				<content target="video">special://skin/extras/library/movies/randommovies.xsp</content>
+				<content target="video">$VAR[Widget8002Path]</content>
 			</control>	
 			
 			<control type="group">
@@ -468,6 +514,7 @@
 			</control>
 					
 			<control type="panel" id="8003">
+				<onup condition="![Control.IsVisible(8002) | Control.IsVisible(8001) | Control.IsVisible(8000)]">63</onup>
 				<onup condition="![Control.IsVisible(8002) | Control.IsVisible(8001)] + Control.IsVisible(8000)">8000</onup>
 				<onup condition="!Control.IsVisible(8002) + Control.IsVisible(8001)">8001</onup>
 				<onup condition="Control.IsVisible(8002)">8002</onup>
@@ -479,7 +526,7 @@
 				
 				<!-- include>HomeContentRandomAlbum</include -->
 				<!-- content target="video">plugin://service.library.data.provider?type=randomsongs</content -->	
-				<content target="video">special://skin/extras/library/music/randomsong.xsp</content>
+				<content target="music">$VAR[Widget8003Path]</content>
 			</control>	
 		</control>	
 	</include>
@@ -509,7 +556,7 @@
 					<top>20</top>
 					<width>380</width>
 					<height>255</height>
-					<texture>$VAR[PluginWidget1Art]</texture>
+					<texture>$INFO[Container(8004).ListItem.Art(thumb)]</texture>
 					<aspectratio aligny="center" scalediffuse="false">scale</aspectratio>
 						
 				</control>
@@ -529,6 +576,7 @@
 			</control>
 					
 			<control type="panel" id="8004">
+				<onup condition="![Control.IsVisible(8003) | Control.IsVisible(8002) | Control.IsVisible(8001) | Control.IsVisible(8000)]">63</onup>
 				<onup condition="![Control.IsVisible(8003) | Control.IsVisible(8002) | Control.IsVisible(8001)] + Control.IsVisible(8000)">8000</onup>
 				<onup condition="![Control.IsVisible(8003) | Control.IsVisible(8002)] + Control.IsVisible(8001)">8001</onup>
 				<onup condition="!Control.IsVisible(8003) + Control.IsVisible(8002)">8002</onup>
@@ -542,11 +590,93 @@
 				<!-- content target="video">plugin://plugin.video.collegehumor/category/badman/1/</content -->
 				<!-- content>special://profile/playlists/video/test-playlist.xsp</content -->
 				<!-- content>special://profile/playlists/music/relax.xps</content -->
-				<content target="$INFO[Skin.String(PluginWidgetTarget1)]">$INFO[Skin.String(PluginWidgetPath1)]</content>
+				<content target="$INFO[Skin.String(PluginWidgetTarget1)]">$VAR[Widget8004Path]</content>
 			</control>	
 		</control>	
 	</include>
 	
+	
+	<include name="PosterWidget1"> 
+		<control type="grouplist">
+			<height>300</height>
+			<orientation>horizontal</orientation>
+			<usecontrolcoords>true</usecontrolcoords>
+			
+			<control type="label">
+				<include>RotatedLabel</include>
+				<label>$INFO[Skin.String(PluginWidgetName1)]</label>
+			</control>
+			
+			<control type="wraplist" id="8004">
+				<onup condition="![Control.IsVisible(8003) | Control.IsVisible(8002) | Control.IsVisible(8001) | Control.IsVisible(8000)]">63</onup>
+				<onup condition="![Control.IsVisible(8003) | Control.IsVisible(8002) | Control.IsVisible(8001)] + Control.IsVisible(8000)">8000</onup>
+				<onup condition="![Control.IsVisible(8003) | Control.IsVisible(8002)] + Control.IsVisible(8001)">8001</onup>
+				<onup condition="!Control.IsVisible(8003) + Control.IsVisible(8002)">8002</onup>
+				<onup condition="Control.IsVisible(8003)">8003</onup>
+				
+				<ondown condition="Control.IsVisible(8005)">8005</ondown>
+
+				<include>MoviePanelLayout</include>
+			
+				<content target="$INFO[Skin.String(PluginWidgetTarget1)]">$INFO[Skin.String(PluginWidgetPath1)]</content>				
+			</control>
+
+			<control type="group">
+				<left>-890</left>
+				<control type="image">
+					<left>-25</left>
+					<top>20</top>
+					<width>430</width>
+					<height>265</height>
+					<texture>diffuse/postershadow.png</texture>
+					<aspectratio>stretch</aspectratio>
+					<colordiffuse>46ffffff</colordiffuse>
+				</control>
+				<control type="image">
+					<left>-25</left>
+					<top>20</top>
+					<width>400</width>
+					<height>250</height>
+					<texture fallback="DefaultCatch.png" >$VAR[PluginWidget1Art]</texture>
+					<aspectratio scalediffuse="false">scale</aspectratio>
+				</control>
+
+				<control type="image">
+					<left>-25</left>
+					<top>20</top>
+					<width>10</width>
+					<height>100</height>
+					<texture>BlueBackground.png</texture>
+					<aspectratio>stretch</aspectratio>
+					
+					<visible>Control.HasFocus(8004)</visible>
+				</control>
+				<control type="image">
+					<left>-25</left>
+					<top>230</top>
+					<width>400</width>
+					<height>40</height>
+					<texture>black.png</texture>
+					<aspectratio>stretch</aspectratio>
+					<colordiffuse>95ffffff</colordiffuse>
+				</control>
+				<control type="label">
+					<left>0</left>
+					<top>225</top>
+					<width>360</width>
+					<height>50</height>
+					<font>font13</font>
+					<textcolor>FFFFFFFF</textcolor>
+					<aligny>center</aligny>
+					<align>right</align>
+					<scroll>false</scroll>
+					<label>$INFO[Container(8004).ListItem.Label] $INFO[Container(8004).ListItem.Property(episodenumber)]</label>
+					
+				</control>
+			</control>
+			
+		</control>
+	</include>	
 	
 	
 	<include name="PluginWidget2"> 
@@ -571,7 +701,7 @@
 					<top>20</top>
 					<width>380</width>
 					<height>255</height>
-					<texture>$VAR[PluginWidget2Art]</texture>
+					<texture>$INFO[Container(8005).ListItem.Art(thumb)]</texture>
 					<aspectratio aligny="center" scalediffuse="false">scale</aspectratio>
 				</control>
 				<include>ShowTextBackground</include>
@@ -591,6 +721,7 @@
 			
 		
 			<control type="panel" id="8005">
+				<onup condition="![Control.IsVisible(8004) | Control.IsVisible(8003) | Control.IsVisible(8002) | Control.IsVisible(8001) | Control.IsVisible(8000)]">63</onup>
 				<onup condition="![Control.IsVisible(8004) | Control.IsVisible(8003) | Control.IsVisible(8002) | Control.IsVisible(8001)] + Control.IsVisible(8000)">8000</onup>
 				<onup condition="![Control.IsVisible(8004) | Control.IsVisible(8003) | Control.IsVisible(8002)] + Control.IsVisible(8001)">8001</onup>
 				<onup condition="![Control.IsVisible(8004) | Control.IsVisible(8003)] + Control.IsVisible(8002)">8002</onup>
@@ -601,10 +732,92 @@
 				<include>ShowPanelLayout</include>
 				
 				<!-- content target="video">plugin://plugin.video.youtube/?contact=trailers&amp;external=true&amp;feed=uploads&amp;login=false&amp;path=%2froot%2fexplore%2ftrailers</content -->
-				<content target="$INFO[Skin.String(PluginWidgetTarget2)]">$INFO[Skin.String(PluginWidgetPath2)]</content>
+				<content target="$INFO[Skin.String(PluginWidgetTarget2)]">$VAR[Widget8005Path]</content>
 			</control>	
 		</control>	
 	</include>
 	
+	
+	
+	<include name="PosterWidget2"> 
+		<control type="grouplist">
+			<height>300</height>
+			<orientation>horizontal</orientation>
+			<usecontrolcoords>true</usecontrolcoords>
+			
+			<control type="label">
+				<include>RotatedLabel</include>
+				<label>$INFO[Skin.String(PluginWidgetName2)]</label>
+			</control>
+			
+			<control type="wraplist" id="8005">
+				<onup condition="![Control.IsVisible(8004) | Control.IsVisible(8003) | Control.IsVisible(8002) | Control.IsVisible(8001) | Control.IsVisible(8000)]">63</onup>
+				<onup condition="![Control.IsVisible(8004) | Control.IsVisible(8003) | Control.IsVisible(8002) | Control.IsVisible(8001)] + Control.IsVisible(8000)">8000</onup>
+				<onup condition="![Control.IsVisible(8004) | Control.IsVisible(8003) | Control.IsVisible(8002)] + Control.IsVisible(8001)">8001</onup>
+				<onup condition="![Control.IsVisible(8004) | Control.IsVisible(8003)] + Control.IsVisible(8002)">8002</onup>
+				<onup condition="!Control.IsVisible(8004) + Control.IsVisible(8003)">8003</onup>
+				<onup condition="Control.IsVisible(8004)">8004</onup>
+
+				<include>MoviePanelLayout</include>
+			
+				<content target="$INFO[Skin.String(PluginWidgetTarget1)]">$INFO[Skin.String(PluginWidgetPath2)]</content>				
+			</control>
+
+			<control type="group">
+				<left>-890</left>
+				<control type="image">
+					<left>-25</left>
+					<top>20</top>
+					<width>430</width>
+					<height>265</height>
+					<texture>diffuse/postershadow.png</texture>
+					<aspectratio>stretch</aspectratio>
+					<colordiffuse>46ffffff</colordiffuse>
+				</control>
+				<control type="image">
+					<left>-25</left>
+					<top>20</top>
+					<width>400</width>
+					<height>250</height>
+					<texture fallback="DefaultCatch.png" >$VAR[PluginWidget2Art]</texture>
+					<aspectratio scalediffuse="false">scale</aspectratio>
+				</control>
+
+				<control type="image">
+					<left>-25</left>
+					<top>20</top>
+					<width>10</width>
+					<height>100</height>
+					<texture>BlueBackground.png</texture>
+					<aspectratio>stretch</aspectratio>
+					
+					<visible>Control.HasFocus(8005)</visible>
+				</control>
+				<control type="image">
+					<left>-25</left>
+					<top>230</top>
+					<width>400</width>
+					<height>40</height>
+					<texture>black.png</texture>
+					<aspectratio>stretch</aspectratio>
+					<colordiffuse>95ffffff</colordiffuse>
+				</control>
+				<control type="label">
+					<left>0</left>
+					<top>225</top>
+					<width>360</width>
+					<height>50</height>
+					<font>font13</font>
+					<textcolor>FFFFFFFF</textcolor>
+					<aligny>center</aligny>
+					<align>right</align>
+					<scroll>false</scroll>
+					<label>$INFO[Container(8005).ListItem.Label] $INFO[Container(8005).ListItem.Property(episodenumber)]</label>
+					
+				</control>
+			</control>
+			
+		</control>
+	</include>	
 	
 </includes>

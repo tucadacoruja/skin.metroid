@@ -12,7 +12,7 @@
     <!-- textcolor>ACFFFFFF</textcolor -->
     <textcolor>settings</textcolor>
     <focusedcolor>FFE1E1E1</focusedcolor>
-    <selectedcolor>ff7acafe</selectedcolor>
+    <selectedcolor>FFc9f1ff</selectedcolor>
     <disabledcolor>FF464646</disabledcolor>
     <scroll>true</scroll>
   </default>

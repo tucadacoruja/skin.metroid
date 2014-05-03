@@ -26,9 +26,17 @@
 		<left>100</left>
 		<top>660</top>
 		<visible>system.getbool(input.enablemouse) + Skin.HasSetting(HideVolumeBar)</visible>
-				
+		<animation type="WindowOpen">
+			<effect type="fade" start="0" end="100" time="300"/>
+			<effect type="slide" start="0,900" end="0,0" time="300" tween="cubic" easing="out" />
+		</animation>
+		<animation type="WindowClose">
+			<effect type="fade" start="100" end="0" time="300"/>
+			<effect type="slide" start="0,0" end="0,900" time="300" tween="cubic" easing="out" />
+		</animation>
+			
 			<control type="image">
-				<left>5</left>
+				<left>25</left>
 				<top>24</top>
 				<width>380</width>
 				<height>5</height>
@@ -38,20 +46,20 @@
 			</control>
 			<control type="progress" id="2">
 				<description>Volume</description>
-				<left>5</left>
-				<top>23</top>
+				<left>25</left>
+				<top>24</top>
 				<width>380</width>
-				<height>2.9</height>
+				<height>4.3</height>
 				<info>Player.Volume</info>
 				<texturebg>osd/seek/progresscache_back.png</texturebg>
 				<lefttexture>-</lefttexture>
-				<midtexture>osd/osdbg.png</midtexture>
+				<midtexture >white.png</midtexture>
 				<righttexture>-</righttexture>
 				<animation effect="fade" start="0" end="60" time="0" condition="true">Conditional</animation>
 			</control>
 			<control type="slider" id="1">
 				<description>Volume Slider</description>
-				<left>0</left>
+				<left>20</left>
 				<top>0</top>
 				<width>380</width>
 				<height>60</height>
@@ -64,7 +72,7 @@
 			</control>
 			<control type="slider" id="1">
 				<description>Volume Slider</description>
-				<left>0</left>
+				<left>20</left>
 				<top>16.5</top>
 				<width>390</width>
 				<height>3.5</height>
@@ -74,6 +82,27 @@
 				<textureslidernib>osd/seek/OsdSearchNib.png</textureslidernib>
 				<textureslidernibfocus>osd/seek/OsdSearchNib.png</textureslidernibfocus>
 				<!-- animation effect="fade" end="100" start="30" time="500">focus</animation -->
+			</control>
+			
+			<control type="label">
+				<left>0</left>
+				<top>21</top>
+				<height>42</height>
+				<width>60</width>
+				<label> +</label>
+				<textcolor>$INFO[Skin.String(OSDTextColor)]</textcolor>
+				<font>Clock2</font>
+				<align>center</align>
+			</control>
+			<control type="label">
+				<left>360</left>
+				<top>21</top>
+				<height>42</height>
+				<width>60</width>
+				<label> -</label>
+				<textcolor>$INFO[Skin.String(OSDTextColor)]</textcolor>
+				<font>Clock2</font>
+				<align>center</align>
 			</control>
 		</control>
 		
@@ -101,7 +130,8 @@
 				<top>5</top>
 				<height>55</height>
 				<width>55</width>
-				<texture>osd/osdbg.png</texture>
+				<texture>white.png</texture>
+				<colordiffuse>$INFO[Skin.String(MusicOSDButtonColor)]</colordiffuse>
 				<aspectratio>stretch</aspectratio>
 				<animation effect="fade" start="100" end="60" time="100" condition="Control.HasFocus(301)">Conditional</animation>
 			</control>
@@ -111,7 +141,7 @@
 				<width>55</width>
 				<aspectratio>keep</aspectratio>
 				<texturefocus flipx="true">osd/ff.png</texturefocus>
-				<texturenofocus flipx="true">osd/ff.png</texturenofocus>
+				<texturenofocus colordiffuse="$INFO[Skin.String(MusicOSDColorString)]" flipx="true">osd/ff.png</texturenofocus>
 				
 				<onclick>xbmc.playercontrol(rewind)</onclick>
 				<animation effect="zoom" start="100" end="120" center="auto" time="100">Focus</animation>
@@ -128,7 +158,8 @@
 				<top>65</top>
 				<height>55</height>
 				<width>55</width>
-				<texture>osd/osdbg.png</texture>
+				<texture>white.png</texture>
+				<colordiffuse>$INFO[Skin.String(MusicOSDButtonColor)]</colordiffuse>
 				<aspectratio>stretch</aspectratio>
 				<animation effect="fade" start="100" end="60" time="100" condition="Control.HasFocus(302)">Conditional</animation>
 			</control>
@@ -138,10 +169,10 @@
 				<height>55</height>
 				<width>55</width>
 				<texturefocus>osd/play.png</texturefocus>
-				<texturenofocus>osd/play.png</texturenofocus>
+				<texturenofocus colordiffuse="$INFO[Skin.String(MusicOSDColorString)]">osd/play.png</texturenofocus>
 				<usealttexture>Player.Playing</usealttexture>
 				<alttexturefocus>osd/pause.png</alttexturefocus>
-				<alttexturenofocus>osd/pause.png</alttexturenofocus>
+				<alttexturenofocus colordiffuse="$INFO[Skin.String(MusicOSDColorString)]">osd/pause.png</alttexturenofocus>
 				<onclick>playercontrol(play)</onclick>
 				<animation effect="zoom" start="100" end="120" center="auto" time="100">Focus</animation>
 				<animation effect="zoom" start="120" end="100" center="auto" time="100">UnFocus</animation>
@@ -156,7 +187,8 @@
 				<top>125</top>
 				<height>55</height>
 				<width>55</width>
-				<texture>osd/osdbg.png</texture>
+				<texture>white.png</texture>
+				<colordiffuse>$INFO[Skin.String(MusicOSDButtonColor)]</colordiffuse>
 				<aspectratio>stretch</aspectratio>
 				<animation effect="fade" start="100" end="60" time="100" condition="Control.HasFocus(303)">Conditional</animation>
 			</control>
@@ -167,7 +199,7 @@
 				<width>55</width>
 				<aspectratio>keep</aspectratio>
 				<texturefocus>osd/ff.png</texturefocus>
-				<texturenofocus>osd/ff.png</texturenofocus>
+				<texturenofocus colordiffuse="$INFO[Skin.String(MusicOSDColorString)]">osd/ff.png</texturenofocus>
 				
 				<onclick>xbmc.playercontrol(forward)</onclick>
 				
@@ -184,7 +216,8 @@
 				<top>185</top>
 				<height>55</height>
 				<width>55</width>
-				<texture>osd/osdbg.png</texture>
+				<texture>white.png</texture>
+				<colordiffuse>$INFO[Skin.String(MusicOSDButtonColor)]</colordiffuse>
 				<aspectratio>stretch</aspectratio>
 				<animation effect="fade" start="100" end="60" time="100" condition="Control.HasFocus(304)">Conditional</animation>
 			</control>
@@ -195,7 +228,7 @@
 				<width>55</width>
 				<aspectratio>keep</aspectratio>
 				<texturefocus flipx="true">osd/skip.png</texturefocus>
-				<texturenofocus flipx="true">osd/skip.png</texturenofocus>
+				<texturenofocus colordiffuse="$INFO[Skin.String(MusicOSDColorString)]" flipx="true">osd/skip.png</texturenofocus>
 				
 				<onclick>xbmc.playercontrol(previous)</onclick>
 				<animation effect="zoom" start="100" end="120" center="auto" time="100">Focus</animation>
@@ -211,7 +244,8 @@
 				<top>245</top>
 				<height>55</height>
 				<width>55</width>
-				<texture>osd/osdbg.png</texture>
+				<texture>white.png</texture>
+				<colordiffuse>$INFO[Skin.String(MusicOSDButtonColor)]</colordiffuse>
 				<aspectratio>stretch</aspectratio>
 				<animation effect="fade" start="100" end="60" time="100" condition="Control.HasFocus(305)">Conditional</animation>
 			</control>
@@ -222,7 +256,7 @@
 				<width>55</width>
 				<aspectratio>keep</aspectratio>
 				<texturefocus>osd/stop.png</texturefocus>
-				<texturenofocus>osd/stop.png</texturenofocus>
+				<texturenofocus colordiffuse="$INFO[Skin.String(MusicOSDColorString)]">osd/stop.png</texturenofocus>
 				
 				<onclick>xbmc.playercontrol(stop)</onclick>
 				<animation effect="zoom" start="100" end="120" center="auto" time="100">Focus</animation>
@@ -238,7 +272,8 @@
 				<top>305</top>
 				<height>55</height>
 				<width>55</width>
-				<texture>osd/osdbg.png</texture>
+				<texture>white.png</texture>
+				<colordiffuse>$INFO[Skin.String(MusicOSDButtonColor)]</colordiffuse>
 				<aspectratio>stretch</aspectratio>
 				<animation effect="fade" start="100" end="60" time="100" condition="Control.HasFocus(306)">Conditional</animation>
 			</control>
@@ -249,7 +284,7 @@
 				<width>55</width>
 				<aspectratio>keep</aspectratio>
 				<texturefocus>osd/skip.png</texturefocus>
-				<texturenofocus>osd/skip.png</texturenofocus>
+				<texturenofocus colordiffuse="$INFO[Skin.String(MusicOSDColorString)]">osd/skip.png</texturenofocus>
 				
 				<onclick>xbmc.playercontrol(next)</onclick>
 				<animation effect="zoom" start="100" end="120" center="auto" time="100">Focus</animation>
@@ -265,7 +300,8 @@
 				<top>365</top>
 				<height>55</height>
 				<width>55</width>
-				<texture>osd/osdbg.png</texture>
+				<texture>white.png</texture>
+				<colordiffuse>$INFO[Skin.String(MusicOSDButtonColor)]</colordiffuse>
 				<aspectratio>stretch</aspectratio>
 				<animation effect="fade" start="100" end="60" time="100" condition="Control.HasFocus(307)">Conditional</animation>
 				<visible>Visualisation.Enabled</visible>
@@ -286,7 +322,7 @@
 				<width>55</width>
 				<aspectratio>keep</aspectratio>
 				<texturefocus flipx="true">osd/settings.png</texturefocus>
-				<texturenofocus flipx="true">osd/settings.png</texturenofocus>
+				<texturenofocus colordiffuse="$INFO[Skin.String(MusicOSDColorString)]" flipx="true">osd/settings.png</texturenofocus>
 				
 				<!-- onclick>ActivateWindow(1112)</onclick -->
 				<onclick>Addon.Default.OpenSettings(xbmc.player.musicviz)</onclick>
@@ -303,7 +339,8 @@
 				<top>425</top>
 				<height>55</height>
 				<width>55</width>
-				<texture>osd/osdbg.png</texture>
+				<texture>white.png</texture>
+				<colordiffuse>$INFO[Skin.String(MusicOSDButtonColor)]</colordiffuse>
 				<aspectratio>stretch</aspectratio>
 				<animation effect="fade" start="100" end="60" time="100" condition="Control.HasFocus(308)">Conditional</animation>
 			</control>
@@ -314,7 +351,7 @@
 				<width>55</width>
 				<aspectratio>keep</aspectratio>
 				<texturefocus>osd/order.png</texturefocus>
-				<texturenofocus>osd/order.png</texturenofocus>
+				<texturenofocus colordiffuse="$INFO[Skin.String(MusicOSDColorString)]">osd/order.png</texturenofocus>
 				
 				<onclick>Playercontrol(random)</onclick>
 				<altclick>Playercontrol(random)</altclick>
@@ -335,7 +372,8 @@
 				<top>485</top>
 				<height>55</height>
 				<width>55</width>
-				<texture>osd/osdbg.png</texture>
+				<texture>white.png</texture>
+				<colordiffuse>$INFO[Skin.String(MusicOSDButtonColor)]</colordiffuse>
 				<aspectratio>stretch</aspectratio>
 				<animation effect="fade" start="100" end="60" time="100" condition="Control.HasFocus(309)">Conditional</animation>
 			</control>
@@ -346,7 +384,7 @@
 				<width>55</width>
 				<aspectratio>keep</aspectratio>
 				<texturefocus>osd/repeatone.png</texturefocus>
-				<texturenofocus>osd/repeatone.png</texturenofocus>
+				<texturenofocus colordiffuse="$INFO[Skin.String(MusicOSDColorString)]">osd/repeatone.png</texturenofocus>
 				
 				<onclick>XBMC.PlayerControl(Repeat)</onclick>
 				<animation effect="zoom" start="100" end="120" center="auto" time="100">Focus</animation>
@@ -364,7 +402,7 @@
 				<width>55</width>
 				<aspectratio>keep</aspectratio>
 				<texturefocus>osd/repeat.png</texturefocus>
-				<texturenofocus>osd/repeat.png</texturenofocus>
+				<texturenofocus colordiffuse="$INFO[Skin.String(MusicOSDColorString)]">osd/repeat.png</texturenofocus>
 				
 				<onclick>XBMC.PlayerControl(Repeat)</onclick>
 				<animation effect="zoom" start="100" end="120" center="auto" time="100">Focus</animation>
@@ -382,7 +420,7 @@
 				<width>55</width>
 				<aspectratio>keep</aspectratio>
 				<texturefocus>osd/norepeat.png</texturefocus>
-				<texturenofocus>osd/norepeat.png</texturenofocus>
+				<texturenofocus colordiffuse="$INFO[Skin.String(MusicOSDColorString)]">osd/norepeat.png</texturenofocus>
 				
 				<onclick>XBMC.PlayerControl(Repeat)</onclick>
 				<animation effect="zoom" start="100" end="120" center="auto" time="100">Focus</animation>
@@ -399,7 +437,8 @@
 				<top>545</top>
 				<height>55</height>
 				<width>55</width>
-				<texture>osd/osdbg.png</texture>
+				<texture>white.png</texture>
+				<colordiffuse>$INFO[Skin.String(MusicOSDButtonColor)]</colordiffuse>
 				<aspectratio>stretch</aspectratio>
 				<animation effect="fade" start="100" end="60" time="100" condition="Control.HasFocus(310)">Conditional</animation>
 			</control>
@@ -410,7 +449,7 @@
 				<width>55</width>
 				<aspectratio>keep</aspectratio>
 				<texturefocus>osd/lyrics.png</texturefocus>
-				<texturenofocus>osd/lyrics.png</texturenofocus>
+				<texturenofocus colordiffuse="$INFO[Skin.String(MusicOSDColorString)]">osd/lyrics.png</texturenofocus>
 				
 				<onclick>Dialog.Close(musicosd,true)</onclick>
 				<onclick>XBMC.RunScript($INFO[Skin.String(LyricScript_Path)])</onclick>
@@ -420,7 +459,7 @@
 				
 				
 				<alttexturefocus>osd/lyrics.png</alttexturefocus>
-				<alttexturenofocus>osd/lyrics.png</alttexturenofocus>
+				<alttexturenofocus colordiffuse="$INFO[Skin.String(MusicOSDColorString)]">osd/lyrics.png</alttexturenofocus>
 				<animation effect="zoom" start="100" end="120" center="auto" time="100">Focus</animation>
 				<animation effect="zoom" start="120" end="100" center="auto" time="100">UnFocus</animation>
 				
@@ -434,7 +473,8 @@
 				<top>605</top>
 				<height>55</height>
 				<width>55</width>
-				<texture>osd/osdbg.png</texture>
+				<texture>white.png</texture>
+				<colordiffuse>$INFO[Skin.String(MusicOSDButtonColor)]</colordiffuse>
 				<aspectratio>stretch</aspectratio>
 				<animation effect="fade" start="100" end="60" time="100" condition="Control.HasFocus(311)">Conditional</animation>
 				<visible>Visualisation.Enabled + [System.HasAddon(visualization.milkdrop) | System.HasAddon(visualization.vortex)]</visible>
@@ -450,12 +490,12 @@
 			</control>
 			<control type="button" id="311">
 				<top>605</top>
-				<description>playlist</description>
+				<description>visual</description>
 				<height>55</height>
 				<width>55</width>
 				<aspectratio>keep</aspectratio>
 				<texturefocus>osd/visual.png</texturefocus>
-				<texturenofocus>osd/visual.png</texturenofocus>
+				<texturenofocus colordiffuse="$INFO[Skin.String(MusicOSDColorString)]">osd/visual.png</texturenofocus>
 				
 				<onclick>ActivateWindow(visualisationpresetlist)</onclick>
 				<animation effect="zoom" start="100" end="120" center="auto" time="100">Focus</animation>
@@ -471,7 +511,8 @@
 				<top>665</top>
 				<height>55</height>
 				<width>55</width>
-				<texture>osd/osdbg.png</texture>
+				<texture>white.png</texture>
+				<colordiffuse>$INFO[Skin.String(MusicOSDButtonColor)]</colordiffuse>
 				<aspectratio>stretch</aspectratio>
 				<animation effect="fade" start="100" end="60" time="100" condition="Control.HasFocus(312)">Conditional</animation>
 			</control>
@@ -482,7 +523,7 @@
 				<width>55</width>
 				<aspectratio>keep</aspectratio>
 				<texturefocus>osd/playlist.png</texturefocus>
-				<texturenofocus>osd/playlist.png</texturenofocus>
+				<texturenofocus colordiffuse="$INFO[Skin.String(MusicOSDColorString)]">osd/playlist.png</texturenofocus>
 				
 				<onclick>ActivateWindow(musicplaylist)</onclick>
 				<animation effect="zoom" start="100" end="120" center="auto" time="100">Focus</animation>

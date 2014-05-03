@@ -24,11 +24,13 @@
 	</variable>
 				
 	<variable name="PluginWidget1Art">
+
 		<value condition="!IsEmpty(Container(8004).ListItem.Art(fanart))">$INFO[Container(8004).ListItem.Art(fanart)]</value>
 		<value>$INFO[Container(8004).ListItem.Art(thumb)]</value>
 	</variable>
 	
 	<variable name="PluginWidget2Art">
+		
 		<value condition="!IsEmpty(Container(8005).ListItem.Art(fanart))">$INFO[Container(8005).ListItem.Art(fanart)]</value>
 		<value>$INFO[Container(8005).ListItem.Art(thumb)]</value>
 	</variable>
@@ -121,6 +123,11 @@
 		<value>$INFO[ListItem.Album]</value>
 	</variable>
 	
+	<variable name="DialogBGColor">
+		<value condition="Skin.HasSetting(GrayDialogColor)">FF333333</value>
+		<value>white2</value>
+	</variable>
+	
 	<variable name="Info_Description">
 		<value condition="[Container.Content(movies) | Container.Content(tvshows) | Container.Content(episodes)] + !IsEmpty(ListItem.Plot)">$INFO[ListItem.Plot]</value>
 		<value condition="Container.Content(albums) + !IsEmpty(ListItem.Property(Album_Description))">$INFO[ListItem.Property(Album_Description)]</value>
@@ -188,7 +195,7 @@
 		<value condition="[Container.Content(movies) | Container.Content(tvshows) | Container.Content(artists)] + !IsEmpty(ListItem.Art(fanart))">$INFO[ListItem.Art(fanart)]</value>
 		<value condition="[Container.Content(movies) | Container.Content(tvshows)] + !IsEmpty(ListItem.Art(poster))">$INFO[ListItem.Art(poster)]</value>
 		<value condition="Container.Content(seasons)">$INFO[ListItem.Art(season.fanart)]</value>
-		<value condition="[SubString(Container.FolderPath,addons,left) | SubString(Container.FolderPath,plugin,left)] + !IsEmpty(ListItem.Art(fanart))">$INFO[ListItem.Art(fanart)]</value>
+		<value condition="[SubString(Container.FolderPath,addons,left) | SubString(Container.FolderPath,plugin,left)] + !IsEmpty(ListItem.Art(thumb))">$INFO[ListItem.Art(thumb)]</value>
 		<!--value condition="[Container.Content(genres) | Container.Content(years) | Container.Content(studios)]">$INFO[ListItem.Icon]</value-->
 		<!--value condition="[substring(Container.FolderPath,addons://sources/) | substring(Container.FolderPath,plugin://) | substring(Container.FolderPath,sources://video/) | substring(Container.FolderPath,cdda://)] + IsEmpty(ListItem.Art(thumb))">$INFO[ListItem.Icon]</value-->
 		<value condition="IsEmpty(ListItem.Art(thumb))">$INFO[ListItem.Icon]</value>

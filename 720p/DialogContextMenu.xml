@@ -6,7 +6,7 @@
         <system>1</system>
         <origin x="0" y="0"></origin>
     </coordinates>
-	<onload condition="IsEmpty(Window(home.Property(UseWidget)))">SetProperty(UseWidget,NumberOne,home)</onload>
+	<onload condition="IsEmpty(Window(home.Property(UseWidget)))">SetProperty(UseWidget,NumberOne,Home)</onload>
 <controls>
 	
 <control type="button">
@@ -35,7 +35,7 @@
 		<width>378</width>
 		<height>48</height>
 		<texture>white.png</texture>
-		<colordiffuse>FF333333</colordiffuse>
+		<colordiffuse>$VAR[DialogBGColor]</colordiffuse>
 		<aspectratio>stretch</aspectratio>
 		
 	</control>
@@ -43,10 +43,10 @@
 		<description>background image</description>
 		<left>440</left>
 		<top>130</top>
-		<width>380</width>
+		<width>378</width>
 		<height>1090</height>
 		<texture>white.png</texture>
-		<colordiffuse>FF333333</colordiffuse>
+		<colordiffuse>$VAR[DialogBGColor]</colordiffuse>
 		<aspectratio>stretch</aspectratio>
 		
 	</control>

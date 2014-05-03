@@ -13,14 +13,14 @@
 	<top>-10</top>
 	<width>1</width>
 	<height>1</height>
-	<animation effect="fade" start="1" end="0" time="0" condition="true">Conditional</animation>
+	<visible>false</visible>
 </control>
 <control type="image" id="11">
 	<left>-10</left>
 	<top>-10</top>
 	<width>1</width>
 	<height>1</height>
-	<animation effect="fade" start="1" end="0" time="0" condition="true">Conditional</animation>
+	<visible>false</visible>
 </control>
 
 
@@ -77,12 +77,13 @@
 
 	<control type="group">
 	<top>0</top>
-		<animation type="Conditional" condition="Window.IsVisible(virtualkeyboard) | Window.IsVisible(filebrowser) | Window.IsVisible(addonsettings) | Window.IsVisible(selectdialog) | Window.IsVisible(peripherals)">
+		<visible>![Window.IsVisible(virtualkeyboard) | Window.IsVisible(filebrowser) | Window.IsVisible(addonsettings) | Window.IsVisible(selectdialog) | Window.IsVisible(peripherals)]</visible>
+		<!-- animation type="visible">
 			<effect type="fade" start="100" end="0" time="200" />
 		</animation>
 		<animation type="WindowClose" reversible="false">
 			<effect type="fade" start="100" end="0" time="200" delay="0" />
-		</animation> 
+		</animation--> 
 		
 		<!--control type="image">
 			<left>355</left>

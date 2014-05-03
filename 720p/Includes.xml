@@ -28,10 +28,17 @@
 
 <include name="LoadSettings">
 	<onload>Skin.SetString(MainColorString,blue)</onload>
+	
+	<onload>Skin.SetString(MusicOSDColorString,happyblue)</onload>
+	<onload>Skin.SetString(MusicOSDButtonColor,white)</onload>
+	
 	<onload>Skin.SetString(OSDColorString,osdblue)</onload>
+	<onload>Skin.SetString(OSDButtonColor,white)</onload>
+		
 	<onload>Skin.SetString(OSDTextColor,osdblue)</onload>
 	<onload>Skin.SetString(OSDNibColor,brightblue)</onload>
 	<onload>Skin.SetString(OSDDialogsBGColor,brightblue)</onload>
+	
 	<onload condition="IsEmpty(Skin.String(MenuCstring))">Skin.SetString(MenuCstring,lightsteelblue)</onload>
 	<onload>Skin.SetString(StartuptestString,start)</onload>
 	<onload condition="IsEmpty(Skin.String(BackgroundPercentage))">Skin.SetString(BackgroundPercentage,100)</onload>

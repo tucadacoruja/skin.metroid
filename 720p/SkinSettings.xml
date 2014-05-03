@@ -1069,7 +1069,7 @@
 					
 					<control type="radiobutton" id="405">
 						<include>SettingsButton</include>
-						<description>Custom widget 1</description>31249
+						<description>Custom widget 1</description>
 						<label>$LOCALIZE[31249] $LOCALIZE[31248] 1 $LOCALIZE[31253]</label>
 						<onclick>Skin.ToggleSetting(CustomWidget1Toggle)</onclick>
 						<selected>Skin.HasSetting(CustomWidget1Toggle)</selected>
@@ -1085,11 +1085,20 @@
 
 						<enable>!IsEmpty(Skin.String(PluginWidgetPath1)) + !Skin.HasSetting(HomeWidgetToggle) + Skin.HasSetting(CustomWidget1Toggle)</enable>
 					</control>
-					<control type="button" id="407">
+					<control type="radiobutton" id="407">
+						<include>SettingsButton</include>
+						<description>use poster</description>
+						<label> - $LOCALIZE[31258]</label>
+						<onclick>Skin.ToggleSetting(CWidgetUsePoster1)</onclick>
+						<selected>Skin.HasSetting(CWidgetUsePoster1)</selected>
+						<enable>!IsEmpty(Skin.String(PluginWidgetPath1)) + !Skin.HasSetting(HomeWidgetToggle) + Skin.HasSetting(CustomWidget1Toggle)</enable>
+					</control>
+					<control type="button" id="408">
 						<include>SettingsButton</include>
 						<label2>$INFO[Skin.String(PluginWidgetName1)]</label2>
 						<label>- $LOCALIZE[31228] 1</label>
 						<onclick>Skin.ToggleSetting(CustomWidget1Toggle)</onclick><!-- the order is relevant -->
+						<onclick>up</onclick>
 						<onclick>up</onclick>
 						<onclick>up</onclick>
 						<onclick>up</onclick>
@@ -1102,7 +1111,7 @@
 					
 					<!--  custom widget 6  -->
 					
-					<control type="radiobutton" id="408">
+					<control type="radiobutton" id="409">
 						<include>SettingsButton</include>
 						<description>Custom widget 2</description>
 						<label>$LOCALIZE[31249] $LOCALIZE[31248] 2 $LOCALIZE[31253]</label>
@@ -1110,7 +1119,7 @@
 						<selected>Skin.HasSetting(CustomWidget2Toggle)</selected>
 						<enable>!IsEmpty(Skin.String(PluginWidgetPath2)) + !Skin.HasSetting(HomeWidgetToggle)</enable>
 					</control>
-					<control type="button" id="409">
+					<control type="button" id="410">
 						<include>SettingsButton</include>
 						<description>Set Name</description>
 						<label> - $LOCALIZE[31232]</label>
@@ -1120,11 +1129,20 @@
 
 						<enable>!IsEmpty(Skin.String(PluginWidgetPath2)) + !Skin.HasSetting(HomeWidgetToggle) + Skin.HasSetting(CustomWidget2Toggle)</enable>
 					</control>
-					<control type="button" id="410">
+					<control type="radiobutton" id="411">
+						<include>SettingsButton</include>
+						<description>use poster</description>
+						<label> - $LOCALIZE[31258]</label>
+						<onclick>Skin.ToggleSetting(CWidgetUsePoster2)</onclick>
+						<selected>Skin.HasSetting(CWidgetUsePoster2)</selected>
+						<enable>!IsEmpty(Skin.String(PluginWidgetPath2)) + !Skin.HasSetting(HomeWidgetToggle) + Skin.HasSetting(CustomWidget2Toggle)</enable>
+					</control>
+					<control type="button" id="412">
 						<include>SettingsButton</include>
 						<label2>$INFO[Skin.String(PluginWidgetName2)]</label2>
 						<label>- $LOCALIZE[31228] 2</label>
 						<onclick>Skin.ToggleSetting(CustomWidget2Toggle)</onclick><!-- the order is relevant -->
+						<onclick>up</onclick>
 						<onclick>up</onclick>
 						<onclick>up</onclick>
 						<onclick>up</onclick>

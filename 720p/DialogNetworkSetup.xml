@@ -115,7 +115,7 @@
 		<texturefocus>setting.png</texturefocus>
 		<texturenofocus>-</texturenofocus>
 		<textoffsetx>10</textoffsetx>
-		<textcolor>ACFFFFFF</textcolor>
+		<textcolor>whitelist</textcolor>
 		<focusedcolor>white</focusedcolor>
 		<texturefocus>setting.png</texturefocus>
 		<pulseonselect>false</pulseonselect>
@@ -136,7 +136,7 @@
 		
 		<font>recent</font>
 		<align>left</align>
-		<textcolor>ACFFFFFF</textcolor>
+		<textcolor>whitelist</textcolor>
 		<focusedcolor>white</focusedcolor>
 		<texturefocus>setting.png</texturefocus>
 		<texturenofocus>-</texturenofocus>
@@ -153,7 +153,7 @@
 		<label>$LOCALIZE[1024]</label>
 		<texturefocus>White35p.png</texturefocus>
 		<texturenofocus>-</texturenofocus>
-		<textcolor>ACFFFFFF</textcolor>
+		<textcolor>whitelist</textcolor>
 		<focusedcolor>white</focusedcolor>
 		<onup>10</onup>
 		<onleft>11</onleft>
@@ -169,7 +169,7 @@
 		<aligny>center</aligny>
 		<font>recent</font>
 		<align>left</align>
-		<textcolor>ACFFFFFF</textcolor>
+		<textcolor>whitelist</textcolor>
 		<focusedcolor>white</focusedcolor>
 		<texturefocus>setting.png</texturefocus>
 		<texturenofocus>-</texturenofocus>
@@ -190,7 +190,7 @@
 		<aligny>center</aligny>
 		<font>recent</font>
 		<align>left</align>
-		<textcolor>ACFFFFFF</textcolor>
+		<textcolor>whitelist</textcolor>
 		<focusedcolor>white</focusedcolor>
 		<texturefocus>setting.png</texturefocus>
 		<texturenofocus>-</texturenofocus>
@@ -211,7 +211,7 @@
 		<aligny>center</aligny>
 		<font>recent</font>
 		<align>left</align>
-		<textcolor>ACFFFFFF</textcolor>
+		<textcolor>whitelist</textcolor>
 		<focusedcolor>white</focusedcolor>
 		<texturefocus>setting.png</texturefocus>
 		<texturenofocus>-</texturenofocus>
@@ -232,7 +232,7 @@
 		<aligny>center</aligny>
 		<font>recent</font>
 		<align>left</align>
-		<textcolor>ACFFFFFF</textcolor>
+		<textcolor>whitelist</textcolor>
 		<focusedcolor>white</focusedcolor>
 		<texturefocus>setting.png</texturefocus>
 		<texturenofocus>-</texturenofocus>

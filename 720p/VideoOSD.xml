@@ -3,6 +3,7 @@
 	<defaultcontrol always="true">202</defaultcontrol>
 	<allowoverlay>yes</allowoverlay>
 	
+
 	<controls>
 	
 	
@@ -15,7 +16,7 @@
 		<animation effect="fade" start="0" end="100" time="450">WindowOpen</animation>
 		<animation effect="slide" start="0,0" end="0,400" time="300">WindowClose</animation>
 		
-			<control type="image">
+			<!-- control type="image">
 				<left>5</left>
 				<top>24</top>
 				<width>380</width>
@@ -23,7 +24,7 @@
 				<texture>white.png</texture>
 				<aspectratio>stretch</aspectratio>
 				<animation effect="fade" start="0" end="10" time="0" condition="true">Conditional</animation>
-			</control>
+			</control -->
 			<control type="progress" id="2">
 				<description>Volume</description>
 				<left>5</left>
@@ -31,7 +32,7 @@
 				<width>380</width>
 				<height>4.5</height>
 				<info>Player.Volume</info>
-				<texturebg>osd/seek/progresscache_back.png</texturebg>
+				<texturebg colordiffuse="36FFFFFF">white.png</texturebg>
 				<lefttexture>-</lefttexture>
 				<midtexture colordifuse="white">white.png</midtexture>
 				<righttexture>-</righttexture>
@@ -53,7 +54,7 @@
 			<control type="slider" id="1">
 				<description>Volume Slider</description>
 				<left>0</left>
-				<top>17</top>
+				<top>16</top>
 				<width>390</width>
 				<height>4</height>
 				<info>Player.Volume</info>
@@ -115,7 +116,7 @@
 				<texture>shadow.png</texture>
 				<aspectratio>stretch</aspectratio>
 			</control>
-			<control type="image">
+			<!-- control type="image">
 				<left>323</left>
 				<top>49</top>
 				<width>633</width>
@@ -123,13 +124,13 @@
 				<texture>white.png</texture>
 				<aspectratio>stretch</aspectratio>
 				<animation effect="fade" start="0" end="5" time="0" condition="true">Conditional</animation>
-			</control>
+			</control -->
 			<control type="progress" id="21">
 				<left>323</left>
-				<top>49</top>
+				<top>50</top>
 				<width>633</width>
 				<height>6</height>
-				<texturebg>osd/seek/progresscache_back.png</texturebg>
+				<texturebg colordiffuse="36FFFFFF">white.png</texturebg>
 				<lefttexture>-</lefttexture>
 				<midtexture>white.png</midtexture>
 				<righttexture>-</righttexture>
@@ -138,10 +139,10 @@
 			</control>
 			<control type="progress" id="20">
 				<left>323</left>
-				<top>48</top>
+				<top>50</top>
 				<width>633</width>
 				<height>6</height>
-				<texturebg>osd/seek/progresscache_back.png</texturebg>
+				<texturebg colordiffuse="00FFFFFF">white.png</texturebg>
 				<lefttexture>-</lefttexture>
 				<midtexture colordifuse="F3FFFFFF" >white.png</midtexture>
 				<righttexture>-</righttexture>
@@ -378,7 +379,7 @@
 				<height>60</height>
 				<width>60</width>
 				<texture>white.png</texture>
-				<colordiffuse>white</colordiffuse>
+				<colordiffuse>$INFO[Skin.String(OSDButtonColor)]</colordiffuse>
 				<aspectratio>stretch</aspectratio>
 				<animation effect="fade" start="100" end="60" time="100" condition="Control.HasFocus(201)">Conditional</animation>
 			</control>
@@ -386,7 +387,7 @@
 				<height>60</height>
 				<width>60</width>
 				<texture>white.png</texture>
-				<colordiffuse>white</colordiffuse>
+				<colordiffuse>$INFO[Skin.String(OSDButtonColor)]</colordiffuse>
 				<aspectratio>stretch</aspectratio>
 				<animation effect="fade" start="100" end="60" time="100" condition="Control.HasFocus(202)">Conditional</animation>
 			</control>
@@ -394,7 +395,7 @@
 				<height>60</height>
 				<width>60</width>
 				<texture>white.png</texture>
-				<colordiffuse>white</colordiffuse>
+				<colordiffuse>$INFO[Skin.String(OSDButtonColor)]</colordiffuse>
 				<aspectratio>stretch</aspectratio>
 				<animation effect="fade" start="100" end="60" time="100" condition="Control.HasFocus(203)">Conditional</animation>
 			</control>
@@ -402,7 +403,7 @@
 				<height>60</height>
 				<width>60</width>
 				<texture>white.png</texture>
-				<colordiffuse>white</colordiffuse>
+				<colordiffuse>$INFO[Skin.String(OSDButtonColor)]</colordiffuse>
 				<aspectratio>stretch</aspectratio>
 				<animation effect="fade" start="100" end="60" time="100" condition="Control.HasFocus(204)">Conditional</animation>
 			</control>
@@ -410,7 +411,7 @@
 				<height>60</height>
 				<width>60</width>
 				<texture>white.png</texture>
-				<colordiffuse>white</colordiffuse>
+				<colordiffuse>$INFO[Skin.String(OSDButtonColor)]</colordiffuse>
 				<aspectratio>stretch</aspectratio>
 				<animation effect="fade" start="100" end="60" time="100" condition="Control.HasFocus(205)">Conditional</animation>
 			</control>
@@ -418,7 +419,7 @@
 				<height>60</height>
 				<width>60</width>
 				<texture>white.png</texture>
-				<colordiffuse>white</colordiffuse>
+				<colordiffuse>$INFO[Skin.String(OSDButtonColor)]</colordiffuse>
 				<aspectratio>stretch</aspectratio>
 				<animation effect="fade" start="100" end="60" time="100" condition="Control.HasFocus(206)">Conditional</animation>
 			</control>
@@ -426,7 +427,7 @@
 				<height>60</height>
 				<width>60</width>
 				<texture>white.png</texture>
-				<colordiffuse>white</colordiffuse>
+				<colordiffuse>$INFO[Skin.String(OSDButtonColor)]</colordiffuse>
 				<aspectratio>stretch</aspectratio>
 				<animation effect="fade" start="100" end="60" time="100" condition="Control.HasFocus(207)">Conditional</animation>
 			</control>
@@ -435,7 +436,7 @@
 				<height>60</height>
 				<width>60</width>
 				<texture>white.png</texture>
-				<colordiffuse>white</colordiffuse>
+				<colordiffuse>$INFO[Skin.String(OSDButtonColor)]</colordiffuse>
 				<aspectratio>stretch</aspectratio>
 				<animation effect="fade" start="100" end="60" time="100" condition="Control.HasFocus(208)">Conditional</animation>
 				<visible>!VideoPlayer.Content(LiveTV)</visible>
@@ -444,7 +445,7 @@
 				<height>60</height>
 				<width>60</width>
 				<texture>white.png</texture>
-				<colordiffuse>white</colordiffuse>
+				<colordiffuse>$INFO[Skin.String(OSDButtonColor)]</colordiffuse>
 				<aspectratio>stretch</aspectratio>
 				<animation effect="fade" start="100" end="60" time="100" condition="Control.HasFocus(209)">Conditional</animation>
 			</control>
@@ -452,7 +453,7 @@
 				<height>60</height>
 				<width>60</width>
 				<texture>white.png</texture>
-				<colordiffuse>white</colordiffuse>
+				<colordiffuse>$INFO[Skin.String(OSDButtonColor)]</colordiffuse>
 				<aspectratio>stretch</aspectratio>
 				<animation effect="fade" start="100" end="60" time="100" condition="Control.HasFocus(210)">Conditional</animation>
 			</control>
@@ -460,7 +461,7 @@
 				<height>60</height>
 				<width>60</width>
 				<texture>white.png</texture>
-				<colordiffuse>white</colordiffuse>
+				<colordiffuse>$INFO[Skin.String(OSDButtonColor)]</colordiffuse>
 				<aspectratio>stretch</aspectratio>
 				<animation effect="fade" start="100" end="60" time="100" condition="Control.HasFocus(211)">Conditional</animation>
 				<visible>!VideoPlayer.Content(LiveTV)</visible>
@@ -469,7 +470,7 @@
 				<height>60</height>
 				<width>60</width>
 				<texture>white.png</texture>
-				<colordiffuse>white</colordiffuse>
+				<colordiffuse>$INFO[Skin.String(OSDButtonColor)]</colordiffuse>
 				<aspectratio>stretch</aspectratio>
 				<animation effect="fade" start="100" end="60" time="100" condition="Control.HasFocus(212)">Conditional</animation>
 				
@@ -478,7 +479,7 @@
 				<height>60</height>
 				<width>60</width>
 				<texture>white.png</texture>
-				<colordiffuse>white</colordiffuse>
+				<colordiffuse>$INFO[Skin.String(OSDButtonColor)]</colordiffuse>
 				<aspectratio>stretch</aspectratio>
 				<animation effect="fade" start="100" end="60" time="100" condition="Control.HasFocus(213)">Conditional</animation>
 				<visible>System.GetBool(services.upnpcontroller)</visible>
@@ -488,7 +489,7 @@
 				<height>60</height>
 				<width>60</width>
 				<texture>white.png</texture>
-				<colordiffuse>white</colordiffuse>
+				<colordiffuse>$INFO[Skin.String(OSDButtonColor)]</colordiffuse>
 				<aspectratio>stretch</aspectratio>
 				<animation effect="fade" start="100" end="60" time="100" condition="Control.HasFocus(214)">Conditional</animation>
 				<visible>VideoPlayer.HasMenu</visible>
@@ -498,7 +499,7 @@
 				<height>60</height>
 				<width>60</width>
 				<texture>white.png</texture>
-				<colordiffuse>white</colordiffuse>
+				<colordiffuse>$INFO[Skin.String(OSDButtonColor)]</colordiffuse>
 				<aspectratio>stretch</aspectratio>
 				<animation effect="fade" start="100" end="60" time="100" condition="Control.HasFocus(215)">Conditional</animation>
 				<visible>VideoPlayer.Content(LiveTV)</visible>
@@ -507,7 +508,7 @@
 				<height>60</height>
 				<width>60</width>
 				<texture>white.png</texture>
-				<colordiffuse>white</colordiffuse>
+				<colordiffuse>$INFO[Skin.String(OSDButtonColor)]</colordiffuse>
 				<aspectratio>stretch</aspectratio>
 				<animation effect="fade" start="100" end="60" time="100" condition="Control.HasFocus(216)">Conditional</animation>
 				<visible>Skin.HasSetting(HideGlobalBack)</visible>
@@ -538,7 +539,7 @@
 				<height>60</height>
 				<width>60</width>
 				<aspectratio>keep</aspectratio>
-				<texturefocus colordiffuse="FFFFFFFF" flipx="true">osd/ff.png</texturefocus>
+				<texturefocus flipx="true">osd/ff.png</texturefocus>
 				<texturenofocus colordiffuse="$INFO[Skin.String(OSDColorString)]" flipx="true">osd/ff.png</texturenofocus>
 				
 				<onclick>xbmc.playercontrol(rewind)</onclick>
@@ -550,10 +551,10 @@
 				<description>Play</description>
 				<height>60</height>
 				<width>60</width>
-				<texturefocus colordiffuse="FFFFFFFF">osd/play.png</texturefocus>
+				<texturefocus >osd/play.png</texturefocus>
 				<texturenofocus colordiffuse="$INFO[Skin.String(OSDColorString)]">osd/play.png</texturenofocus>
 				<usealttexture>Player.Playing</usealttexture>
-				<alttexturefocus colordiffuse="FFFFFFFF">osd/pause.png</alttexturefocus>
+				<alttexturefocus >osd/pause.png</alttexturefocus>
 				<alttexturenofocus colordiffuse="FF95b2d0">osd/pause.png</alttexturenofocus>
 				<onclick>playercontrol(play)</onclick>
 				<animation effect="zoom" start="100" end="120" center="auto" time="100">Focus</animation>
@@ -565,7 +566,7 @@
 				<height>60</height>
 				<width>60</width>
 				<aspectratio>keep</aspectratio>
-				<texturefocus colordiffuse="FFFFFFFF">osd/ff.png</texturefocus>
+				<texturefocus >osd/ff.png</texturefocus>
 				<texturenofocus colordiffuse="$INFO[Skin.String(OSDColorString)]">osd/ff.png</texturenofocus>
 				
 				<onclick>xbmc.playercontrol(forward)</onclick>
@@ -579,7 +580,7 @@
 				<height>60</height>
 				<width>60</width>
 				<aspectratio>keep</aspectratio>
-				<texturefocus colordiffuse="FFFFFFFF" flipx="true">osd/skip.png</texturefocus>
+				<texturefocus flipx="true">osd/skip.png</texturefocus>
 				<texturenofocus colordiffuse="$INFO[Skin.String(OSDColorString)]" flipx="true">osd/skip.png</texturenofocus>
 				
 				<onclick>xbmc.playercontrol(previous)</onclick>
@@ -592,7 +593,7 @@
 				<height>60</height>
 				<width>60</width>
 				<aspectratio>keep</aspectratio>
-				<texturefocus colordiffuse="FFFFFFFF">osd/stop.png</texturefocus>
+				<texturefocus >osd/stop.png</texturefocus>
 				<texturenofocus colordiffuse="$INFO[Skin.String(OSDColorString)]">osd/stop.png</texturenofocus>
 				
 				<onclick>xbmc.playercontrol(stop)</onclick>
@@ -605,7 +606,7 @@
 				<height>60</height>
 				<width>60</width>
 				<aspectratio>keep</aspectratio>
-				<texturefocus colordiffuse="FFFFFFFF">osd/skip.png</texturefocus>
+				<texturefocus >osd/skip.png</texturefocus>
 				<texturenofocus colordiffuse="$INFO[Skin.String(OSDColorString)]">osd/skip.png</texturenofocus>
 				
 				<onclick>xbmc.playercontrol(next)</onclick>
@@ -618,7 +619,7 @@
 				<height>60</height>
 				<width>60</width>
 				<aspectratio>keep</aspectratio>
-				<texturefocus colordiffuse="FFFFFFFF" flipx="true">osd/info.png</texturefocus>
+				<texturefocus flipx="true">osd/info.png</texturefocus>
 				<texturenofocus colordiffuse="$INFO[Skin.String(OSDColorString)]" flipx="true">osd/info.png</texturenofocus>
 				
 				<onclick>xbmc.activatewindow(fullscreeninfo)</onclick>
@@ -631,7 +632,7 @@
 				<height>60</height>
 				<width>60</width>
 				<aspectratio>keep</aspectratio>
-				<texturefocus colordiffuse="FFFFFFFF">osd/getsub.png</texturefocus>
+				<texturefocus >osd/getsub.png</texturefocus>
 				<texturenofocus colordiffuse="$INFO[Skin.String(OSDColorString)]">osd/getsub.png</texturenofocus>
 				
 				<onclick>Dialog.Close(VideoOSD,true)</onclick>
@@ -646,7 +647,7 @@
 				<height>60</height>
 				<width>60</width>
 				<aspectratio>keep</aspectratio>
-				<texturefocus colordiffuse="FFFFFFFF">osd/audio.png</texturefocus>
+				<texturefocus >osd/audio.png</texturefocus>
 				<texturenofocus colordiffuse="$INFO[Skin.String(OSDColorString)]">osd/audio.png</texturenofocus>
 				
 				<onclick>xbmc.activatewindow(124)</onclick>
@@ -658,7 +659,7 @@
 				<height>60</height>
 				<width>60</width>
 				<aspectratio>keep</aspectratio>
-				<texturefocus colordiffuse="FFFFFFFF">osd/video.png</texturefocus>
+				<texturefocus >osd/video.png</texturefocus>
 				<texturenofocus colordiffuse="$INFO[Skin.String(OSDColorString)]">osd/video.png</texturenofocus>
 				
 				<onclick>xbmc.activatewindow(osdvideosettings)</onclick>
@@ -671,7 +672,7 @@
 				<height>60</height>
 				<width>60</width>
 				<aspectratio>keep</aspectratio>
-				<texturefocus colordiffuse="FFFFFFFF">osd/bookmark.png</texturefocus>
+				<texturefocus >osd/bookmark.png</texturefocus>
 				<texturenofocus colordiffuse="$INFO[Skin.String(OSDColorString)]">osd/bookmark.png</texturenofocus>
 				
 				<onclick>xbmc.activatewindow(videobookmarks)</onclick>
@@ -686,7 +687,7 @@
 				<height>60</height>
 				<width>60</width>
 				<aspectratio>keep</aspectratio>
-				<texturefocus colordiffuse="FFFFFFFF">osd/playlist.png</texturefocus>
+				<texturefocus >osd/playlist.png</texturefocus>
 				<texturenofocus colordiffuse="$INFO[Skin.String(OSDColorString)]">osd/playlist.png</texturenofocus>
 				
 				<onclick>ActivateWindow(videoplaylist)</onclick>
@@ -701,7 +702,7 @@
 				<height>60</height>
 				<width>60</width>
 				<aspectratio>keep</aspectratio>
-				<texturefocus colordiffuse="FFFFFFFF">osd/upnp.png</texturefocus>
+				<texturefocus >osd/upnp.png</texturefocus>
 				<texturenofocus colordiffuse="$INFO[Skin.String(OSDColorString)]">osd/upnp.png</texturenofocus>
 				
 				<onclick>SwitchPlayer</onclick>
@@ -719,7 +720,7 @@
 				<height>60</height>
 				<width>60</width>
 				<aspectratio>keep</aspectratio>
-				<texturefocus colordiffuse="FFFFFFFF">osd/dvdmenu2.png</texturefocus>
+				<texturefocus >osd/dvdmenu2.png</texturefocus>
 				<texturenofocus colordiffuse="$INFO[Skin.String(OSDColorString)]">osd/dvdmenu2.png</texturenofocus>
 				
 				<onclick>PlayerControl(ShowVideoMenu)</onclick>
@@ -736,7 +737,7 @@
 				<width>60</width>
 	
 				<aspectratio>keep</aspectratio>
-				<texturefocus colordiffuse="FFFFFFFF">osd/livetv.png</texturefocus>
+				<texturefocus >osd/livetv.png</texturefocus>
 				<texturenofocus colordiffuse="$INFO[Skin.String(OSDColorString)]">osd/livetv.png</texturenofocus>
 
 				
@@ -752,7 +753,7 @@
 				<height>60</height>
 				<width>60</width>
 				<aspectratio>keep</aspectratio>
-				<texturefocus colordiffuse="FFFFFFFF">osd/cancel.png</texturefocus>
+				<texturefocus >osd/cancel.png</texturefocus>
 				<texturenofocus colordiffuse="$INFO[Skin.String(OSDColorString)]">osd/cancel.png</texturenofocus>
 				
 				<onclick>back</onclick>

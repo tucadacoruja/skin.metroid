@@ -156,9 +156,9 @@
 			<control type="group">
 			<visible>substring(MusicPlayer.Cover,DefaultAlbumCover.png)</visible>
 				<control type="image">
-					<left>108</left>
+					<left>107</left>
 					<top>108</top>
-					<width>428</width>
+					<width>430</width>
 					<height>494</height>
 					<aspectratio>stretch</aspectratio>
 					<texture background="true" border="5">white.png</texture>
@@ -167,13 +167,13 @@
 					<colordiffuse>FFD7D7D7</colordiffuse>
 				</control>
 				<control type="image">
-					<left>140</left>
-					<top>139</top>
+					<left>120</left>
+					<top>190</top>
 					<width>122</width>
-					<height>110</height>
+					<height>105</height>
 					<aspectratio>keep</aspectratio>
-					<texture>DefaultFallback.png</texture>
-					<animation effect="fade" start="0" end="30" time="0" condition="true">Conditional</animation>
+					<texture>DefaultAudio.png</texture>
+					<animation effect="fade" start="0" end="50" time="0" condition="true">Conditional</animation>
 				</control>
 			</control>
 			
@@ -210,7 +210,7 @@
 				
 				<aspectratio>stretch</aspectratio>
 				<texture border="12">white.png</texture>
-				<colordiffuse>FFEBEBEB</colordiffuse>
+				<colordiffuse>FFF2F2F2</colordiffuse>
 			</control>
 			<control type="label">
 				<left>125</left>

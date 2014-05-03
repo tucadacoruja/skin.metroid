@@ -67,9 +67,8 @@
 					<align>left</align>
 					<aligny>center</aligny>
 					<info>ListItem.Label</info>
-					<textcolor>ACFFFFFF</textcolor>
-					<focusedcolor>ACFFFFFF</focusedcolor>
-					<selectedcolor>babyblue</selectedcolor>
+					<textcolor>whitelist</textcolor>
+
 				</control>
 			</itemlayout>
 			<focusedlayout height="37">
@@ -145,7 +144,7 @@
 			<aligny>center</aligny>
 			<font>recent</font>
 			<label>1022</label>
-			<textcolor>ACFFFFFF</textcolor>
+			<textcolor>whitelist</textcolor>
 		</control>
 
 	

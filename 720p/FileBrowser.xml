@@ -68,7 +68,7 @@
 		<font>recent</font>
 		<align>left</align>
 		<aligny>center</aligny>
-		<textcolor>FF959595</textcolor>
+		<textcolor>whitelist</textcolor>
 		<haspath>true</haspath>
 	</control>
 	<control type="image">
@@ -137,9 +137,8 @@
 					<align>left</align>
 					<aligny>center</aligny>
 					<info>ListItem.Label</info>
-					<textcolor>ACFFFFFF</textcolor>
-					<focusedcolor>ACFFFFFF</focusedcolor>
-					<selectedcolor>ACFFFFFF</selectedcolor>
+					<textcolor>whitelist</textcolor>
+
 				</control>
 			</itemlayout>
 			
@@ -172,7 +171,7 @@
 					<align>left</align>
 					<aligny>center</aligny>
 					<info>ListItem.Label</info>
-					<textcolor>white</textcolor>
+					<textcolor>FFFFFFFF</textcolor>
 				</control>
 			</focusedlayout>
 		</control>
