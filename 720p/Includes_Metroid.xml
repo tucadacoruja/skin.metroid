@@ -48,6 +48,26 @@
 		</control>
 	</include>
 	
+	<include name="WFanartShadow">
+		<control type="image">
+			<left>-25</left>
+			<top>20</top>
+			<width>430</width>
+			<height>265</height>
+			<texture>diffuse/postershadow.png</texture>
+			<aspectratio>stretch</aspectratio>
+			<colordiffuse>46ffffff</colordiffuse>
+		</control>
+		<control type="image">
+			<left>-25</left>
+			<top>20</top>
+			<width>400</width>
+			<height>250</height>
+			<texture>DefaultCatch.png</texture>
+			<aspectratio>scale</aspectratio>
+		</control>
+	</include>	
+		
 	<include name="ShowPanelLayout">
 		<viewtype>icon</viewtype>
 		<left>380</left>
@@ -83,7 +103,7 @@
 				<width>170</width>
 				<height>120</height>
 				<texture>$INFO[ListItem.Art(thumb)]</texture>
-				<aspectratio scalediffuse="false">scale</aspectratio>
+				<aspectratio>scale</aspectratio>
 			</control>
 			<control type="image">
 				<left>15</left>
@@ -121,7 +141,7 @@
 				<width>170</width>
 				<height>120</height>
 				<texture>$INFO[ListItem.Art(thumb)]</texture>
-				<aspectratio scalediffuse="false">scale</aspectratio>
+				<aspectratio>scale</aspectratio>
 			</control>
 			<control type="image">
 				<left>15</left>
@@ -170,7 +190,7 @@
 				<width>175</width>
 				<height>250</height>
 				<texture>DefaultCatch.png</texture>
-				<aspectratio scalediffuse="false">stretch</aspectratio>
+				<aspectratio>stretch</aspectratio>
 				<colordiffuse>D7ffffff</colordiffuse>
 			</control>
 			<control type="image">
@@ -179,7 +199,7 @@
 				<width>175</width>
 				<height>250</height>
 				<texture>$INFO[ListItem.Art(thumb)]</texture>
-				<aspectratio scalediffuse="false">stretch</aspectratio>
+				<aspectratio>stretch</aspectratio>
 				<colordiffuse>D7ffffff</colordiffuse>
 			</control>
 		
@@ -239,22 +259,14 @@
 
 			<control type="group">
 				<left>-890</left>
-				<control type="image">
-					<left>-25</left>
-					<top>20</top>
-					<width>430</width>
-					<height>265</height>
-					<texture>diffuse/postershadow.png</texture>
-					<aspectratio>stretch</aspectratio>
-					<colordiffuse>46ffffff</colordiffuse>
-				</control>
+				<include>WFanartShadow</include>
 				<control type="image">
 					<left>-25</left>
 					<top>20</top>
 					<width>400</width>
 					<height>250</height>
-					<texture fallback="DefaultCatch.png" >$INFO[Container(8000).ListItem.Art(fanart)]</texture>
-					<aspectratio scalediffuse="false">scale</aspectratio>
+					<texture>$INFO[Container(8000).ListItem.Art(fanart)]</texture>
+					<aspectratio>scale</aspectratio>
 				</control>
 
 				<control type="image">
@@ -319,7 +331,7 @@
 					<width>380</width>
 					<height>255</height>
 					<texture>$INFO[Container(8001).ListItem.Art(thumb)]</texture>
-					<aspectratio aligny="top" scalediffuse="false">scale</aspectratio>
+					<aspectratio aligny="top">scale</aspectratio>
 							
 				</control>
 				<control type="image">
@@ -397,22 +409,14 @@
 			
 			<control type="group">
 			<left>-890</left>
-				<control type="image">
-					<left>-25</left>
-					<top>20</top>
-					<width>430</width>
-					<height>265</height>
-					<texture>diffuse/postershadow.png</texture>
-					<aspectratio>stretch</aspectratio>
-					<colordiffuse>46ffffff</colordiffuse>
-				</control>
+				<include>WFanartShadow</include>
 				<control type="image">
 					<left>-25</left>
 					<top>20</top>
 					<width>400</width>
 					<height>250</height>
-					<texture background="true" fallback="DefaultCatch.png" diffuse="grid/posterdiffuse.png">$INFO[Container(8002).ListItem.Art(fanart)]</texture>
-					<aspectratio scalediffuse="false">scale</aspectratio>
+					<texture>$INFO[Container(8002).ListItem.Art(fanart)]</texture>
+					<aspectratio>scale</aspectratio>
 				</control>
 				<control type="image">
 					<left>-25</left>
@@ -475,7 +479,7 @@
 					<width>380</width>
 					<height>255</height>
 					<texture>$INFO[Container(8003).ListItem.Art(thumb)]</texture>
-					<aspectratio aligny="top" scalediffuse="false">scale</aspectratio>
+					<aspectratio aligny="top">scale</aspectratio>
 							
 				</control>
 				<control type="image">
@@ -557,7 +561,7 @@
 					<width>380</width>
 					<height>255</height>
 					<texture>$INFO[Container(8004).ListItem.Art(thumb)]</texture>
-					<aspectratio aligny="center" scalediffuse="false">scale</aspectratio>
+					<aspectratio aligny="center">scale</aspectratio>
 						
 				</control>
 				<include>ShowTextBackground</include>
@@ -584,7 +588,6 @@
 				
 				<ondown condition="Control.IsVisible(8005)">8005</ondown>
 		
-				<!-- visible>IntegerGreaterThan(Container(8004).NumItems,1)</visible -->
 				<include>ShowPanelLayout</include>
 				<!-- content target="video">plugin://plugin.video.youtube/?login=true%26path=%2froot%2fplaylists%26playlist=PL29685DF58E70D8FD%26user_feed=playlist</content -->
 				<!-- content target="video">plugin://plugin.video.collegehumor/category/badman/1/</content -->
@@ -623,22 +626,14 @@
 
 			<control type="group">
 				<left>-890</left>
-				<control type="image">
-					<left>-25</left>
-					<top>20</top>
-					<width>430</width>
-					<height>265</height>
-					<texture>diffuse/postershadow.png</texture>
-					<aspectratio>stretch</aspectratio>
-					<colordiffuse>46ffffff</colordiffuse>
-				</control>
+				<include>WFanartShadow</include>
 				<control type="image">
 					<left>-25</left>
 					<top>20</top>
 					<width>400</width>
 					<height>250</height>
-					<texture fallback="DefaultCatch.png" >$VAR[PluginWidget1Art]</texture>
-					<aspectratio scalediffuse="false">scale</aspectratio>
+					<texture>$VAR[PluginWidget1Art]</texture>
+					<aspectratio>scale</aspectratio>
 				</control>
 
 				<control type="image">
@@ -702,7 +697,7 @@
 					<width>380</width>
 					<height>255</height>
 					<texture>$INFO[Container(8005).ListItem.Art(thumb)]</texture>
-					<aspectratio aligny="center" scalediffuse="false">scale</aspectratio>
+					<aspectratio aligny="center">scale</aspectratio>
 				</control>
 				<include>ShowTextBackground</include>
 				<control type="label">
@@ -728,7 +723,6 @@
 				<onup condition="!Control.IsVisible(8004) + Control.IsVisible(8003)">8003</onup>
 				<onup condition="Control.IsVisible(8004)">8004</onup>
 				
-				<!-- visible>IntegerGreaterThan(Container(8005).NumItems,1)</visible -->
 				<include>ShowPanelLayout</include>
 				
 				<!-- content target="video">plugin://plugin.video.youtube/?contact=trailers&amp;external=true&amp;feed=uploads&amp;login=false&amp;path=%2froot%2fexplore%2ftrailers</content -->
@@ -765,22 +759,14 @@
 
 			<control type="group">
 				<left>-890</left>
-				<control type="image">
-					<left>-25</left>
-					<top>20</top>
-					<width>430</width>
-					<height>265</height>
-					<texture>diffuse/postershadow.png</texture>
-					<aspectratio>stretch</aspectratio>
-					<colordiffuse>46ffffff</colordiffuse>
-				</control>
+				<include>WFanartShadow</include>
 				<control type="image">
 					<left>-25</left>
 					<top>20</top>
 					<width>400</width>
 					<height>250</height>
-					<texture fallback="DefaultCatch.png" >$VAR[PluginWidget2Art]</texture>
-					<aspectratio scalediffuse="false">scale</aspectratio>
+					<texture>$VAR[PluginWidget2Art]</texture>
+					<aspectratio>scale</aspectratio>
 				</control>
 
 				<control type="image">

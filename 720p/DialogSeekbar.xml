@@ -47,7 +47,7 @@
 				<texture>shadow.png</texture>
 				<aspectratio>stretch</aspectratio>
 			</control>
-			<control type="image">
+			<!-- control type="image">
 				<left>323</left>
 				<top>49</top>
 				<width>633</width>
@@ -55,26 +55,25 @@
 				<texture>white.png</texture>
 				<aspectratio>stretch</aspectratio>
 				<animation effect="fade" start="0" end="5" time="0" condition="true">Conditional</animation>
-			</control>
+			</control -->
 			<control type="progress" id="21">
 				<left>323</left>
-				<top>49</top>
+				<top>50</top>
 				<width>633</width>
 				<height>6</height>
-				<texturebg>osd/seek/progresscache_back.png</texturebg>
+				<texturebg colordiffuse="36FFFFFF">white.png</texturebg>
 				<lefttexture>-</lefttexture>
 				<midtexture>white.png</midtexture>
 				<righttexture>-</righttexture>
 				<info>Player.ProgressCache</info>
 				<animation effect="fade" start="0" end="14" time="0" condition="true">Conditional</animation>
 			</control>
-		
 			<control type="progress" id="20">
 				<left>323</left>
-				<top>48</top>
+				<top>50</top>
 				<width>633</width>
 				<height>6</height>
-				<texturebg>osd/seek/progresscache_back.png</texturebg>
+				<texturebg colordiffuse="00FFFFFF">white.png</texturebg>
 				<lefttexture>-</lefttexture>
 				<midtexture colordifuse="F3FFFFFF" >white.png</midtexture>
 				<righttexture>-</righttexture>

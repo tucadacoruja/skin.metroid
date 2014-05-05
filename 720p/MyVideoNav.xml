@@ -114,7 +114,7 @@
 <include>Banners</include><!-- 709 -->
 <include>PosterFixView</include><!-- 501 -->
 <include>FanartShelf</include><!-- 781 -->
-<include>Episodes</include><!-- 504 -->
+<!-- include>Episodes</include><!-- 504 -->
 <include>Panel</include><!-- 603 --> 
 <include>Icons</include><!-- 677 --> 
 <include>PosterView</include><!-- 579 -->

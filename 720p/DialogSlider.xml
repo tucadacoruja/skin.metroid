@@ -49,9 +49,11 @@
 		<top>30</top>
 		<width>600</width>
 		<height>40</height>
-		<colordiffuse>95FFFFFF</colordiffuse>
+		
 		<aspectratio>stretch</aspectratio>
-		<texture flipy="true">BlueBackground.png</texture>
+		<texture flipy="true">white.png</texture>
+		<colordiffuse>$INFO[Skin.String(OSDDialogsBGColor)]</colordiffuse>
+		<animation effect="fade" start="0" end="50" time="300" condition="true">Conditional</animation>
 	</control>
 			
 	<control type="label" id="10">

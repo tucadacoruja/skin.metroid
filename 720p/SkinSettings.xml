@@ -710,7 +710,7 @@
 					<control type="button" id="110">
 						<include>SettingsButton</include>
 						<label2>$INFO[Skin.String(BackgroundPercentage),,%]</label2>
-						<label> - $LOCALIZE[31256] $LOCALIZE[31255]</label>
+						<label> - $LOCALIZE[31256]</label>
 						<onclick condition="Stringcompare(Skin.String(BackgroundPercentage),100) | IsEmpty(Skin.String(BackgroundPercentage))">Skin.SetString(BackgroundPercentage,95)</onclick>
 						<onclick condition="Stringcompare(Skin.String(BackgroundPercentage),95)">Skin.SetString(BackgroundPercentage,90)</onclick>
 						<onclick condition="Stringcompare(Skin.String(BackgroundPercentage),90)">Skin.SetString(BackgroundPercentage,85)</onclick>
@@ -723,13 +723,14 @@
 						<include>SettingsButton</include>
 						<label2>$INFO[Skin.String(DarknessPercentage),,%]</label2>
 						<label> - $LOCALIZE[31257]</label>
-						<onclick condition="Stringcompare(Skin.String(BackgroundDarkness),FFFFFFFF) | IsEmpty(Skin.String(BackgroundDarkness))">Skin.SetString(BackgroundDarkness,FFEBEBEB)</onclick>
-						<onclick condition="Stringcompare(Skin.String(BackgroundDarkness),FFEBEBEB)">Skin.SetString(BackgroundDarkness,FFD7D7D7)</onclick>
-						<onclick condition="Stringcompare(Skin.String(BackgroundDarkness),FFD7D7D7)">Skin.SetString(BackgroundDarkness,FFC2C2C2)</onclick>
-						<onclick condition="Stringcompare(Skin.String(BackgroundDarkness),FFC2C2C2)">Skin.SetString(BackgroundDarkness,FFACACAC)</onclick>
-						<onclick condition="Stringcompare(Skin.String(BackgroundDarkness),FFACACAC)">Skin.SetString(BackgroundDarkness,FF959595)</onclick>
-						<onclick condition="Stringcompare(Skin.String(BackgroundDarkness),FF959595)">Skin.SetString(BackgroundDarkness,FFFFFFFF)</onclick>
+						<onclick condition="Stringcompare(Skin.String(BackgroundDarkness),FFFFFFFF) | IsEmpty(Skin.String(BackgroundDarkness))">Skin.SetString(BackgroundDarkness,FFE5E5E5)</onclick>
+						<onclick condition="Stringcompare(Skin.String(BackgroundDarkness),FFE5E5E5)">Skin.SetString(BackgroundDarkness,FFCCCCCC)</onclick>
+						<onclick condition="Stringcompare(Skin.String(BackgroundDarkness),FFCCCCCC)">Skin.SetString(BackgroundDarkness,FFB3B3B3)</onclick>
+						<onclick condition="Stringcompare(Skin.String(BackgroundDarkness),FFB3B3B3)">Skin.SetString(BackgroundDarkness,FF999999)</onclick>
+						<onclick condition="Stringcompare(Skin.String(BackgroundDarkness),FF999999)">Skin.SetString(BackgroundDarkness,FF7F7F7F)</onclick>
+						<onclick condition="Stringcompare(Skin.String(BackgroundDarkness),FF7F7F7F)">Skin.SetString(BackgroundDarkness,FFFFFFFF)</onclick>
 						
+						<!-- only user feedback -->
 						<onclick condition="Stringcompare(Skin.String(DarknessPercentage),100) | IsEmpty(Skin.String(DarknessPercentage))">Skin.SetString(DarknessPercentage,90)</onclick>
 						<onclick condition="Stringcompare(Skin.String(DarknessPercentage),90)">Skin.SetString(DarknessPercentage,80)</onclick>
 						<onclick condition="Stringcompare(Skin.String(DarknessPercentage),80)">Skin.SetString(DarknessPercentage,70)</onclick>
@@ -1105,6 +1106,7 @@
 						<onclick>Skin.Reset(PluginWidgetPath1)</onclick>
 						<onclick>Skin.Reset(PluginWidgetName1)</onclick>
 						<onclick>Skin.Reset(PluginWidgetTarget1)</onclick>
+						<onclick>Skin.Reset(CWidgetUsePoster1)</onclick>
 						<enable>!IsEmpty(Skin.String(PluginWidgetPath1)) + !Skin.HasSetting(HomeWidgetToggle) + Skin.HasSetting(CustomWidget1Toggle)</enable>
 					</control>
 					
@@ -1149,6 +1151,7 @@
 						<onclick>Skin.Reset(PluginWidgetPath2)</onclick>
 						<onclick>Skin.Reset(PluginWidgetName2)</onclick>
 						<onclick>Skin.Reset(PluginWidgetTarget2)</onclick>
+						<onclick>Skin.Reset(CWidgetUsePoster2)</onclick>
 						<enable>!IsEmpty(Skin.String(PluginWidgetPath2)) + !Skin.HasSetting(HomeWidgetToggle) + Skin.HasSetting(CustomWidget2Toggle)</enable>
 					</control>
 					

@@ -55,7 +55,7 @@
 			<align>left</align>
 			<aligny>center</aligny>
 			<font>about</font>
-			<textcolor>list</textcolor>
+			<textcolor>whitelist</textcolor>
 			<label>21422</label>
 		</control>
 		<control type="group" id="9001">
@@ -83,7 +83,7 @@
 				<label>$INFO[Control.GetLabel(15)]</label>
 				<align>left</align>
 				<aligny>center</aligny>
-				<textcolor>white</textcolor>
+				<textcolor>whitelist</textcolor>
 			</control>
 			<control type="spincontrolex" id="16">
 				<description>Rule operator</description>
@@ -109,7 +109,7 @@
 				<label>$INFO[Control.GetLabel(16)]</label>
 				<align>left</align>
 				<aligny>center</aligny>
-				<textcolor>white</textcolor>
+				<textcolor>whitelist</textcolor>
 			</control>
 		</control>
 		<control type="button" id="17">
@@ -122,7 +122,7 @@
 			<aligny>center</aligny>
 			<texturefocus colordiffuse="44FFFFFF" border="20">dialog/textbg.png</texturefocus>
 				<texturenofocus  colordiffuse="44FFFFFF" border="20">dialog/textbg.png</texturenofocus>
-			<textcolor>ACFFFFFF</textcolor>
+			<textcolor>whitelist</textcolor>
 			<label>-</label>
 			<onup>9001</onup>
 			<onleft>20</onleft>
@@ -141,7 +141,7 @@
 			<aligny>center</aligny>
 			<texturefocus colordiffuse="44FFFFFF">dialog/RightBtn.png</texturefocus>
 			<texturenofocus></texturenofocus>
-			<textcolor>ffD7D7D7</textcolor>
+			<textcolor>whitelist</textcolor>
 			<focusedcolor>white</focusedcolor>
 			<colordiffuse>-</colordiffuse>
 			<label>1024</label>

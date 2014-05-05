@@ -9,19 +9,6 @@
 	</coordinates>
 	<controls>
 	
-	<control type="label" id="2">
-		<description>Heading</description>
-		<left>222</left>
-		<top>140</top>
-		<width>679</width>
-		<height>37</height>
-		<font>homemenu3</font>
-		<align>center</align>
-		<aligny>center</aligny>
-		<textcolor>FFEBEBEB</textcolor>
-	</control>
-
-
 		<control type="group">
 		
 			<include>DialogEffect</include>
@@ -104,7 +91,7 @@
 				<align>left</align>
 				<label>31173</label>
 				<font>about</font>
-				<textcolor>list</textcolor>
+				<textcolor>whitelist</textcolor>
 			</control>
 			<!--  control type="label">
 				<description>rules label</description>
@@ -114,7 +101,7 @@
 				<align>left</align>
 				<label>31174</label>
 				<font>about</font>
-				<textcolor>list</textcolor>
+				<textcolor>whitelist</textcolor>
 			</control -->
 			<control type="spincontrolex" id="22">
 				<description>Set Playlist type</description>
@@ -141,7 +128,7 @@
 				<width>740</width>
 				<label>21433</label>
 				<font>about</font>
-				<textcolor>list</textcolor>
+				<textcolor>whitelist</textcolor>
 			</control>
 			<control type="edit" id="12">
 				<description>Name Button</description>
@@ -153,7 +140,7 @@
 				<textoffsety>4</textoffsety>
 				<textwidth>750</textwidth>
 				<font>font13</font>
-				<textcolor>ACFFFFFF</textcolor>
+				<textcolor>whitelist</textcolor>
 				<align>center</align>
 				<texturefocus colordiffuse="44FFFFFF" border="20">dialog/textbg.png</texturefocus>
 				<texturenofocus  colordiffuse="44FFFFFF" border="20">dialog/textbg.png</texturenofocus>
@@ -173,7 +160,7 @@
 				<align>left</align>
 				<label>21434</label>
 				<font>about</font>
-				<textcolor>list</textcolor>
+				<textcolor>whitelist</textcolor>
 			</control>
 			<control type="list" id="10">
 				<description>Rules List Control</description>
@@ -193,8 +180,8 @@
 						<height>40</height>
 						<aligny>center</aligny>
 						<info>ListItem.Label</info>
-						<textcolor>list</textcolor>
-						<selectedcolor>list</selectedcolor>
+						<textcolor>whitelist</textcolor>
+						
 						<font>about</font>
 					</control>
 				</itemlayout>
@@ -217,7 +204,7 @@
 						<aligny>center</aligny>
 						<info>ListItem.Label</info>
 						<textcolor>white</textcolor>
-						<selectedcolor>white</selectedcolor>
+	
 						<font>about</font>
 					</control>
 				</focusedlayout>
@@ -283,8 +270,8 @@
 				<width>740</width>
 				<label>31325</label>
 				<font>about</font>
-				<textcolor>list</textcolor>
-				<shadowcolor>list</shadowcolor>
+				<textcolor>whitelist</textcolor>
+			
 			</control>
 			<control type="spincontrolex" id="16">
 				<left>20</left>
@@ -294,7 +281,7 @@
 				<label>21424</label>
 				<font>about</font>
 				<textoffsetx>20</textoffsetx>
-				<textcolor>list</textcolor>
+				<textcolor>whitelist</textcolor>
 				<focusedcolor>white</focusedcolor>
 				<texturefocus>setting.png</texturefocus>
 				<texturenofocus>-</texturenofocus>
@@ -312,7 +299,7 @@
 				<label>21427</label>
 				<font>about</font>
 				<textoffsetx>20</textoffsetx>
-				<textcolor>list</textcolor>
+				<textcolor>whitelist</textcolor>
 				<focusedcolor>white</focusedcolor>
 				<texturefocus>setting.png</texturefocus>
 				<texturenofocus>-</texturenofocus>
@@ -329,7 +316,7 @@
 				<height>41</height>
 				<label>21429</label>
 				<font>about</font>
-				<textcolor>list</textcolor>
+				<textcolor>whitelist</textcolor>
 				<textoffsetx>20</textoffsetx>
 				<focusedcolor>white</focusedcolor>
 				<texturefocus>setting.png</texturefocus>
@@ -370,7 +357,7 @@
 				<description>Group by</description>
 				<label>31198</label>
 				<font>about</font>
-				<textcolor>list</textcolor>
+				<textcolor>whitelist</textcolor>
 				<textoffsetx>20</textoffsetx>
 				<focusedcolor>white</focusedcolor>
 				<texturefocus>setting.png</texturefocus>
@@ -387,7 +374,7 @@
 				<width>280</width>
 				<height>40</height>
 				<font>about</font>
-				<textcolor>list</textcolor>
+				<textcolor>whitelist</textcolor>
 				<focusedcolor>white</focusedcolor>
 				<texturefocus>setting.png</texturefocus>
 				<texturenofocus>-</texturenofocus>

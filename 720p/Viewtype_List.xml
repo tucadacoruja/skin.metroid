@@ -111,7 +111,7 @@
 					<height>290</height>
 					<aspectratio align="center" aligny="center">keep</aspectratio>
 					<texture background="true"  >$INFO[Listitem.Icon]</texture>
-					<colordiffuse>C2FFFFFF</colordiffuse>
+					<colordiffuse>EBFFFFFF</colordiffuse>
 					<visible>IsEmpty(Listitem.Art(thumb))</visible>
 				</control>
 				<control type="image">
