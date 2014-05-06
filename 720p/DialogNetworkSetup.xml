@@ -110,7 +110,7 @@
 		<onleft>10</onleft>
 		<onright>9001</onright>
 		 
-		<font>recent</font>
+		<font>DefaultButton</font>
 		<aligny>center</aligny>
 		<texturefocus>setting.png</texturefocus>
 		<texturenofocus>-</texturenofocus>
@@ -134,7 +134,7 @@
 		<onright>12</onright>
 		<ondown>16</ondown>
 		
-		<font>recent</font>
+		<font>DefaultButton</font>
 		<align>left</align>
 		<textcolor>whitelist</textcolor>
 		<focusedcolor>white</focusedcolor>
@@ -149,7 +149,7 @@
 		<top>219</top>
    		<width>159</width>
 		<height>37</height>
-		<font>recent</font>
+		<font>DefaultButton</font>
 		<label>$LOCALIZE[1024]</label>
 		<texturefocus>White35p.png</texturefocus>
 		<texturenofocus>-</texturenofocus>
@@ -167,7 +167,7 @@
 		<width>670</width>
 		<height>37</height>
 		<aligny>center</aligny>
-		<font>recent</font>
+		<font>DefaultButton</font>
 		<align>left</align>
 		<textcolor>whitelist</textcolor>
 		<focusedcolor>white</focusedcolor>
@@ -188,7 +188,7 @@
 		<width>670</width>
 		<height>37</height>
 		<aligny>center</aligny>
-		<font>recent</font>
+		<font>DefaultButton</font>
 		<align>left</align>
 		<textcolor>whitelist</textcolor>
 		<focusedcolor>white</focusedcolor>
@@ -209,7 +209,7 @@
 		<width>670</width>
 		<height>37</height>
 		<aligny>center</aligny>
-		<font>recent</font>
+		<font>DefaultButton</font>
 		<align>left</align>
 		<textcolor>whitelist</textcolor>
 		<focusedcolor>white</focusedcolor>
@@ -230,7 +230,7 @@
 		<width>670</width>
 		<height>37</height>
 		<aligny>center</aligny>
-		<font>recent</font>
+		<font>DefaultButton</font>
 		<align>left</align>
 		<textcolor>whitelist</textcolor>
 		<focusedcolor>white</focusedcolor>

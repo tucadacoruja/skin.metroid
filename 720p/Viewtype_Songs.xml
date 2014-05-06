@@ -318,7 +318,7 @@
 				<aspectratio>scale</aspectratio>
 				<texture aligny="top">$VAR[FanOrThumb]</texture>
 				<fadetime>50</fadetime>
-				<colordiffuse>D7FFFFFF</colordiffuse>
+				<colordiffuse>E5FFFFFF</colordiffuse>
 			</control>
 			<!-- control type="image">
 				<description>white image</description>

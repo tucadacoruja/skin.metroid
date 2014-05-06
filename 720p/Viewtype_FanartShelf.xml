@@ -35,7 +35,7 @@
 			<left>275</left>
 			<top>415</top>
 			<width>1320</width>
-			<height>300</height>
+			<height>280</height>
 			<onleft>781</onleft>
 			<onright>781</onright>
 			<onup condition="Control.IsVisible(782)">782</onup>
@@ -101,9 +101,10 @@
 			</itemlayout>
 			
 						
-			<focusedlayout height="310" width="200">
+			<focusedlayout height="280" width="200">
 			
 				<control type="group">
+				<left>3</left>
 				<visible>Control.HasFocus(781)</visible>
 				<animation reversible="false" effect="zoom" end="0,0,190,280" start="0,100,123,180" center="90,270" time="300" tween="circle" easing="out">focus</animation>
 				<animation reversible="false" effect="zoom" start="0,0,190,280" end="0,104,125,184" center="5,270" time="200" tween="circle" easing="out">unfocus</animation>
@@ -155,6 +156,7 @@
 				</control>
 				
 				<control type="group">
+				<left>3</left>
 				<animation reversible="false" effect="zoom" end="0,0,190,280" start="0,100,123,180" center="5,270" time="300" tween="circle" easing="out">Visible</animation>
 				<visible>!Control.HasFocus(781)</visible>
 						

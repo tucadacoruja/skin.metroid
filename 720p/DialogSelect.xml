@@ -61,7 +61,7 @@
   		<control type="list" id="3">
 			<left>211</left>
 			<top>183</top>
-			<width>689</width>
+			<width>674</width>
 			<height>337</height>
 			<onup>3</onup>
 			<onleft>9080</onleft>
@@ -70,11 +70,19 @@
 			<pagecontrol>63</pagecontrol>
 			<scrolltime>2</scrolltime>		
 			<itemlayout height="37">
+				<control type="image">
+					<top>37</top>
+					<width>674</width>
+					<height>1</height>
+					<aspectratio>stretch</aspectratio>
+					<texture>white.png</texture>
+					<colordiffuse>26FFFFFF</colordiffuse>
+				</control>
 				<control type="label">
 					<left>15</left>
-					<width>689</width>
+					<width>674</width>
 					<height>37</height>
-					<font>tags</font>
+					<font>DefaultButton</font>
 					<aligny>center</aligny>
 					<align>left</align>
 					<info>ListItem.Label</info>
@@ -86,7 +94,7 @@
 			
 			<focusedlayout height="37">
 				<control type="image">
-					<width>689</width>
+					<width>674</width>
 					<height>37</height>
 					<aspectratio>stretch</aspectratio>
 					<texture>setting.png</texture>
@@ -96,9 +104,9 @@
 				</control>
 				<control type="label">
 					<left>15</left>
-					<width>689</width>
+					<width>674</width>
 					<height>37</height>
-					<font>tags</font>
+					<font>DefaultButton</font>
 					<aligny>center</aligny>
 					<align>left</align>
 					<info>ListItem.Label</info>
@@ -111,7 +119,7 @@
 		<control type="list" id="6">
 			<left>211</left>
 			<top>183</top>
-			<width>689</width>
+			<width>674</width>
 			<height>340</height>
 			<onup>6</onup>
 			<onleft>9080</onleft>
@@ -124,7 +132,7 @@
 			
 				<control type="image">
 					<top>84</top>
-					<width>689</width>
+					<width>674</width>
 					<height>1</height>
 					<aspectratio>stretch</aspectratio>
 					<texture>white.png</texture>
@@ -187,7 +195,7 @@
 	
 			<focusedlayout width="600" height="84">
 				<control type="image">
-					<width>689</width>
+					<width>674</width>
 					<height>84</height>
 					<aspectratio>stretch</aspectratio>
 					<texture>setting.png</texture>

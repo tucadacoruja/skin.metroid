@@ -42,15 +42,15 @@
 	<color name="settings">FFFCFCFC</color>
 	
 	
-	<color name="plum">FF473A47</color>
-	<color name="mediumpurple">FF3A324A</color>
-	<color name="lightsteelblue">FF4d5661</color>
-	<color name="lightskyblue">FF394953</color>
-	<color name="honeydew">FF63535B</color>
-	<color name="darkseagreen">FF334333</color>
-	<color name="lemonchiffon">FF515041</color>
+	<color name="plum">FF665c66</color>
+	<color name="mediumpurple">FF564b70</color>
+	<color name="lightsteelblue">FF5c6f82</color>
+	<color name="lightskyblue">FF486170</color>
+	<color name="honeydew">FF60565b</color>
+	<color name="darkseagreen">FF5d6b5d</color>
+	<color name="lemonchiffon">FF636151</color>
 	<color name="blanchedalmond">FF566869</color>
-	<color name="rosybrown">FF4e3c3c</color>
+	<color name="rosybrown">FF4c3d3d</color>
 	<color name="dimgray">FF4A4A4A</color>
 	<color name="happygray">FF333333</color>
 	<color name="defaultgray">FF252525</color>

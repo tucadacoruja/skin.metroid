@@ -101,7 +101,7 @@
 					<scroll>false</scroll>
 					<font>heading</font>
 					<aligny>center</aligny>
-					<textcolor>ACFFFFFF</textcolor>
+					<textcolor>whitelist</textcolor>
 				</control>
 				<control type="label">
 					<left>90</left>
@@ -113,7 +113,7 @@
 					<aligny>top</aligny>
 					<font>aired</font>
 					<aligny>center</aligny>
-					<textcolor>ACFFFFFF</textcolor>
+					<textcolor>whitelist</textcolor>
 				</control>
 				
 			</itemlayout>
@@ -123,7 +123,7 @@
 				<control type="image">
 					<left>0</left>
 					<top>0</top>
-					<width>689</width>
+					<width>674</width>
 					<height>84</height>
 					<aspectratio>stretch</aspectratio>
 					<texture>setting.png</texture>
@@ -160,7 +160,7 @@
 					<aligny>top</aligny>
 					<font>aired</font>
 					<aligny>center</aligny>
-					<textcolor>ACFFFFFF</textcolor>
+					<textcolor>whitelist</textcolor>
 				</control>
 				
 			</focusedlayout>

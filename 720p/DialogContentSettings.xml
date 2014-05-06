@@ -16,7 +16,7 @@
 
 		<control type="image">
 			<left>180</left>
-			<top>111</top>			
+			<top>112</top>			
 			<width>942</width>
 			<height>482</height>
 			<aspectratio>stretch</aspectratio>
@@ -38,7 +38,7 @@
 		<control type="image">
 			<left>211</left>
 			<top>375</top>
-			<width>689</width>
+			<width>674</width>
 			<height>1</height>
 			<aspectratio>stretch</aspectratio>
 			<texture>white.png</texture>
@@ -57,7 +57,7 @@
 		<control type="image">
 			<left>211</left>
 			<top>412S</top>
-			<width>689</width>
+			<width>674</width>
 			<height>1</height>
 			<aspectratio>stretch</aspectratio>
 			<texture>white.png</texture>
@@ -101,9 +101,9 @@
 			<label>20344</label>
 			<texturefocus>setting.png</texturefocus>
 			<texturenofocus>list/listline.png</texturenofocus>
-			<textcolor>ACFFFFFF</textcolor>
+			<textcolor>whitelist</textcolor>
 			<focusedcolor>white</focusedcolor>
-			<font>recent</font>
+			<font>DefaultButton</font>
 			<aligny>center</aligny>
 			
 			<reverse>no</reverse>
@@ -117,7 +117,7 @@
 		<control type="list" id="4">
 			<left>211</left>
 			<top>183</top>
-			<width>689</width>
+			<width>674</width>
 			<height>148</height>
 			<onup>3</onup>
 			<onleft>noop</onleft>
@@ -131,11 +131,11 @@
 					<left>15</left>
 					<width>556</width>
 					<height>35</height>
-					<font>recent</font>
+					<font>DefaultButton</font>
 					<aligny>center</aligny>
 					<align>left</align>
 					<label>$LOCALIZE[31053]: $INFO[ListItem.Label]</label>
-					<textcolor>FF959595</textcolor>
+					<textcolor>whitelist</textcolor>
 					<selectedcolor>babyblue</selectedcolor>
 				</control>
 			</itemlayout>
@@ -143,7 +143,7 @@
 				<control type="image">
 					<left>0</left>
 					<top>0</top>
-					<width>689</width>
+					<width>674</width>
 					<height>37</height>
 					<texture>setting.png</texture>
 					<aspectratio>stretch</aspectratio>
@@ -155,12 +155,12 @@
 					<left>15</left>
 					<width>556</width>
 					<height>35</height>
-					<font>recent</font>
+					<font>DefaultButton</font>
 					<aligny>center</aligny>
 					<align>left</align>
 					<label>$LOCALIZE[31053]: $INFO[ListItem.Label]</label>
 					<textcolor>ffffffff</textcolor>
-					<selectedcolor>babyblue</selectedcolor>
+
 				</control>
 			</focusedlayout>
 		</control>
@@ -187,9 +187,9 @@
 			<textoffsety>6</textoffsety>
 			<texturefocus>setting.png</texturefocus>
 			<texturenofocus>list/listline.png</texturenofocus>
-			<colordiffuse>DCFFFFFF</colordiffuse>
-			<font>homemenu3</font>
-			<textcolor>FF959595</textcolor>
+
+			<font>DefaultButton</font>
+			<textcolor>whitelist</textcolor>
 			<focusedcolor>ffffffff</focusedcolor>
 			<disabledcolor>F99c9c9c</disabledcolor>
 		</control>
@@ -200,7 +200,7 @@
 			<texturenofocus>list/listline.png</texturenofocus>
 			<radioheight>24</radioheight>
 			<radiowidth>24</radiowidth>
-			<textcolor>FF959595</textcolor>
+			<textcolor>whitelist</textcolor>
 		</control>
 	</control>	
 		

@@ -40,7 +40,7 @@
 		
 			<height>37</height>
 			<font>recent</font>
-			<textcolor>FF555555</textcolor>
+			<textcolor>whitelist</textcolor>
 			
 			<label>-</label>
 			<align>center</align>
@@ -151,9 +151,9 @@
 		<control type="button" id="3">
 			<description>Default Button</description>
 			<height>37</height>
-			<font>recent</font>
+			<font>DefaultButton</font>
 			<align>left</align>
-			<textcolor>ACFFFFFF</textcolor>
+			<textcolor>whitelist</textcolor>
 			 
 			<focusedcolor>white</focusedcolor>
 			<texturefocus>setting.png</texturefocus>
@@ -164,8 +164,8 @@
 		<control type="radiobutton" id="4">
 			<description>Default RadioButton</description>
 			<height>37</height>
-			<font>recent</font>
-			<textcolor>ACFFFFFF</textcolor>
+			<font>DefaultButton</font>
+			<textcolor>whitelist</textcolor>
 			<focusedcolor>white</focusedcolor>
 			 
 			<texturefocus>setting.png</texturefocus>
@@ -181,8 +181,8 @@
 			<left></left>
 			<height>37</height>
 			<width>250</width>
-			<font>recent</font>
-			<textcolor>ACFFFFFF</textcolor>
+			<font>DefaultButton</font>
+			<textcolor>whitelist</textcolor>
 			<focusedcolor>white</focusedcolor>
 			 
 			<texturefocus>setting.png</texturefocus>
@@ -197,8 +197,8 @@
 		<control type="sliderex" id="8">
 			<description>Default Slider</description>
 			<height>37</height>
-			<font>recent</font>
-			<textcolor>ACFFFFFF</textcolor>
+			<font>DefaultButton</font>
+			<textcolor>whitelist</textcolor>
 			<focusedcolor>white</focusedcolor>
 			 
 			<texturefocus>setting.png</texturefocus>
