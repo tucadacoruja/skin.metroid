@@ -38,23 +38,13 @@
 	
 	
 	<include>MenuBackground</include>
-	<include>EmptyMenu</include>
-	
-	<control type="image">
-		<left>235</left>
-		<top>65</top>
-		<width>15</width>
-		<height>660</height>
-		<aspectratio>stretch</aspectratio>
-		<texture>shadowv.png</texture>
-		<animation effect="fade" start="0" end="70" time="0" condition="true">Conditional</animation>
-	</control>
+
 
 			
 	<control type="grouplist" id="3">
 		<description>Button Area</description>
 		<left>0</left>
-		<top>65</top>
+		<top>65.5</top>
 		<width>300</width>
 		<height>570</height>
 		<itemgap>0</itemgap>
@@ -68,6 +58,17 @@
 		<scrolltime>2</scrolltime>
 	</control>
 	
+	<include>EmptyMenu</include>
+	
+	<control type="image">
+		<left>235</left>
+		<top>65</top>
+		<width>15</width>
+		<height>660</height>
+		<aspectratio>stretch</aspectratio>
+		<texture>shadowv.png</texture>
+		<animation effect="fade" start="0" end="70" time="0" condition="true">Conditional</animation>
+	</control>
 
 	<control type="group">
 	<top>0</top>
@@ -197,11 +198,11 @@
 		
 		<control type="button" id="444">
 		
-			<left>1</left>
+			<left>0</left>
 			<top>566</top>
 			<description>Back Button</description>
 			<height>50</height>
-			<width>247</width>
+			<width>249</width>
 			<align>left</align>
 			<aligny>center</aligny>
 			<textoffsetx>23</textoffsetx>
@@ -218,11 +219,11 @@
 		</control>
 		<control type="button" id="20">
 		
-			<left>1</left>
+			<left>0</left>
 			<top>616</top>
 			<description>Settings Level Button</description>
 			<height>50</height>
-			<width>247</width>
+			<width>249</width>
 			<align>left</align>
 			<aligny>center</aligny>
 			<textoffsetx>23</textoffsetx>

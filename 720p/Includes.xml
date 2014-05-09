@@ -645,15 +645,15 @@
 	<include name="MainListLine">
 		<control type="image">
 			<description>list line image</description>
-			<width>240</width>
-			<height>1.5</height>
+			<width>249</width>
+			<height>2</height>
 			<aspectratio>stretch</aspectratio>
 			<texture>white.png</texture>
 			<colordiffuse>16FFFFFF</colordiffuse>
 		</control>
 		<control type="image">
 			<width>240</width>
-			<height>48.5</height>
+			<height>48</height>
 			<aspectratio>stretch</aspectratio>
 			<texture> </texture>
 			<colordiffuse>46FFFFFF</colordiffuse>
@@ -661,8 +661,8 @@
 	</include>
 	<include name="EmptyMenu">
 		<control type="grouplist">
-			<left>5</left>
-			<top>65.5</top>
+			<left>0</left>
+			<top>65</top>
 			<width>300</width>
 			<height>648</height>
 			<itemgap>0</itemgap>

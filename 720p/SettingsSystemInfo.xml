@@ -33,33 +33,26 @@
 	</control>
 
 	<include>MenuBackground</include>
-	<include>EmptyMenu</include>
 	
-	<control type="image">
-		<left>235</left>
-		<top>65</top>
-		<width>15</width>
-		<height>660</height>
-		<aspectratio>stretch</aspectratio>
-		<texture>shadowv.png</texture>
-		<animation effect="fade" start="0" end="70" time="0" condition="true">Conditional</animation>
-	</control>
+	
+	
 
 	
 <control type="group">
-	<animation effect="fade" start="0" end="100" time="300" >WindowOpen</animation>
+	
    
 		
 	<control type="grouplist" id="9000">
 		<left>0</left>
 		<top>66</top>
-		<width>240</width>
+		<width>250</width>
 		<height>570</height>
 		<itemgap>0</itemgap>
 		<onleft>999</onleft>
 		<onright>noop</onright>
 		<onup>300</onup>
 		<ondown>444</ondown>
+		<animation effect="fade" start="0" end="100" time="300" >WindowOpen</animation>
 		
 		<control type="button" id="95">
 			<label>$LOCALIZE[128]</label>
@@ -148,6 +141,17 @@
 			<texturenofocus>-</texturenofocus>
 		</control-->
 		
+	</control>
+	
+	<include>EmptyMenu</include>
+	<control type="image">
+		<left>235</left>
+		<top>65</top>
+		<width>15</width>
+		<height>660</height>
+		<aspectratio>stretch</aspectratio>
+		<texture>shadowv.png</texture>
+		<animation effect="fade" start="0" end="70" time="0" condition="true">Conditional</animation>
 	</control>
 		
 	<control type="grouplist">
@@ -292,11 +296,11 @@
 	
 	<control type="button" id="444">
 	
-		<left>1</left>
+		<left>0</left>
 		<top>617</top>
 		<description>Back Button</description>
 		<height>50</height>
-		<width>247</width>
+		<width>249</width>
 		<align>left</align>
 		<aligny>center</aligny>
 		<textoffsetx>23</textoffsetx>
