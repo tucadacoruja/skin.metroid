@@ -446,11 +446,10 @@
 			<aspectratio>stretch</aspectratio>
 			<fadetime>60</fadetime>
 			<texture background="true" fallback="special://skin/extras/backgrounds/MetroidBG.png">$INFO[Skin.String(GlobalBackground)]</texture>
-			<animation effect="fade" end="75" time="200" reversible="true" condition="Player.HasVideo + !Skin.HasSetting(VidWinLibrary)">Conditional</animation>
-			<!-- animation effect="fade" start="85" end="75" time="200" reversible="true" condition="Player.HasVideo + !Skin.HasSetting(VidWinLibrary)">Conditional</animation -->
-			<!-- animation effect="fade" start="85" end="100" time="50000" reversable="true" pulse="true" condition="Player.HasAudio + ![Skin.HasSetting(VisLibrary) | Skin.HasSetting(BackgroundSlideshow)]">Conditional</animation -->
+			<animation effect="fade" start="100" end="75" time="200" reversible="true" condition="Player.HasVideo + !Skin.HasSetting(VidWinLibrary)">Conditional</animation>
+
 			<colordiffuse>skin.string(BackgroundDarkness)</colordiffuse>
-			<!--colordiffuse>$INFO[Skin.String(BackgroundAlpha)]$INFO[Skin.String(BackgroundDarkness)]</colordiffuse-->
+
 			<animation effect="fade" start="100" end="100" time="0" condition="Stringcompare(Skin.String(BackgroundPercentage),100)">Conditional</animation>
 			<animation effect="fade" start="100" end="95" time="0" condition="Stringcompare(Skin.String(BackgroundPercentage),95)">Conditional</animation>
 			<animation effect="fade" start="100" end="90" time="0" condition="Stringcompare(Skin.String(BackgroundPercentage),90)">Conditional</animation>
