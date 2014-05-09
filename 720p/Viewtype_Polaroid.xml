@@ -320,6 +320,15 @@
 				<fadetime>50</fadetime>
 				<colordiffuse>E5FFFFFF</colordiffuse>
 			</control>
+			<control type="image">
+				<left>163</left>
+				<top>113</top>
+				<width>40</width>
+				<height>50</height>
+				<texture>bookmark.png</texture>
+				<visible>!substring(ListItem.Label,..,left) + [Stringcompare(Skin.String(BookmarkDBID1),ListItem.DBID) | Stringcompare(Skin.String(BookmarkDBID2),ListItem.DBID) | Stringcompare(Skin.String(BookmarkDBID3),ListItem.DBID)]</visible>
+				<visible>Container.Content(episodes) + substring(Container.FolderPath,videodb://tvshows)</visible>
+			</control>
 			<!-- control type="image">
 				<description>white image</description>
 				<left>113</left>

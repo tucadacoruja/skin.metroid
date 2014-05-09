@@ -1012,3 +1012,14 @@ msgstr "
 msgctxt "#31269"
 msgid "LogoPanel"
 msgstr "
+
+msgctxt "#31270"
+msgid "Music OSD color"
+msgstr "
+
+msgctxt "#31271"
+msgid "Video OSD color"
+msgstr "
+
+
+

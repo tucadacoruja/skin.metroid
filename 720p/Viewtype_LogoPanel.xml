@@ -101,6 +101,16 @@
 						<texture>$VAR[LogoIcon]</texture>
 						
 					</control>
+					
+					<control type="image">
+						<left>20</left>
+						<top>0</top>
+						<width>35</width>
+						<height>45</height>
+						<texture background="true">bookmark.png</texture>
+						<visible>!substring(ListItem.Label,..,left) + [Stringcompare(Skin.String(BookmarkDBID1),ListItem.DBID) | Stringcompare(Skin.String(BookmarkDBID2),ListItem.DBID) | Stringcompare(Skin.String(BookmarkDBID3),ListItem.DBID)]</visible>
+						<visible>Container.Content(episodes) + substring(Container.FolderPath,videodb://tvshows)</visible>
+					</control>
 													
 				</itemlayout>
 						
@@ -137,6 +147,15 @@
 						<aspectratio>keep</aspectratio>
 						<fadetime>200</fadetime>
 						<texture>$VAR[LogoIcon]</texture>
+					</control>
+					<control type="image">
+						<left>20</left>
+						<top>0</top>
+						<width>35</width>
+						<height>45</height>
+						<texture background="true">bookmark.png</texture>
+						<visible>!substring(ListItem.Label,..,left) + [Stringcompare(Skin.String(BookmarkDBID1),ListItem.DBID) | Stringcompare(Skin.String(BookmarkDBID2),ListItem.DBID) | Stringcompare(Skin.String(BookmarkDBID3),ListItem.DBID)]</visible>
+						<visible>Container.Content(episodes) + substring(Container.FolderPath,videodb://tvshows)</visible>
 					</control>
 										
 				</focusedlayout>	

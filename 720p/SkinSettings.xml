@@ -966,7 +966,7 @@
 					<control type="button" id="110">
 						<include>SettingsButton</include>
 						<label2>$VAR[MusicOSDcolorVAR]</label2>
-						<label>Music OSD color</label>
+						<label>31270</label>
 						
 						<onclick condition="Stringcompare(Skin.String(MusicOSDButtonColor),white)">Skin.SetString(MusicOSDColorString,white)</onclick>
 						<onclick condition="Stringcompare(Skin.String(MusicOSDButtonColor),white)">Skin.SetString(MusicOSDButtonColor,hellblue)</onclick>
@@ -979,7 +979,7 @@
 					<control type="button" id="111">
 						<include>SettingsButton</include>
 						<label2>$VAR[OSDcolorVAR]</label2>
-						<label>Video OSD color</label>
+						<label>31271</label>
 						
 						<onclick condition="Stringcompare(Skin.String(OSDButtonColor),white)">Skin.SetString(OSDColorString,white)</onclick>
 						<onclick condition="Stringcompare(Skin.String(OSDButtonColor),white)">Skin.SetString(OSDButtonColor,hellblue)</onclick>
