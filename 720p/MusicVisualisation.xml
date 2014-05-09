@@ -21,7 +21,8 @@
 			<height>730</height>
 			<aspectratio>stretch</aspectratio>
 			<texture fallback="special://skin/extras/backgrounds/MetroidBG.png">$INFO[Skin.String(GlobalBackground)]</texture>
-			<colordiffuse>FFCCCCCF</colordiffuse>
+			<!-- colordiffuse>FFCCCCCF</colordiffuse -->
+			<colordiffuse>skin.string(BackgroundDarkness)</colordiffuse>
 			<visible>!Skin.HasSetting(VisualisationFilter)</visible>
 			<animation effect="fade" start="80" end="90" time="90000" reversable="true" pulse="true" condition="true">Conditional</animation>
 		</control> 

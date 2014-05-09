@@ -88,7 +88,7 @@
 				<preloaditems>2</preloaditems>
 				<focusposition>0</focusposition>
 						
-				<viewtype label="PosterSplit">info</viewtype>
+				<viewtype label="31261">info</viewtype>
 				<orientation>horizontal</orientation>
 				
 				<scrolltime tween="Cubic" easing="in">240</scrolltime>

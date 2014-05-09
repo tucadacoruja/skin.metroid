@@ -4,6 +4,7 @@
 <defaultcontrol>9000</defaultcontrol>
 <backgroundcolor>0</backgroundcolor>
 <allowoverlay>yes</allowoverlay>
+<include>LoadSettings</include>
 <onload condition="IsEmpty(Skin.String(FirstRunTouch))">ActivateWindow(9506)</onload>
 <controls>
 	

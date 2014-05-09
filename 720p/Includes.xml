@@ -18,26 +18,26 @@
 <include file="Viewtype_FanartShelf.xml" />
 <include file="Viewtype_List.xml" />
 <include file="Viewtype_PosterFix.xml" />
-<include file="Viewtype_Poster.xml" />
-<include file="Viewtype_Songs.xml" />
+<include file="Viewtype_PosterSplit.xml" />
+<include file="Viewtype_Polaroid.xml" />
 <include file="Viewtype_Icons.xml" />
-<!-- include file="ViewsLiveTV.xml" / -->
-<include file="ViewsPVR.xml" />
+<include file="Viewtype_LogoPanel.xml" />
+<include file="Viewtype_Channels.xml" />
 
 
 
 <include name="LoadSettings">
 	<onload>Skin.SetString(MainColorString,blue)</onload>
 	
-	<onload>Skin.SetString(MusicOSDColorString,white)</onload><!-- happyblue -->
-	<onload>Skin.SetString(MusicOSDButtonColor,hellblue)</onload><!-- white -->
+	<onload condition="IsEmpty(Skin.String(MusicOSDColorString))">Skin.SetString(MusicOSDColorString,white)</onload><!-- happyblue -->
+	<onload condition="IsEmpty(Skin.String(MusicOSDButtonColor))">Skin.SetString(MusicOSDButtonColor,hellblue)</onload><!-- white -->
 	
-	<onload>Skin.SetString(OSDColorString,osdblue)</onload>
-	<onload>Skin.SetString(OSDButtonColor,white)</onload>
+	<onload condition="IsEmpty(Skin.String(OSDColorString))">Skin.SetString(OSDColorString,osdblue)</onload>
+	<onload condition="IsEmpty(Skin.String(OSDButtonColor))">Skin.SetString(OSDButtonColor,white)</onload>
 		
 	<onload>Skin.SetString(OSDTextColor,osdblue)</onload>
-	<onload>Skin.SetString(OSDNibColor,brightblue)</onload>
-	<onload>Skin.SetString(OSDDialogsBGColor,brightblue)</onload>
+	<onload condition="IsEmpty(Skin.String(OSDNibColor))">Skin.SetString(OSDNibColor,brightblue)</onload>
+	<onload condition="IsEmpty(Skin.String(OSDDialogsBGColor))">Skin.SetString(OSDDialogsBGColor,brightblue)</onload>
 	
 	<onload condition="IsEmpty(Skin.String(MenuCstring))">Skin.SetString(MenuCstring,lightsteelblue)</onload>
 	<onload>Skin.SetString(StartuptestString,start)</onload>
@@ -180,6 +180,21 @@
 	<width>940</width>
 </include>
 
+<include name="LogoViewWidth1">
+	<width>1230</width>
+</include>
+<include name="LogoViewWidth2">
+	<width>1020</width>
+</include>
+
+<include name="HiddenButton">
+	<left>-10</left>
+	<top>-10</top>
+	<width>1</width>
+	<height>1</height>
+	<visible allowhiddenfocus="true">false</visible>
+</include>
+	
 <include name="SearchButton">
 	<left>1220</left>
 	<top>5</top>
@@ -343,6 +358,7 @@
 			<aspectratio>keep</aspectratio>
 			<texturefocus colordiffuse="FFACACAC">osd/search.png</texturefocus>
 			<texturenofocus>osd/search.png</texturenofocus>
+			<onleft condition="Window.IsVisible(pvr) + !Window.IsActive(script-globalsearch-main.xml)">402</onleft>
 			<onleft condition="!Window.IsActive(script-globalsearch-main.xml) + Player.HasMedia">8888</onleft>
 			<onleft condition="!Window.IsActive(script-globalsearch-main.xml)">300</onleft>
 			<onleft condition="Window.IsActive(script-globalsearch-main.xml)">9000</onleft>
@@ -802,6 +818,7 @@
 			<itemgap>5</itemgap>
 			<focusposition>3</focusposition>
 			<ondown>300</ondown>
+			<onright condition="Control.IsVisible(999)">999</onright>
 			<visible>!Window.IsVisible(songinformation)</visible>
 
 			
@@ -836,7 +853,7 @@
 				<visible>StringCompare(System.BatteryLevel,5%) | StringCompare(System.BatteryLevel,4%) | StringCompare(System.BatteryLevel,3%) | StringCompare(System.BatteryLevel,2%) | StringCompare(System.BatteryLevel,1%)</visible>
 				<animation effect="fade" pulse="true" start="100" end="60" time="1400" condition="true">Conditional</animation>
 			</control>
-			<control type="button">
+			<control type="button" id="402">
 				<width>52</width>
 				<height>52</height>
 				<texturefocus colordiffuse="FFACACAC">osd/back.png</texturefocus>
@@ -969,7 +986,7 @@
 					<left>10</left>
 					<align>left</align>
 					<include>TopLabelSmall</include>
-					<label>$INFO[System.CpuUsage,, CPU]</label>
+					<label>$INFO[System.BatteryLevel,, Battery] $INFO[System.CpuUsage,, CPU]</label>
 				</control>
 			</control>
 			

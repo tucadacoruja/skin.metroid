@@ -8,22 +8,16 @@
 	</coordinates>
 
 	<include>DialogEffect</include>
+	<onload condition="Stringcompare(Skin.String(OSDButtonColor),hellblue)">Skin.SetString(OSDDialogsBGColor,darkhellblue)</onload>
+	<onload condition="Stringcompare(Skin.String(OSDButtonColor),white)">Skin.SetString(OSDDialogsBGColor,brightblue)</onload>
 	
 <controls>	
 
 <control type="label" id="3">
-	<left>-10</left>
-	<top>-10</top>
-	<width>1</width>
-	<height>1</height>
-	<visible>false</visible>
+	<include>HiddenButton</include>
 </control>
 <control type="image" id="11">
-	<left>-10</left>
-	<top>-10</top>
-	<width>1</width>
-	<height>1</height>
-	<visible>false</visible>
+	<include>HiddenButton</include>
 </control>
 
 

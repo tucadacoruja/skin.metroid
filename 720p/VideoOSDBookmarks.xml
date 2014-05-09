@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window id="125">
-		<defaultcontrol always="true">1</defaultcontrol>
-		<controls>
+	<defaultcontrol always="true">1</defaultcontrol>
+	<onload condition="Stringcompare(Skin.String(OSDButtonColor),hellblue)">Skin.SetString(OSDDialogsBGColor,darkhellblue)</onload>
+	<onload condition="Stringcompare(Skin.String(OSDButtonColor),white)">Skin.SetString(OSDDialogsBGColor,brightblue)</onload>
+	
+	<controls>
 	
 	<control type="button" id="4">
-		<left>-10</left>
-		<top>-10</top>
-		<width>1</width>
-		<height>1</height>
-		<animation effect="fade" start="1" end="0" time="0" condition="true">Conditional</animation>
+		<include>HiddenButton</include>
 	</control>
 	
 	

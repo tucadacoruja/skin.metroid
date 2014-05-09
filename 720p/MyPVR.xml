@@ -4,6 +4,11 @@
 	<allowoverlay>no</allowoverlay>
 	<controls>
 	
+		<control type="button" id="300">
+			<include>HiddenButton</include>
+			<onfocus>Setfocus(32)</onfocus>
+		</control>
+
 		<control type="group">
 			<control type="visualisation"><!-- id="2" -->
 				<left>0</left>
@@ -16,38 +21,6 @@
 			<include>ActualFanart</include>
 		</control>
 
-		
-		
-		<control type="image">
-			<description>Section header image</description>
-			<left>20</left>
-			<top>3</top>
-			<width>35</width>
-			<height>35</height>
-			<aspectratio>keep</aspectratio>
-			<texture>icon_video.png</texture>
-		</control>
-		<control type="grouplist">
-			<left>65</left>
-			<top>5</top>
-			<width>1000</width>
-			<height>30</height>
-			<orientation>horizontal</orientation>
-			<align>left</align>
-			<itemgap>5</itemgap>
-			<control type="label">
-				<include>WindowTitleCommons</include>
-				<label>$LOCALIZE[31502]</label>
-			</control>
-			<control type="label">
-				<include>WindowTitleCommons</include>
-				<label>$INFO[Control.GetLabel(29),[COLOR=blue] - [/COLOR]]</label>
-			</control>
-			<control type="label">
-				<include>WindowTitleCommons</include>
-				<label>$INFO[Control.GetLabel(30),[COLOR=blue] - [/COLOR]]</label>
-			</control>
-		</control>
 		<control type="label" id="29">
 			<description>Empty so we can pass the values up one level</description>
 			<visible>False</visible>
@@ -56,13 +29,13 @@
 			<description>Empty so we can pass the values up one level</description>
 			<visible>False</visible>
 		</control>
+		
 		<control type="group">
 			<description>Small Media Window</description>
 			<left>60</left>
 			<top>159</top>
 			<visible>Control.IsVisible(11) | Control.IsVisible(12)</visible>
-			<include>VisibleFadeEffect</include>
-			<include>Window_OpenClose_Animation</include>		
+		
 			<control type="image">
 				<left>5</left>
 				<top>5</top>
@@ -72,13 +45,13 @@
 				<texture border="5">black.png</texture>
 			</control>
 			<control type="image">
-				<left>5</left>
-				<top>5</top>
-				<width>680</width>
-				<height>390</height>
-				<texture fallback="special://skin/backgrounds/tv.jpg">$INFO[Skin.String(Home_Custom_Back_TV_Folder)]</texture>
-				<include>VisibleFadeEffect</include>
+				<left>150</left>
+				<top>10</top>
+				<width>380</width>
+				<height>380</height>
+				<texture>nosignal.png</texture>
 				<visible>!Player.HasVideo</visible>
+				<animation effect="fade" end="0" time="200">VisibleChange</animation>
 			</control>
 			<control type="videowindow">
 				<left>5</left>
@@ -111,28 +84,13 @@
 				<label>$INFO[VideoPlayer.Title]</label>
 				<visible>Player.HasVideo</visible>
 			</control>
-			<!-- control type="visualisation">
-				<left>85</left>
-				<top>85</top>
-				<width>700</width>
-				<height>390</height>
-				<visible>Player.HasAudio</visible>
-			</control -->
+
 		</control>
 
 		<control type="group" id="50">
-			<include>Window_OpenClose_Animation</include>
-			<include>EPGTimelineView</include>--> <!-- view id = 10 -->
 			<include>LiveTVChannelView</include> <!-- view id = 11 -->
-			<include>LiveRadioChannelView</include> <!-- view id = 12 -->
-			<include>LiveTVRecordingsView</include> <!-- view id = 13 -->
-			<include>LiveTVTimersView</include> <!-- view id = 14 -->
-			<include>LiveTVGuideChannelView</include> <!-- view id = 15 -->
-			<include>LiveTVGuideNowNextView</include> <!-- view id = 16 -->
-			<include>LiveTVSearchView</include> <!-- view id = 17 -->
+
 		</control>
-		<include>CommonNowPlaying</include>
-		<include>BehindDialogFadeOut</include>
 		 
 
 		<control type="image">
@@ -149,7 +107,7 @@
 
 		<control type="group">
 			<left>-250</left>
-			<!-- include>SideBladeLeft</include -->
+
 			<control type="grouplist" id="9000">
 				<left>0</left>
 				<top>110</top>
@@ -160,15 +118,7 @@
 				<onup>9000</onup>
 				<ondown>9000</ondown>
 				<itemgap>0</itemgap>
-				<!--control type="label" id="200">
-					<width>250</width>
-					<height>35</height>
-					<font>font12caps</font>
-					<label>31006</label>
-					<textcolor>blue</textcolor>
-					<align>center</align>
-					<aligny>center</aligny>
-				</control-->
+
 				<control type="button" id="32">
 					<description>TV Channels</description>
 					<left>0</left>
@@ -177,49 +127,7 @@
 					<onfocus>SetFocus(11)</onfocus>
 					<label>19023</label>
 				</control>
-				<!--control type="button" id="33">
-					<description>Radio Channels</description>
-					<left>0</left>
-					<top>40</top>
-					<textwidth>235</textwidth>
-					<include>ButtonCommonValues</include>
-					<label>19024</label>
-					<onleft>12</onleft>
-					<onright>12</onright>
-				</control>
-				<control type="button" id="31">
-					<description>TV Guide</description>
-					<left>0</left>
-					<top>80</top>
-					<textwidth>235</textwidth>
-					<include>ButtonCommonValues</include>
-					<label>$LOCALIZE[19222]: $LOCALIZE[19030]</label>
-				</control>
-				<control type="button" id="34">
-					<description>Recordings</description>
-					<left>0</left>
-					<top>120</top>
-					<textwidth>235</textwidth>
-					<include>ButtonCommonValues</include>
-					<label>19163</label>
-				</control>
-				<control type="button" id="35">
-					<description>Timers</description>
-					<left>0</left>
-					<top>160</top>
-					<textwidth>235</textwidth>
-					<include>ButtonCommonValues</include>
-					<label>19040</label>
-				</control>
-				<control type="button" id="36">
-					<description>Search</description>
-					<left>0</left>
-					<top>200</top>
-					<textwidth>235</textwidth>
-					<include>ButtonCommonValues</include>
-					<label>137</label>
-				</control>
-				<include>CommonNowPlaying_Controls</include-->
+			
 			</control>
 		</control>
 

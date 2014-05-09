@@ -26,11 +26,7 @@
 
 		
 <control type="label" id="3100">
-	<left>-10</left>
-	<top>-10</top>
-	<width>1</width>
-	<height>1</height>
-	<animation effect="fade" start="1" end="0" time="0" condition="true">Conditional</animation>
+	<include>HiddenButton</include>
 </control>
 
 	<control type="group">

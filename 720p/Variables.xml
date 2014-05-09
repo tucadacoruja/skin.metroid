@@ -22,6 +22,13 @@
 		<value condition="SubString(Control.GetLabel(304),*)">FF324a76</value>
 		<value>FF5E5E5E</value>
 	</variable>
+	
+	<variable name="ClearLogo">
+		<value condition="Container.Content(tvshows)">$INFO[ListItem.Art(tvshow.clearlogo)]</value>
+		<!-- value condition="Container.Content(songs) | Container.Content(artists)">$INFO[ListItem.Art(clearlogo)]</value -->
+		<value>$INFO[ListItem.Art(clearlogo)]</value>
+	</variable>
+	$INFO[ListItem.Art(tvshow.clearlogo)]
 				
 	<variable name="PluginWidget1Art">
 
@@ -95,15 +102,15 @@
 	<variable name="Padded_episodes">
 		<value condition="IntegerGreaterThan(Container(8001).ListItem.Episode,9) + Window.IsVisible(home)">$INFO[Container(8001).ListItem.Episode,E]</value>
 		<value condition="!IntegerGreaterThan(Container(8001).ListItem.Episode,9) + Window.IsVisible(home)">$INFO[Container(8001).ListItem.Episode,E0]</value>
-		<value condition="IntegerGreaterThan(ListItem.Episode,9)">$INFO[ListItem.Episode]</value>
-		<value condition="!IntegerGreaterThan(ListItem.Episode,9)">$INFO[ListItem.Episode,0]</value>
+		<value condition="IntegerGreaterThan(ListItem.Episode,9) + Container.Content(episodes)">$INFO[ListItem.Episode]</value>
+		<value condition="!IntegerGreaterThan(ListItem.Episode,9) + Container.Content(episodes)">$INFO[ListItem.Episode,0]</value>
 	</variable>
 	
 	<variable name="Padded_season">
 		<value condition="IntegerGreaterThan(Container(8001).ListItem.Season,9) + Window.IsVisible(home)">$INFO[Container(8001).ListItem.Season,S]</value>
 		<value condition="!IntegerGreaterThan(Container(8001).ListItem.Season,9) + Window.IsVisible(home)">$INFO[Container(8001).ListItem.Season,S0]</value>
-		<value condition="IntegerGreaterThan(ListItem.Season,9)">$INFO[ListItem.Season]</value>
-		<value condition="!IntegerGreaterThan(ListItem.Season,9)">$INFO[ListItem.Season,0]</value>
+		<value condition="IntegerGreaterThan(ListItem.Season,9) + Container.Content(episodes)">$INFO[ListItem.Season]</value>
+		<value condition="!IntegerGreaterThan(ListItem.Season,9) + Container.Content(episodes)">$INFO[ListItem.Season,0]</value>
 	</variable>
 	
 	<variable name="Info_Poster">
@@ -179,6 +186,35 @@
 		<value condition="!IsEmpty(ListItem.Title)">$INFO[ListItem.Title]</value>
 		<value>$INFO[ListItem.Label]</value>
 	</variable>
+	
+	<variable name="LogoDiffuse">
+		<value condition="!IsEmpty(ListItem.Art(clearlogo))">D7E5E5E5</value>
+		<value>FFFFFFFF</value>
+	</variable>
+	
+	<variable name="LogoIcon">
+		<value condition="!IsEmpty(ListItem.Art(clearlogo))">$INFO[ListItem.Art(clearlogo)]</value>
+		<!--value condition="!IsEmpty($ESCINFO[Skin.String(Music_Folder_Path)]$ESCINFO[ListItem.Artist]/logo.png)">$INFO[Skin.String(Music_Folder_Path)]$INFO[ListItem.Artist]/logo.png</value -->
+		<value condition="IsEmpty(ListItem.Art(thumb)) + IsEmpty(ListItem.Art(fanart))">$INFO[ListItem.Icon]</value>
+	</variable>
+	
+	<variable name="MusicOSDcolorVAR">
+		<value condition="Stringcompare(Skin.String(MusicOSDButtonColor),white)">$LOCALIZE[31259]</value>
+		<value>$LOCALIZE[31260]</value>
+	</variable>
+	<variable name="OSDcolorVAR">
+		<value condition="Stringcompare(Skin.String(OSDButtonColor),white)">$LOCALIZE[31259]</value>
+		<value>$LOCALIZE[31260]</value>
+	</variable>
+	
+	
+	<variable name="GeneralLabel2">
+		<value condition="Container.Content(episodes)">$VAR[Padded_season,S]$VAR[Padded_episodes,E] $INFO[ListItem.Property(UnWatchedEpisodes),$LOCALIZE[31180]] $INFO[ListItem.Year] $INFO[ListItem.Genre,$LOCALIZE[31051]]</value>
+		<value condition="Container.Content(songs) | Container.Content(albums)">$INFO[ListItem.Artist] $INFO[ListItem.Year] $INFO[ListItem.Genre,$LOCALIZE[31051]: ]</value>
+		<value condition="Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons)">$INFO[ListItem.Property(UnWatchedEpisodes),, $LOCALIZE[31180]]  $INFO[ListItem.Year] $INFO[ListItem.Genre,$LOCALIZE[31051]: ]</value>
+		<value condition="Container.Content(artists)">$INFO[ListItem.Property(Artist_Formed)] $INFO[ListItem.Property(Artist_Genre)]</value>
+	</variable>
+
 
 	<variable name="Landscape_Header">
 		<value condition="Container.Content(episodes) + StringCompare(Container.FolderPath,videodb://recentlyaddedepisodes/)">$INFO[ListItem.Title]</value>
@@ -194,6 +230,7 @@
 		<value condition="Container.Content(seasons) + !IsEmpty(ListItem.Art(season.fanart))">$INFO[ListItem.Art(season.fanart)]</value>
 		<value condition="[SubString(Container.FolderPath,addons,left) | SubString(Container.FolderPath,plugin,left)] + !IsEmpty(ListItem.Art(thumb))">$INFO[ListItem.Art(thumb)]</value>
 		<value condition="[Container.Content(movies) | Container.Content(tvshows) | Container.Content(artists)] + !IsEmpty(ListItem.Art(fanart))">$INFO[ListItem.Art(fanart)]</value>
+		<value condition="[Container.Content(songs)] + IsEmpty(ListItem.Art(thumb))">$INFO[ListItem.Art(fanart)]</value>
 
 		<value>$INFO[ListItem.Art(thumb)]</value>
 	</variable>

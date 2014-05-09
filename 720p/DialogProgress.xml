@@ -25,11 +25,7 @@
 
 
 <!--control type="textbox" id="9">
-	<left>-10</left>
-	<top>-10</top>
-	<width>1</width>
-	<height>1</height>
-	<visible>false</visible>
+	<include>HiddenButton</include>
 </control-->
 
 	<control type="image">

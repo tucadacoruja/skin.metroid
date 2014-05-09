@@ -49,7 +49,7 @@
 				<texturesliderbar>empty.png</texturesliderbar>
 				<textureslidernib>empty.png</textureslidernib>
 				<textureslidernibfocus>empty.png</textureslidernibfocus>
-				<colordiffuse>$INFO[Skin.String(OSDColorString)]</colordiffuse>
+				<!-- colordiffuse>$INFO[Skin.String(OSDColorString)]</colordiffuse -->
 			</control>
 			<control type="slider" id="1">
 				<description>Volume Slider</description>
@@ -370,6 +370,7 @@
 			<onright>50</onright>
 			<focusposition>2</focusposition>
 			<animation effect="fade" start="0" end="100" time="350" delay="100">WindowOpen</animation>
+			<animation effect="slide" start="0,-300" end="0,0" time="300">WindowOpen</animation>
 			<animation effect="slide" start="0,0" end="0,-300" time="400">WindowClose</animation>
 			
 			<visible>![Window.IsActive(142) | Window.IsActive(145) | Window.IsActive(10140) | Window.IsVisible(PVROSDChannels)]</visible>
@@ -531,6 +532,7 @@
 			
 			<focusposition>2</focusposition>
 			<animation effect="fade" start="0" end="100" time="300" >WindowOpen</animation>
+			<animation effect="slide" start="0,-300" end="0,0" time="300">WindowOpen</animation>
 			<animation effect="slide" start="0,0" end="0,-300" time="400" >WindowClose</animation>
 			<visible>![Window.IsActive(142) | Window.IsActive(145) | Window.IsActive(10140) | Window.IsVisible(PVROSDChannels)]</visible>
 			
@@ -555,7 +557,7 @@
 				<texturenofocus colordiffuse="$INFO[Skin.String(OSDColorString)]">osd/play.png</texturenofocus>
 				<usealttexture>Player.Playing</usealttexture>
 				<alttexturefocus >osd/pause.png</alttexturefocus>
-				<alttexturenofocus colordiffuse="FF95b2d0">osd/pause.png</alttexturenofocus>
+				<alttexturenofocus colordiffuse="$INFO[Skin.String(OSDColorString)]">osd/pause.png</alttexturenofocus>
 				<onclick>playercontrol(play)</onclick>
 				<animation effect="zoom" start="100" end="120" center="auto" time="100">Focus</animation>
 				<animation effect="zoom" start="120" end="100" center="auto" time="100">UnFocus</animation>

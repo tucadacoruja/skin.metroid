@@ -37,11 +37,11 @@
 					<left>584</left>
 					<top>160</top>
 					<width>254</width>
-					<height>290</height>
+					<height>365</height>
 					<aspectratio align="center" aligny="top">scale</aspectratio>
 					<fadetime>150</fadetime>
 					
-					<!--colordiffuse>7DFFFFFF</colordiffuse-->
+					<colordiffuse>F7E5E5E5</colordiffuse>
 					<bordersize>3</bordersize>
 					<texture background="true" >$VAR[PosterThumbs]</texture>
 				</control>
@@ -60,7 +60,7 @@
 				
 				<control type="grouplist">
 					<left>625</left>
-					<top>470</top>
+					<top>530</top>
 					<width>200</width>
 					<height>300</height>
 					<orientation>vertical</orientation>
@@ -74,7 +74,7 @@
 						<label>$INFO[ListItem.Duration,, minutes]</label>
 						<visible>!IsEmpty(ListItem.Duration)</visible>
 					</control>
-					<control type="label">
+					<!-- control type="label">
 						<include>ListExtraInfo</include>
 						<label>$INFO[ListItem.Director]</label>
 						<visible>!IsEmpty(ListItem.Director)</visible>
@@ -83,7 +83,7 @@
 						<include>ListExtraInfo</include>
 						<label>$INFO[ListItem.Studio]</label>
 						<visible>!IsEmpty(ListItem.Studio)</visible>
-					</control>
+					</control -->
 					
 
 				</control>
@@ -328,7 +328,7 @@
 				<onright>noop</onright>
 				<onup>50</onup>
 				<ondown>50</ondown>
-				<viewtype label="List">list</viewtype>
+				<viewtype label="31265">list</viewtype>
 				<pagecontrol>60</pagecontrol>
 				<scrolltime>2</scrolltime>
 				<preloaditems>2</preloaditems>
@@ -423,10 +423,10 @@
 					</control>
 					<control type="image">
 						<left>550</left>
-						<top>11</top>
+						<top>7</top>
 						<width>50</width>
 						<height>30</height>
-						<colordiffuse>55ffffff</colordiffuse>
+						<colordiffuse>ACFFFFFF</colordiffuse>
 						<aspectratio align="center" aligny="center">keep</aspectratio>
 						<texture>$INFO[ListItem.VideoResolution,flags/video/resolution/,.png]</texture>
 						<visible>Container.Content(Movies) | Container.Content(Episodes) | Window.IsVisible(VideoPlaylist)</visible>
@@ -561,10 +561,10 @@
 						</control>
 						<control type="image">
 							<left>550</left>
-							<top>11</top>
+							<top>7</top>
 							<width>50</width>
 							<height>30</height>
-							<colordiffuse>ffcccccc</colordiffuse>
+							<colordiffuse>ACFFFFFF</colordiffuse>
 							<aspectratio align="center" aligny="center">keep</aspectratio>
 							<texture>$INFO[ListItem.VideoResolution,flags/video/resolution/,.png]</texture>
 							<visible>Container.Content(Movies) | Container.Content(Episodes) | Window.IsVisible(VideoPlaylist)</visible>

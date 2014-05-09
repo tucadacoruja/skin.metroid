@@ -5,92 +5,52 @@
 <allowoverlay>yes</allowoverlay>
 
 
- <views>602,603,579,523,51,50</views> 
+ <views>602,603,579,523,51,637,50</views> 
 <controls>
 
 <control type="button" id="2">
-	<left>-10</left>
-	<top>-10</top>
-	<width>1</width>
-	<height>1</height>
-	<animation effect="fade" start="1" end="0" time="0" condition="true">Conditional</animation>
+	<include>HiddenButton</include>
 </control>
 <control type="button" id="3">
-	<left>-10</left>
-	<top>-10</top>
-	<width>1</width>
-	<height>1</height>
-	<animation effect="fade" start="1" end="0" time="0" condition="true">Conditional</animation>
+	<include>HiddenButton</include>
 </control>
 <control type="togglebutton" id="4">
-	<left>-10</left>
-	<top>-10</top>
-	<width>1</width>
-	<height>1</height>
-	<animation effect="fade" start="1" end="0" time="0" condition="true">Conditional</animation>
+	<include>HiddenButton</include>
 </control>
 <control type="button" id="8">
-	<left>-10</left>
-	<top>-10</top>
-	<width>1</width>
-	<height>1</height>
-	<animation effect="fade" start="1" end="0" time="0" condition="true">Conditional</animation>
+	<include>HiddenButton</include>
 </control>
 <control type="label" id="12">
-	<left>-10</left>
-	<top>-10</top>
-	<width>1</width>
-	<height>1</height>
-	<animation effect="fade" start="1" end="0" time="0" condition="true">Conditional</animation>
+	<include>HiddenButton</include>
 </control>
 <control type="label" id="15">
-	<left>-10</left>
-	<top>-10</top>
-	<width>1</width>
-	<height>1</height>
-	<animation effect="fade" start="1" end="0" time="0" condition="true">Conditional</animation>
+	<include>HiddenButton</include>
 </control>
 <control type="label" id="18">
-	<left>-10</left>
-	<top>-10</top>
-	<width>1</width>
-	<height>1</height>
-	<animation effect="fade" start="1" end="0" time="0" condition="true">Conditional</animation>
+	<include>HiddenButton</include>
 </control>
 	
 <!-- -for filter sendclick 19- -->
 <control type="button" id="19">
-	<left>0</left>
-	<top>0</top>
-	<width>1</width>
-	<height>1</height>
 	<description>Filter</description>
-	<label>-</label>
+	<include>HiddenButton</include>
 </control>
 <!-- -for filter sendclick 17- -->
 <control type="button" id="17">
-	<left>0</left>
-	<top>0</top>
-	<width>1</width>
-	<height>1</height>
 	<description>lookup</description>
-	<label>-</label>
+	<include>HiddenButton</include>
 </control>
 <!-- -for filter sendclick 16- -->
 <control type="button" id="16">
-	<left>0</left>
-	<top>0</top>
-	<width>1</width>
-	<height>1</height>
 	<description>party</description>
-	<label>-</label>
+	<include>HiddenButton</include>
 </control>
 
 <include>VideoWindow</include>	
 <include>MainMenu</include>
 <include>GeneralFanart</include>
 <include>Background</include>
-
+<include>LogoPanel</include><!-- 637 -->
 <include>Polaroid</include>
 <include>List</include>
 <include>Panel</include><!-- -603 --> 

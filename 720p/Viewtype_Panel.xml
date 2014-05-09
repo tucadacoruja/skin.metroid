@@ -33,7 +33,7 @@
 				<ondown>730</ondown>
 				<onleft>603</onleft>
 				<onright>603</onright>
-				<viewtype label="Panel">info</viewtype>
+				<viewtype label="31264">info</viewtype>
 				<orientation>horizontal</orientation>
 				<pagecontrol>730</pagecontrol>
 				<focusposition>0</focusposition>

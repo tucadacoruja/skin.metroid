@@ -8,41 +8,23 @@
 <controls>
 
 <control type="button" id="2">
-	<left>-10</left>
-	<top>-10</top>
-	<width>1</width>
-	<height>1</height>
+	<include>HiddenButton</include>
 </control>
 <control type="button" id="3">
-	<left>-10</left>
-	<top>-10</top>
-	<width>1</width>
-	<height>1</height>
+	<include>HiddenButton</include>
 </control>
 <control type="togglebutton" id="4">
-	<left>-10</left>
-	<top>-10</top>
-	<width>1</width>
-	<height>1</height>
+	<include>HiddenButton</include>
 </control>
 <control type="radiobutton" id="5">
 	<description>Enable auto-updates</description>
-	<left>-10</left>
-	<top>-10</top>
-	<width>1</width>
-	<height>1</height>
+	<include>HiddenButton</include>
 </control>
 <control type="radiobutton" id="6">
-	<left>-10</left>
-	<top>-10</top>
-	<width>1</width>
-	<height>1</height>
+	<include>HiddenButton</include>
 </control>
 <control type="radiobutton" id="7">
-	<left>-10</left>
-	<top>-10</top>
-	<width>1</width>
-	<height>1</height>
+	<include>HiddenButton</include>
 </control>
 	
 <include>VideoWindow</include>	

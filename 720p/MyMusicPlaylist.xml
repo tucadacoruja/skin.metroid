@@ -10,81 +10,37 @@
 <controls>
 
 <control type="button" id="2">
-	<left>-10</left>
-	<top>-10</top>
-	<width>1</width>
-	<height>1</height>
-	<animation effect="fade" start="1" end="0" time="0" condition="true">Conditional</animation>
+	<include>HiddenButton</include>
 </control>
 <control type="button" id="3">
-	<left>-10</left>
-	<top>-10</top>
-	<width>1</width>
-	<height>1</height>
-	<animation effect="fade" start="1" end="0" time="0" condition="true">Conditional</animation>
+	<include>HiddenButton</include>
 </control>
 <control type="togglebutton" id="4">
-	<left>-10</left>
-	<top>-10</top>
-	<width>1</width>
-	<height>1</height>
-	<animation effect="fade" start="1" end="0" time="0" condition="true">Conditional</animation>
+	<include>HiddenButton</include>
 </control>
 <control type="label" id="12">
-	<left>-10</left>
-	<top>-10</top>
-	<width>1</width>
-	<height>1</height>
-	<animation effect="fade" start="1" end="0" time="0" condition="true">Conditional</animation>
+	<include>HiddenButton</include>
 </control>
 <control type="button" id="20">
-	<left>-10</left>
-	<top>-10</top>
-	<width>1</width>
-	<height>1</height>
-	<animation effect="fade" start="1" end="0" time="0" condition="true">Conditional</animation>
+	<include>HiddenButton</include>
 </control>
 <control type="button" id="21">
-	<left>-10</left>
-	<top>-10</top>
-	<width>1</width>
-	<height>1</height>
-	<animation effect="fade" start="1" end="0" time="0" condition="true">Conditional</animation>
+	<include>HiddenButton</include>
 </control>
 <control type="button" id="22">
-	<left>-10</left>
-	<top>-10</top>
-	<width>1</width>
-	<height>1</height>
-	<animation effect="fade" start="1" end="0" time="0" condition="true">Conditional</animation>
+	<include>HiddenButton</include>
 </control>
 <control type="button" id="23">
-	<left>-10</left>
-	<top>-10</top>
-	<width>1</width>
-	<height>1</height>
-	<animation effect="fade" start="1" end="0" time="0" condition="true">Conditional</animation>
+	<include>HiddenButton</include>
 </control>
 <control type="button" id="24">
-	<left>-10</left>
-	<top>-10</top>
-	<width>1</width>
-	<height>1</height>
-	<animation effect="fade" start="1" end="0" time="0" condition="true">Conditional</animation>
+	<include>HiddenButton</include>
 </control>
 <control type="button" id="25">
-	<left>-10</left>
-	<top>-10</top>
-	<width>1</width>
-	<height>1</height>
-	<animation effect="fade" start="1" end="0" time="0" condition="true">Conditional</animation>
+	<include>HiddenButton</include>
 </control>
 <control type="button" id="26">
-	<left>-10</left>
-	<top>-10</top>
-	<width>1</width>
-	<height>1</height>
-	<animation effect="fade" start="1" end="0" time="0" condition="true">Conditional</animation>
+	<include>HiddenButton</include>
 </control>
 
 

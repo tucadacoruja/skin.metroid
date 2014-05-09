@@ -954,17 +954,6 @@
 						<selected>Skin.HasSetting(DlLogosStartup)</selected>
 					</control>
 					
-					
-					
-					<control type="radiobutton" id="108">
-						<include>SettingsButton</include>
-						<description>Show skin help</description>
-						<label>$LOCALIZE[31200]</label>
-						
-						<onclick>Skin.ToggleSetting(ShowSkinHelp)</onclick>
-						<selected>!Skin.HasSetting(ShowSkinHelp)</selected>
-					</control>
-					
 					<control type="radiobutton" id="109">
 						<include>SettingsButton</include>
 						<description>Show volume bar</description>
@@ -974,7 +963,37 @@
 						<selected>Skin.HasSetting(HideVolumeBar)</selected>
 					</control>
 					
-					<control type="radiobutton" id="110">
+					<control type="button" id="110">
+						<include>SettingsButton</include>
+						<label2>$VAR[MusicOSDcolorVAR]</label2>
+						<label>Music OSD color</label>
+						
+						<onclick condition="Stringcompare(Skin.String(MusicOSDButtonColor),white)">Skin.SetString(MusicOSDColorString,white)</onclick>
+						<onclick condition="Stringcompare(Skin.String(MusicOSDButtonColor),white)">Skin.SetString(MusicOSDButtonColor,hellblue)</onclick>
+						
+						<onclick condition="Stringcompare(Skin.String(MusicOSDButtonColor),hellblue)">Skin.SetString(MusicOSDColorString,happyblue)</onclick>
+						<onclick condition="Stringcompare(Skin.String(MusicOSDButtonColor),hellblue)">Skin.SetString(MusicOSDButtonColor,white)</onclick>
+
+					</control>
+					
+					<control type="button" id="111">
+						<include>SettingsButton</include>
+						<label2>$VAR[OSDcolorVAR]</label2>
+						<label>Video OSD color</label>
+						
+						<onclick condition="Stringcompare(Skin.String(OSDButtonColor),white)">Skin.SetString(OSDColorString,white)</onclick>
+						<onclick condition="Stringcompare(Skin.String(OSDButtonColor),white)">Skin.SetString(OSDButtonColor,hellblue)</onclick>
+						<onclick condition="Stringcompare(Skin.String(OSDButtonColor),white)">Skin.SetString(OSDDialogsBGColor,darkhellblue)</onclick>
+						<onclick condition="Stringcompare(Skin.String(OSDButtonColor),white)">Skin.SetString(OSDNibColor,darkhellblue)</onclick>
+						
+						<onclick condition="Stringcompare(Skin.String(OSDButtonColor),hellblue)">Skin.SetString(OSDColorString,osdblue)</onclick>
+						<onclick condition="Stringcompare(Skin.String(OSDButtonColor),hellblue)">Skin.SetString(OSDButtonColor,white)</onclick>
+						<onclick condition="Stringcompare(Skin.String(OSDButtonColor),hellblue)">Skin.SetString(OSDDialogsBGColor,brightblue)</onclick>
+						<onclick condition="Stringcompare(Skin.String(OSDButtonColor),hellblue)">Skin.SetString(OSDNibColor,brightblue)</onclick>
+						
+					</control>
+					
+					<control type="radiobutton" id="112">
 						<include>SettingsButton</include>
 						<description>Alphabetical keyboard</description>
 						<label>$LOCALIZE[31250]</label>
@@ -982,8 +1001,17 @@
 						<onclick>Skin.ToggleSetting(AlphabeticalKeyboard)</onclick>
 						<selected>Skin.HasSetting(AlphabeticalKeyboard)</selected>
 					</control>
-										
-					<control type="radiobutton" id="111">
+					
+					<control type="radiobutton" id="113">
+						<include>SettingsButton</include>
+						<description>Show skin help</description>
+						<label>$LOCALIZE[31200]</label>
+						
+						<onclick>Skin.ToggleSetting(ShowSkinHelp)</onclick>
+						<selected>!Skin.HasSetting(ShowSkinHelp)</selected>
+					</control>
+									
+					<control type="radiobutton" id="114">
 						<include>SettingsButton</include>
 						<description>Show CPU and FPS</description>
 						<label>$LOCALIZE[31254]</label>

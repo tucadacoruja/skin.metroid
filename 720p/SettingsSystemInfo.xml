@@ -6,11 +6,7 @@
 <controls>
 
 <control type="label" id="40">
-	<left>-10</left>
-	<top>-10</top>
-	<width>1</width>
-	<height>1</height>
-	<visible>false</visible>
+	<include>HiddenButton</include>
 </control>
 
 

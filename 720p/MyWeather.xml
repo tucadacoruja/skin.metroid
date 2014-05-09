@@ -7,27 +7,16 @@
 <controls>
 
 <control type="button" id="333">
-	<left>-10</left>
-	<top>-10</top>
-	<width>1</width>
-	<height>1</height>
+	<include>HiddenButton</include>
 	<onfocus>SendClick(2600,2)</onfocus>
 	<onfocus>SetFocus(300)</onfocus>
-	<animation effect="fade" start="1" end="0" time="0" condition="true">Conditional</animation>
 </control>
 <control type="button" id="2">
-	<left>-10</left>
-	<top>-10</top>
-	<width>1</width>
-	<height>1</height>
-	<animation effect="fade" start="1" end="0" time="0" condition="true">Conditional</animation>
+	<include>HiddenButton</include>
 </control>
 <control type="spincontrol" id="3">
 	<description>weather location select</description>
-	<left>0</left>
-	<top>-100</top>
-	<width>10</width>
-	<height>10</height>
+	<include>HiddenButton</include>
 </control>
 
 

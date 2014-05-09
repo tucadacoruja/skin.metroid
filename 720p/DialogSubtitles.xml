@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
-  <defaultcontrol>120</defaultcontrol>
-
-  <allowoverlay>yes</allowoverlay>
-
-  <zorder>1</zorder>
-  <controls>
+	<defaultcontrol>120</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+	<zorder>1</zorder>
+	
+	<onload condition="Stringcompare(Skin.String(OSDButtonColor),hellblue)">Skin.SetString(OSDDialogsBGColor,darkhellblue)</onload>
+	<onload condition="Stringcompare(Skin.String(OSDButtonColor),white)">Skin.SetString(OSDDialogsBGColor,brightblue)</onload>
+	
+	<controls>
   
     <control type="group">
 	<animation effect="slide" start="0,0" end="0,170" time="300" condition="Window.IsVisible(virtualkeyboard)">Conditional</animation>

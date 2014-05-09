@@ -6,99 +6,49 @@
 <onload></onload>
 
 
-<views>603,579,504,677,501,709,50,781,602</views>
+<views>603,579,504,677,501,709,50,781,602,637</views>
 <controls>
 
 <control type="button" id="2">
-	<left>-10</left>
-	<top>-10</top>
-	<width>1</width>
-	<height>1</height>
-	<visible>false</visible>
+	<include>HiddenButton</include>
 </control>
 <control type="button" id="3">
-	<left>-10</left>
-	<top>-10</top>
-	<width>1</width>
-	<height>1</height>
-	<visible>false</visible>
+	<include>HiddenButton</include>
 </control>
 <control type="togglebutton" id="4">
-	<left>-10</left>
-	<top>-10</top>
-	<width>1</width>
-	<height>1</height>
-	<visible>false</visible>
+	<include>HiddenButton</include>
 </control>
 <control type="button" id="5">
-	<left>-10</left>
-	<top>-10</top>
-	<width>1</width>
-	<height>1</height>
-	<visible>false</visible>
+	<include>HiddenButton</include>
 </control>
 <control type="button" id="6">
-	<left>-10</left>
-	<top>-10</top>
-	<width>1</width>
-	<height>1</height>
-	<visible>false</visible>
+	<include>HiddenButton</include>
 </control>
 <control type="button" id="8">
-	<left>-10</left>
-	<top>-10</top>
-	<width>1</width>
-	<height>1</height>
-	<visible>false</visible>
+	<include>HiddenButton</include>
 </control>
 <control type="button" id="10">
-	<left>-10</left>
-	<top>-10</top>
-	<width>1</width>
-	<height>1</height>
-	<visible>false</visible>
+	<include>HiddenButton</include>
 </control>
 <control type="label" id="12">
-	<left>-10</left>
-	<top>-10</top>
-	<width>1</width>
-	<height>1</height>
-	<visible>false</visible>
+	<include>HiddenButton</include>
 </control>
 <control type="button" id="15">
-	<left>-10</left>
-	<top>-10</top>
-	<width>1</width>
-	<height>1</height>
-	<visible>false</visible>
+	<include>HiddenButton</include>
 </control>
 <control type="button" id="16">
-	<left>-10</left>
-	<top>-10</top>
-	<width>1</width>
-	<height>1</height>
-	<visible>false</visible>
+	<include>HiddenButton</include>
 </control>
 <control type="label" id="18">
-	<left>-10</left>
-	<top>-10</top>
-	<width>1</width>
-	<height>1</height>
-	<visible>false</visible>
+	<include>HiddenButton</include>
 </control>
 <control type="button" id="19">
-	<left>0</left>
-	<top>0</top>
-	<width>1</width>
-	<height>1</height>
 	<description>Filter</description>
+	<include>HiddenButton</include>
 </control>
 <control type="radiobutton" id="14">
-	<left>0</left>
-	<top>0</top>
-	<width>1</width>
-	<height>1</height>
 	<description>unwatched</description>
+	<include>HiddenButton</include>
 </control>
 
 
@@ -114,7 +64,7 @@
 <include>Banners</include><!-- 709 -->
 <include>PosterFixView</include><!-- 501 -->
 <include>FanartShelf</include><!-- 781 -->
-<!-- include>Episodes</include><!-- 504 -->
+<include>LogoPanel</include><!-- 637 -->
 <include>Panel</include><!-- 603 --> 
 <include>Icons</include><!-- 677 --> 
 <include>PosterView</include><!-- 579 -->

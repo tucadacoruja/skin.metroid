@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+<include name="LogoPanel">
+
+	<control type="group">
+		<include>InfoOpenClose</include>
+		<include>WidgetsAnimation</include>
+		<include>ContextFade</include>	
+		<include>Keyboard</include>
+		<include>Favourites</include>
+		<visible>Control.IsVisible(637)</visible>
+
+			
+
+		
+		<control type="group">
+		<animation effect="slide" start="0,0" end="-260,0" time="600" condition="!Control.HasFocus(301) + !Skin.HasSetting(LockMainMenu)">Conditional</animation>
+		
+			<control type="label">
+				<left>296</left>
+				<top>98</top>
+				<width>870</width>
+				<font>Segoe28</font>
+				<textcolor>F3FFFFFF</textcolor>
+				<scroll>false</scroll>
+				<align>left</align>
+				<label>$VAR[PosterTitle]</label>
+				
+			</control>
+			<control type="label">
+				<left>296</left>
+				<top>126</top>
+				<width>870</width>
+				<font>recent</font>
+				<textcolor>EBFFFFFF</textcolor>
+				<scroll>false</scroll>
+				<align>left</align>
+				<label>$VAR[GeneralLabel2]</label>
+
+			</control>
+		
+						
+			<control type="panel" id="637">
+				<visible>Container.Content(movies) | Container.Content(tvshows) | Container.Content(artists) | Container.Content(albums) | Container.Content(songs) | Container.Content(seasons) | Container.Content(episodes)</visible>
+				
+				<left>295</left>
+				<top>160</top>
+				
+				<include condition="!Skin.HasSetting(LockMainMenu)">LogoViewWidth1</include>
+				<include condition="Skin.HasSetting(LockMainMenu)">LogoViewWidth2</include>
+				
+				<height>525</height>
+				
+				<onleft>57</onleft>
+				<onright>57</onright>
+				<onup>300</onup>
+				<ondown>63</ondown>
+				
+				<pagecontrol>63</pagecontrol>
+				<preloaditems>2</preloaditems>
+				<focusposition>0</focusposition>
+						
+				<viewtype label="31269">info</viewtype>
+				<orientation>horizontal</orientation>
+				
+				<scrolltime tween="Cubic" easing="in">240</scrolltime>
+		
+				
+				
+				<itemlayout height="260" width="410">
+					
+					<control type="image">
+						<left>0</left>
+						<top>0</top>
+						<width>418</width>
+						<height>268</height>
+						<texture background="true" border="22">diffuse/postershadow.png</texture>
+						<align>bottom</align>
+						<aspectratio>stretch</aspectratio>
+						<colordiffuse>70ffffff</colordiffuse>
+						
+					</control>
+					<control type="image">
+						<left>0</left>
+						<top>0</top>
+						<width>400</width>
+						<height>250</height>
+						<aspectratio>scale</aspectratio>
+						<fadetime>200</fadetime>
+						<texture background="true" fallback="DefaultCatch.png">$VAR[Landscape_Image]</texture>
+						<colordiffuse>$VAR[LogoDiffuse]</colordiffuse>
+						
+					</control>
+					<control type="image">
+						<left>15</left>
+						<top>10</top>
+						<width>370</width>
+						<height>230</height>
+						<aspectratio>keep</aspectratio>
+						<fadetime>200</fadetime>
+						<texture>$VAR[LogoIcon]</texture>
+						
+					</control>
+													
+				</itemlayout>
+						
+				<focusedlayout height="260" width="410">
+					
+					<control type="image">
+						<left>0</left>
+						<top>0</top>
+						<width>418</width>
+						<height>268</height>
+						<texture background="true" border="22">diffuse/postershadow.png</texture>
+						<align>bottom</align>
+						<aspectratio>stretch</aspectratio>
+						<colordiffuse>70ffffff</colordiffuse>
+						
+					</control>
+					<control type="image">
+						<left>0</left>
+						<top>0</top>
+						<width>400</width>
+						<height>250</height>
+						<aspectratio>scale</aspectratio>
+						<bordertexture colordiffuse="E1FFFFFF" border="3">white.png</bordertexture>
+						<bordersize>3</bordersize>
+						<fadetime>200</fadetime>
+						<texture fallback="DefaultCatch.png">$VAR[Landscape_Image]</texture>
+						<colordiffuse>$VAR[LogoDiffuse]</colordiffuse>
+					</control>
+					<control type="image">
+						<left>15</left>
+						<top>10</top>
+						<width>370</width>
+						<height>230</height>
+						<aspectratio>keep</aspectratio>
+						<fadetime>200</fadetime>
+						<texture>$VAR[LogoIcon]</texture>
+					</control>
+										
+				</focusedlayout>	
+
+			</control>	
+
+
+		</control>
+
+		
+		
+		<control type="scrollbar" id="63">
+			
+			<texturesliderbackground>buttons/scrollbgH.png</texturesliderbackground>
+			<texturesliderbar>-</texturesliderbar>
+			<texturesliderbarfocus>-</texturesliderbarfocus>
+			<textureslidernib>buttons/scrollnibH.png</textureslidernib>
+			<textureslidernibfocus>buttons/scrollnibH.png</textureslidernibfocus>
+			<orientation>horizontal</orientation>
+			<showonepage>true</showonepage>
+			<left>315</left>
+			<top>700</top>
+			<width>920</width>
+			<height>10</height>
+			<onup>637</onup>
+
+			<animation effect="fade" start="100" end="50" time="200" reversable="false" condition="!Control.HasFocus(63)">Conditional</animation>
+			<animation effect="slide" start="0,0" end="-110,0" time="600" condition="!Control.HasFocus(301) + !Skin.HasSetting(LockMainMenu)">Conditional</animation>
+		</control>
+		
+		
+	</control>
+
+</include>
+	
+</includes>

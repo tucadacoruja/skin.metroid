@@ -146,7 +146,7 @@
 			<height>52</height>
 			<width>52</width>
 			<aspectratio>keep</aspectratio>
-			<texturefocus colordiffuse="FFACACAC">osd/art.png</texturefocus>
+			<texturefocus>osd/art.png</texturefocus>
 			<texturenofocus>osd/art.png</texturenofocus>
 			<onright>14</onright>
 			<onleft>16</onleft>

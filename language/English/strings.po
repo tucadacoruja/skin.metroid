@@ -969,5 +969,46 @@ msgctxt "#31258"
 msgid "Use Posters"
 msgstr "
 
+msgctxt "#31259"
+msgid "White button, blue icon"
+msgstr "
 
+msgctxt "#31260"
+msgid "Blue button, white icon"
+msgstr "
 
+msgctxt "#31261"
+msgid "PosterSplit"
+msgstr "
+
+msgctxt "#31262"
+msgid "PosterFix"
+msgstr "
+
+msgctxt "#31263"
+msgid "Polaroid"
+msgstr "
+
+msgctxt "#31264"
+msgid "Panel"
+msgstr "
+
+msgctxt "#31265"
+msgid "List"
+msgstr "
+
+msgctxt "#31266"
+msgid "Fanart"
+msgstr "
+
+msgctxt "#31267"
+msgid "Icons"
+msgstr "
+
+msgctxt "#31268"
+msgid "Banners"
+msgstr "
+
+msgctxt "#31269"
+msgid "LogoPanel"
+msgstr "

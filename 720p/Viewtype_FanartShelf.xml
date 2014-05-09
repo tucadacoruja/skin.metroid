@@ -11,22 +11,7 @@
 		<visible>Control.IsVisible(781)</visible>
 		
 		<include>WidgetsAnimation</include>
-		<!-- animation type="Visible" reversible="false">
-			<effect type="fade" start="0" end="100" time="650" delay="0" />
-			<effect type="zoom" start="1" end="100" time="330" center="900,360" delay="0" />
-			<effect type="slide" start="0,1700" end="0,0" time="400" delay="100" reversible="false" />
-		</animation>
-		<animation type="Hidden" reversible="false">
-			<effect type="fade" start="100" end="0" time="100" delay="0" />
-		</animation>
-		<animation type="WindowOpen" reversible="false">
-			<effect type="fade" start="0" end="100" time="650" delay="0" />
-			<effect type="zoom" start="1" end="100" time="330" center="900,360" delay="0" />
-			<effect type="slide" start="0,1700" end="0,0" time="400" delay="0" reversible="false" />
-		</animation>
-		<animation type="WindowClose" reversible="false">
-			<effect type="fade" start="100" end="0" time="100" delay="100" />
-		</animation -->
+
 		
 		<control type="wraplist" id="781">
 			<visible>Container.Content(Movies) | Container.Content(TVShows)</visible>
@@ -41,7 +26,7 @@
 			<onup condition="Control.IsVisible(782)">782</onup>
 			<onup condition="!Control.IsVisible(782)">300</onup>
 			<ondown>63</ondown>
-			<viewtype label="Fanart">list</viewtype>
+			<viewtype label="31266">list</viewtype>
 			<pagecontrol>63</pagecontrol>
 			<focusposition>3</focusposition>
 			<movement>3</movement>
@@ -104,7 +89,7 @@
 			<focusedlayout height="280" width="200">
 			
 				<control type="group">
-				<left>3</left>
+				<left>2</left>
 				<visible>Control.HasFocus(781)</visible>
 				<animation reversible="false" effect="zoom" end="0,0,190,280" start="0,100,123,180" center="90,270" time="300" tween="circle" easing="out">focus</animation>
 				<animation reversible="false" effect="zoom" start="0,0,190,280" end="0,104,125,184" center="5,270" time="200" tween="circle" easing="out">unfocus</animation>
@@ -161,7 +146,7 @@
 				<visible>!Control.HasFocus(781)</visible>
 						
 					<control type="image">
-						<left>5</left>
+						<left>0</left>
 						<top>0</top>
 						<width>190</width>
 						<height>280</height>
@@ -172,7 +157,7 @@
 						<colordiffuse>FFEBEBEB</colordiffuse>
 					</control>
 					<control type="image">
-						<left>5</left>
+						<left>0</left>
 						<top>0</top>
 						<width>190</width>
 						<height>280</height>
@@ -183,7 +168,7 @@
 						<texture background="true" fallback="DefaultCatch.png">$INFO[ListItem.Art(poster)]</texture>
 					</control>
 					<control type="image">
-						<left>25</left>
+						<left>20</left>
 						<top>30</top>
 						<width>150</width>
 						<height>190</height>
@@ -195,7 +180,7 @@
 					</control>
 					
 					<control type="image">
-						<left>153</left>
+						<left>151</left>
 						<top>235</top>
 						<width>35</width>
 						<height>45</height>
