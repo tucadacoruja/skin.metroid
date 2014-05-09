@@ -27,7 +27,7 @@
 	
 <control type="group">	
 	<left>70</left>
-	<top>88</top>
+	<top>90</top>
 		<include>Favourites</include>
 
 		<animation type="WindowClose" reversible="false">
@@ -40,8 +40,8 @@
 		</animation>
 			
 	<control type="label">
-		<left>250</left>
-		<top>35</top>
+		<left>246</left>
+		<top>40</top>
 		<width>870</width>
 		<font>Segoe28</font>
 		<label>31242</label>
@@ -161,7 +161,7 @@
 		<align>left</align>
 		<aligny>center</aligny>
 		
-		<label>[COLOR=FAFFFFFF]$INFO[Window.Property(Current.Temperature)][/COLOR][COLOR=36FFFFFF]$INFO[System.TemperatureUnits][/COLOR]</label>
+		<label>[COLOR=FAFFFFFF]$INFO[Window.Property(Current.Temperature)][/COLOR][COLOR=95FFFFFF]$INFO[System.TemperatureUnits][/COLOR]</label>
 		<textcolor>ffffffff</textcolor>
 		
 	</control>	
@@ -174,7 +174,7 @@
 		<info>Window.Property(Day0.Outlook)</info>
 		<font>context</font>
 		<align>left</align>
-		<textcolor>dfDDDDDD</textcolor>
+		<textcolor>white</textcolor>
 	</control>	
 	
 <control type="group">

@@ -47,15 +47,11 @@
 
 	
 <control type="group">
-	<animation type="WindowOpen" reversible="false">
-		<effect type="fade" start="0" end="100" time="550" delay="250" />
-	</animation>
-	<animation type="WindowClose" reversible="false">
-		<effect type="fade" start="100" end="0" time="250" delay="0" />
-	</animation>   
+	<animation effect="fade" start="0" end="100" time="300" >WindowOpen</animation>
+   
 		
 	<control type="grouplist" id="9000">
-		<left>2</left>
+		<left>0</left>
 		<top>66</top>
 		<width>240</width>
 		<height>570</height>
@@ -71,7 +67,7 @@
 			<align>left</align>
 			<textoffsetx>23</textoffsetx>
 			<height>50</height>
-			<width>247</width>
+			<width>249</width>
 			<font>MainMenu21</font>
 			<textcolor>ampm</textcolor>
 			<focusedcolor>white</focusedcolor>
@@ -87,7 +83,7 @@
 			<align>left</align>
 			<textoffsetx>23</textoffsetx>
 			<height>50</height>
-			<width>247</width>
+			<width>249</width>
 			<font>MainMenu21</font>
 			<textcolor>ampm</textcolor>
 			<focusedcolor>white</focusedcolor>
@@ -101,7 +97,7 @@
 			<align>left</align>
 			<textoffsetx>23</textoffsetx>
 			<height>50</height>
-			<width>247</width>
+			<width>249</width>
 			<font>MainMenu21</font>
 			<textcolor>ampm</textcolor>
 			<focusedcolor>white</focusedcolor>
@@ -115,7 +111,7 @@
 			<align>left</align>
 			<textoffsetx>23</textoffsetx>
 			<height>50</height>
-			<width>247</width>
+			<width>249</width>
 			<font>MainMenu21</font>
 			<textcolor>ampm</textcolor>
 			<focusedcolor>white</focusedcolor>
@@ -129,7 +125,7 @@
 			<align>left</align>
 			<textoffsetx>23</textoffsetx>
 			<height>50</height>
-			<width>247</width>
+			<width>249</width>
 			<font>MainMenu21</font>
 			<textcolor>ampm</textcolor>
 			<focusedcolor>white</focusedcolor>

@@ -57,7 +57,7 @@
 				
 			<control type="list" id="9000">
 				<description>Button Area</description>
-				<left>2</left>
+				<left>0</left>
 				<top>65</top>
 				<width>300</width>
 				<height>570</height>
@@ -66,9 +66,10 @@
 				<onup>301</onup>
 				<ondown>444</ondown>
 				<pagecontrol>-</pagecontrol>
-				<scrolltime tween="cubic" easing="inout">325</scrolltime>
+				<scrolltime>2</scrolltime>
 				<orientation>vertical</orientation>
-							
+				
+				<animation effect="fade" start="0" end="100" time="300" >WindowOpen</animation>
 				<itemlayout height="50" width="247">
 					
 					<control type="label">
@@ -93,7 +94,7 @@
 						<description>list line image</description>
 						<left>0</left>
 						<top>2</top>
-						<width>247</width>
+						<width>249</width>
 						<height>50</height>
 						<aspectratio>stretch</aspectratio>
 						<texture>black.png</texture>
