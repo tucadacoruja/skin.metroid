@@ -43,7 +43,7 @@
 					
 					<colordiffuse>F7E5E5E5</colordiffuse>
 					<bordersize>3</bordersize>
-					<texture background="true" >$VAR[PosterThumbs]</texture>
+					<texture>$VAR[PosterThumbs]</texture>
 				</control>
 				
 				<control type="image">
@@ -52,10 +52,10 @@
 					<width>254</width>
 					<height>290</height>
 					<aspectratio align="center" aligny="center">keep</aspectratio>
-					<texture background="true"  >$VAR[Fallback_Icon]</texture>
-					<animation effect="fade" start="0" end="80" time="0" condition="true">Conditional</animation>
 					
 					<colordiffuse>EBFFFFFF</colordiffuse>
+					<texture>$INFO[ListItem.Icon]</texture>
+					<visible>IsEmpty(ListItem.Art(thumb)</visible>
 				</control>
 				
 				<control type="grouplist">
@@ -178,7 +178,7 @@
 				<aspectratio>stretch</aspectratio>
 				<texture>white.png</texture>
 				<colordiffuse>22FFFFFF</colordiffuse>
-				<colordiffuse>white</colordiffuse>
+				
 			</control>
 			
 			<control type="image">
@@ -193,6 +193,19 @@
 				<bordersize>3</bordersize>
 				<texture background="true" >$VAR[PosterThumbs]</texture>
 
+			</control>
+			<control type="image">
+				<left>604</left>
+				<top>160</top>
+				<width>254</width>
+				<height>290</height>
+				<aspectratio align="center" aligny="top">keep</aspectratio>
+				<fadetime>150</fadetime>
+				
+				<!-- colordiffuse>ACFFFFFF</colordiffuse -->
+				<bordersize>3</bordersize>
+				<texture>$INFO[ListItem.Icon]</texture>
+				<visible>IsEmpty(ListItem.Art(thumb)</visible>
 			</control>
 			
 			<control type="image">
@@ -308,9 +321,9 @@
 			<animation effect="slide" start="0,0" end="-200,0" time="400" condition="!Control.HasFocus(301) + !Skin.HasSetting(LockMainMenu)">Conditional</animation>
 			
 			<control type="image">
-				<left>317</left>
+				<left>327</left>
 				<top>130</top>
-				<width>615</width>
+				<width>605</width>
 				<height>440</height>
 				<aspectratio>stretch</aspectratio>
 				<texture>white.png</texture>
@@ -320,7 +333,7 @@
 			</control>
 				
 			<control type="list" id="50">
-				<left>315</left>
+				<left>328</left>
 				<top>130</top>
 				<width>1000</width>
 				<height>440</height>
@@ -462,9 +475,9 @@
 						</control>
 					
 						<control type="image">
-							<left>1</left>
+							<left>0</left>
 							<top>0</top>
-							<width>617</width>
+							<width>604</width>
 							<height>44</height>
 							<aspectratio>stretch</aspectratio>
 							<texture>black.png</texture>
@@ -475,7 +488,7 @@
 						<control type="image">
 							<left>0</left>
 							<top>0</top>
-							<width>818</width>
+							<width>806</width>
 							<height>44</height>
 							<aspectratio>stretch</aspectratio>
 							<texture>black.png</texture>

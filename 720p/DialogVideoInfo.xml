@@ -35,7 +35,7 @@
 	<animation effect="fade" start="100" end="0" time="200" reversible="false">WindowClose</animation>
 	<animation effect="fade" start="100" end="0" time="200" >Visible</animation>
 	<animation effect="fade" start="0" end="100" time="200" >Hidden</animation>
-	<!--visible>![Window.IsVisible(addonsettings) | Window.IsVisible(virtualkeyboard) | Window.IsVisible(filebrowser) | Window.IsVisible(selectdialog) | Window.IsActive(DialogSelect.xml)]</visible-->
+	<!-- visible>![Window.IsVisible(addonsettings) | Window.IsVisible(virtualkeyboard) | Window.IsVisible(filebrowser) | Window.IsVisible(selectdialog) | Window.IsActive(DialogSelect.xml)]</visible -->
 
 	<!-- fade selectdialog instead of change visible condition due to bug -->
 	<animation effect="fade" start="100" end="0" time="200" condition="Window.IsVisible(addonsettings) | Window.IsVisible(virtualkeyboard) | Window.IsVisible(filebrowser) | Window.IsVisible(selectdialog) | Window.IsActive(DialogSelect.xml)">Conditional</animation>
@@ -568,13 +568,13 @@
 						<left>0</left>
 						<top>50</top>
 			
-						<textcolor>95FFFFFF</textcolor>
+						<textcolor>ACFFFFFF</textcolor>
 						<font>font13</font>
 						<aligny>top</aligny>
 						<wrapmultiline>true</wrapmultiline>
 						<autoscroll>false</autoscroll>
 						<pagecontrol>71</pagecontrol>
-						<width>340</width>
+						<width>320</width>
 						<height>435</height>
 						<label>$VAR[Info_Description]</label>
 						

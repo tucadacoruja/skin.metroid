@@ -40,7 +40,7 @@
 				<scrolltime tween="Cubic" easing="in">240</scrolltime>
 			
 				<preloaditems>2</preloaditems>
-				<animation effect="slide" start="0,0" end="-215,0" time="400" condition="!Control.HasFocus(301) + !Skin.HasSetting(LockMainMenu)">Conditional</animation>
+				<animation effect="slide" start="0,0" end="-215,0" time="600" condition="!Control.HasFocus(301) + !Skin.HasSetting(LockMainMenu)">Conditional</animation>
 								
 				<itemlayout width="192" height="288">
 					<control type="group">
@@ -162,7 +162,7 @@
 							
 						</control -->
 						
-						<!--control type="image">
+						<!-- control type="image">
 							<left>148</left>
 							<top>236</top>
 							<width>24</width>
@@ -171,7 +171,7 @@
 							<aspectratio>stretch</aspectratio>
 							<colordiffuse>FFABABAB</colordiffuse>
 							<visible>!Skin.HasSetting(WatchedOverlays)</visible>
-						</control-->
+						</control -->
 						<control type="image">
 							<left>151</left>
 							<top>90</top>
@@ -304,7 +304,7 @@
 							
 						</control>
 						
-						<!--control type="image">
+						<!-- control type="image">
 							
 							<left>148</left>
 							<top>236</top>
@@ -313,7 +313,7 @@
 							<texture>$INFO[ListItem.Overlay]</texture>
 							<aspectratio>stretch</aspectratio>
 							<visible>!Skin.HasSetting(WatchedOverlays)</visible>
-						</control-->
+						</control -->
 						<control type="image">
 							<left>151</left>
 							<top>90</top>

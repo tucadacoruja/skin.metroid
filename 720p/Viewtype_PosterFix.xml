@@ -48,23 +48,23 @@
 						<aspectratio>stretch</aspectratio>
 						<bordertexture border="3">DefaultCatch.png</bordertexture>
 						<bordersize>3</bordersize>
-						<!-- fadetime>200</fadetime -->
-						<texture fallback="DefaultCatch.png">$INFO[ListItem.Art(poster)]</texture>
-						<!-- animation effect="fade" start="0" end="85" time="0" condition="true">Conditional</animation -->
-						<colordiffuse>D7FFFFFF</colordiffuse>
-						<!-- visible>![stringcompare(ListItem(-1).Label,ListItem.Label) + Substring(Container.FolderPath,videodb://movies/sets/)]</visible>
-						<visible>!stringcompare(ListItem(-2).Label,ListItem.Label) + Substring(Container.FolderPath,videodb://movies/sets/)</visible -->
 
+						<texture fallback="DefaultCatch.png">$INFO[ListItem.Art(poster)]</texture>
+
+						<colordiffuse>D7FFFFFF</colordiffuse>
+
+						
 					</control>
 					<control type="image">
-						<left>10</left>
+						<left>12</left>
 						<top>190</top>
 						<width>100</width>
-						<height>120</height>
+						<height>100</height>
 						<aspectratio>stretch</aspectratio>
-						<texture>$VAR[Fallback_Icon]</texture>
-						<!-- animation effect="fade" start="0" end="80" time="0" condition="true">Conditional</animation -->
+						<texture>$INFO[ListItem.Icon]</texture>
+
 						<colordiffuse>C2FFFFFF</colordiffuse>
+						<visible>IsEmpty(ListItem.Art(poster))</visible>
 					</control>
 					
 				</itemlayout>
@@ -188,15 +188,16 @@
 			</control>
 			<control type="image">
 				<left>30</left>
-				<top>18</top>
+				<top>13</top>
 				<width>256</width>
 				<height>440</height>
 				<aspectratio>keep</aspectratio>
-				<texture background="true" diffuse="diffuse/posterdiffuse.png" >$VAR[Fallback_Icon]</texture>
+				<texture>$INFO[Container(501).ListItem.Icon]</texture>
 				<colordiffuse>EBFFFFFF</colordiffuse>
 				<animation type="Focus">
 					<effect type="zoom" start="90" end="100" time="200" />
 				</animation>
+				<visible>IsEmpty(Container(501).ListItem.Art(poster))</visible>
 			</control>
 
 			<control type="image">

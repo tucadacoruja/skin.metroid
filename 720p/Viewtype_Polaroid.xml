@@ -31,7 +31,7 @@
 			<onleft>63</onleft>
 			<onright>noop</onright>
 			<pagecontrol>63</pagecontrol>
-			<visible>Container.Content(songs) | Window.IsVisible(pictures) | Container.Content(episodes) | Container.Content(albums) | Container.Content(artists)</visible>
+			<visible>Container.Content(songs) | Window.IsVisible(playlists) | Window.IsVisible(pictures) | Container.Content(episodes) | Container.Content(albums) | Container.Content(artists)</visible>
 
 			<itemlayout width="633" height="45">
 					<!-- control type="label">
@@ -54,7 +54,7 @@
 						  <left>600</left>
 						  <width>652</width>
 						  <height>40</height>
-						  <textcolor>FFD7D7D7</textcolor>
+						  <textcolor>FFE5E5E5</textcolor>
 						  <selectedcolor>lightblue</selectedcolor>
 						  <font>MusicNF</font>
 						  <align>left</align>
@@ -67,7 +67,7 @@
 						  <left>600</left>
 						  <width>652</width>
 						  <height>40</height>
-						  <textcolor>FFD7D7D7</textcolor>
+						  <textcolor>FFE5E5E5</textcolor>
 						  <selectedcolor>lightblue</selectedcolor>
 						  <font>font27</font>
 						  <align>left</align>
@@ -85,7 +85,7 @@
 						<label>$VAR[PosterTitle]</label>
 						<scroll>false</scroll>
 						<font>MusicNF2</font>
-						<textcolor>FFF3F3F3</textcolor>
+						<textcolor>FFF5F5F5</textcolor>
 						<selectedcolor>lightblue</selectedcolor>
 						
 					</control>
@@ -101,8 +101,8 @@
 						<height>65</height>
 						<aspectratio scalediffuse="false">stretch</aspectratio>
 						<texture flipx="true" >setting.png</texture>
-						
-						<visible>Control.HasFocus(602)</visible>
+						<animation effect="fade" start="100" end="20" time="200" reversable="false" condition="!Control.HasFocus(602)">Conditional</animation>
+		
 					</control>	
 					<!-- control type="label">
 						<top>3</top>
@@ -137,7 +137,7 @@
 						  <left>600</left>
 						  <width>652</width>
 						  <height>40</height>
-						  <textcolor>FFD7D7D7</textcolor>
+						  <textcolor>FFE5E5E5</textcolor>
 						  <selectedcolor>lightblue</selectedcolor>
 						  <font>font27</font>
 						  <align>left</align>
@@ -190,22 +190,26 @@
 		
 		<control type="group">
 		<left>270</left>
+	
 		<animation effect="zoom" end="92" center="auto" time="0" condition="true">Conditional</animation>
 		<animation effect="slide" start="0,0" end="-140,0" time="400" condition="!Control.HasFocus(301) + !Skin.HasSetting(LockMainMenu)">Conditional</animation>
 		
 				<control type="group">
-				<top>-45</top>
-				<left>-5</left>
+				<visible>!Skin.HasSetting(LockMainMenu)</visible>
+				<!-- top>-45</top>
+				<left>-5</left -->
+				<top>40</top>
+				<left>0</left>
 					
-					<animation effect="rotate" end="10" center="auto" time="0" condition="true">Conditional</animation>
+					<!-- animation effect="rotate" end="10" center="auto" time="0" condition="true">Conditional</animation -->
 					<animation effect="slide" start="0,0" end="-100,0" time="600" condition="!Control.HasFocus(301) + !Skin.HasSetting(LockMainMenu)">Conditional</animation>
 		
 	
 					<control type="image">
 						<left>70</left>
 						<top>105</top>
-						<width>446</width>
-						<height>500</height>
+						<width>416</width>
+						<height>440</height>
 						<aspectratio>stretch</aspectratio>
 						<colordiffuse>55FFFFFF</colordiffuse>
 						<texture background="true">diffuse/postershadow.png</texture>
@@ -215,21 +219,22 @@
 					<control type="image">
 						<left>108</left>
 						<top>104</top>
-						<width>428</width>
-						<height>499</height>
+						<width>400</width>
+						<height>415</height>
+
 						<aspectratio>stretch</aspectratio>
 						<texture background="true" border="5">white.png</texture>
 						<bordertexture border="5">whiteborder.png</bordertexture>
 						<bordersize>5</bordersize>
-						<colordiffuse>FFD7D7D7</colordiffuse>
+						<colordiffuse>FFEBEBEB</colordiffuse>
 					</control>
 					
 					<control type="image">
-						<left>112</left>
+						<left>113</left>
 						<top>109</top>
-						<width>420</width>
-						<height>410</height>
-						<aspectratio scalediffuse="false">scale</aspectratio>
+						<width>390</width>
+						<height>350</height>
+						<aspectratio>scale</aspectratio>
 						<texture>$VAR[FanOrThumbMinus]</texture>
 						<fadetime>100</fadetime>
 						<colordiffuse>C2FFFFFF</colordiffuse>
@@ -238,17 +243,17 @@
 					
 					<control type="image">
 						<description>white image</description>
-						<left>112</left>
+						<left>113</left>
 						<top>108</top>
-						<width>420</width>
-						<height>65</height>
+						<width>390</width>
+						<height>50</height>
 						
 						<aspectratio>stretch</aspectratio>
 						<texture border="12">white.png</texture>
-						<colordiffuse>FFe9e7e9</colordiffuse>
+						<colordiffuse>FFEBEBEB</colordiffuse>
 						<!-- visible>![Container.Content(movies) | Container.Content(tvshows)]</visible -->
 					</control>
-					<control type="image">
+					<!-- control type="image">
 						<description>white image</description>
 						<left>112</left>
 						<top>479</top>
@@ -258,7 +263,7 @@
 						<aspectratio>stretch</aspectratio>
 						<texture border="12">white.png</texture>
 						<colordiffuse>FFD7D7D7</colordiffuse>
-					</control>
+					</control -->
 					
 					
 				</control>
@@ -355,7 +360,7 @@
 
 			<control type="label">
 				<left>130</left>
-				<top>485</top>
+				<top>480</top>
 				<width>380</width>
 				<height>60</height>
 				<align>left</align>
@@ -369,7 +374,7 @@
 
 			<control type="label">
 				<left>130</left>
-				<top>520</top>
+				<top>513</top>
 				<width>380</width>
 				<height>60</height>
 				<label>$INFO[ListItem.Duration,,m]$INFO[ListItem.Property(UnWatchedEpisodes),, $LOCALIZE[31180]][UPPERCASE]$INFO[ListItem.Genre, - ][/UPPERCASE]</label>
@@ -382,10 +387,10 @@
 			</control>
 			<control type="label">
 				<left>130</left>
-				<top>520</top>
+				<top>513</top>
 				<width>380</width>
 				<height>60</height>
-				<label>$VAR[Padded_season,S]$VAR[Padded_episodes,E, - ]$INFO[ListItem.Duration,,m]</label>
+				<label>$VAR[Padded_season,S]$VAR[Padded_episodes,E] $INFO[ListItem.Premiered,$LOCALIZE[31181] , -] $INFO[ListItem.Duration,, Min]</label>
 				<font>MainMenu21</font>
 				<textcolor>FF898989</textcolor>
 				

@@ -66,9 +66,10 @@
 					<left>10</left>
 					<top>125</top>
 					<width>100</width>
-					<height>110</height>
+					<height>100</height>
 					<aspectratio>stretch</aspectratio>
-					<texture background="true"  >$VAR[Fallback_Icon]</texture>
+					<texture>$INFO[ListItem.Icon]</texture>
+					<visible>IsEmpty(ListItem.Art(thumb))</visible>
 					<animation effect="fade" start="0" end="80" time="0" condition="true">Conditional</animation>
 					
 					<colordiffuse>EBFFFFFF</colordiffuse>
@@ -121,9 +122,10 @@
 						<left>20</left>
 						<top>33</top>
 						<width>150</width>
-						<height>180</height>
+						<height>150</height>
 						<aspectratio>stretch</aspectratio>
-						<texture background="true"  >$VAR[Fallback_Icon]</texture>
+						<texture>$INFO[ListItem.Icon]</texture>
+						<visible>IsEmpty(ListItem.Art(thumb))</visible>
 						<animation effect="fade" start="0" end="80" time="0" condition="true">Conditional</animation>
 						
 						<colordiffuse>EBFFFFFF</colordiffuse>
@@ -171,9 +173,10 @@
 						<left>20</left>
 						<top>30</top>
 						<width>150</width>
-						<height>190</height>
+						<height>150</height>
 						<aspectratio>stretch</aspectratio>
-						<texture background="true">$VAR[Fallback_Icon]</texture>
+						<texture>$INFO[ListItem.Icon]</texture>
+						<visible>IsEmpty(ListItem.Art(thumb))</visible>
 						<animation effect="fade" start="0" end="80" time="0" condition="true">Conditional</animation>
 						
 						<colordiffuse>EBFFFFFF</colordiffuse>
@@ -204,12 +207,12 @@
 					<left>945</left>
 					<top>185</top>
 					<width>230</width>
-					<height>118</height>
+					<height>120</height>
 					<align>justify</align>
 					<info>ListItem.Plot</info>
-					<font>plot</font>
+					<font>PlotOnly</font>
 					<textcolor>EBFFFFFF</textcolor>
-					<autoscroll delay="600000" time="4000" repeat="10000" />
+					<autoscroll delay="60000" time="4000" repeat="10000" />
 				</control>
 				<control type="image">
 					<description>Rating Info</description>

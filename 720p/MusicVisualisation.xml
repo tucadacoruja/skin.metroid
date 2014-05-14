@@ -59,7 +59,7 @@
 		</control>
 		
 	<control type="group">
-	<animation effect="slide" start="0,0" end="-350,0" time="500" condition="Window.IsVisible(addonsettings) | Window.IsActive(DialogSelect.xml)">Conditional</animation>
+	<animation effect="slide" start="0,0" end="-400,0" time="400" condition="Window.IsVisible(addonsettings) | Window.IsActive(DialogSelect.xml)">Conditional</animation>
 	
 		
 		
@@ -93,7 +93,7 @@
 			
 			<control type="image">
 				<left>112</left>
-				<top>109</top>
+				<top>108</top>
 				<width>422</width>
 				<height>410</height>
 				<aspectratio scalediffuse="false">scale</aspectratio>
@@ -114,7 +114,7 @@
 			</control>
 			<control type="label">
 				<left>125</left>
-				<top>480</top>
+				<top>478</top>
 				<width>410</width>
 				<height>60</height>
 				<align>left</align>
@@ -127,7 +127,7 @@
 
 			<control type="label">
 				<left>125</left>
-				<top>515</top>
+				<top>513</top>
 				<width>410</width>
 				<height>60</height>
 				<label>$INFO[MusicPlayer.offset(1).Title] - $INFO[MusicPlayer.offset(1).Duration]</label>
@@ -192,13 +192,21 @@
 					<animation effect="fade" start="0" end="80" time="0" condition="true">Conditional</animation>
 				</control>
 				
-				<control type="image">
+				<!-- control type="image">
 					<left>113</left>
 					<top>113</top>
 					<width>418</width>
 					<height>410</height>
 					<aspectratio scalediffuse="false">scale</aspectratio>
 					<texture diffuse="diffuse/albumdiffuse.png" >$INFO[MusicPlayer.Cover]</texture>
+				</control -->
+				<control type="image">
+					<left>112</left>
+					<top>112</top>
+					<width>420</width>
+					<height>410</height>
+					<aspectratio>scale</aspectratio>
+					<texture>$INFO[MusicPlayer.Cover]</texture>
 				</control>
 			</control>
 			
@@ -240,7 +248,7 @@
 			</control>
 			<control type="label">
 				<left>125</left>
-				<top>523</top>
+				<top>525</top>
 				<width min="29" max="200">auto</width>
 				<height>30</height>
 				<label>[UPPERCASE]$INFO[MusicPlayer.Time][/UPPERCASE]</label>
@@ -252,7 +260,7 @@
 			</control>
 			<control type="label">
 				<left>315</left>
-				<top>523</top>
+				<top>525</top>
 				<width>200</width>
 				<height>30</height>
 				<label>[UPPERCASE]$INFO[MusicPlayer.Duration][/UPPERCASE]</label>
@@ -268,49 +276,36 @@
 		
 		
 		<control type="group">
-			<left>-57</left>
-			<top>496</top>
-			<animation effect="zoom" end="65" center="auto" time="0" condition="true">Conditional</animation>
-			<control type="image">
-				<left>48</left>
-				<top>50</top>
-				<width>605</width>
-				<height>7</height>
-				<texture>white.png</texture>
-				<aspectratio>stretch</aspectratio>
-				<colordiffuse>55262626</colordiffuse>
-
-			</control>
-			
-			<control type="progress" id="20">
-				<left>48</left>
-				<top>48</top>
-				<width>623</width>
-				<height>4</height>
-				<texturebg>osd/seek/progresscache_back.png</texturebg>
-				<lefttexture>-</lefttexture>
-				<midtexture>osd/osdbg.png</midtexture>
-				<righttexture>-</righttexture>
+			<left>205</left>
+			<top>542</top>
+		
+			<control type="progress" id="2">
+				<description>Volume</description>
+				<left>5</left>
+				<top>26</top>
+				<width>395</width>
+				<height>4.5</height>
 				<info>Player.Progress</info>
-				<colordiffuse>skin.string(MainColorString)</colordiffuse>
-				<animation effect="fade" start="0" end="60" time="0" condition="true">Conditional</animation>
-
+				<texturebg colordiffuse="FF959595">white.png</texturebg>
+				<lefttexture>-</lefttexture>
+				<midtexture colordifuse="FF959595">blue.png</midtexture>
+				<righttexture>-</righttexture>
+				<animation effect="fade" start="0" end="70" time="0" condition="true">Conditional</animation>
 			</control>
-					
-			<control type="slider" id="88">
-				<description>Seek Slider</description>
-				<left>45</left>
-				<top>39</top>
-				<width>630</width>
-				<height>5</height>
-				<onup>9000</onup>
-				
+
+			<control type="slider" id="1">
+				<description>Volume Slider</description>
+				<left>0</left>
+				<top>19</top>
+				<width>390</width>
+				<height>3</height>
 				<action>seek</action>
 				<texturesliderbar>osd/seek/EmptyBar.png</texturesliderbar>
-				<textureslidernib>osd/seek/OsdSearchNib.png</textureslidernib>
-				<textureslidernibfocus>osd/seek/OsdSearchNib.png</textureslidernibfocus>
-		
+				<textureslidernib>osd/seek/OsdSearchNib2.png</textureslidernib>
+				<textureslidernibfocus>osd/seek/OsdSearchNib2.png</textureslidernibfocus>
+				<colordiffuse>$INFO[Skin.String(OSDNibColor)]</colordiffuse>
 			</control>
+			
 		</control>
 	</control>
 	

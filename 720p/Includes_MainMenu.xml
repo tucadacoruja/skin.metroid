@@ -34,7 +34,7 @@
 				<height>651</height>
 				<onleft condition="!Skin.HasSetting(GlobalSearch)">999</onleft>
 				<onright>50</onright>
-				<onup condition="Player.HasMedia">407</onup>
+				<!-- onup condition="Player.HasMedia">407</onup -->
 				<ondown>301</ondown>
 				<pagecontrol>64</pagecontrol>
 				<scrolltime>2</scrolltime>
@@ -159,7 +159,7 @@
 						<label>- $INFO[ListItem.Label]</label>
 						<visible>!IsEmpty(ListItem.Property(SubMenuItem))</visible>
 					</control>
-					<include condition="!Skin.HasSetting(MenuAutoClose)">MenuAutoClose</include>
+					<include condition="Skin.HasSetting(MenuAutoClose)">MenuAutoClose</include>
 					 
 				
 				</focusedlayout>

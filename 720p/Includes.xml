@@ -39,7 +39,7 @@
 	<onload condition="IsEmpty(Skin.String(OSDNibColor))">Skin.SetString(OSDNibColor,brightblue)</onload>
 	<onload condition="IsEmpty(Skin.String(OSDDialogsBGColor))">Skin.SetString(OSDDialogsBGColor,brightblue)</onload>
 	
-	<onload condition="IsEmpty(Skin.String(MenuCstring))">Skin.SetString(MenuCstring,lightsteelblue)</onload>
+	<onload condition="IsEmpty(Skin.String(MenuCstring))">Skin.SetString(MenuCstring,darkgrayblue)</onload>
 	<onload>Skin.SetString(StartuptestString,start)</onload>
 	<onload condition="IsEmpty(Skin.String(BackgroundPercentage))">Skin.SetString(BackgroundPercentage,80)</onload>
 	<onload condition="IsEmpty(Skin.String(DarknessPercentage))">Skin.SetString(DarknessPercentage,90)</onload><!-- only user feedback -->
@@ -359,8 +359,8 @@
 			<texturefocus colordiffuse="FFACACAC">osd/search.png</texturefocus>
 			<texturenofocus>osd/search.png</texturenofocus>
 			<onleft condition="Window.IsVisible(pvr) + !Window.IsActive(script-globalsearch-main.xml)">402</onleft>
-			<onleft condition="!Window.IsActive(script-globalsearch-main.xml) + Player.HasMedia">8888</onleft>
-			<onleft condition="!Window.IsActive(script-globalsearch-main.xml)">300</onleft>
+			<onleft condition="!Window.IsActive(script-globalsearch-main.xml) + Player.HasMedia">407</onleft>
+			<onleft condition="!Window.IsActive(script-globalsearch-main.xml) + !Player.HasMedia">300</onleft>
 			<onleft condition="Window.IsActive(script-globalsearch-main.xml)">9000</onleft>
 			<onright condition="!Window.IsActive(script-globalsearch-main.xml)">300</onright>
 			<onright condition="Window.IsActive(script-globalsearch-main.xml)">9000</onright>
@@ -716,7 +716,7 @@
 				<width>52</width>
 				<texture>osd/GrayBackground.png</texture>
 				<aspectratio>stretch</aspectratio>
-				<visible>[Window.IsVisible(videolibrary) | Window.IsVisible(musicplaylist) | Window.IsVisible(videoplaylist) | Window.IsVisible(musiclibrary) | Window.IsVisible(musicfiles)] + ![IsEmpty(Container.FolderPath) | SubString(Container.FolderPath,videodb://) | SubString(Container.FolderPath,library://) | SubString(Container.FolderPath,musicdb://) | SubString(Container.FolderPath,addons://) | SubString(Container.FolderPath,special://) | SubString(Container.FolderPath,plugin://)]</visible>
+				<visible>[Window.IsVisible(videolibrary) | Window.IsVisible(musicplaylist) | Window.IsVisible(videoplaylist) | Window.IsVisible(musiclibrary) | Window.IsVisible(musicfiles)] + ![IsEmpty(Container.FolderPath) | SubString(Container.FolderPath,playlistmusic://) | SubString(Container.FolderPath,videodb://) | SubString(Container.FolderPath,library://) | SubString(Container.FolderPath,musicdb://) | SubString(Container.FolderPath,addons://) | SubString(Container.FolderPath,special://) | SubString(Container.FolderPath,plugin://)]</visible>
 				<animation effect="fade" start="0" end="100" time="300" delay="120">VisibleChange</animation>
 			</control>
 			<control type="image"> <!-- 3 battery -->
@@ -842,7 +842,7 @@
 				<width>52</width>
 				<height>52</height>
 				<texture>DefaultHardDisk.png</texture>
-				<visible>[Window.IsVisible(videolibrary) | Window.IsVisible(musicplaylist) | Window.IsVisible(videoplaylist) | Window.IsVisible(musiclibrary) | Window.IsVisible(musicfiles)] + ![IsEmpty(Container.FolderPath) | SubString(Container.FolderPath,videodb://) | SubString(Container.FolderPath,library://) | SubString(Container.FolderPath,musicdb://) | SubString(Container.FolderPath,addons://) | SubString(Container.FolderPath,special://) | SubString(Container.FolderPath,plugin://)]</visible>
+				<visible>[Window.IsVisible(videolibrary) | Window.IsVisible(musicplaylist) | Window.IsVisible(videoplaylist) | Window.IsVisible(musiclibrary) | Window.IsVisible(musicfiles)] + ![IsEmpty(Container.FolderPath) | SubString(Container.FolderPath,playlistmusic://) | SubString(Container.FolderPath,videodb://) | SubString(Container.FolderPath,library://) | SubString(Container.FolderPath,musicdb://) | SubString(Container.FolderPath,addons://) | SubString(Container.FolderPath,special://) | SubString(Container.FolderPath,plugin://)]</visible>
 			</control>
 			
 			<control type="image"> <!-- 3 battery -->

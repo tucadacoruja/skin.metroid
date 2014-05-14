@@ -18,7 +18,7 @@
 		
 			<control type="label">
 				<left>296</left>
-				<top>98</top>
+				<top>95</top>
 				<width>870</width>
 				<font>Segoe28</font>
 				<textcolor>F3FFFFFF</textcolor>
@@ -29,7 +29,7 @@
 			</control>
 			<control type="label">
 				<left>296</left>
-				<top>126</top>
+				<top>124</top>
 				<width>870</width>
 				<font>recent</font>
 				<textcolor>EBFFFFFF</textcolor>
@@ -103,6 +103,16 @@
 					</control>
 					
 					<control type="image">
+						<left>360</left>
+						<top>210</top>
+						<width>28</width>
+						<height>28</height>
+						<aspectratio align="left" aligny="center">stretch</aspectratio>
+						<texture>Watched.png</texture>
+						<visible>stringcompare(ListItem.Overlay,OverlayWatched.png)</visible>
+						<visible>!Skin.HasSetting(WatchedOverlays)</visible>
+					</control>
+					<control type="image">
 						<left>20</left>
 						<top>0</top>
 						<width>35</width>
@@ -147,6 +157,16 @@
 						<aspectratio>keep</aspectratio>
 						<fadetime>200</fadetime>
 						<texture>$VAR[LogoIcon]</texture>
+					</control>
+					<control type="image">
+						<left>360</left>
+						<top>210</top>
+						<width>28</width>
+						<height>28</height>
+						<aspectratio align="left" aligny="center">stretch</aspectratio>
+						<texture>Watched.png</texture>
+						<visible>stringcompare(ListItem.Overlay,OverlayWatched.png)</visible>
+						<visible>!Skin.HasSetting(WatchedOverlays)</visible>
 					</control>
 					<control type="image">
 						<left>20</left>

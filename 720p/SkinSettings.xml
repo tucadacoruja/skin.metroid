@@ -43,7 +43,8 @@
 			<onright condition="Control.IsVisible(9006)">9006</onright>
 			<onright condition="Control.IsVisible(9008)">9008</onright>
 			
-			<onup>301</onup>
+			<onup condition="Player.HasMedia">407</onup>
+			<onup condition="!Player.HasMedia">301</onup>
 			<ondown>444</ondown>
 			<pagecontrol>-</pagecontrol>
 			<scrolltime>2</scrolltime>
@@ -378,13 +379,13 @@
 						<onclick>Skin.ToggleSetting(HideMusicLibrary)</onclick>
 						<selected>Skin.HasSetting(HideMusicLibrary)</selected>
 					</control>
-					<!--control type="radiobutton" id="122">
+					<!-- control type="radiobutton" id="122">
 						<include>SettingsButton</include>
 						<description>Previous button in main menu</description>
 						<label>$LOCALIZE[31155] $LOCALIZE[31142]</label>
 						<onclick>Skin.ToggleSetting(HideGlobalPrevious)</onclick>
 						<selected>Skin.HasSetting(HideGlobalPrevious)</selected>
-					</control-->
+					</control -->
 					<control type="radiobutton" id="123">
 						<include>SettingsButton</include>
 						<description>Update Library in main menu</description>
@@ -826,8 +827,8 @@
 						<onclick condition="Stringcompare(Skin.String(MenuCstring),happygray) | IsEmpty(Skin.String(MenuCstring))">Skin.SetString(MenuCstring,defaultgray)</onclick>
 						<onclick condition="Stringcompare(Skin.String(MenuCstring),dimgray)">Skin.SetString(MenuCstring,happygray)</onclick>
 						<onclick condition="Stringcompare(Skin.String(MenuCstring),rosybrown)">Skin.SetString(MenuCstring,dimgray)</onclick>
-						<onclick condition="Stringcompare(Skin.String(MenuCstring),blanchedalmond)">Skin.SetString(MenuCstring,rosybrown)</onclick>
-						<onclick condition="Stringcompare(Skin.String(MenuCstring),lemonchiffon)">Skin.SetString(MenuCstring,blanchedalmond)</onclick>
+						<onclick condition="Stringcompare(Skin.String(MenuCstring),darkgrayblue)">Skin.SetString(MenuCstring,rosybrown)</onclick>
+						<onclick condition="Stringcompare(Skin.String(MenuCstring),lemonchiffon)">Skin.SetString(MenuCstring,darkgrayblue)</onclick>
 						<onclick condition="Stringcompare(Skin.String(MenuCstring),darkseagreen)">Skin.SetString(MenuCstring,lemonchiffon)</onclick>
 						<onclick condition="Stringcompare(Skin.String(MenuCstring),honeydew)">Skin.SetString(MenuCstring,darkseagreen)</onclick>
 						<onclick condition="Stringcompare(Skin.String(MenuCstring),lightskyblue)">Skin.SetString(MenuCstring,honeydew)</onclick>
@@ -859,8 +860,8 @@
 						<onclick condition="Stringcompare(Skin.String(MenuCstring),honeydew)">Skin.SetString(MenuCstring,lightskyblue)</onclick>
 						<onclick condition="Stringcompare(Skin.String(MenuCstring),darkseagreen)">Skin.SetString(MenuCstring,honeydew)</onclick>
 						<onclick condition="Stringcompare(Skin.String(MenuCstring),lemonchiffon)">Skin.SetString(MenuCstring,darkseagreen)</onclick>
-						<onclick condition="Stringcompare(Skin.String(MenuCstring),blanchedalmond)">Skin.SetString(MenuCstring,lemonchiffon)</onclick>
-						<onclick condition="Stringcompare(Skin.String(MenuCstring),rosybrown)">Skin.SetString(MenuCstring,blanchedalmond)</onclick>
+						<onclick condition="Stringcompare(Skin.String(MenuCstring),darkgrayblue)">Skin.SetString(MenuCstring,lemonchiffon)</onclick>
+						<onclick condition="Stringcompare(Skin.String(MenuCstring),rosybrown)">Skin.SetString(MenuCstring,darkgrayblue)</onclick>
 						<onclick condition="Stringcompare(Skin.String(MenuCstring),dimgray)">Skin.SetString(MenuCstring,rosybrown)</onclick>
 						<onclick condition="Stringcompare(Skin.String(MenuCstring),happygray)">Skin.SetString(MenuCstring,dimgray)</onclick>
 						<onclick condition="Stringcompare(Skin.String(MenuCstring),defaultgray)">Skin.SetString(MenuCstring,happygray)</onclick>
@@ -897,7 +898,7 @@
 						<description>Sub menu's auto close</description>
 						<label> - $LOCALIZE[31241]</label>
 						<onclick>Skin.ToggleSetting(MenuAutoClose)</onclick>
-						<selected>!Skin.HasSetting(MenuAutoClose)</selected>
+						<selected>Skin.HasSetting(MenuAutoClose)</selected>
 					</control>
 					<control type="radiobutton" id="101">
 						<include>SettingsButton</include>

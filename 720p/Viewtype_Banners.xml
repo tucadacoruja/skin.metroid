@@ -67,13 +67,14 @@
 				<control type="image">
 					<left>20</left>
 					<top>10</top>
-					<width>120</width>
-					<height>100</height>
+					<width>110</width>
+					<height>110</height>
 					<aspectratio>stretch</aspectratio>
-					<texture >$VAR[Fallback_Icon]</texture>
+					<texture>$INFO[ListItem.Icon]</texture>
+					<visible>IsEmpty(ListItem.Art(banner))</visible>
 					<animation effect="fade" start="0" end="80" time="0" condition="true">Conditional</animation>
 					
-					<colordiffuse>EBFFFFFF</colordiffuse>
+					
 				</control>
 				
 				<control type="image">
@@ -82,7 +83,7 @@
 					<width>573</width>
 					<height>105</height>
 					<visible>!IsEmpty(ListItem.Art(banner))</visible>
-					<texture diffuse="diffuse/bannerdiff.png" fallback="DefaultCatch.png">$INFO[ListItem.Art(banner)]</texture>
+					<texture diffuse="diffuse/bannerdiff.png" >$INFO[ListItem.Art(banner)]</texture>
 					<aspectratio>stretch</aspectratio>
 				</control>
 	
@@ -101,21 +102,7 @@
 			</itemlayout>
 			
 			<focusedlayout width="585" height="190">
-				
-				
-							
-				
-				<!-- control type="image">
-					<left>5</left>
-					<top>3</top>
-					<width>590</width>
-					<height>165</height>
-					<texture border="22">diffuse/postershadow.png</texture>
-					<align>bottom</align>
-					<aspectratio>stretch</aspectratio>
-					<colordiffuse>70ffffff</colordiffuse>
-					
-				</control -->
+
 				<control type="image">
 					<left>1</left>
 					<top>12</top>
@@ -154,13 +141,13 @@
 				<control type="image">
 					<left>20</left>
 					<top>10</top>
-					<width>120</width>
-					<height>100</height>
+					<width>110</width>
+					<height>110</height>
 					<aspectratio>stretch</aspectratio>
-					<texture >$VAR[Fallback_Icon]</texture>
+					<texture>$INFO[ListItem.Icon]</texture>
+					<visible>IsEmpty(ListItem.Art(banner))</visible>
 					<animation effect="fade" start="0" end="80" time="0" condition="true">Conditional</animation>
-					
-					<colordiffuse>EBFFFFFF</colordiffuse>
+				
 				</control>
 				<control type="image">
 					<left>2</left>
@@ -168,7 +155,7 @@
 					<width>573</width>
 					<height>105</height>
 					<visible>!IsEmpty(ListItem.Art(banner))</visible>
-					<texture diffuse="diffuse/bannerdiff.png" fallback="DefaultCatch.png">$INFO[ListItem.Art(banner)]</texture>
+					<texture diffuse="diffuse/bannerdiff.png">$INFO[ListItem.Art(banner)]</texture>
 					<aspectratio>stretch</aspectratio>
 						<animation type="Focus" reversible="false">
 							<effect type="zoom" start="93" end="100" time="200" center="auto"/>
@@ -241,7 +228,7 @@
 					<scroll>false</scroll>
 					<align>left</align>
 					<aligny>center</aligny>
-					<label>[UPPERCASE]$LOCALIZE[31180] $INFO[ListItem.Property(UnWatchedEpisodes)][/UPPERCASE]</label>
+					<label>[UPPERCASE]$INFO[ListItem.Property(UnWatchedEpisodes),$LOCALIZE[31180] ][/UPPERCASE]</label>
 				   <visible>!IsEmpty(ListItem.foldername) + !substring(Container.Listitem.Label,..,left)</visible>
 				</control>
 				<!-- control type="image">
@@ -303,6 +290,7 @@
 				<font>plot</font>
 				<textcolor>FFD7D7D7</textcolor>
 				<selectedcolor>taskbar</selectedcolor>
+				<visible>!IsEmpty(ListItem.Property(TotalEpisodes))</visible>
 			</control>
 			<control type="label">
 				<left>1010</left>
@@ -326,6 +314,7 @@
 				<font>homemenu3</font>
 				<textcolor>EBFFFFFF</textcolor>
 				<selectedcolor>taskbar</selectedcolor>
+				<visible>!IsEmpty(ListItem.Property(UnWatchedEpisodes))</visible>
 			</control>
 			<control type="label">
 				<left>1010</left>

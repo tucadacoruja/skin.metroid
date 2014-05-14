@@ -50,7 +50,8 @@
 		<itemgap>0</itemgap>
 		<onleft>999</onleft>
 		<onright>noop</onright>
-		<onup>300</onup>
+		<onup condition="Player.HasMedia">407</onup>
+		<onup condition="!Player.HasMedia">300</onup>
 		<ondown>444</ondown>
 		<animation effect="fade" start="0" end="100" time="300" >WindowOpen</animation>
 		
@@ -126,7 +127,7 @@
 			<texturefocus>category.png</texturefocus>
 			<texturenofocus>-</texturenofocus>
 		</control>
-		<!--control type="button" id="99">
+		<!-- control type="button" id="99">
 			<description>PVR</description>
 			<label>$LOCALIZE[13275]</label>
 			<align>left</align>
@@ -139,7 +140,7 @@
 			<disabledcolor>12ffffff</disabledcolor>
 			<texturefocus>category.png</texturefocus>
 			<texturenofocus>-</texturenofocus>
-		</control-->
+		</control -->
 		
 	</control>
 	

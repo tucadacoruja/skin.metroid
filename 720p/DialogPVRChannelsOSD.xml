@@ -5,7 +5,7 @@
 		<left>0</left>
 		<top>0</top>
 	</coordinates>
-	<!--include>dialogeffect</include-->
+	<!-- include>dialogeffect</include -->
 	<controls>
 	
 		<control type="button" id="9000">
@@ -74,7 +74,7 @@
 					<aspectratio>stretch</aspectratio>
 					<animation effect="fade" start="0" end="20" time="0" condition="true">Conditional</animation>
 				</control>
-				<!--control type="label">
+				<!-- control type="label">
 					<left>5</left>
 					<top>-4</top>
 					<width>40</width>
@@ -85,7 +85,7 @@
 					<textcolor>FF707070</textcolor>
 					<selectedcolor>FF707070</selectedcolor>
 					<info>ListItem.ChannelNumber</info>
-				</control-->
+				</control -->
 				<control type="label">
 					<left>93</left>
 					<top>7</top>

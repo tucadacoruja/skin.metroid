@@ -20,7 +20,7 @@
 			<control type="group">
 				<left>55</left>
 				<top>530</top>
-				<!--control type="label">
+				<!-- control type="label">
 					<left>0</left>
 					<top>0</top>
 					<width>690</width>
@@ -32,7 +32,7 @@
 					<align>center</align>
 					<aligny>center</aligny>
 					<label>[B]$INFO[Container(11).ListItem.Title][/B]</label>
-				</control-->
+				</control -->
 				<control type="label">
 					<left>10</left>
 					<top>28</top>
@@ -82,7 +82,7 @@
 					<shadowcolor>black</shadowcolor>
 					<pagecontrol>-</pagecontrol>
 					<label fallback="Not available.">$INFO[VideoPlayer.Plot]</label>
-					<!--autoscroll time="2000" delay="3000" repeat="5000">true</autoscroll-->
+					<!--autoscroll time="2000" delay="3000" repeat="5000">true</autoscroll -->
 				</control>
 				<control type="textbox">
 					<description>Plot Value for TVShow</description>
@@ -96,7 +96,7 @@
 					<shadowcolor>black</shadowcolor>
 					<pagecontrol>-</pagecontrol>
 					<label>$INFO[Container(11).ListItem.Plot]</label>
-					<!--autoscroll time="2000" delay="3000" repeat="5000">true</autoscroll-->
+					<!--autoscroll time="2000" delay="3000" repeat="5000">true</autoscroll -->
 				</control>
 				
 			</control>
@@ -141,7 +141,7 @@
 						<aspectratio>stretch</aspectratio>
 						<animation effect="fade" start="0" end="20" time="0" condition="true">Conditional</animation>
 					</control>
-					<!--control type="label">
+					<!-- control type="label">
 						<left>5</left>
 						<top>-4</top>
 						<width>40</width>
@@ -152,7 +152,7 @@
 						<textcolor>FF707070</textcolor>
 						<selectedcolor>FF707070</selectedcolor>
 						<info>ListItem.ChannelNumber</info>
-					</control-->
+					</control -->
 					<control type="label">
 						<left>93</left>
 						<top>7</top>

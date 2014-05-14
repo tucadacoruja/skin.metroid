@@ -29,7 +29,7 @@
 		<animation effect="fade" start="1" end="1" time="0" condition="true">Conditional</animation>
 	</control>
 	
-<!--control type="group">
+<!-- control type="group">
 <visible>![Window.IsVisible(visualisation) | Window.IsVisible(fullscreenvideo)] | Window.IsVisible(volumebar)]</visible>
 	
 	
@@ -195,7 +195,7 @@
 				
 	</control>
 		
-</control-->
+</control -->
 	
 </controls>
   

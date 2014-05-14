@@ -5,7 +5,7 @@
 <allowoverlay>yes</allowoverlay>
 
 
- <views>602,603,579,523,51,637,50</views> 
+ <views>603,637,602,50</views> 
 <controls>
 
 <control type="button" id="2">
@@ -50,9 +50,10 @@
 <include>MainMenu</include>
 <include>GeneralFanart</include>
 <include>Background</include>
+
 <include>LogoPanel</include><!-- 637 -->
-<include>Polaroid</include>
-<include>List</include>
+<include>Polaroid</include><!-- 602 -->
+<include>List</include><!-- 50 -->
 <include>Panel</include><!-- -603 --> 
 
  

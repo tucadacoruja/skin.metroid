@@ -14,7 +14,7 @@
 
 		
 		<control type="group">
-		<animation effect="slide" start="0,0" end="-190,0" time="400" condition="!Control.HasFocus(301) + !Skin.HasSetting(LockMainMenu)">Conditional</animation>
+		<animation effect="slide" start="0,0" end="-190,0" time="500" condition="!Control.HasFocus(301) + !Skin.HasSetting(LockMainMenu)">Conditional</animation>
 		
 			<control type="label">
 				<left>296</left>
@@ -24,7 +24,7 @@
 				<textcolor>F3FFFFFF</textcolor>
 				<scroll>false</scroll>
 				<align>left</align>
-				<label>$VAR[PosterTitle]</label>
+				<label>[B]$VAR[PosterTitle][/B]</label>
 				
 			</control>
 			<control type="textbox">
@@ -111,13 +111,14 @@
 				
 					</control>
 					<control type="image">
-						<left>10</left>
+						<left>15</left>
 						<top>15</top>
 						<width>120</width>
-						<height>140</height>
+						<height>120</height>
 						<aspectratio>stretch</aspectratio>
-						<texture  >$VAR[Fallback_Icon]</texture>
+						<texture>$INFO[ListItem.Icon]</texture>
 						<colordiffuse>E1FFFFFF</colordiffuse>
+						<visible>IsEmpty(ListItem.Art(poster))</visible>
 					</control>
 									
 				</itemlayout>
@@ -136,13 +137,14 @@
 		
 					</control>
 					<control type="image">
-						<left>10</left>
+						<left>15</left>
 						<top>15</top>
 						<width>120</width>
-						<height>140</height>
+						<height>120</height>
 						<aspectratio>stretch</aspectratio>
-						<texture  >$VAR[Fallback_Icon]</texture>
+						<texture>$INFO[ListItem.Icon]</texture>
 						<colordiffuse>E1FFFFFF</colordiffuse>
+						<visible>IsEmpty(ListItem.Art(poster))</visible>
 					</control>
 				</focusedlayout>	
 

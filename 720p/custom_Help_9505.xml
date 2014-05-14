@@ -50,7 +50,8 @@
 				<height>570</height>
 				<onleft>999</onleft>
 				<onright>100</onright>
-				<onup>301</onup>
+				<onup condition="Player.HasMedia">407</onup>
+				<onup condition="!Player.HasMedia">301</onup>
 				<ondown>444</ondown>
 				<pagecontrol>-</pagecontrol>
 				<scrolltime>2</scrolltime>
@@ -262,7 +263,7 @@
 						<onleft>9000</onleft>
 						<align>left</align>
 						<label>$LOCALIZE[31021]</label>
-						<onclick>Activate.Window(Videos,Files)</onclick>
+						<onclick>ActivateWindow(Videos,Files)</onclick>
 						
 					</control>
 				</control>
@@ -451,8 +452,8 @@
 						<onup>100</onup>
 						<align>left</align>
 						<label>$LOCALIZE[31216]</label>
-						<onclick>Skin.ResetSettings</onclick>
-						<onclick>ReloadSkin()</onclick>
+						<onclick>ActivateWindow(9507)</onclick>
+						
 						
 					</control>
 				</control>

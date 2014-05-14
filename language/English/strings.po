@@ -1021,5 +1021,8 @@ msgctxt "#31271"
 msgid "Video OSD color"
 msgstr "
 
+msgctxt "#31272"
+msgid "Are you sure you want to reset all skin settings?"
+msgstr "
 
 

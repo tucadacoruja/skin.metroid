@@ -33,7 +33,7 @@
 		
 			<control type="label" id="200">
 				<visible>false</visible>
-				<animation effect="fade" start="10" end="0" time="10" condition="true">Conditional</animation>
+
 			</control>
 			
 			<!--  ** Required ** Do not change <id> or <type>  -->
@@ -55,10 +55,7 @@
 			</control>
 			
 			<control type="spincontrol" id="101">
-				
-				
-				<!-- visible>Control.IsVisible(100)</visible -->
-				<animation effect="fade" start="10" end="0" time="10" condition="true">Conditional</animation>
+				<visible>false</visible>
 			</control>
   		
 			<!--  ** Required ** Do not change <id> or <type>  -->
@@ -71,6 +68,7 @@
 				<height>400</height>
 				<viewtype label="535">list</viewtype>
 				<scrolltime>200</scrolltime>
+				<onright>ActivateWindow(musicosd)<onright>
 				
 				<itemlayout height="40">
 					
@@ -83,7 +81,7 @@
 						<font>list</font>
 						<align>left</align>
 						<aligny>center</aligny>
-						<textcolor>46FFFFFF</textcolor>
+						<textcolor>ACFFFFFF</textcolor>
 						<scroll>false</scroll>
 					</control>
 					
@@ -99,7 +97,7 @@
 						<height>36</height>
 						<texture>setting.png</texture>
 						<aspectratio>stretch</aspectratio>
-						<colordiffuse>62C2C2C2</colordiffuse>
+						<colordiffuse>95FFFFFF</colordiffuse>
 					</control>
 				
 					<control type="label">
@@ -112,7 +110,7 @@
 						<font>list</font>
 						<align>left</align>
 						<aligny>center</aligny>
-						<textcolor>blue</textcolor>
+						<textcolor>FFFFFFFF</textcolor>
 						
 					</control>
 					
@@ -121,10 +119,7 @@
 			</control>
 			
 			<control type="spincontrol" id="111">
-				
-				
-				<!-- visible>Control.IsVisible(110)</visible -->
-				<animation effect="fade" start="10" end="0" time="10" condition="true">Conditional</animation>
+				<visible>false</visible>
 			</control>
   		
 			<!--  ** Required ** Do not change <id> or <type>  -->
@@ -137,6 +132,7 @@
 				<height>400</height>
 				<viewtype label="535">list</viewtype>
 				<scrolltime>200</scrolltime>
+				<onright>ActivateWindow(musicosd)<onright>
 				
 				<itemlayout height="40">
 					
@@ -149,7 +145,7 @@
 						<font>list</font>
 						<align>left</align>
 						<aligny>center</aligny>
-						<textcolor>46FFFFFF</textcolor>
+						<textcolor>ACFFFFFF</textcolor>
 						<scroll>false</scroll>
 					</control>
 					
@@ -165,7 +161,7 @@
 						<height>36</height>
 						<texture>setting.png</texture>
 						<aspectratio>stretch</aspectratio>
-						<colordiffuse>62C2C2C2</colordiffuse>
+						<colordiffuse>95FFFFFF</colordiffuse>
 					</control>
 					
 					<control type="label">
@@ -178,7 +174,7 @@
 						<font>font16</font>
 						<align>left</align>
 						<aligny>center</aligny>
-						<textcolor>blue</textcolor>
+						<textcolor>FFFFFFFF</textcolor>
 						
 					</control>
 					
@@ -187,9 +183,7 @@
 			</control>
 			
 			<control type="spincontrol" id="121">
-				
-				<animation effect="fade" start="10" end="0" time="10" condition="true">Conditional</animation>
-				<!-- visible>Control.IsVisible(120)</visible -->
+				<visible>false</visible>
 				
 			</control>
 			

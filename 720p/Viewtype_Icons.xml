@@ -145,7 +145,7 @@
 							<!-- colordiffuse>FFABABAB</colordiffuse -->
 							
 						</control>
-						<!--control type="image">
+						<!-- control type="image">
 							<left>109</left>
 							<top>109</top>
 							<width>23</width>
@@ -154,7 +154,7 @@
 							<texture>Watched.png</texture>
 							<visible>stringcompare(ListItem.Overlay,OverlayWatched.png)</visible>
 							<visible>!Skin.HasSetting(WatchedOverlays)</visible>
-						</control-->
+						</control -->
 						
 					</control>	
 					
