@@ -150,7 +150,7 @@
 
 	<variable name="FullscreenLabel">
 		<value condition="VideoPlayer.Content(movies)">$INFO[VideoPlayer.Genre]</value>
-		<value condition="VideoPlayer.Content(episodes)">$LOCALIZE[31201] $INFO[VideoPlayer.Season] $LOCALIZE[31202]$INFO[VideoPlayer.Episode] $INFO[VideoPlayer.TVShowTitle,',']</value>
+		<value condition="VideoPlayer.Content(episodes)">$INFO[VideoPlayer.Season,$LOCALIZE[31201] ] $INFO[VideoPlayer.Episode,$LOCALIZE[31202] ] $INFO[VideoPlayer.TVShowTitle,',']</value>
 	</variable>
 	
 	<variable name="BannerThumb">

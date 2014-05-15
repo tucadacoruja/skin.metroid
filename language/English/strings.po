@@ -70,11 +70,11 @@ msgid "About XBMC"
 msgstr ""
 
 msgctxt "#31016"
-msgid "Setup Sources"
+msgid "Setup sources"
 msgstr ""
 
 msgctxt "#31017"
-msgid "Music Fanart"
+msgid "Music fanart"
 msgstr ""
 
 msgctxt "#31018"
@@ -82,7 +82,7 @@ msgid "Fav. Add-on"
 msgstr ""
 
 msgctxt "#31019"
-msgid "ReLoad"
+msgid "Reset"
 msgstr ""
 
 msgctxt "#31020"

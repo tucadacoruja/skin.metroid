@@ -109,7 +109,7 @@
 		<onclick condition="!Skin.HasSetting(HideGlobalBack)">Skin.ToggleSetting(HideGlobalBack)</onclick>
 		<onclick condition="!Skin.HasSetting(LockMainMenu)">Skin.ToggleSetting(LockMainMenu)</onclick>
 		<onclick condition="!Skin.HasSetting(HideVolumeBar)">Skin.ToggleSetting(HideVolumeBar)</onclick>
-		<onclick condition="!Skin.HasSetting(MenuAutoClose)">Skin.ToggleSetting(MenuAutoClose)</onclick>
+		<onclick condition="Skin.HasSetting(MenuAutoClose)">Skin.ToggleSetting(MenuAutoClose)</onclick>
 		<onclick>Skin.SetString(FirstRunTouch,true)</onclick>
 		<onclick>Dialog.Close(9506)</onclick>
 	</control>

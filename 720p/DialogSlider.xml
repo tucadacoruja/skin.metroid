@@ -8,7 +8,9 @@
   <left>0</left>
   <top>0</top>
 </coordinates>
-  
+
+	<onload condition="Stringcompare(Skin.String(OSDButtonColor),hellblue)">Skin.SetString(OSDDialogsBGColor,darkhellblue)</onload>
+	<onload condition="Stringcompare(Skin.String(OSDButtonColor),white)">Skin.SetString(OSDDialogsBGColor,brightblue)</onload>
 <controls>
 
 <control type="button" id="9000">

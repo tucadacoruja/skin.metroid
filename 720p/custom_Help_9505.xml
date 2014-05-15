@@ -141,7 +141,7 @@
 						<onclick>SetFocus(9002)</onclick>
 					</item>
 					<item id="3">
-						<description>Music Fanart</description>
+						<description>Music fanart</description>
 						<label>31017</label>
 						<onclick>noop</onclick>
 					</item>
@@ -151,7 +151,7 @@
 						<onclick>SetFocus(9005)</onclick>
 					</item>
 					<item id="5">
-						<description>ReLoad</description>
+						<description>Reset</description>
 						<label>31019</label>
 						<onclick>SetFocus(9006)</onclick>
 					</item>

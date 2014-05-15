@@ -1,8 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<window type="dialog" id="142">
+<window type="dialog">
+
+	<coordinates>
+		<system>1</system>
+		<left>0</left>
+		<top>0</top>
+	</coordinates>
+	
     <defaultcontrol always="true">9090</defaultcontrol>
 	<onload condition="Stringcompare(Skin.String(OSDButtonColor),hellblue)">Skin.SetString(OSDDialogsBGColor,darkhellblue)</onload>
 	<onload condition="Stringcompare(Skin.String(OSDButtonColor),white)">Skin.SetString(OSDDialogsBGColor,brightblue)</onload>
+
 <controls>
 
 <control type="group">
@@ -17,11 +25,11 @@
 		<texturefocus>empty.png</texturefocus>
 		<texturenofocus>empty.png</texturenofocus>
 		
-		<onclick>Dialog.Close(142)</onclick>
-		<onleft>Dialog.Close(142)</onleft>
-		<onright>Dialog.Close(142)</onright>
-		<onback>Dialog.Close(142)</onback>
-		<animation effect="fade" start="1" end="1" time="0" condition="true">Conditional</animation>
+		<onclick>Dialog.Close(fullscreeninfo)</onclick>
+		<onleft>Dialog.Close(fullscreeninfo)</onleft>
+		<onright>Dialog.Close(fullscreeninfo)</onright>
+		<onback>Dialog.Close(fullscreeninfo)</onback>
+
 	</control>
 	
 	<control type="group">
