@@ -218,7 +218,7 @@
 							<visible>!Skin.HasSetting(HideGlobalMusic)</visible>
 							<visible>Library.HasContent(Music)</visible>
 							
-							<include  condition="Skin.HasSetting(MenuAutoClose)">MenuManualClose</include>
+							<include  condition="!Skin.HasSetting(MenuAutoClose)">MenuManualClose</include>
 							<onclick condition="IsEmpty(skin.string(SubMenu7)) + !Skin.HasSetting(MusicSubmenu)">Skin.Setstring(SubMenu7,open)</onclick>
 							<onclick condition="!IsEmpty(skin.string(SubMenu7)) + !Skin.HasSetting(MusicSubmenu)">Skin.Reset(SubMenu7)</onclick>
 							<onclick condition="IsEmpty(skin.string(SubMenu7)) + !Skin.HasSetting(MusicSubmenu)">Skin.Setstring(SubMenu7,open)</onclick>
@@ -243,7 +243,7 @@
 							<label>31079</label>
 							<visible>Library.HasContent(movies)</visible>
 							<visible>!Skin.HasSetting(HideGlobalMovies)</visible>
-							<include  condition="Skin.HasSetting(MenuAutoClose)">MenuManualClose</include>
+							<include  condition="!Skin.HasSetting(MenuAutoClose)">MenuManualClose</include>
 							<onclick condition="IsEmpty(skin.string(SubMenu4)) + !Skin.HasSetting(MovieSubmenu)">Skin.Setstring(SubMenu4,open)</onclick>
 							<onclick condition="!IsEmpty(skin.string(SubMenu4)) + !Skin.HasSetting(MovieSubmenu)">Skin.Reset(SubMenu4)</onclick>
 							<onclick condition="IsEmpty(skin.string(SubMenu4)) + !Skin.HasSetting(MovieSubmenu)">Skin.Setstring(SubMenu4,open)</onclick>
@@ -259,7 +259,7 @@
 							<label>31080</label>
 							<visible>!Skin.HasSetting(HideGlobalTvshows)</visible>
 							<visible>Library.HasContent(TVShows)</visible>
-							<include  condition="Skin.HasSetting(MenuAutoClose)">MenuManualClose</include>
+							<include  condition="!Skin.HasSetting(MenuAutoClose)">MenuManualClose</include>
 							<onclick condition="IsEmpty(skin.string(SubMenu5)) + !Skin.HasSetting(TvShowSubmenu)">Skin.Setstring(SubMenu5,open)</onclick>
 							<onclick condition="!IsEmpty(skin.string(SubMenu5)) + !Skin.HasSetting(TvShowSubmenu)">Skin.Setstring(SubMenu5,)</onclick>
 							<onclick condition="IsEmpty(skin.string(SubMenu5)) + !Skin.HasSetting(TvShowSubmenu)">Skin.Setstring(SubMenu5,open)</onclick>
@@ -313,7 +313,7 @@
 							<include>NotVisibleAllSettingsWindows</include>
 							<visible>![Window.IsActive(Home) | Window.IsActive(weather)]</visible>
 							<visible>Skin.HasSetting(HideGlobalSort)</visible>
-							<include  condition="Skin.HasSetting(MenuAutoClose)">MenuManualClose</include>
+							<include  condition="!Skin.HasSetting(MenuAutoClose)">MenuManualClose</include>
 							<onclick condition="IsEmpty(skin.string(SubMenu1))">Skin.Setstring(SubMenu1,open)</onclick>
 							<onclick condition="!IsEmpty(skin.string(SubMenu1))">Skin.Setstring(SubMenu1,)</onclick>
 							<property name="DropdownMenu1">not_empty</property>
@@ -347,7 +347,7 @@
 						<item id="106">
 							<description>Addons</description>
 							<label>$LOCALIZE[24001]</label>
-							<include  condition="Skin.HasSetting(MenuAutoClose)">MenuManualClose</include>
+							<include  condition="!Skin.HasSetting(MenuAutoClose)">MenuManualClose</include>
 							<onclick condition="IsEmpty(Skin.String(SubMenu6))">Skin.SetString(SubMenu6,open)</onclick>
 							<onclick condition="!IsEmpty(Skin.String(SubMenu6))">Skin.Reset(SubMenu6)</onclick>
 							<onclick condition="IsEmpty(Skin.String(SubMenu6))">Skin.SetString(SubMenu6,open)</onclick> 
@@ -360,7 +360,7 @@
 						<item id="107">
 							<description>Settings</description>
 							<label>31087</label>
-							<include  condition="Skin.HasSetting(MenuAutoClose)">MenuManualClose</include>
+							<include  condition="!Skin.HasSetting(MenuAutoClose)">MenuManualClose</include>
 							<onclick condition="IsEmpty(Skin.String(SubMenu2))">Skin.SetString(SubMenu2,open)</onclick>
 							<onclick condition="!IsEmpty(Skin.String(SubMenu2))">Skin.Reset(SubMenu2)</onclick>
 							<onclick condition="IsEmpty(Skin.String(SubMenu2))">Skin.SetString(SubMenu2,open)</onclick> 
@@ -380,7 +380,7 @@
 						<item id="108">
 							<description>Sources</description>
 							<label>31088</label>
-							<include  condition="Skin.HasSetting(MenuAutoClose)">MenuManualClose</include>
+							<include  condition="!Skin.HasSetting(MenuAutoClose)">MenuManualClose</include>
 							<onclick condition="IsEmpty(skin.string(SubMenu3))">Skin.Setstring(SubMenu3,open)</onclick>
 							<onclick condition="!IsEmpty(skin.string(SubMenu3))">Skin.Reset(SubMenu3)</onclick>
 							<onclick condition="IsEmpty(skin.string(SubMenu3))">Skin.Setstring(SubMenu3,open)</onclick>
