@@ -230,25 +230,25 @@
 			
 				<control type="label">
 					<left>945</left>
-					<top>285</top>
+					<top>289</top>
 					<width>633</width>
 					<height>60</height>
 					<align>left</align>
 					<label>$LOCALIZE[31180]</label>
 					<font>plot</font>
-					<textcolor>FFD7D7D7</textcolor>
+					<textcolor>FFEBEBEB</textcolor>
 					<selectedcolor>taskbar</selectedcolor>
-					<visible>Container.Content(tvshows)</visible>
+					<visible>Container.Content(tvshows) + !IsEmpty(ListItem.Property(UnWatchedEpisodes))</visible>
 				</control>
 				<control type="label">
 					<left>972</left>
-					<top>285</top>
+					<top>289</top>
 					<width>200</width>
 					<height>60</height>
 					<align>right</align>
 					<label>$INFO[ListItem.Property(UnWatchedEpisodes)]</label>
 					<font>plot</font>
-					<textcolor>blue</textcolor>
+					<textcolor>FFEBEBEB</textcolor>
 					<selectedcolor>taskbar</selectedcolor>
 					<visible>Container.Content(tvshows)</visible>
 				</control>
@@ -259,7 +259,7 @@
 				<top>175</top>
 				<width>230</width>
 				<height>190</height>
-				<label>$INFO[ListItem.Title]</label>
+				<label>$VAR[Title]</label>
 				<scroll>false</scroll>
 				<textcolor>FFEBEBEB</textcolor>
 				<shadowcolor>ff959595</shadowcolor>

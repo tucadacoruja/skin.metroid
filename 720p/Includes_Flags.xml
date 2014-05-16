@@ -173,7 +173,7 @@
 		<control type="group">
 		<top>84</top>
 		<visible>!Window.IsVisible(movieinformation) + !Skin.HasSetting(HideFlagsInfo)</visible>
-		<visible>[Control.IsVisible(501) | Control.IsVisible(781)] + Container.Content(Movies)</visible>
+		<visible>[Control.IsVisible(501) | Control.IsVisible(781) | Control.IsVisible(50)] + Container.Content(Movies)</visible>
 			<control type="group">
 			
 				<include>FlagsHalfScreen</include>

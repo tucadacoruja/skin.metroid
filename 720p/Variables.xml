@@ -80,6 +80,7 @@
 	
 	<variable name="FanOrThumb">
 		
+		<value condition="[Container.Content(pictures) | Window.IsVisible(pictures)] + !substring(Listitem.Label,..,left)">$INFO[ListItem.Icon]</value>
 		<value condition="!IsEmpty(ListItem.Art(thumb))">$INFO[ListItem.Art(thumb)]</value>
 		<value condition="!IsEmpty(ListItem.Art(landscape))">$INFO[ListItem.Art(landscape)]</value>
 		<value>$INFO[ListItem.Art(fanart)]</value>
@@ -211,7 +212,7 @@
 	<variable name="GeneralLabel2">
 		<value condition="Container.Content(episodes)">$VAR[Padded_season,S]$VAR[Padded_episodes,E] $INFO[ListItem.Property(UnWatchedEpisodes),$LOCALIZE[31180]] $INFO[ListItem.Duration,, Min] $INFO[ListItem.Premiered,$LOCALIZE[31181] ] $INFO[ListItem.Genre,$LOCALIZE[31051]]</value>
 		<value condition="Container.Content(songs) | Container.Content(albums)">$INFO[ListItem.Artist] $INFO[ListItem.Year] $INFO[ListItem.Genre,$LOCALIZE[31051]: ]</value>
-		<value condition="Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons)">$INFO[ListItem.Property(UnWatchedEpisodes),, $LOCALIZE[31180]]  $INFO[ListItem.Year] $INFO[ListItem.Genre,$LOCALIZE[31051]: ]</value>
+		<value condition="Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons)">$INFO[ListItem.Property(UnWatchedEpisodes),, $LOCALIZE[31180] ]$INFO[ListItem.Year] $INFO[ListItem.Genre,$LOCALIZE[31051]: ]</value>
 		<value condition="Container.Content(artists)">$INFO[ListItem.Property(Artist_Formed)] $INFO[ListItem.Property(Artist_Genre)]</value>
 	</variable>
 

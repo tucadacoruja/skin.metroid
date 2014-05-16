@@ -12,11 +12,12 @@
 	<include>Keyboard</include>
 	<include>WidgetsAnimation</include>
 	
-					
+	<include>MediaFlags</include>
+	
 		<!--  ==== Info & Thumb Code ====  -->
 		<control type="group">
 		<left>360</left>
-		<top>-30</top>
+		<top>-20</top>
 		
 			<control type="group">
 
@@ -55,7 +56,7 @@
 					
 					<colordiffuse>EBFFFFFF</colordiffuse>
 					<texture>$INFO[ListItem.Icon]</texture>
-					<visible>IsEmpty(ListItem.Art(thumb)</visible>
+					<visible>IsEmpty(ListItem.Art(thumb) + IsEmpty(ListItem.Art(poster)</visible>
 				</control>
 				
 				<control type="grouplist">
@@ -165,7 +166,7 @@
 		
 		<control type="group">
 		<left>340</left>
-		<top>-30</top>
+		<top>-20</top>
 		
 		<visible>Container.Content(Episodes) + ![SubString(Container.FolderPath,plugin,left) | SubString(Container.FolderPath,addons,left)]</visible>
 
@@ -251,7 +252,7 @@
 		
 		<control type="group">
 		<left>340</left>
-		<top>-30</top>
+		<top>-20</top>
 		
 	    <visible>![Container.Content(Movies) | Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes) | Container.Content(Sets) | Window.IsVisible(VideoPlaylist)] | [substring(Container.FolderPath,plugin,left) + Container.Content(Episodes)]</visible>
 			<control type="group">
@@ -322,7 +323,7 @@
 			
 			<control type="image">
 				<left>327</left>
-				<top>130</top>
+				<top>140</top>
 				<width>605</width>
 				<height>440</height>
 				<aspectratio>stretch</aspectratio>
@@ -334,7 +335,7 @@
 				
 			<control type="list" id="50">
 				<left>328</left>
-				<top>130</top>
+				<top>140</top>
 				<width>1000</width>
 				<height>440</height>
 				<onleft>60</onleft>
@@ -349,13 +350,13 @@
 				<itemlayout height="44" width="710">
 
 					<control type="image">
-						<left>0</left>
+						<left>1</left>
 						<top>43</top>
 						<width>480</width>
 						<height>1</height>
 						<aspectratio>stretch</aspectratio>
 						<texture>SelectDiff.png</texture>
-						<colordiffuse>16FFFFFF</colordiffuse>
+						<colordiffuse>26FFFFFF</colordiffuse>
 					</control>
 					<control type="label">
 						<left>14</left>
@@ -413,8 +414,8 @@
 						<width>435</width>
 						<height>43</height>
 						<font>font14</font>
-						<textcolor>white</textcolor>
-						<!--shadowcolor>77000000</shadowcolor-->
+						<textcolor>FFFFFFFF</textcolor>
+						<shadowcolor>77000000</shadowcolor>
 						<align>left</align>
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Label]</label>
@@ -434,7 +435,7 @@
 						<label>$INFO[ListItem.Property(unWatchedEpisodes)]</label>
 						<visible>stringcompare(ListItem.Overlay,OverlayUnWatched.png) + [Container.Content(TVShows) | Container.Content(Seasons)]</visible>
 					</control>
-					<control type="image">
+					<!-- control type="image">
 						<left>550</left>
 						<top>7</top>
 						<width>50</width>
@@ -444,7 +445,7 @@
 						<texture>$INFO[ListItem.VideoResolution,flags/video/resolution/,.png]</texture>
 						<visible>Container.Content(Movies) | Container.Content(Episodes) | Window.IsVisible(VideoPlaylist)</visible>
 						<visible>!Skin.HasSetting(HideFlagsInfo)</visible>
-					</control>
+					</control -->
 
 					<control type="label">
 						<left>580</left>
@@ -465,20 +466,20 @@
 				<focusedlayout height="44" width="710">
 					<control type="group">
 						<control type="image">
-							<left>0</left>
+							<left>1</left>
 							<top>43</top>
 							<width>450</width>
 							<height>1</height>
 							<aspectratio>stretch</aspectratio>
 							<texture>SelectDiff.png</texture>
-							<colordiffuse>22FFFFFF</colordiffuse>
+							<colordiffuse>26FFFFFF</colordiffuse>
 						</control>
 					
 						<control type="image">
 							<left>0</left>
 							<top>0</top>
 							<width>604</width>
-							<height>44</height>
+							<height>43</height>
 							<aspectratio>stretch</aspectratio>
 							<texture>black.png</texture>
 							<colordiffuse>55FFFFFF</colordiffuse>
@@ -489,7 +490,7 @@
 							<left>0</left>
 							<top>0</top>
 							<width>806</width>
-							<height>44</height>
+							<height>43</height>
 							<aspectratio>stretch</aspectratio>
 							<texture>black.png</texture>
 							<colordiffuse>55FFFFFF</colordiffuse>
@@ -552,7 +553,7 @@
 							<width>435</width>
 							<height>43</height>
 							<font>font14</font>
-							<textcolor>white</textcolor>
+							<textcolor>FFFFFFFF</textcolor>
 							<shadowcolor>77000000</shadowcolor>
 							<align>left</align>
 							<aligny>center</aligny>
@@ -572,7 +573,7 @@
 							<label>$INFO[ListItem.Property(unWatchedEpisodes)]</label>
 							<visible>stringcompare(ListItem.Overlay,OverlayUnWatched.png) + [Container.Content(TVShows) | Container.Content(Seasons)]</visible>
 						</control>
-						<control type="image">
+						<!-- control type="image">
 							<left>550</left>
 							<top>7</top>
 							<width>50</width>
@@ -582,7 +583,7 @@
 							<texture>$INFO[ListItem.VideoResolution,flags/video/resolution/,.png]</texture>
 							<visible>Container.Content(Movies) | Container.Content(Episodes) | Window.IsVisible(VideoPlaylist)</visible>
 							<visible>!Skin.HasSetting(HideFlagsInfo)</visible>
-						</control>
+						</control -->
 		
 						<control type="label">
 							<left>580</left>
@@ -605,7 +606,7 @@
 			<control type="textbox">
 				<left>315</left>
 				<top>610</top>
-				<width>860</width>
+				<width>900</width>
 				<height>70</height>
 				<label>$VAR[MultiPlot]</label>
 				<font>font12</font>
@@ -637,7 +638,7 @@
 				<orientation>Vertical</orientation>
 				<showonepage>true</showonepage>
 				<left>290</left>
-				<top>128</top>
+				<top>138</top>
 				<width>10</width>
 				<height>444</height>
 				<onleft>300</onleft>

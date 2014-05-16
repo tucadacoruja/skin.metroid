@@ -93,7 +93,7 @@
 					<width>633</width>
 					<height>60</height>
 					<align>left</align>
-					<label>$INFO[ListItem.Title]</label>
+					<label>$VAR[Title]</label>
 					<font>homemenu3</font>
 					
 					<textcolor>FF707070</textcolor>
@@ -168,7 +168,7 @@
 					<width>633</width>
 					<height>60</height>
 					<align>left</align>
-					<label>$INFO[ListItem.Title]</label>
+					<label>$VAR[Title]</label>
 					<font>homemenu3</font>
 					<textcolor>FF707070</textcolor>
 					<selectedcolor>taskbar</selectedcolor>
