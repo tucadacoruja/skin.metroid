@@ -47,20 +47,24 @@
 	<control type="progress" id="32">
 		<description>Progress Bar</description>
 		<left>-55</left>
-		<top>62</top>
+		<top>63</top>
 		<width>1335</width>
-		<height>1</height>
-		<texturebg>DialogProgressBack.png</texturebg>
+		<height>3</height>
+
+		<texturebg>transparent.png</texturebg>
 		<lefttexture>-</lefttexture>
-		<midtexture>osd/osdbg.png</midtexture>
+		<midtexture>white.png</midtexture>
 		<righttexture>-</righttexture>
-		<info>System.Progressbar</info>
+		<!-- info>System.Progressbar</info -->
+		<colordiffuse>hellblue</colordiffuse>
 		<visible>![Window.IsVisible(fullscreenvideo) | Window.IsVisible(visualisation)]</visible>
 	</control>
-	
+
 	<include condition="Window.IsVisible(extendedprogressdialog)">FakeProgress</include>		
 			
  </control> 
+ 
+ 
 </controls>
   
 </window>

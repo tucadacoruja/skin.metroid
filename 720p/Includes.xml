@@ -15,16 +15,16 @@
 <!-- ----viewtypes---- -->
 <include file="Viewtype_Panel.xml" />
 <include file="Viewtype_Banners.xml" />
-<include file="Viewtype_FanartShelf.xml" />
+<!-- include file="Viewtype_FanartShelf.xml" / -->
 <include file="Viewtype_List.xml" />
 <include file="Viewtype_PosterFix.xml" />
-<include file="Viewtype_PosterSplit.xml" />
-<include file="Viewtype_Polaroid.xml" />
-<include file="Viewtype_Icons.xml" />
+<!-- include file="Viewtype_PosterSplit.xml" / -->
+<!-- include file="Viewtype_Polaroid.xml" / -->
+<!-- include file="Viewtype_Icons.xml" / -->
 <include file="Viewtype_LogoPanel.xml" />
 <include file="Viewtype_Channels.xml" />
 
-
+<!-- Indentify sets SubString(ListItem.Path,videodb://movies/sets/) -->
 
 <include name="LoadSettings">
 	<onload>Skin.SetString(MainColorString,blue)</onload>
@@ -56,7 +56,12 @@
 	<!-- colordiffuse>skin.string(MainColorString)</colordiffuse -->
 	<shadowcolor>70464646</shadowcolor>
 	<textoffsetx>-2</textoffsetx>
-	<texturenofocus colordiffuse="FF636363">osd/GrayBackground.png</texturenofocus>
+	<texturenofocus colordiffuse="FFB3B3B3">osd/GrayBackground.png</texturenofocus>
+	<texturefocus colordiffuse="blue">osd/GrayBackground.png</texturefocus>
+</include>
+
+<include name="Darkkeybutton">
+	<texturenofocus colordiffuse="FF6E6E6E">osd/GrayBackground.png</texturenofocus>
 	<texturefocus colordiffuse="blue">osd/GrayBackground.png</texturefocus>
 </include>
 
@@ -220,7 +225,7 @@
 	<font>WeatherSmall</font>
 	<align>right</align>
 	<aligny>center</aligny>
-	<textcolor>FF707070</textcolor>
+	<textcolor>FF898989</textcolor>
 	<scroll>false</scroll>
 </include>
 
@@ -248,6 +253,7 @@
 	</control>
 	
 </include>
+
 
 <include name="FakeProgress">
 	<control type="image">
@@ -716,7 +722,7 @@
 				<width>52</width>
 				<texture>osd/GrayBackground.png</texture>
 				<aspectratio>stretch</aspectratio>
-				<visible>[Window.IsVisible(videolibrary) | Window.IsVisible(musicplaylist) | Window.IsVisible(videoplaylist) | Window.IsVisible(musiclibrary) | Window.IsVisible(musicfiles)] + ![IsEmpty(Container.FolderPath) | SubString(Container.FolderPath,playlistmusic://) | SubString(Container.FolderPath,videodb://) | SubString(Container.FolderPath,library://) | SubString(Container.FolderPath,musicdb://) | SubString(Container.FolderPath,addons://) | SubString(Container.FolderPath,special://) | SubString(Container.FolderPath,plugin://)]</visible>
+				<visible>[Window.IsVisible(videolibrary) | Window.IsVisible(musicplaylist) | Window.IsVisible(videoplaylist) | Window.IsVisible(musiclibrary) | Window.IsVisible(musicfiles)] + ![IsEmpty(Container.FolderPath) | SubString(Container.FolderPath,playlistvideo://) | SubString(Container.FolderPath,playlistmusic://) | SubString(Container.FolderPath,videodb://) | SubString(Container.FolderPath,library://) | SubString(Container.FolderPath,musicdb://) | SubString(Container.FolderPath,addons://) | SubString(Container.FolderPath,special://) | SubString(Container.FolderPath,plugin://)]</visible>
 				<animation effect="fade" start="0" end="100" time="300" delay="120">VisibleChange</animation>
 			</control>
 			<control type="image"> <!-- 3 battery -->
@@ -842,7 +848,7 @@
 				<width>52</width>
 				<height>52</height>
 				<texture>DefaultHardDisk.png</texture>
-				<visible>[Window.IsVisible(videolibrary) | Window.IsVisible(musicplaylist) | Window.IsVisible(videoplaylist) | Window.IsVisible(musiclibrary) | Window.IsVisible(musicfiles)] + ![IsEmpty(Container.FolderPath) | SubString(Container.FolderPath,playlistmusic://) | SubString(Container.FolderPath,videodb://) | SubString(Container.FolderPath,library://) | SubString(Container.FolderPath,musicdb://) | SubString(Container.FolderPath,addons://) | SubString(Container.FolderPath,special://) | SubString(Container.FolderPath,plugin://)]</visible>
+				<visible>[Window.IsVisible(videolibrary) | Window.IsVisible(musicplaylist) | Window.IsVisible(videoplaylist) | Window.IsVisible(musiclibrary) | Window.IsVisible(musicfiles)] + ![IsEmpty(Container.FolderPath) | SubString(Container.FolderPath,playlistvideo://) | SubString(Container.FolderPath,playlistmusic://) | SubString(Container.FolderPath,videodb://) | SubString(Container.FolderPath,library://) | SubString(Container.FolderPath,musicdb://) | SubString(Container.FolderPath,addons://) | SubString(Container.FolderPath,special://) | SubString(Container.FolderPath,plugin://)]</visible>
 			</control>
 			
 			<control type="image"> <!-- 3 battery -->

@@ -142,7 +142,7 @@
 				<top>50</top>
 				<width>633</width>
 				<height>6</height>
-				<texturebg colordiffuse="00FFFFFF">white.png</texturebg>
+				<texturebg>transparent.png</texturebg>
 				<lefttexture>-</lefttexture>
 				<midtexture colordifuse="F3FFFFFF" >white.png</midtexture>
 				<righttexture>-</righttexture>

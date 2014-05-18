@@ -349,7 +349,7 @@
 						<description>Sort options in main menu</description>
 						<label>$LOCALIZE[31156] $LOCALIZE[31142]</label>
 						<onclick>Skin.ToggleSetting(HideGlobalSort)</onclick>
-						<selected>Skin.HasSetting(HideGlobalSort)</selected>
+						<selected>!Skin.HasSetting(HideGlobalSort)</selected>
 					</control>
 					<control type="radiobutton" id="118">
 						<include>SettingsButton</include>
@@ -994,14 +994,14 @@
 						
 					</control>
 					
-					<control type="radiobutton" id="112">
+					<!-- control type="radiobutton" id="112">
 						<include>SettingsButton</include>
 						<description>Alphabetical keyboard</description>
 						<label>$LOCALIZE[31250]</label>
 						
 						<onclick>Skin.ToggleSetting(AlphabeticalKeyboard)</onclick>
 						<selected>Skin.HasSetting(AlphabeticalKeyboard)</selected>
-					</control>
+					</control -->
 					
 					<control type="radiobutton" id="113">
 						<include>SettingsButton</include>

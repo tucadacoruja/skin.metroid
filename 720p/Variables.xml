@@ -20,7 +20,7 @@
 	
 	<variable name="KeyboardSymbol">
 		<value condition="SubString(Control.GetLabel(304),*)">FF324a76</value>
-		<value>FF5E5E5E</value>
+		<value>FFB3B3B3</value>
 	</variable>
 	
 	<variable name="ClearLogo">
@@ -81,8 +81,10 @@
 	<variable name="FanOrThumb">
 		
 		<value condition="[Container.Content(pictures) | Window.IsVisible(pictures)] + !substring(Listitem.Label,..,left)">$INFO[ListItem.Icon]</value>
-		<value condition="!IsEmpty(ListItem.Art(thumb))">$INFO[ListItem.Art(thumb)]</value>
 		<value condition="!IsEmpty(ListItem.Art(landscape))">$INFO[ListItem.Art(landscape)]</value>
+		<value condition="![IsEmpty(ListItem.Art(fanart)) | SubString(Container.FolderPath,addons,left) | SubString(Container.FolderPath,plugin,left)] + [Container.Content(movies) | Container.Content(tvshows)]">$INFO[ListItem.Art(fanart)]</value>
+		<value condition="!IsEmpty(ListItem.Art(thumb))">$INFO[ListItem.Art(thumb)]</value>
+		
 		<value>$INFO[ListItem.Art(fanart)]</value>
 		
 	</variable>
@@ -96,6 +98,10 @@
 	<variable name="WatchedCheckmark">
 		
 		<value condition="stringcompare(ListItem.Overlay,OverlayWatched.png)">✔</value>
+		<value condition="stringcompare(ListItem.Label2,$LOCALIZE[305])">✔</value>
+		<value condition="substring(Listitem.Label,..,left)">↑</value>
+		<value condition="substring(Listitem.Icon,DefaultAddSource.png)">+</value>
+		<value condition="ListItem.IsFolder">&#9702;</value>
 		<value>•</value>
 		
 	</variable>
@@ -261,6 +267,43 @@
 		<value>$INFO[ListItem.Label2]</value>
 	</variable>
 	
+	<variable name="Polaroid_Extra">
+		<value condition="Container.Content(songs)">$INFO[ListItem.Artist][CR]$INFO[ListItem.Album]</value>
+		<value condition="Container.Content(movies)">$INFO[ListItem.Duration,, Min] $INFO[ListItem.Genre]</value>
+		<value condition="Container.Content(tvshows)">$INFO[ListItem.Property(TotalEpisodes),$LOCALIZE[31179] ]$INFO[ListItem.Property(UnWatchedEpisodes), $LOCALIZE[31180] ][CR]$INFO[ListItem.Genre]</value>
+		<value condition="Container.Content(seasons)">$INFO[ListItem.Property(TotalEpisodes),$LOCALIZE[31179] ]</value>
+		<value condition="Container.Content(episodes) + StringCompare(Container.FolderPath,videodb://recentlyaddedepisodes/)">$INFO[ListItem.TVShowTitle]</value>
+		<value condition="Container.Content(episodes) + !SubString(ListItem.Label,..,left)">$VAR[Padded_season,S]$VAR[Padded_episodes,E] $INFO[ListItem.TVShowTitle]</value>
+		<value condition="Container.Content(artists) + !IsEmpty(ListItem.Property(Artist_Born))">$INFO[ListItem.Property(Artist_Born),$LOCALIZE[31183] ]</value>
+		<value condition="Container.Content(artists) + !IsEmpty(ListItem.Property(Artist_Formed))">$INFO[ListItem.Property(Artist_Formed),$LOCALIZE[31184] ]</value>
+		<value condition="Container.Content(addons)">$INFO[ListItem.Property(Addon.Summary)]</value>
+		<value condition="[SubString(Container.FolderPath,addons,left) | SubString(Container.FolderPath,plugin,left)] + IsEmpty(ListItem.Property(Addon.Version))">$INFO[ListItem.Studio]</value>
+		<value condition="Window.IsVisible(pictures) + !IsEmpty(ListItem.PictureCamModel)">$INFO[ListItem.PictureCamModel]</value>
+		<value condition="Window.IsVisible(videoplaylist)">$INFO[ListItem.Season,$LOCALIZE[31201] , ]$INFO[ListItem.Episode,$LOCALIZE[31202] , ]$INFO[ListItem.Duration,, Min ]</value>
+		<value condition="SubString(ListItem.Path,videodb://movies/sets/)">$INFO[ListItem.Rating,♥ ]</value>
+		
+		<value>$INFO[ListItem.Label2]</value>
+	</variable>
+	
+	<variable name="Polaroid_Label2">
+		
+		<value condition="Container.Content(movies)">$INFO[ListItem.Year] $INFO[ListItem.Studio]</value>
+		<value condition="Container.Content(tvshows)">$INFO[ListItem.Studio]</value>
+		<value condition="Container.Content(seasons)">$INFO[ListItem.Property(TotalEpisodes),$LOCALIZE[31179] ]</value>
+		<value condition="Container.Content(episodes) + StringCompare(Container.FolderPath,videodb://recentlyaddedepisodes/)">$INFO[ListItem.TVShowTitle]</value>
+		<value condition="Container.Content(episodes) + !SubString(ListItem.Label,..,left)">$INFO[ListItem.Premiered,$LOCALIZE[31181] ]</value>
+		<value condition="Container.Content(artists) + !IsEmpty(ListItem.Property(Artist_Born))">$INFO[ListItem.Property(Artist_Born),$LOCALIZE[31183] ]</value>
+		<value condition="Container.Content(artists) + !IsEmpty(ListItem.Property(Artist_Formed))">$INFO[ListItem.Property(Artist_Formed),$LOCALIZE[31184] ]</value>
+		<value condition="[Container.Content(songs) | Container.Content(albums)] + !IsEmpty(ListItem.Artist)">$INFO[ListItem.Artist]</value>
+		<value condition="Container.Content(addons)">$INFO[ListItem.Property(Addon.Version)] $INFO[ListItem.Property(Addon.Creator)]</value>
+		<value condition="[SubString(Container.FolderPath,addons,left) | SubString(Container.FolderPath,plugin,left)] + IsEmpty(ListItem.Property(Addon.Version))">$INFO[ListItem.Studio]</value>
+		<value condition="Window.IsVisible(pictures) + !IsEmpty(ListItem.PictureCamModel)">$INFO[ListItem.PictureCamModel]</value>
+		<value condition="Window.IsVisible(videoplaylist)">$INFO[ListItem.TVShowTitle,, ]$INFO[ListItem.Year]</value>
+		<value condition="!IsEmpty(ListItem.Rating)">$INFO[ListItem.Rating,♥ ]</value>
+		<value condition="!IsEmpty(ListItem.Label2)">$INFO[ListItem.Label2]</value>
+		<value>..</value>
+	</variable>
+	
 	<variable name="Landscape_Detail">
 		<value condition="Container.Content(movies)">$INFO[ListItem.Year] $INFO[ListItem.Studio]</value>
 		<value condition="Container.Content(tvshows)">$INFO[ListItem.Studio]</value>
@@ -269,8 +312,10 @@
 		<value condition="Container.Content(episodes) + !SubString(ListItem.Label,..,left)">$INFO[ListItem.Premiered,$LOCALIZE[31181] ]</value>
 		<value condition="Container.Content(artists) + !IsEmpty(ListItem.Property(Artist_Born))">$INFO[ListItem.Property(Artist_Born),$LOCALIZE[31183] ]</value>
 		<value condition="Container.Content(artists) + !IsEmpty(ListItem.Property(Artist_Formed))">$INFO[ListItem.Property(Artist_Formed),$LOCALIZE[31184] ]</value>
+		<value condition="[Container.Content(songs) | Container.Content(albums)] + !IsEmpty(ListItem.Artist)">$INFO[ListItem.Artist]</value>
 		<value condition="Container.Content(addons)">$INFO[ListItem.Property(Addon.Version)] $INFO[ListItem.Property(Addon.Creator)]</value>
 		<value condition="[SubString(Container.FolderPath,addons,left) | SubString(Container.FolderPath,plugin,left)] + IsEmpty(ListItem.Property(Addon.Version))">$INFO[ListItem.Studio]</value>
+		<value condition="!IsEmpty(ListItem.Rating)">$INFO[ListItem.Rating,♥ ]</value>
 		<value>$INFO[ListItem.Label2]</value>
 	</variable>
 	

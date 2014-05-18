@@ -224,7 +224,7 @@
 			<control type="label">
 				<left>125</left>
 				<top>432</top>
-				<width>410</width>
+				<width>400</width>
 				<height>60</height>
 				<align>left</align>
 				<label>$INFO[MusicPlayer.Artist]</label>
@@ -237,7 +237,7 @@
 			<control type="label">
 				<left>125</left>
 				<top>467</top>
-				<width>410</width>
+				<width>400</width>
 				<height>60</height>
 				<label>$INFO[MusicPlayer.Title]</label>
 				<font>MainMenu21</font>

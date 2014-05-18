@@ -312,21 +312,21 @@
 							<label>31082</label>
 							<include>NotVisibleAllSettingsWindows</include>
 							<visible>![Window.IsActive(Home) | Window.IsActive(weather)]</visible>
-							<visible>Skin.HasSetting(HideGlobalSort)</visible>
+							<visible>!Skin.HasSetting(HideGlobalSort)</visible>
 							<include  condition="!Skin.HasSetting(MenuAutoClose)">MenuManualClose</include>
 							<onclick condition="IsEmpty(skin.string(SubMenu1))">Skin.Setstring(SubMenu1,open)</onclick>
 							<onclick condition="!IsEmpty(skin.string(SubMenu1))">Skin.Setstring(SubMenu1,)</onclick>
 							<property name="DropdownMenu1">not_empty</property>
 						</item>
 						
-						<include condition="Window.IsActive(musicplaylist) + Skin.HasSetting(HideGlobalSort)">MusicPlaylistItems</include>
-						<include condition="Window.IsActive(videoplaylist) + Skin.HasSetting(HideGlobalSort)">VideoPlaylistItems</include>
-						<include condition="[Window.IsActive(programs) | Window.IsActive(40)] + Skin.HasSetting(HideGlobalSort)">ProgramsItems</include>
-						<include condition="Window.IsActive(pictures) + Skin.HasSetting(HideGlobalSort)">PicturesItems</include>
-						<include condition="Window.IsActive(videofiles) + Skin.HasSetting(HideGlobalSort)">VideoFilesItems</include>
-						<include condition="Window.IsActive(videolibrary) + Skin.HasSetting(HideGlobalSort)">VideoLibraryItems</include>
-						<include condition="Window.IsActive(musicfiles) + Skin.HasSetting(HideGlobalSort)">MusicFilesItems</include>
-						<include condition="Window.IsActive(musiclibrary) + Skin.HasSetting(HideGlobalSort)">MusicLibraryItems</include>
+						<include condition="Window.IsActive(musicplaylist) + !Skin.HasSetting(HideGlobalSort)">MusicPlaylistItems</include>
+						<include condition="Window.IsActive(videoplaylist) + !Skin.HasSetting(HideGlobalSort)">VideoPlaylistItems</include>
+						<include condition="[Window.IsActive(programs) | Window.IsActive(40)] + !Skin.HasSetting(HideGlobalSort)">ProgramsItems</include>
+						<include condition="Window.IsActive(pictures) + !Skin.HasSetting(HideGlobalSort)">PicturesItems</include>
+						<include condition="Window.IsActive(videofiles) + !Skin.HasSetting(HideGlobalSort)">VideoFilesItems</include>
+						<include condition="Window.IsActive(videolibrary) + !Skin.HasSetting(HideGlobalSort)">VideoLibraryItems</include>
+						<include condition="Window.IsActive(musicfiles) + !Skin.HasSetting(HideGlobalSort)">MusicFilesItems</include>
+						<include condition="Window.IsActive(musiclibrary) + !Skin.HasSetting(HideGlobalSort)">MusicLibraryItems</include>
 						
 						<item id="114">
 							<description>viewtype</description>

@@ -65,6 +65,7 @@
 				<!-- Poster Section -->
 				<control type="group">
 					<visible>[Container.Content(episodes) | Container.Content(movies)] + !SubString(Container.FolderPath,plugin,left)</visible>
+					<visible>![IsEmpty(ListItem.Art(poster)) + IsEmpty(ListItem.Art(tvshow.poster)) + IsEmpty(ListItem.Art(season.poster))]</visible>
 					
 					<width>360</width>
 					<height>600</height>

@@ -136,7 +136,7 @@
 					<align>left</align>
 					<label>$LOCALIZE[31053]: $INFO[ListItem.Label]</label>
 					<textcolor>whitelist</textcolor>
-					<selectedcolor>babyblue</selectedcolor>
+			
 				</control>
 			</itemlayout>
 			<focusedlayout height="40">

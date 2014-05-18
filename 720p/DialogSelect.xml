@@ -88,7 +88,7 @@
 					<info>ListItem.Label</info>
 					<scroll>false</scroll>
 					<textcolor>whitelist</textcolor>
-					<selectedcolor>babyblue</selectedcolor> 
+					 
 				</control>
 			</itemlayout>
 			

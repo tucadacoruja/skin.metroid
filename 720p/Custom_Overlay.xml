@@ -932,7 +932,7 @@
 			<shadowcolor>FF000000</shadowcolor>
 			<font>font13</font>
 			<align>right</align>
-			<label>[COLOR=FF00FF00]$INFO[Container.FolderName,, - ][/COLOR]$INFO[Container.FolderPath] - $INFO[Container.ListItem.FilenameandPath]</label>
+			<label>[COLOR=FF00FF00]$INFO[Container.FolderName,, - ][/COLOR]$INFO[Container.FolderPath]</label>
 			<visible>Skin.HasSetting(HideDebugInfo)</visible>
 		</control>
 

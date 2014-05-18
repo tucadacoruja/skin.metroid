@@ -44,19 +44,7 @@
 		<disabledcolor>03FFFFFF</disabledcolor>
 	</control>
   
-	<control type="progress" id="20">
-		<description>Progress Bar</description>
-		<left>0</left>
-		<top>63</top>
-		<width>1285</width>
-		<height>1</height>
-		<texturebg>DialogProgressBack.png</texturebg>
-		<lefttexture>-</lefttexture>
-		<midtexture>osd/osdbg.png</midtexture>
-		<righttexture>-</righttexture>
-		<info>System.Progressbar</info>
-		<visible>![Window.IsVisible(fullscreenvideo) | Window.IsVisible(visualisation)]</visible>
-	</control>
+	
 	
 	<control type="label" id="1">
 		<include>TopLabelBig</include>
@@ -72,8 +60,22 @@
 		<animation effect="fade" start="0" end="1000" time="150" condition="!Window.IsActive(infodialog)">Conditional</animation>
 	</control>
 
-	
  </control> 
+ 
+	<!-- not in group because some addons keep infodialog open during progress -->
+	<control type="progress"><!--  id="20" -->
+		<description>Progress Bar</description>
+		<left>-55</left>
+		<top>63</top>
+		<width>1335</width>
+		<height>1</height>
+		<texturebg>DialogProgressBack.png</texturebg>
+		<lefttexture>-</lefttexture>
+		<midtexture>osd/osdbg.png</midtexture>
+		<righttexture>-</righttexture>
+		<info>System.Progressbar</info>
+		<visible>![Window.IsVisible(fullscreenvideo) | Window.IsVisible(visualisation)]</visible>
+	</control>
   
   
 </controls>

@@ -16,7 +16,7 @@
 		<width>280</width>
 		<height>40</height>
 		<font>MusicPlaying</font>
-		<textcolor>55FFFFFF</textcolor>
+		<textcolor>99FFFFFF</textcolor>
 		<align>right</align>
 		<aligny>center</aligny>
 		<wrapmultiline>true</wrapmultiline>
@@ -41,7 +41,7 @@
 			<width>255</width>
 			<height>60</height>
 			<font>font30</font>
-			<textcolor>ACFFFFFF</textcolor>
+			<textcolor>FFFFFFFF</textcolor>
 			<align>center</align>
 			<aligny>center</aligny>
 		</control>
@@ -251,8 +251,7 @@
 			<onright>10</onright>
 			<onup>17</onup>
 			<ondown>11</ondown>
-			<texturenofocus>Keyboard/dark.png</texturenofocus>
-			<texturefocus>Keyboard/darkblue.png</texturefocus>
+			<include>Darkkeybutton</include>
 			<include>keybutton</include>
 		</control>
 		<control type="button" id="10">
@@ -280,8 +279,8 @@
 			<onright>21</onright>
 			<onup>19</onup>
 			<ondown>13</ondown>
-			<texturenofocus>Keyboard/dark.png</texturenofocus>
-			<texturefocus>Keyboard/darkblue.png</texturefocus>
+
+			<include>Darkkeybutton</include>
 			<include>keybutton</include>
 		</control>
 		

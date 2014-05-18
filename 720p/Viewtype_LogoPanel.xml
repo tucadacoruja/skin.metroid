@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
+
+
 <include name="LogoPanel">
 
 	<control type="group">
@@ -51,8 +53,8 @@
 				
 				<height>525</height>
 				
-				<onleft>57</onleft>
-				<onright>57</onright>
+				<onleft>637</onleft>
+				<onright>637</onright>
 				<onup>300</onup>
 				<ondown>63</ondown>
 				
@@ -87,7 +89,7 @@
 						<height>250</height>
 						<aspectratio>scale</aspectratio>
 						<fadetime>200</fadetime>
-						<texture background="true" fallback="DefaultCatch.png">$VAR[Landscape_Image]</texture>
+						<texture fallback="DefaultCatch.png">$VAR[Landscape_Image]</texture>
 						<colordiffuse>$VAR[LogoDiffuse]</colordiffuse>
 						
 					</control>
@@ -98,7 +100,7 @@
 						<height>230</height>
 						<aspectratio>keep</aspectratio>
 						<fadetime>200</fadetime>
-						<texture>$VAR[LogoIcon]</texture>
+						<texture background="true">$VAR[LogoIcon]</texture>
 						
 					</control>
 					
@@ -149,6 +151,9 @@
 						<texture fallback="DefaultCatch.png">$VAR[Landscape_Image]</texture>
 						<colordiffuse>$VAR[LogoDiffuse]</colordiffuse>
 					</control>
+					
+					
+					
 					<control type="image">
 						<left>15</left>
 						<top>10</top>
@@ -156,8 +161,43 @@
 						<height>230</height>
 						<aspectratio>keep</aspectratio>
 						<fadetime>200</fadetime>
-						<texture>$VAR[LogoIcon]</texture>
+						<texture background="true">$VAR[LogoIcon]</texture>
 					</control>
+					
+
+					<control type="group">
+					<visible>Container.Content(episodes) + Control.HasFocus(637)</visible>
+					<animation effect="fade" start="0" end="100" time="300" delay="5000" reversable="false" >Focus</animation>
+					<animation effect="fade" start="100" end="0" time="0" reversable="false" >UnFocus</animation>
+
+						<control type="image">
+							<left>0</left>
+							<top>0</top>
+							<width>400</width>
+							<height>250</height>
+							<aspectratio>scale</aspectratio>
+							<bordertexture border="3">empty.png</bordertexture>
+							<bordersize>3</bordersize>
+							<fadetime>200</fadetime>
+							<texture colordiffuse="" >black.png</texture>
+							<colordiffuse>74FFFFFF</colordiffuse>
+							
+						</control>
+						<control type="textbox">
+							<left>15</left>
+							<top>10</top>
+							<width>370</width>
+							<height>230</height>
+							<label>$INFO[ListItem.Plot]</label>
+							<font>font13</font>
+							<textcolor>FFFFFFFF</textcolor>
+							<aligny>top</aligny>
+						
+							<autoscroll delay="92200" time="5000" repeat="10000" />
+							
+						</control>
+					</control>
+	
 					<control type="image">
 						<left>360</left>
 						<top>210</top>

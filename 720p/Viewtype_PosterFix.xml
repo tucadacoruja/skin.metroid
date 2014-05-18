@@ -148,7 +148,7 @@
 				<textcolor>BFFFFFFF</textcolor>
 				<scroll>true</scroll>
 				<align>justify</align>
-				<autoscroll delay="922000" time="5000" repeat="10000" />
+				<autoscroll delay="92200" time="5000" repeat="10000" />
 				<label>$INFO[ListItem.Plot]</label>
 			</control>
 			
