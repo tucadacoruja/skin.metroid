@@ -149,7 +149,7 @@
 				<scroll>true</scroll>
 				<align>justify</align>
 				<autoscroll delay="92200" time="5000" repeat="10000" />
-				<label>$INFO[ListItem.Plot]</label>
+				<label>$INFO[ListItem.Rating,, ♥ ]$INFO[ListItem.Property(UnWatchedEpisodes),, $LOCALIZE[31180]. ]$INFO[ListItem.Plot]</label>
 			</control>
 			
 		</control>

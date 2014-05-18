@@ -247,7 +247,7 @@
 					<width>485</width>
 					<height>119</height>
 					<align>justify</align>
-					<info>ListItem.Plot</info>
+					<label>$INFO[ListItem.Rating,, ♥ ]$INFO[ListItem.Plot]</label>
 					<font>about</font>
 					<textcolor>FFF3F3F3</textcolor>
 					<autoscroll delay="35500" time="5000" repeat="10000" />
@@ -265,7 +265,7 @@
 				<width>230</width>
 				<height>380</height>
 				<align>justify</align>
-				<info>ListItem.Plot</info>
+				<label>$INFO[ListItem.Rating,, ♥ ]$INFO[ListItem.Plot]</label>
 				<font>plot</font>
 				<textcolor>FFF3F3F3</textcolor>
 				<autoscroll delay="35000" time="4000" repeat="10000" />

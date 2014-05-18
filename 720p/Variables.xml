@@ -216,9 +216,9 @@
 	
 	
 	<variable name="GeneralLabel2">
-		<value condition="Container.Content(episodes)">$VAR[Padded_season,S]$VAR[Padded_episodes,E] $INFO[ListItem.Property(UnWatchedEpisodes),$LOCALIZE[31180]] $INFO[ListItem.Duration,, Min] $INFO[ListItem.Premiered,$LOCALIZE[31181] ] $INFO[ListItem.Genre,$LOCALIZE[31051]]</value>
-		<value condition="Container.Content(songs) | Container.Content(albums)">$INFO[ListItem.Artist] $INFO[ListItem.Year] $INFO[ListItem.Genre,$LOCALIZE[31051]: ]</value>
-		<value condition="Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons)">$INFO[ListItem.Property(UnWatchedEpisodes),, $LOCALIZE[31180] ]$INFO[ListItem.Year] $INFO[ListItem.Genre,$LOCALIZE[31051]: ]</value>
+		<value condition="Container.Content(episodes)">$VAR[Padded_season,S]$VAR[Padded_episodes,E] $INFO[ListItem.Property(UnWatchedEpisodes),$LOCALIZE[31180]] $INFO[ListItem.Duration,, Min]$INFO[ListItem.Rating, , ♥ ]$INFO[ListItem.Premiered,$LOCALIZE[31181] ] $INFO[ListItem.Genre,$LOCALIZE[31051]]</value>
+		<value condition="Container.Content(songs) | Container.Content(albums)">$INFO[ListItem.Artist]$INFO[ListItem.Rating, , ♥ ] $INFO[ListItem.Year] $INFO[ListItem.Genre,$LOCALIZE[31051]: ]</value>
+		<value condition="Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons)">$INFO[ListItem.Property(UnWatchedEpisodes),, $LOCALIZE[31180] ]$INFO[ListItem.Rating, , ♥ ]$INFO[ListItem.Year] $INFO[ListItem.Genre,$LOCALIZE[31051]: ]</value>
 		<value condition="Container.Content(artists)">$INFO[ListItem.Property(Artist_Formed)] $INFO[ListItem.Property(Artist_Genre)]</value>
 	</variable>
 
@@ -268,12 +268,12 @@
 	</variable>
 	
 	<variable name="Polaroid_Extra">
-		<value condition="Container.Content(songs)">$INFO[ListItem.Artist][CR]$INFO[ListItem.Album]</value>
-		<value condition="Container.Content(movies)">$INFO[ListItem.Duration,, Min] $INFO[ListItem.Genre]</value>
+		<value condition="Container.Content(songs)">$INFO[ListItem.Artist]$INFO[ListItem.Rating, , ♥ ][CR]$INFO[ListItem.Album]</value>
+		<value condition="Container.Content(movies)">$INFO[ListItem.Duration,, Min ]$INFO[ListItem.Rating, , ♥ ]$INFO[ListItem.Genre]</value>
 		<value condition="Container.Content(tvshows)">$INFO[ListItem.Property(TotalEpisodes),$LOCALIZE[31179] ]$INFO[ListItem.Property(UnWatchedEpisodes), $LOCALIZE[31180] ][CR]$INFO[ListItem.Genre]</value>
 		<value condition="Container.Content(seasons)">$INFO[ListItem.Property(TotalEpisodes),$LOCALIZE[31179] ]</value>
 		<value condition="Container.Content(episodes) + StringCompare(Container.FolderPath,videodb://recentlyaddedepisodes/)">$INFO[ListItem.TVShowTitle]</value>
-		<value condition="Container.Content(episodes) + !SubString(ListItem.Label,..,left)">$VAR[Padded_season,S]$VAR[Padded_episodes,E] $INFO[ListItem.TVShowTitle]</value>
+		<value condition="Container.Content(episodes) + !SubString(ListItem.Label,..,left)">$VAR[Padded_season,S]$VAR[Padded_episodes,E] $INFO[ListItem.TVShowTitle]$INFO[ListItem.Rating, , ♥ ]</value>
 		<value condition="Container.Content(artists) + !IsEmpty(ListItem.Property(Artist_Born))">$INFO[ListItem.Property(Artist_Born),$LOCALIZE[31183] ]</value>
 		<value condition="Container.Content(artists) + !IsEmpty(ListItem.Property(Artist_Formed))">$INFO[ListItem.Property(Artist_Formed),$LOCALIZE[31184] ]</value>
 		<value condition="Container.Content(addons)">$INFO[ListItem.Property(Addon.Summary)]</value>
@@ -288,7 +288,7 @@
 	<variable name="Polaroid_Label2">
 		
 		<value condition="Container.Content(movies)">$INFO[ListItem.Year] $INFO[ListItem.Studio]</value>
-		<value condition="Container.Content(tvshows)">$INFO[ListItem.Studio]</value>
+		<value condition="Container.Content(tvshows)">$INFO[ListItem.Rating, , ♥ ]$INFO[ListItem.Studio]</value>
 		<value condition="Container.Content(seasons)">$INFO[ListItem.Property(TotalEpisodes),$LOCALIZE[31179] ]</value>
 		<value condition="Container.Content(episodes) + StringCompare(Container.FolderPath,videodb://recentlyaddedepisodes/)">$INFO[ListItem.TVShowTitle]</value>
 		<value condition="Container.Content(episodes) + !SubString(ListItem.Label,..,left)">$INFO[ListItem.Premiered,$LOCALIZE[31181] ]</value>
@@ -306,7 +306,7 @@
 	
 	<variable name="Landscape_Detail">
 		<value condition="Container.Content(movies)">$INFO[ListItem.Year] $INFO[ListItem.Studio]</value>
-		<value condition="Container.Content(tvshows)">$INFO[ListItem.Studio]</value>
+		<value condition="Container.Content(tvshows)">$INFO[ListItem.Rating, , ♥ ]$INFO[ListItem.Studio]</value>
 		<value condition="Container.Content(seasons)">$INFO[ListItem.Property(TotalEpisodes),$LOCALIZE[31179] ]</value>
 		<value condition="Container.Content(episodes) + StringCompare(Container.FolderPath,videodb://recentlyaddedepisodes/)">[UPPERCASE]$INFO[ListItem.TVShowTitle][/UPPERCASE]</value>
 		<value condition="Container.Content(episodes) + !SubString(ListItem.Label,..,left)">$INFO[ListItem.Premiered,$LOCALIZE[31181] ]</value>
