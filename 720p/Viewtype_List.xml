@@ -7,16 +7,15 @@
 		<top>15</top>
 
 		<visible>![Window.IsVisible(pictureinfo) | Window.IsVisible(smartplaylisteditor)]</visible>
-		<visible>Control.IsVisible(50)</visible>
+		
 		<include>InfoOpenClose</include>
-		<include>InfoOpenClose</include>	
 		<include>AddSource</include>
 		<include>Favourites</include>
 		<include>ContextFade</include>
 		<include>Keyboard</include>
 		<include>WidgetsAnimation</include>
 	
-
+		<visible>Control.IsVisible(50)</visible>
 		
 		<control type="list" id="50">
 			<viewtype label="31265">list</viewtype>
@@ -185,10 +184,10 @@
 		
 		
 		<control type="group">
-		<left>270</left>
+		<left>260</left>
 	
 		<animation effect="zoom" end="92" center="auto" time="0" condition="true">Conditional</animation>
-		<animation effect="slide" start="0,0" end="-140,0" time="400" condition="!Control.HasFocus(301) + !Skin.HasSetting(LockMainMenu)">Conditional</animation>
+		<animation effect="slide" start="0,0" end="-130,0" time="400" condition="!Control.HasFocus(301) + !Skin.HasSetting(LockMainMenu)">Conditional</animation>
 		
 				<control type="group">
 				<visible>!Skin.HasSetting(LockMainMenu)</visible>
@@ -198,7 +197,7 @@
 				<left>0</left>
 					
 					<!-- animation effect="rotate" end="10" center="auto" time="0" condition="true">Conditional</animation -->
-					<animation effect="slide" start="0,0" end="-100,0" time="600" condition="!Control.HasFocus(301) + !Skin.HasSetting(LockMainMenu)">Conditional</animation>
+					<animation effect="slide" start="0,0" end="-90,0" time="600" condition="!Control.HasFocus(301) + !Skin.HasSetting(LockMainMenu)">Conditional</animation>
 		
 	
 					<control type="image">
@@ -294,7 +293,7 @@
 				<height>105</height>
 				<aspectratio>keep</aspectratio>
 				<texture>$VAR[Fallback_Thumb]</texture>
-				<visible>IsEmpty(ListItem.Art(thumb))</visible>
+				<visible>IsEmpty(ListItem.Art(thumb)) + !Window.IsVisible(pictures)</visible>
 				<animation effect="fade" start="0" end="60" time="0" condition="true">Conditional</animation>
 			</control>
 			

@@ -26,14 +26,10 @@
 </control>
 	
 <control type="group">
-	<animation type="WindowOpen" reversible="false">
-		<effect type="fade" start="0" end="100" time="950" />
-		<effect type="zoom" start="1" end="100" time="370" center="900,360" delay="0" />
-		<effect type="slide" start="1780,0" end="0,0" time="300" delay="0" reversible="false" />
-	</animation>
-	<animation type="WindowClose" reversible="false">
-		<effect type="fade" start="100" end="0" time="100" />
-	</animation>
+
+	<animation effect="slide" start="0,0" end="-130,0" time="0" condition="!Skin.HasSetting(LockMainMenu)">Conditional</animation>
+	
+	<include>WidgetsAnimation</include>
  
   <control type="list" id="5">
 	  <left>270</left>
@@ -53,7 +49,7 @@
 			  <height>38</height>
 			  <info>ListItem.Label</info>
 			  <font>InfoScroll</font>
-			  <textcolor>ACFFFFFF</textcolor>
+			  <textcolor>EBFFFFFF</textcolor>
 			  <scroll>false</scroll>
 		  </control>
 		  <control type="label">
@@ -63,7 +59,7 @@
 			  <align>right</align>
 			  <font>SubMenu20</font>
 			  <scroll>false</scroll>
-			  <textcolor>ACFFFFFF</textcolor>
+			  <textcolor>EBFFFFFF</textcolor>
 			  <info>ListItem.Label2</info>
 		  </control>
 	  </itemlayout>
@@ -74,14 +70,14 @@
 			  <height>38</height>
 			  <texture>setting.png</texture>
 			  <aspectratio>stretch</aspectratio>
-			  <colordiffuse>ACFFFFFF</colordiffuse>
+			  <colordiffuse>EBFFFFFF</colordiffuse>
 		  </control>
 		  <control type="label">
 			  <left>5</left>
 			  <width>465</width>
 			  <height>38</height>
-			  <font>InfoScroll</font>
-        	  <textcolor>White</textcolor>
+			  <font>SubMenu20</font>
+        	  <textcolor>FFFFFFFF</textcolor>
 			  <info>ListItem.Label</info>
 		  </control>
 		  <control type="label">
@@ -90,7 +86,7 @@
 			  <height>38</height>
 			  <align>right</align>
 			  <font>SubMenu20</font>
-			  <textcolor>White</textcolor>
+			  <textcolor>white</textcolor>
 			  <info>ListItem.Label2</info>
 		  </control>
 	  </focusedlayout>

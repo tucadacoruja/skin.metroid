@@ -314,13 +314,14 @@
 		<animation effect="fade" start="100" end="0" time="450" delay="150" >Hidden</animation>
 			<control type="label">
 				<include>TopLabelBig</include>
-				<label>$INFO[Player.Title]</label>
+				<label>$VAR[PlayerTitleFallback]</label>
 			</control>
 			<control type="label">
 				<include>TopLabelSmall</include>
-				<label>$INFO[VideoPlayer.TVShowTitle]$INFO[VideoPlayer.Year]$INFO[MusicPlayer.Artist]$INFO[VideoPlayer.ChannelName]</label>
+				<label>$VAR[TopBarFallback]</label>
 			</control>
 		</control>
+			
 
 		<!-- control type="fadelabel" id="2121">
 			<animation effect="fade" start="0" end="0" time="0" condition="true" >Conditional</animation>
@@ -437,7 +438,7 @@
 			<width>1280</width>
 			<height>720</height>
 			<aspectratio>stretch</aspectratio>
-			<texture background="true">$INFO[ListItem.Art(fanart)]</texture>
+			<texture background="true">$VAR[MainBGvar]</texture>
 			<fadetime>210</fadetime>
 			
 			<visible>![Player.HasVideo | Skin.HasSetting(LibraryFanart)]</visible>
@@ -704,9 +705,10 @@
 			<control type="image"><!-- 0 profile thumb -->
 				<width>52</width>
 				<height>52</height>
-				<texture>$INFO[System.ProfileThumb]</texture>
+				<texture>$VAR[ProfileThumb]</texture>
 				<aspectratio>stretch</aspectratio>
 				<visible>!Skin.HasSetting(ProfileThumbVisible)</visible>
+				<visible>!Window.IsVisible(songinformation)</visible>
 				<animation effect="fade" start="0" end="100" time="300" delay="60">VisibleChange</animation>
 			</control>
 			<control type="image"><!-- 1 playlist window -->

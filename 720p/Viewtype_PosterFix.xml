@@ -18,7 +18,7 @@
 			<top>35</top>
 
 			<control type="fixedlist" id="501">
-				<visible>Container.Content(Movies) | Container.Content(TVShows) | Container.Content(seasons)</visible>
+				<visible>[Container.Content(Movies) | Container.Content(TVShows) | Container.Content(seasons)] + !SubString(Container.FolderPath,plugin,left)</visible>
 				<hitrect x="170" y="170" w="1000" h="400" />
 				<left>364</left>
 				<top>128</top>

@@ -64,9 +64,9 @@
 							<top>0</top>
 							<width>180</width>
 							<height>102</height>
-							<texture>$INFO[ListItem.Icon]</texture>
+							<texture>$VAR[LandscapeIcon]</texture>
 							<aspectratio aligny="top">keep</aspectratio>
-							<visible>IsEmpty(ListItem.Art(thumb))</visible>
+					
 						</control>
 						
 						<control type="image">
@@ -76,7 +76,7 @@
 							<height>102</height>
 							<texture>$VAR[Landscape_Image]</texture>
 							<aspectratio aligny="center">scale</aspectratio>
-							<visible>!IsEmpty(ListItem.Art(thumb))</visible>
+					
 						</control>
 						
 						
@@ -211,9 +211,9 @@
 							<top>0</top>
 							<width>180</width>
 							<height>102</height>
-							<texture>$INFO[ListItem.Icon]</texture>
+							<texture>$VAR[LandscapeIcon]</texture>
 							<aspectratio aligny="top">keep</aspectratio>
-							<visible>IsEmpty(ListItem.Art(thumb))</visible>
+					
 						</control>
 						
 						<control type="image">
@@ -223,7 +223,7 @@
 							<height>102</height>
 							<texture>$VAR[Landscape_Image]</texture>
 							<aspectratio aligny="center">scale</aspectratio>
-							<visible>!IsEmpty(ListItem.Art(thumb))</visible>
+					
 						</control>
 												
 						<control type="image">

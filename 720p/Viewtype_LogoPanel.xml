@@ -5,53 +5,61 @@
 <include name="LogoPanel">
 
 	<control type="group">
+		<visible>![Window.IsVisible(pictureinfo) | Window.IsVisible(smartplaylisteditor)]</visible>
+		
 		<include>InfoOpenClose</include>
-		<include>WidgetsAnimation</include>
-		<include>ContextFade</include>	
-		<include>Keyboard</include>
+		<include>AddSource</include>
 		<include>Favourites</include>
+		<include>ContextFade</include>
+		<include>Keyboard</include>
+		<include>WidgetsAnimation</include>
+		
 		<visible>Control.IsVisible(637)</visible>
-
-			
 
 		
 		<control type="group">
-		<animation effect="slide" start="0,0" end="-260,0" time="600" condition="!Control.HasFocus(301) + !Skin.HasSetting(LockMainMenu)">Conditional</animation>
 		
-			<control type="label">
-				<left>296</left>
-				<top>95</top>
-				<width>870</width>
-				<font>Segoe28</font>
-				<textcolor>F3FFFFFF</textcolor>
-				<scroll>false</scroll>
-				<align>left</align>
-				<label>$VAR[PosterTitle]</label>
-				
-			</control>
-			<control type="label">
-				<left>296</left>
-				<top>124</top>
-				<width>870</width>
-				<font>recent</font>
-				<textcolor>EBFFFFFF</textcolor>
-				<scroll>false</scroll>
-				<align>left</align>
-				<label>$VAR[GeneralLabel2]</label>
-
+		<animation effect="slide" start="0,0" end="-265,0" time="600" condition="!Control.HasFocus(301) + !Skin.HasSetting(LockMainMenu)">Conditional</animation>
+		
+			<control type="group">
+			<top>260</top>
+				<control type="label">
+					<left>296</left>
+					<top>95</top>
+					<width>870</width>
+					<font>Clock2</font>
+					<textcolor>FFFFFFFF</textcolor>
+					<textcolor>F3FFFFFF</textcolor>
+					<scroll>false</scroll>
+					<align>left</align>
+					<label>$VAR[PosterTitle]</label>
+					<shadowcolor>40111111</shadowcolor>
+				</control>
+				<control type="label">
+					<left>296</left>
+					<top>124</top>
+					<width>870</width>
+					<font>recent</font>
+					<textcolor>F3FFFFFF</textcolor>
+					<scroll>false</scroll>
+					<align>left</align>
+					<!-- label>$VAR[GeneralLabel2]</label -->
+					<label>$VAR[LogoPanel_Label2]</label>
+					<shadowcolor>40111111</shadowcolor>
+				</control>
 			</control>
 		
 						
 			<control type="panel" id="637">
-				<visible>Container.Content(movies) | Container.Content(tvshows) | Container.Content(artists) | Container.Content(albums) | Container.Content(songs) | Container.Content(seasons) | Container.Content(episodes)</visible>
+				<!-- visible>Container.Content(movies) | Container.Content(pictures) | Container.Content(tvshows) | Container.Content(artists) | Container.Content(albums) | Container.Content(songs) | Container.Content(seasons) | Container.Content(episodes)</visible -->
 				
 				<left>295</left>
-				<top>160</top>
+				<top>95</top>
 				
 				<include condition="!Skin.HasSetting(LockMainMenu)">LogoViewWidth1</include>
 				<include condition="Skin.HasSetting(LockMainMenu)">LogoViewWidth2</include>
 				
-				<height>525</height>
+				<height>650</height>
 				
 				<onleft>637</onleft>
 				<onright>637</onright>
@@ -69,7 +77,7 @@
 		
 				
 				
-				<itemlayout height="260" width="410">
+				<itemlayout height="325" width="410">
 					
 					<control type="image">
 						<left>0</left>
@@ -82,6 +90,7 @@
 						<colordiffuse>70ffffff</colordiffuse>
 						
 					</control>
+			
 					<control type="image">
 						<left>0</left>
 						<top>0</top>
@@ -89,7 +98,9 @@
 						<height>250</height>
 						<aspectratio>scale</aspectratio>
 						<fadetime>200</fadetime>
-						<texture fallback="DefaultCatch.png">$VAR[Landscape_Image]</texture>
+						<bordertexture colordiffuse="white" border="3">white.png</bordertexture>
+						<bordersize>3</bordersize>
+						<texture fallback="osd/GrayBackground.png">$VAR[Landscape_Image]</texture>
 						<colordiffuse>$VAR[LogoDiffuse]</colordiffuse>
 						
 					</control>
@@ -126,7 +137,7 @@
 													
 				</itemlayout>
 						
-				<focusedlayout height="260" width="410">
+				<focusedlayout height="325" width="410">
 					
 					<control type="image">
 						<left>0</left>
@@ -139,16 +150,29 @@
 						<colordiffuse>70ffffff</colordiffuse>
 						
 					</control>
+					
 					<control type="image">
 						<left>0</left>
 						<top>0</top>
 						<width>400</width>
 						<height>250</height>
 						<aspectratio>scale</aspectratio>
-						<bordertexture colordiffuse="E1FFFFFF" border="3">white.png</bordertexture>
+						<bordertexture colordiffuse="hellblue" border="3">white.png</bordertexture>
 						<bordersize>3</bordersize>
 						<fadetime>200</fadetime>
-						<texture fallback="DefaultCatch.png">$VAR[Landscape_Image]</texture>
+						<texture fallback="osd/GrayBackground.png">white.png</texture>
+		
+					</control>
+					<control type="image">
+						<left>0</left>
+						<top>0</top>
+						<width>400</width>
+						<height>250</height>
+						<aspectratio>scale</aspectratio>
+						<!-- bordertexture colordiffuse="hellblue" border="3">white.png</bordertexture -->
+						<bordersize>3</bordersize>
+						<fadetime>200</fadetime>
+						<texture  colordiffuse="$VAR[LogoDiffuse]" fallback="osd/GrayBackground.png">$VAR[Landscape_Image]</texture>
 						<colordiffuse>$VAR[LogoDiffuse]</colordiffuse>
 					</control>
 					
