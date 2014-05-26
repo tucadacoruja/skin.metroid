@@ -43,8 +43,8 @@
 	<onload condition="IsEmpty(Skin.String(MenuCstring))">Skin.SetString(MenuCstring,darkgrayblue)</onload>
 	<onload>Skin.SetString(StartuptestString,start)</onload>
 	<onload condition="IsEmpty(Skin.String(BackgroundPercentage))">Skin.SetString(BackgroundPercentage,80)</onload>
-	<onload condition="IsEmpty(Skin.String(DarknessPercentage))">Skin.SetString(DarknessPercentage,90)</onload><!-- only user feedback -->
-	<onload condition="IsEmpty(Skin.String(BackgroundDarkness))">Skin.SetString(BackgroundDarkness,FFE5E5E5)</onload><!-- actual darkness -->
+	<onload condition="IsEmpty(Skin.String(DarknessPercentage))">Skin.SetString(DarknessPercentage,70)</onload><!-- only user feedback -->
+	<onload condition="IsEmpty(Skin.String(BackgroundDarkness))">Skin.SetString(BackgroundDarkness,FFB3B3B3)</onload><!-- actual darkness -->
 	<onload condition="System.HasAddon(script.grab.fanart)">RunScript(script.grab.fanart,mode=random,refresh=30)</onload>
 </include>
 
