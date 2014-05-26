@@ -142,50 +142,7 @@
 														
 					</control>
 
-					<!-- Resume Button -->
-					<!-- control type="group">
-					
-						<width>70</width>
-						<height>60</height>
-						
-						<visible>ListItem.IsResumable</visible>
-						
-						<control type="image">
-						
-							<left>0</left>
-							<top>0</top>
-							<width>60</width>
-							<height>60</height>
-							<aspectratio>scale</aspectratio>
-							<texture>osd/osdbg.png</texture>
-							<aspectratio>stretch</aspectratio>
-							<animation effect="fade" start="100" end="60" time="100" condition="Control.HasFocus(9)">Conditional</animation>
-						</control>
-						<control type="button" id="9">
-							
-							<width>60</width>
-							<height>60</height>
-							<texturefocus>osd/resume.png</texturefocus>
-							<texturenofocus>osd/resume.png</texturenofocus>
-							<alttexturefocus>-</alttexturefocus>
-							<alttexturenofocus>-</alttexturenofocus>
-							<colordiffuse>FFEBEBEB</colordiffuse>
-							<disabledcolor>-</disabledcolor>
-							<textcolor>00FFFFFF</textcolor>
-							<visible allowhiddenfocus="true">true</visible>
-							<onup>8</onup>
-							<ondown>97</ondown>
-							<onright>50</onright>
-							
-							<enable>ListItem.IsResumable</enable>
-							<animation effect="zoom" start="100" end="120" center="auto" time="100">Focus</animation>
-							<animation effect="zoom" start="120" end="100" center="auto" time="100">UnFocus</animation>
-							
-						</control>
-						
-						
-					</control -->
-					
+										
 					<!-- Trailer Button -->
 					<control type="group">
 					
@@ -301,9 +258,10 @@
 							<colordiffuse>FFEBEBEB</colordiffuse>
 							<disabledcolor>-</disabledcolor>
 							<textcolor>00FFFFFF</textcolor>
-							<visible allowhiddenfocus="true">true</visible>
+						
 							<onup>6</onup>
-							<ondown>444</ondown>
+							<ondown condition="Player.HasVideo">33</ondown>
+							<ondown condition="!Player.HasVideo">444</ondown>
 							<onright>50</onright>
 							
 							<animation effect="zoom" start="100" end="120" center="auto" time="100">Focus</animation>
@@ -311,6 +269,49 @@
 							
 						</control>
 											
+					</control>
+					
+					<!-- fullscreen Button -->
+					<control type="group">
+					
+						<width>70</width>
+						<height>60</height>
+						
+						<visible>Player.HasVideo</visible>
+						
+						<control type="image">
+						
+							<left>0</left>
+							<top>0</top>
+							<width>60</width>
+							<height>60</height>
+							<aspectratio>scale</aspectratio>
+							<texture>osd/osdbg.png</texture>
+							<aspectratio>stretch</aspectratio>
+							<animation effect="fade" start="100" end="60" time="100" condition="Control.HasFocus(33)">Conditional</animation>
+						</control>
+						<control type="button" id="33">
+							
+							<width>60</width>
+							<height>60</height>
+							<texturefocus>osd/fullscreen.png</texturefocus>
+							<texturenofocus>osd/fullscreen.png</texturenofocus>
+
+							<colordiffuse>FFEBEBEB</colordiffuse>
+							<disabledcolor>-</disabledcolor>
+							<textcolor>00FFFFFF</textcolor>
+				
+							<onup>10</onup>
+							<ondown>444</ondown>
+							<onright>50</onright>
+							<onclick>FullScreen</onclick>
+							
+							<animation effect="zoom" start="100" end="120" center="auto" time="100">Focus</animation>
+							<animation effect="zoom" start="120" end="100" center="auto" time="100">UnFocus</animation>
+							
+						</control>
+						
+						
 					</control>
 					
 					<!-- close Button -->
@@ -336,13 +337,13 @@
 							<height>60</height>
 							<texturefocus>osd/cancel.png</texturefocus>
 							<texturenofocus>osd/cancel.png</texturenofocus>
-							<alttexturefocus>-</alttexturefocus>
-							<alttexturenofocus>-</alttexturenofocus>
+
 							<colordiffuse>FFEBEBEB</colordiffuse>
 							<disabledcolor>-</disabledcolor>
 							<textcolor>00FFFFFF</textcolor>
-							<visible allowhiddenfocus="true">true</visible>
-							<onup>10</onup>
+
+							<onup condition="Player.HasVideo">33</onup>
+							<onup condition="!Player.HasVideo">10</onup>
 							<ondown>8</ondown>
 							<onright>50</onright>
 							<onclick>back</onclick>
@@ -394,7 +395,7 @@
 						
 						<control type="group">
 							<description>trailer window</description>
-							<visible>Player.HasVideo + Skin.HasSetting(VidWinLibrary)</visible>
+							<visible>Player.HasVideo</visible>
 							<control type="image">
 								<left>0</left>
 								<top>0</top>
@@ -618,7 +619,7 @@
 								<top>0</top>
 								<width>165</width>
 								<height>165</height>
-								<texture background="true">black.png</texture>
+								<texture background="true">osd/GrayBackground.png</texture>
 								<aspectratio>stretch</aspectratio>
 								<visible>IsEmpty(ListItem.Thumb)</visible>
 								
@@ -647,7 +648,7 @@
 									<left>0</left>
 									<top>0</top>
 									<width>165</width>
-									<height>42</height>
+									<height>39</height>
 									<texture background="true">black.png</texture>
 									<aspectratio>stretch</aspectratio>
 									<colordiffuse>ACFFFFFF</colordiffuse>
@@ -681,7 +682,7 @@
 								<top>0</top>
 								<width>165</width>
 								<height>165</height>
-								<texture background="true">black.png</texture>
+								<texture background="true">osd/GrayBackground.png</texture>
 								<aspectratio>stretch</aspectratio>
 								<visible>IsEmpty(ListItem.Thumb)</visible>
 								
@@ -710,7 +711,7 @@
 									<left>0</left>
 									<top>0</top>
 									<width>165</width>
-									<height>42</height>
+									<height>39</height>
 									<texture background="true">black.png</texture>
 									<aspectratio>stretch</aspectratio>
 									<colordiffuse>ACFFFFFF</colordiffuse>

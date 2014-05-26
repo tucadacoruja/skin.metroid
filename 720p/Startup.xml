@@ -6,6 +6,13 @@
 	<backgroundcolor>0</backgroundcolor>
 	
 	<!-- onload condition="System.HasAddon(script.tv.show.next.aired)">XBMC.RunScript(script.tv.show.next.aired,silent=True)</onload -->
+	<onload>Skin.Reset(SubMenu1)</onload>
+	<onload>Skin.Reset(SubMenu2)</onload>
+	<onload>Skin.Reset(SubMenu3)</onload>
+	<onload>Skin.Reset(SubMenu4)</onload>
+	<onload>Skin.Reset(SubMenu5)</onload>
+	<onload>Skin.Reset(SubMenu6)</onload>
+	<onload>Skin.Reset(SubMenu7)</onload>
 	<include>LoadSettings</include>
 	<onload condition="!Skin.HasSetting(WidgetVisibility)">Skin.ToggleSetting(WidgetVisibility)</onload>
 	

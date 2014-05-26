@@ -104,8 +104,7 @@
 						<height>65</height>
 						<aspectratio scalediffuse="false">stretch</aspectratio>
 						<texture flipx="true" >setting.png</texture>
-						<animation effect="fade" start="100" end="20" time="200" reversable="false" condition="!Control.HasFocus(50)">Conditional</animation>
-		
+						<colordiffuse>7FFFFFFF</colordiffuse>
 					</control>	
 					<!-- control type="label">
 						<top>3</top>
@@ -317,7 +316,7 @@
 				<height>410</height>
 				<aspectratio>scale</aspectratio>
 				<texture aligny="top">$VAR[FanOrThumb]</texture>
-				<fadetime>50</fadetime>
+				<fadetime>40</fadetime>
 				<colordiffuse>E5FFFFFF</colordiffuse>
 			</control>
 			<control type="image">
@@ -327,7 +326,7 @@
 				<height>380</height>
 				<aspectratio>keep</aspectratio>
 				<texture aligny="top" background="true">$INFO[ListItem.Art(clearlogo)]</texture>
-				<fadetime>50</fadetime>
+				<fadetime>60</fadetime>
 				<!-- colordiffuse>E5FFFFFF</colordiffuse -->
 			</control>
 			<control type="image">

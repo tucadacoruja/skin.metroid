@@ -72,7 +72,7 @@
 		<viewtype>icon</viewtype>
 		<left>380</left>
 		<top>20</top>
-		<width>500</width>
+		<width>520</width>
 		<height>300</height>
 		<scrolltime>200</scrolltime>
 		<orientation>Horizontal</orientation>
@@ -344,7 +344,16 @@
 					<texture>$INFO[Container(8001).ListItem.Property(Logo)]</texture>
 					<visible>IsEmpty(Container(8001).ListItem.Art(thumb))</visible>	
 				</control>
-
+				<control type="button">
+					<left>0</left>
+					<top>20</top>
+					<width>380</width>
+					<height>255</height>
+					<texturefocus></texturefocus>
+					<texturenofocus></texturenofocus>
+					<onclick>SetFocus(8001)</onclick>
+					<onclick>Control.Move(8001,1)</onclick>
+				</control>
 				<include>ShowTextBackground</include>
 				<control type="label">
 					<left>10</left>
@@ -482,6 +491,16 @@
 					<aspectratio aligny="top">scale</aspectratio>
 							
 				</control>
+				<control type="button">
+					<left>0</left>
+					<top>20</top>
+					<width>380</width>
+					<height>255</height>
+					<texturefocus></texturefocus>
+					<texturenofocus></texturenofocus>
+					<onclick>SetFocus(8003)</onclick>
+					<onclick>Control.Move(8003,1)</onclick>
+				</control>
 				<control type="image">
 					<left>0</left>
 					<top>225</top>
@@ -565,6 +584,16 @@
 						
 				</control>
 				<include>ShowTextBackground</include>
+				<control type="button">
+					<left>0</left>
+					<top>20</top>
+					<width>380</width>
+					<height>255</height>
+					<texturefocus></texturefocus>
+					<texturenofocus></texturenofocus>
+					<onclick>SetFocus(8004)</onclick>
+					<onclick>Control.Move(8004,1)</onclick>
+				</control>
 				<control type="label">
 					<left>40</left>
 					<top>230</top>
@@ -700,6 +729,16 @@
 					<aspectratio aligny="center">scale</aspectratio>
 				</control>
 				<include>ShowTextBackground</include>
+				<control type="button">
+					<left>0</left>
+					<top>20</top>
+					<width>380</width>
+					<height>255</height>
+					<texturefocus></texturefocus>
+					<texturenofocus></texturenofocus>
+					<onclick>SetFocus(8005)</onclick>
+					<onclick>Control.Move(8005,1)</onclick>
+				</control>
 				<control type="label">
 					<left>40</left>
 					<top>230</top>

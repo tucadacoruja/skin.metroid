@@ -1,3 +1,9 @@
+[B]0.2.2[/B]
+- Stripped some views
+- Fullscreen button in videoinfo
+- Main menu sub color
+- Main menu scroll nib
+
 [B]0.2.1[/B]
 - Test viewtype
 - Readability improvements

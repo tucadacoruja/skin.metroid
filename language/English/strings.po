@@ -18,7 +18,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 msgctxt "#31002"
-msgid "The context menu also allows you to set the 2 custom widgets for the Home screen. Just browse your addons, library structure, or playlists and bring up the context menu (c). If it is possible to make your current item into a widget (and you have an empty widget slot) you will see the button there.[CR][CR]In Settings -> Skin Settings you can adjust the name for a better fit or to make it more decriptive. As wel as reset it to make the slot available."
+msgid "The context menu allows you to set the 2 custom widgets for the Home screen. Just browse your addons, library structure, or playlists and bring up the context menu (c). If it is possible to make your current item into a widget (and you have an empty widget slot) you will see the button there.[CR][CR]In Settings -> Skin Settings you can adjust the name for a better fit or to make it more decriptive. As wel as reset it to make the slot available."
 msgstr ""
 
 msgctxt "#31003"
@@ -582,7 +582,7 @@ msgid "Set Wallpaper Folder"
 msgstr ""
 
 msgctxt "#31161"
-msgid "Global Background image"
+msgid "Overlay image (on top of fanart)"
 msgstr ""
 
 msgctxt "#31162"
@@ -958,11 +958,11 @@ msgid "(Skin takes over when playing media)"
 msgstr ""
 
 msgctxt "#31256"
-msgid "Opacity percentage"
+msgid "Overlay opacity"
 msgstr "
 
 msgctxt "#31257"
-msgid "Darkness percentage"
+msgid "Overlay darkness"
 msgstr "
 
 msgctxt "#31258"
@@ -1025,4 +1025,11 @@ msgctxt "#31272"
 msgid "Are you sure you want to reset all skin settings?"
 msgstr "
 
+msgctxt "#31273"
+msgid "(set using context menu)"
+msgstr "
+
+msgctxt "#31274"
+msgid "To enable custom widgets see: Settings -> Help -> Widget"
+msgstr "
 

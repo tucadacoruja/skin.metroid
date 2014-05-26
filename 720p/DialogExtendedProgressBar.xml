@@ -18,30 +18,34 @@
   <effect type="fade" start="100" end="0" time="250" delay="0" />
 </animation>
 
-<visible>![Window.IsVisible(infodialog) | Window.IsVisible(progressdialog) | Window.IsVisible(startup)]</visible>
+<visible>![Window.IsVisible(progressdialog) | Window.IsVisible(startup)]</visible>
 
 <animation effect="fade" start="100" end="0" time="150">Hidden</animation>
 <animation effect="fade" start="0" end="100" time="150">Visible</animation>
 
-	<control type="image">
-		<include>SearchButton</include>
-		<texture>osd/GrayBackground.png</texture>
-		<aspectratio>stretch</aspectratio>
-	</control>
-	
-	<control type="image">
-		<include>SearchButton</include>
-		<aspectratio>stretch</aspectratio>
-		<texture>osd/getsub.png</texture>
-	</control>
-  	
-	<control type="label" id="31">
-		<include>TopLabelBig</include>
-		<haspath>yes</haspath>
-	</control>
-	
-	<control type="label" id="30">
-		<include>TopLabelSmall</include>
+
+	<control type="group">
+	<visible>!Window.IsVisible(infodialog)</visible>
+		<control type="image">
+			<include>SearchButton</include>
+			<texture>osd/GrayBackground.png</texture>
+			<aspectratio>stretch</aspectratio>
+		</control>
+		
+		<control type="image">
+			<include>SearchButton</include>
+			<aspectratio>stretch</aspectratio>
+			<texture>osd/getsub.png</texture>
+		</control>
+		
+		<control type="label" id="31">
+			<include>TopLabelBig</include>
+			<haspath>yes</haspath>
+		</control>
+		
+		<control type="label" id="30">
+			<include>TopLabelSmall</include>
+		</control>
 	</control>
 		
 	<control type="progress" id="32">

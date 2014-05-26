@@ -3,6 +3,7 @@
 <defaultcontrol>9000</defaultcontrol>
 <backgroundcolor>0</backgroundcolor>
 <allowoverlay>yes</allowoverlay>
+<include>LoadSettings</include>
 
 <controls>
 
@@ -705,7 +706,7 @@
 						<onclick>Skin.Reset(GlobalBackground)</onclick>
 						<onclick>Skin.SetString(GlobalBackground,special://home/addons/skin.metroid/extras/backgrounds/MetroidBG.png)</onclick>
 						<onclick>Skin.SetLargeImage(GlobalBackground)</onclick>
-						<textwidth>450</textwidth>
+						<textwidth>380</textwidth>
 					</control>
 					
 					<control type="button" id="110">
@@ -1096,11 +1097,19 @@
 					</control>
 					
 					<!--  custom widget 5  -->
+					<control type="label">
+						<include>SettingsButton</include>
+						<description>Custom widget</description>
+						<label>31274</label>
+						<animation effect="fade" start="40" end="100" time="700" pulse="true" condition="IsEmpty(Skin.String(PluginWidgetPath1)) + IsEmpty(Skin.String(PluginWidgetPath2))">Conditional</animation>
+						<visible>IsEmpty(Skin.String(PluginWidgetPath1)) | IsEmpty(Skin.String(PluginWidgetPath2))</visible>
+					</control>
 					
 					<control type="radiobutton" id="405">
+						<disabledcolor>ACFFFFFF</disabledcolor>
 						<include>SettingsButton</include>
 						<description>Custom widget 1</description>
-						<label>$LOCALIZE[31249] $LOCALIZE[31248] 1 $LOCALIZE[31253]</label>
+						<label>$LOCALIZE[31249] $LOCALIZE[31248] 1 $LOCALIZE[31273]</label>
 						<onclick>Skin.ToggleSetting(CustomWidget1Toggle)</onclick>
 						<selected>Skin.HasSetting(CustomWidget1Toggle)</selected>
 						<enable>!IsEmpty(Skin.String(PluginWidgetPath1)) + !Skin.HasSetting(HomeWidgetToggle)</enable>
@@ -1143,9 +1152,10 @@
 					<!--  custom widget 6  -->
 					
 					<control type="radiobutton" id="409">
+						<disabledcolor>ACFFFFFF</disabledcolor>
 						<include>SettingsButton</include>
 						<description>Custom widget 2</description>
-						<label>$LOCALIZE[31249] $LOCALIZE[31248] 2 $LOCALIZE[31253]</label>
+						<label>$LOCALIZE[31249] $LOCALIZE[31248] 2 $LOCALIZE[31273]</label>
 						<onclick>Skin.ToggleSetting(CustomWidget2Toggle)</onclick>
 						<selected>Skin.HasSetting(CustomWidget2Toggle)</selected>
 						<enable>!IsEmpty(Skin.String(PluginWidgetPath2)) + !Skin.HasSetting(HomeWidgetToggle)</enable>

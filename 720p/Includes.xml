@@ -25,6 +25,7 @@
 <include file="Viewtype_Channels.xml" />
 
 <!-- Indentify sets SubString(ListItem.Path,videodb://movies/sets/) -->
+<!-- button starts listitem PlayMedia(Container(id).ListItem.FilenameAndPath) -->
 
 <include name="LoadSettings">
 	<onload>Skin.SetString(MainColorString,blue)</onload>
@@ -442,6 +443,7 @@
 			<fadetime>210</fadetime>
 			
 			<visible>![Player.HasVideo | Skin.HasSetting(LibraryFanart)]</visible>
+			<animation effect="fade" start="0" end="100" time="100" delay="50">WindowOpen</animation>
 			<animation effect="fade" start="95" end="20" time="70000" delay="2000" reversable="true" pulse="true" condition="Player.HasAudio + !Skin.HasSetting(VisLibrary)">Conditional</animation>
 		</control>
 		<control type="image">
@@ -486,7 +488,7 @@
 			<top>0</top>
 			<width>1280</width>
 			<height>720</height>
-			<visible>!Skin.HasSetting(VidWinLibrary)</visible>
+			<visible>![Skin.HasSetting(VidWinLibrary) | Window.IsVisible(movieinformation)]</visible>
 		</control>
 		<control type="visualisation"><!-- id="2" -->
 			<left>0</left>

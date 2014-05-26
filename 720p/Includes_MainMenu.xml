@@ -44,6 +44,18 @@
 				<animation effect="fade" start="0" end="100" time="300" >WindowOpen</animation>
 				<itemlayout height="50"  width="240">
 					
+					<control type="image">
+						<description>sub image</description>
+						<left>0</left>
+						<top>0</top>
+						<width>249</width>
+						<height>50</height>
+						<aspectratio>stretch</aspectratio>
+						<texture>white.png</texture>
+						<visible>!IsEmpty(ListItem.Property(SubMenuItem))</visible>
+						<colordiffuse>11FFFFFF</colordiffuse>
+					</control>
+					
 					<control type="label">
 						<left>25</left>
 						<top>-1</top>
@@ -69,19 +81,13 @@
 						<align>left</align>
 						<label>- $INFO[ListItem.Label]</label>
 						<visible>!IsEmpty(ListItem.Property(SubMenuItem))</visible>
-						
-						<!--  animation effect="slide" start="-300,0" end="0,0" time="350" reversable="true" condition="!IsEmpty(skin.string(SubMenu1))">Conditional</animation> 
-						<animation effect="slide" start="-300,0" end="0,0" time="350" reversable="true" condition="!IsEmpty(skin.string(SubMenu2))">Conditional</animation> 
-						<animation effect="slide" start="-300,0" end="0,0" time="350" reversable="true" condition="!IsEmpty(skin.string(SubMenu3))">Conditional</animation> 
-						<animation effect="slide" start="-300,0" end="0,0" time="350" reversable="true" condition="!IsEmpty(skin.string(SubMenu4))">Conditional</animation> 
-						<animation effect="slide" start="-300,0" end="0,0" time="350" reversable="true" condition="!IsEmpty(skin.string(SubMenu5))">Conditional</animation> 
-						<animation effect="slide" start="-300,0" end="0,0" time="350" reversable="true" condition="!IsEmpty(skin.string(SubMenu6))">Conditional</animation> 
-						<animation effect="fade" start="0" end="100" time="200" >Visible</animation  --> 
+
 					</control>
 					
 				</itemlayout>
 				
 				<focusedlayout height="50"  width="240">
+					
 					
 					<control type="image">
 						<description>list line image</description>
@@ -91,8 +97,8 @@
 						<height>49</height>
 						<aspectratio>stretch</aspectratio>
 						<texture>black.png</texture>
-						<!--  visible>Control.HasFocus(301)</visible  -->
-						<animation effect="fade" start="0" end="40" time="0" condition="true">Conditional</animation>
+						<colordiffuse>66FFFFFF</colordiffuse>
+						
 					</control>
 					<control type="image">
 						<description>focussed image</description>
@@ -102,7 +108,7 @@
 						<height>51</height>
 						<aspectratio>stretch</aspectratio>
 						<texture>white.png</texture>
-						<animation effect="fade" start="0" end="40" time="0" condition="true">Conditional</animation>
+						<colordiffuse>66FFFFFF</colordiffuse>
 						<visible>!Control.HasFocus(301)</visible>
 						
 					</control>
@@ -115,7 +121,7 @@
 						<aspectratio>stretch</aspectratio>
 						<texture>white.png</texture>
 						<colordiffuse>skin.string(MainColorString)</colordiffuse>
-						<animation effect="fade" start="0" end="75" time="0" condition="true">Conditional</animation>
+						<colordiffuse>BFFFFFFF</colordiffuse>
 						<visible>Control.HasFocus(301)</visible>
 						
 					</control>
@@ -465,14 +471,19 @@
 		<texturesliderbar>-</texturesliderbar>
 		<texturesliderbarfocus>-</texturesliderbarfocus>
 		<textureslidernib>empty.png</textureslidernib>
-		<textureslidernibfocus>empty.png</textureslidernibfocus>
+		<textureslidernibfocus>buttons/scrollnibV.png</textureslidernibfocus>
 		<orientation>Vertical</orientation>
-		<showonepage>true</showonepage>
+		<showonepage>false</showonepage>
 		<left>205</left>
 		<top>73</top>
 		<width>70</width>
 		<height>640</height>
+		<onleft>301</onleft>
+		<onright>301</onright>
 		<visible>Skin.HasSetting(LockMainMenu)</visible>
+		<colordiffuse>47FFFFFF</colordiffuse>
+		<animation effect="fade" start="100" end="0" time="150">Hidden</animation>
+		<animation effect="fade" start="0" end="100" time="150">Visible</animation>
 	</control>
 	</include>
 
