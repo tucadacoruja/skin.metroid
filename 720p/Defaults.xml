@@ -97,8 +97,8 @@
     <font>DefaultButton</font>
     <texturenofocus>-</texturenofocus>
     <texturefocus>White35p.png</texturefocus>
-    <textureup>buttons/spinupnf.png</textureup>
-    <texturedown>buttons/spindownnf.png</texturedown>
+    <textureup colordiffuse="55FFFFFF">buttons/spinupfo.png</textureup>
+    <texturedown colordiffuse="55FFFFFF">buttons/spindownfo.png</texturedown>
     <textureupfocus>buttons/spinupfo.png</textureupfocus>
     <texturedownfocus>buttons/spindownfo.png</texturedownfocus>
     <textcolor>settings</textcolor>

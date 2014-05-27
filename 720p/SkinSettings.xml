@@ -206,6 +206,7 @@
 					<!-- animation effect="fade" start="100" end="70" time="0" condition="true">Conditional</animation -->
 					
 					<control type="radiobutton" id="100">
+						<texturenofocus colordiffuse="44FFFFFF">settingB.png</texturenofocus>
 						<include>SettingsButton</include>
 						<description>Sources in main menu</description>
 						<label>$LOCALIZE[31088] $LOCALIZE[31142]</label>
@@ -213,6 +214,7 @@
 						<selected>!Skin.HasSetting(HideGlobalSources)</selected>
 					</control>
 					<control type="radiobutton" id="101">
+						<texturenofocus colordiffuse="44FFFFFF">settingB.png</texturenofocus>
 						<include>SettingsButton</include>
 						<description>My Movies in main menu</description>
 						<label>$LOCALIZE[31079] $LOCALIZE[31142]</label>
@@ -238,6 +240,7 @@
 						</control>
 
 					<control type="radiobutton" id="104">
+						<texturenofocus colordiffuse="44FFFFFF">settingB.png</texturenofocus>
 						<include>SettingsButton</include>
 						<description>My Tv Shows in main menu</description>
 						<label>$LOCALIZE[31080] $LOCALIZE[31142]</label>
@@ -262,6 +265,7 @@
 						</control>
 
 					<control type="radiobutton" id="107">
+						<texturenofocus colordiffuse="44FFFFFF">settingB.png</texturenofocus>
 						<include>SettingsButton</include>
 						<description>My Music in main menu</description>
 						<label>$LOCALIZE[31078] $LOCALIZE[31142]</label>
@@ -285,6 +289,7 @@
 							<enable>!Skin.HasSetting(HideGlobalMusic)</enable>
 						</control>
 					<control type="radiobutton" id="109">
+						<texturenofocus colordiffuse="44FFFFFF">settingB.png</texturenofocus>
 						<include>SettingsButton</include>
 						<description>addons in main menu</description>
 						<label>$LOCALIZE[24001] $LOCALIZE[31142]</label>
@@ -301,20 +306,30 @@
 						</control>
 					<control type="radiobutton" id="111">
 						<include>SettingsButton</include>
+						<description>Addons in settings</description>
+						<label>$LOCALIZE[24001] $LOCALIZE[31276] $LOCALIZE[31142]</label>
+						<onclick>Skin.ToggleSetting(AddonSettingsMenu)</onclick>
+						<selected>Skin.HasSetting(AddonSettingsMenu)</selected>
+			
+					</control>
+						
+					<control type="radiobutton" id="112">
+						<include>SettingsButton</include>
 						<description>My Music Videos in main menu</description>
 						<label>$LOCALIZE[31218] $LOCALIZE[31142]</label>
 						<onclick>Skin.ToggleSetting(HideMyMusicVideos)</onclick>
 						<selected>!Skin.HasSetting(HideMyMusicVideos)</selected>
 					</control>
 					
-					<control type="radiobutton" id="112">
+					<control type="radiobutton" id="113">
+						<texturenofocus colordiffuse="44FFFFFF">settingB.png</texturenofocus>
 						<include>SettingsButton</include>
 						<description>fullscreen in main menu</description>
 						<label>$LOCALIZE[31225] $LOCALIZE[31142]</label>
 						<onclick>Skin.ToggleSetting(FullScreenHome)</onclick>
 						<selected>!Skin.HasSetting(FullScreenHome)</selected>
 					</control>
-					<control type="radiobutton" id="113">
+					<control type="radiobutton" id="114">
 						<include>SettingsButton</include>
 						<description>Pictures in main menu</description>
 						<label>$LOCALIZE[31146] $LOCALIZE[31142] $LOCALIZE[31244]</label>
@@ -322,7 +337,7 @@
 						<selected>!Skin.HasSetting(PicsHome)</selected>
 					</control>
 				
-					<control type="radiobutton" id="114">
+					<control type="radiobutton" id="115">
 						<include>SettingsButton</include>
 						<description>Weather in main menu</description>
 						<label>$LOCALIZE[31093] $LOCALIZE[31142]</label>
@@ -330,7 +345,8 @@
 						<selected>Skin.HasSetting(WeatherHome)</selected>
 					</control>
 					
-					<control type="radiobutton" id="115">
+					<control type="radiobutton" id="116">
+						<texturenofocus colordiffuse="44FFFFFF">settingB.png</texturenofocus>
 						<include>SettingsButton</include>
 						<description>Favorites dialog in main menu</description>
 						<label>$LOCALIZE[31151] $LOCALIZE[31142]</label>
@@ -338,42 +354,43 @@
 						<selected>!Skin.HasSetting(FavoritesHome)</selected>
 					</control>
 					
-					<control type="radiobutton" id="116">
+					<control type="radiobutton" id="117">
 						<include>SettingsButton</include>
 						<description>viewtype button in main menu</description>
 						<label>$LOCALIZE[31153] $LOCALIZE[31142]</label>
 						<onclick>Skin.ToggleSetting(HideGlobalViews)</onclick>
 						<selected>!Skin.HasSetting(HideGlobalViews)</selected>
 					</control>
-					<control type="radiobutton" id="117">
+					<control type="radiobutton" id="118">
 						<include>SettingsButton</include>
 						<description>Sort options in main menu</description>
 						<label>$LOCALIZE[31156] $LOCALIZE[31142]</label>
 						<onclick>Skin.ToggleSetting(HideGlobalSort)</onclick>
 						<selected>!Skin.HasSetting(HideGlobalSort)</selected>
 					</control>
-					<control type="radiobutton" id="118">
+					<control type="radiobutton" id="119">
 						<include>SettingsButton</include>
 						<description>Power in main menu</description>
 						<label>$LOCALIZE[31090] $LOCALIZE[31142]</label>
 						<onclick>Skin.ToggleSetting(PowerHome)</onclick>
 						<selected>!Skin.HasSetting(PowerHome)</selected>
 					</control>
-					<control type="radiobutton" id="119">
+					<control type="radiobutton" id="120">
 						<include>SettingsButton</include>
 						<description>Home button in main menu</description>
 						<label>$LOCALIZE[31210] $LOCALIZE[31142]</label>
 						<onclick>Skin.ToggleSetting(HideGlobalHome)</onclick>
 						<selected>!Skin.HasSetting(HideGlobalHome)</selected>
 					</control>
-					<control type="radiobutton" id="120">
+					<control type="radiobutton" id="121">
 						<include>SettingsButton</include>
 						<description>Video Library in main menu</description>
 						<label>$LOCALIZE[31219] $LOCALIZE[31235] $LOCALIZE[31142]</label>
 						<onclick>Skin.ToggleSetting(HideVideoLibrary)</onclick>
 						<selected>Skin.HasSetting(HideVideoLibrary)</selected>
 					</control>
-					<control type="radiobutton" id="121">
+					<control type="radiobutton" id="122">
+						<texturenofocus colordiffuse="44FFFFFF">settingB.png</texturenofocus>
 						<include>SettingsButton</include>
 						<description>Music Library in main menu</description>
 						<label>$LOCALIZE[31220] $LOCALIZE[31235] $LOCALIZE[31142]</label>
@@ -388,6 +405,7 @@
 						<selected>Skin.HasSetting(HideGlobalPrevious)</selected>
 					</control -->
 					<control type="radiobutton" id="123">
+						<texturenofocus colordiffuse="44FFFFFF">settingB.png</texturenofocus>
 						<include>SettingsButton</include>
 						<description>Update Library in main menu</description>
 						<label>$LOCALIZE[31075] $LOCALIZE[31142]</label>
@@ -430,6 +448,7 @@
 
 					</control>
 					<control type="button" id="112">
+						<texturenofocus colordiffuse="44FFFFFF">settingB.png</texturenofocus>
 						<include>SettingsButton</include>
 						<label2>$INFO[Skin.String(BookmarkName1)]</label2>
 						<label>- $LOCALIZE[31229] 1</label>
@@ -448,6 +467,7 @@
 						<enable>!IsEmpty(Skin.String(BookmarkDBID2))</enable>
 					</control>
 					<control type="button" id="114">
+						<texturenofocus colordiffuse="44FFFFFF">settingB.png</texturenofocus>
 						<include>SettingsButton</include>
 						<label2>$INFO[Skin.String(BookmarkName3)]</label2>
 						<label>- $LOCALIZE[31229] 3</label>
@@ -491,6 +511,7 @@
 					 <!--  EXTRA ITEMS FAVOURITES 1  -->
 					
 					<control type="radiobutton" id="200">
+						<texturenofocus colordiffuse="44FFFFFF">settingB.png</texturenofocus>
 						<include>SettingsButton</include>
 						<description>Enable Custom Favorite 1</description>
 						<label>$LOCALIZE[31158] 1</label>
@@ -532,6 +553,7 @@
 					</control>
 					
 					<control type="button" id="208">
+						<texturenofocus colordiffuse="44FFFFFF">settingB.png</texturenofocus>
 						<include>SettingsButton</include>
 						<label> - $LOCALIZE[31159]</label>
 						<label2>$INFO[Skin.String(CustomFavourite2.Label)]</label2>
@@ -562,6 +584,7 @@
 					</control>
 					
 					<control type="button" id="214">
+						<texturenofocus colordiffuse="44FFFFFF">settingB.png</texturenofocus>
 						<include>SettingsButton</include>
 						<label> - $LOCALIZE[31159]</label>
 						<label2>$INFO[Skin.String(CustomFavourite3.Label)]</label2>
@@ -584,6 +607,7 @@
 					<!--  EXTRA ITEMS FAVOURITES 4  -->
 					
 					<control type="radiobutton" id="218">
+						<texturenofocus colordiffuse="44FFFFFF">settingB.png</texturenofocus>
 						<include>SettingsButton</include>
 						<label>$LOCALIZE[31158] 4</label>
 						<onclick>Skin.ToggleSetting(Menu_Custom4)</onclick>
@@ -631,6 +655,7 @@
 						<visible>Skin.HasSetting(cust_favorite)</visible>
 					</control>
 					<control type="button" id="227">
+						<texturenofocus colordiffuse="44FFFFFF">settingB.png</texturenofocus>
 						<include>SettingsButton</include>
 						<description>Set Name</description>
 						<label> - $LOCALIZE[31232]</label>
@@ -661,6 +686,7 @@
 						<visible>Skin.HasSetting(cust_favorite)</visible>
 					</control>
 					<control type="button" id="233">
+						<texturenofocus colordiffuse="44FFFFFF">settingB.png</texturenofocus>
 						<include>SettingsButton</include>
 						<description>Set Name</description>
 						<label> - $LOCALIZE[31232]</label>
@@ -700,6 +726,7 @@
 						<textwidth>450</textwidth>
 					</control>
 					<control type="button" id="109">
+						<texturenofocus colordiffuse="44FFFFFF">settingB.png</texturenofocus>
 						<include>SettingsButton</include>
 						<label2>$INFO[Skin.String(GlobalBackground)]</label2>
 						<label>$LOCALIZE[31161]</label>
@@ -722,6 +749,7 @@
 					</control>
 					
 					<control type="button" id="111">
+						<texturenofocus colordiffuse="44FFFFFF">settingB.png</texturenofocus>
 						<include>SettingsButton</include>
 						<label2>$INFO[Skin.String(DarknessPercentage),,%]</label2>
 						<label> - $LOCALIZE[31257]</label>
@@ -751,6 +779,7 @@
 						<selected>!Skin.HasSetting(VisLibrary)</selected>
 					</control>
 					<control type="radiobutton" id="113">
+						<texturenofocus colordiffuse="44FFFFFF">settingB.png</texturenofocus>
 						<include>SettingsButton</include>
 						<description>Background video in library</description>
 						<label>$LOCALIZE[31231]</label>
@@ -759,6 +788,7 @@
 					</control>
 
 					<control type="radiobutton" id="114">
+						<texturenofocus colordiffuse="44FFFFFF">settingB.png</texturenofocus>
 						<include>SettingsButton</include>
 						<description>Background Slideshow</description>
 						<label>$LOCALIZE[31223] $LOCALIZE[31105]</label>31105
@@ -775,6 +805,7 @@
 						<selected>!Skin.HasSetting(LibraryFanart)</selected>
 					</control>
 					<control type="radiobutton" id="116">
+						<texturenofocus colordiffuse="44FFFFFF">settingB.png</texturenofocus>
 						<include>SettingsButton</include>
 						<description>Snow on Home screen</description>
 						<label>$LOCALIZE[31169]</label>
@@ -809,9 +840,11 @@
 						<visible>Control.HasFocus(1260) | Control.HasFocus(1261)</visible>
 					</control> 
 					<control type="label">
+						<description>Menu background color</description>
+						<texturenofocus colordiffuse="44FFFFFF">settingB.png</texturenofocus>
 						<include>SettingsButton</include>
 						<font>DefaultButton</font>
-						<label>Menu background color                                               $INFO[Skin.String(MenuCstring)]</label>
+						<label>$LOCALIZE[31275]                                               $INFO[Skin.String(MenuCstring)]</label>
 					</control>
 					<control type="button" id="1260">
 						<description>fake button down scroller</description>
@@ -888,6 +921,7 @@
 					<pagecontrol>63</pagecontrol>
 					
 					<control type="radiobutton" id="99">
+						<texturenofocus colordiffuse="44FFFFFF">settingB.png</texturenofocus>
 						<include>SettingsButton</include>
 						<description>Lock main menu</description>
 						<label>31215</label>
@@ -902,6 +936,7 @@
 						<selected>Skin.HasSetting(MenuAutoClose)</selected>
 					</control>
 					<control type="radiobutton" id="101">
+						<texturenofocus colordiffuse="44FFFFFF">settingB.png</texturenofocus>
 						<include>SettingsButton</include>
 						<description>Global back button</description>
 						<label>$LOCALIZE[31233]</label>
@@ -925,6 +960,7 @@
 					</control>
 										
 					<control type="radiobutton" id="104">
+						<texturenofocus colordiffuse="44FFFFFF">settingB.png</texturenofocus>
 						<include>SettingsButton</include>
 						<description>Show watched overlays</description>
 						<label>$LOCALIZE[31167]</label>
@@ -932,6 +968,7 @@
 						<selected>!Skin.HasSetting(WatchedOverlays)</selected>
 					</control>
 					<control type="radiobutton" id="105">
+						<texturenofocus colordiffuse="44FFFFFF">settingB.png</texturenofocus>
 						<include>SettingsButton</include>
 						<description>Now Playing Popup During Video</description>
 						<label>$LOCALIZE[31168]</label>
@@ -957,6 +994,7 @@
 					</control>
 					
 					<control type="radiobutton" id="109">
+						<texturenofocus colordiffuse="44FFFFFF">settingB.png</texturenofocus>
 						<include>SettingsButton</include>
 						<description>Show volume bar</description>
 						<label>$LOCALIZE[31236]</label>
@@ -979,6 +1017,7 @@
 					</control>
 					
 					<control type="button" id="111">
+						<texturenofocus colordiffuse="44FFFFFF">settingB.png</texturenofocus>
 						<include>SettingsButton</include>
 						<label2>$VAR[OSDcolorVAR]</label2>
 						<label>31271</label>
@@ -995,16 +1034,17 @@
 						
 					</control>
 					
-					<!-- control type="radiobutton" id="112">
+					<control type="radiobutton" id="112">
 						<include>SettingsButton</include>
-						<description>Alphabetical keyboard</description>
-						<label>$LOCALIZE[31250]</label>
+						<description>force view</description>
+						<label>31277</label>
 						
-						<onclick>Skin.ToggleSetting(AlphabeticalKeyboard)</onclick>
-						<selected>Skin.HasSetting(AlphabeticalKeyboard)</selected>
-					</control -->
+						<onclick>Skin.ToggleSetting(ForceThumbView)</onclick>
+						<selected>Skin.HasSetting(ForceThumbView)</selected>
+					</control>
 					
 					<control type="radiobutton" id="113">
+						<texturenofocus colordiffuse="44FFFFFF">settingB.png</texturenofocus>
 						<include>SettingsButton</include>
 						<description>Show skin help</description>
 						<label>$LOCALIZE[31200]</label>
@@ -1044,6 +1084,7 @@
 					 <!--  Enable Widgets  -->
 					
 					<control type="radiobutton" id="400">
+						<texturenofocus colordiffuse="44FFFFFF">settingB.png</texturenofocus>
 						<include>SettingsButton</include>
 						<description>Enable widgets on home screen</description>
 						<label>31247</label>
@@ -1054,6 +1095,7 @@
 					 <!-- widget 1  -->
 					
 					<control type="radiobutton" id="401">
+						<texturenofocus colordiffuse="44FFFFFF">settingB.png</texturenofocus>
 						<include>SettingsButton</include>
 						<description>Recent movies widgets</description>
 						<label>$LOCALIZE[31131] $LOCALIZE[31248]</label>
@@ -1087,6 +1129,7 @@
 					<!--  Widget 4  -->
 					
 					<control type="radiobutton" id="404">
+						<texturenofocus colordiffuse="44FFFFFF">settingB.png</texturenofocus>
 						<include>SettingsButton</include>
 						<description>Random songs widget</description>
 						<label>$LOCALIZE[31213] $LOCALIZE[31248]</label>
@@ -1098,6 +1141,7 @@
 					
 					<!--  custom widget 5  -->
 					<control type="label">
+						<texturenofocus colordiffuse="44FFFFFF">settingB.png</texturenofocus>
 						<include>SettingsButton</include>
 						<description>Custom widget</description>
 						<label>31274</label>
@@ -1115,6 +1159,7 @@
 						<enable>!IsEmpty(Skin.String(PluginWidgetPath1)) + !Skin.HasSetting(HomeWidgetToggle)</enable>
 					</control>
 					<control type="button" id="406">
+						<texturenofocus colordiffuse="44FFFFFF">settingB.png</texturenofocus>
 						<include>SettingsButton</include>
 						<description>Set Name</description>
 						<label> - $LOCALIZE[31232]</label>
@@ -1161,6 +1206,7 @@
 						<enable>!IsEmpty(Skin.String(PluginWidgetPath2)) + !Skin.HasSetting(HomeWidgetToggle)</enable>
 					</control>
 					<control type="button" id="410">
+						<texturenofocus colordiffuse="44FFFFFF">settingB.png</texturenofocus>
 						<include>SettingsButton</include>
 						<description>Set Name</description>
 						<label> - $LOCALIZE[31232]</label>
@@ -1171,6 +1217,7 @@
 						<enable>!IsEmpty(Skin.String(PluginWidgetPath2)) + !Skin.HasSetting(HomeWidgetToggle) + Skin.HasSetting(CustomWidget2Toggle)</enable>
 					</control>
 					<control type="radiobutton" id="411">
+						<texturenofocus colordiffuse="44FFFFFF">settingB.png</texturenofocus>
 						<include>SettingsButton</include>
 						<description>use poster</description>
 						<label> - $LOCALIZE[31258]</label>

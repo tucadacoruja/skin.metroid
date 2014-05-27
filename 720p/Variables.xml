@@ -23,6 +23,11 @@
 		<value>FFB3B3B3</value>
 	</variable>
 	
+	<variable name="CategoryBtn">
+		<value condition="Control.HasFocus(444)">categoryNF.png</value>
+		<value>category.png</value>
+	</variable>
+	
 	<variable name="ProfileThumb">
 		<value condition="Window.IsVisible(songinformation)"></value>
 		<value>$INFO[System.ProfileThumb]</value>

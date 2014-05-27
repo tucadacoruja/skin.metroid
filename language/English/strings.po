@@ -1033,3 +1033,16 @@ msgctxt "#31274"
 msgid "To enable custom widgets see: Settings -> Help -> Widget"
 msgstr "
 
+msgctxt "#31275"
+msgid "Menu background color"
+msgstr "
+
+msgctxt "#31276"
+msgid "settings"
+msgstr "
+
+msgctxt "#31277"
+msgid "Force thumbnail viewtype on plugins"
+msgstr "
+
+

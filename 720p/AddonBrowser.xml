@@ -6,8 +6,9 @@
 
 <include>LoadSettings</include>
 <onload condition="IsEmpty(Skin.String(FirstRunTouch))">ActivateWindow(9506)</onload>
+<onload condition="substring(Container.FolderPath,addons://all/)">Container.SetViewMode(603)</onload>
 	
-<views>602,50,603</views>
+<views>603,50</views>
   
 <controls>
 
@@ -36,9 +37,10 @@
 <include>GeneralFanart</include>
 <include>Background</include>
 
-<include>List</include>  
+ 
 <include>Panel</include><!-- -603 --> 
-<include>Polaroid</include><!-- 602 -->
+<include>List</include> 
+<!-- include>Polaroid</include><!-- 602 -->
 
 <include>BottomInfoBar</include>
  

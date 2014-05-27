@@ -1122,103 +1122,102 @@
 	
 	<include name="SettingsWindowItems">
 	
-		<item id="13">
+		<item id="1">
 			<description>skin settings</description>
 			<label>31112</label>
-			<property name="focused">-</property>
+
 			<onclick>ActivateWindow(skinsettings)</onclick>
 			<visible>!IsEmpty(skin.string(SubMenu2))</visible>
 			<property name="SubMenuItem">not_empty</property>
 			<property name="DropdownMenu2">not_empty</property>
 		</item>
-		<item id="7">
+		<item id="2">
 			<description>Appearance</description>
 			<label>31113</label>
-			<property name="focused">settings/appearance2FO.png</property>
 			<onclick>ActivateWindow(appearancesettings)</onclick>
 			<visible>!IsEmpty(skin.string(SubMenu2))</visible>
 			<property name="SubMenuItem">not_empty</property>
 			<property name="DropdownMenu2">not_empty</property>
 		</item>
 		
-		<item id="1">
+		<item id="3">
 			<description>Video</description>
 			<label>31116</label>
-			<property name="focused">settings/videoFO.png</property>
 			<onclick>ActivateWindow(videossettings)</onclick>
 			<visible>!IsEmpty(skin.string(SubMenu2))</visible>
 			<property name="SubMenuItem">not_empty</property>
 			<property name="DropdownMenu2">not_empty</property>
 		</item>
-		<item id="2">
+		<item id="4">
 			<description>Audio</description>
 			<label>31117</label>
-			<property name="focused">settings/audioFO.png</property>
 			<onclick>ActivateWindow(musicsettings)</onclick>
 			<visible>!IsEmpty(skin.string(SubMenu2))</visible>
 			<property name="SubMenuItem">not_empty</property>
 			<property name="DropdownMenu2">not_empty</property>
 		</item>
-		<item id="11">
+		<item id="5">
 			<description>System</description>
 			<label>31124</label>
-			<property name="focused">settings/systemFO.png</property>
 			<onclick>ActivateWindow(systemsettings)</onclick>
 			<visible>!IsEmpty(skin.string(SubMenu2))</visible>
 			<property name="SubMenuItem">not_empty</property>
 			<property name="DropdownMenu2">not_empty</property>
 		</item>
-		<item id="3">
-			<description>Pics</description>
-			<label>31118</label>
-			<property name="focused">settings/picsFO.png</property>
-			<onclick>ActivateWindow(picturessettings)</onclick>
-			<visible>!IsEmpty(skin.string(SubMenu2))</visible>
+		<item id="6">
+			<description>addons</description>
+			<label>24001</label>
+			<onclick>ActivateWindow(AddonBrowser,root,return)</onclick>
+
+			<visible>!IsEmpty(skin.string(SubMenu2)) + Skin.HasSetting(AddonSettingsMenu)</visible>
 			<property name="SubMenuItem">not_empty</property>
-			<property name="DropdownMenu2">not_empty</property>
+			<property name="DropdownMenu6">not_empty</property>
 		</item>
-		<item id="4">
-			<description>Weather</description>
-			<label>31119</label>
-			<property name="focused">settings/weatherFO.png</property>
-			<onclick>ActivateWindow(weathersettings)</onclick>
-			<visible>!IsEmpty(skin.string(SubMenu2))</visible>
-			<property name="SubMenuItem">not_empty</property>
-			<property name="DropdownMenu2">not_empty</property>
-		</item>
-		<item id="5">
+		
+		
+		<item id="7">
 			<description>network</description>
 			<label>31120</label>
-			<property name="focused">settings/networkFO.png</property>
 			<onclick>ActivateWindow(servicesettings)</onclick>
 			<visible>!IsEmpty(skin.string(SubMenu2))</visible>
 			<property name="SubMenuItem">not_empty</property>
 			<property name="DropdownMenu2">not_empty</property>
 		</item>
-		
-		
 		<item id="8">
-			<description>Profiles</description>
-			<label>31121</label>
-			<property name="focused">settings/profilesFO.png</property>
-			<onclick>xbmc.activatewindow(34)</onclick>
+			<description>Weather</description>
+			<label>31119</label>
+			<onclick>ActivateWindow(weathersettings)</onclick>
 			<visible>!IsEmpty(skin.string(SubMenu2))</visible>
 			<property name="SubMenuItem">not_empty</property>
 			<property name="DropdownMenu2">not_empty</property>
 		</item>
 		<item id="9">
-			<description>Info</description>
-			<label>31122</label>
-			<property name="focused">settings/info2FO.png</property>
-			<onclick>activatewindow(7)</onclick>
+			<description>Pics</description>
+			<label>31118</label>
+			<onclick>ActivateWindow(picturessettings)</onclick>
 			<visible>!IsEmpty(skin.string(SubMenu2))</visible>
 			<property name="SubMenuItem">not_empty</property>
 			<property name="DropdownMenu2">not_empty</property>
 		</item>
 		<item id="10">
+			<description>Profiles</description>
+			<label>31121</label>
+			<onclick>xbmc.activatewindow(34)</onclick>
+			<visible>!IsEmpty(skin.string(SubMenu2))</visible>
+			<property name="SubMenuItem">not_empty</property>
+			<property name="DropdownMenu2">not_empty</property>
+		</item>
+		<item id="11">
+			<description>Info</description>
+			<label>31122</label>
+			<onclick>activatewindow(7)</onclick>
+			<visible>!IsEmpty(skin.string(SubMenu2))</visible>
+			<property name="SubMenuItem">not_empty</property>
+			<property name="DropdownMenu2">not_empty</property>
+		</item>
+		<item id="12">
 			<description>help</description>
 			<label>31123</label>
-			<property name="focused">settings/aboutFO.png</property>
 			<onclick>activatewindow(9505)</onclick>
 			<visible>!IsEmpty(skin.string(SubMenu2)) + !Skin.HasSetting(ShowSkinHelp)</visible>
 			<property name="SubMenuItem">not_empty</property>
@@ -1581,7 +1580,8 @@
 		<item id="1">
 			<description>install</description>
 			<label>31234</label>
-			<onclick>ActivateWindow(AddonBrowser,root,return)</onclick>
+			<!-- onclick>ActivateWindow(AddonBrowser,root,return)</onclick -->
+			<onclick>ActivateWindow(AddonBrowser,addons://all/,return)</onclick>
 			<visible>!Skin.HasSetting(AddonInstallHome)</visible>
 			<visible>!IsEmpty(skin.string(SubMenu6))</visible>
 			<property name="SubMenuItem">not_empty</property>

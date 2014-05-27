@@ -3,7 +3,7 @@
 <defaultcontrol always="true">50</defaultcontrol>
 <backgroundcolor>0</backgroundcolor>
 <allowoverlay>yes</allowoverlay>
-<onload></onload>
+
 
 
 <views>709,637,501,603,50</views>

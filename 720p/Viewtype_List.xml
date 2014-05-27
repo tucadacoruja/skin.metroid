@@ -33,7 +33,7 @@
 			<onright>noop</onright>
 			<pagecontrol>63</pagecontrol>
 			<!-- visible>Container.Content(songs) | Window.IsVisible(playlists) | Window.IsVisible(pictures) | Container.Content(episodes) | Container.Content(albums) | Container.Content(artists)</visible -->
-
+			
 			<itemlayout width="633" height="45">
 					<!-- control type="label">
 						<top>0</top>
@@ -192,7 +192,7 @@
 				<visible>!Skin.HasSetting(LockMainMenu)</visible>
 				<!-- top>-45</top>
 				<left>-5</left -->
-				<top>40</top>
+				<top>45</top>
 				<left>0</left>
 					
 					<!-- animation effect="rotate" end="10" center="auto" time="0" condition="true">Conditional</animation -->
@@ -203,7 +203,7 @@
 						<left>70</left>
 						<top>105</top>
 						<width>416</width>
-						<height>440</height>
+						<height>420</height>
 						<aspectratio>stretch</aspectratio>
 						<colordiffuse>55FFFFFF</colordiffuse>
 						<texture background="true">diffuse/postershadow.png</texture>
@@ -214,7 +214,7 @@
 						<left>108</left>
 						<top>104</top>
 						<width>400</width>
-						<height>415</height>
+						<height>395</height>
 
 						<aspectratio>stretch</aspectratio>
 						<texture background="true" border="5">white.png</texture>
@@ -227,7 +227,7 @@
 						<left>113</left>
 						<top>109</top>
 						<width>390</width>
-						<height>350</height>
+						<height>330</height>
 						<aspectratio>scale</aspectratio>
 						<texture background="true">$VAR[FanOrThumbMinus]</texture>
 						<fadetime>100</fadetime>
@@ -238,7 +238,7 @@
 					<control type="image">
 						<description>white image</description>
 						<left>113</left>
-						<top>108</top>
+						<top>88</top>
 						<width>390</width>
 						<height>50</height>
 						
@@ -247,27 +247,18 @@
 						<colordiffuse>FFEBEBEB</colordiffuse>
 						<!-- visible>![Container.Content(movies) | Container.Content(tvshows)]</visible -->
 					</control>
-					<!-- control type="image">
-						<description>white image</description>
-						<left>112</left>
-						<top>479</top>
-						<width>420</width>
-						<height>120</height>
-						
-						<aspectratio>stretch</aspectratio>
-						<texture border="12">white.png</texture>
-						<colordiffuse>FFD7D7D7</colordiffuse>
-					</control -->
+
 					
 					
 				</control>
-				
+	
+	<!-- ----------------------- -->
 				
 			<control type="image">
 				<left>70</left>
 				<top>105</top>
 				<width>446</width>
-				<height>520</height>
+				<height>500</height>
 				<aspectratio>stretch</aspectratio>
 				<colordiffuse>70FFFFFF</colordiffuse>
 				<texture background="true">diffuse/postershadow.png</texture>
@@ -278,7 +269,7 @@
 				<left>108</left>
 				<top>108</top>
 				<width>428</width>
-				<height>494</height>
+				<height>474</height>
 				<aspectratio>stretch</aspectratio>
 				<texture background="true" border="5">white.png</texture>
 				<bordertexture border="5">whiteborder.png</bordertexture>
@@ -313,7 +304,7 @@
 				<left>113</left>
 				<top>113</top>
 				<width>418</width>
-				<height>410</height>
+				<height>390</height>
 				<aspectratio>scale</aspectratio>
 				<texture aligny="top">$VAR[FanOrThumb]</texture>
 				<fadetime>40</fadetime>
@@ -321,7 +312,7 @@
 			</control>
 			<control type="image">
 				<left>133</left>
-				<top>173</top>
+				<top>163</top>
 				<width>380</width>
 				<height>380</height>
 				<aspectratio>keep</aspectratio>
@@ -353,7 +344,7 @@
 			<control type="image">
 				<description>white image</description>
 				<left>113</left>
-				<top>479</top>
+				<top>459</top>
 				<width>418</width>
 				<height>120</height>
 				
@@ -364,7 +355,7 @@
 
 			<control type="label">
 				<left>130</left>
-				<top>477</top>
+				<top>457</top>
 				<width>380</width>
 				<height>60</height>
 				<align>left</align>
@@ -378,7 +369,7 @@
 
 			<control type="textbox">
 				<left>130</left>
-				<top>520</top>
+				<top>500</top>
 				<width>380</width>
 				<height>60</height>
 				<label>$VAR[Polaroid_Extra]</label>

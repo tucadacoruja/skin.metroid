@@ -906,21 +906,7 @@
 
 		</control>
 
-		<!--  Control label  -->
-
-		<control type="label">
-			<left>485</left>
-			<top>45</top>
-			<width>780</width>
-			<height>21</height>
-			<textcolor>blue</textcolor>
-			<shadowcolor>FF000000</shadowcolor>
-			<font>font13</font>
-			<align>right</align>
-			<label>$INFO[System.CurrentControl]</label>
-			<visible>Skin.HasSetting(HideDebugInfo)</visible>
-		</control>
-
+		
 		<!--  Path label  -->
 
 		<control type="label">
@@ -932,9 +918,26 @@
 			<shadowcolor>FF000000</shadowcolor>
 			<font>font13</font>
 			<align>right</align>
-			<label>[COLOR=FF00FF00]$INFO[Container.FolderName,, - ][/COLOR]$INFO[Container.FolderPath]</label>
+			<label>[COLOR=FF00FF00]$INFO[Container.FolderName,, - ][/COLOR]$INFO[Container.FolderPath]$INFO[Container.Viewmode]</label>
 			<visible>Skin.HasSetting(HideDebugInfo)</visible>
 		</control>
+		
+		<!--  Control label  -->
+
+		<control type="label">
+			<left>485</left>
+			<top>45</top>
+			<width>780</width>
+			<height>21</height>
+			<textcolor>blue</textcolor>
+			<shadowcolor>FF000000</shadowcolor>
+			<font>font13</font>
+			<align>right</align>
+			<label>$INFO[System.CurrentControl] - $INFO[ListItem.FileNameandPath]</label>
+			<visible>Skin.HasSetting(HideDebugInfo)</visible>
+		</control>
+
+		
 
 	</controls>
 </window>
