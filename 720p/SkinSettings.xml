@@ -1140,16 +1140,16 @@
 					</control>
 					
 					<!--  custom widget 5  -->
-					<control type="label">
+					<control type="label" id="405">
 						<texturenofocus colordiffuse="44FFFFFF">settingB.png</texturenofocus>
 						<include>SettingsButton</include>
 						<description>Custom widget</description>
 						<label>31274</label>
 						<animation effect="fade" start="40" end="100" time="700" pulse="true" condition="IsEmpty(Skin.String(PluginWidgetPath1)) + IsEmpty(Skin.String(PluginWidgetPath2))">Conditional</animation>
-						<visible>IsEmpty(Skin.String(PluginWidgetPath1)) | IsEmpty(Skin.String(PluginWidgetPath2))</visible>
+						<visible>IsEmpty(Skin.String(PluginWidgetPath1)) + IsEmpty(Skin.String(PluginWidgetPath2))</visible>
 					</control>
 					
-					<control type="radiobutton" id="405">
+					<control type="radiobutton" id="406">
 						<disabledcolor>ACFFFFFF</disabledcolor>
 						<include>SettingsButton</include>
 						<description>Custom widget 1</description>
@@ -1158,7 +1158,7 @@
 						<selected>Skin.HasSetting(CustomWidget1Toggle)</selected>
 						<enable>!IsEmpty(Skin.String(PluginWidgetPath1)) + !Skin.HasSetting(HomeWidgetToggle)</enable>
 					</control>
-					<control type="button" id="406">
+					<control type="button" id="407">
 						<texturenofocus colordiffuse="44FFFFFF">settingB.png</texturenofocus>
 						<include>SettingsButton</include>
 						<description>Set Name</description>
@@ -1169,7 +1169,7 @@
 
 						<enable>!IsEmpty(Skin.String(PluginWidgetPath1)) + !Skin.HasSetting(HomeWidgetToggle) + Skin.HasSetting(CustomWidget1Toggle)</enable>
 					</control>
-					<control type="radiobutton" id="407">
+					<control type="radiobutton" id="408">
 						<include>SettingsButton</include>
 						<description>use poster</description>
 						<label> - $LOCALIZE[31258]</label>
@@ -1177,7 +1177,7 @@
 						<selected>Skin.HasSetting(CWidgetUsePoster1)</selected>
 						<enable>!IsEmpty(Skin.String(PluginWidgetPath1)) + !Skin.HasSetting(HomeWidgetToggle) + Skin.HasSetting(CustomWidget1Toggle)</enable>
 					</control>
-					<control type="button" id="408">
+					<control type="button" id="409">
 						<include>SettingsButton</include>
 						<label2>$INFO[Skin.String(PluginWidgetName1)]</label2>
 						<label>- $LOCALIZE[31228] 1</label>
@@ -1196,7 +1196,7 @@
 					
 					<!--  custom widget 6  -->
 					
-					<control type="radiobutton" id="409">
+					<control type="radiobutton" id="410">
 						<disabledcolor>ACFFFFFF</disabledcolor>
 						<include>SettingsButton</include>
 						<description>Custom widget 2</description>
@@ -1205,7 +1205,7 @@
 						<selected>Skin.HasSetting(CustomWidget2Toggle)</selected>
 						<enable>!IsEmpty(Skin.String(PluginWidgetPath2)) + !Skin.HasSetting(HomeWidgetToggle)</enable>
 					</control>
-					<control type="button" id="410">
+					<control type="button" id="411">
 						<texturenofocus colordiffuse="44FFFFFF">settingB.png</texturenofocus>
 						<include>SettingsButton</include>
 						<description>Set Name</description>
@@ -1216,7 +1216,7 @@
 
 						<enable>!IsEmpty(Skin.String(PluginWidgetPath2)) + !Skin.HasSetting(HomeWidgetToggle) + Skin.HasSetting(CustomWidget2Toggle)</enable>
 					</control>
-					<control type="radiobutton" id="411">
+					<control type="radiobutton" id="412">
 						<texturenofocus colordiffuse="44FFFFFF">settingB.png</texturenofocus>
 						<include>SettingsButton</include>
 						<description>use poster</description>
@@ -1225,7 +1225,7 @@
 						<selected>Skin.HasSetting(CWidgetUsePoster2)</selected>
 						<enable>!IsEmpty(Skin.String(PluginWidgetPath2)) + !Skin.HasSetting(HomeWidgetToggle) + Skin.HasSetting(CustomWidget2Toggle)</enable>
 					</control>
-					<control type="button" id="412">
+					<control type="button" id="413">
 						<include>SettingsButton</include>
 						<label2>$INFO[Skin.String(PluginWidgetName2)]</label2>
 						<label>- $LOCALIZE[31228] 2</label>

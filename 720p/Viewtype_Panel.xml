@@ -105,7 +105,7 @@
 							<left>6</left>
 							<top>102</top>
 							<width>156</width>
-							<height>85</height>
+							<height>88</height>
 							<label>$VAR[Landscape_Header]</label>
 							<font>font14</font>
 							<textcolor>FF7D7D7D</textcolor>
@@ -253,7 +253,7 @@
 							<left>6</left>
 							<top>102</top>
 							<width>156</width>
-							<height>85</height>
+							<height>88</height>
 							<label>$VAR[Landscape_Header]</label>
 							<font>font14</font>
 							<textcolor>FFE1E1E1</textcolor>

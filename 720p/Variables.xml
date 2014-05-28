@@ -217,7 +217,7 @@
 	</variable>
 	
 	<variable name="LogoDiffuse">
-		<value condition="!IsEmpty(ListItem.Art(clearlogo))">D7E5E5E5</value>
+		<value condition="!IsEmpty(ListItem.Art(clearlogo))">EBFFFFFF</value>
 		<value>FFFFFFFF</value>
 	</variable>
 	

@@ -388,7 +388,7 @@
 							<top>0</top>
 							<width>380</width>
 							<height>215</height>
-							<texture background="true">$VAR[Info_Image]</texture>
+							<texture background="true" fallback="osd/GrayBackground.png">$VAR[Info_Image]</texture>
 							<aspectratio align="center" aligny="top">scale</aspectratio>
 							
 						</control>

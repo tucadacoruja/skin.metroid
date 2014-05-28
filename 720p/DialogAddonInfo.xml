@@ -43,7 +43,7 @@
 			
 			<control type="label" id="20">
 				<description>Addon Title value</description>
-				<left>150</left>
+				<left>145</left>
 				<top>110</top>
 				<width>870</width>
 				<font>Segoe28</font>
@@ -54,7 +54,7 @@
 			
 			<control type="group">
 				<left>360</left>
-				<top>0</top>
+				<top>175</top>
 				<width>380</width>
 				<height>500</height>
 					
@@ -63,27 +63,29 @@
 					<left>0</left>
 					<top>0</top>
 					<width>220</width>
-					<height>557</height>
+					<height>200</height>
 					<texture background="true">white.png</texture>
 					<colordiffuse>FFBDBDBD</colordiffuse>
+					<aspectratio>stretch</aspectratio>
 				</control>
 				
 				<control type="image">
 					<left>0</left>
-					<top>175</top>
+					<top>0</top>
 					<width>220</width>
-					<height>170</height>
+					<height>180</height>
 					<info>ListItem.Icon</info>
 					<aspectratio align="center" aligny="top">scale</aspectratio>
 				</control>
 				
 				<control type="image">
 					<left>0</left>
-					<top>175</top>
+					<top>170</top>
 					<width>220</width>
-					<height>557</height>
+					<height>210</height>
 					<texture background="true">white.png</texture>
 					<colordiffuse>FFEBEBEB</colordiffuse>
+					<aspectratio>stretch</aspectratio>
 				</control>
 
 			</control>
@@ -420,7 +422,7 @@
 					<height>240</height>
 					<font>plot</font>
 					<align>justify</align>
-					<textcolor>95FFFFFF</textcolor>
+					<textcolor>C2FFFFFF</textcolor>
 					<label>$INFO[ListItem.Property(Addon.Description)]</label>
 					<pagecontrol>60</pagecontrol>
 					<autoscroll delay="15000" time="2500" repeat="10000"></autoscroll>
@@ -436,8 +438,8 @@
 					<label>$INFO[ListItem.Property(Addon.Broken)]</label>
 					<align>left</align>
 					<aligny>center</aligny>
-					<textcolor>infoplot</textcolor>
-					<shadowcolor>black</shadowcolor>
+					<textcolor>C2FFFFFF</textcolor>
+					
 				</control>
 				<control type="textbox">
 					<description>Reason label</description>
@@ -448,8 +450,8 @@
 					<font>plot</font>
 					<label>$INFO[ListItem.Property(Addon.broken)]</label>
 					<align>left</align>
-					<textcolor>infoplot</textcolor>
-					<shadowcolor>black</shadowcolor>
+					<textcolor>C2FFFFFF</textcolor>
+					
 				</control>
 			</control>
 				
