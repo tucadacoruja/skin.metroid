@@ -13,7 +13,7 @@
 		
 	<controls>
 	<control type="group">
-		<visible>!Window.IsVisible(filebrowser)</visible>
+		<visible>![Window.IsVisible(filebrowser) | Window.IsVisible(virtualkeyboard)]</visible>
 		<include>DialogEffect</include>
 	
 		<control type="image">

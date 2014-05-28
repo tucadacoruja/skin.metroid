@@ -54,9 +54,9 @@
 							<top>0</top>
 							<width>180</width>
 							<height>102</height>
-							<texture>white.png</texture>
-							<aspectratio>stretch</aspectratio>
-							<colordiffuse>FFBDBDBD</colordiffuse>
+							<texture background="true" >DefaultCatch.png</texture>
+							<aspectratio align="center">scale</aspectratio>
+							<!-- colordiffuse>FFBDBDBD</colordiffuse -->
 						</control>
 																							
 						<control type="image">
@@ -109,6 +109,7 @@
 							<label>$VAR[Landscape_Header]</label>
 							<font>font14</font>
 							<textcolor>FF7D7D7D</textcolor>
+							<!-- colordiffuse>$VAR[Panel_playing]</colordiffuse -->
 							<aligny>top</aligny>
 							<shadowcolor>00FFFFFF</shadowcolor>
 							<autoscroll>false</autoscroll>
@@ -135,6 +136,7 @@
 							<textcolor>FF898989</textcolor>
 							<aligny>center</aligny>
 							<scroll>false</scroll>
+							<selectedcolor>blue</selectedcolor>
 						</control>
 						
 						<control type="label">
@@ -201,9 +203,9 @@
 							<top>0</top>
 							<width>180</width>
 							<height>102</height>
-							<texture background="true" >white.png</texture>
-							<aspectratio>stretch</aspectratio>
-							<colordiffuse>FFBDBDBD</colordiffuse>
+							<texture background="true" >DefaultCatch.png</texture>
+							<aspectratio align="center">scale</aspectratio>
+							<!-- colordiffuse>FFBDBDBD</colordiffuse -->
 						</control>
 																							
 						<control type="image">

@@ -74,7 +74,7 @@
 			
 
 		<control type="group">	
-			<top>53</top>
+			<top>54</top>
 			<!-- To counter the actual animation -->
 			<animation effect="slide" start="250,0" end="0,0" time="500" reversible="true" condition="Control.IsVisible(501)">Conditional</animation>
 			<animation effect="slide" start="0,0" end="-250,0" time="600" reversible="true" condition="!Control.HasFocus(301) + !Skin.HasSetting(LockMainMenu)">Conditional</animation>
@@ -180,9 +180,9 @@
 				<width>325</width>
 				<height>480</height>
 				<aspectratio>stretch</aspectratio>
-				<bordertexture border="3">blue3.png</bordertexture>
-				<bordersize>3</bordersize>
-				<texture background="true" diffuse="diffuse/posterdiffuse.png" fallback="DefaultCatch.png">$INFO[Container(501).ListItem.Art(poster)]</texture>
+				<bordertexture border="4" colordiffuse="$VAR[Posterfix_select]">white.png</bordertexture>
+				<bordersize>4</bordersize>
+				<texture background="true" fallback="DefaultCatch.png">$INFO[Container(501).ListItem.Art(poster)]</texture>
 				<fadetime>200</fadetime>
 				<!-- animation effect="fade" start="0" end="50" time="200" reversable="false" condition="true">Conditional</animation -->
 			</control>

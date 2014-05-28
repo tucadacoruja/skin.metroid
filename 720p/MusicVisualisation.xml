@@ -64,15 +64,15 @@
 		
 		
 		<control type="group">
-		<left>-160</left>
-		<top>0</top>
-		<animation effect="zoom" end="80" center="auto" time="0" condition="true">Conditional</animation>
+		<left>-35</left>
+		<top>40</top>
+
 		
 			<control type="image">
 				<left>70</left>
 				<top>105</top>
-				<width>446</width>
-				<height>500</height>
+				<width>357</width>
+				<height>400</height>
 				<aspectratio>stretch</aspectratio>
 				<colordiffuse>70FFFFFF</colordiffuse>
 				<texture background="true">diffuse/postershadow.png</texture>
@@ -80,23 +80,22 @@
 			</control>
 			
 			<control type="image">
-				<left>108</left>
+				<left>107</left>
 				<top>103</top>
-				<width>428</width>
-				<height>499</height>
+				<width>346</width>
+				<height>399</height>
 				<aspectratio>stretch</aspectratio>
-				<texture border="5">BlueBackground.png</texture>
+				<texture border="5">DefaultCatch.png</texture>
 				<bordertexture border="5">whiteborder.png</bordertexture>
 				<bordersize>5</bordersize>
-				<animation effect="fade" start="0" end="80" time="0" condition="true">Conditional</animation>
 			</control>
 			
 			<control type="image">
 				<left>112</left>
 				<top>108</top>
-				<width>422</width>
-				<height>410</height>
-				<aspectratio scalediffuse="false">scale</aspectratio>
+				<width>336</width>
+				<height>328</height>
+				<aspectratio aligny="top">scale</aspectratio>
 				<texture >$INFO[MusicPlayer.offset(1).Cover]</texture>
 				<fadetime>400</fadetime>
 			</control>
@@ -104,34 +103,34 @@
 			<control type="image">
 				<description>white image</description>
 				<left>112</left>
-				<top>479</top>
-				<width>420</width>
-				<height>120</height>
+				<top>400</top>
+				<width>336</width>
+				<height>96</height>
 				
 				<aspectratio>stretch</aspectratio>
 				<texture border="12">white.png</texture>
 				<colordiffuse>FFEBEBEB</colordiffuse>
 			</control>
 			<control type="label">
-				<left>125</left>
-				<top>478</top>
-				<width>410</width>
+				<left>123</left>
+				<top>400</top>
+				<width>330</width>
 				<height>60</height>
 				<align>left</align>
 				<label>$INFO[MusicPlayer.offset(1).Artist]</label>
 				<visible>true</visible>
 				<scroll>false</scroll>
-				<font>Favourites</font>
+				<font>WeblySemi28</font>
 				<textcolor>FF707070</textcolor>
 			</control>
 
 			<control type="label">
-				<left>125</left>
-				<top>513</top>
-				<width>410</width>
+				<left>123</left>
+				<top>430</top>
+				<width>330</width>
 				<height>60</height>
-				<label>$INFO[MusicPlayer.offset(1).Title] - $INFO[MusicPlayer.offset(1).Duration]</label>
-				<font>MainMenu21</font>
+				<label>$INFO[MusicPlayer.offset(1).Title]$INFO[MusicPlayer.offset(1).Duration, - ]</label>
+				<font>WeatherSmall</font>
 				<textcolor>E1707070</textcolor>
 				<align>left</align>
 				<scroll>false</scroll>
@@ -142,6 +141,7 @@
 		<control type="group">
 			<left>87</left>
 			<top>1</top>
+			<!-- visible>false</visible -->
 
 			<control type="image">
 				<left>60</left>
@@ -154,61 +154,39 @@
 				
 			</control>
 			
-			<control type="group">
-			<visible>substring(MusicPlayer.Cover,DefaultAlbumCover.png)</visible>
-				<control type="image">
-					<left>107</left>
-					<top>108</top>
-					<width>430</width>
-					<height>494</height>
-					<aspectratio>stretch</aspectratio>
-					<texture background="true" border="5">white.png</texture>
-					<bordertexture border="5">whiteborder.png</bordertexture>
-					<bordersize>5</bordersize>
-					<colordiffuse>FFD7D7D7</colordiffuse>
-				</control>
-				<control type="image">
-					<left>120</left>
-					<top>190</top>
-					<width>122</width>
-					<height>105</height>
-					<aspectratio>keep</aspectratio>
-					<texture>DefaultAudio.png</texture>
-					<animation effect="fade" start="0" end="50" time="0" condition="true">Conditional</animation>
-				</control>
+		
+			<control type="image">
+				<left>107</left>
+				<top>108</top>
+				<width>430</width>
+				<height>494</height>
+				<aspectratio>stretch</aspectratio>
+				<texture background="true" border="5">DefaultCatch.png</texture>
+				<bordertexture border="5">whiteborder.png</bordertexture>
+				<bordersize>5</bordersize>
+
 			</control>
 			
-			<control type="group">
-			<visible>!substring(MusicPlayer.Cover,DefaultAlbumCover.png)</visible>
-				<control type="image">
-					<left>108</left>
-					<top>108</top>
-					<width>428</width>
-					<height>494</height>
-					<aspectratio>stretch</aspectratio>
-					<texture border="5">BlueBackground.png</texture>
-					<bordertexture border="5">whiteborder.png</bordertexture>
-					<bordersize>5</bordersize>
-					<animation effect="fade" start="0" end="80" time="0" condition="true">Conditional</animation>
-				</control>
-				
-				<!-- control type="image">
-					<left>113</left>
-					<top>113</top>
-					<width>418</width>
-					<height>410</height>
-					<aspectratio scalediffuse="false">scale</aspectratio>
-					<texture diffuse="diffuse/albumdiffuse.png" >$INFO[MusicPlayer.Cover]</texture>
-				</control -->
-				<control type="image">
-					<left>112</left>
-					<top>112</top>
-					<width>420</width>
-					<height>410</height>
-					<aspectratio>scale</aspectratio>
-					<texture>$INFO[MusicPlayer.Cover]</texture>
-				</control>
+			<control type="image">
+				<left>120</left>
+				<top>190</top>
+				<width>122</width>
+				<height>105</height>
+				<aspectratio>keep</aspectratio>
+				<texture>DefaultAudio.png</texture>
+				<colordiffuse>C2FFFFFF</colordiffuse>
+				<visible>substring(MusicPlayer.Cover,DefaultAlbumCover.png)</visible>
 			</control>
+			<control type="image">
+				<left>112</left>
+				<top>112</top>
+				<width>420</width>
+				<height>410</height>
+				<aspectratio aligny="top">scale</aspectratio>
+				<texture>$INFO[MusicPlayer.Cover]</texture>
+				<visible>!substring(MusicPlayer.Cover,DefaultAlbumCover.png)</visible>
+			</control>
+	
 			
 			<control type="image">
 				<description>white image</description>
@@ -253,10 +231,10 @@
 				<height>30</height>
 				<label>[UPPERCASE]$INFO[MusicPlayer.Time][/UPPERCASE]</label>
 				<font>MainMenu21</font>
-				<textcolor>FF707070</textcolor>
+				<textcolor>FFACACAC</textcolor>
 				<align>left</align>
 				<scroll>false</scroll>
-				<animation effect="fade" start="0" end="57" time="0" reversable="false" condition="true">Conditional</animation>
+
 			</control>
 			<control type="label">
 				<left>315</left>
@@ -265,10 +243,10 @@
 				<height>30</height>
 				<label>[UPPERCASE]$INFO[MusicPlayer.Duration][/UPPERCASE]</label>
 				<font>MainMenu21</font>
-				<textcolor>FF707070</textcolor>
+				<textcolor>FFACACAC</textcolor>
 				<align>right</align>
 				<scroll>false</scroll>
-				<animation effect="fade" start="0" end="57" time="0" reversable="false" condition="true">Conditional</animation>
+
 			</control>
 			
 			

@@ -24,7 +24,7 @@
 			<control type="group">
 			<top>260</top>
 				<control type="label">
-					<left>296</left>
+					<left>299</left>
 					<top>95</top>
 					<width>870</width>
 					<font>Clock2</font>
@@ -36,7 +36,7 @@
 					<shadowcolor>40111111</shadowcolor>
 				</control>
 				<control type="label">
-					<left>296</left>
+					<left>299</left>
 					<top>124</top>
 					<width>870</width>
 					<font>recent</font>
@@ -53,7 +53,7 @@
 			<control type="panel" id="637">
 				<!-- visible>Container.Content(movies) | Container.Content(pictures) | Container.Content(tvshows) | Container.Content(artists) | Container.Content(albums) | Container.Content(songs) | Container.Content(seasons) | Container.Content(episodes)</visible -->
 				
-				<left>295</left>
+				<left>298</left>
 				<top>95</top>
 				
 				<include condition="!Skin.HasSetting(LockMainMenu)">LogoViewWidth1</include>
@@ -90,7 +90,19 @@
 						<colordiffuse>70ffffff</colordiffuse>
 						
 					</control>
-			
+					
+					<control type="image">
+						<left>0</left>
+						<top>0</top>
+						<width>400</width>
+						<height>250</height>
+						<aspectratio>scale</aspectratio>
+						<bordertexture colordiffuse="white" border="3">white.png</bordertexture>
+						<bordersize>3</bordersize>
+						<fadetime>200</fadetime>
+						<texture>DefaultCatch.png</texture>
+		
+					</control>
 					<control type="image">
 						<left>0</left>
 						<top>0</top>
@@ -98,10 +110,10 @@
 						<height>250</height>
 						<aspectratio>scale</aspectratio>
 						<fadetime>200</fadetime>
-						<bordertexture colordiffuse="white" border="3">white.png</bordertexture>
+						<!-- bordertexture colordiffuse="white" border="3">white.png</bordertexture -->
 						<bordersize>3</bordersize>
-						<texture fallback="osd/GrayBackground.png">$VAR[Landscape_Image]</texture>
-						<colordiffuse>$VAR[LogoDiffuse]</colordiffuse>
+						<texture fallback="DefaultCatch.png">$VAR[Landscape_Image]</texture>
+						<!-- colordiffuse>$VAR[LogoDiffuse]</colordiffuse -->
 						
 					</control>
 					<control type="image">
@@ -160,7 +172,7 @@
 						<bordertexture colordiffuse="hellblue" border="3">white.png</bordertexture>
 						<bordersize>3</bordersize>
 						<fadetime>200</fadetime>
-						<texture fallback="osd/GrayBackground.png">white.png</texture>
+						<texture>DefaultCatch.png</texture>
 		
 					</control>
 					<control type="image">
@@ -169,10 +181,10 @@
 						<width>400</width>
 						<height>250</height>
 						<aspectratio>scale</aspectratio>
-						<!-- bordertexture colordiffuse="hellblue" border="3">white.png</bordertexture -->
+			
 						<bordersize>3</bordersize>
 						<fadetime>200</fadetime>
-						<texture  colordiffuse="$VAR[LogoDiffuse]" fallback="osd/GrayBackground.png">$VAR[Landscape_Image]</texture>
+						<texture>$VAR[Landscape_Image]</texture>
 						<colordiffuse>$VAR[LogoDiffuse]</colordiffuse>
 					</control>
 					

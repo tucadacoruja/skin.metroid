@@ -14,7 +14,7 @@
 				
 		<control type="fixedlist" id="709">
 			<viewtype label="31268">list</viewtype>
-			<left>347</left>
+			<left>351</left>
 			<top>112</top>
 			<width>950</width>
 			<height>550</height>
@@ -31,7 +31,7 @@
 			<preloaditems>2</preloaditems>
 			<visible>Window.IsActive(25)</visible>
 			<visible>Container.Content(TVShows)</visible>
-			<animation effect="slide" start="0,0" end="-262,0" time="600" condition="!Control.HasFocus(301) + !Skin.HasSetting(LockMainMenu)">Conditional</animation>
+			<animation effect="slide" start="0,0" end="-266,0" time="600" condition="!Control.HasFocus(301) + !Skin.HasSetting(LockMainMenu)">Conditional</animation>
 			
 			<itemlayout width="585" height="190">
 			

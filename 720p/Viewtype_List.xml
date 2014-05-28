@@ -217,10 +217,10 @@
 						<height>395</height>
 
 						<aspectratio>stretch</aspectratio>
-						<texture background="true" border="5">white.png</texture>
+						<texture background="true" border="5">DefaultCatch.png</texture>
 						<bordertexture border="5">whiteborder.png</bordertexture>
 						<bordersize>5</bordersize>
-						<colordiffuse>FFEBEBEB</colordiffuse>
+						<!-- colordiffuse>FFEBEBEB</colordiffuse -->
 					</control>
 					
 					<control type="image">
@@ -271,10 +271,10 @@
 				<width>428</width>
 				<height>474</height>
 				<aspectratio>stretch</aspectratio>
-				<texture background="true" border="5">white.png</texture>
+				<texture background="true" border="5">DefaultCatch.png</texture>
 				<bordertexture border="5">whiteborder.png</bordertexture>
 				<bordersize>5</bordersize>
-				<colordiffuse>FFD7D7D7</colordiffuse>
+				<!-- colordiffuse>FFD7D7D7</colordiffuse -->
 			</control>
 			<control type="image">
 				<left>140</left>
@@ -283,23 +283,11 @@
 				<height>105</height>
 				<aspectratio>keep</aspectratio>
 				<texture>$VAR[Fallback_Thumb]</texture>
-				<visible>IsEmpty(ListItem.Art(thumb)) + !Window.IsVisible(pictures)</visible>
-				<animation effect="fade" start="0" end="60" time="0" condition="true">Conditional</animation>
-			</control>
+				<visible>[IsEmpty(ListItem.Art(thumb)) + !Window.IsVisible(pictures)] | IsEmpty(Container.FolderPath)</visible>
 			
-			<!-- control type="image">
-				<left>108</left>
-				<top>108</top>
-				<width>428</width>
-				<height>494</height>
-				<aspectratio>stretch</aspectratio>
-				<texture border="5">BlueBackground.png</texture>
-				<bordertexture border="5">whiteborder.png</bordertexture>
-				<bordersize>5</bordersize>
-				<visible>!IsEmpty(ListItem.Art(thumb))</visible>
-				<visible>!Window.IsVisible(pictures)</visible>
-				<animation effect="fade" start="0" end="80" time="0" condition="true">Conditional</animation>
-			</control -->
+				<!-- colordiffuse>FFE5E5E5</colordiffuse -->
+			</control>
+
 			<control type="image">
 				<left>113</left>
 				<top>113</top>
@@ -308,7 +296,7 @@
 				<aspectratio>scale</aspectratio>
 				<texture aligny="top">$VAR[FanOrThumb]</texture>
 				<fadetime>40</fadetime>
-				<colordiffuse>E5FFFFFF</colordiffuse>
+				<visible>!IsEmpty(Container.FolderPath)</visible>
 			</control>
 			<control type="image">
 				<left>133</left>
@@ -329,18 +317,7 @@
 				<visible>!substring(ListItem.Label,..,left) + [Stringcompare(Skin.String(BookmarkDBID1),ListItem.DBID) | Stringcompare(Skin.String(BookmarkDBID2),ListItem.DBID) | Stringcompare(Skin.String(BookmarkDBID3),ListItem.DBID)]</visible>
 				<visible>Container.Content(episodes) + substring(Container.FolderPath,videodb://tvshows)</visible>
 			</control>
-			<!-- control type="image">
-				<description>white image</description>
-				<left>113</left>
-				<top>108</top>
-				<width>418</width>
-				<height>62</height>
-				
-				<aspectratio>stretch</aspectratio>
-				<texture border="12">white.png</texture>
-				<colordiffuse>FFF3F3F3</colordiffuse>
-				<visible>![Container.Content(movies) | Container.Content(tvshows)]</visible>
-			</control -->
+
 			<control type="image">
 				<description>white image</description>
 				<left>113</left>
