@@ -6,7 +6,6 @@
 
 <include>LoadSettings</include>
 <onload condition="IsEmpty(Skin.String(FirstRunTouch))">ActivateWindow(9506)</onload>
-<onload condition="substring(Container.FolderPath,addons://all/)">Container.SetViewMode(603)</onload>
 	
 <views>603,50</views>
   

@@ -212,9 +212,9 @@
 					
 					<control type="image">
 						<left>108</left>
-						<top>104</top>
+						<top>83</top>
 						<width>400</width>
-						<height>395</height>
+						<height>415</height>
 
 						<aspectratio>stretch</aspectratio>
 						<texture background="true" border="5">DefaultCatch.png</texture>
@@ -225,7 +225,7 @@
 					
 					<control type="image">
 						<left>113</left>
-						<top>109</top>
+						<top>115</top>
 						<width>390</width>
 						<height>330</height>
 						<aspectratio>scale</aspectratio>
@@ -245,9 +245,20 @@
 						<aspectratio>stretch</aspectratio>
 						<texture border="12">white.png</texture>
 						<colordiffuse>FFEBEBEB</colordiffuse>
-						<!-- visible>![Container.Content(movies) | Container.Content(tvshows)]</visible -->
-					</control>
 
+					</control>
+					<control type="image">
+						<description>white image</description>
+						<left>113</left>
+						<top>443</top>
+						<width>390</width>
+						<height>50</height>
+						
+						<aspectratio>stretch</aspectratio>
+						<texture border="12">white.png</texture>
+						<colordiffuse>FFEBEBEB</colordiffuse>
+
+					</control>
 					
 					
 				</control>

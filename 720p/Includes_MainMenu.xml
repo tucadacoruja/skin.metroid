@@ -1166,8 +1166,8 @@
 		</item>
 		<item id="6">
 			<description>addons</description>
-			<label>24001</label>
-			<onclick>ActivateWindow(AddonBrowser,root,return)</onclick>
+			<label>31114</label>
+			<onclick>ActivateWindow(addonbrowser.xml,return)</onclick>
 
 			<visible>!IsEmpty(skin.string(SubMenu2)) + Skin.HasSetting(AddonSettingsMenu)</visible>
 			<property name="SubMenuItem">not_empty</property>
