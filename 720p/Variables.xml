@@ -283,7 +283,7 @@
 		<value condition="[Container.Content(movies) | Container.Content(tvshows) | Container.Content(artists)] + !SubString(Container.FolderPath,plugin,left) + !IsEmpty(ListItem.Art(fanart))">$INFO[ListItem.Art(fanart)]</value>
 		<value condition="[Container.Content(songs)] + IsEmpty(ListItem.Art(thumb))">$INFO[ListItem.Art(fanart)]</value>
 		<!-- value condition="!SubString(Container.FolderPath,plugin,left)">$INFO[ListItem.Art(thumb)]</value -->
-		<value condition="!IsEmpty(ListItem.Art(thumb))">$INFO[ListItem.Art(thumb)]</value>
+		<value condition="!IsEmpty(ListItem.Art(thumb)) + !SubString(Container.FolderPath,plugin,left)">$INFO[ListItem.Art(thumb)]</value>
 		<value>$INFO[ListItem.Art(fanart)]</value>
 		
 	</variable>

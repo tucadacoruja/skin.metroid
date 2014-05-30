@@ -1045,4 +1045,7 @@ msgctxt "#31277"
 msgid "Force thumbnail viewtype on plugins"
 msgstr "
 
+msgctxt "#31278"
+msgid "Local available!"
+msgstr "
 

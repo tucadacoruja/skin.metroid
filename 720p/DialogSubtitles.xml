@@ -51,6 +51,19 @@
 			<height>80</height>
 			<visible>!Window.IsVisible(virtualkeyboard)</visible>
 		</control>
+
+		<control type="label" id="140">
+			<description>No service installed</description>
+			<left>0</left>
+			<top>60</top>
+			<width>1280</width>
+			<height>40</height>
+			<font>font13</font>
+			<textcolor>white</textcolor>
+			<align>center</align>
+			<aligny>center</aligny>
+			<visible>![substring(Control.GetLabel(110),.png) | Window.IsVisible(virtualkeyboard)]</visible>
+		</control>
 		<control type="image">
 			<left>50</left>
 			<top>115</top>
@@ -98,6 +111,7 @@
 	</control>
 
 	<!--  ** Required ** Do not change <id> or <type>  -->
+	<!--  List of services  -->
     <control type="list" id="150">
         <left>-194</left>
         <top>110</top>
@@ -114,62 +128,45 @@
 		
         <itemlayout height="38">
 			<control type="image">
-				<left>2</left>
-				<top>35</top>
-				<width>963</width>
+				<left>0</left>
+				<top>37</top>
+				<width>200</width>
 				<height>1</height>
 				<texture>white.png</texture>
-				<colordiffuse>89626262</colordiffuse>
+				<colordiffuse>33FFFFFF</colordiffuse>
 				<aspectratio>stretch</aspectratio>
 			</control>
 
 			<control type="label">
 				<left>12</left>
-				<top>-6</top>
+				<top>5</top>
 				<width>240</width>
 				<height>48</height>
 				<font>font13</font>
-				<textcolor>list</textcolor>
+				<textcolor>FFEBEBEB</textcolor>
 				<align>left</align>
+				<aligny>top</aligny>
 				<info>ListItem.Label</info>
 			</control>
-			<!-- control type="image">
-				<left>105</left>
-				<top>10</top>
-				<width>34</width>
-				<height>14</height>
-				<texture>xbmcsubs/icon_sync.png</texture>
-				<visible>ListItem.property(sync)</visible>
-			</control>
-			<control type="label">
-				<left>147</left>
-				<top>-6</top>
-				<width>689</width>
-				<height>48</height>
-				<font>font13</font>
-				<textcolor>list</textcolor>
-				<align>left</align>
-				<info>ListItem.Label2</info>
-			</control -->
 		  
         </itemlayout>
         <focusedlayout height="38">
 		
 			<control type="image">
-				<left>2</left>
-				<top>35</top>
-				<width>963</width>
+				<left>0</left>
+				<top>37</top>
+				<width>200</width>
 				<height>1</height>
 				<texture>white.png</texture>
-				<colordiffuse>89626262</colordiffuse>
+				<colordiffuse>33FFFFFF</colordiffuse>
 				<aspectratio>stretch</aspectratio>
-				<visible>!Control.HasFocus(150)</visible>
+				
 			</control>
 			<control type="image">
-				<left>5</left>
+				<left>0</left>
 				<top>0</top>
-				<width>188</width>
-				<height>38</height>
+				<width>200</width>
+				<height>37</height>
 				<texture>white.png</texture>
 				<colordiffuse>1FFFFFFF</colordiffuse>
 				<aspectratio>stretch</aspectratio>
@@ -177,118 +174,114 @@
 			</control>
 			<control type="label">
 				<left>12</left>
-				<top>-6</top>
+				<top>5</top>
 				<width>240</width>
 				<height>48</height>
 				<font>font13</font>
-				<textcolor>EBFFFFFF</textcolor>
+				<textcolor>white</textcolor>
 				<selectedcolor>white</selectedcolor>
 				<align>left</align>
+				<aligny>top</aligny>
 				<info>ListItem.Label</info>
 			</control>
-			<!-- control type="image">
-				<left>105</left>
-				<top>10</top>
-				<width>34</width>
-				<height>14</height>
-				<texture>xbmcsubs/icon_sync.png</texture>
-				<visible>ListItem.property(sync)</visible>
-			</control>
-			<control type="label">
-				<left>147</left>
-				<top>-6</top>
-				<width>689</width>
-				<height>48</height>
-				<font>font13</font>
-				<textcolor>white</textcolor>
 
-				<align>left</align>
-				<info>ListItem.Label2</info>
-			</control -->
         </focusedlayout>
 		
     </control>
 	  
-	
-	<!-- control type="label" id="140">
-		<description>textarea</description>
-		<left>-194</left>
-        <top>355</top>
-		<width>780</width>
-		<height>40</height>
-		<font>font13</font>
-		<textcolor>white</textcolor>
-		<align>left</align>
-		<aligny>center</aligny>
-		<wrapmultiline>true</wrapmultiline>
-	</control -->
-	<control type="label">
-		<description>Video label</description>
-		<left>-194</left>
-        <top>380</top>
-		<width>780</width>
-		<height>40</height>
-		<font>font14</font>
-		<label>$INFO[Player.Filename]</label>
-		<align>left</align>
-		<aligny>center</aligny>
-		<textcolor>white</textcolor>
+	<control type="grouplist">
+
+	<left>-194</left>
+	<top>380</top>
+	<width>850</width>
+	<height>40</height>
+	<orientation>horizontal</orientation>
 		
-	</control>
-				
+		<control type="label" id="130">
+			<description>Local notification</description>
+			<width>180</width>
+			<height>40</height>
+			<font>font13</font>
+			<textcolor>FFEBEBEB</textcolor>
+			<label>$LOCALIZE[31278]</label>
+			<align>left</align>
+			<aligny>center</aligny>
+
+		</control>
+		
+		<control type="label">
+			<description>Video label</description>
+
+			<width>660</width>
+			<height>40</height>
+			<font>font13</font>
+			<label>$INFO[Player.Filename]</label>
+			<align>left</align>
+			<aligny>center</aligny>
+			<textcolor>FFEBEBEB</textcolor>
+			
+		</control>
+	</control>			
 				
       <!--  ** Required ** Do not change <id> or <type>  -->
+      <!--  List of subtitles  -->
     <control type="list" id="120">
         <left>18</left>
         <top>111</top>
-        <width>963</width>
-        <height>220</height>
+        <width>970</width>
+        <height>225</height>
         <onleft>150</onleft>
-        <onright>651</onright>
+        <onright>67</onright>
         <onup>120</onup>
-        <ondown>120</ondown>
+        <ondown>651</ondown>
         <viewtype label="535">list</viewtype>
-        <pagecontrol>121</pagecontrol>
+        <pagecontrol>67</pagecontrol>
         <scrolltime>200</scrolltime>
 		
         <itemlayout height="38">
 			<control type="image">
 				<left>2</left>
-				<top>35</top>
-				<width>963</width>
+				<top>37</top>
+				<width>970</width>
 				<height>1</height>
 				<texture>white.png</texture>
-				<colordiffuse>89626262</colordiffuse>
+				<colordiffuse>33FFFFFF</colordiffuse>
 				<aspectratio>stretch</aspectratio>
 			</control>
 			<control type="label">
 				<left>12</left>
-				<top>-6</top>
-				<width>240</width>
+				<top>5</top>
+				<width>115</width>
 				<height>48</height>
 				<font>font13</font>
-				<textcolor>list</textcolor>
+				<textcolor>FFEBEBEB</textcolor>
 				<selectedcolor>white</selectedcolor>
 				<align>left</align>
+				<aligny>top</aligny>
 				<info>ListItem.Label</info>
 			</control>
-			<control type="image">
-				<left>105</left>
-				<top>10</top>
-				<width>34</width>
-				<height>14</height>
-				<texture>xbmcsubs/icon_sync.png</texture>
-				<visible>ListItem.property(sync)</visible>
-			</control>
 			<control type="label">
-				<left>147</left>
-				<top>-6</top>
-				<width>689</width>
+				<left>120</left>
+				<top>5</top>
+				<width>45</width>
 				<height>48</height>
 				<font>font13</font>
-				<textcolor>list</textcolor>
+				<textcolor>FFEBEBEB</textcolor>
 				<selectedcolor>white</selectedcolor>
 				<align>left</align>
+				<aligny>top</aligny>
+				<info>ListItem.ActualIcon</info>
+			</control>
+			<control type="label">
+				<left>150</left>
+				<top>5</top>
+				<width>840</width>
+				<height>48</height>
+				<font>font13</font>
+				<textcolor>FFEBEBEB</textcolor>
+				<selectedcolor>white</selectedcolor>
+				<align>left</align>
+				<aligny>top</aligny>
 				<info>ListItem.Label2</info>
 			</control>
 		  
@@ -297,98 +290,82 @@
 		
 			<control type="image">
 				<left>2</left>
-				<top>35</top>
-				<width>963</width>
+				<top>37</top>
+				<width>970</width>
 				<height>1</height>
 				<texture>white.png</texture>
-				<colordiffuse>89626262</colordiffuse>
+				<colordiffuse>33FFFFFF</colordiffuse>
 				<aspectratio>stretch</aspectratio>
-				<visible>!Control.HasFocus(120)</visible>
+				
 			</control>
 			<control type="image">
 				<left>0</left>
 				<top>0</top>
 				<width>963</width>
-				<height>38</height>
-				<texture>white.png</texture>
-				<colordiffuse>1FFFFFFF</colordiffuse>
+				<height>37</height>
+				<texture>setting.png</texture>
+				<colordiffuse>ACFFFFFF</colordiffuse>
 				<aspectratio>stretch</aspectratio>
 				<visible>Control.HasFocus(120)</visible>
 			</control>
 			<control type="label">
 				<left>12</left>
-				<top>-6</top>
+				<top>5</top>
 				<width>240</width>
 				<height>48</height>
 				<font>font13</font>
 				<textcolor>white</textcolor>
-				<selectedcolor>grey</selectedcolor>
+				<selectedcolor>white</selectedcolor>
 				<align>left</align>
+				<aligny>top</aligny>
 				<info>ListItem.Label</info>
 			</control>
-
 			<control type="label">
-				<left>147</left>
-				<top>-6</top>
-				<width>689</width>
+				<left>120</left>
+				<top>5</top>
+				<width>45</width>
 				<height>48</height>
 				<font>font13</font>
 				<textcolor>white</textcolor>
-				<selectedcolor>grey</selectedcolor>
+				<selectedcolor>white</selectedcolor>
 				<align>left</align>
+				<aligny>top</aligny>
+				<info>ListItem.ActualIcon</info>
+			</control>
+			<control type="label">
+				<left>147</left>
+				<top>5</top>
+				<width>840</width>
+				<height>48</height>
+				<font>font13</font>
+				<textcolor>white</textcolor>
+				<selectedcolor>white</selectedcolor>
+				<align>left</align>
+				<aligny>top</aligny>
 				<info>ListItem.Label2</info>
 			</control>
         </focusedlayout>
 		
     </control>
 	
-	
-	
-    <control type="group">
-        <left>978</left>
-        <top>112</top>
+	<control type="scrollbar" id="67">
+		<left>1030</left>
+		<top>29</top>
+		<width>7</width>
+		<height>400</height>
+
+		<texturesliderbackground>white2.png</texturesliderbackground>
+		<textureslidernib>white3v.png</textureslidernib>
+		<textureslidernibfocus>white3v.png</textureslidernibfocus>
 		
-		<animation effect="fade" start="1" end="0" time="1" condition="true">Conditional</animation>
-		<control type="scrollbar" id="121">
-			<left>50</left>
-			<top>0</top>
-			<width>5</width>
-			<height>280</height>
-			<texturesliderbackground>white2.png</texturesliderbackground>
-			<textureslidernibfocus>white3v.png</textureslidernibfocus>
-			<onleft>120</onleft>
-			<onright>120</onright>
-			<visible>false</visible>
-			<showonepage>false</showonepage>
-			<orientation>vertical</orientation>
-		</control>
-		
-    </control>
+		<onleft>120</onleft>
+		<onright>651</onright>
+		<showonepage>true</showonepage>
+		<orientation>vertical</orientation>
+		<animation effect="fade" start="100" end="50" time="200" reversable="true" condition="!Control.HasFocus(67)">Conditional</animation>
+	</control>
 
 
-		<control type="group" id="111">
-			<animation effect="fade" start="1" end="0" time="1" condition="true">Conditional</animation>
-			<left>280</left>
-			<top>90</top>
-			<control type="image" id="404">
-				<description>Local Subtitle Indicator</description>
-				<left>691</left>
-				<top>30</top>
-				<width>40</width>
-				<height>40</height>
-				<texture>xbmcsubs/attention.png</texture>
-			</control>
-			<control type="label">
-				<description>Local Subtitle Text</description>
-				<left>733</left>
-				<top>36</top>
-				<font>font13</font>
-				<textcolor>ff858585</textcolor>
-				<width>250</width>
-				<label>-</label>
-			</control>
-			
-		</control>
 	
 		<control type="button" id="651">
 			<description>close</description>
@@ -397,6 +374,7 @@
 			<height>42</height>
 			<width>140</width>
 			<label>31056</label>
+			<onup>120</onup>
 			<onleft>120</onleft>
 			<onright>160</onright>
 			<onclick>dialog.close(SubtitleSearch)</onclick>
@@ -409,6 +387,7 @@
 			<height>42</height>
 			<width>140</width>
 			<label>31230</label>
+			<onup>120</onup>
 			<onleft>651</onleft>
 			<onclick>noop</onclick>
 			<include>BottomDialog</include>

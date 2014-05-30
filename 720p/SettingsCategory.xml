@@ -147,7 +147,7 @@
 			<disabledcolor>46FFFFFF</disabledcolor>
 			<texturefocus>setting.png</texturefocus>
 			<shadowcolor>46000000</shadowcolor>
-			<texturenofocus colordiffuse="88FFFFFF">settingB.png</texturenofocus>
+			<texturenofocus colordiffuse="44FFFFFF">settingB.png</texturenofocus>
 		</control>
 		
 		<control type="radiobutton" id="8">
@@ -159,7 +159,8 @@
 			<disabledcolor>46FFFFFF</disabledcolor>
 			<texturefocus>setting.png</texturefocus>
 			<shadowcolor>46000000</shadowcolor>
-			<texturenofocus colordiffuse="66FFFFFF">settingB.png</texturenofocus>
+			<!-- texturenofocus colordiffuse="33FFFFFF">settingB.png</texturenofocus -->
+			<texturenofocus>-</texturenofocus>
 			<textoffsetx>20</textoffsetx>
 			<radioleft>743</radioleft>
 			<align>left</align>
@@ -176,7 +177,7 @@
 			<disabledcolor>46FFFFFF</disabledcolor>
 			<texturefocus>setting.png</texturefocus>
 			<shadowcolor>46000000</shadowcolor>
-			<texturenofocus colordiffuse="33FFFFFF">settingB.png</texturenofocus>
+			<texturenofocus colordiffuse="22FFFFFF">settingB.png</texturenofocus>
 			<align>left</align>
 		</control>
 		
@@ -192,7 +193,7 @@
 			<disabledcolor>46FFFFFF</disabledcolor>
 			<texturefocus>setting.png</texturefocus>
 			<shadowcolor>46000000</shadowcolor>
-			<texturenofocus colordiffuse="66FFFFFF">settingB.png</texturenofocus>
+			<texturenofocus colordiffuse="11FFFFFF">settingB.png</texturenofocus>
 			<align>left</align>
 			<aligny>center</aligny>
 			

@@ -294,7 +294,7 @@
 				<height>105</height>
 				<aspectratio>keep</aspectratio>
 				<texture>$VAR[Fallback_Thumb]</texture>
-				<visible>[IsEmpty(ListItem.Art(thumb)) + !Window.IsVisible(pictures)] | IsEmpty(Container.FolderPath)</visible>
+				<visible>[IsEmpty(ListItem.Art(thumb)) + !Window.IsVisible(pictures)] | IsEmpty(Container.FolderPath) | [SubString(Container.FolderPath,plugin,left) + SubString(ListItem.Art(thumb),.png)]</visible>
 			
 				<!-- colordiffuse>FFE5E5E5</colordiffuse -->
 			</control>
@@ -307,6 +307,7 @@
 				<aspectratio>scale</aspectratio>
 				<texture aligny="top">$VAR[FanOrThumb]</texture>
 				<fadetime>40</fadetime>
+				<visible>![SubString(Container.FolderPath,plugin,left) + SubString(ListItem.Art(thumb),.png)]</visible>
 				<visible>!IsEmpty(Container.FolderPath)</visible>
 			</control>
 			<control type="image">
