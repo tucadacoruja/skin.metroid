@@ -36,12 +36,12 @@
 	
 	<variable name="PlayerTitleFallback">
 		<value condition="!IsEmpty(Player.Title)">$INFO[Player.Title]</value>
-		<value>$INFO[Player.Filename]</value>
-		
+		<value condition="!IsEmpty(Player.Filename)">$INFO[Player.Filename]</value>
+		<value>$INFO[System.time(hh:mm)]</value>
 	</variable>
 	<variable name="TopBarFallback">
 		<value condition="![IsEmpty(VideoPlayer.TVShowTitle) + IsEmpty(VideoPlayer.Year) + IsEmpty(MusicPlayer.Artist) + IsEmpty(VideoPlayer.ChannelName)]">$INFO[VideoPlayer.TVShowTitle]$INFO[VideoPlayer.Year]$INFO[MusicPlayer.Artist]$INFO[VideoPlayer.ChannelName]</value>
-		<value>$INFO[System.time(hh:mm)]</value>
+		<value>$INFO[System.Date(DDD)] $INFO[System.Date(dd)]</value>
 		
 	</variable>
 	
@@ -182,7 +182,16 @@
 		<value condition="[SubString(Container.FolderPath,addons,left) | SubString(Container.FolderPath,plugin,left) | Container.Content(plugins)] + !IsEmpty(ListItem.Property(Addon.Description))">$INFO[ListItem.Property(Addon.Description)]</value>
 	</variable>
 	
-
+	
+	<variable name="Widget_Recent_Fanart">
+		<value condition="!IsEmpty(Container(8000).ListItem.Art(fanart))">$INFO[Container(8000).ListItem.Art(fanart)]</value>
+		<value>$INFO[Container(8000).ListItem.Art(poster)]</value>
+	</variable>
+	<variable name="Widget_Random_Fanart">
+		<value condition="!IsEmpty(Container(8002).ListItem.Art(fanart))">$INFO[Container(8002).ListItem.Art(fanart)]</value>
+		<value>$INFO[Container(8002).ListItem.Art(poster)]</value>
+	</variable>
+	
 	<variable name="Border_Texture">
 		<value condition="!IsEmpty(ListItem.Art(thumb))">ThumbBorder.png</value>
 		<value>-</value>

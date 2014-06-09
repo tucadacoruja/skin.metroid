@@ -7,15 +7,16 @@
 		<top>0</top>
 	</coordinates>
 	
-    <defaultcontrol always="true">9090</defaultcontrol>
+    <defaultcontrol always="true">2121</defaultcontrol>
 	<onload condition="Stringcompare(Skin.String(OSDButtonColor),hellblue)">Skin.SetString(OSDDialogsBGColor,darkhellblue)</onload>
 	<onload condition="Stringcompare(Skin.String(OSDButtonColor),white)">Skin.SetString(OSDDialogsBGColor,brightblue)</onload>
+	<onload>SetFocus(2121)</onload>
 
 <controls>
 
 <control type="group">
 
-	<control type="button" id="9090">
+	<control type="button" id="2121">
 		<left>0</left>
 		<top>0</top>
 		<width>1280</width>

@@ -1,7 +1,7 @@
 # XBMC Media Center language file
-# Addon Name: Veda
-# Addon id: skin.veda
-# Addon version: 0.0.44
+# Addon Name: Metroid
+# Addon id: skin.metroid
+# Addon version: 0.2.3
 # Addon Provider: MassIV
 msgid ""
 msgstr ""

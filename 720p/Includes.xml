@@ -7,7 +7,6 @@
 <include file="Includes_Animations.xml" />
 <include file="Includes_Flags.xml" />
 <include file="Includes_Widgets.xml" />
-<include file="Includes_Metroid.xml" />
 <include file="Includes_Holiday.xml" />
 <include file="Variables.xml" />
 
@@ -19,7 +18,6 @@
 <include file="Viewtype_List.xml" />
 <include file="Viewtype_PosterFix.xml" />
 <!-- include file="Viewtype_PosterSplit.xml" / -->
-<!-- include file="Viewtype_Polaroid.xml" / -->
 <!-- include file="Viewtype_Icons.xml" / -->
 <include file="Viewtype_LogoPanel.xml" />
 <include file="Viewtype_Channels.xml" />
@@ -430,7 +428,9 @@
 			<animation effect="fade" start="0" end="100" time="100" delay="50">WindowOpen</animation>
 			<animation effect="fade" start="74" end="10" time="80000" reversable="true" pulse="true" condition="Player.HasAudio + !Skin.HasSetting(VisLibrary)">Conditional</animation>
 			
-			<visible>!Player.HasVideo + IsEmpty(ListItem.Art(fanart)) + !Skin.HasSetting(BackgroundSlideshow)</visible>
+			<!-- visible>!Player.HasVideo + IsEmpty(ListItem.Art(fanart)) + !Skin.HasSetting(BackgroundSlideshow)</visible -->
+			<visible>IsEmpty(ListItem.Art(fanart)) | Skin.HasSetting(LibraryFanart)]</visible>
+			<visible>![Player.HasVideo | Skin.HasSetting(BackgroundSlideshow)]</visible>
 		</control>
 		<control type="image">
 			<include condition="Window.IsVisible(pvr) | Window.IsVisible(filemanager) | Window.IsVisible(musicplaylisteditor)">ExceptionsMenuPosition</include>

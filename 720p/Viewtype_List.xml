@@ -307,8 +307,8 @@
 				<aspectratio>scale</aspectratio>
 				<texture aligny="top">$VAR[FanOrThumb]</texture>
 				<fadetime>40</fadetime>
-				<visible>![SubString(Container.FolderPath,plugin,left) + SubString(ListItem.Art(thumb),.png)]</visible>
-				<visible>!IsEmpty(Container.FolderPath)</visible>
+				<visible>![SubString(Container.FolderPath,plugin,left) + SubString(ListItem.Art(thumb),.png)]</visible><!-- exception for addon thumbs -->
+				<visible>!IsEmpty(Container.FolderPath)</visible><!-- exception for library root -->
 			</control>
 			<control type="image">
 				<left>133</left>

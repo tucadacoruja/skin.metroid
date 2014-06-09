@@ -30,7 +30,7 @@
 
 				<left>0</left>
 				<top>65</top>
-				<width>300</width>
+				<width>290</width>
 				<height>651</height>
 				<onleft condition="!Skin.HasSetting(GlobalSearch)">999</onleft>
 				<onright>50</onright>

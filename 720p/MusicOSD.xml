@@ -107,11 +107,11 @@
 			
 			<orientation>vertical</orientation>
 			<animation type="WindowOpen">
-				<effect type="fade" start="0" end="100" time="300"/>
+				<effect type="fade" start="0" end="100" time="400"/>
 				<effect type="slide" start="1400,0" end="0,0" time="300" tween="cubic" easing="out" />
 			</animation>
 			<animation type="WindowClose">
-				<effect type="fade" start="100" end="0" time="300"/>
+				<effect type="fade" start="100" end="0" time="400"/>
 				<effect type="slide" start="0,0" end="1400,0" time="300" tween="cubic" easing="out" />
 			</animation>
 			
