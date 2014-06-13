@@ -1049,3 +1049,6 @@ msgctxt "#31278"
 msgid "Local available!"
 msgstr "
 
+msgctxt "#31279"
+msgid "OSD list button opens Now Playing.."
+msgstr "

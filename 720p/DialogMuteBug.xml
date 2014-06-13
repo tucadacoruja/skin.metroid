@@ -5,17 +5,22 @@
   
 <coordinates>
   <system>1</system>
-  <left>570</left>
-  <top>10</top>
+  <left>0</left>
+  <top>0</top>
 </coordinates>
   
 <controls>
   
+	
 	<control type="image" id="901">
 		<description>Mute Image</description>
-		<width>40</width>
-		<height>40</height>
+		<left>20</left>
+		<top>10</top>
+		<width>52</width>
+		<height>52</height>
 		<texture>Mute.png</texture>
+		<visible>Window.IsVisible(fullscreenvideo) | Window.IsVisible(visualisation)</visible>
+		<visible>!Window.IsVisible(startup)</visible>
 	</control>
     
 </controls>

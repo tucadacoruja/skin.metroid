@@ -335,7 +335,7 @@
 					<onleft>79</onleft>
 					<onright>300</onright>
 					<onup>57</onup>
-					<ondown>308</ondown>
+					<ondown>400</ondown>
 					 
 					<include>keybutton</include>
 				</control>
@@ -492,13 +492,13 @@
 					<width>60</width>
 					<height>60</height>
 					<onleft>75</onleft>
-					<onright>308</onright>
+					<onright>400</onright>
 					<onup>79</onup>
 					<ondown>32</ondown>
 					 
 					<include>keybutton</include>
 				</control>
-				<control type="button" id="308">
+				<control type="button" id="400">
 					<description>Fake symbols button</description>
 					<left>585</left>
 					<top>0</top>
@@ -521,8 +521,8 @@
 					<!-- colordiffuse>skin.string(MainColorString)</colordiffuse -->
 					<shadowcolor>70464646</shadowcolor>
 					<textoffsetx>-2</textoffsetx>
-					<texturenofocus colordiffuse="$VAR[KeyboardSymbol]">osd/GrayBackground.png</texturenofocus>
-					<texturefocus colordiffuse="blue">osd/GrayBackground.png</texturefocus>
+					<texturenofocus colordiffuse="$VAR[KeyboardSymbol]">white.png</texturenofocus>
+					<texturefocus colordiffuse="blue">white.png</texturefocus>
 				</control>
 				
 				<control type="radiobutton" id="303">
@@ -532,7 +532,7 @@
 					<width>200</width>
 					<height>60</height>
 					<label>20179</label>
-					<onleft>308</onleft>
+					<onleft>400</onleft>
 					<onright>65</onright>
 					<onup>300</onup>
 					<ondown>32</ondown>
@@ -670,7 +670,7 @@
 					 
 					<onleft>77</onleft>
 					<onright>306</onright>
-					<onup>308</onup>
+					<onup>400</onup>
 					<ondown>307</ondown>
 				
 					<include>keybutton</include>
@@ -705,8 +705,8 @@
 			
 			<control type="button" id="307">
 				<description>IP Input button</description>
-				<left>0</left>
-				<top>280</top>
+				<left>300</left>
+				<top>305</top>
 				<width>200</width>
 				<height>60</height>
 				 
@@ -716,15 +716,10 @@
 				<onup>85</onup>
 				<ondown>49</ondown>		
 				<align>center</align>
-				<aligny>center</aligny>
-				<font>keyboard</font>
-				<focusedcolor>white</focusedcolor>
-				<textcolor>99FFFFFF</textcolor>
+				<aligny>top</aligny>
+				<textoffsety>6</textoffsety>
 				
-				<shadowcolor>70464646</shadowcolor>
-				<textoffsetx>-2</textoffsetx>
-				<texturenofocus>-</texturenofocus>
-				<texturefocus>-</texturefocus>
+				<include>keybutton</include>
 			</control>
 			<control type="radiobutton" id="304">
 				<description>Symbols button</description>

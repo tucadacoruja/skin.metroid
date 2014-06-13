@@ -984,8 +984,16 @@
 						<selected>!Skin.HasSetting(HideFlagsInfo)</selected>
 					</control>
 					
-					
 					<control type="radiobutton" id="107">
+						<include>SettingsButton</include>
+						<description>OSD list button</description>
+						<label>$LOCALIZE[31279]</label>
+						<onclick>Skin.ToggleSetting(OSDListPlaying)</onclick>
+						<selected>Skin.HasSetting(OSDListPlaying)</selected>
+					</control>
+					
+					
+					<control type="radiobutton" id="108">
 						<include>SettingsButton</include>
 						<description>Download logos on startup</description>
 						<label>$LOCALIZE[31170]</label>

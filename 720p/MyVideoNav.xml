@@ -50,6 +50,8 @@
 	<description>unwatched</description>
 	<include>HiddenButton</include>
 </control>
+
+<!-- test? -->
 <control type="button" id="420">
 	<description>Trailer button</description>
 	<include>HiddenButton</include>
@@ -57,8 +59,9 @@
 </control>
 
 
-<include>VideoWindow</include>	
+<include>VideoWindow</include>visible not if window visible
 <include>MainMenu</include>
+
 <include>GeneralFanart</include>
 
 

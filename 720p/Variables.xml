@@ -20,7 +20,7 @@
 	
 	<variable name="KeyboardSymbol">
 		<value condition="SubString(Control.GetLabel(304),*)">FF324a76</value>
-		<value>FFB3B3B3</value>
+		<value>FFD1D1D1</value>
 	</variable>
 	
 	<variable name="CategoryBtn">
@@ -277,7 +277,8 @@
 		<!-- value condition="IsEmpty(ListItem.Art(thumb)) + IsEmpty(ListItem.Icon)">DefaultFallback.png</value -->
 		
 	</variable>
-	<variable name="LogoIcon">
+	
+	<variable name="LogoIcon"><!-- use only in LogoPanel view -->
 	
 		<value condition="!IsEmpty(ListItem.Art(clearlogo))">$INFO[ListItem.Art(clearlogo)]</value>
 		<value condition="SubString(Container.FolderPath,plugin,left) + !IsEmpty(ListItem.Art(thumb)) + SubString(ListItem.Art(thumb),.png)">$INFO[ListItem.Art(thumb)]</value>

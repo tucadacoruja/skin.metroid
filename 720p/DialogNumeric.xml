@@ -42,6 +42,7 @@
 			<height>60</height>
 			<font>font30</font>
 			<textcolor>FFFFFFFF</textcolor>
+			<disabledcolor>95FFFFFF</disabledcolor>
 			<align>center</align>
 			<aligny>center</aligny>
 		</control>

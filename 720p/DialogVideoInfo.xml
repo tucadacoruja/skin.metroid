@@ -26,8 +26,20 @@
 </control>
 <control type="button" id="13">
 	<include>HiddenButton</include>
-	
 </control>
+
+<!-- prevent clicking the background opens menu -->
+<!-- control type="button">
+	<left>0</left>
+	<top>0</top>
+	<width>1280</width>
+	<height>720</height>
+	<aspectratio>stretch</aspectratio>
+	<texturefocus>White35p.png</texturefocus>
+	<texturenofocus>White35p.png</texturenofocus>
+	<onclick>noop</onclick>
+	<visible>System.Platform.Android</visible>
+</control -->
 
 <control type="group">
 		
@@ -751,27 +763,32 @@
 			
 			
 		</control><!-- content -->
-		<control type="button" id="9002">
-			<left>330</left>
-			<top>72</top>
-			<width>150</width>
-			<height>650</height>
-			<texturefocus>empty.png</texturefocus>
-			<texturenofocus>empty.png</texturenofocus>
-			<onfocus>SetFocus(1)</onfocus>
+		
+		<control type="group">
+		<visible>!System.Platform.Android</visible>
+			<control type="button" id="9002">
+				<left>290</left>
+				<top>72</top>
+				<width>120</width>
+				<height>650</height>
+				<texturefocus>empty.png</texturefocus>
+				<texturenofocus>empty.png</texturenofocus>
+				<onfocus>SetFocus(1)</onfocus>
+			</control>
+			<control type="button" id="9003">
+				<left>1130</left>
+				<top>72</top>
+				<width>150</width>
+				<height>650</height>
+				<texturefocus>empty.png</texturefocus>
+				<texturenofocus>empty.png</texturenofocus>
+				
+				<onfocus condition="!Control.IsVisible(50)">SendClick(2003,5)</onfocus>
+				<onfocus>SetFocus(50)</onfocus>
+				
+				<visible>!Control.HasFocus(50)</visible>
+			</control>
 		</control>
-		<control type="button" id="9003">
-			<left>1130</left>
-			<top>72</top>
-			<width>150</width>
-			<height>650</height>
-			<texturefocus>empty.png</texturefocus>
-			<texturenofocus>empty.png</texturenofocus>
-
-			<onfocus>SetFocus(9001)</onfocus>
-			<visible>!Control.HasFocus(50)</visible>
-		</control>
-
 		
 	
 </control>

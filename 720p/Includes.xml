@@ -50,18 +50,21 @@
 	<align>center</align>
 	<aligny>center</aligny>
 	<font>keyboard</font>
-	<focusedcolor>FFD7D7D7</focusedcolor>
-	<textcolor>white</textcolor>
+	<focusedcolor>white</focusedcolor>
+	<!-- textcolor>white</textcolor -->
+	<textcolor>FF898989</textcolor>
 	<!-- colordiffuse>skin.string(MainColorString)</colordiffuse -->
-	<shadowcolor>70464646</shadowcolor>
+	<!-- shadowcolor>70464646</shadowcolor -->
 	<textoffsetx>-2</textoffsetx>
-	<texturenofocus colordiffuse="FFB3B3B3">osd/GrayBackground.png</texturenofocus>
-	<texturefocus colordiffuse="blue">osd/GrayBackground.png</texturefocus>
+	<aligny>center</aligny>
+	<texturenofocus colordiffuse="white">white.png</texturenofocus>
+	<texturefocus colordiffuse="blue">white.png</texturefocus>
 </include>
 
 <include name="Darkkeybutton">
-	<texturenofocus colordiffuse="FF6E6E6E">osd/GrayBackground.png</texturenofocus>
-	<texturefocus colordiffuse="blue">osd/GrayBackground.png</texturefocus>
+	<!-- texturenofocus colordiffuse="FF6E6E6E">osd/GrayBackground.png</texturenofocus -->
+	<texturenofocus colordiffuse="FFD1D1D1">white.png</texturenofocus>
+	<texturefocus colordiffuse="blue">white.png</texturefocus>
 </include>
 
 <include name="SettingsButton">
@@ -139,7 +142,7 @@
 	<texturefocus colordiffuse="FF00d8ff">AddCategoryFO.png</texturefocus>
 	<texturenofocus>-</texturenofocus>	
 	<font>homemenu3</font>
-	<textcolor>FF959595</textcolor>
+	<textcolor>FFD1D1D1</textcolor>
 	<focusedcolor>FFF3F3F3</focusedcolor>
 	<disabledcolor>FF626262</disabledcolor>
 	
@@ -466,6 +469,22 @@
 			<animation effect="fade" start="100" end="80" time="0" condition="Stringcompare(Skin.String(BackgroundPercentage),80)">Conditional</animation>
 			<animation effect="fade" start="100" end="75" time="0" condition="Stringcompare(Skin.String(BackgroundPercentage),75)">Conditional</animation>
 		</control>
+		
+		<!-- prevent clicking the background goes to video -->
+		<control type="button">
+			<include condition="Window.IsVisible(pvr) | Window.IsVisible(filemanager) | Window.IsVisible(musicplaylisteditor)">ExceptionsMenuPosition</include>
+			<include condition="![Window.IsVisible(pvr) | Window.IsVisible(filemanager) | Window.IsVisible(musicplaylisteditor)]">DefaultMenuPosition</include>
+			<top>0</top>
+			<width>1280</width>
+			<height>720</height>
+			<aspectratio>stretch</aspectratio>
+			<texturefocus>empty.png</texturefocus>
+			<texturenofocus>empty.png</texturenofocus>
+			<onclick>noop</onclick>
+			<visible>System.Platform.Android</visible>
+
+		</control>
+		
 	</include>
 	
 	<include name="MenuBackground">
@@ -665,7 +684,7 @@
 			<height>48</height>
 			<aspectratio>stretch</aspectratio>
 			<texture> </texture>
-			<colordiffuse>46FFFFFF</colordiffuse>
+
 		</control>
 	</include>
 	<include name="EmptyMenu">
@@ -675,6 +694,8 @@
 			<width>300</width>
 			<height>648</height>
 			<itemgap>0</itemgap>
+			<scroll>false</scroll>
+			<onfocus>SetFocus(301)</onfocus>
 			<include>MainListLine</include>
 			<include>MainListLine</include>
 			<include>MainListLine</include>
@@ -704,13 +725,21 @@
 			<itemgap>5</itemgap>
 			<visible>!Window.IsVisible(songinformation)</visible>
 			
-			<control type="image"><!-- 0 profile thumb -->
+			<control type="image"><!-- profile thumb -->
 				<width>52</width>
 				<height>52</height>
 				<texture>$VAR[ProfileThumb]</texture>
 				<aspectratio>stretch</aspectratio>
 				<visible>!Skin.HasSetting(ProfileThumbVisible)</visible>
 				<visible>!Window.IsVisible(songinformation)</visible>
+				<animation effect="fade" start="0" end="100" time="300" delay="0">VisibleChange</animation>
+			</control>
+			<control type="image"><!-- 0 mute -->
+				<height>52</height>
+				<width>52</width>
+				<texture>osd/GrayBackground.png</texture>
+				<aspectratio>stretch</aspectratio>
+				<visible>Window.Isvisible(mutebug)</visible>
 				<animation effect="fade" start="0" end="100" time="300" delay="60">VisibleChange</animation>
 			</control>
 			<control type="image"><!-- 1 playlist window -->
@@ -831,16 +860,23 @@
 			<visible>!Window.IsVisible(songinformation)</visible>
 
 			
-			<control type="button"><!-- 0 profile thumb -->
+			<control type="button"><!-- profile thumb -->
 				<width>52</width>
 				<height>52</height>
 				<aspectratio>stretch</aspectratio>
 				<texturefocus>empty.png</texturefocus>
 				<texturenofocus>empty.png</texturenofocus>
-				<onclick>ActivateWindow(home)</onclick>
+				<onclick condition="!Skin.HasSetting(LockMainMenu)">SetFocus(301)</onclick>
+				<onclick condition="Skin.HasSetting(LockMainMenu)">ActivateWindow(home)</onclick>
 				<visible>!Skin.HasSetting(ProfileThumbVisible)</visible>
-			</control>
+			</control>Mute.png
 			
+			<control type="image"><!-- 0 mute -->
+				<width>52</width>
+				<height>52</height>
+				<texture>Mute.png</texture>
+				<visible>Window.Isvisible(mutebug)</visible>
+			</control>
 			<control type="image"><!-- 1 playlist window -->
 				<width>52</width>
 				<height>52</height>
@@ -993,6 +1029,7 @@
 				<control type="label">
 					<top>16</top>
 					<left>10</left>
+					<width>252</width>
 					<align>left</align>
 					<include>TopLabelSmall</include>
 					<label>$INFO[System.BatteryLevel,, Battery] $INFO[System.CpuUsage,, CPU]</label>

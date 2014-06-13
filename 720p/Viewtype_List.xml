@@ -318,7 +318,7 @@
 				<aspectratio>keep</aspectratio>
 				<texture aligny="top" background="true">$INFO[ListItem.Art(clearlogo)]</texture>
 				<fadetime>60</fadetime>
-				<!-- colordiffuse>E5FFFFFF</colordiffuse -->
+				<visible>!Skin.HasSetting(ListLogoOff)</visible>
 			</control>
 			<control type="image">
 				<left>163</left>

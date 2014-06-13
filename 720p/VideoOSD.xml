@@ -692,7 +692,9 @@
 				<texturefocus >osd/playlist.png</texturefocus>
 				<texturenofocus colordiffuse="$INFO[Skin.String(OSDColorString)]">osd/playlist.png</texturenofocus>
 				
-				<onclick>ActivateWindow(videoplaylist)</onclick>
+				<onclick condition="Skin.HasSetting(OSDListPlaying)">ActivateWindow(videoplaylist)</onclick>
+				<onclick condition="!Skin.HasSetting(OSDListPlaying)">Dialog.Close(all,true)</onclick>
+				<onclick condition="!Skin.HasSetting(OSDListPlaying)">back</onclick>
 				<animation effect="zoom" start="100" end="120" center="auto" time="100">Focus</animation>
 				<animation effect="zoom" start="120" end="100" center="auto" time="100">UnFocus</animation>
 				
