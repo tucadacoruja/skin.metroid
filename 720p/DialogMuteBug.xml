@@ -14,7 +14,7 @@
 	
 	<control type="image" id="901">
 		<description>Mute Image</description>
-		<left>20</left>
+		<left>63</left>
 		<top>10</top>
 		<width>52</width>
 		<height>52</height>
