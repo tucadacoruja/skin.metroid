@@ -304,14 +304,14 @@
 							<selected>!Skin.HasSetting(AddonInstallHome)</selected>
 							<enable>!Skin.HasSetting(AddonHome)</enable>
 						</control>
-					<control type="radiobutton" id="111">
+					<!-- control type="radiobutton" id="111">
 						<include>SettingsButton</include>
 						<description>Addons in settings</description>
 						<label>$LOCALIZE[24001] $LOCALIZE[31276] $LOCALIZE[31142]</label>
 						<onclick>Skin.ToggleSetting(AddonSettingsMenu)</onclick>
 						<selected>Skin.HasSetting(AddonSettingsMenu)</selected>
 			
-					</control>
+					</control -->
 						
 					<control type="radiobutton" id="112">
 						<include>SettingsButton</include>

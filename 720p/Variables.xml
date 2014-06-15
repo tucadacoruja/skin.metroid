@@ -23,6 +23,11 @@
 		<value>FFD1D1D1</value>
 	</variable>
 	
+	<variable name="WmenuBorder">
+		<value condition="Stringcompare(Skin.String(OSDButtonColor),white)">bluebar.png</value>
+		<value>bluebar.png</value>
+	</variable>
+	
 	<variable name="CategoryBtn">
 		<value condition="Control.HasFocus(444)">categoryNF.png</value>
 		<value>category.png</value>

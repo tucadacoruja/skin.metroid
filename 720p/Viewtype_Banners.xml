@@ -70,7 +70,7 @@
 					<width>110</width>
 					<height>110</height>
 					<aspectratio>stretch</aspectratio>
-					<texture>$INFO[ListItem.Icon]</texture>
+					<texture>$INFO[ListItem.actualicon]</texture>
 					<visible>IsEmpty(ListItem.Art(banner))</visible>
 					<animation effect="fade" start="0" end="80" time="0" condition="true">Conditional</animation>
 					
@@ -144,7 +144,7 @@
 					<width>110</width>
 					<height>110</height>
 					<aspectratio>stretch</aspectratio>
-					<texture>$INFO[ListItem.Icon]</texture>
+					<texture>$INFO[ListItem.actualicon]</texture>
 					<visible>IsEmpty(ListItem.Art(banner))</visible>
 					<animation effect="fade" start="0" end="80" time="0" condition="true">Conditional</animation>
 				

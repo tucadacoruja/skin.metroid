@@ -380,6 +380,7 @@
 				<height>60</height>
 				<width>60</width>
 				<texture>white.png</texture>
+				<bordertexture>bluebar.png</bordertexture>
 				<colordiffuse>$INFO[Skin.String(OSDButtonColor)]</colordiffuse>
 				<aspectratio>stretch</aspectratio>
 				<animation effect="fade" start="100" end="60" time="100" condition="Control.HasFocus(201)">Conditional</animation>
@@ -388,14 +389,17 @@
 				<height>60</height>
 				<width>60</width>
 				<texture>white.png</texture>
+				<bordertexture>bluebar.png</bordertexture>
+
 				<colordiffuse>$INFO[Skin.String(OSDButtonColor)]</colordiffuse>
 				<aspectratio>stretch</aspectratio>
-				<animation effect="fade" start="100" end="60" time="100" condition="Control.HasFocus(202)">Conditional</animation>
+				<animation effect="fade" start="100" end="50" time="100" condition="Control.HasFocus(202)">Conditional</animation>
 			</control>
 			<control type="image">
 				<height>60</height>
 				<width>60</width>
 				<texture>white.png</texture>
+				<bordertexture>bluebar.png</bordertexture>
 				<colordiffuse>$INFO[Skin.String(OSDButtonColor)]</colordiffuse>
 				<aspectratio>stretch</aspectratio>
 				<animation effect="fade" start="100" end="60" time="100" condition="Control.HasFocus(203)">Conditional</animation>
@@ -404,6 +408,7 @@
 				<height>60</height>
 				<width>60</width>
 				<texture>white.png</texture>
+				<bordertexture>bluebar.png</bordertexture>
 				<colordiffuse>$INFO[Skin.String(OSDButtonColor)]</colordiffuse>
 				<aspectratio>stretch</aspectratio>
 				<animation effect="fade" start="100" end="60" time="100" condition="Control.HasFocus(204)">Conditional</animation>
@@ -412,6 +417,7 @@
 				<height>60</height>
 				<width>60</width>
 				<texture>white.png</texture>
+				<bordertexture>bluebar.png</bordertexture>
 				<colordiffuse>$INFO[Skin.String(OSDButtonColor)]</colordiffuse>
 				<aspectratio>stretch</aspectratio>
 				<animation effect="fade" start="100" end="60" time="100" condition="Control.HasFocus(205)">Conditional</animation>
@@ -420,6 +426,7 @@
 				<height>60</height>
 				<width>60</width>
 				<texture>white.png</texture>
+				<bordertexture>bluebar.png</bordertexture>
 				<colordiffuse>$INFO[Skin.String(OSDButtonColor)]</colordiffuse>
 				<aspectratio>stretch</aspectratio>
 				<animation effect="fade" start="100" end="60" time="100" condition="Control.HasFocus(206)">Conditional</animation>
@@ -428,6 +435,7 @@
 				<height>60</height>
 				<width>60</width>
 				<texture>white.png</texture>
+				<bordertexture>bluebar.png</bordertexture>
 				<colordiffuse>$INFO[Skin.String(OSDButtonColor)]</colordiffuse>
 				<aspectratio>stretch</aspectratio>
 				<animation effect="fade" start="100" end="60" time="100" condition="Control.HasFocus(207)">Conditional</animation>
@@ -437,6 +445,7 @@
 				<height>60</height>
 				<width>60</width>
 				<texture>white.png</texture>
+				<bordertexture>bluebar.png</bordertexture>
 				<colordiffuse>$INFO[Skin.String(OSDButtonColor)]</colordiffuse>
 				<aspectratio>stretch</aspectratio>
 				<animation effect="fade" start="100" end="60" time="100" condition="Control.HasFocus(208)">Conditional</animation>
@@ -446,6 +455,7 @@
 				<height>60</height>
 				<width>60</width>
 				<texture>white.png</texture>
+				<bordertexture>bluebar.png</bordertexture>
 				<colordiffuse>$INFO[Skin.String(OSDButtonColor)]</colordiffuse>
 				<aspectratio>stretch</aspectratio>
 				<animation effect="fade" start="100" end="60" time="100" condition="Control.HasFocus(209)">Conditional</animation>
@@ -454,6 +464,7 @@
 				<height>60</height>
 				<width>60</width>
 				<texture>white.png</texture>
+				<bordertexture>bluebar.png</bordertexture>
 				<colordiffuse>$INFO[Skin.String(OSDButtonColor)]</colordiffuse>
 				<aspectratio>stretch</aspectratio>
 				<animation effect="fade" start="100" end="60" time="100" condition="Control.HasFocus(210)">Conditional</animation>
@@ -462,6 +473,7 @@
 				<height>60</height>
 				<width>60</width>
 				<texture>white.png</texture>
+				<bordertexture>bluebar.png</bordertexture>
 				<colordiffuse>$INFO[Skin.String(OSDButtonColor)]</colordiffuse>
 				<aspectratio>stretch</aspectratio>
 				<animation effect="fade" start="100" end="60" time="100" condition="Control.HasFocus(211)">Conditional</animation>
@@ -471,6 +483,7 @@
 				<height>60</height>
 				<width>60</width>
 				<texture>white.png</texture>
+				<bordertexture>bluebar.png</bordertexture>
 				<colordiffuse>$INFO[Skin.String(OSDButtonColor)]</colordiffuse>
 				<aspectratio>stretch</aspectratio>
 				<animation effect="fade" start="100" end="60" time="100" condition="Control.HasFocus(212)">Conditional</animation>
@@ -480,6 +493,7 @@
 				<height>60</height>
 				<width>60</width>
 				<texture>white.png</texture>
+				<bordertexture>bluebar.png</bordertexture>
 				<colordiffuse>$INFO[Skin.String(OSDButtonColor)]</colordiffuse>
 				<aspectratio>stretch</aspectratio>
 				<animation effect="fade" start="100" end="60" time="100" condition="Control.HasFocus(213)">Conditional</animation>
@@ -490,6 +504,7 @@
 				<height>60</height>
 				<width>60</width>
 				<texture>white.png</texture>
+				<bordertexture>bluebar.png</bordertexture>
 				<colordiffuse>$INFO[Skin.String(OSDButtonColor)]</colordiffuse>
 				<aspectratio>stretch</aspectratio>
 				<animation effect="fade" start="100" end="60" time="100" condition="Control.HasFocus(214)">Conditional</animation>
@@ -500,6 +515,7 @@
 				<height>60</height>
 				<width>60</width>
 				<texture>white.png</texture>
+				<bordertexture>bluebar.png</bordertexture>
 				<colordiffuse>$INFO[Skin.String(OSDButtonColor)]</colordiffuse>
 				<aspectratio>stretch</aspectratio>
 				<animation effect="fade" start="100" end="60" time="100" condition="Control.HasFocus(215)">Conditional</animation>
@@ -509,6 +525,7 @@
 				<height>60</height>
 				<width>60</width>
 				<texture>white.png</texture>
+				<bordertexture>bluebar.png</bordertexture>
 				<colordiffuse>$INFO[Skin.String(OSDButtonColor)]</colordiffuse>
 				<aspectratio>stretch</aspectratio>
 				<animation effect="fade" start="100" end="60" time="100" condition="Control.HasFocus(216)">Conditional</animation>

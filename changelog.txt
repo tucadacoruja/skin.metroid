@@ -1,3 +1,8 @@
+[B]0.2.5[/B]
+- Changed to all in one addon browser (app store)
+- Video info hide video when locked
+- Update OSD focus color
+
 [B]0.2.4[/B]
 - Fix grouplist stealing focus from menu, Android
 - Fix menu popping up in info dialogs

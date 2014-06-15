@@ -8,8 +8,8 @@
         <left>0</left>
         <top>0</top>
     </coordinates>
-	<onload>SendClick(2003,5)</onload>
-	
+	<onload condition="!Control.IsVisible(50)">SendClick(2003,5)</onload>
+	<onload condition="Skin.HasSetting(HideVideo)">Skin.ToggleSetting(HideVideo)</onload>
 <controls>
 
 <control type="image" id="3">
@@ -28,18 +28,7 @@
 	<include>HiddenButton</include>
 </control>
 
-<!-- prevent clicking the background opens menu -->
-<!-- control type="button">
-	<left>0</left>
-	<top>0</top>
-	<width>1280</width>
-	<height>720</height>
-	<aspectratio>stretch</aspectratio>
-	<texturefocus>White35p.png</texturefocus>
-	<texturenofocus>White35p.png</texturenofocus>
-	<onclick>noop</onclick>
-	<visible>System.Platform.Android</visible>
-</control -->
+
 
 <control type="group">
 		
@@ -188,7 +177,7 @@
 							<visible allowhiddenfocus="true">true</visible>
 							<onup>8</onup>
 							<ondown>6</ondown>
-							<onright>50</onright>
+							<onright>9001</onright>
 							<onclick>PlayMedia($INFO[ListItem.Trailer],1)</onclick>
 							<enable>!IsEmpty(ListItem.Trailer)</enable>
 							<animation effect="zoom" start="100" end="120" center="auto" time="100">Focus</animation>
@@ -232,7 +221,7 @@
 							<onup condition="!IsEmpty(ListItem.Trailer)">97</onup>
 							<onup condition="IsEmpty(ListItem.Trailer)">8</onup>
 							<ondown>10</ondown>
-							<onright>50</onright>
+							<onright>9001</onright>
 							
 							<animation effect="zoom" start="100" end="120" center="auto" time="100">Focus</animation>
 							<animation effect="zoom" start="120" end="100" center="auto" time="100">UnFocus</animation>
@@ -274,7 +263,7 @@
 							<onup>6</onup>
 							<ondown condition="Player.HasVideo">33</ondown>
 							<ondown condition="!Player.HasVideo">444</ondown>
-							<onright>50</onright>
+							<onright>9001</onright>
 							
 							<animation effect="zoom" start="100" end="120" center="auto" time="100">Focus</animation>
 							<animation effect="zoom" start="120" end="100" center="auto" time="100">UnFocus</animation>
@@ -315,7 +304,7 @@
 				
 							<onup>10</onup>
 							<ondown>444</ondown>
-							<onright>50</onright>
+							<onright>9001</onright>
 							<onclick>FullScreen</onclick>
 							
 							<animation effect="zoom" start="100" end="120" center="auto" time="100">Focus</animation>
@@ -357,7 +346,7 @@
 							<onup condition="Player.HasVideo">33</onup>
 							<onup condition="!Player.HasVideo">10</onup>
 							<ondown>8</ondown>
-							<onright>50</onright>
+							<onright>9001</onright>
 							<onclick>back</onclick>
 							<animation effect="zoom" start="100" end="120" center="auto" time="100">Focus</animation>
 							<animation effect="zoom" start="120" end="100" center="auto" time="100">UnFocus</animation>
@@ -422,7 +411,8 @@
 								<top>0</top>
 								<width>380</width>
 								<height>215</height>
-								<visible>!Control.HasFocus(50)</visible>
+								<visible>!Skin.HasSetting(HideVideo)</visible>
+								
 							</control>
 						</control>
 						
@@ -434,10 +424,10 @@
 							<height>1</height>
 							<texturefocus>empty.png</texturefocus>
 							<texturenofocus>empty.png</texturenofocus>
-							<colordiffuse>FF959595</colordiffuse>
-							<pulseonselect>true</pulseonselect>
+
 							<onfocus condition="!Control.IsVisible(50)">SendClick(2003,5)</onfocus>
 							<onfocus>SetFocus(50)</onfocus>
+							<onfocus condition="!Skin.HasSetting(HideVideo)">Skin.ToggleSetting(HideVideo)</onfocus>
 							<onleft>8</onleft>
 							<onright>50</onright>
 						
@@ -614,6 +604,8 @@
 						<width>580</width>
 						<height>525</height>
 						<onleft>1</onleft>
+
+						<onleft condition="Skin.HasSetting(HideVideo)">Skin.ToggleSetting(HideVideo)</onleft>
 						<onright>51</onright>
 						<onup>50</onup>
 						<ondown>50</ondown>
@@ -765,7 +757,7 @@
 		</control><!-- content -->
 		
 		<control type="group">
-		<visible>!System.Platform.Android</visible>
+		<!-- visible>!System.Platform.Android</visible -->
 			<control type="button" id="9002">
 				<left>290</left>
 				<top>72</top>
@@ -774,6 +766,7 @@
 				<texturefocus>empty.png</texturefocus>
 				<texturenofocus>empty.png</texturenofocus>
 				<onfocus>SetFocus(1)</onfocus>
+				<onfocus condition="Skin.HasSetting(HideVideo)">Skin.ToggleSetting(HideVideo)</onfocus>
 			</control>
 			<control type="button" id="9003">
 				<left>1130</left>
@@ -785,6 +778,8 @@
 				
 				<onfocus condition="!Control.IsVisible(50)">SendClick(2003,5)</onfocus>
 				<onfocus>SetFocus(50)</onfocus>
+				<onfocus condition="!Skin.HasSetting(HideVideo)">Skin.ToggleSetting(HideVideo)</onfocus>
+				
 				
 				<visible>!Control.HasFocus(50)</visible>
 			</control>

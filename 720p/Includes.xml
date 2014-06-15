@@ -20,6 +20,7 @@
 <!-- include file="Viewtype_PosterSplit.xml" / -->
 <!-- include file="Viewtype_Icons.xml" / -->
 <include file="Viewtype_LogoPanel.xml" />
+<include file="Viewtype_Store.xml" />
 <include file="Viewtype_Channels.xml" />
 
 <!-- Indentify sets SubString(ListItem.Path,videodb://movies/sets/) -->
@@ -171,6 +172,9 @@
 </include>
 <include name="PanelViewWidth2">
 	<width>960</width>
+</include>
+<include name="PanelViewWidth3">
+	<width>968</width>
 </include>
 
 <include name="InfoLockedPosx">
