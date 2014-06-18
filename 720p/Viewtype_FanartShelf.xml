@@ -14,7 +14,14 @@
 			<include>WidgetsAnimation</include>
 			
 			<control type="group">
-			
+			<animation type="Visible" reversible="false">
+				<effect type="fade" start="0" end="100" time="200" delay="300" tween="sine" easing="in" />
+				<effect type="zoom" start="85" end="100" time="200" delay="300" center="auto" tween="sine" easing="out" />
+			</animation>
+			<animation type="Hidden" reversible="false">
+				<effect type="zoom" start="100" end="85" center="auto" tween="sine" delay="0" easing="out" time="200" />
+				<effect type="fade" start="100" end="0" tween="cubic" easing="out" delay="0" time="200" />
+			</animation>
 			<visible>!IsEmpty(ListItem.Art(fanart))</visible>
 			<animation effect="slide" start="0,0" end="-142,0" time="600" condition="!Control.HasFocus(301) + !Skin.HasSetting(LockMainMenu)">Conditional</animation>
 				
