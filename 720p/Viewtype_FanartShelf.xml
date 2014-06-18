@@ -2,6 +2,9 @@
 <includes>
 	<include name="FanartShelf">
 		<control type="group">
+		
+			<!-- ============= Viewtype based on Substratum by Arcanthur =========== -->
+			
 			<include>InfoOpenClose</include>
 			<include>ContextFade</include>
 			<include>Keyboard</include>
