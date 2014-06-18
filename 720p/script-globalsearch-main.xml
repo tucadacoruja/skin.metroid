@@ -1,13 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <window type="dialog">
-  <defaultcontrol>9000</defaultcontrol>
-  <allowoverlay>no</allowoverlay>
-  <backgroundcolor>0</backgroundcolor>
+	<defaultcontrol>9000</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<backgroundcolor>0</backgroundcolor>
 	<controls>
-
 		<control type="group" id="100">
-		
-		
 			<control type="group">
 				<control type="image">
 					<left>0</left>
@@ -16,11 +13,9 @@
 					<height>720</height>
 					<aspectratio>stretch</aspectratio>
 					<texture background="true" fallback="special://skin/extras/backgrounds/MetroidBG.png">$INFO[Skin.String(GlobalBackground)]</texture>
-					<animation effect="fade" start="100" end="85" time="600" reversible="true" >WindowOpen</animation>
-					
+					<animation effect="fade" start="100" end="85" time="600" reversible="true">WindowOpen</animation>
 				</control>
 				<include>MenuBackground</include>
-				
 				<control type="image">
 					<left>235</left>
 					<top>65</top>
@@ -31,9 +26,7 @@
 					<animation effect="fade" start="0" end="70" time="0" condition="true">Conditional</animation>
 				</control>
 				<include>EmptyMenu</include>
-				
 				<control type="button" id="444">
-		
 					<left>0</left>
 					<top>616</top>
 					<description>Back Button</description>
@@ -51,14 +44,11 @@
 					<onup>9000</onup>
 					<ondown>9000</ondown>
 					<visible>Skin.HasSetting(HideGlobalBack)</visible>
-					<animation effect="fade" start="0" end="100" time="300" >WindowOpen</animation>
+					<animation effect="fade" start="0" end="100" time="300">WindowOpen</animation>
 				</control>
-				
 			</control>
-		
-		 <control type="group">
+			<control type="group">
 				<visible>IsEmpty(Control.GetLabel(190)) + !Window.IsVisible(AddonSettings)</visible>
-
 				<!--  Movies  -->
 				<control type="group" id="119">
 					<width>750</width>
@@ -71,7 +61,6 @@
 					<control type="fixedlist" id="111">
 						<visible>!IsEmpty(Container(9000).ListItem.Property(movies))</visible>
 						<animation effect="fade" start="100" end="0" time="300" condition="Window.IsVisible(virtualkeyboard)">Conditional</animation>
-
 						<left>300</left>
 						<top>110</top>
 						<width>750</width>
@@ -95,7 +84,6 @@
 								<align>left</align>
 								<label>$INFO[ListItem.Label]</label>
 							</control>
-							
 						</itemlayout>
 						<focusedlayout width="560" height="44">
 							<control type="group">
@@ -118,12 +106,10 @@
 									<align>left</align>
 									<label>$INFO[ListItem.Label]</label>
 								</control>
-								
 							</control>
 						</focusedlayout>
 					</control>
 				</control>
-
 				<!--  TV Shows  -->
 				<control type="group" id="129">
 					<width>750</width>
@@ -136,7 +122,6 @@
 					<control type="fixedlist" id="121">
 						<visible>!IsEmpty(Container(9000).ListItem.Property(tvshows))</visible>
 						<animation effect="fade" start="100" end="0" time="300" condition="Window.IsVisible(virtualkeyboard)">Conditional</animation>
-
 						<left>300</left>
 						<top>110</top>
 						<width>750</width>
@@ -160,7 +145,6 @@
 								<align>left</align>
 								<label>$INFO[ListItem.Label]</label>
 							</control>
-							
 						</itemlayout>
 						<focusedlayout width="560" height="44">
 							<control type="group">
@@ -183,12 +167,10 @@
 									<align>left</align>
 									<label>$INFO[ListItem.Label]</label>
 								</control>
-								
 							</control>
 						</focusedlayout>
 					</control>
 				</control>
-
 				<!--  Seasons (Disabled)  -->
 				<control type="group" id="139">
 					<width>750</width>
@@ -202,7 +184,6 @@
 						<visible>false</visible>
 					</control>
 				</control>
-
 				<!--  Episodes  -->
 				<control type="group" id="149">
 					<width>750</width>
@@ -215,7 +196,6 @@
 					<control type="fixedlist" id="141">
 						<visible>!IsEmpty(Container(9000).ListItem.Property(episodes))</visible>
 						<animation effect="fade" start="100" end="0" time="300" condition="Window.IsVisible(virtualkeyboard)">Conditional</animation>
-		
 						<left>300</left>
 						<top>110</top>
 						<width>750</width>
@@ -239,7 +219,6 @@
 								<align>left</align>
 								<label>$INFO[ListItem.Label] - $INFO[ListItem.Property(TvShowTitle)]</label>
 							</control>
-							
 						</itemlayout>
 						<focusedlayout width="560" height="44">
 							<control type="group">
@@ -262,12 +241,10 @@
 									<align>left</align>
 									<label>$INFO[ListItem.Label] - $INFO[ListItem.Property(TvShowTitle)]</label>
 								</control>
-								
 							</control>
 						</focusedlayout>
 					</control>
 				</control>
-
 				<!--  Music Videos  -->
 				<control type="group" id="159">
 					<width>750</width>
@@ -280,7 +257,6 @@
 					<control type="fixedlist" id="151">
 						<visible>!IsEmpty(Container(9000).ListItem.Property(musicvideos))</visible>
 						<animation effect="fade" start="100" end="0" time="300" condition="Window.IsVisible(virtualkeyboard)">Conditional</animation>
-				   
 						<left>300</left>
 						<top>110</top>
 						<width>750</width>
@@ -304,7 +280,6 @@
 								<align>left</align>
 								<label>$INFO[ListItem.Label]</label>
 							</control>
-							
 						</itemlayout>
 						<focusedlayout width="560" height="44">
 							<control type="group">
@@ -327,12 +302,10 @@
 									<align>left</align>
 									<label>$INFO[ListItem.Label]</label>
 								</control>
-								
 							</control>
 						</focusedlayout>
 					</control>
 				</control>
-
 				<!--  Artists  -->
 				<control type="group" id="169">
 					<width>750</width>
@@ -345,7 +318,6 @@
 					<control type="fixedlist" id="161">
 						<visible>!IsEmpty(Container(9000).ListItem.Property(artists))</visible>
 						<animation effect="fade" start="100" end="0" time="300" condition="Window.IsVisible(virtualkeyboard)">Conditional</animation>
-				
 						<left>300</left>
 						<top>110</top>
 						<width>750</width>
@@ -369,7 +341,6 @@
 								<align>left</align>
 								<label>$INFO[ListItem.Label]</label>
 							</control>
-							
 						</itemlayout>
 						<focusedlayout width="560" height="44">
 							<control type="group">
@@ -392,13 +363,11 @@
 									<align>left</align>
 									<label>$INFO[ListItem.Label]</label>
 								</control>
-								
 							</control>
 						</focusedlayout>
 					</control>
 				</control>
-
-				<!--  Albums  -->	
+				<!--  Albums  -->
 				<control type="group" id="179">
 					<width>750</width>
 					<height>530</height>
@@ -410,7 +379,6 @@
 					<control type="fixedlist" id="171">
 						<visible>!IsEmpty(Container(9000).ListItem.Property(albums))</visible>
 						<animation effect="fade" start="100" end="0" time="300" condition="Window.IsVisible(virtualkeyboard)">Conditional</animation>
-				    
 						<left>300</left>
 						<top>110</top>
 						<width>750</width>
@@ -435,7 +403,6 @@
 								<label>$INFO[ListItem.Label] - $INFO[ListItem.Property(Artist)]</label>
 								<scroll>false</scroll>
 							</control>
-							
 						</itemlayout>
 						<focusedlayout width="560" height="44">
 							<control type="group">
@@ -458,13 +425,11 @@
 									<align>left</align>
 									<label>$INFO[ListItem.Label] - $INFO[ListItem.Property(Artist)]</label>
 								</control>
-								
 							</control>
 						</focusedlayout>
 					</control>
 				</control>
-	
-				<!--  Songs  -->	
+				<!--  Songs  -->
 				<control type="group" id="189">
 					<width>750</width>
 					<height>530</height>
@@ -476,7 +441,6 @@
 					<control type="fixedlist" id="181">
 						<visible>!IsEmpty(Container(9000).ListItem.Property(songs))</visible>
 						<animation effect="fade" start="100" end="0" time="300" condition="Window.IsVisible(virtualkeyboard)">Conditional</animation>
-				    
 						<left>300</left>
 						<top>110</top>
 						<width>750</width>
@@ -501,7 +465,6 @@
 								<label>$INFO[ListItem.Label] - $INFO[ListItem.Property(Artist)]</label>
 								<scroll>false</scroll>
 							</control>
-							
 						</itemlayout>
 						<focusedlayout width="560" height="44">
 							<control type="group">
@@ -524,23 +487,14 @@
 									<align>left</align>
 									<label>$INFO[ListItem.Label] - $INFO[ListItem.Property(Artist)]</label>
 								</control>
-								
 							</control>
 						</focusedlayout>
 					</control>
 				</control>
-		 </control>
-
-
-
+			</control>
 		</control>
-	
-	
-
-	  <!--  Menu  -->
-
+		<!--  Menu  -->
 		<control type="group">
-			
 			<control type="list" id="9000">
 				<left>2</left>
 				<top>65</top>
@@ -560,9 +514,7 @@
 				<pagecontrol>-</pagecontrol>
 				<scrolltime tween="cubic" easing="inout">325</scrolltime>
 				<orientation>vertical</orientation>
-						
-				<itemlayout height="50"  width="240">
-					
+				<itemlayout height="50" width="240">
 					<control type="label">
 						<left>25</left>
 						<top>-1</top>
@@ -574,14 +526,9 @@
 						<align>left</align>
 						<scroll>false</scroll>
 						<label>$INFO[ListItem.Label]</label>
-											
 					</control>
-				
-					
 				</itemlayout>
-				
-				<focusedlayout height="50"  width="240">
-					
+				<focusedlayout height="50" width="240">
 					<control type="image">
 						<description>list line image</description>
 						<left>0</left>
@@ -603,7 +550,6 @@
 						<texture>white.png</texture>
 						<animation effect="fade" start="0" end="40" time="0" condition="true">Conditional</animation>
 						<visible>!Control.HasFocus(9000)</visible>
-						
 					</control>
 					<control type="image">
 						<description>focussed image</description>
@@ -616,7 +562,6 @@
 						<colordiffuse>skin.string(MainColorString)</colordiffuse>
 						<animation effect="fade" start="0" end="75" time="0" condition="true">Conditional</animation>
 						<visible>Control.HasFocus(9000)</visible>
-						
 					</control>
 					<control type="label">
 						<left>25</left>
@@ -630,7 +575,6 @@
 						<label>$INFO[ListItem.Label]</label>
 						<visible>IsEmpty(ListItem.Property(SubMenuItem))</visible>
 						<visible>!Control.HasFocus(9000)</visible>
-						
 					</control>
 					<control type="label">
 						<left>25</left>
@@ -644,9 +588,7 @@
 						<label>$INFO[ListItem.Label]</label>
 						<visible>IsEmpty(ListItem.Property(SubMenuItem))</visible>
 						<visible>Control.HasFocus(9000)</visible>
-						
 					</control>
-								
 				</focusedlayout>
 				<content>
 					<item id="1">
@@ -710,7 +652,6 @@
 					</item>
 				</content>
 			</control>
-
 			<control type="button" id="198">
 				<!--  Hide this Control and use the list to pass the label  -->
 				<left>2000</left>
@@ -742,7 +683,5 @@
 		</control>
 		<include>Background</include>
 		<include>BottomInfoBar</include>
-
-		  
 	</controls>
 </window>
