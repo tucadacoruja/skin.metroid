@@ -3,6 +3,10 @@
 	<zorder>2</zorder>
 	<visible>!Window.IsVisible(startup)</visible>
 	<controls>
+	
+	
+	<!--  For mouse pos and control number enable debugging in addon.xml  -->
+	
 		<!--  Global debug grid  -->
 		<control type="image">
 			<visible>Skin.HasSetting(DebugGrid)</visible>

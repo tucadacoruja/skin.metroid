@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <window>
-	<defaultcontrol always="true">1000</defaultcontrol>
+	<defaultcontrol always="true">2009</defaultcontrol>
 	<zorder>6</zorder>
 	<coordinates>
 		<system>1</system>
